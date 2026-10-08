@@ -1,0 +1,599 @@
+import { useState } from 'react';
+import {
+  Save,
+  Download,
+  Upload,
+  ShieldCheck,
+  School,
+  CalendarDays,
+  Plus,
+  Pencil,
+  Search,
+  RotateCcw,
+  Trash2,
+  Sun,
+  Moon,
+} from 'lucide-react';
+import { useStore, backup, checksum, validateState, csv } from '../store';
+import { seed, uid, classes, type State, type User, type Role } from '../data';
+import {
+  PageHeader,
+  Button,
+  Card,
+  CardTitle,
+  Field,
+  Tabs,
+  Modal,
+  Badge,
+  SearchBox,
+  Person,
+  Empty,
+} from '../components/ui';
+export function SettingsPage() {
+  const { data, update, notify, theme, setTheme } = useStore();
+  const [settings, setSettings] = useState(data.settings),
+    [restore, setRestore] = useState<State | null>(null),
+    [confirm, setConfirm] = useState(''),
+    [reset, setReset] = useState(false),
+    [error, setError] = useState('');
+  async function readRestore(f?: File) {
+    if (!f) return;
+    try {
+      if (f.size > 10 * 1024 * 1024) throw Error('Backup is too large. Maximum size is 10 MB.');
+      const envelope = JSON.parse(await f.text());
+      if (
+        envelope.format !== 'aos-demo-v1' ||
+        typeof envelope.payload !== 'string' ||
+        (await checksum(envelope.payload)) !== envelope.checksum
+      )
+        throw Error('The backup checksum is invalid. No records were changed.');
+      const parsed = JSON.parse(envelope.payload);
+      if (!validateState(parsed))
+        throw Error('This file does not contain a valid LMS demo workspace.');
+      setRestore(parsed);
+      setConfirm('');
+      setError('');
+    } catch (e) {
+      setError(e instanceof Error ? e.message : 'Unable to restore this file.');
+    }
+  }
+  return (
+    <>
+      <PageHeader
+        eyebrow="MAKE IT YOUR SCHOOL"
+        title="System settings"
+        description="Your school’s identity, academic cycle, and workspace care."
+        actions={
+          <Button form="settings-form" type="submit">
+            <Save size={16} />
+            Save all changes
+          </Button>
+        }
+      />
+      <div className="settings-grid">
+        <form
+          id="settings-form"
+          className="settings-column"
+          onSubmit={(e) => {
+            e.preventDefault();
+            update((d) => ({ ...d, settings }), 'Institution settings updated');
+            notify('School settings saved.');
+          }}
+        >
+          <Card>
+            <CardTitle
+              title="Institution profile"
+              description="The details that appear on reports and receipts."
+            />
+            <div className="crest-upload">
+              <img src={settings.crest || './crest.svg'} alt="School crest" />
+              <Field label="Upload school crest" hint="PNG or JPEG, up to 500 KB.">
+                <input
+                  type="file"
+                  accept="image/png,image/jpeg"
+                  onChange={(e) => {
+                    const f = e.target.files?.[0];
+                    if (!f) return;
+                    if (f.size > 500000) {
+                      notify('Choose an image under 500 KB.');
+                      return;
+                    }
+                    const r = new FileReader();
+                    r.onload = () => setSettings({ ...settings, crest: String(r.result) });
+                    r.readAsDataURL(f);
+                  }}
+                />
+              </Field>
+            </div>
+            {(['name', 'motto', 'address', 'phone', 'email'] as const).map((k) => (
+              <Field
+                label={
+                  {
+                    name: 'School name',
+                    motto: 'School motto',
+                    address: 'Address',
+                    phone: 'Contact phone',
+                    email: 'School email',
+                  }[k]
+                }
+                key={k}
+              >
+                <input
+                  required
+                  type={k === 'email' ? 'email' : 'text'}
+                  value={settings[k]}
+                  onChange={(e) => setSettings({ ...settings, [k]: e.target.value })}
+                />
+              </Field>
+            ))}
+          </Card>
+          <Card>
+            <CardTitle
+              title="Academic cycle"
+              description="Keep the whole school on the same page."
+            />
+            <Field label="Academic year">
+              <input
+                required
+                value={settings.year}
+                onChange={(e) => setSettings({ ...settings, year: e.target.value })}
+              />
+            </Field>
+            <Field label="Active term">
+              <div className="term-selector">
+                {[1, 2, 3].map((t) => (
+                  <button
+                    type="button"
+                    aria-pressed={settings.term === t}
+                    className={settings.term === t ? 'active' : ''}
+                    key={t}
+                    onClick={() => setSettings({ ...settings, term: t })}
+                  >
+                    Term {t}
+                  </button>
+                ))}
+              </div>
+            </Field>
+            <div className="form-grid">
+              <Field label="Vacation date">
+                <input
+                  required
+                  type="date"
+                  value={settings.vacation}
+                  onChange={(e) => setSettings({ ...settings, vacation: e.target.value })}
+                />
+              </Field>
+              <Field label="Next term reopening">
+                <input
+                  required
+                  type="date"
+                  value={settings.reopening}
+                  onChange={(e) => setSettings({ ...settings, reopening: e.target.value })}
+                />
+              </Field>
+            </div>
+            <div className="notice">
+              <CalendarDays size={18} />
+              Saving a new term updates gradebooks, report cards, and fee balances throughout this
+              workspace.
+            </div>
+          </Card>
+        </form>
+        <div className="settings-column">
+          <Card>
+            <CardTitle
+              title="Appearance & Theme"
+              description="Customize your workspace display according to your preference."
+            />
+            <div className="theme-switcher-grid">
+              <button
+                type="button"
+                className={`theme-option-btn ${theme === 'light' ? 'active' : ''}`}
+                onClick={() => setTheme('light')}
+              >
+                <Sun size={20} />
+                <div>
+                  <strong>Light mode</strong>
+                  <small>Clean, high-clarity daylight theme</small>
+                </div>
+              </button>
+              <button
+                type="button"
+                className={`theme-option-btn ${theme === 'dark' ? 'active' : ''}`}
+                onClick={() => setTheme('dark')}
+              >
+                <Moon size={20} />
+                <div>
+                  <strong>Dark mode</strong>
+                  <small>Comfortable, low-glare nighttime theme</small>
+                </div>
+              </button>
+            </div>
+          </Card>
+          <Card>
+            <CardTitle
+              title="Workspace backup & restore"
+              description="Keep a copy of your browser-local demo records."
+            />
+            <div className="backup-panel">
+              <span className="icon-tile blue">
+                <ShieldCheck size={27} />
+              </span>
+              <h3>A little peace of mind.</h3>
+              <p>Export all demo records to a JSON file with a SHA-256 integrity checksum.</p>
+              <Button
+                variant="secondary"
+                onClick={() =>
+                  backup(data)
+                    .then(() => notify('Demo backup downloaded.'))
+                    .catch(() => notify('Backup could not be generated.'))
+                }
+              >
+                <Download size={16} />
+                Download backup
+              </Button>
+            </div>
+            <h3>Restore a saved workspace</h3>
+            <p className="muted">
+              Choose a backup to verify it before replacing your local records.
+            </p>
+            <Field label="Upload restore file">
+              <input
+                type="file"
+                accept=".json"
+                onChange={(e) => {
+                  readRestore(e.target.files?.[0]);
+                  e.target.value = '';
+                }}
+              />
+            </Field>
+            {error && (
+              <div className="error" role="alert">
+                {error}
+              </div>
+            )}
+            <div className="notice">
+              <ShieldCheck size={18} />
+              These backups cover this browser’s demo data. Cloud backup and cross-device sync come
+              with the backend.
+            </div>
+          </Card>
+          <Card>
+            <CardTitle
+              title="Reset demo workspace"
+              description="Start again with the original sample records."
+            />
+            <div className="danger-panel">
+              <h3>A fresh start</h3>
+              <p>
+                This replaces local changes with the initial demonstration data. Download a backup
+                first if you want to keep your work.
+              </p>
+              <Button
+                variant="danger"
+                onClick={() => {
+                  setReset(true);
+                  setConfirm('');
+                }}
+              >
+                <RotateCcw size={16} />
+                Reset demo data
+              </Button>
+            </div>
+          </Card>
+        </div>
+      </div>
+      {(restore || reset) && (
+        <Modal
+          title={restore ? 'Restore demo workspace' : 'Reset demo workspace'}
+          onClose={() => {
+            setRestore(null);
+            setReset(false);
+          }}
+        >
+          <p>
+            {restore
+              ? 'The backup checksum has been verified. Restoring will replace all current browser-local records.'
+              : 'Resetting replaces your local changes with the initial sample data.'}
+          </p>
+          <Field label={`Type ${restore ? 'RESTORE SYSTEM' : 'RESET DEMO'} to confirm`}>
+            <input value={confirm} onChange={(e) => setConfirm(e.target.value)} />
+          </Field>
+          <div className="modal-actions">
+            <Button
+              variant="secondary"
+              onClick={() => {
+                setRestore(null);
+                setReset(false);
+              }}
+            >
+              Cancel
+            </Button>
+            <Button
+              variant="danger"
+              disabled={confirm !== (restore ? 'RESTORE SYSTEM' : 'RESET DEMO')}
+              onClick={() => {
+                const replacement = restore || seed();
+                update(
+                  () => replacement,
+                  restore ? 'Demo backup restored' : 'Demo workspace reset',
+                );
+                setSettings(replacement.settings);
+                setRestore(null);
+                setReset(false);
+                notify('Demo workspace updated successfully.');
+              }}
+            >
+              Confirm {restore ? 'restore' : 'reset'}
+            </Button>
+          </div>
+        </Modal>
+      )}
+    </>
+  );
+}
+export function UsersPage() {
+  const { data, update, notify } = useStore();
+  const [q, setQ] = useState(''),
+    [edit, setEdit] = useState<User | null>(null),
+    [remove, setRemove] = useState<User | null>(null);
+  const users = data.users.filter((u) =>
+    (u.name + u.email + u.role).toLowerCase().includes(q.toLowerCase()),
+  );
+  return (
+    <>
+      <PageHeader
+        eyebrow="YOUR SCHOOL TEAM"
+        title="Users & access"
+        description="Organise staff profiles, workspace roles, and teaching assignments."
+        actions={
+          <Button
+            onClick={() =>
+              setEdit({ id: '', name: '', email: '', role: 'Teacher', active: true, classes: [] })
+            }
+          >
+            <Plus size={16} />
+            Add user
+          </Button>
+        }
+      />
+      <div className="notice">
+        User records are for the frontend preview. Real sign-in, account activation enforcement, and
+        password resets will be connected with the backend.
+      </div>
+      <Card>
+        <div className="filter-bar">
+          <SearchBox value={q} onChange={setQ} placeholder="Search people, roles, or email..." />
+        </div>
+        <div className="table-scroll">
+          <table>
+            <thead>
+              <tr>
+                <th>Team member</th>
+                <th>Role</th>
+                <th>Assigned classes</th>
+                <th>Status</th>
+                <th />
+              </tr>
+            </thead>
+            <tbody>
+              {users.map((u) => (
+                <tr key={u.id}>
+                  <td>
+                    <Person name={u.name} sub={u.email} />
+                  </td>
+                  <td>{u.role}</td>
+                  <td>{u.classes.join(', ') || '—'}</td>
+                  <td>
+                    <Badge tone={u.active ? 'green' : 'amber'}>
+                      {u.active ? 'Active' : 'Inactive'}
+                    </Badge>
+                  </td>
+                  <td>
+                    <div className="row-actions">
+                      <button
+                        className="icon-btn"
+                        aria-label={`Edit ${u.name}`}
+                        onClick={() => setEdit(u)}
+                      >
+                        <Pencil size={16} />
+                      </button>
+                      {u.id !== 'u1' && (
+                        <button
+                          className="icon-btn"
+                          aria-label={`Remove ${u.name}`}
+                          onClick={() => setRemove(u)}
+                        >
+                          <Trash2 size={16} />
+                        </button>
+                      )}
+                    </div>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        {!users.length && <Empty title="No people found" />}
+      </Card>
+      {edit && (
+        <Modal
+          title={edit.id ? 'Edit user profile' : 'Add a team member'}
+          onClose={() => setEdit(null)}
+        >
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+              if (
+                data.users.some(
+                  (u) => u.email.toLowerCase() === edit.email.toLowerCase() && u.id !== edit.id,
+                )
+              ) {
+                notify('This email already belongs to another user.');
+                return;
+              }
+              const user = { ...edit, id: edit.id || uid() };
+              update(
+                (d) => ({ ...d, users: [...d.users.filter((u) => u.id !== user.id), user] }),
+                'User profile saved',
+              );
+              setEdit(null);
+              notify('Demo user profile saved.');
+            }}
+          >
+            <Field label="Full name">
+              <input
+                required
+                value={edit.name}
+                onChange={(e) => setEdit({ ...edit, name: e.target.value })}
+              />
+            </Field>
+            <Field label="Email address">
+              <input
+                required
+                type="email"
+                value={edit.email}
+                onChange={(e) => setEdit({ ...edit, email: e.target.value })}
+              />
+            </Field>
+            <div className="form-grid">
+              <Field label="Role">
+                <select
+                  disabled={edit.id === 'u1'}
+                  value={edit.role}
+                  onChange={(e) => setEdit({ ...edit, role: e.target.value as Role })}
+                >
+                  {['Administrator', 'Teacher', 'Student', 'Accountant'].map((r) => (
+                    <option key={r}>{r}</option>
+                  ))}
+                </select>
+              </Field>
+              <Field label="Status">
+                <select
+                  disabled={edit.id === 'u1'}
+                  value={edit.active ? 'Active' : 'Inactive'}
+                  onChange={(e) => setEdit({ ...edit, active: e.target.value === 'Active' })}
+                >
+                  <option>Active</option>
+                  <option>Inactive</option>
+                </select>
+              </Field>
+            </div>
+            <fieldset className="class-checkboxes">
+              <legend>Assigned classes</legend>
+              {(data.classes || classes).map((c) => (
+                <label key={c}>
+                  <input
+                    type="checkbox"
+                    checked={edit.classes.includes(c)}
+                    onChange={(e) =>
+                      setEdit({
+                        ...edit,
+                        classes: e.target.checked
+                          ? [...edit.classes, c]
+                          : edit.classes.filter((x) => x !== c),
+                      })
+                    }
+                  />
+                  {c}
+                </label>
+              ))}
+            </fieldset>
+            <div className="modal-actions">
+              <Button type="submit">Save user profile</Button>
+            </div>
+          </form>
+        </Modal>
+      )}
+      {remove && (
+        <Modal title="Remove user profile?" onClose={() => setRemove(null)}>
+          <p>Remove {remove.name} from the demo team directory?</p>
+          <div className="modal-actions">
+            <Button variant="secondary" onClick={() => setRemove(null)}>
+              Cancel
+            </Button>
+            <Button
+              variant="danger"
+              onClick={() => {
+                update(
+                  (d) => ({ ...d, users: d.users.filter((u) => u.id !== remove.id) }),
+                  'User profile removed',
+                );
+                setRemove(null);
+                notify('User profile removed.');
+              }}
+            >
+              Remove profile
+            </Button>
+          </div>
+        </Modal>
+      )}
+    </>
+  );
+}
+export function Audit() {
+  const { data } = useStore();
+  const [q, setQ] = useState('');
+  const logs = data.logs.filter((l) =>
+    (l.action + l.actor + l.type).toLowerCase().includes(q.toLowerCase()),
+  );
+  return (
+    <>
+      <PageHeader
+        eyebrow="A CLEARER PICTURE"
+        title="Activity log"
+        description="A chronological record of changes in this demo workspace."
+        actions={
+          <Button
+            variant="secondary"
+            onClick={() =>
+              csv('activity-log.csv', [
+                ['Time', 'User', 'Action', 'Type'],
+                ...logs.map((l) => [l.date, l.actor, l.action, l.type]),
+              ])
+            }
+          >
+            <Download size={16} />
+            Export log
+          </Button>
+        }
+      />
+      <Card>
+        <div className="filter-bar">
+          <SearchBox value={q} onChange={setQ} placeholder="Search activities or people..." />
+        </div>
+        <div className="table-scroll">
+          <table>
+            <thead>
+              <tr>
+                <th>Activity</th>
+                <th>User</th>
+                <th>Time</th>
+                <th>Type</th>
+              </tr>
+            </thead>
+            <tbody>
+              {logs.map((l) => (
+                <tr key={l.id}>
+                  <td>
+                    <strong>{l.action}</strong>
+                  </td>
+                  <td>{l.actor}</td>
+                  <td>{new Date(l.date).toLocaleString()}</td>
+                  <td>
+                    <Badge tone="blue">{l.type}</Badge>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        {!logs.length && <Empty title="No matching activity" />}
+      </Card>
+      <p className="muted">
+        This browser-local activity log is a demo. Server-verified audit events and IP tracking will
+        be added with the backend.
+      </p>
+    </>
+  );
+}
