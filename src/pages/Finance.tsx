@@ -35,6 +35,107 @@ import {
   Empty,
   Tabs,
 } from '../components/ui';
+import { financeService } from '../services/financeService';
+
+export function AdminFinanceDashboard() {
+  const { data } = useStore();
+  const audit = financeService.getAdminFinancialAudit(data);
+  const debtors = data.students
+    .map((student) => ({
+      student,
+      billed: billed(data, student),
+      paid: paid(data, student.id),
+    }))
+    .map((entry) => ({ ...entry, balance: Math.max(0, entry.billed - entry.paid) }))
+    .filter((entry) => entry.balance > 0)
+    .sort((a, b) => b.balance - a.balance);
+  return (
+    <>
+      <PageHeader
+        eyebrow="INSTITUTION FINANCIAL OVERSIGHT"
+        title="Financial audit & debt surveillance"
+        description={`School-wide reconciliation · Term ${data.settings.term}, ${data.settings.year}`}
+      />
+      <div className="stats-grid three">
+        <Stat
+          label="Students / classes"
+          value={`${audit.totalStudents} / ${audit.totalClasses}`}
+          icon={<Receipt />}
+        />
+        <Stat label="Total billed" value={money(audit.totalBilled)} icon={<Receipt />} />
+        <Stat
+          label="Total collected"
+          value={money(audit.totalCollected)}
+          icon={<Wallet />}
+          tone="green"
+        />
+        <Stat
+          label="Outstanding arrears"
+          value={money(audit.totalArrears)}
+          icon={<Landmark />}
+          tone="amber"
+        />
+        <Stat
+          label="Collection efficiency"
+          value={`${audit.collectionEfficiency}%`}
+          icon={<TrendingUp />}
+          tone="blue"
+        />
+        <Stat
+          label="Critical debtors"
+          value={`${audit.criticalDebtorsCount} of ${audit.debtorCount}`}
+          icon={<Settings2 />}
+          tone="red"
+        />
+      </div>
+      <Card>
+        <CardTitle
+          title="Arrears by student"
+          description="Balances are reconciled against the active term's fee structure and payments."
+        />
+        <div className="table-scroll">
+          <table>
+            <thead>
+              <tr>
+                <th>Student</th>
+                <th>Class</th>
+                <th>Billed</th>
+                <th>Collected</th>
+                <th>Balance</th>
+                <th>Risk</th>
+              </tr>
+            </thead>
+            <tbody>
+              {debtors.map(({ student, billed: amountBilled, paid: amountPaid, balance }) => (
+                <tr key={student.id}>
+                  <td>
+                    <Person name={student.name} sub={student.id} />
+                  </td>
+                  <td>{student.classId}</td>
+                  <td>{money(amountBilled)}</td>
+                  <td>{money(amountPaid)}</td>
+                  <td>
+                    <strong>{money(balance)}</strong>
+                  </td>
+                  <td>
+                    <Badge tone={balance > amountBilled * 0.5 ? 'red' : 'amber'}>
+                      {balance > amountBilled * 0.5 ? 'Critical' : 'Outstanding'}
+                    </Badge>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        {!debtors.length && <Empty title="No outstanding balances" />}
+      </Card>
+      <p className="muted">
+        Net operating cash after recorded payroll disbursements: {money(audit.netOperatingCash)}.
+      </p>
+    </>
+  );
+}
+
 export function Finance() {
   const { data, role, ownId, update, notify } = useStore();
   const classList = data.classes || classes;

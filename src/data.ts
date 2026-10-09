@@ -21,6 +21,22 @@ export interface Assignment {
   due: string;
   description: string;
   category: string;
+  term?: string;
+  scores?: Record<string, { score: number; feedback?: string }>;
+  slots?: { slotKey: string; title: string; maxPoints: number }[];
+  slotScores?: Record<
+    string,
+    Record<
+      string,
+      {
+        score?: number | null;
+        maxPoints?: number;
+        feedbackType?: 'none' | 'absent' | 'not_submitted' | 'late';
+        feedbackReason?: string;
+        updatedAt?: string;
+      }
+    >
+  >;
 }
 export interface Submission {
   id: string;
@@ -32,6 +48,7 @@ export interface Submission {
   date: string;
   score?: number;
   feedback?: string;
+  isLate?: boolean;
 }
 export interface Resource {
   id: string;
@@ -39,11 +56,39 @@ export interface Resource {
   category: string;
   classId: string;
   subject: string;
+  subjectId?: string;
+  description?: string;
   type: string;
+  fileType?: string;
   date: string;
   content: string;
   url?: string;
   filename?: string;
+  uploadedBy?: string;
+  uploadedByRole?: Role | 'admin';
+  targetClassIds?: string[];
+}
+export interface DigitalCertificate {
+  id: string;
+  studentId: string;
+  type: string;
+  date: string;
+  teacherUserId?: string;
+  issuedByUserId?: string;
+  createdById?: string;
+  teacherId?: string;
+  issuedBy?: string;
+}
+export interface TeacherClassRecord {
+  id: string;
+  classId: string;
+  teacherUserId: string;
+  teacherId: string;
+  subjectId: string;
+  isGeneralInstructor: boolean;
+  isClassTeacher: boolean;
+  createdAt: string;
+  createdBy?: string;
 }
 export interface Period {
   id: string;
@@ -63,6 +108,9 @@ export interface Payment {
   date: string;
   notes: string;
   term: number;
+  transactionRef?: string;
+  receiptNumber?: string;
+  recordedBy?: string;
 }
 export interface Expense {
   id: string;
@@ -72,6 +120,9 @@ export interface Expense {
   amount: number;
   status: string;
   date: string;
+  paymentMethod?: string;
+  reference?: string;
+  recordedBy?: string;
 }
 export interface User {
   id: string;
@@ -80,6 +131,10 @@ export interface User {
   role: Role;
   active: boolean;
   classes: string[];
+  /** Links a student login to its student roster record. */
+  studentId?: string;
+  /** Per-class subject whitelist for subject-specific teachers. Missing class entries mean all curriculum subjects. */
+  classAllowedSubjects?: Record<string, string[]>;
 }
 export interface Payroll {
   id: string;
@@ -125,8 +180,10 @@ export interface State {
   expenses: Expense[];
   payroll: Payroll[];
   fees: Record<string, Record<string, number>>;
+  studentConcessions?: Record<string, 50 | 100>;
   users: User[];
-  certificates: { id: string; studentId: string; type: string; date: string }[];
+  teacherAssignments?: TeacherClassRecord[];
+  certificates: DigitalCertificate[];
   messages: {
     id: string;
     author: string;
@@ -137,6 +194,262 @@ export interface State {
   }[];
   logs: { id: string; action: string; actor: string; date: string; type: string }[];
   settings: Settings;
+}
+
+export const courseworkCategories = [
+  'Exercise',
+  'Homework',
+  'Groupwork',
+  'Quiz',
+  'Project',
+] as const;
+export type CourseworkCategory = (typeof courseworkCategories)[number];
+export type FeedbackType = 'none' | 'absent' | 'not_submitted' | 'late';
+export const courseworkCategoryConfigs = {
+  exercise: {
+    prefix: 'EXE',
+    slotCount: 20,
+    label: 'Class Exercises',
+    maxPoints: 15,
+    description: 'In-class seatwork, drills & continuous exercise sheets (EXE1 - EXE20)',
+  },
+  homework: {
+    prefix: 'HW',
+    slotCount: 20,
+    label: 'Homework & Assignments',
+    maxPoints: 15,
+    description: 'Take-home problem sets, practice tasks & homework modules (HW1 - HW20)',
+  },
+  groupwork: {
+    prefix: 'GW',
+    slotCount: 10,
+    label: 'Groupwork & Collaboration',
+    maxPoints: 15,
+    description: 'Team activities, paired problem solving & lab tasks (GW1 - GW10)',
+  },
+  quiz: {
+    prefix: 'Quiz',
+    slotCount: 2,
+    label: 'Quizzes & Class Tests',
+    maxPoints: 15,
+    description: 'Periodic formative evaluations & mid-term checks (Quiz1, Quiz2)',
+  },
+  project: {
+    prefix: 'PW',
+    slotCount: 5,
+    label: 'Project Work',
+    maxPoints: 15,
+    description: 'Capstones, scientific inquiries & research tasks (PW1 - PW5)',
+  },
+  exam: {
+    prefix: 'Exam',
+    slotCount: 1,
+    label: 'Terminal Exam',
+    maxPoints: 100,
+    description: 'Official end of term summative examination paper (100 Max Score)',
+  },
+} as const;
+export type CourseworkCategoryKey = keyof typeof courseworkCategoryConfigs;
+export function isBsClass(name?: string, gradeLevel?: string | number): boolean {
+  const value = `${name || ''} ${gradeLevel ?? ''}`.toLowerCase();
+  return /\b(bs|basic|class|grade|primary|p)\s*[1-6]\b/.test(value);
+}
+export function isJhsClass(name?: string, gradeLevel?: string | number): boolean {
+  const value = `${name || ''} ${gradeLevel ?? ''}`.toLowerCase();
+  return (
+    /\b(jhs|junior\s*high)\s*[1-3]\b/.test(value) || /\b(basic|bs|grade)\s*[7-9]\b/.test(value)
+  );
+}
+export function generateCourseworkSlots(category: CourseworkCategoryKey) {
+  const config = courseworkCategoryConfigs[category];
+  return Array.from({ length: config.slotCount }, (_, index) => ({
+    slotKey: category === 'exam' ? 'Exam' : `${config.prefix}${index + 1}`,
+    title:
+      category === 'exam' ? 'Terminal Exam' : `${config.label.replace(/s$/, '')} #${index + 1}`,
+    maxPoints: config.maxPoints,
+  }));
+}
+export function ensureClassCourseworkCards(
+  state: State,
+  classId: string,
+  term: number,
+  allowedSubjectIds?: Set<string>,
+): { assignments: Assignment[]; createdCount: number } {
+  const isJhs = isJhsClass(classId);
+  const classCurriculum = (
+    isJhs
+      ? subjects.map((subject) => (subject === 'History' ? 'Social Studies' : subject))
+      : subjects
+  ).filter((subject) => {
+    const normalized = subject.trim().toLowerCase();
+    if (
+      normalized === 'general' ||
+      normalized === 'general subject' ||
+      normalized === 'class stream'
+    )
+      return false;
+    return (
+      !allowedSubjectIds ||
+      allowedSubjectIds.has(courseworkSubjectId(subject)) ||
+      allowedSubjectIds.has(subject)
+    );
+  });
+  const categories = Object.keys(courseworkCategoryConfigs) as CourseworkCategoryKey[];
+  const additions: Assignment[] = [];
+  for (const subject of classCurriculum) {
+    for (const category of categories) {
+      const id = `cc_${classId}_${subject.replace(/[^a-z0-9]/gi, '_')}_${category}_term${term}`;
+      if (state.assignments.some((assignment) => assignment.id === id)) continue;
+      const config = courseworkCategoryConfigs[category];
+      additions.push({
+        id,
+        classId,
+        subject,
+        points: config.maxPoints,
+        due: today(),
+        title: config.label,
+        description: config.description,
+        category: category === 'exam' ? 'Terminal exam' : config.label,
+        term: `Term ${term}`,
+        slots: generateCourseworkSlots(category),
+        slotScores: {},
+      });
+    }
+  }
+  return { assignments: [...state.assignments, ...additions], createdCount: additions.length };
+}
+export const courseworkFeedbackMetadata: Record<FeedbackType, { label: string; tag: string }> = {
+  none: { label: 'Normal Graded', tag: 'OK' },
+  absent: { label: 'Absent', tag: 'ABS' },
+  not_submitted: { label: "Didn't Submit", tag: 'DNS' },
+  late: { label: 'Late Submission', tag: 'LATE' },
+};
+
+export interface CourseworkAssessment {
+  categories: Record<CourseworkCategory, number | null>;
+  categoryDetails: Record<
+    CourseworkCategory,
+    { earnedRaw: number; maxRaw: number; scaled15: number; count: number }
+  >;
+  rawSba: number | null;
+  sba: number | null;
+  examRaw: number | null;
+  exam: number | null;
+  total: number | null;
+  grade: string;
+  hasSba: boolean;
+  hasExam: boolean;
+}
+
+export function courseworkCategory(category: string): CourseworkCategory | 'Exam' | null {
+  const normalized = category.toLowerCase().trim();
+  if (normalized.includes('exam')) return 'Exam';
+  if (normalized.includes('exercise')) return 'Exercise';
+  if (normalized.includes('homework') || normalized.includes('assignment')) return 'Homework';
+  if (normalized.includes('group') || normalized.includes('practical')) return 'Groupwork';
+  if (normalized.includes('quiz') || normalized.includes('test')) return 'Quiz';
+  if (normalized.includes('project')) return 'Project';
+  return null;
+}
+
+/** Derive the five SBA bands and terminal exam from graded assignment submissions. */
+export function courseworkAssessment(
+  state: State,
+  studentId: string,
+  classId: string,
+  subject: string,
+): CourseworkAssessment {
+  const assignments = state.assignments.filter(
+    (assignment) => assignment.classId === classId && assignment.subject === subject,
+  );
+  const categories = Object.fromEntries(
+    courseworkCategories.map((category) => [category, null]),
+  ) as Record<CourseworkCategory, number | null>;
+  const categoryDetails = Object.fromEntries(
+    courseworkCategories.map((category) => [
+      category,
+      { earnedRaw: 0, maxRaw: 0, scaled15: 0, count: 0 },
+    ]),
+  ) as CourseworkAssessment['categoryDetails'];
+  let hasSba = false;
+  let hasExam = false;
+  let examRaw: number | null = null;
+
+  for (const category of [...courseworkCategories, 'Exam'] as const) {
+    const categoryAssignments = assignments.filter(
+      (assignment) => courseworkCategory(assignment.category) === category,
+    );
+    const scores = categoryAssignments.flatMap((assignment) => {
+      const submission = state.submissions.find(
+        (item) => item.assignmentId === assignment.id && item.studentId === studentId,
+      );
+      const slots = assignment.slots?.length
+        ? assignment.slots
+        : [{ slotKey: 'Score', title: assignment.title, maxPoints: assignment.points }];
+      const slotScores = slots.flatMap((slot, slotIndex) => {
+        const slotScore = assignment.slotScores?.[studentId]?.[slot.slotKey]?.score;
+        const legacyScore =
+          slotIndex === 0
+            ? (assignment.scores?.[studentId]?.score ?? submission?.score)
+            : undefined;
+        const score = slotScore ?? legacyScore;
+        const feedbackType = assignment.slotScores?.[studentId]?.[slot.slotKey]?.feedbackType;
+        if (
+          score === undefined ||
+          score === null ||
+          !Number.isFinite(score) ||
+          feedbackType === 'absent' ||
+          feedbackType === 'not_submitted'
+        )
+          return [];
+        const max =
+          assignment.slotScores?.[studentId]?.[slot.slotKey]?.maxPoints ??
+          slot.maxPoints ??
+          assignment.points;
+        if (max <= 0) return [];
+        return [{ earned: Math.max(0, score), max }];
+      });
+      return slotScores;
+    });
+    if (!scores.length) continue;
+
+    const earned = scores.reduce((sum, score) => sum + score.earned, 0);
+    const possible = scores.reduce((sum, score) => sum + score.max, 0);
+    if (category === 'Exam') {
+      hasExam = true;
+      examRaw = Math.round(earned);
+    } else {
+      hasSba = true;
+      const scaled15 = Math.round((earned / possible) * 15);
+      categoryDetails[category] = {
+        earnedRaw: Math.round(earned),
+        maxRaw: Math.round(possible),
+        scaled15,
+        count: scores.length,
+      };
+      categories[category] = scaled15;
+    }
+  }
+
+  const rawSba = hasSba
+    ? courseworkCategories.reduce((sum, category) => sum + (categories[category] ?? 0), 0)
+    : null;
+  const sba = Math.round(((rawSba ?? 0) / 60) * 50);
+  const exam = examRaw === null ? null : Math.round(examRaw / 2);
+  const total = hasSba || hasExam ? Math.min(100, sba + (exam ?? 0)) : null;
+
+  return {
+    categories,
+    categoryDetails,
+    rawSba,
+    sba,
+    examRaw,
+    exam,
+    total,
+    grade: gradeLetter(total ?? 0),
+    hasSba,
+    hasExam,
+  };
 }
 export const classes = ['Basic 6 - Gold', 'Basic 4 - Blue', 'JHS 2 - Alpha', 'Basic 1 - Green'];
 export const subjects = [
@@ -153,6 +466,26 @@ export const classSubjects = (classId: string) =>
   subjects.map((s) =>
     s === 'History' && classId.toUpperCase().startsWith('JHS') ? 'Social Studies' : s,
   );
+export const courseworkSubjectId = (subject: string) => {
+  const known: Record<string, string> = {
+    mathematics: 'sub_math',
+    'english language': 'sub_eng',
+    'integrated science': 'sub_sci',
+    'religious & moral education (rme)': 'sub_rme',
+    'creative arts & design': 'sub_cad',
+    'ghanaian language (twi)': 'sub_twi',
+    'computing / ict': 'sub_ict',
+    history: 'sub_hist',
+    'social studies': 'sub_soc',
+  };
+  return (
+    known[subject.trim().toLowerCase()] ||
+    subject
+      .trim()
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, '_')
+  );
+};
 export const today = () => new Date().toISOString().slice(0, 10);
 export const uid = () => crypto.randomUUID();
 export const gradeKey = (id: string, term: number, subject: string) => `${id}|${term}|${subject}`;
@@ -193,7 +526,8 @@ export const conflicts = (a: Period, b: Period) =>
   b.start < a.end &&
   (a.teacher === b.teacher || a.room === b.room || a.classId === b.classId);
 export function billed(state: State, s: Student) {
-  return Object.values(state.fees[s.classId] || {}).reduce((a, b) => a + b, 0);
+  const total = Object.values(state.fees[s.classId] || {}).reduce((a, b) => a + b, 0);
+  return Math.round(total * (1 - (state.studentConcessions?.[s.id] || 0) / 100) * 100) / 100;
 }
 export function paid(state: State, id: string) {
   return state.payments
@@ -455,6 +789,7 @@ export function seed(): State {
         role: 'Student',
         active: true,
         classes: [classes[0]],
+        studentId: students[0].id,
       },
       {
         id: 'u4',
@@ -465,6 +800,17 @@ export function seed(): State {
         classes: [],
       },
     ],
+    teacherAssignments: classes.slice(0, 2).map((classId, index) => ({
+      id: `tc_seed_${index + 1}`,
+      classId,
+      teacherUserId: 'u2',
+      teacherId: 'u2',
+      subjectId: 'all',
+      isGeneralInstructor: true,
+      isClassTeacher: true,
+      createdAt: '2026-10-01T08:00:00.000Z',
+      createdBy: 'u1',
+    })),
     certificates: [
       { id: 'cert1', studentId: students[0].id, type: 'Academic Excellence', date: '2026-10-01' },
     ],

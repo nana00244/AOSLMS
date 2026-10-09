@@ -1,5 +1,15 @@
 import { describe, it, expect } from 'vitest';
-import { gradeLetter, rank, ordinal, standing, conflicts, seed, billed, paid } from './data';
+import {
+  gradeLetter,
+  rank,
+  ordinal,
+  standing,
+  conflicts,
+  seed,
+  billed,
+  paid,
+  courseworkAssessment,
+} from './data';
 import { validateState } from './store';
 describe('school calculations', () => {
   it('grades every boundary correctly', () => {
@@ -31,6 +41,57 @@ describe('school calculations', () => {
       '13th',
       '21st',
     ]);
+  });
+  it('calculates coursework category scaling and the dual 50/50 score with integer rounding', () => {
+    const state = seed();
+    const student = state.students[0];
+    state.assignments = [
+      {
+        id: 'exercise-1',
+        classId: student.classId,
+        subject: 'Mathematics',
+        title: 'Exercise 1',
+        due: '2026-10-08',
+        description: '',
+        category: 'Exercise',
+        points: 10,
+        scores: { [student.id]: { score: 7.5 } },
+      },
+      {
+        id: 'exam-1',
+        classId: student.classId,
+        subject: 'Mathematics',
+        title: 'Terminal exam',
+        due: '2026-10-08',
+        description: '',
+        category: 'Terminal exam',
+        points: 100,
+        scores: { [student.id]: { score: 79 } },
+      },
+    ];
+    state.submissions = [];
+    const assessment = courseworkAssessment(state, student.id, student.classId, 'Mathematics');
+    expect(assessment.categoryDetails.Exercise).toEqual({
+      earnedRaw: 8,
+      maxRaw: 10,
+      scaled15: 11,
+      count: 1,
+    });
+    expect(assessment.rawSba).toBe(11);
+    expect(assessment.sba).toBe(9);
+    expect(assessment.examRaw).toBe(79);
+    expect(assessment.exam).toBe(40);
+    expect(assessment.total).toBe(49);
+    expect(assessment.grade).toBe('E');
+  });
+  it('excludes unscored category columns and treats an empty subject as zero for ranking', () => {
+    const state = seed();
+    const student = state.students[0];
+    const assessment = courseworkAssessment(state, student.id, student.classId, 'Mathematics');
+    expect(assessment.categories.Exercise).toBeNull();
+    expect(assessment.sba).toBe(0);
+    expect(assessment.total).toBeNull();
+    expect(rank(assessment.total ?? 0, [0, 12, 12])).toBe(3);
   });
   it('checks attendance standing boundaries', () => {
     expect([95, 94, 85, 84, 75, 74].map(standing)).toEqual([

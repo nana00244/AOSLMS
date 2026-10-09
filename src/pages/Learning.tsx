@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
+import { Link } from 'react-router-dom';
 import {
   Plus,
   Printer,
@@ -23,7 +24,19 @@ import {
   GraduationCap,
 } from 'lucide-react';
 import { useStore, download } from '../store';
-import { classes, subjects, today, uid, conflicts, type Period, type Resource } from '../data';
+import {
+  classes,
+  subjects,
+  classSubjects,
+  courseworkSubjectId,
+  today,
+  uid,
+  conflicts,
+  type Period,
+  type Resource,
+} from '../data';
+import { canManageResource, filterResources, adminUserIds } from '../services/resourceService';
+import { certificateService } from '../services/certificateService';
 import {
   PageHeader,
   Button,
@@ -326,18 +339,69 @@ export function Timetable() {
   );
 }
 export function Resources() {
-  const { data, role, allowedClasses } = useStore();
-  const [tab, setTab] = useState('All resources'),
+  const { data, role, user, allowedClasses, update, notify } = useStore();
+  const [activeTab, setActiveTab] = useState<'all' | 'my_uploads'>('all'),
     [q, setQ] = useState(''),
-    [cls, setCls] = useState(allowedClasses[0]),
+    [cls, setCls] = useState('all'),
+    [selectedCategory, setSelectedCategory] = useState('all'),
+    [selectedFileType, setSelectedFileType] = useState('all'),
+    [selectedSubject, setSelectedSubject] = useState('all'),
     [upload, setUpload] = useState(false),
+    [editing, setEditing] = useState<Resource | null>(null),
     [view, setView] = useState<Resource | null>(null);
-  const resources = data.resources.filter(
-    (r) =>
-      r.classId === cls &&
-      allowedClasses.includes(r.classId) &&
-      (tab === 'All resources' || r.category === tab) &&
-      (r.title + ' ' + r.subject).toLowerCase().includes(q.toLowerCase()),
+  const isAdmin = role === 'Administrator';
+  const classesList = isAdmin ? data.classes || classes : allowedClasses;
+  const resourceTypes = [
+    ...new Set(data.resources.map((resource) => resource.fileType || resource.type)),
+  ];
+  const visibleClassIds = cls === 'all' ? allowedClasses : [cls];
+  const resourceSubjects = [
+    ...new Set(
+      visibleClassIds.flatMap((classId) => {
+        const whitelist = user?.classAllowedSubjects?.[classId];
+        return classSubjects(classId).filter(
+          (subject) =>
+            role !== 'Teacher' ||
+            whitelist === undefined ||
+            whitelist.includes(subject) ||
+            whitelist.includes(courseworkSubjectId(subject)),
+        );
+      }),
+    ),
+  ];
+  const resources = useMemo(
+    () =>
+      filterResources({
+        resources: data.resources,
+        role,
+        userId: user?.id || '',
+        activeTab,
+        selectedClassFilter: cls,
+        selectedCategory,
+        selectedFileType,
+        selectedSubject,
+        searchQuery: q,
+        assignedClasses: allowedClasses,
+        adminUserIds: adminUserIds(data),
+      }),
+    [
+      data,
+      role,
+      user?.id,
+      activeTab,
+      cls,
+      selectedCategory,
+      selectedFileType,
+      selectedSubject,
+      q,
+      allowedClasses,
+    ],
+  );
+  const visibleResources = resources.filter(
+    (resource) =>
+      cls === 'all' ||
+      (resource.targetClassIds || [resource.classId]).includes(cls) ||
+      (resource.targetClassIds || []).includes('all'),
   );
   return (
     <>
@@ -354,22 +418,57 @@ export function Resources() {
           )
         }
       />
-      <Tabs
-        items={['All resources', 'Lecture Notes', 'Worksheets', 'Syllabus Guides']}
-        value={tab}
-        onChange={setTab}
-      />
+      {role === 'Teacher' && (
+        <Tabs
+          items={['All resources', 'My uploads']}
+          value={activeTab === 'all' ? 'All resources' : 'My uploads'}
+          onChange={(value) => setActiveTab(value === 'My uploads' ? 'my_uploads' : 'all')}
+        />
+      )}
       <div className="filter-bar resource-filter">
         <SearchBox value={q} onChange={setQ} placeholder="Find a resource..." />
         <select aria-label="Resource class" value={cls} onChange={(e) => setCls(e.target.value)}>
-          {allowedClasses.map((c) => (
-            <option key={c}>{c}</option>
+          <option value="all">{role === 'Teacher' ? 'All my classes' : 'All classes'}</option>
+          {classesList.map((c) => (
+            <option key={c} value={c}>
+              {c}
+            </option>
           ))}
         </select>
-        <span className="muted">{resources.length} resources</span>
+        <select
+          aria-label="Resource category"
+          value={selectedCategory}
+          onChange={(e) => setSelectedCategory(e.target.value)}
+        >
+          <option value="all">All categories</option>
+          {[...new Set(data.resources.map((resource) => resource.category))].map((category) => (
+            <option key={category}>{category}</option>
+          ))}
+        </select>
+        <select
+          aria-label="Resource file type"
+          value={selectedFileType}
+          onChange={(e) => setSelectedFileType(e.target.value)}
+        >
+          <option value="all">All file types</option>
+          {resourceTypes.map((type) => (
+            <option key={type}>{type}</option>
+          ))}
+        </select>
+        <select
+          aria-label="Resource subject"
+          value={selectedSubject}
+          onChange={(e) => setSelectedSubject(e.target.value)}
+        >
+          <option value="all">All subjects</option>
+          {resourceSubjects.map((subject) => (
+            <option key={subject}>{subject}</option>
+          ))}
+        </select>
+        <span className="muted">{visibleResources.length} resources</span>
       </div>
       <div className="resource-grid">
-        {resources.map((r, i) => (
+        {visibleResources.map((r, i) => (
           <Card className="resource-card" key={r.id}>
             <div className={`resource-cover tone-${i % 4}`}>
               <div className="document-art">
@@ -384,6 +483,39 @@ export function Resources() {
               <div className="resource-bottom">
                 <span>{r.date}</span>
                 <div className="row-actions">
+                  {canManageResource(r, user?.id || '', role) && (
+                    <>
+                      <button
+                        className="icon-btn"
+                        aria-label={`Edit ${r.title}`}
+                        onClick={() => setEditing(r)}
+                      >
+                        <Pencil size={16} />
+                      </button>
+                      <button
+                        className="icon-btn"
+                        aria-label={`Delete ${r.title}`}
+                        onClick={() => {
+                          if (!canManageResource(r, user?.id || '', role)) return;
+                          if (!window.confirm(`Delete “${r.title}”?`)) return;
+                          update(
+                            (state) => ({
+                              ...state,
+                              resources: state.resources.filter(
+                                (item) =>
+                                  item.id !== r.id ||
+                                  !canManageResource(item, user?.id || '', role),
+                              ),
+                            }),
+                            `Resource removed: ${r.title}`,
+                          );
+                          notify('Resource removed.');
+                        }}
+                      >
+                        <Trash2 size={16} />
+                      </button>
+                    </>
+                  )}
                   <button
                     className="icon-btn"
                     aria-label={`View ${r.title}`}
@@ -396,7 +528,9 @@ export function Resources() {
                     aria-label={`Download ${r.title}`}
                     onClick={() =>
                       r.url
-                        ? window.open(r.url, '_blank', 'noopener,noreferrer')
+                        ? r.url.startsWith('data:')
+                          ? download(r.filename || r.title, r.url)
+                          : window.open(r.url, '_blank', 'noopener,noreferrer')
                         : download(r.filename || `${r.title}.txt`, r.content)
                     }
                   >
@@ -408,14 +542,17 @@ export function Resources() {
           </Card>
         ))}
       </div>
-      {!resources.length && (
+      {!visibleResources.length && (
         <Empty title="Room for new ideas" text="No resources match these filters." />
       )}
       <div className="library-note">
         <BookOpen size={22} />
         <div>
           <strong>A space for your classroom</strong>
-          <p>Materials here are shared with {cls}. Explore, practise, and ask questions.</p>
+          <p>
+            Materials here are shared with {cls === 'all' ? 'your assigned classrooms' : cls}.
+            Explore, practise, and ask questions.
+          </p>
         </div>
       </div>
       {view && (
@@ -423,10 +560,21 @@ export function Resources() {
           <Badge tone="blue">{view.category}</Badge>
           {view.url ? (
             <>
-              <p>Open this learning resource in a new tab.</p>
-              <a className="btn btn-primary" href={view.url} target="_blank" rel="noreferrer">
-                Open resource ↗
-              </a>
+              <p>
+                {view.url.startsWith('data:')
+                  ? `Uploaded file: ${view.filename}`
+                  : 'Open this learning resource in a new tab.'}
+              </p>
+              {view.url.startsWith('data:') ? (
+                <Button onClick={() => download(view.filename || view.title, view.url!)}>
+                  <Download size={16} />
+                  Download file
+                </Button>
+              ) : (
+                <a className="btn btn-primary" href={view.url} target="_blank" rel="noreferrer">
+                  Open resource ↗
+                </a>
+              )}
             </>
           ) : (
             <>
@@ -440,13 +588,25 @@ export function Resources() {
         </Modal>
       )}
       {upload && <ResourceForm cls={cls} onClose={() => setUpload(false)} />}
+      {editing && (
+        <ResourceForm cls={editing.classId} resource={editing} onClose={() => setEditing(null)} />
+      )}
     </>
   );
 }
-function ResourceForm({ cls, onClose }: { cls: string; onClose: () => void }) {
-  const { allowedClasses, update, notify } = useStore();
+function ResourceForm({
+  cls,
+  resource,
+  onClose,
+}: {
+  cls: string;
+  resource?: Resource;
+  onClose: () => void;
+}) {
+  const { data, allowedClasses, role, user, update, notify } = useStore();
   const [content, setContent] = useState(''),
     [filename, setFilename] = useState(''),
+    [fileUrl, setFileUrl] = useState(''),
     [error, setError] = useState('');
   return (
     <Modal title="Share a classroom resource" onClose={onClose}>
@@ -455,82 +615,155 @@ function ResourceForm({ cls, onClose }: { cls: string; onClose: () => void }) {
           e.preventDefault();
           const f = new FormData(e.currentTarget);
           const url = String(f.get('url'));
-          if (!url && !content.trim()) {
-            setError('Add a handout, text file, or resource link.');
+          if (!url && !fileUrl && !content.trim()) {
+            setError('Add a handout, upload a file, or provide a resource link.');
+            return;
+          }
+          const resourceUrl =
+            url || fileUrl || (resource?.url?.startsWith('data:') ? resource.url : '');
+          const selectedFilename = filename || resource?.filename;
+          const classId = String(f.get('class'));
+          if (role === 'Teacher' && !allowedClasses.includes(classId)) {
+            setError('You can only share resources with your assigned classrooms.');
             return;
           }
           const r: Resource = {
-            id: uid(),
+            ...resource,
+            id: resource?.id || uid(),
             title: String(f.get('title')),
             subject: String(f.get('subject')),
-            classId: String(f.get('class')),
+            subjectId: String(f.get('subject')),
+            description: String(f.get('description')),
+            classId: classId === 'all' ? allowedClasses[0] || data.classes[0] : classId,
+            targetClassIds: classId === 'all' ? ['all'] : [classId],
             category: String(f.get('category')),
-            type: url ? 'LINK' : 'TXT',
+            type: url ? 'LINK' : selectedFilename?.split('.').pop()?.toUpperCase() || 'TXT',
+            fileType: url ? 'LINK' : selectedFilename?.split('.').pop()?.toUpperCase() || 'TXT',
             date: today(),
-            content,
-            url,
-            filename: filename || undefined,
+            content: content || resource?.content || '',
+            url: resourceUrl,
+            filename: selectedFilename,
+            uploadedBy: resource?.uploadedBy || user?.id,
+            uploadedByRole: resource?.uploadedByRole || role || undefined,
           };
-          update((d) => ({ ...d, resources: [r, ...d.resources] }), `Resource shared: ${r.title}`);
-          notify('Resource shared with the class.');
+          if (resource && !canManageResource(resource, user?.id || '', role)) {
+            setError('You can only edit resources you uploaded.');
+            return;
+          }
+          update(
+            (d) => ({
+              ...d,
+              resources: resource
+                ? d.resources.map((item) =>
+                    item.id === resource.id && canManageResource(item, user?.id || '', role)
+                      ? r
+                      : item,
+                  )
+                : [r, ...d.resources],
+            }),
+            resource ? `Resource updated: ${r.title}` : `Resource shared: ${r.title}`,
+          );
+          notify(resource ? 'Resource updated.' : 'Resource shared with the class.');
           onClose();
         }}
       >
         <Field label="Resource title">
-          <input name="title" required />
+          <input name="title" required defaultValue={resource?.title} />
         </Field>
         <div className="form-grid">
           <Field label="Class">
-            <select name="class" defaultValue={cls}>
+            <select
+              name="class"
+              defaultValue={resource?.targetClassIds?.includes('all') ? 'all' : cls}
+            >
+              {role === 'Administrator' && <option value="all">All classes (school-wide)</option>}
               {allowedClasses.map((c) => (
                 <option key={c}>{c}</option>
               ))}
             </select>
           </Field>
           <Field label="Category">
-            <select name="category">
-              <option>Lecture Notes</option>
-              <option>Worksheets</option>
-              <option>Syllabus Guides</option>
-            </select>
-          </Field>
-          <Field label="Subject">
-            <select name="subject">
-              {subjects.map((s) => (
-                <option key={s}>{s}</option>
+            <select name="category" defaultValue={resource?.category || 'Lecture Notes'}>
+              {[
+                ...new Set([
+                  'Lecture Notes',
+                  'Worksheets',
+                  'Syllabus Guides',
+                  ...(data.resources || []).map((item) => item.category),
+                ]),
+              ].map((category) => (
+                <option key={category}>{category}</option>
               ))}
             </select>
           </Field>
+          <Field label="Subject">
+            <select name="subject" defaultValue={resource?.subject || subjects[0]}>
+              {[...new Set([...subjects, ...data.resources.map((item) => item.subject)])].map(
+                (s) => (
+                  <option key={s}>{s}</option>
+                ),
+              )}
+            </select>
+          </Field>
           <Field label="Resource or video link">
-            <input name="url" type="url" pattern="https?://.*" placeholder="https://..." />
+            <input
+              name="url"
+              type="url"
+              pattern="https?://.*"
+              placeholder="https://..."
+              defaultValue={resource?.url?.startsWith('data:') ? '' : resource?.url}
+            />
           </Field>
         </div>
+        <Field label="Description">
+          <textarea name="description" defaultValue={resource?.description} rows={2} />
+        </Field>
         <Field label="Text handout">
-          <textarea value={content} onChange={(e) => setContent(e.target.value)} rows={4} />
+          <textarea
+            value={content || resource?.content || ''}
+            onChange={(e) => setContent(e.target.value)}
+            rows={4}
+          />
         </Field>
         <Field
-          label="Or upload a text handout"
-          hint="Text files up to 500 KB. For PDFs, Office files, or videos, use a hosted resource link."
+          label="Upload a resource file"
+          hint="Any file format up to 10 MB. Files are stored in this browser."
         >
           <input
             type="file"
-            accept=".txt,.md"
             onChange={async (e) => {
               const f = e.target.files?.[0];
               if (!f) return;
-              if (f.size > 500000) {
-                setError('Choose a text file under 500 KB.');
+              if (f.size > 10 * 1024 * 1024) {
+                setError('Choose a file no larger than 10 MB.');
+                setFilename('');
+                setFileUrl('');
                 return;
               }
-              setContent(await f.text());
+              setContent(f.type.startsWith('text/') ? await f.text() : '');
               setFilename(f.name);
-              setError('');
+              try {
+                setFileUrl(
+                  await new Promise<string>((resolve, reject) => {
+                    const reader = new FileReader();
+                    reader.onload = () => resolve(String(reader.result));
+                    reader.onerror = () => reject(reader.error);
+                    reader.readAsDataURL(f);
+                  }),
+                );
+                setError('');
+              } catch {
+                setFilename('');
+                setFileUrl('');
+                setError('The selected file could not be read. Please try another file.');
+              }
             }}
           />
         </Field>
+        {filename && <p className="muted">Selected: {filename}</p>}
         {error && <p className="error">{error}</p>}
         <div className="modal-actions">
-          <Button type="submit">Share resource</Button>
+          <Button type="submit">{resource ? 'Save resource' : 'Share resource'}</Button>
         </div>
       </form>
     </Modal>
@@ -543,13 +776,41 @@ const awards = [
   'Sports, Arts & Cultural Distinction',
 ];
 export function Certificates() {
-  const { data, role, ownId, allowedClasses, update, notify } = useStore();
+  const { data, role, ownId, user, allowedClasses, update, notify } = useStore();
   const [create, setCreate] = useState(false),
-    [view, setView] = useState('');
+    [view, setView] = useState(''),
+    [teacherCertificates, setTeacherCertificates] = useState<typeof data.certificates>([]);
   const students = data.students.filter(
-    (s) => allowedClasses.includes(s.classId) && (role !== 'Student' || s.id === ownId),
+    (s) =>
+      (role === 'Administrator' || allowedClasses.includes(s.classId)) &&
+      (role !== 'Student' || s.id === ownId),
   );
-  const certs = data.certificates.filter((c) => students.some((s) => s.id === c.studentId));
+  useEffect(() => {
+    let active = true;
+    if (role !== 'Teacher' || !user) {
+      setTeacherCertificates([]);
+      return () => {
+        active = false;
+      };
+    }
+    void certificateService
+      .getCertificatesForTeacher(data.certificates, user.id, undefined, user.name)
+      .then((certificates) => {
+        if (active) setTeacherCertificates(certificates);
+      });
+    return () => {
+      active = false;
+    };
+  }, [data.certificates, role, user]);
+  const certs = (
+    role === 'Administrator'
+      ? data.certificates
+      : role === 'Teacher'
+        ? teacherCertificates
+        : data.certificates.filter((certificate) =>
+            students.some((student) => student.id === certificate.studentId),
+          )
+  ).filter((certificate) => students.some((student) => student.id === certificate.studentId));
   const current = certs.find((c) => c.id === view);
   return (
     <>
@@ -627,24 +888,20 @@ export function Certificates() {
             onSubmit={(e) => {
               e.preventDefault();
               const f = new FormData(e.currentTarget);
-              const id = uid();
+              const certificate = certificateService.createCertificate(
+                { studentId: String(f.get('student')), type: String(f.get('type')), date: today() },
+                user?.id || 'unknown',
+                user?.name || 'Unknown user',
+              );
               update(
                 (d) => ({
                   ...d,
-                  certificates: [
-                    ...d.certificates,
-                    {
-                      id,
-                      studentId: String(f.get('student')),
-                      type: String(f.get('type')),
-                      date: today(),
-                    },
-                  ],
+                  certificates: [...d.certificates, certificate],
                 }),
                 'Certificate issued',
               );
               setCreate(false);
-              setView(id);
+              setView(certificate.id);
               notify('Certificate issued.');
             }}
           >
@@ -678,8 +935,8 @@ function GraduationCapLogo() {
 }
 export function Community() {
   const { data, role, me, allowedClasses, update, notify } = useStore();
-  const classList = data.classes || classes;
   const isAdmin = role === 'Administrator';
+  const classList = isAdmin ? data.classes || classes : allowedClasses;
   const [tab, setTab] = useState(isAdmin ? 'Classrooms & Streams' : 'Classroom updates');
   const [createPost, setCreatePost] = useState(false);
   const [createClass, setCreateClass] = useState(false);
@@ -898,7 +1155,10 @@ export function Community() {
             />
             <Stat
               label="Enrolled Learners"
-              value={data.students.filter((s) => s.status === 'Active').length}
+              value={
+                data.students.filter((s) => s.status === 'Active' && classList.includes(s.classId))
+                  .length
+              }
               icon={<GraduationCap />}
               tone="green"
             />
@@ -1028,6 +1288,11 @@ export function Community() {
                         Delete
                       </Button>
                     </div>
+                  )}
+                  {(isAdmin || role === 'Teacher') && (
+                    <Link className="btn btn-secondary" to={`/classes/${encodeURIComponent(c)}`}>
+                      Open classroom
+                    </Link>
                   )}
                 </Card>
               );

@@ -38,6 +38,13 @@ export function Students() {
       notify('This admission number already exists.');
       return;
     }
+    const previous = data.students.find((student) => student.id === s.id);
+    const action =
+      previous && previous.classId !== s.classId
+        ? `Student transferred: ${s.name} from ${previous.classId} to ${s.classId}`
+        : previous
+          ? `Student record updated: ${s.name}`
+          : `Student admitted: ${s.name}`;
     update(
       (d) => ({
         ...d,
@@ -45,7 +52,7 @@ export function Students() {
           ? d.students.map((x) => (x.id === s.id ? s : x))
           : [...d.students, s],
       }),
-      `Student record saved: ${s.name}`,
+      action,
     );
     setEdit(null);
     notify('Student record saved.');
@@ -146,6 +153,7 @@ export function Students() {
               <tr>
                 <th>Student</th>
                 <th>Class / stream</th>
+                <th>Guardian contact</th>
                 <th>Gender</th>
                 <th>Status</th>
                 <th>
@@ -160,6 +168,7 @@ export function Students() {
                     <Person name={s.name} sub={s.id} photo={s.photo} />
                   </td>
                   <td>{s.classId}</td>
+                  <td>{s.phone || s.guardian || '—'}</td>
                   <td>{s.gender}</td>
                   <td>
                     <Badge

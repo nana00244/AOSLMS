@@ -25,6 +25,8 @@ import {
   PanelLeftClose,
   Sun,
   Moon,
+  Receipt as ReceiptIcon,
+  Printer as PrinterIcon,
 } from 'lucide-react';
 import { StoreProvider, useStore } from './store';
 import { type Role } from './data';
@@ -34,8 +36,28 @@ import { Students } from './pages/Students';
 import { Attendance } from './pages/Attendance';
 import { Coursework, Reports } from './pages/Academics';
 import { Timetable, Resources, Certificates, Community } from './pages/Learning';
-import { Finance, Payroll } from './pages/Finance';
+import { AdminFinanceDashboard, Finance, Payroll } from './pages/Finance';
 import { SettingsPage, UsersPage, Audit } from './pages/Settings';
+import { TeacherClassGuard } from './components/TeacherClassGuard';
+import { ClassroomDetail } from './pages/ClassroomDetail';
+import {
+  AccountantDashboard,
+  StudentFinanceList,
+  PaymentRecorder,
+  FeeManagement,
+  ExpenditurePage,
+  BatchReceiptPrinter,
+} from './pages/Accountant';
+import {
+  StudentStream,
+  StudentAssignments,
+  AssignmentDetail,
+  StudentFees,
+  ReportCardView,
+  StudentCertificates,
+  StudentPerformanceTracking,
+  StudentSchedule,
+} from './pages/StudentPortal';
 const nav = [
   {
     label: 'Overview',
@@ -54,48 +76,101 @@ const nav = [
     label: 'Coursework',
     path: '/coursework',
     icon: BookOpen,
-    roles: ['Administrator', 'Teacher', 'Student'],
+    roles: ['Administrator', 'Teacher'],
   },
   {
     label: 'Report cards',
     path: '/reports',
     icon: ShieldCheck,
-    roles: ['Administrator', 'Teacher', 'Student'],
+    roles: ['Administrator', 'Teacher'],
   },
   {
     label: 'Timetable',
     path: '/timetable',
     icon: CalendarDays,
-    roles: ['Administrator', 'Teacher', 'Student'],
+    roles: ['Administrator', 'Teacher'],
   },
   {
     label: 'Resource library',
     path: '/resources',
     icon: LibraryBig,
-    roles: ['Administrator', 'Teacher', 'Student'],
+    roles: ['Administrator', 'Teacher'],
   },
   {
     label: 'Certificates',
     path: '/certificates',
     icon: Award,
-    roles: ['Administrator', 'Teacher', 'Student'],
+    roles: ['Administrator', 'Teacher'],
   },
   {
     label: 'Classroom',
     path: '/community',
     icon: MessageSquare,
-    roles: ['Administrator', 'Teacher', 'Student'],
+    roles: ['Administrator', 'Teacher'],
   },
   {
     label: 'Financial treasury',
     path: '/finance',
     icon: Wallet,
-    roles: ['Administrator', 'Accountant', 'Student'],
+    roles: ['Administrator', 'Accountant'],
   },
   { label: 'Payroll', path: '/payroll', icon: Landmark, roles: ['Administrator', 'Accountant'] },
   { label: 'Users & access', path: '/users', icon: Users, roles: ['Administrator'] },
   { label: 'Activity log', path: '/audit', icon: ShieldCheck, roles: ['Administrator'] },
   { label: 'Settings', path: '/settings', icon: Settings, roles: ['Administrator'] },
+];
+const accountantNav = [
+  { label: 'Financial Intelligence', path: '/', icon: LayoutDashboard, roles: ['Accountant'] },
+  {
+    label: 'Fee Roster & Debtors',
+    path: '/accountant/students',
+    icon: Users,
+    roles: ['Accountant'],
+  },
+  {
+    label: 'Fee Structures & Categories',
+    path: '/accountant/fees',
+    icon: Settings,
+    roles: ['Accountant'],
+  },
+  {
+    label: 'Expenditure & Outflows',
+    path: '/accountant/expenditures',
+    icon: Landmark,
+    roles: ['Accountant'],
+  },
+  { label: 'Payroll Manager', path: '/accountant/payroll', icon: Wallet, roles: ['Accountant'] },
+  {
+    label: 'Record Student Payment',
+    path: '/accountant/payments/new',
+    icon: ReceiptIcon,
+    roles: ['Accountant'],
+  },
+  {
+    label: 'Batch Receipts (58mm)',
+    path: '/accountant/batch-receipts',
+    icon: PrinterIcon,
+    roles: ['Accountant'],
+  },
+];
+const studentNav = [
+  { label: 'Class Stream', path: '/student/stream', icon: MessageSquare, roles: ['Student'] },
+  { label: 'My Assignments', path: '/student/assignments', icon: BookOpen, roles: ['Student'] },
+  { label: 'Fees & Financials', path: '/student/fees', icon: Wallet, roles: ['Student'] },
+  {
+    label: 'Terminal Report Card',
+    path: '/student/report-cards',
+    icon: ShieldCheck,
+    roles: ['Student'],
+  },
+  {
+    label: 'Performance Tracking',
+    path: '/student/performance',
+    icon: ClipboardCheck,
+    roles: ['Student'],
+  },
+  { label: 'My Certificates', path: '/student/certificates', icon: Award, roles: ['Student'] },
+  { label: 'My Schedule', path: '/student/schedule', icon: CalendarDays, roles: ['Student'] },
 ];
 function Login() {
   const { setRole, theme, toggleTheme } = useStore();
@@ -203,14 +278,86 @@ function Login() {
     </main>
   );
 }
+export function ProtectedRoute({
+  children,
+  allowedRoles,
+}: {
+  children: ReactNode;
+  allowedRoles?: Role[];
+}) {
+  const { role, user } = useStore();
+  if (!role || !user) return <Navigate to="/" replace />;
+  if (allowedRoles && !allowedRoles.includes(role)) return <Navigate to="/unauthorized" replace />;
+  return <>{children}</>;
+}
 function Guard({ path, children }: { path: string; children: ReactNode }) {
-  const { role } = useStore();
-  return nav.find((n) => n.path === path)?.roles.includes(role || '') ? (
-    <>{children}</>
-  ) : (
-    <Navigate to="/" replace />
+  const allowedRoles = nav.find((item) => item.path === path)?.roles as Role[] | undefined;
+  return <ProtectedRoute allowedRoles={allowedRoles}>{children}</ProtectedRoute>;
+}
+function Unauthorized() {
+  return (
+    <section className="access-restricted">
+      <ShieldCheck size={42} />
+      <h1>Access denied</h1>
+      <p>Your current role does not have permission to open this page.</p>
+      <Link className="btn btn-primary" to="/">
+        Return to your workspace
+      </Link>
+    </section>
   );
 }
+function BottomNav({ role, onOpenMenu }: { role: Role; onOpenMenu: () => void }) {
+  const links =
+    role === 'Student'
+      ? [
+          { label: 'Home', path: '/student/stream', icon: LayoutDashboard },
+          { label: 'Assignments', path: '/student/assignments', icon: BookOpen },
+          { label: 'Fees', path: '/student/fees', icon: Wallet },
+          { label: 'Schedule', path: '/student/schedule', icon: CalendarDays },
+        ]
+      : role === 'Accountant'
+        ? [
+            { label: 'Home', path: '/', icon: LayoutDashboard },
+            { label: 'Students', path: '/accountant/students', icon: Users },
+            { label: 'Payments', path: '/accountant/payments/new', icon: ReceiptIcon },
+            { label: 'Fees', path: '/accountant/fees', icon: Wallet },
+          ]
+        : role === 'Teacher'
+          ? [
+              { label: 'Home', path: '/', icon: LayoutDashboard },
+              { label: 'Coursework', path: '/coursework', icon: BookOpen },
+              { label: 'Classroom', path: '/community', icon: MessageSquare },
+              { label: 'Resources', path: '/resources', icon: LibraryBig },
+            ]
+          : [
+              { label: 'Home', path: '/', icon: LayoutDashboard },
+              { label: 'Students', path: '/admin/students', icon: Users },
+              { label: 'Classroom', path: '/community', icon: MessageSquare },
+              { label: 'Resources', path: '/resources', icon: LibraryBig },
+            ];
+
+  return (
+    <nav className="bottom-nav" aria-label="Quick navigation">
+      {links.map(({ label, path, icon: Icon }) => (
+        <NavLink
+          key={path}
+          to={path}
+          end={path === '/'}
+          className={({ isActive }) => `bottom-nav-link ${isActive ? 'active' : ''}`}
+          aria-label={label}
+        >
+          <Icon size={19} />
+          <span>{label}</span>
+        </NavLink>
+      ))}
+      <button type="button" className="bottom-nav-link" onClick={onOpenMenu} aria-label="Open menu">
+        <Menu size={19} />
+        <span>Menu</span>
+      </button>
+    </nav>
+  );
+}
+
 function Shell() {
   const { role, setRole, data, me, toast, storageError, theme, toggleTheme } = useStore();
   const [mobile, setMobile] = useState(false);
@@ -224,8 +371,21 @@ function Shell() {
     document.addEventListener('keydown', onKey);
     return () => document.removeEventListener('keydown', onKey);
   }, [mobile]);
+  useEffect(() => {
+    setMobile(false);
+  }, [location.pathname]);
+  useEffect(() => {
+    if (!mobile) return;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = previousOverflow;
+    };
+  }, [mobile]);
   if (!role) return <Login />;
-  const items = nav.filter((n) => n.roles.includes(role));
+  const items = (
+    role === 'Accountant' ? accountantNav : role === 'Student' ? studentNav : nav
+  ).filter((n) => n.roles.includes(role));
   return (
     <div className={`app-shell ${compact ? 'compact' : ''}`}>
       <a
@@ -238,7 +398,14 @@ function Shell() {
       >
         Skip to content
       </a>
-      {mobile && <div className="sidebar-backdrop" onClick={() => setMobile(false)} />}
+      {mobile && (
+        <button
+          type="button"
+          className="sidebar-backdrop"
+          onClick={() => setMobile(false)}
+          aria-label="Close navigation menu"
+        />
+      )}
       <aside className={`sidebar ${mobile ? 'open' : ''}`}>
         <Link to="/" className="brand" onClick={() => setMobile(false)}>
           <span className="brand-icon">
@@ -327,7 +494,13 @@ function Shell() {
               {theme === 'dark' ? <Sun size={19} /> : <Moon size={19} />}
             </button>
             <Link
-              to={role === 'Accountant' ? '/finance' : '/community'}
+              to={
+                role === 'Accountant'
+                  ? '/finance'
+                  : role === 'Student'
+                    ? '/student/stream'
+                    : '/community'
+              }
               aria-label="Open school updates"
               className="notification"
             >
@@ -344,7 +517,227 @@ function Shell() {
             </div>
           )}
           <Routes>
-            <Route path="/" element={<Dashboard />} />
+            <Route
+              path="/"
+              element={
+                role === 'Accountant' ? (
+                  <AccountantDashboard />
+                ) : role === 'Student' ? (
+                  <Navigate to="/student/stream" replace />
+                ) : (
+                  <Dashboard />
+                )
+              }
+            />
+            <Route path="/unauthorized" element={<Unauthorized />} />
+            <Route
+              path="/classes/:classId"
+              element={
+                <TeacherClassGuard>
+                  <ClassroomDetail />
+                </TeacherClassGuard>
+              }
+            />
+            <Route
+              path="/admin"
+              element={
+                <ProtectedRoute allowedRoles={['Administrator']}>
+                  <Dashboard />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/admin/finance"
+              element={
+                <ProtectedRoute allowedRoles={['Administrator']}>
+                  <AdminFinanceDashboard />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/admin/governance"
+              element={
+                <ProtectedRoute allowedRoles={['Administrator']}>
+                  <UsersPage />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/admin/students"
+              element={
+                <ProtectedRoute allowedRoles={['Administrator']}>
+                  <Students />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/admin/teachers"
+              element={
+                <ProtectedRoute allowedRoles={['Administrator']}>
+                  <UsersPage />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/admin/classes"
+              element={
+                <ProtectedRoute allowedRoles={['Administrator']}>
+                  <Community />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/admin/classes/:classId/roster"
+              element={
+                <ProtectedRoute allowedRoles={['Administrator']}>
+                  <ClassroomDetail />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/admin/timetable"
+              element={
+                <ProtectedRoute allowedRoles={['Administrator']}>
+                  <Timetable />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/admin/reports"
+              element={
+                <ProtectedRoute allowedRoles={['Administrator']}>
+                  <Reports />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/admin/logs"
+              element={
+                <ProtectedRoute allowedRoles={['Administrator']}>
+                  <Audit />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/admin/settings"
+              element={
+                <ProtectedRoute allowedRoles={['Administrator']}>
+                  <SettingsPage />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/student/stream"
+              element={
+                <ProtectedRoute allowedRoles={['Student']}>
+                  <StudentStream />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/student/assignments"
+              element={
+                <ProtectedRoute allowedRoles={['Student']}>
+                  <StudentAssignments />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/student/assignments/:id"
+              element={
+                <ProtectedRoute allowedRoles={['Student']}>
+                  <AssignmentDetail />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/student/fees"
+              element={
+                <ProtectedRoute allowedRoles={['Student']}>
+                  <StudentFees />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/student/report-cards"
+              element={
+                <ProtectedRoute allowedRoles={['Student']}>
+                  <ReportCardView />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/student/certificates"
+              element={
+                <ProtectedRoute allowedRoles={['Student']}>
+                  <StudentCertificates />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/student/performance"
+              element={
+                <ProtectedRoute allowedRoles={['Student']}>
+                  <StudentPerformanceTracking />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/student/schedule"
+              element={
+                <ProtectedRoute allowedRoles={['Student']}>
+                  <StudentSchedule />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/accountant/students"
+              element={
+                <ProtectedRoute allowedRoles={['Accountant', 'Administrator']}>
+                  <StudentFinanceList />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/accountant/fees"
+              element={
+                <ProtectedRoute allowedRoles={['Accountant', 'Administrator']}>
+                  <FeeManagement />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/accountant/expenditures"
+              element={
+                <ProtectedRoute allowedRoles={['Accountant', 'Administrator']}>
+                  <ExpenditurePage />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/accountant/payroll"
+              element={
+                <ProtectedRoute allowedRoles={['Accountant', 'Administrator']}>
+                  <Payroll />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/accountant/payments/new"
+              element={
+                <ProtectedRoute allowedRoles={['Accountant', 'Administrator']}>
+                  <PaymentRecorder />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/accountant/batch-receipts"
+              element={
+                <ProtectedRoute allowedRoles={['Accountant', 'Administrator']}>
+                  <BatchReceiptPrinter />
+                </ProtectedRoute>
+              }
+            />
             {[
               ['/students', <Students />],
               ['/attendance', <Attendance />],
@@ -375,6 +768,7 @@ function Shell() {
         </main>
       </div>
       <Toast message={toast} />
+      <BottomNav role={role} onOpenMenu={() => setMobile(true)} />
     </div>
   );
 }

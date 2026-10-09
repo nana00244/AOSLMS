@@ -1,6 +1,7 @@
 import { workspaceSchema } from './validation';
 import { createContext, useContext, useState, type ReactNode } from 'react';
-import { seed, uid, type State, type Role, classes } from './data';
+import { seed, uid, type State, type Role, type User, classes } from './data';
+import { assignedClassIdsForTeacher } from './services/teacherService';
 const KEY = 'aos-lms-demo-v1';
 export function validateState(value: unknown): value is State {
   return workspaceSchema.safeParse(value).success;
@@ -13,6 +14,16 @@ function read(): State {
       if (validateState(parsed)) {
         if (!parsed.classes || !parsed.classes.length) {
           parsed.classes = [...classes];
+        }
+        const studentAccounts = parsed.users.filter((user) => user.role === 'Student');
+        if (
+          studentAccounts.length === 1 &&
+          !studentAccounts[0].studentId &&
+          parsed.students.length
+        ) {
+          studentAccounts[0].studentId =
+            parsed.students.find((student) => student.classId === studentAccounts[0].classes[0])
+              ?.id || parsed.students[0].id;
         }
         return parsed;
       }
@@ -35,6 +46,7 @@ interface Store {
   allowedClasses: string[];
   me: string;
   ownId: string;
+  user: User | undefined;
   theme: Theme;
   setTheme: (t: Theme) => void;
   toggleTheme: () => void;
@@ -77,7 +89,12 @@ export function StoreProvider({ children }: { children: ReactNode }) {
 
   const roleId =
     role === 'Teacher' ? 'u2' : role === 'Student' ? 'u3' : role === 'Accountant' ? 'u4' : 'u1';
-  const me = data.users.find((u) => u.id === roleId)?.name || role || 'Guest';
+  const user = data.users.find((u) => u.id === roleId && u.active);
+  const linkedStudent =
+    role === 'Student'
+      ? data.students.find((student) => student.id === user?.studentId || student.id === user?.id)
+      : undefined;
+  const me = user?.name || role || 'Guest';
   function setRole(r: Role | null) {
     setRoleState(r);
     if (r) sessionStorage.setItem('aos-role', r);
@@ -130,12 +147,15 @@ export function StoreProvider({ children }: { children: ReactNode }) {
         storageError,
         allowedClasses:
           role === 'Teacher'
-            ? data.users.find((u) => u.id === 'u2')?.classes || []
+            ? assignedClassIdsForTeacher(data, user)
             : role === 'Student'
-              ? [data.students[0]?.classId || (data.classes || classes)[0]]
+              ? linkedStudent?.classId
+                ? [linkedStudent.classId]
+                : []
               : data.classes || classes,
         me,
-        ownId: data.students[0]?.id || '',
+        ownId: linkedStudent?.id || (role === 'Student' ? '' : data.students[0]?.id || ''),
+        user,
         theme,
         setTheme,
         toggleTheme,

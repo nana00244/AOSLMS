@@ -15,7 +15,16 @@ import {
   Moon,
 } from 'lucide-react';
 import { useStore, backup, checksum, validateState, csv } from '../store';
-import { seed, uid, classes, type State, type User, type Role } from '../data';
+import {
+  seed,
+  uid,
+  classes,
+  classSubjects,
+  courseworkSubjectId,
+  type State,
+  type User,
+  type Role,
+} from '../data';
 import {
   PageHeader,
   Button,
@@ -29,6 +38,7 @@ import {
   Person,
   Empty,
 } from '../components/ui';
+import { adminService } from '../services/adminService';
 export function SettingsPage() {
   const { data, update, notify, theme, setTheme } = useStore();
   const [settings, setSettings] = useState(data.settings),
@@ -333,10 +343,26 @@ export function SettingsPage() {
   );
 }
 export function UsersPage() {
-  const { data, update, notify } = useStore();
+  const { data, user: adminUser, update, notify } = useStore();
   const [q, setQ] = useState(''),
     [edit, setEdit] = useState<User | null>(null),
     [remove, setRemove] = useState<User | null>(null);
+  const setClassSubjectAccess = (
+    user: User,
+    classId: string,
+    subject: string,
+    checked: boolean,
+  ) => {
+    const current = user.classAllowedSubjects || {};
+    const currentSubjects = current[classId] || [];
+    const nextSubjects = checked
+      ? [...new Set([...currentSubjects, subject])]
+      : currentSubjects.filter((item) => item !== subject);
+    setEdit({
+      ...user,
+      classAllowedSubjects: { ...current, [classId]: nextSubjects },
+    });
+  };
   const users = data.users.filter((u) =>
     (u.name + u.email + u.role).toLowerCase().includes(q.toLowerCase()),
   );
@@ -372,6 +398,7 @@ export function UsersPage() {
                 <th>Team member</th>
                 <th>Role</th>
                 <th>Assigned classes</th>
+                <th>Teaching scope</th>
                 <th>Status</th>
                 <th />
               </tr>
@@ -384,6 +411,26 @@ export function UsersPage() {
                   </td>
                   <td>{u.role}</td>
                   <td>{u.classes.join(', ') || '—'}</td>
+                  <td>
+                    {u.role === 'Teacher'
+                      ? u.classes
+                          .map((classId) => {
+                            const whitelist = u.classAllowedSubjects?.[classId];
+                            const scope =
+                              whitelist === undefined
+                                ? 'Class teacher · all subjects'
+                                : classSubjects(classId)
+                                    .filter(
+                                      (subject) =>
+                                        whitelist.includes(subject) ||
+                                        whitelist.includes(courseworkSubjectId(subject)),
+                                    )
+                                    .join(', ') || 'No subjects selected';
+                            return `${classId}: ${scope}`;
+                          })
+                          .join(' · ') || 'No class assigned'
+                      : '—'}
+                  </td>
                   <td>
                     <Badge tone={u.active ? 'green' : 'amber'}>
                       {u.active ? 'Active' : 'Inactive'}
@@ -434,8 +481,15 @@ export function UsersPage() {
               }
               const user = { ...edit, id: edit.id || uid() };
               update(
-                (d) => ({ ...d, users: [...d.users.filter((u) => u.id !== user.id), user] }),
-                'User profile saved',
+                (d) => {
+                  let next: State = {
+                    ...d,
+                    users: [...d.users.filter((existing) => existing.id !== user.id), user],
+                  };
+                  next = adminService.syncTeacherAssignments(next, user, adminUser?.id || 'u1');
+                  return next;
+                },
+                `${user.role === 'Teacher' ? 'Teacher assignment/profile' : 'User profile'} saved: ${user.name}`,
               );
               setEdit(null);
               notify('Demo user profile saved.');
@@ -499,6 +553,60 @@ export function UsersPage() {
                 </label>
               ))}
             </fieldset>
+            {edit.role === 'Teacher' && (
+              <fieldset className="class-checkboxes">
+                <legend>Subject access by class</legend>
+                <p className="muted">
+                  Leave a class unrestricted for class-teacher access to all subjects. Restricting a
+                  class makes this teacher a subject teacher there.
+                </p>
+                {edit.classes.map((classId) => {
+                  const restricted = edit.classAllowedSubjects?.[classId] !== undefined;
+                  return (
+                    <div key={classId} className="teacher-subject-access">
+                      <label>
+                        <input
+                          type="checkbox"
+                          checked={restricted}
+                          onChange={(event) => {
+                            const next = { ...(edit.classAllowedSubjects || {}) };
+                            if (event.target.checked) next[classId] = [];
+                            else delete next[classId];
+                            setEdit({ ...edit, classAllowedSubjects: next });
+                          }}
+                        />
+                        Restrict {classId} to selected subjects
+                      </label>
+                      {restricted && (
+                        <div className="class-checkboxes teacher-subject-options">
+                          {classSubjects(classId).map((subject) => {
+                            const subjectId = courseworkSubjectId(subject);
+                            const allowed = edit.classAllowedSubjects?.[classId] || [];
+                            return (
+                              <label key={subjectId}>
+                                <input
+                                  type="checkbox"
+                                  checked={allowed.includes(subjectId) || allowed.includes(subject)}
+                                  onChange={(event) =>
+                                    setClassSubjectAccess(
+                                      edit,
+                                      classId,
+                                      subjectId,
+                                      event.target.checked,
+                                    )
+                                  }
+                                />
+                                {subject}
+                              </label>
+                            );
+                          })}
+                        </div>
+                      )}
+                    </div>
+                  );
+                })}
+              </fieldset>
+            )}
             <div className="modal-actions">
               <Button type="submit">Save user profile</Button>
             </div>

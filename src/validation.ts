@@ -43,6 +43,28 @@ export const workspaceSchema = z
         due: text,
         description: text,
         category: text,
+        term: text.optional(),
+        scores: z
+          .record(z.string(), z.object({ score: number, feedback: text.optional() }))
+          .optional(),
+        slots: z
+          .array(z.object({ slotKey: text, title: text, maxPoints: number.positive() }))
+          .optional(),
+        slotScores: z
+          .record(
+            z.string(),
+            z.record(
+              z.string(),
+              z.object({
+                score: number.nullable().optional(),
+                maxPoints: number.optional(),
+                feedbackType: z.enum(['none', 'absent', 'not_submitted', 'late']).optional(),
+                feedbackReason: text.optional(),
+                updatedAt: text.optional(),
+              }),
+            ),
+          )
+          .optional(),
       }),
     ),
     submissions: z.array(
@@ -56,6 +78,7 @@ export const workspaceSchema = z
         date: text,
         score: number.optional(),
         feedback: text.optional(),
+        isLate: z.boolean().optional(),
       }),
     ),
     attendance: z.record(z.string(), z.enum(['Present', 'Late', 'Absent', 'Excused'])),
@@ -73,11 +96,19 @@ export const workspaceSchema = z
         category: text,
         classId,
         subject: text,
+        subjectId: text.optional(),
+        description: text.optional(),
         type: text,
+        fileType: text.optional(),
         date: text,
         content: z.string().max(600000),
         url,
         filename: text.optional(),
+        uploadedBy: id.optional(),
+        uploadedByRole: z
+          .enum(['Administrator', 'Teacher', 'Student', 'Accountant', 'admin'])
+          .optional(),
+        targetClassIds: z.array(text).optional(),
       }),
     ),
     periods: z.array(
@@ -101,6 +132,9 @@ export const workspaceSchema = z
         date: text,
         notes: text,
         term,
+        transactionRef: text.optional(),
+        receiptNumber: text.optional(),
+        recordedBy: text.optional(),
       }),
     ),
     expenses: z.array(
@@ -112,6 +146,9 @@ export const workspaceSchema = z
         amount: number.positive(),
         status: text,
         date: text,
+        paymentMethod: text.optional(),
+        reference: text.optional(),
+        recordedBy: text.optional(),
       }),
     ),
     payroll: z.array(
@@ -127,6 +164,7 @@ export const workspaceSchema = z
       }),
     ),
     fees: z.record(z.string(), z.record(z.string(), number)),
+    studentConcessions: z.record(id, z.union([z.literal(50), z.literal(100)])).optional(),
     users: z.array(
       z.object({
         id,
@@ -135,9 +173,38 @@ export const workspaceSchema = z
         role,
         active: z.boolean(),
         classes: z.array(classId),
+        studentId: id.optional(),
+        classAllowedSubjects: z.record(z.string(), z.array(text)).optional(),
       }),
     ),
-    certificates: z.array(z.object({ id, studentId: id, type: text, date: text })),
+    teacherAssignments: z
+      .array(
+        z.object({
+          id,
+          classId,
+          teacherUserId: id,
+          teacherId: id,
+          subjectId: text,
+          isGeneralInstructor: z.boolean(),
+          isClassTeacher: z.boolean(),
+          createdAt: text,
+          createdBy: id.optional(),
+        }),
+      )
+      .optional(),
+    certificates: z.array(
+      z.object({
+        id,
+        studentId: id,
+        type: text,
+        date: text,
+        teacherUserId: id.optional(),
+        issuedByUserId: id.optional(),
+        createdById: id.optional(),
+        teacherId: id.optional(),
+        issuedBy: text.optional(),
+      }),
+    ),
     messages: z.array(
       z.object({ id, author: text, title: text, body: text, classId: text, date: text }),
     ),

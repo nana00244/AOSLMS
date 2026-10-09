@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import {
   Plus,
@@ -13,11 +13,12 @@ import {
   GraduationCap,
   Pencil,
   FileText,
+  Download,
   Trash2,
   Upload,
   User,
 } from 'lucide-react';
-import { useStore } from '../store';
+import { csv, useStore } from '../store';
 import {
   uid,
   today,
@@ -29,6 +30,13 @@ import {
   average,
   rank,
   ordinal,
+  courseworkAssessment,
+  courseworkCategory,
+  courseworkCategoryConfigs,
+  courseworkFeedbackMetadata,
+  ensureClassCourseworkCards,
+  courseworkSubjectId,
+  type FeedbackType,
   type Assignment,
   type Student,
   type Submission,
@@ -47,20 +55,222 @@ import {
   Tabs,
 } from '../components/ui';
 export function Coursework() {
-  const { data, role, ownId, allowedClasses, update, notify } = useStore();
+  const { data, role, ownId, allowedClasses, me, update, notify } = useStore();
   const [cls, setCls] = useState(allowedClasses[0]),
     [create, setCreate] = useState(false),
     [active, setActive] = useState(''),
+    [selectedClassFilter, setSelectedClassFilter] = useState('all'),
+    [scoreSubjectSelection, setScoreSubjectSelection] = useState(''),
+    [gridAssignmentId, setGridAssignmentId] = useState(''),
+    [scoreGridOpen, setScoreGridOpen] = useState(false),
+    [gridSearch, setGridSearch] = useState(''),
+    [gridFilter, setGridFilter] = useState<'all' | 'scored' | 'unscored' | 'feedback'>('all'),
+    [activeCategoryTab, setActiveCategoryTab] = useState<'all' | string>('all'),
+    [selectedSubjectFilter, setSelectedSubjectFilter] = useState('all'),
+    [selectedTermFilter, setSelectedTermFilter] = useState('current'),
+    [cardSearchTerm, setCardSearchTerm] = useState(''),
     [grading, setGrading] = useState<Submission | null>(null),
     [submit, setSubmit] = useState<Assignment | null>(null);
   const student = role === 'Student';
-  const assignments = data.assignments.filter((a) => a.classId === cls);
+  const canManageCoursework = role === 'Administrator' || role === 'Teacher';
+  const viewerUser = data.users.find((user) => user.name === me);
+  const isAdministrator = role === 'Administrator';
+  const classAllowedSubjectsMap = viewerUser?.classAllowedSubjects || {};
+  const hasClassAccess = (classId: string) => isAdministrator || allowedClasses.includes(classId);
+  const hasSubjectAccess = (classId: string, subject: string) => {
+    if (!classSubjects(classId).includes(subject)) return false;
+    if (isAdministrator) return true;
+    const configured = classAllowedSubjectsMap[classId];
+    return (
+      configured === undefined ||
+      configured.includes(courseworkSubjectId(subject)) ||
+      configured.includes(subject)
+    );
+  };
+  useEffect(() => {
+    if (!canManageCoursework) return;
+    const targetClasses = selectedClassFilter === 'all' ? allowedClasses : [selectedClassFilter];
+    if (!targetClasses.length) return;
+    let nextAssignments = data.assignments;
+    let createdCount = 0;
+    for (const classId of targetClasses) {
+      const configured = classAllowedSubjectsMap[classId];
+      const allowedIds =
+        isAdministrator || configured === undefined ? undefined : new Set(configured);
+      const result = ensureClassCourseworkCards(
+        { ...data, assignments: nextAssignments },
+        classId,
+        data.settings.term,
+        allowedIds,
+      );
+      nextAssignments = result.assignments;
+      createdCount += result.createdCount;
+    }
+    if (createdCount) {
+      update(
+        (current) => ({ ...current, assignments: nextAssignments }),
+        `Populated ${targetClasses.length} class${targetClasses.length === 1 ? '' : 'es'} with ${createdCount} coursework cards`,
+      );
+      notify(
+        `Populated ${targetClasses.length} class${targetClasses.length === 1 ? '' : 'es'} with coursework cards for the active term.`,
+      );
+    }
+  }, [
+    data,
+    notify,
+    update,
+    selectedClassFilter,
+    allowedClasses,
+    classAllowedSubjectsMap,
+    isAdministrator,
+    canManageCoursework,
+  ]);
+  const visibleClassIds = selectedClassFilter === 'all' ? allowedClasses : [selectedClassFilter];
+  const assignments = data.assignments.filter(
+    (assignment) =>
+      visibleClassIds.includes(assignment.classId) &&
+      hasClassAccess(assignment.classId) &&
+      hasSubjectAccess(assignment.classId, assignment.subject) &&
+      (selectedTermFilter === 'all'
+        ? true
+        : selectedTermFilter === 'current'
+          ? !assignment.term || assignment.term === `Term ${data.settings.term}`
+          : !assignment.term || assignment.term === selectedTermFilter),
+  );
+  const curriculumAssignments = assignments.filter((assignment) => assignment.id.startsWith('cc_'));
+  const legacyAssignments = assignments.filter((assignment) => !assignment.id.startsWith('cc_'));
+  const visibleAssignments = curriculumAssignments.filter((assignment) => {
+    const category = courseworkCategory(assignment.category)?.toLowerCase();
+    const matchesCategory = activeCategoryTab === 'all' || category === activeCategoryTab;
+    const matchesSubject =
+      selectedSubjectFilter === 'all' || assignment.subject === selectedSubjectFilter;
+    const matchesSearch =
+      !cardSearchTerm ||
+      `${assignment.title} ${assignment.subject}`
+        .toLowerCase()
+        .includes(cardSearchTerm.toLowerCase());
+    return matchesCategory && matchesSubject && matchesSearch;
+  });
+  const subjectOptions = [
+    ...new Set(
+      visibleClassIds.flatMap((classId) =>
+        classSubjects(classId).filter((subject) => hasSubjectAccess(classId, subject)),
+      ),
+    ),
+  ];
+  const categoryCounts = Object.fromEntries([
+    ['all', curriculumAssignments.length],
+    ...Object.keys(courseworkCategoryConfigs).map((category) => [
+      category,
+      curriculumAssignments.filter(
+        (assignment) => courseworkCategory(assignment.category)?.toLowerCase() === category,
+      ).length,
+    ]),
+  ]);
+  const gridAssignments = assignments.filter((assignment) => assignment.id === gridAssignmentId);
+  const gridColumns = gridAssignments.flatMap((assignment) => {
+    const category = courseworkCategory(assignment.category);
+    const config = category
+      ? courseworkCategoryConfigs[category.toLowerCase() as keyof typeof courseworkCategoryConfigs]
+      : undefined;
+    const slots = assignment.slots?.length
+      ? assignment.slots
+      : config
+        ? Array.from({ length: config.slotCount }, (_, index) => ({
+            slotKey: `${config.prefix}${index + 1}`,
+            title: `${config.label} ${index + 1}`,
+            maxPoints: config.maxPoints,
+          }))
+        : [{ slotKey: 'Score', title: assignment.title, maxPoints: assignment.points }];
+    return slots.map((slot) => ({ assignment, slot }));
+  });
+  const gridPupils = data.students.filter((pupil) => {
+    if (pupil.classId !== cls) return false;
+    const matches = `${pupil.name} ${pupil.id}`.toLowerCase().includes(gridSearch.toLowerCase());
+    const entries = gridColumns.map(
+      ({ assignment, slot }) => assignment.slotScores?.[pupil.id]?.[slot.slotKey],
+    );
+    const hasScores = entries.some((entry) => entry?.score !== undefined && entry?.score !== null);
+    const hasFeedback = entries.some(
+      (entry) => entry?.feedbackType && entry.feedbackType !== 'none',
+    );
+    return (
+      matches &&
+      (gridFilter === 'all' ||
+        (gridFilter === 'scored'
+          ? hasScores
+          : gridFilter === 'unscored'
+            ? !hasScores
+            : hasFeedback))
+    );
+  });
+  const scoreAssignments = data.assignments.filter(
+    (assignment) => assignment.classId === cls && hasSubjectAccess(cls, assignment.subject),
+  );
+  const scoreSubjects = [
+    ...new Set([
+      ...scoreAssignments.map((a) => a.subject),
+      ...classSubjects(cls).filter((subject) => hasSubjectAccess(cls, subject)),
+    ]),
+  ];
+  const scoreSubject = scoreSubjects.includes(scoreSubjectSelection)
+    ? scoreSubjectSelection
+    : scoreSubjects[0];
+  const scorebookRows = data.students
+    .filter((pupil) => pupil.classId === cls && (!student || pupil.id === ownId))
+    .map((pupil) => {
+      const assessment = courseworkAssessment(data, pupil.id, cls, scoreSubject);
+      return { pupil, assessment, score: assessment.total ?? 0 };
+    });
+  const rankedScores = scorebookRows.map((row) => row.score);
+  const scorebookExport = () =>
+    csv(
+      `coursework-scorebook-${cls.toLowerCase().replace(/\s+/g, '-')}-${scoreSubject.toLowerCase().replace(/\s+/g, '-')}.csv`,
+      [
+        [
+          'Student',
+          'Exercise /15',
+          'Homework /15',
+          'Groupwork /15',
+          'Quiz /15',
+          'Project /15',
+          'Raw SBA /60',
+          'SBA /50',
+          'Terminal exam /100',
+          'Exam /50',
+          'Total /100',
+          'Grade',
+          'Position',
+        ],
+        ...scorebookRows.map(({ pupil, assessment }) => [
+          pupil.name,
+          assessment.categories.Exercise ?? '',
+          assessment.categories.Homework ?? '',
+          assessment.categories.Groupwork ?? '',
+          assessment.categories.Quiz ?? '',
+          assessment.categories.Project ?? '',
+          assessment.rawSba ?? '',
+          assessment.sba ?? '',
+          assessment.examRaw ?? '',
+          assessment.exam ?? '',
+          assessment.total ?? '',
+          assessment.grade,
+          rank(assessment.total ?? 0, rankedScores),
+        ]),
+      ],
+    );
   const selected = assignments.find((a) => a.id === active) || assignments[0];
   const submissions = data.submissions.filter(
     (s) => s.assignmentId === selected?.id && (!student || s.studentId === ownId),
   );
   const pending = data.submissions.filter(
-    (s) => s.score === undefined && assignments.some((a) => a.id === s.assignmentId),
+    (submission) =>
+      submission.score === undefined &&
+      assignments.some(
+        (assignment) =>
+          assignment.id === submission.assignmentId &&
+          assignment.scores?.[submission.studentId]?.score === undefined,
+      ),
   ).length;
   return (
     <>
@@ -69,7 +279,7 @@ export function Coursework() {
         title={student ? 'My coursework' : 'Coursework & gradebook'}
         description="Small discoveries. Meaningful feedback. Lasting progress."
         actions={
-          !student && (
+          canManageCoursework && (
             <Button onClick={() => setCreate(true)}>
               <Plus size={17} />
               Create assignment
@@ -87,8 +297,16 @@ export function Coursework() {
           label={student ? 'Graded submissions' : 'Class average'}
           value={
             student
-              ? data.submissions.filter((s) => s.studentId === ownId && s.score !== undefined)
-                  .length
+              ? assignments.filter(
+                  (assignment) =>
+                    assignment.scores?.[ownId]?.score !== undefined ||
+                    data.submissions.some(
+                      (submission) =>
+                        submission.assignmentId === assignment.id &&
+                        submission.studentId === ownId &&
+                        submission.score !== undefined,
+                    ),
+                ).length
               : `${(data.students.filter((s) => s.classId === cls).reduce((sum, s) => sum + average(data, s), 0) / Math.max(1, data.students.filter((s) => s.classId === cls).length)).toFixed(1)}%`
           }
           icon={<ChartColumn />}
@@ -103,18 +321,114 @@ export function Coursework() {
         />
       </div>
       <div className="section-heading">
-        <CardTitle title="Recent assignments" description="A little challenge goes a long way." />
-        <select aria-label="Coursework class" value={cls} onChange={(e) => setCls(e.target.value)}>
+        <CardTitle
+          title="Coursework & continuous assessment grids"
+          description="Coursework cards are organized by curriculum subject and assessment category."
+        />
+        <select
+          aria-label="Coursework class"
+          value={selectedClassFilter}
+          onChange={(e) => {
+            setSelectedClassFilter(e.target.value);
+            if (e.target.value !== 'all') setCls(e.target.value);
+            setActive('');
+            setSelectedSubjectFilter('all');
+            setScoreGridOpen(false);
+          }}
+        >
+          <option value="all">All my classes</option>
           {allowedClasses.map((c) => (
-            <option key={c}>{c}</option>
+            <option key={c} value={c}>
+              {c}
+            </option>
+          ))}
+        </select>
+        <select
+          aria-label="Coursework term"
+          value={data.settings.term}
+          onChange={(event) => {
+            const term = Number(event.target.value);
+            update(
+              (current) => ({ ...current, settings: { ...current.settings, term } }),
+              `Switched coursework to Term ${term}`,
+            );
+            setActive('');
+            setScoreGridOpen(false);
+          }}
+        >
+          {[1, 2, 3].map((term) => (
+            <option key={term} value={term}>
+              Term {term}
+            </option>
           ))}
         </select>
       </div>
+      <div className="coursework-card-filters">
+        <label>
+          Subject
+          <select
+            aria-label="Filter by subject"
+            value={selectedSubjectFilter}
+            onChange={(event) => setSelectedSubjectFilter(event.target.value)}
+          >
+            <option value="all">All My Subjects</option>
+            {subjectOptions.map((subject) => (
+              <option key={subject}>{subject}</option>
+            ))}
+          </select>
+        </label>
+        <label>
+          Term
+          <select
+            aria-label="Filter by term"
+            value={selectedTermFilter}
+            onChange={(event) => setSelectedTermFilter(event.target.value)}
+          >
+            <option value="all">All terms</option>
+            <option value="current">Current term (Term {data.settings.term})</option>
+            {[1, 2, 3].map((term) => (
+              <option key={term} value={`Term ${term}`}>
+                Term {term}
+              </option>
+            ))}
+          </select>
+        </label>
+        <label>
+          Search cards
+          <input
+            aria-label="Search coursework cards"
+            placeholder="Search by title or subject"
+            value={cardSearchTerm}
+            onChange={(event) => setCardSearchTerm(event.target.value)}
+          />
+        </label>
+      </div>
+      <div className="coursework-category-tabs" role="tablist" aria-label="Coursework categories">
+        {[
+          { key: 'all', label: `All ${categoryCounts.all} Cards` },
+          ...Object.keys(courseworkCategoryConfigs).map((category) => ({
+            key: category,
+            label: `${courseworkCategoryConfigs[category as keyof typeof courseworkCategoryConfigs].label} (${categoryCounts[category] || 0})`,
+          })),
+        ].map((tab) => (
+          <button
+            key={tab.key}
+            type="button"
+            role="tab"
+            aria-selected={activeCategoryTab === tab.key}
+            className={activeCategoryTab === tab.key ? 'active' : ''}
+            onClick={() => setActiveCategoryTab(tab.key)}
+          >
+            {tab.label}
+          </button>
+        ))}
+      </div>
       <div className="assignment-grid">
-        {assignments.map((a, i) => {
+        {visibleAssignments.map((a, i) => {
           const mine = data.submissions.find(
             (s) => s.assignmentId === a.id && s.studentId === ownId,
           );
+          const ownScore = a.scores?.[ownId];
           return (
             <Card
               className={`assignment-card ${selected?.id === a.id ? 'is-selected' : ''}`}
@@ -127,7 +441,7 @@ export function Coursework() {
                 <Badge
                   tone={
                     student
-                      ? mine?.score !== undefined
+                      ? ownScore || mine?.score !== undefined
                         ? 'green'
                         : mine
                           ? 'blue'
@@ -136,13 +450,14 @@ export function Coursework() {
                   }
                 >
                   {student
-                    ? mine?.score !== undefined
+                    ? ownScore || mine?.score !== undefined
                       ? 'Graded'
                       : mine
                         ? 'Submitted'
                         : 'Pending'
                     : a.category}
                 </Badge>
+                {selectedClassFilter === 'all' && <Badge tone="blue">{a.classId}</Badge>}
               </div>
               <h3>{a.title}</h3>
               <p>{a.subject}</p>
@@ -160,8 +475,24 @@ export function Coursework() {
                 <small>
                   {data.submissions.filter((s) => s.assignmentId === a.id).length} submissions
                 </small>
-                <Button variant="ghost" onClick={() => (student ? setSubmit(a) : setActive(a.id))}>
-                  {student ? (mine ? 'View work' : 'Open task') : 'Grade now'}
+                <Button
+                  variant="ghost"
+                  onClick={() => {
+                    if (student) setSubmit(a);
+                    else {
+                      setCls(a.classId);
+                      setActive(a.id);
+                      setGridAssignmentId(a.id);
+                      setScoreSubjectSelection(a.subject);
+                      setScoreGridOpen(true);
+                    }
+                  }}
+                >
+                  {student
+                    ? mine || ownScore
+                      ? 'View work / grade'
+                      : 'Open task'
+                    : 'Open Excel grading sheet'}
                   <ArrowUpRight size={15} />
                 </Button>
               </div>
@@ -169,12 +500,379 @@ export function Coursework() {
           );
         })}
       </div>
+      {legacyAssignments.length > 0 && (
+        <section className="legacy-coursework-list">
+          <CardTitle
+            title="Existing assignments"
+            description="Previously created tasks remain available alongside the curriculum grading cards."
+          />
+          <div className="assignment-grid">
+            {legacyAssignments.map((assignment) => (
+              <Card className="assignment-card" key={assignment.id}>
+                <h3>{assignment.title}</h3>
+                <p>
+                  {assignment.subject} · {assignment.category} · {assignment.points} points
+                </p>
+                <Button
+                  variant="ghost"
+                  onClick={() => {
+                    setActive(assignment.id);
+                    setGridAssignmentId(assignment.id);
+                    setScoreSubjectSelection(assignment.subject);
+                    setScoreGridOpen(true);
+                  }}
+                >
+                  Open Excel grading sheet <ArrowUpRight size={15} />
+                </Button>
+              </Card>
+            ))}
+          </div>
+        </section>
+      )}
       {!assignments.length && (
         <Empty
           title="A new chapter starts here"
           text="Create your first assignment for this class."
         />
       )}
+      {scoreGridOpen && canManageCoursework && (
+        <Card className="coursework-score-entry">
+          <CardTitle
+            title={`Class score grid · ${scoreSubject}`}
+            description="Enter scores for multiple assignments in one pass. Blank cells remain ungraded and are excluded from category scaling."
+          />
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+              const form = new FormData(e.currentTarget);
+              const pupils = data.students.filter((pupil) => pupil.classId === cls);
+              const entered = gridColumns.flatMap(({ assignment, slot }) =>
+                pupils.flatMap((pupil) => {
+                  const value = String(
+                    form.get(`score-${assignment.id}-${slot.slotKey}-${pupil.id}`) || '',
+                  ).trim();
+                  if (!value) return [];
+                  const score = Number(value);
+                  if (!Number.isFinite(score) || score < 0 || score > slot.maxPoints) {
+                    return [
+                      [
+                        `${assignment.title} · ${slot.slotKey}`,
+                        pupil.name,
+                        slot.maxPoints,
+                      ] as const,
+                    ];
+                  }
+                  return [];
+                }),
+              );
+              if (entered.length) {
+                const [assignmentTitle, pupilName, max] = entered[0];
+                notify(
+                  `Enter a score between 0 and ${max} for ${pupilName} on ${assignmentTitle}.`,
+                );
+                return;
+              }
+              const updates = gridColumns.flatMap(({ assignment, slot }) =>
+                pupils.flatMap((pupil) => {
+                  const value = String(
+                    form.get(`score-${assignment.id}-${slot.slotKey}-${pupil.id}`) || '',
+                  ).trim();
+                  const status = String(
+                    form.get(`status-${assignment.id}-${slot.slotKey}-${pupil.id}`) || 'none',
+                  ) as FeedbackType;
+                  if (!value && status === 'none') return [];
+                  const score = value ? Number(value) : null;
+                  return [
+                    [
+                      assignment.id,
+                      pupil.id,
+                      slot.slotKey,
+                      {
+                        score,
+                        maxPoints: slot.maxPoints,
+                        feedbackType: status,
+                        feedbackReason: String(
+                          form.get(`feedback-${assignment.id}-${slot.slotKey}-${pupil.id}`) || '',
+                        ).trim(),
+                        updatedAt: new Date().toISOString(),
+                      },
+                    ] as const,
+                  ];
+                }),
+              );
+              if (!updates.length) {
+                notify('Enter at least one score before saving.');
+                return;
+              }
+              update((d) => {
+                const next = {
+                  ...d,
+                  assignments: d.assignments.map((assignment) => {
+                    const assignmentUpdates = updates.filter(([id]) => id === assignment.id);
+                    if (!assignmentUpdates.length) return assignment;
+                    return {
+                      ...assignment,
+                      slots: assignment.slots?.length
+                        ? assignment.slots
+                        : gridColumns
+                            .filter((column) => column.assignment.id === assignment.id)
+                            .map(({ slot }) => slot),
+                      slotScores: assignmentUpdates.reduce(
+                        (all, [, pupilId, slotKey, result]) => ({
+                          ...all,
+                          [pupilId]: {
+                            ...all[pupilId],
+                            [slotKey]: result,
+                          },
+                        }),
+                        { ...assignment.slotScores },
+                      ),
+                    };
+                  }),
+                };
+                const grades = { ...d.grades };
+                for (const pupil of pupils) {
+                  const assessment = courseworkAssessment(next, pupil.id, cls, scoreSubject);
+                  if (!assessment.hasSba && !assessment.hasExam) continue;
+                  const key = gradeKey(pupil.id, d.settings.term, scoreSubject);
+                  const current = grades[key] || { sba: 0, exam: 0, remark: '' };
+                  grades[key] = {
+                    ...current,
+                    ...(assessment.hasSba ? { sba: assessment.sba ?? 0 } : {}),
+                    ...(assessment.hasExam ? { exam: assessment.exam ?? 0 } : {}),
+                  };
+                }
+                return { ...next, grades };
+              }, `Scores entered: ${updates.length} assignment marks for ${scoreSubject}`);
+              notify(
+                `Saved ${updates.length} score${updates.length === 1 ? '' : 's'} to the SBA scorebook and report cards.`,
+              );
+            }}
+          >
+            <div className="coursework-grid-tools">
+              <input
+                aria-label="Search students"
+                placeholder="Search student name / ID…"
+                value={gridSearch}
+                onChange={(event) => setGridSearch(event.target.value)}
+              />
+              <select
+                aria-label="Filter score grid"
+                value={gridFilter}
+                onChange={(event) => setGridFilter(event.target.value as typeof gridFilter)}
+              >
+                <option value="all">All pupils</option>
+                <option value="scored">Scored</option>
+                <option value="unscored">Unscored</option>
+                <option value="feedback">With feedback</option>
+              </select>
+              <span>
+                {gridPupils.length} pupils · {gridColumns.length} score slots
+              </span>
+              <Button
+                type="button"
+                variant="secondary"
+                onClick={() =>
+                  csv(`coursework-${cls}-${scoreSubject}.csv`, [
+                    ['Student', ...gridColumns.map(({ slot }) => slot.slotKey)],
+                    ...gridPupils.map((pupil) => [
+                      pupil.name,
+                      ...gridColumns.map(({ assignment, slot }) => {
+                        const entry = assignment.slotScores?.[pupil.id]?.[slot.slotKey];
+                        return (
+                          entry?.score ??
+                          (entry?.feedbackType && entry.feedbackType !== 'none'
+                            ? `[${courseworkFeedbackMetadata[entry.feedbackType].tag}]`
+                            : '')
+                        );
+                      }),
+                    ]),
+                  ])
+                }
+              >
+                <Download size={15} /> Export CSV
+              </Button>
+            </div>
+            <div className="table-scroll coursework-grid-scroll">
+              <table className="coursework-grid-table">
+                <thead>
+                  <tr>
+                    <th className="coursework-grid-student">Student</th>
+                    {gridColumns.map(({ assignment, slot }) => (
+                      <th
+                        key={`${assignment.id}-${slot.slotKey}`}
+                        className="coursework-grid-assignment"
+                      >
+                        <strong>{slot.slotKey}</strong>
+                        <small>
+                          {assignment.title} · /{slot.maxPoints}
+                        </small>
+                        <small>
+                          {
+                            data.students.filter(
+                              (pupil) =>
+                                pupil.classId === cls &&
+                                assignment.slotScores?.[pupil.id]?.[slot.slotKey]?.score !==
+                                  undefined &&
+                                assignment.slotScores?.[pupil.id]?.[slot.slotKey]?.score !== null,
+                            ).length
+                          }
+                          /{data.students.filter((pupil) => pupil.classId === cls).length} scored
+                        </small>
+                      </th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {gridPupils.map((pupil) => {
+                    return (
+                      <tr key={pupil.id}>
+                        <td className="coursework-grid-student">
+                          <Person name={pupil.name} />
+                        </td>
+                        {gridColumns.map(({ assignment, slot }, slotIndex) => {
+                          const submission = data.submissions.find(
+                            (item) =>
+                              item.assignmentId === assignment.id && item.studentId === pupil.id,
+                          );
+                          const entry = assignment.slotScores?.[pupil.id]?.[slot.slotKey];
+                          const score =
+                            entry?.score ??
+                            (slotIndex === 0
+                              ? (assignment.scores?.[pupil.id]?.score ?? submission?.score)
+                              : undefined);
+                          const feedback =
+                            entry?.feedbackReason ??
+                            (slotIndex === 0
+                              ? (assignment.scores?.[pupil.id]?.feedback ?? submission?.feedback)
+                              : '');
+                          return (
+                            <td
+                              key={`${assignment.id}-${slot.slotKey}`}
+                              className="coursework-grid-score"
+                            >
+                              <input
+                                aria-label={`${pupil.name} ${slot.slotKey} score`}
+                                name={`score-${assignment.id}-${slot.slotKey}-${pupil.id}`}
+                                type="number"
+                                min="0"
+                                max={slot.maxPoints}
+                                step="0.5"
+                                defaultValue={score}
+                                placeholder="—"
+                              />
+                              <select
+                                aria-label={`${pupil.name} ${slot.slotKey} feedback status`}
+                                name={`status-${assignment.id}-${slot.slotKey}-${pupil.id}`}
+                                defaultValue={entry?.feedbackType || 'none'}
+                              >
+                                {Object.entries(courseworkFeedbackMetadata).map(
+                                  ([value, metadata]) => (
+                                    <option key={value} value={value}>
+                                      {metadata.tag}
+                                    </option>
+                                  ),
+                                )}
+                              </select>
+                              <input
+                                aria-label={`${pupil.name} ${slot.slotKey} feedback`}
+                                name={`feedback-${assignment.id}-${slot.slotKey}-${pupil.id}`}
+                                defaultValue={feedback}
+                                placeholder="Feedback"
+                              />
+                            </td>
+                          );
+                        })}
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
+            </div>
+            <div className="modal-actions">
+              <Button variant="secondary" type="button" onClick={() => setScoreGridOpen(false)}>
+                Cancel
+              </Button>
+              <Button type="submit">
+                <Save size={15} />
+                Save scores
+              </Button>
+            </div>
+          </form>
+        </Card>
+      )}
+      <Card className="coursework-scorebook-card">
+        <div className="section-heading">
+          <CardTitle
+            title={student ? 'My SBA scorebook' : 'SBA consolidated scorebook'}
+            description="Graded work is grouped into five SBA categories, scaled to 15 points each, then combined with the terminal exam on a 50/50 basis."
+          />
+          <div className="row-actions">
+            <select
+              aria-label="Scorebook subject"
+              value={scoreSubject}
+              onChange={(e) => setScoreSubjectSelection(e.target.value)}
+            >
+              {scoreSubjects.map((subject) => (
+                <option key={subject}>{subject}</option>
+              ))}
+            </select>
+            {!student && (
+              <Button variant="secondary" onClick={scorebookExport}>
+                <Download size={15} />
+                Export CSV
+              </Button>
+            )}
+          </div>
+        </div>
+        <div className="table-scroll">
+          <table>
+            <thead>
+              <tr>
+                <th>Student</th>
+                <th>EXE /15</th>
+                <th>HW /15</th>
+                <th>GW /15</th>
+                <th>Quiz /15</th>
+                <th>PW /15</th>
+                <th>Raw SBA /60</th>
+                <th>SBA /50</th>
+                <th>Exam /100</th>
+                <th>Exam /50</th>
+                <th>Total /100</th>
+                <th>Grade</th>
+                <th>Position</th>
+              </tr>
+            </thead>
+            <tbody>
+              {scorebookRows.map(({ pupil, assessment }) => (
+                <tr key={pupil.id}>
+                  <td>
+                    <Person name={pupil.name} />
+                  </td>
+                  <td>{assessment.categories.Exercise ?? '—'}</td>
+                  <td>{assessment.categories.Homework ?? '—'}</td>
+                  <td>{assessment.categories.Groupwork ?? '—'}</td>
+                  <td>{assessment.categories.Quiz ?? '—'}</td>
+                  <td>{assessment.categories.Project ?? '—'}</td>
+                  <td>{assessment.rawSba ?? 0}</td>
+                  <td>{assessment.sba ?? 0}</td>
+                  <td>{assessment.examRaw ?? '—'}</td>
+                  <td>{assessment.exam ?? '—'}</td>
+                  <td>
+                    <strong>{assessment.total ?? 0}</strong>
+                  </td>
+                  <td>{assessment.grade}</td>
+                  <td>{ordinal(rank(assessment.total ?? 0, rankedScores))}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        {!scorebookRows.some(({ assessment }) => assessment.total !== null) && (
+          <p className="muted">Grade submissions for {scoreSubject} to populate this scorebook.</p>
+        )}
+      </Card>
       {selected && (
         <Card>
           <CardTitle
@@ -200,6 +898,8 @@ export function Coursework() {
                 {submissions.map((s) => {
                   const pupil = data.students.find((p) => p.id === s.studentId);
                   const late = s.date.slice(0, 10) > selected.due;
+                  const recordedScore = selected.scores?.[s.studentId]?.score ?? s.score;
+                  const recordedFeedback = selected.scores?.[s.studentId]?.feedback ?? s.feedback;
                   return (
                     <tr key={s.id}>
                       <td>
@@ -210,13 +910,13 @@ export function Coursework() {
                       </td>
                       <td>{new Date(s.date).toLocaleDateString()}</td>
                       <td>
-                        <Badge tone={s.score !== undefined ? 'green' : 'amber'}>
-                          {s.score !== undefined
-                            ? `${s.score} / ${selected.points}`
+                        <Badge tone={recordedScore !== undefined ? 'green' : 'amber'}>
+                          {recordedScore !== undefined
+                            ? `${recordedScore} / ${selected.points}`
                             : 'Awaiting grade'}
                         </Badge>
                       </td>
-                      <td className="feedback-cell">{s.feedback || 'Feedback pending'}</td>
+                      <td className="feedback-cell">{recordedFeedback || 'Feedback pending'}</td>
                       <td>
                         {!student && (
                           <Button variant="ghost" onClick={() => setGrading(s)}>
@@ -236,7 +936,9 @@ export function Coursework() {
           )}
         </Card>
       )}
-      {create && <AssignmentForm cls={cls} onClose={() => setCreate(false)} />}{' '}
+      {create && canManageCoursework && (
+        <AssignmentForm cls={cls} onClose={() => setCreate(false)} />
+      )}{' '}
       {submit && <SubmissionForm assignment={submit} onClose={() => setSubmit(null)} />}{' '}
       {grading && selected && (
         <Modal title="Review submission" onClose={() => setGrading(null)}>
@@ -268,37 +970,42 @@ export function Coursework() {
               update((d) => {
                 const next = {
                   ...d,
+                  assignments: d.assignments.map((assignment) =>
+                    assignment.id === grading.assignmentId
+                      ? {
+                          ...assignment,
+                          scores: {
+                            ...assignment.scores,
+                            [grading.studentId]: { score, feedback },
+                          },
+                        }
+                      : assignment,
+                  ),
                   submissions: d.submissions.map((s) =>
                     s.id === grading.id ? { ...s, score, feedback } : s,
                   ),
                 };
-                const relevant = next.submissions.filter(
-                  (s) =>
-                    s.studentId === grading.studentId &&
-                    s.score !== undefined &&
-                    next.assignments.some(
-                      (a) => a.id === s.assignmentId && a.subject === selected.subject,
-                    ),
-                );
-                const earned = relevant.reduce((a, s) => a + (s.score || 0), 0);
-                const possible = relevant.reduce(
-                  (a, s) =>
-                    a + (next.assignments.find((t) => t.id === s.assignmentId)?.points || 0),
-                  0,
+                const assessment = courseworkAssessment(
+                  next,
+                  grading.studentId,
+                  selected.classId,
+                  selected.subject,
                 );
                 const key = gradeKey(grading.studentId, d.settings.term, selected.subject);
+                const grade = d.grades[key] || { sba: 0, exam: 0, remark: '' };
                 return {
                   ...next,
                   grades: {
                     ...d.grades,
                     [key]: {
-                      ...(d.grades[key] || { exam: 0, remark: '' }),
-                      sba: Math.round((earned / possible) * 50 * 10) / 10,
+                      ...grade,
+                      ...(assessment.hasSba ? { sba: assessment.sba ?? 0 } : {}),
+                      ...(assessment.hasExam ? { exam: assessment.exam ?? 0 } : {}),
                     },
                   },
                 };
               }, `Graded ${selected.title}`);
-              notify('Grade saved and synchronized to the report card SBA.');
+              notify('Grade saved. The category scorebook and report card were updated.');
               setGrading(null);
             }}
           >
@@ -311,7 +1018,7 @@ export function Coursework() {
                   min="0"
                   max={selected.points}
                   step="0.1"
-                  defaultValue={grading.score}
+                  defaultValue={selected.scores?.[grading.studentId]?.score ?? grading.score}
                 />
               </Field>
               <Field label="Feedback">
@@ -335,19 +1042,36 @@ export function Coursework() {
   );
 }
 function AssignmentForm({ cls, onClose }: { cls: string; onClose: () => void }) {
-  const { allowedClasses, update, notify } = useStore();
+  const { data, role, me, allowedClasses, update, notify } = useStore();
+  const viewerUser = data.users.find((user) => user.name === me);
+  const [selectedClass, setSelectedClass] = useState(cls);
+  const allowedForClass = viewerUser?.classAllowedSubjects?.[selectedClass];
+  const assignmentSubjects = classSubjects(selectedClass).filter(
+    (subject) =>
+      role === 'Administrator' ||
+      allowedForClass === undefined ||
+      allowedForClass.includes(subject) ||
+      allowedForClass.includes(courseworkSubjectId(subject)),
+  );
+  const [category, setCategory] = useState('Homework');
+  const [points, setPoints] = useState('15');
   return (
     <Modal title="Create an assignment" onClose={onClose}>
       <form
         onSubmit={(e) => {
           e.preventDefault();
           const f = new FormData(e.currentTarget);
+          const selectedSubject = String(f.get('subject') || '');
+          if (!assignmentSubjects.includes(selectedSubject)) {
+            notify('This teacher has no subject access for the selected class.');
+            return;
+          }
           const a: Assignment = {
             id: uid(),
             title: String(f.get('title')),
             description: String(f.get('description')),
             classId: String(f.get('class')),
-            subject: String(f.get('subject')),
+            subject: selectedSubject,
             points: Number(f.get('points')),
             due: String(f.get('due')),
             category: String(f.get('category')),
@@ -368,7 +1092,11 @@ function AssignmentForm({ cls, onClose }: { cls: string; onClose: () => void }) 
         </Field>
         <div className="form-grid">
           <Field label="Class">
-            <select name="class" defaultValue={cls}>
+            <select
+              name="class"
+              value={selectedClass}
+              onChange={(event) => setSelectedClass(event.target.value)}
+            >
               {allowedClasses.map((c) => (
                 <option key={c}>{c}</option>
               ))}
@@ -376,22 +1104,41 @@ function AssignmentForm({ cls, onClose }: { cls: string; onClose: () => void }) 
           </Field>
           <Field label="Subject">
             <select name="subject">
-              {[...subjects, 'Social Studies'].map((s) => (
+              {!assignmentSubjects.length && <option value="">No subjects assigned</option>}
+              {assignmentSubjects.map((s) => (
                 <option key={s}>{s}</option>
               ))}
             </select>
           </Field>
           <Field label="Assessment category">
-            <select name="category">
+            <select
+              name="category"
+              value={category}
+              onChange={(e) => {
+                const nextCategory = e.target.value;
+                setCategory(nextCategory);
+                setPoints(nextCategory === 'Terminal exam' ? '100' : '15');
+              }}
+            >
               <option>Homework</option>
               <option>Project</option>
               <option>Class test</option>
               <option>Practical</option>
               <option>Exercise</option>
+              <option>Groupwork</option>
+              <option>Terminal exam</option>
             </select>
           </Field>
           <Field label="Maximum points">
-            <input name="points" type="number" min="1" max="1000" defaultValue="50" required />
+            <input
+              name="points"
+              type="number"
+              min="1"
+              max="1000"
+              value={points}
+              onChange={(e) => setPoints(e.target.value)}
+              required
+            />
           </Field>
           <Field label="Due date">
             <input name="due" type="date" defaultValue={today()} required />
@@ -416,6 +1163,8 @@ function SubmissionForm({
 }) {
   const { data, ownId, update, notify } = useStore();
   const existing = data.submissions.find((s) => s.assignmentId === a.id && s.studentId === ownId);
+  const recordedScore = a.scores?.[ownId]?.score ?? existing?.score;
+  const recordedFeedback = a.scores?.[ownId]?.feedback ?? existing?.feedback;
   return (
     <Modal title={a.title} onClose={onClose}>
       <Badge tone="blue">
@@ -460,7 +1209,7 @@ function SubmissionForm({
             name="answer"
             rows={5}
             defaultValue={existing?.text}
-            disabled={existing?.score !== undefined}
+            disabled={recordedScore !== undefined}
           />
         </Field>
         <Field label="Research link (optional)">
@@ -469,7 +1218,7 @@ function SubmissionForm({
             type="url"
             pattern="https?://.*"
             defaultValue={existing?.link}
-            disabled={existing?.score !== undefined}
+            disabled={recordedScore !== undefined}
           />
         </Field>
         <Field
@@ -480,15 +1229,15 @@ function SubmissionForm({
             name="file"
             type="file"
             accept=".pdf,.doc,.docx,.txt,.png,.jpg"
-            disabled={existing?.score !== undefined}
+            disabled={recordedScore !== undefined}
           />
         </Field>
-        {existing?.score !== undefined ? (
+        {recordedScore !== undefined ? (
           <div className="notice">
             <strong>
-              {existing.score} / {a.points}
+              {recordedScore} / {a.points}
             </strong>
-            <p>{existing.feedback}</p>
+            <p>{recordedFeedback}</p>
           </div>
         ) : (
           <div className="modal-actions">
@@ -570,7 +1319,7 @@ function OfficialStamp({
           textTransform: 'none',
         }}
       >
-        Headteacher Signature
+        Class Teacher Signature
       </div>
     </div>
   );
@@ -644,9 +1393,6 @@ export function Reports() {
   const teacherRemark =
     data.remarks[rk] ||
     `${student.name.split(' ')[0]} has shown commendable engagement and steady progress. Regular attendance and active participation are strongly encouraged.`;
-  const headteacherRemark =
-    conductData['headteacherRemark'] ||
-    `Commendable academic standing and disciplined conduct. Keep up the high standard of excellence.`;
   const promotedTo = conductData['promotedTo'] || '';
 
   return (
@@ -922,16 +1668,6 @@ export function Reports() {
           </div>
 
           <div
-            className="assessment-remark-row"
-            style={{ paddingTop: 6, borderTop: '1px solid #f1f5f9' }}
-          >
-            <div className="assessment-remark-content">
-              <span className="assessment-remark-label">HEADTEACHER'S REMARKS:</span>
-              <p className="assessment-remark-text">"{headteacherRemark}"</p>
-            </div>
-          </div>
-
-          <div
             className="assessment-signature-footer"
             style={{
               paddingTop: 8,
@@ -942,7 +1678,7 @@ export function Reports() {
             }}
           >
             <div className="assessment-signature-line">
-              Headteacher's Signature: ______________________
+              Class Teacher's Signature: ______________________
             </div>
             <div style={{ flexShrink: 0 }}>
               <OfficialStamp
@@ -1010,11 +1746,6 @@ function ReportCardEditor({ student, onClose }: { student: Student; onClose: () 
     data.remarks[rk] ||
       `${student.name.split(' ')[0]} has shown commendable engagement and steady progress. Regular attendance and active participation are strongly encouraged.`,
   );
-  const [headteacherRemark, setHeadteacherRemark] = useState(
-    conductData['headteacherRemark'] ||
-      'Commendable academic standing and disciplined conduct. Keep up the high standard of excellence.',
-  );
-
   // Attitudes / Traits
   const traitKeys = [
     'Conduct',
@@ -1106,7 +1837,6 @@ function ReportCardEditor({ student, onClose }: { student: Student; onClose: () 
         ...d.conduct,
         [`${student.id}|${term}`]: {
           ...conduct,
-          headteacherRemark,
           promotedTo,
           attendanceAttended: attended,
           attendanceTotal: totalSessions,
@@ -1447,7 +2177,7 @@ function ReportCardEditor({ student, onClose }: { student: Student; onClose: () 
 
         {/* Section 5: Remarks */}
         <fieldset className="editor-fieldset" style={{ marginTop: 14 }}>
-          <legend>Teacher & Headteacher Remarks</legend>
+          <legend>Class Teacher Remarks</legend>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
             <Field label="Class Teacher’s Remarks">
               <textarea
@@ -1456,15 +2186,6 @@ function ReportCardEditor({ student, onClose }: { student: Student; onClose: () 
                 value={teacherRemark}
                 onChange={(e) => setTeacherRemark(e.target.value)}
                 placeholder="Enter class teacher remark..."
-              />
-            </Field>
-            <Field label="Headteacher’s Remarks">
-              <textarea
-                rows={3}
-                required
-                value={headteacherRemark}
-                onChange={(e) => setHeadteacherRemark(e.target.value)}
-                placeholder="Enter headteacher remark..."
               />
             </Field>
           </div>
