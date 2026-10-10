@@ -3,6 +3,7 @@ import { createContext, useContext, useEffect, useRef, useState, type ReactNode 
 import { seed, uid, type State, type Role, type User, classes } from './data';
 import { assignedClassIdsForTeacher } from './services/teacherService';
 import { isSupabaseConfigured, supabase } from './supabase';
+import { loginIdentifier } from './accountRules';
 import { emptyState } from './emptyState';
 import { loadWorkspace, saveWorkspace, type Snapshot } from './backend';
 const KEY = 'aos-lms-demo-v1';
@@ -51,7 +52,7 @@ interface Store {
   ownId: string;
   user: User | undefined;
   authLoading: boolean;
-  signIn: (email: string, password: string) => Promise<void>;
+  signIn: (identifier: string, password: string) => Promise<void>;
   signOut: () => Promise<void>;
   refresh: () => Promise<void>;
   theme: Theme;
@@ -181,9 +182,12 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     if (r) sessionStorage.setItem('aos-role', r);
     else sessionStorage.removeItem('aos-role');
   }
-  async function signIn(email: string, password: string) {
+  async function signIn(identifier: string, password: string) {
     if (!supabase) throw new Error('Supabase is not configured.');
-    const { error } = await supabase.auth.signInWithPassword({ email, password });
+    const { error } = await supabase.auth.signInWithPassword({
+      email: loginIdentifier(identifier),
+      password,
+    });
     if (error) throw error;
   }
   async function signOut() {

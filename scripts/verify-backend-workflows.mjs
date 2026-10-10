@@ -14,7 +14,9 @@ const env = Object.fromEntries(
       return [line.slice(0, i), line.slice(i + 1)];
     }),
 );
-const creds = JSON.parse(readFileSync('.temp/admin-credentials.json', 'utf8'));
+const creds = JSON.parse(
+  readFileSync(process.env.AOS_TEST_CREDENTIALS || '.temp/admin-credentials.json', 'utf8'),
+);
 const makeClient = () =>
   createClient(env.VITE_SUPABASE_URL, env.VITE_SUPABASE_ANON_KEY, {
     auth: { persistSession: false, autoRefreshToken: false },
@@ -59,6 +61,7 @@ const save = async (c, changes) => {
 };
 const suffix = randomUUID().slice(0, 8);
 const cls = `TEST-${suffix}`;
+const subjectClass = `TEST-SUBJECT-${suffix}`;
 const sid = `TEST-STUDENT-${suffix}`;
 const aid = `TEST-ASSIGNMENT-${suffix}`;
 const student = {
@@ -93,7 +96,7 @@ try {
       collection: 'classes',
       id: 'singleton',
       before: start.state.classes,
-      after: [...start.state.classes, cls],
+      after: [...start.state.classes, cls, subjectClass],
     },
     { collection: 'students', id: sid, after: student },
     { collection: 'assignments', id: aid, after: assignment },
@@ -101,23 +104,102 @@ try {
   fixtures = true;
   const accounts = {};
   for (const role of ['Student', 'Teacher', 'Accountant']) {
-    const email = `aoslms-${suffix}-${role.toLowerCase()}@example.com`;
+    const username = `test-${suffix}-${role.toLowerCase()}`;
+    const email = `${username}@users.aoslms.invalid`;
     const password = `${randomBytes(18).toString('base64url')}!aA7`;
     const result = await call(admin, 'admin-create-user', {
-      email,
+      username,
       password,
       fullName: `Integration ${role}`,
       role,
       studentId: role === 'Student' ? sid : undefined,
-      classes: role === 'Teacher' ? [cls] : [],
+      classes: role === 'Teacher' ? [cls, subjectClass] : [],
+      classAllowedSubjects: role === 'Teacher' ? { [subjectClass]: ['sub_math'] } : {},
     });
     ids.push(result.user.id);
     const client = makeClient();
     sessions.push(client);
     const login = await client.auth.signInWithPassword({ email, password });
     if (login.error) throw login.error;
-    accounts[role] = { client, id: result.user.id, email };
+    assert.equal(result.user.username, username);
+    accounts[role] = { client, id: result.user.id, email, username };
   }
+  const teacherAccount = accounts.Teacher;
+  const teacherProfile = (await load(teacherAccount.client)).state.users.find(
+    (u) => u.id === teacherAccount.id,
+  );
+  assert.deepEqual(teacherProfile.classes, [cls, subjectClass]);
+  assert.deepEqual(teacherProfile.classAllowedSubjects, { [subjectClass]: ['sub_math'] });
+  const template = {
+    username: teacherAccount.username.toUpperCase(),
+    password: `${randomBytes(18).toString('base64url')}!aA7`,
+    fullName: 'Rejected duplicate',
+    role: 'Teacher',
+  };
+  await call(admin, 'admin-create-user', template, true);
+  await call(admin, 'admin-create-user', { ...template, username: 'invalid@username' }, true);
+  await call(
+    admin,
+    'admin-create-user',
+    {
+      ...template,
+      username: `invalid-${suffix}`,
+      classes: [subjectClass],
+      classAllowedSubjects: { [subjectClass]: [] },
+    },
+    true,
+  );
+  for (const [classId, subject, allowed] of [
+    [cls, 'English Language', true],
+    [subjectClass, 'Mathematics', true],
+    [subjectClass, 'English Language', false],
+  ]) {
+    const record = { ...assignment, id: `TEST-${suffix}-${classId}-${subject}`, classId, subject };
+    const current = await load(teacherAccount.client);
+    await call(
+      teacherAccount.client,
+      'workspace',
+      {
+        action: 'save',
+        revision: current.revision,
+        changes: [{ collection: 'assignments', id: record.id, after: record }],
+      },
+      !allowed,
+    );
+  }
+  const hidden = {
+    ...assignment,
+    id: `TEST-${suffix}-hidden`,
+    classId: subjectClass,
+    subject: 'English Language',
+  };
+  await save(admin, [{ collection: 'assignments', id: hidden.id, after: hidden }]);
+  assert(!(await load(teacherAccount.client)).state.assignments.some((a) => a.id === hidden.id));
+  const newUsername = `renamed-${suffix}`;
+  const newPassword = `${randomBytes(18).toString('base64url')}!aA7`;
+  await call(admin, 'admin-create-user', {
+    action: 'update',
+    id: teacherAccount.id,
+    username: newUsername,
+    password: newPassword,
+    fullName: 'Integration Teacher',
+    role: 'Teacher',
+    classes: [cls, subjectClass],
+    classAllowedSubjects: { [subjectClass]: ['sub_math'] },
+  });
+  const relogin = await teacherAccount.client.auth.signInWithPassword({
+    email: `${newUsername}@users.aoslms.invalid`,
+    password: newPassword,
+  });
+  if (relogin.error) throw relogin.error;
+  const rejectedLogin = await makeClient().auth.signInWithPassword({
+    email: teacherAccount.email,
+    password: newPassword,
+  });
+  assert(rejectedLogin.error, 'Renamed username must invalidate old login');
+  console.log(
+    'PASS: plain username creation/login for all roles, duplicate/invalid username rejection, username rename/password reset, all-subject and subject-only classes on the same teacher, denied out-of-subject reads/writes.',
+  );
   const learner = accounts.Student.client;
   const view = await load(learner);
   assert.deepEqual(
@@ -230,7 +312,7 @@ try {
         collection: 'classes',
         id: 'singleton',
         before: current.state.classes,
-        after: current.state.classes.filter((c) => c !== cls),
+        after: current.state.classes.filter((c) => c !== cls && c !== subjectClass),
       },
     ];
     for (const key of ['students', 'assignments', 'submissions', 'payments'])

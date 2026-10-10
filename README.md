@@ -21,14 +21,15 @@ Use `VITE_DEMO_MODE=true` explicitly to explore the isolated browser-local demo.
 1. Sign in using the administrator credentials generated during setup. On the setup computer these are in `.temp/admin-credentials.json`, which is excluded from Git. This is a local credential handoff, not an email invitation.
 2. Set the school details and term in **Settings**.
 3. Add classes in **Classroom**, then admit or import students in **Student directory**.
-4. Open **Users & access** to create email/password accounts. Assign teachers to classes and subjects; link each student login to its existing roster record. Share the credentials directly with the intended user.
-5. Users sign in with the email and password provided by the administrator. Administrators can change passwords and deactivate/reactivate accounts from the same screen. Passwords require at least 12 characters. A first-login password change is not forced.
+4. Open **Users & access** to create a **username and password**. No email address or `@` is required. Usernames are case-insensitive, 3–32 characters, start with a letter or number, and allow letters, numbers, dots, underscores and hyphens. Link student accounts to existing roster records. Share credentials directly with the intended user.
+5. For teachers, check any number of classes and choose the teaching role independently for each class. For example, select **All subjects (class teacher)** in Class A and **Selected subjects (subject teacher)** → Mathematics in Class B for the same teacher. Selecting individual subjects requires at least one subject. Timetable entries do not grant access.
+6. Users sign in with their username and password. Existing email accounts, including the original administrator, retain email login unless assigned a username. Administrators can rename usernames, reset passwords and deactivate/reactivate accounts from the same screen. Renaming a username replaces the previous login. Passwords require at least 12 characters. A first-login password change is not forced.
 
 Public signup is disabled. The email login provider remains enabled (`auth.email.enable_signup=true`), while the global `auth.enable_signup=false` prevents self-registration. Disabling the email provider would also prevent existing users from logging in.
 
 ## Deployed backend
 
-- Supabase Auth handles email/password credentials and sessions.
+- Supabase Auth handles passwords and sessions. Plain usernames map internally to a reserved, non-deliverable email alias; users do not need to enter or own that address. Username accounts use administrator password resets, not email recovery. Unique usernames are enforced in the database.
 - `profiles` holds server-managed roles, active status, student links, and teaching scope.
 - `school_workspace` stores the complete school model as a versioned JSON document: classes, students, attendance, coursework, submissions, grades, reports, resources, timetables, certificates, announcements, payments, fees, concessions, expenses, payroll and settings.
 - The `workspace` Edge Function verifies the signed-in user and current active profile on every request. It returns only the authorized projection and checks both the original and replacement record on writes. Teachers are restricted by class and subject; students see their own records and cannot grade work; accountants access finance records.
@@ -70,9 +71,12 @@ npm run build
 npm run test:e2e
 node scripts/verify-backend.mjs
 node scripts/verify-backend-workflows.mjs
+node scripts/verify-with-temporary-admin.mjs
 ```
 
 The standard browser suite runs in explicit demo mode. For the live administrator browser smoke test, set `AOS_CLOUD_TESTS=1` and run `npm run test:e2e`. Live tests read the local credential file and do not print its contents. `verify-backend-workflows.mjs` temporarily creates uniquely named test records/accounts, verifies permissions and persistence, and removes its fixtures and files afterward. Run it against a test environment before broad deployments.
+
+`verify-with-temporary-admin.mjs` uses the logged-in Supabase CLI to create an isolated administrator, runs the live workflow and browser tests, and removes that account and its temporary credential file afterward. It never resets an existing administrator password. Its browser test creates a plain username through the actual form, assigns mixed class/subject permissions, and signs in as that teacher.
 
 On Windows, set `PLAYWRIGHT_CHROMIUM_EXECUTABLE` to an installed Chrome/Edge executable, or install Playwright Chromium. No cloud-test traces are retained because they could contain login requests.
 

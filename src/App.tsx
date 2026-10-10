@@ -270,10 +270,12 @@ function Login() {
                 }
               }}
             >
-              <Field label="Email address">
+              <Field label="Username or email">
                 <input
-                  type="email"
+                  type="text"
                   autoComplete="username"
+                  autoCapitalize="none"
+                  spellCheck={false}
                   required
                   value={email}
                   onChange={(event) => setEmail(event.target.value)}

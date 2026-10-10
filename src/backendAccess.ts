@@ -1,5 +1,6 @@
 import { courseworkSubjectId, type State, type User } from './data.ts';
 import { emptyState } from './emptyState.ts';
+import { normalizeTeachingAccess } from './accountRules.ts';
 
 const same = (a: unknown, b: unknown) => JSON.stringify(a) === JSON.stringify(b);
 const finance = new Set(['payments', 'expenses', 'payroll', 'fees', 'studentConcessions']);
@@ -153,6 +154,15 @@ export function applyChanges(state: State, user: User, changes: Change[]): State
         !same(immutable(old), immutable(after))
       )
         throw new Error('This record requires the account administration endpoint');
+      if (after.role === 'Teacher') {
+        const access = normalizeTeachingAccess(
+          after.classes,
+          after.classAllowedSubjects || {},
+          next.classes,
+        );
+        after.classes = access.classes;
+        after.classAllowedSubjects = access.classAllowedSubjects;
+      }
     }
     if (!same(old, before)) throw new Error('Conflict: records changed. Reload and try again.');
     if (user.role !== 'Administrator') {

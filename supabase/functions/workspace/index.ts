@@ -7,6 +7,7 @@ export const toUser = (p: any) => ({
   id: p.id,
   name: p.full_name,
   email: p.email,
+  ...(p.username ? { username: p.username } : {}),
   role: p.role,
   active: p.active,
   classes: p.classes,

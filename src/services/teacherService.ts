@@ -23,7 +23,7 @@ const findTeacher = (state: State, teacherUserId: string) =>
       ),
   );
 
-/** Resolve only classes explicitly assigned in the teacher profile or timetable. */
+/** Teaching permissions come only from the administrator-managed profile. */
 export const teacherService = {
   getAssignedClasses: async (
     state: State,
@@ -36,18 +36,6 @@ export const teacherService = {
     const assignedClassIds = new Set(
       teacher.classes.filter((classId) => state.classes.includes(classId)),
     );
-    const teacherIdentities = new Set(
-      [teacher.id, teacher.email, teacher.name].map((identity) => identity.trim().toLowerCase()),
-    );
-    const scheduledSubjects = new Map<string, Set<string>>();
-    state.periods.forEach((period) => {
-      if (!teacherIdentities.has(period.teacher.trim().toLowerCase())) return;
-      if (!state.classes.includes(period.classId)) return;
-      assignedClassIds.add(period.classId);
-      const subjects = scheduledSubjects.get(period.classId) || new Set<string>();
-      subjects.add(period.subject);
-      scheduledSubjects.set(period.classId, subjects);
-    });
 
     const results: TeacherClassAssignment[] = [];
     assignedClassIds.forEach((classId) => {
@@ -58,20 +46,17 @@ export const teacherService = {
       }));
       const hasWhitelist = teacher.classAllowedSubjects?.[classId] !== undefined;
       const configuredSubjects = teacher.classAllowedSubjects?.[classId] || [];
-      const scheduleOnly = !teacher.classes.includes(classId);
-      const assigned = scheduleOnly
-        ? curriculum.filter((subject) => scheduledSubjects.get(classId)?.has(subject.name))
-        : hasWhitelist
-          ? curriculum.filter(
-              (subject) =>
-                configuredSubjects.includes(subject.id) ||
-                configuredSubjects.includes(subject.name) ||
-                configuredSubjects.includes(courseworkSubjectId(subject.name)),
-            )
-          : curriculum;
+      const assigned = hasWhitelist
+        ? curriculum.filter(
+            (subject) =>
+              configuredSubjects.includes(subject.id) ||
+              configuredSubjects.includes(subject.name) ||
+              configuredSubjects.includes(courseworkSubjectId(subject.name)),
+          )
+        : curriculum;
 
       if (!assigned.length) return;
-      if (assigned.length === curriculum.length && !scheduleOnly) {
+      if (!hasWhitelist) {
         results.push({
           id: `all_${teacher.id}_${classId}`,
           classId,
@@ -130,15 +115,6 @@ export const teacherService = {
 export function assignedClassIdsForTeacher(state: State, teacher: User | undefined): string[] {
   if (!teacher) return [];
   const classesAssignedByProfile = new Set(teacher.classes);
-  const identity = new Set([teacher.id, teacher.email, teacher.name].map((x) => x.toLowerCase()));
-  state.periods.forEach((period) => {
-    if (
-      identity.has(period.teacher.trim().toLowerCase()) &&
-      state.classes.includes(period.classId)
-    ) {
-      classesAssignedByProfile.add(period.classId);
-    }
-  });
   return [...classesAssignedByProfile].filter((classId) => {
     if (!state.classes.includes(classId)) return false;
     const whitelist = teacher.classAllowedSubjects?.[classId];

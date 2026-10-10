@@ -41,6 +41,7 @@ import {
 import { adminService } from '../services/adminService';
 import { isSupabaseConfigured } from '../supabase';
 import { invokeBackend } from '../backend';
+import { normalizeUsername, usernameAuthEmail, normalizeTeachingAccess } from '../accountRules';
 export function SettingsPage() {
   const { data, update, notify, theme, setTheme } = useStore();
   const [settings, setSettings] = useState(data.settings),
@@ -395,7 +396,7 @@ export function UsersPage() {
     });
   };
   const users = data.users.filter((u) =>
-    (u.name + u.email + u.role).toLowerCase().includes(q.toLowerCase()),
+    (u.name + (u.username || u.email) + u.role).toLowerCase().includes(q.toLowerCase()),
   );
   return (
     <>
@@ -416,12 +417,12 @@ export function UsersPage() {
       />
       <div className="notice">
         {isSupabaseConfigured
-          ? 'Create accounts with a temporary password and share it with the user through a secure channel. They can then sign in with their email and password.'
+          ? 'Create a username and password for each user. Usernames do not need an email address or @ symbol. Existing email accounts can still sign in.'
           : 'User records are for the frontend preview. Configure Supabase to create real login accounts.'}
       </div>
       <Card>
         <div className="filter-bar">
-          <SearchBox value={q} onChange={setQ} placeholder="Search people, roles, or email..." />
+          <SearchBox value={q} onChange={setQ} placeholder="Search people, roles, or username..." />
         </div>
         <div className="table-scroll">
           <table>
@@ -439,7 +440,7 @@ export function UsersPage() {
               {users.map((u) => (
                 <tr key={u.id}>
                   <td>
-                    <Person name={u.name} sub={u.email} />
+                    <Person name={u.name} sub={u.username || u.email} />
                   </td>
                   <td>{u.role}</td>
                   <td>{u.classes.join(', ') || '—'}</td>
@@ -503,6 +504,24 @@ export function UsersPage() {
           <form
             onSubmit={(e) => {
               e.preventDefault();
+              let username: string | undefined;
+              let teaching: { classes: string[]; classAllowedSubjects: Record<string, string[]> };
+              try {
+                username = edit.username?.trim() ? normalizeUsername(edit.username) : undefined;
+                if (!edit.id && !username)
+                  throw new Error('Choose a username for the new account.');
+                teaching =
+                  edit.role === 'Teacher'
+                    ? normalizeTeachingAccess(
+                        edit.classes,
+                        edit.classAllowedSubjects || {},
+                        data.classes,
+                      )
+                    : { classes: [], classAllowedSubjects: {} };
+              } catch (error) {
+                notify(error instanceof Error ? error.message : 'Check account details.');
+                return;
+              }
               if (isSupabaseConfigured) {
                 const form = e.currentTarget;
                 const formData = new FormData(form);
@@ -516,14 +535,15 @@ export function UsersPage() {
                 void invokeBackend('admin-create-user', {
                   action: edit.id ? 'update' : 'create',
                   id: edit.id || undefined,
-                  email: edit.email,
+                  email: username ? undefined : edit.email,
+                  username,
                   fullName: edit.name,
                   role: edit.role,
                   password: password || undefined,
                   active: edit.active,
                   studentId: edit.studentId,
-                  classes: edit.classes,
-                  classAllowedSubjects: edit.classAllowedSubjects,
+                  classes: teaching.classes,
+                  classAllowedSubjects: teaching.classAllowedSubjects,
                 })
                   .then(async () => {
                     await refresh();
@@ -540,13 +560,22 @@ export function UsersPage() {
               }
               if (
                 data.users.some(
-                  (u) => u.email.toLowerCase() === edit.email.toLowerCase() && u.id !== edit.id,
+                  (u) =>
+                    (username
+                      ? u.username === username
+                      : u.email.toLowerCase() === edit.email.toLowerCase()) && u.id !== edit.id,
                 )
               ) {
-                notify('This email already belongs to another user.');
+                notify('This login already belongs to another user.');
                 return;
               }
-              const user = { ...edit, id: edit.id || uid() };
+              const user = {
+                ...edit,
+                ...teaching,
+                username,
+                email: username ? usernameAuthEmail(username) : edit.email,
+                id: edit.id || uid(),
+              };
               update(
                 (d) => {
                   let next: State = {
@@ -569,14 +598,33 @@ export function UsersPage() {
                 onChange={(e) => setEdit({ ...edit, name: e.target.value })}
               />
             </Field>
-            <Field label="Email address">
+            <Field
+              label="Username"
+              hint="3–32 letters, numbers, dots, underscores or hyphens. No @ symbol. Existing email accounts may leave this blank to keep email login."
+            >
               <input
-                required
-                type="email"
-                value={edit.email}
-                onChange={(e) => setEdit({ ...edit, email: e.target.value })}
+                type="text"
+                autoComplete="off"
+                autoCapitalize="none"
+                spellCheck={false}
+                required={!edit.id || !!data.users.find((u) => u.id === edit.id)?.username}
+                minLength={3}
+                maxLength={32}
+                pattern="[a-zA-Z0-9][a-zA-Z0-9._\-]{2,31}"
+                value={edit.username || ''}
+                onChange={(e) => setEdit({ ...edit, username: e.target.value.toLowerCase() })}
               />
             </Field>
+            {edit.id && !edit.username && (
+              <Field label="Email address (existing login)">
+                <input
+                  required
+                  type="email"
+                  value={edit.email}
+                  onChange={(e) => setEdit({ ...edit, email: e.target.value })}
+                />
+              </Field>
+            )}
             {isSupabaseConfigured && (
               <Field
                 label={
@@ -633,50 +681,56 @@ export function UsersPage() {
                 </select>
               </Field>
             )}
-            <fieldset className="class-checkboxes">
-              <legend>Assigned classes</legend>
-              {(data.classes || classes).map((c) => (
-                <label key={c}>
-                  <input
-                    type="checkbox"
-                    checked={edit.classes.includes(c)}
-                    onChange={(e) =>
-                      setEdit({
-                        ...edit,
-                        classes: e.target.checked
-                          ? [...edit.classes, c]
-                          : edit.classes.filter((x) => x !== c),
-                      })
-                    }
-                  />
-                  {c}
-                </label>
-              ))}
-            </fieldset>
+            {edit.role === 'Teacher' && (
+              <fieldset className="class-checkboxes">
+                <legend>Assigned classes</legend>
+                {(data.classes || classes).map((c) => (
+                  <label key={c}>
+                    <input
+                      type="checkbox"
+                      checked={edit.classes.includes(c)}
+                      onChange={(e) => {
+                        const restrictions = { ...(edit.classAllowedSubjects || {}) };
+                        delete restrictions[c];
+                        setEdit({
+                          ...edit,
+                          classAllowedSubjects: restrictions,
+                          classes: e.target.checked
+                            ? [...edit.classes, c]
+                            : edit.classes.filter((x) => x !== c),
+                        });
+                      }}
+                    />
+                    {c}
+                  </label>
+                ))}
+              </fieldset>
+            )}
             {edit.role === 'Teacher' && (
               <fieldset className="class-checkboxes">
                 <legend>Subject access by class</legend>
                 <p className="muted">
-                  Leave a class unrestricted for class-teacher access to all subjects. Restricting a
-                  class makes this teacher a subject teacher there.
+                  Choose each class independently: all subjects in one class, and selected subjects
+                  in another.
                 </p>
                 {edit.classes.map((classId) => {
                   const restricted = edit.classAllowedSubjects?.[classId] !== undefined;
                   return (
                     <div key={classId} className="teacher-subject-access">
-                      <label>
-                        <input
-                          type="checkbox"
-                          checked={restricted}
+                      <Field label={`${classId} teaching role`}>
+                        <select
+                          value={restricted ? 'selected' : 'all'}
                           onChange={(event) => {
                             const next = { ...(edit.classAllowedSubjects || {}) };
-                            if (event.target.checked) next[classId] = [];
+                            if (event.target.value === 'selected') next[classId] = [];
                             else delete next[classId];
                             setEdit({ ...edit, classAllowedSubjects: next });
                           }}
-                        />
-                        Restrict {classId} to selected subjects
-                      </label>
+                        >
+                          <option value="all">All subjects (class teacher)</option>
+                          <option value="selected">Selected subjects (subject teacher)</option>
+                        </select>
+                      </Field>
                       {restricted && (
                         <div className="class-checkboxes teacher-subject-options">
                           {classSubjects(classId).map((subject) => {

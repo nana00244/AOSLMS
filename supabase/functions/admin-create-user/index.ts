@@ -1,10 +1,16 @@
 import { z } from 'zod';
 import { authenticate, json } from '../_shared/http.ts';
+import {
+  normalizeUsername,
+  usernameAuthEmail,
+  normalizeTeachingAccess,
+} from '../../../src/accountRules.ts';
 
 const inputSchema = z.object({
   action: z.enum(['create', 'update', 'deactivate']).default('create'),
   id: z.string().uuid().optional(),
   email: z.string().email().max(254).optional(),
+  username: z.string().transform(normalizeUsername).optional(),
   password: z.string().min(12).max(128).optional(),
   fullName: z.string().trim().min(1).max(200).optional(),
   role: z.enum(['Administrator', 'Teacher', 'Student', 'Accountant']).optional(),
@@ -35,26 +41,57 @@ Deno.serve(async (request) => {
         ban_duration: '876000h',
       });
       if (banError) throw banError;
-      await client
-        .from('audit_log')
-        .insert({
-          actor_id: profile.id,
-          action: 'Account deactivated',
-          entity_id: input.id,
-          entity: 'profiles',
-        });
+      await client.from('audit_log').insert({
+        actor_id: profile.id,
+        action: 'Account deactivated',
+        entity_id: input.id,
+        entity: 'profiles',
+      });
       return json({ success: true });
     }
-    if (!input.email || !input.fullName || !input.role)
-      return json({ error: 'Email, name and role are required' }, 400);
+    let original: any = null;
+    if (input.action === 'update') {
+      if (!input.id) return json({ error: 'Choose an account' }, 400);
+      const result = await client.from('profiles').select('*').eq('id', input.id).single();
+      if (result.error) throw result.error;
+      original = result.data;
+    }
+    const username = input.username ?? original?.username ?? null;
+    const email = username ? usernameAuthEmail(username) : input.email?.trim().toLowerCase();
+    if (!email || !input.fullName || !input.role)
+      return json(
+        {
+          error:
+            'Username, name and role are required (existing email accounts may retain email login).',
+        },
+        400,
+      );
+    if (!username && email.endsWith('@users.aoslms.invalid'))
+      return json({ error: 'Provide a username for this account.' }, 400);
+    if (username) {
+      const { data: duplicate, error: duplicateError } = await client
+        .from('profiles')
+        .select('id')
+        .eq('username', username)
+        .maybeSingle();
+      if (duplicateError) throw duplicateError;
+      if (duplicate && duplicate.id !== input.id)
+        return json({ error: 'That username is already in use.' }, 409);
+    }
     const { data: workspace, error: workspaceError } = await client
       .from('school_workspace')
       .select('document')
       .eq('id', true)
       .single();
     if (workspaceError) throw workspaceError;
-    if (input.classes.some((c) => !workspace.document.classes.includes(c)))
-      return json({ error: 'Choose existing classes' }, 400);
+    const teaching =
+      input.role === 'Teacher'
+        ? normalizeTeachingAccess(
+            input.classes,
+            input.classAllowedSubjects,
+            workspace.document.classes,
+          )
+        : { classes: [], classAllowedSubjects: {} };
     if (
       input.role === 'Student' &&
       (!input.studentId || !workspace.document.students.some((s: any) => s.id === input.studentId))
@@ -62,12 +99,13 @@ Deno.serve(async (request) => {
       return json({ error: 'Link the student account to an existing student record' }, 400);
     const values = {
       full_name: input.fullName,
-      email: input.email.toLowerCase(),
+      email,
+      username,
       role: input.role,
       active: input.active,
       student_id: input.role === 'Student' ? input.studentId : null,
-      classes: input.role === 'Teacher' ? input.classes : [],
-      class_allowed_subjects: input.classAllowedSubjects,
+      classes: teaching.classes,
+      class_allowed_subjects: teaching.classAllowedSubjects,
     };
     let id = input.id;
     if (input.action === 'create') {
@@ -88,12 +126,6 @@ Deno.serve(async (request) => {
       }
     } else {
       if (!id) return json({ error: 'Choose an account' }, 400);
-      const { data: original, error: originalError } = await client
-        .from('profiles')
-        .select('*')
-        .eq('id', id)
-        .single();
-      if (originalError) throw originalError;
       const { error: authError } = await client.auth.admin.updateUserById(id, {
         email: values.email,
         email_confirm: true,
@@ -112,16 +144,17 @@ Deno.serve(async (request) => {
         throw profileError;
       }
     }
-    const { error: auditError } = await client
-      .from('audit_log')
-      .insert({
-        actor_id: profile.id,
-        action: input.action === 'create' ? 'Login account created' : 'Login account updated',
-        entity: 'profiles',
-        entity_id: id,
-      });
+    const { error: auditError } = await client.from('audit_log').insert({
+      actor_id: profile.id,
+      action: input.action === 'create' ? 'Login account created' : 'Login account updated',
+      entity: 'profiles',
+      entity_id: id,
+    });
     if (auditError) console.error('Account audit failed', auditError.code);
-    return json({ user: { id, email: values.email } }, input.action === 'create' ? 201 : 200);
+    return json(
+      { user: { id, email: values.email, username } },
+      input.action === 'create' ? 201 : 200,
+    );
   } catch (error) {
     const message =
       error instanceof Error ? error.message : (error as any)?.message || 'Account request failed';

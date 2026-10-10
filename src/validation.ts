@@ -171,6 +171,10 @@ export const workspaceSchema = z
         id,
         name: text,
         email: text,
+        username: z
+          .string()
+          .regex(/^[a-z0-9][a-z0-9._-]{2,31}$/)
+          .optional(),
         role,
         active: z.boolean(),
         classes: z.array(classId),
