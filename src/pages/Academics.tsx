@@ -19,6 +19,8 @@ import {
   User,
 } from 'lucide-react';
 import { csv, useStore } from '../store';
+import { downloadLearningFile, uploadLearningFile } from '../backend';
+import { isSupabaseConfigured } from '../supabase';
 import {
   uid,
   today,
@@ -56,7 +58,7 @@ import {
 } from '../components/ui';
 export function Coursework() {
   const { data, role, ownId, allowedClasses, me, update, notify } = useStore();
-  const [cls, setCls] = useState(allowedClasses[0]),
+  const [cls, setCls] = useState(allowedClasses[0] || ''),
     [create, setCreate] = useState(false),
     [active, setActive] = useState(''),
     [selectedClassFilter, setSelectedClassFilter] = useState('all'),
@@ -957,8 +959,19 @@ export function Coursework() {
             )}
             {grading.filename && (
               <p>
-                <FileText size={16} /> Attached filename: {grading.filename} (demo metadata)
+                <FileText size={16} /> Attached file: {grading.filename}
               </p>
+            )}
+            {grading.storagePath && (
+              <Button
+                onClick={() => {
+                  void downloadLearningFile(grading.storagePath!).catch((e: Error) =>
+                    notify(e.message),
+                  );
+                }}
+              >
+                Download submitted file
+              </Button>
             )}
           </div>
           <form
@@ -1173,7 +1186,7 @@ function SubmissionForm({
       <p className="assignment-instructions">{a.description}</p>
       <p>Due {a.due}</p>
       <form
-        onSubmit={(e) => {
+        onSubmit={async (e) => {
           e.preventDefault();
           const f = new FormData(e.currentTarget);
           const file = f.get('file') as File;
@@ -1187,6 +1200,13 @@ function SubmissionForm({
             notify('Choose a document smaller than 5 MB.');
             return;
           }
+          let storagePath = existing?.storagePath;
+          try {
+            if (isSupabaseConfigured && file?.size) storagePath = await uploadLearningFile(file);
+          } catch (error) {
+            notify(error instanceof Error ? error.message : 'Upload failed');
+            return;
+          }
           const s: Submission = {
             id: existing?.id || uid(),
             assignmentId: a.id,
@@ -1194,6 +1214,7 @@ function SubmissionForm({
             text,
             link,
             filename: file?.size ? file.name : existing?.filename,
+            storagePath,
             date: new Date().toISOString(),
           };
           update(
@@ -1223,7 +1244,11 @@ function SubmissionForm({
         </Field>
         <Field
           label="Document (optional)"
-          hint="Demo stores the filename only; file storage comes with the backend."
+          hint={
+            isSupabaseConfigured
+              ? 'Private school storage · maximum 5 MB.'
+              : 'Demo stores the filename only.'
+          }
         >
           <input
             name="file"

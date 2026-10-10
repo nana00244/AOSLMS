@@ -1,4 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
+import { downloadLearningFile, uploadLearningFile } from '../backend';
+import { isSupabaseConfigured } from '../supabase';
 import { Link } from 'react-router-dom';
 import {
   Plus,
@@ -527,11 +529,15 @@ export function Resources() {
                     className="icon-btn"
                     aria-label={`Download ${r.title}`}
                     onClick={() =>
-                      r.url
-                        ? r.url.startsWith('data:')
-                          ? download(r.filename || r.title, r.url)
-                          : window.open(r.url, '_blank', 'noopener,noreferrer')
-                        : download(r.filename || `${r.title}.txt`, r.content)
+                      r.storagePath
+                        ? void downloadLearningFile(r.storagePath).catch((e: Error) =>
+                            notify(e.message),
+                          )
+                        : r.url
+                          ? r.url.startsWith('data:')
+                            ? download(r.filename || r.title, r.url)
+                            : window.open(r.url, '_blank', 'noopener,noreferrer')
+                          : download(r.filename || `${r.title}.txt`, r.content)
                     }
                   >
                     <Download size={17} />
@@ -558,7 +564,15 @@ export function Resources() {
       {view && (
         <Modal title={view.title} onClose={() => setView(null)}>
           <Badge tone="blue">{view.category}</Badge>
-          {view.url ? (
+          {view.storagePath ? (
+            <Button
+              onClick={() => {
+                void downloadLearningFile(view.storagePath!).catch((e: Error) => notify(e.message));
+              }}
+            >
+              Download file
+            </Button>
+          ) : view.url ? (
             <>
               <p>
                 {view.url.startsWith('data:')
@@ -604,6 +618,8 @@ function ResourceForm({
   onClose: () => void;
 }) {
   const { data, allowedClasses, role, user, update, notify } = useStore();
+  const [storagePath, setStoragePath] = useState(resource?.storagePath);
+  const [uploading, setUploading] = useState(false);
   const [content, setContent] = useState(''),
     [filename, setFilename] = useState(''),
     [fileUrl, setFileUrl] = useState(''),
@@ -615,7 +631,8 @@ function ResourceForm({
           e.preventDefault();
           const f = new FormData(e.currentTarget);
           const url = String(f.get('url'));
-          if (!url && !fileUrl && !content.trim()) {
+          if (uploading) return;
+          if (!url && !fileUrl && !content.trim() && !storagePath) {
             setError('Add a handout, upload a file, or provide a resource link.');
             return;
           }
@@ -643,6 +660,7 @@ function ResourceForm({
             content: content || resource?.content || '',
             url: resourceUrl,
             filename: selectedFilename,
+            storagePath: url ? undefined : storagePath,
             uploadedBy: resource?.uploadedBy || user?.id,
             uploadedByRole: resource?.uploadedByRole || role || undefined,
           };
@@ -727,13 +745,30 @@ function ResourceForm({
         </Field>
         <Field
           label="Upload a resource file"
-          hint="Any file format up to 10 MB. Files are stored in this browser."
+          hint={
+            isSupabaseConfigured
+              ? 'PDF, Office documents, text or images · private storage · maximum 5 MB.'
+              : 'Files are stored in this browser, up to 10 MB.'
+          }
         >
           <input
             type="file"
             onChange={async (e) => {
               const f = e.target.files?.[0];
               if (!f) return;
+              if (isSupabaseConfigured) {
+                setUploading(true);
+                try {
+                  setStoragePath(await uploadLearningFile(f));
+                  setFilename(f.name);
+                  setError('');
+                } catch (error) {
+                  setError(error instanceof Error ? error.message : 'Upload failed');
+                } finally {
+                  setUploading(false);
+                }
+                return;
+              }
               if (f.size > 10 * 1024 * 1024) {
                 setError('Choose a file no larger than 10 MB.');
                 setFilename('');
@@ -763,7 +798,9 @@ function ResourceForm({
         {filename && <p className="muted">Selected: {filename}</p>}
         {error && <p className="error">{error}</p>}
         <div className="modal-actions">
-          <Button type="submit">{resource ? 'Save resource' : 'Share resource'}</Button>
+          <Button type="submit" disabled={uploading}>
+            {uploading ? 'Uploading…' : resource ? 'Save resource' : 'Share resource'}
+          </Button>
         </div>
       </form>
     </Modal>
@@ -1027,6 +1064,12 @@ export function Community() {
       const nextUsers = d.users.map((u) => ({
         ...u,
         classes: u.classes.map((c) => (c === oldName ? newName : c)),
+        classAllowedSubjects: Object.fromEntries(
+          Object.entries(u.classAllowedSubjects || {}).map(([c, subjects]) => [
+            c === oldName ? newName : c,
+            subjects,
+          ]),
+        ),
       }));
 
       const nextFees = { ...d.fees };

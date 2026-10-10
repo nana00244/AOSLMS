@@ -2,7 +2,7 @@ import { existsSync } from 'node:fs';
 import { defineConfig } from '@playwright/test';
 export default defineConfig({
   testDir: './tests',
-  testMatch: '**/*.spec.ts',
+  testMatch: process.env.AOS_CLOUD_TESTS ? '**/cloud.spec.ts' : '**/ui.spec.ts',
   fullyParallel: true,
   workers: 2,
   use: {
@@ -15,10 +15,11 @@ export default defineConfig({
       args: ['--no-sandbox'],
     },
     screenshot: 'only-on-failure',
-    trace: 'retain-on-failure',
+    trace: process.env.AOS_CLOUD_TESTS ? 'off' : 'retain-on-failure',
   },
   webServer: {
     command: 'npm run dev -- --port 5173',
+    env: process.env.AOS_CLOUD_TESTS ? { VITE_DEMO_MODE: 'false' } : { VITE_DEMO_MODE: 'true' },
     url: 'http://127.0.0.1:5173',
     reuseExistingServer: !process.env.CI,
   },

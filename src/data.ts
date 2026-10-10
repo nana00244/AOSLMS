@@ -45,6 +45,7 @@ export interface Submission {
   text: string;
   link: string;
   filename?: string;
+  storagePath?: string;
   date: string;
   score?: number;
   feedback?: string;
@@ -64,6 +65,7 @@ export interface Resource {
   content: string;
   url?: string;
   filename?: string;
+  storagePath?: string;
   uploadedBy?: string;
   uploadedByRole?: Role | 'admin';
   targetClassIds?: string[];
@@ -462,7 +464,7 @@ export const subjects = [
   'Creative Arts & Design',
   'Computing / ICT',
 ];
-export const classSubjects = (classId: string) =>
+export const classSubjects = (classId: string = '') =>
   subjects.map((s) =>
     s === 'History' && classId.toUpperCase().startsWith('JHS') ? 'Social Studies' : s,
   );

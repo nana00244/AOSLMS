@@ -76,7 +76,7 @@ export function submitAssignment(
   state: State,
   assignmentId: string,
   studentUserId: string,
-  input: { text?: string; link?: string; filename?: string },
+  input: { text?: string; link?: string; filename?: string; storagePath?: string },
 ): { state: State; submission: Submission } {
   const student = getStudentProfile(state, studentUserId);
   const assignment = state.assignments.find((entry) => entry.id === assignmentId);
@@ -96,6 +96,7 @@ export function submitAssignment(
     link: input.link?.trim() || '',
     date: new Date().toISOString(),
     filename: input.filename || existing?.filename,
+    storagePath: input.storagePath || existing?.storagePath,
     isLate: Number.isFinite(due.getTime()) && Date.now() > due.getTime(),
   };
   const pastDue = Number.isFinite(due.getTime()) && Date.now() > due.getTime();

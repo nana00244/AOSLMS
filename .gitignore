@@ -1,7 +1,9 @@
 node_modules/
 dist/
 *.tsbuildinfo
+.npm-cache/
 playwright-report/
 test-results/
 .env*
 !.env.example
+.temp/

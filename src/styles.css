@@ -2154,9 +2154,9 @@ td .person {
 .receipt-watermark {
   margin-top: 20px;
   text-align: center;
-  letter-spacing: .18em;
+  letter-spacing: 0.18em;
   font-weight: 900;
-  opacity: .48;
+  opacity: 0.48;
 }
 .student-stream-item {
   min-width: 0;
@@ -5442,4 +5442,15 @@ td .person {
   .class-detail-stats {
     grid-template-columns: 1fr;
   }
+}
+/* Block duplicate edits while a transactional cloud save is in flight. */
+.cloud-save-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: grid;
+  place-items: center;
+  background: #10182899;
+  color: white;
+  font-weight: 700;
 }

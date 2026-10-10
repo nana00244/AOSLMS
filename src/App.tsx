@@ -30,7 +30,8 @@ import {
 } from 'lucide-react';
 import { StoreProvider, useStore } from './store';
 import { type Role } from './data';
-import { Button, Toast, Avatar } from './components/ui';
+import { Button, Toast, Avatar, Field } from './components/ui';
+import { isSupabaseConfigured } from './supabase';
 import { Dashboard } from './pages/Dashboard';
 import { Students } from './pages/Students';
 import { Attendance } from './pages/Attendance';
@@ -173,8 +174,12 @@ const studentNav = [
   { label: 'My Schedule', path: '/student/schedule', icon: CalendarDays, roles: ['Student'] },
 ];
 function Login() {
-  const { setRole, theme, toggleTheme } = useStore();
+  const { setRole, signIn, authLoading, storageError, theme, toggleTheme } = useStore();
   const [selected, setSelected] = useState<Role>('Administrator');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+  const [submitting, setSubmitting] = useState(false);
   const choices: [Role, typeof Users, string][] = [
     ['Administrator', Users, 'Lead your school'],
     ['Teacher', BookOpen, 'Inspire every learner'],
@@ -183,6 +188,11 @@ function Login() {
   ];
   return (
     <main className="login-page">
+      {storageError && (
+        <div role="alert" className="notice">
+          {storageError}
+        </div>
+      )}
       <section className="login-story">
         <div className="brand">
           <span className="brand-icon">
@@ -238,41 +248,94 @@ function Login() {
         <div className="login-form">
           <div className="eyebrow">WELCOME TO YOUR SCHOOL</div>
           <h2>Good to have you here.</h2>
-          <p>Choose your workspace to get started.</p>
-          <div className="role-grid">
-            {choices.map(([role, Icon, description]) => (
-              <button
-                key={role}
-                aria-pressed={selected === role}
-                className={`role-card ${selected === role ? 'selected' : ''}`}
-                onClick={() => setSelected(role)}
-              >
-                <span className="role-icon">
-                  <Icon size={24} />
-                </span>
-                <strong>{role}</strong>
-                <small>{description}</small>
-                {selected === role && <span className="selected-dot" />}
-              </button>
-            ))}
-          </div>
-          <Button className="login-continue" onClick={() => setRole(selected)}>
-            Explore as {selected}
-            <ArrowRight size={18} />
-          </Button>
-          <div className="demo-note">
-            <Monitor size={20} />
-            <div>
-              <strong>Your interactive school preview</strong>
-              <p>
-                Explore with sample data. Changes stay in this browser. No account or password
-                needed.
-              </p>
-            </div>
-          </div>
-          <div className="login-help">
-            Ayisatu Owen Schools <span>·</span> Information System & LMS
-          </div>
+          <p>
+            {isSupabaseConfigured
+              ? 'Sign in with the credentials provided by your school administrator.'
+              : 'Choose a demo workspace to get started.'}
+          </p>
+          {authLoading ? (
+            <p role="status">Checking your session…</p>
+          ) : isSupabaseConfigured ? (
+            <form
+              onSubmit={async (event) => {
+                event.preventDefault();
+                setSubmitting(true);
+                setError('');
+                try {
+                  await signIn(email, password);
+                } catch (cause) {
+                  setError(cause instanceof Error ? cause.message : 'Unable to sign in.');
+                } finally {
+                  setSubmitting(false);
+                }
+              }}
+            >
+              <Field label="Email address">
+                <input
+                  type="email"
+                  autoComplete="username"
+                  required
+                  value={email}
+                  onChange={(event) => setEmail(event.target.value)}
+                />
+              </Field>
+              <Field label="Password">
+                <input
+                  type="password"
+                  autoComplete="current-password"
+                  required
+                  value={password}
+                  onChange={(event) => setPassword(event.target.value)}
+                />
+              </Field>
+              {error && (
+                <p role="alert" className="form-error">
+                  {error}
+                </p>
+              )}
+              <Button className="login-continue" type="submit" disabled={submitting}>
+                {submitting ? 'Signing in…' : 'Sign in'}
+                <ArrowRight size={18} />
+              </Button>
+            </form>
+          ) : (
+            <>
+              <div className="role-grid">
+                {choices.map(([role, Icon, description]) => (
+                  <button
+                    key={role}
+                    aria-pressed={selected === role}
+                    className={`role-card ${selected === role ? 'selected' : ''}`}
+                    onClick={() => setSelected(role)}
+                  >
+                    <span className="role-icon">
+                      <Icon size={24} />
+                    </span>
+                    <strong>{role}</strong>
+                    <small>{description}</small>
+                    {selected === role && <span className="selected-dot" />}
+                  </button>
+                ))}
+              </div>
+              <Button className="login-continue" onClick={() => setRole(selected)}>
+                Explore as {selected}
+                <ArrowRight size={18} />
+              </Button>
+              <div className="demo-note">
+                <Monitor size={20} />
+                <div>
+                  <strong>Your interactive school preview</strong>
+                  <p>
+                    Explore with sample data. Changes stay in this browser. No account or password
+                    needed.
+                  </p>
+                </div>
+              </div>
+              <div className="login-help">
+                Ayisatu Owen Schools <span>·</span> Information System & LMS
+              </div>
+            </>
+          )}
         </div>
       </section>
     </main>
@@ -285,7 +348,8 @@ export function ProtectedRoute({
   children: ReactNode;
   allowedRoles?: Role[];
 }) {
-  const { role, user } = useStore();
+  const { role, user, authLoading } = useStore();
+  if (authLoading) return <div className="page-loading">Checking your session…</div>;
   if (!role || !user) return <Navigate to="/" replace />;
   if (allowedRoles && !allowedRoles.includes(role)) return <Navigate to="/unauthorized" replace />;
   return <>{children}</>;
@@ -359,7 +423,7 @@ function BottomNav({ role, onOpenMenu }: { role: Role; onOpenMenu: () => void })
 }
 
 function Shell() {
-  const { role, setRole, data, me, toast, storageError, theme, toggleTheme } = useStore();
+  const { role, setRole, signOut, data, me, toast, storageError, theme, toggleTheme } = useStore();
   const [mobile, setMobile] = useState(false);
   const [compact, setCompact] = useState(false);
   const location = useLocation();
@@ -449,7 +513,7 @@ function Shell() {
             </strong>
             <small>Growing together, every day.</small>
           </div>
-          <button className="profile-button" onClick={() => setRole(null)}>
+          <button className="profile-button" onClick={() => void signOut()}>
             <Avatar name={me} />
             <span>
               <strong>{me}</strong>

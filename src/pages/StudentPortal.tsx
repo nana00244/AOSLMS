@@ -35,6 +35,8 @@ import {
 import { certificateService } from '../services/certificateService';
 import { financeService } from '../services/financeService';
 import { reportCardService } from '../services/reportCardService';
+import { downloadLearningFile, uploadLearningFile } from '../backend';
+import { isSupabaseConfigured } from '../supabase';
 
 export function StudentStream() {
   const { data, user } = useStore();
@@ -90,6 +92,18 @@ export function StudentStream() {
                 {item.type} · {item.date}
               </small>
               <p>{item.description}</p>
+              {item.type === 'resource' &&
+                data.resources.find((r) => r.id === item.id)?.storagePath && (
+                  <Button
+                    onClick={() => {
+                      void downloadLearningFile(
+                        data.resources.find((r) => r.id === item.id)!.storagePath!,
+                      ).catch((e: Error) => window.alert(e.message));
+                    }}
+                  >
+                    Download resource
+                  </Button>
+                )}
               {item.type === 'assignment' && (
                 <Link to={`/student/assignments/${item.id}`}>Open assignment</Link>
               )}
@@ -168,6 +182,7 @@ export function AssignmentDetail() {
   const [text, setText] = useState('');
   const [link, setLink] = useState('');
   const [filename, setFilename] = useState('');
+  const [uploading, setUploading] = useState(false);
   const [error, setError] = useState('');
   let assignment = null;
   try {
@@ -195,8 +210,10 @@ export function AssignmentDetail() {
         </Card>
       </>
     );
-  const save = (e: FormEvent<HTMLFormElement>) => {
+  const save = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    if (uploading) return;
+    setUploading(true);
     setError('');
     try {
       if (!user) throw new Error('Student account is not available.');
@@ -208,6 +225,10 @@ export function AssignmentDetail() {
         text,
         link,
         filename: file?.size ? file.name : assignment?.submission?.filename,
+        storagePath:
+          isSupabaseConfigured && file?.size
+            ? await uploadLearningFile(file)
+            : assignment?.submission?.storagePath,
       });
       update(() => result.state, `Student submitted assignment ${assignment!.title}`);
       notify('Your work has been submitted.');
@@ -216,6 +237,8 @@ export function AssignmentDetail() {
       setFilename('');
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Unable to submit work.');
+    } finally {
+      setUploading(false);
     }
   };
   return (
@@ -243,6 +266,17 @@ export function AssignmentDetail() {
               </a>
             )}
             {assignment.submission.filename && <p>{assignment.submission.filename}</p>}
+            {assignment.submission.storagePath && (
+              <Button
+                onClick={() => {
+                  void downloadLearningFile(assignment.submission!.storagePath!).catch((e: Error) =>
+                    setError(e.message),
+                  );
+                }}
+              >
+                Download submitted file
+              </Button>
+            )}
             {assignment.submission.score !== undefined && (
               <p>
                 <strong>
@@ -274,7 +308,11 @@ export function AssignmentDetail() {
           </Field>
           <Field
             label="Document (optional)"
-            hint="The demo stores the filename; uploaded file storage requires a backend."
+            hint={
+              isSupabaseConfigured
+                ? 'Private school storage · maximum 5 MB.'
+                : 'The demo stores the filename only.'
+            }
           >
             <input
               type="file"
@@ -289,7 +327,7 @@ export function AssignmentDetail() {
               {error}
             </p>
           )}
-          <Button type="submit" disabled={assignment.submission?.score !== undefined}>
+          <Button type="submit" disabled={uploading || assignment.submission?.score !== undefined}>
             <Send size={16} /> {assignment.submission ? 'Update submission' : 'Submit assignment'}
           </Button>
         </form>
