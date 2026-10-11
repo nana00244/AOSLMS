@@ -4803,6 +4803,18 @@ td .person {
   object-fit: contain;
 }
 
+.report-logo-editor {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.report-logo-editor > img {
+  width: 96px;
+  height: 96px;
+  object-fit: contain;
+}
+
 /* Report Card Editor Modal Styles */
 .report-card-editor-form .editor-fieldset {
   border: 1px solid var(--line);

@@ -1764,6 +1764,7 @@ function ReportCardEditor({ student, onClose }: { student: Student; onClose: () 
   const [vacation, setVacation] = useState(data.settings.vacation);
   const [reopening, setReopening] = useState(data.settings.reopening);
   const [photo, setPhoto] = useState(student.photo || '');
+  const [schoolLogo, setSchoolLogo] = useState(data.settings.crest || '');
   const [reportStamps, setReportStamps] = useState(data.settings.reportStamps || {});
   const [rollOverride, setRollOverride] = useState(conductData['rollOverride'] || '');
   const [positionOverride, setPositionOverride] = useState(conductData['positionOverride'] || '');
@@ -1829,6 +1830,22 @@ function ReportCardEditor({ student, onClose }: { student: Student; onClose: () 
     }
     const reader = new FileReader();
     reader.onload = () => setPhoto(String(reader.result));
+    reader.onerror = () => notify('The student photo could not be read.');
+    reader.readAsDataURL(file);
+  }
+
+  function handleSchoolLogoUpload(file: File) {
+    if (!['image/png', 'image/jpeg'].includes(file.type)) {
+      notify('Choose a PNG or JPEG image for the school logo.');
+      return;
+    }
+    if (file.size > 500000) {
+      notify('Choose a school logo image under 500 KB.');
+      return;
+    }
+    const reader = new FileReader();
+    reader.onload = () => setSchoolLogo(String(reader.result));
+    reader.onerror = () => notify('The school logo image could not be read.');
     reader.readAsDataURL(file);
   }
 
@@ -1924,8 +1941,9 @@ function ReportCardEditor({ student, onClose }: { student: Student; onClose: () 
         ...d,
         students: updatedStudents,
         settings: {
-          ...updatedSettings,
-          reportStamps,
+        ...updatedSettings,
+        crest: schoolLogo,
+        reportStamps,
         },
         grades: updatedGrades,
         remarks: updatedRemarks,
@@ -1941,6 +1959,37 @@ function ReportCardEditor({ student, onClose }: { student: Student; onClose: () 
   return (
     <Modal title={`Edit Report Card · ${student.name}`} onClose={onClose} wide>
       <form onSubmit={handleSubmit} className="report-card-editor-form">
+        <fieldset className="editor-fieldset">
+          <legend>Global School Logo</legend>
+          <p className="muted">
+            This logo replaces the graduation-cap mark on every report card and throughout the system.
+          </p>
+          <div className="report-logo-editor">
+            <img src={schoolLogo || './crest.svg'} alt="School logo preview" />
+            {role === 'Administrator' && (
+              <div>
+                <Field label="Upload school logo" hint="PNG or JPEG, up to 500 KB. Save changes to publish it globally.">
+                  <input
+                    type="file"
+                    accept="image/png,image/jpeg"
+                    aria-label="Upload school logo"
+                    onChange={(e) => {
+                      const file = e.currentTarget.files?.[0];
+                      if (file) handleSchoolLogoUpload(file);
+                      e.currentTarget.value = '';
+                    }}
+                  />
+                </Field>
+                {schoolLogo && (
+                  <Button variant="secondary" type="button" onClick={() => setSchoolLogo('')}>
+                    Use graduation-cap mark
+                  </Button>
+                )}
+              </div>
+            )}
+          </div>
+        </fieldset>
+
         {/* Section 1: Pupil & Term Information */}
         <fieldset className="editor-fieldset">
           <legend>Pupil & Academic Information</legend>
