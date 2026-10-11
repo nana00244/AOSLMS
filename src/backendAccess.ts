@@ -96,7 +96,9 @@ function entries(key: string, value: any): [string, any][] {
   if (key === 'settings' || key === 'classes' || key === 'version') return [['singleton', value]];
   if (maps.has(key)) return Object.entries(value || {});
   if (!Array.isArray(value)) {
-    throw new Error(`Invalid workspace data: ${key} must be a list. Reload the page and try again.`);
+    throw new Error(
+      `Invalid workspace data: ${key} must be a list. Reload the page and try again.`,
+    );
   }
   return value.map((row: any) => [typeof row === 'string' ? row : row.id, row]);
 }

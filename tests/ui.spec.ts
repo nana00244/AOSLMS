@@ -11,20 +11,43 @@ async function login(page: Page, role = 'Administrator') {
   await expect(page.getByRole('heading', { name: /Good morning/ })).toBeVisible();
 }
 
-test('supplied multi-sheet workbook imports all classes once',async({page})=>{
-  test.skip(!process.env.AOS_ROSTER_SAMPLE_PATH,'Optional private reference workbook');
-  await login(page);const state=emptyState();state.users=seed().users.filter(u=>u.role==='Administrator');
-  await page.evaluate(s=>localStorage.setItem('aos-lms-demo-v1',JSON.stringify(s)),state);await page.reload();await page.goto('/#/students');
-  async function upload(){await page.getByRole('button',{name:'Bulk import',exact:true}).click();await page.getByLabel('Roster file (.xlsx or .csv)').setInputFiles(process.env.AOS_ROSTER_SAMPLE_PATH!);}
-  await upload();await expect(page.getByRole('dialog')).toContainText('239 new students',{timeout:20000});await page.getByRole('button',{name:'Apply roster updates'}).click();
-  const counts=await page.evaluate(()=>{const s=JSON.parse(localStorage.getItem('aos-lms-demo-v1')!);return {students:s.students.length,classes:s.classes.length,bills:Object.keys(s.studentBills).length};});expect(counts).toEqual({students:239,classes:9,bills:0});
-  await upload();await expect(page.getByRole('dialog')).toContainText('0 new students · 0 class changes · 239 already in class');await expect(page.getByRole('button',{name:'Apply roster updates'})).toBeDisabled();
+test('supplied multi-sheet workbook imports all classes once', async ({ page }) => {
+  test.skip(!process.env.AOS_ROSTER_SAMPLE_PATH, 'Optional private reference workbook');
+  await login(page);
+  const state = emptyState();
+  state.users = seed().users.filter((u) => u.role === 'Administrator');
+  await page.evaluate((s) => localStorage.setItem('aos-lms-demo-v1', JSON.stringify(s)), state);
+  await page.reload();
+  await page.goto('/#/students');
+  async function upload() {
+    await page.getByRole('button', { name: 'Bulk import', exact: true }).click();
+    await page
+      .getByLabel('Roster file (.xlsx or .csv)')
+      .setInputFiles(process.env.AOS_ROSTER_SAMPLE_PATH!);
+  }
+  await upload();
+  await expect(page.getByRole('dialog')).toContainText('239 new students', { timeout: 20000 });
+  await page.getByRole('button', { name: 'Apply roster updates' }).click();
+  const counts = await page.evaluate(() => {
+    const s = JSON.parse(localStorage.getItem('aos-lms-demo-v1')!);
+    return {
+      students: s.students.length,
+      classes: s.classes.length,
+      bills: Object.keys(s.studentBills).length,
+    };
+  });
+  expect(counts).toEqual({ students: 239, classes: 9, bills: 0 });
+  await upload();
+  await expect(page.getByRole('dialog')).toContainText(
+    '0 new students · 0 class changes · 239 already in class',
+  );
+  await expect(page.getByRole('button', { name: 'Apply roster updates' })).toBeDisabled();
 });
 
 test('roster import is repeatable and admin can bulk reassign and delete', async ({ page }) => {
   await login(page);
   const state = emptyState();
-  state.users = seed().users.filter(u=>u.role==='Administrator'||u.role==='Accountant');
+  state.users = seed().users.filter((u) => u.role === 'Administrator' || u.role === 'Accountant');
   state.classes = ['Basic 1', 'Basic 2'];
   state.students = [
     {
@@ -78,7 +101,7 @@ test('roster import is repeatable and admin can bulk reassign and delete', async
 test('accountant explicitly bills a class and edits an individual bill', async ({ page }) => {
   await page.goto('/');
   const state = emptyState();
-  state.users = seed().users.filter(u=>u.role==='Administrator'||u.role==='Accountant');
+  state.users = seed().users.filter((u) => u.role === 'Administrator' || u.role === 'Accountant');
   state.classes = ['Basic 1'];
   state.fees = { 'Basic 1': { Tuition: 100 } };
   state.students = ['A', 'B'].map((id) => ({

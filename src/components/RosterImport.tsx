@@ -73,7 +73,17 @@ export function ImportStudents({ onClose }: { onClose: () => void }) {
                   onChange={(e) => setMapping({ ...mapping, [source]: e.target.value })}
                 >
                   <option value="">Skip / choose class</option>
-                  {[...new Set([...data.classes,...rows.map(r=>r.className),...Object.values(mapping).filter(Boolean)])].map(c=><option key={c} value={c}>{data.classes.includes(c)?c:`Create class: ${c}`}</option>)}
+                  {[
+                    ...new Set([
+                      ...data.classes,
+                      ...rows.map((r) => r.className),
+                      ...Object.values(mapping).filter(Boolean),
+                    ]),
+                  ].map((c) => (
+                    <option key={c} value={c}>
+                      {data.classes.includes(c) ? c : `Create class: ${c}`}
+                    </option>
+                  ))}
                 </select>
               </Field>
             ))}

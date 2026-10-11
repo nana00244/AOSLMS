@@ -118,20 +118,49 @@ describe('server-side workspace access', () => {
       ]),
     ).toThrow('administration');
   });
-  it('deletes selected students and cascades records before schema validation', () => {
-    const next = structuredClone(base);
-    const removed = first.id;
-    const result = applyChanges(next, { ...teacher, role: 'Administrator' }, [
-      { collection: 'students', id: removed, before: next.students.find((s) => s.id === removed) },
-    ]);
-    expect(result.students.some((s) => s.id === removed)).toBe(false);
-    expect(Object.keys(result.studentBills || {}).every((key) => !key.startsWith(removed + '|'))).toBe(true);
-    expect(workspaceSchema.safeParse(result).success).toBe(true);
-  });
   it('generates only changed records and excludes client audit entries', () => {
     const next = structuredClone(base);
     next.settings.name = 'Updated';
     next.logs = [];
     expect(changesBetween(base, next).map((c) => c.collection)).toEqual(['settings']);
   });
+  it('deletes multiple students and cascades related records from saved workspace maps', () => {
+    const source = structuredClone(base);
+    const ids = source.students.slice(0, 2).map((s) => s.id);
+    const [firstId, secondId] = ids;
+    source.attendance = { [`2026-10-11|Basic 1|${firstId}`]: 'Present' } as any;
+    source.studentBills = {
+      [`${firstId}|2026/2027|1`]: {
+        studentId: firstId!,
+        year: '2026/2027',
+        term: 1,
+        items: { Tuition: 10 },
+        concession: 0,
+        updatedAt: '',
+      },
+      [`${secondId}|2026/2027|1`]: {
+        studentId: secondId!,
+        year: '2026/2027',
+        term: 1,
+        items: { Tuition: 10 },
+        concession: 0,
+        updatedAt: '',
+      },
+    };
+    const admin: User = { ...student, id: 'admin', role: 'Administrator', studentId: undefined };
+    const changes = ids.map((id) => ({
+      collection: 'students',
+      id: id!,
+      before: source.students.find((s) => s.id === id),
+    }));
+    const deleted = applyChanges(source, admin, changes);
+    expect(deleted.students.some((s) => ids.includes(s.id))).toBe(false);
+    expect(Object.keys(deleted.attendance)).toHaveLength(0);
+    expect(Object.keys(deleted.studentBills || {})).toHaveLength(0);
+  });
+  it('reports malformed list data clearly instead of throwing a generic map error', () => {
+    const malformed = { ...base, students: { broken: true } } as any;
+    expect(() => changesBetween(base, malformed)).toThrow('students must be a list');
+  });
 });
+

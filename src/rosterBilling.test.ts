@@ -148,7 +148,7 @@ describe('class roster updates and explicit billing', () => {
       const mapping = initialRosterClasses(rows, []);
       const next = applyRoster(state, rows, mapping);
       expect(next.students.length).toBe(239);
-    expect(next.classes.length).toBe(9); // BS4 and BS 4 are the same class.
+      expect(next.classes.length).toBe(9); // BS4 and BS 4 are the same class.
       expect(workspaceSchema.safeParse(next).success).toBe(true);
       expect(applyRoster(next, rows, mapping)).toEqual(next);
       console.log(
