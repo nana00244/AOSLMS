@@ -1,5 +1,6 @@
 import {
   billed,
+  studentBill,
   paid,
   money,
   today,
@@ -87,12 +88,18 @@ export const financeService = {
     if (!student) return null;
     const totalDue = billed(state, student);
     const payments = state.payments
-      .filter((payment) => payment.studentId === studentId && payment.term === state.settings.term)
+      .filter(
+        (payment) =>
+          payment.studentId === studentId &&
+          payment.term === state.settings.term &&
+          (!payment.year || payment.year === state.settings.year),
+      )
       .sort((a, b) => b.date.localeCompare(a.date));
     const totalPaid = payments.reduce((sum, payment) => sum + payment.amount, 0);
     let remainingPaid = totalPaid;
-    const concession = state.studentConcessions?.[studentId] || 0;
-    const fees = Object.entries(state.fees[student.classId] || {}).map(([categoryName, amount]) => {
+    const bill = studentBill(state, studentId);
+    const concession = bill?.concession || 0;
+    const fees = Object.entries(bill?.items || {}).map(([categoryName, amount]) => {
       const amountDue = Math.round(amount * (1 - concession / 100) * 100) / 100;
       const amountPaid = Math.min(amountDue, remainingPaid);
       remainingPaid = Math.max(0, remainingPaid - amountPaid);
@@ -131,7 +138,12 @@ export const financeService = {
       const balance = Math.max(0, amountBilled - amountPaid);
       const arrearsPercentage = amountBilled > 0 ? Math.round((balance / amountBilled) * 100) : 0;
       const payments = state.payments
-        .filter((p) => p.studentId === student.id && p.term === state.settings.term)
+        .filter(
+          (p) =>
+            p.studentId === student.id &&
+            p.term === state.settings.term &&
+            (!p.year || p.year === state.settings.year),
+        )
         .sort((a, b) => b.date.localeCompare(a.date));
       const risk: DebtorRecord['risk'] =
         amountBilled <= 0
@@ -181,7 +193,9 @@ export const financeService = {
       totalExpenditure,
       debtors: debtors.sort((a, b) => b.balance - a.balance),
       recentPayments: [...state.payments]
-        .filter((p) => p.term === state.settings.term)
+        .filter(
+          (p) => p.term === state.settings.term && (!p.year || p.year === state.settings.year),
+        )
         .sort((a, b) => b.date.localeCompare(a.date))
         .slice(0, 8),
     };
@@ -200,9 +214,14 @@ export const financeService = {
     const term = input.term || state.settings.term;
     const outstanding = Math.max(
       0,
-      billed(state, student) -
+      billed(state, student, term) -
         state.payments
-          .filter((payment) => payment.studentId === student.id && payment.term === term)
+          .filter(
+            (payment) =>
+              payment.studentId === student.id &&
+              payment.term === term &&
+              (!payment.year || payment.year === state.settings.year),
+          )
           .reduce((sum, payment) => sum + payment.amount, 0),
     );
     if (input.amount > outstanding)
@@ -217,6 +236,7 @@ export const financeService = {
       date: input.date || today(),
       notes: input.notes || '',
       term,
+      year: state.settings.year,
       transactionRef: input.transactionRef,
       recordedBy,
     };
@@ -272,3 +292,4 @@ export const financeService = {
     };
   },
 };
+

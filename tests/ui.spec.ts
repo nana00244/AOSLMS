@@ -1,5 +1,6 @@
 import { test, expect, type Page } from '@playwright/test';
 import { seed } from '../src/data';
+import { emptyState } from '../src/emptyState';
 async function login(page: Page, role = 'Administrator') {
   await page.goto('/');
   await page
@@ -9,6 +10,110 @@ async function login(page: Page, role = 'Administrator') {
   await page.getByRole('button', { name: `Explore as ${role}` }).click();
   await expect(page.getByRole('heading', { name: /Good morning/ })).toBeVisible();
 }
+
+test('supplied multi-sheet workbook imports all classes once',async({page})=>{
+  test.skip(!process.env.AOS_ROSTER_SAMPLE_PATH,'Optional private reference workbook');
+  await login(page);const state=emptyState();state.users=seed().users.filter(u=>u.role==='Administrator');
+  await page.evaluate(s=>localStorage.setItem('aos-lms-demo-v1',JSON.stringify(s)),state);await page.reload();await page.goto('/#/students');
+  async function upload(){await page.getByRole('button',{name:'Bulk import',exact:true}).click();await page.getByLabel('Roster file (.xlsx or .csv)').setInputFiles(process.env.AOS_ROSTER_SAMPLE_PATH!);}
+  await upload();await expect(page.getByRole('dialog')).toContainText('239 new students',{timeout:20000});await page.getByRole('button',{name:'Apply roster updates'}).click();
+  const counts=await page.evaluate(()=>{const s=JSON.parse(localStorage.getItem('aos-lms-demo-v1')!);return {students:s.students.length,classes:s.classes.length,bills:Object.keys(s.studentBills).length};});expect(counts).toEqual({students:239,classes:9,bills:0});
+  await upload();await expect(page.getByRole('dialog')).toContainText('0 new students · 0 class changes · 239 already in class');await expect(page.getByRole('button',{name:'Apply roster updates'})).toBeDisabled();
+});
+
+test('roster import is repeatable and admin can bulk reassign and delete', async ({ page }) => {
+  await login(page);
+  const state = emptyState();
+  state.users = seed().users.filter(u=>u.role==='Administrator'||u.role==='Accountant');
+  state.classes = ['Basic 1', 'Basic 2'];
+  state.students = [
+    {
+      id: 'OLD',
+      name: 'Ama Mensah',
+      classId: 'Basic 2',
+      gender: '',
+      dob: '',
+      guardian: '',
+      phone: '',
+      status: 'Active',
+      enrolled: '2026-10-11',
+    },
+  ];
+  await page.evaluate((s) => localStorage.setItem('aos-lms-demo-v1', JSON.stringify(s)), state);
+  await page.reload();
+  await page.goto('/#/students');
+  const buffer = Buffer.from(
+    'Full Name,Admission Number,Class\nMensah Ama,EXT,BS 1\nKofi New,NEW,BS 2',
+  );
+  async function upload() {
+    await page.getByRole('button', { name: 'Bulk import', exact: true }).click();
+    await page
+      .getByLabel('Roster file (.xlsx or .csv)')
+      .setInputFiles({ name: 'roster.csv', mimeType: 'text/csv', buffer });
+  }
+  await upload();
+  await expect(page.getByRole('dialog')).toContainText('1 new students · 1 class changes');
+  await page.getByRole('button', { name: 'Apply roster updates' }).click();
+  await upload();
+  await expect(page.getByRole('dialog')).toContainText(
+    '0 new students · 0 class changes · 2 already in class',
+  );
+  await page.keyboard.press('Escape');
+  await page.getByRole('checkbox', { name: 'Select all filtered students', exact: true }).check();
+  await page.getByRole('button', { name: 'Reassign selected' }).click();
+  await page.getByLabel('Destination class').selectOption('Basic 2');
+  await page.getByRole('button', { name: 'Confirm reassignment' }).click();
+  await page.reload();
+  await expect(page.locator('tbody')).toContainText('Ama Mensah');
+  const saved = await page.evaluate(() => JSON.parse(localStorage.getItem('aos-lms-demo-v1')!));
+  expect(saved.students.every((s: { classId: string }) => s.classId === 'Basic 2')).toBe(true);
+  expect(saved.studentBills).toEqual({});
+  await page.getByRole('checkbox', { name: 'Select all filtered students', exact: true }).check();
+  await page.getByRole('button', { name: 'Delete selected' }).click();
+  await page.getByRole('button', { name: 'Confirm deletion' }).click();
+  await page.reload();
+  await expect(page.getByText('No students found', { exact: true })).toBeVisible();
+});
+
+test('accountant explicitly bills a class and edits an individual bill', async ({ page }) => {
+  await page.goto('/');
+  const state = emptyState();
+  state.users = seed().users.filter(u=>u.role==='Administrator'||u.role==='Accountant');
+  state.classes = ['Basic 1'];
+  state.fees = { 'Basic 1': { Tuition: 100 } };
+  state.students = ['A', 'B'].map((id) => ({
+    id,
+    name: `Student ${id}`,
+    classId: 'Basic 1',
+    gender: '',
+    dob: '',
+    guardian: '',
+    phone: '',
+    status: 'Active' as const,
+    enrolled: '2026-10-11',
+  }));
+  await page.evaluate((s) => {
+    localStorage.setItem('aos-lms-demo-v1', JSON.stringify(s));
+    sessionStorage.setItem('aos-role', 'Accountant');
+  }, state);
+  await page.reload();
+  await page.goto('/#/accountant/fees');
+  await page.getByRole('button', { name: 'Issue or edit student bills' }).click();
+  await expect(page.getByRole('dialog')).toContainText('2 student(s) will be billed');
+  await page.getByRole('button', { name: 'Save student bills' }).click();
+  await page.getByRole('button', { name: 'Issue or edit student bills' }).click();
+  await expect(page.getByRole('dialog')).toContainText('0 student(s) will be billed');
+  await page.getByLabel('Bill by').selectOption('student');
+  await page.getByLabel('Billed student').selectOption('A');
+  await page.getByLabel('Tuition billed (GH₵)').fill('75');
+  await page.getByRole('button', { name: 'Save student bills' }).click();
+  await page.reload();
+  const bills = await page.evaluate(
+    () => JSON.parse(localStorage.getItem('aos-lms-demo-v1')!).studentBills,
+  );
+  expect(bills['A|2026/2027|1'].items.Tuition).toBe(75);
+  expect(bills['B|2026/2027|1'].items.Tuition).toBe(100);
+});
 test('attendance persists and updates report card', async ({ page }) => {
   await login(page);
   await page.goto('/#/attendance');
@@ -245,3 +350,4 @@ test('Excel workbook imports with mapped columns', async ({ page }) => {
   await page.getByRole('textbox', { name: 'Search name or admission number...' }).fill('XLSX-2001');
   await expect(page.locator('tbody')).toContainText('Akua Excel');
 });
+
