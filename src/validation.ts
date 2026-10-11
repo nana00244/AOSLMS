@@ -134,6 +134,7 @@ export const workspaceSchema = z
         notes: text,
         term,
         transactionRef: text.optional(),
+        year: text.optional(),
         receiptNumber: text.optional(),
         recordedBy: text.optional(),
       }),
@@ -165,6 +166,19 @@ export const workspaceSchema = z
       }),
     ),
     fees: z.record(z.string(), z.record(z.string(), number)),
+    studentBills: z
+      .record(
+        z.string(),
+        z.object({
+          studentId: id,
+          year: z.string().min(1).max(100),
+          term,
+          items: z.record(z.string().min(1).max(150), number),
+          concession: z.number().min(0).max(100),
+          updatedAt: text,
+        }),
+      )
+      .optional(),
     studentConcessions: z.record(id, z.union([z.literal(50), z.literal(100)])).optional(),
     users: z.array(
       z.object({
@@ -229,6 +243,10 @@ export const workspaceSchema = z
   })
   .superRefine((state, ctx) => {
     const students = new Set(state.students.map((s) => s.id));
+    for (const [key, bill] of Object.entries(state.studentBills || {})) {
+      if (!students.has(bill.studentId) || key !== `${bill.studentId}|${bill.year}|${bill.term}`)
+        ctx.addIssue({ code: 'custom', message: 'Invalid student bill reference.' });
+    }
     const assignments = new Map(state.assignments.map((a) => [a.id, a]));
     const classNames = new Set(state.classes || []);
     for (const student of state.students) {
@@ -289,3 +307,4 @@ export const workspaceSchema = z
         ctx.addIssue({ code: 'custom', message: 'Invalid submission reference or score.' });
     }
   });
+

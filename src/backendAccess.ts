@@ -1,9 +1,17 @@
 import { courseworkSubjectId, type State, type User } from './data.ts';
 import { emptyState } from './emptyState.ts';
 import { normalizeTeachingAccess } from './accountRules.ts';
+import { removeStudents } from './studentRecords.ts';
 
 const same = (a: unknown, b: unknown) => JSON.stringify(a) === JSON.stringify(b);
-const finance = new Set(['payments', 'expenses', 'payroll', 'fees', 'studentConcessions']);
+const finance = new Set([
+  'payments',
+  'expenses',
+  'payroll',
+  'fees',
+  'studentConcessions',
+  'studentBills',
+]);
 const academic = new Set([
   'assignments',
   'submissions',
@@ -17,7 +25,15 @@ const academic = new Set([
   'certificates',
   'messages',
 ]);
-const maps = new Set(['attendance', 'grades', 'remarks', 'conduct', 'fees', 'studentConcessions']);
+const maps = new Set([
+  'attendance',
+  'grades',
+  'remarks',
+  'conduct',
+  'fees',
+  'studentConcessions',
+  'studentBills',
+]);
 export function canTeach(user: User, classId: string, subject?: string): boolean {
   if (user.role !== 'Teacher' || !user.classes.includes(classId)) return false;
   const subjects = user.classAllowedSubjects?.[classId];
@@ -220,5 +236,9 @@ export function applyChanges(state: State, user: User, changes: Change[]): State
     else rows.set(id, after);
     (next as any)[key] = materialize(key, rows);
   }
-  return next;
+  const removed = state.students
+    .filter((s) => !next.students.some((n) => n.id === s.id))
+    .map((s) => s.id);
+  return removed.length ? removeStudents(next, removed) : next;
 }
+

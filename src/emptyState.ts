@@ -19,6 +19,7 @@ export function emptyState(): State {
     expenses: [],
     payroll: [],
     fees: {},
+    studentBills: {},
     studentConcessions: {},
     users: [],
     teacherAssignments: [],
@@ -38,3 +39,4 @@ export function emptyState(): State {
     },
   };
 }
+

@@ -103,6 +103,7 @@ export interface Period {
   room: string;
 }
 export interface Payment {
+  year?: string;
   id: string;
   studentId: string;
   amount: number;
@@ -166,6 +167,19 @@ export interface Settings {
   reopening: string;
   crest?: string;
 }
+export interface StudentBill {
+  studentId: string;
+  year: string;
+  term: number;
+  items: Record<string, number>;
+  concession: number;
+  updatedAt: string;
+}
+export const billKey = (studentId: string, year: string, term: number) =>
+  `${studentId}|${year}|${term}`;
+export function studentBill(state: State, studentId: string, term = state.settings.term) {
+  return state.studentBills?.[billKey(studentId, state.settings.year, term)];
+}
 export interface State {
   version: 1;
   classes: string[];
@@ -183,6 +197,7 @@ export interface State {
   expenses: Expense[];
   payroll: Payroll[];
   fees: Record<string, Record<string, number>>;
+  studentBills?: Record<string, StudentBill>;
   studentConcessions?: Record<string, 50 | 100>;
   users: User[];
   teacherAssignments?: TeacherClassRecord[];
@@ -528,13 +543,19 @@ export const conflicts = (a: Period, b: Period) =>
   a.start < b.end &&
   b.start < a.end &&
   (a.teacher === b.teacher || a.room === b.room || a.classId === b.classId);
-export function billed(state: State, s: Student) {
-  const total = Object.values(state.fees[s.classId] || {}).reduce((a, b) => a + b, 0);
-  return Math.round(total * (1 - (state.studentConcessions?.[s.id] || 0) / 100) * 100) / 100;
+export function billed(state: State, s: Student, term = state.settings.term) {
+  const bill = studentBill(state, s.id, term);
+  const total = Object.values(bill?.items || {}).reduce((a, b) => a + b, 0);
+  return Math.round(total * (1 - (bill?.concession || 0) / 100) * 100) / 100;
 }
 export function paid(state: State, id: string) {
   return state.payments
-    .filter((p) => p.studentId === id && p.term === state.settings.term)
+    .filter(
+      (p) =>
+        p.studentId === id &&
+        p.term === state.settings.term &&
+        (!p.year || p.year === state.settings.year),
+    )
     .reduce((a, p) => a + p.amount, 0);
 }
 export function studentGrades(state: State, s: Student) {
@@ -768,6 +789,24 @@ export function seed(): State {
         },
       ]),
     ),
+    studentBills: Object.fromEntries(
+      students.map((s) => [
+        billKey(s.id, '2026/2027', 2),
+        {
+          studentId: s.id,
+          year: '2026/2027',
+          term: 2,
+          concession: 0,
+          updatedAt: '2026-10-01T00:00:00Z',
+          items: {
+            Tuition: s.classId.startsWith('JHS') ? 600 : 450,
+            'ICT levy': 50,
+            'PTA dues': 20,
+            ...(s.classId.startsWith('JHS') ? { 'Science laboratory': 100 } : {}),
+          },
+        },
+      ]),
+    ),
     users: [
       {
         id: 'u1',
@@ -871,3 +910,4 @@ export function seed(): State {
     },
   };
 }
+

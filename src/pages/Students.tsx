@@ -1,4 +1,7 @@
 import { useState } from 'react';
+import { ImportStudents } from '../components/RosterImport';
+import { removeStudents } from '../studentRecords';
+import { isSupabaseConfigured } from '../supabase';
 import { Link } from 'react-router-dom';
 import { Plus, Upload, Download, Eye, Pencil, Users, GraduationCap, School } from 'lucide-react';
 import { classes, today, uid, type Student } from '../data';
@@ -16,7 +19,11 @@ import {
   Stat,
 } from '../components/ui';
 export function Students() {
-  const { data, update, notify } = useStore();
+  const { data, update, notify, role } = useStore();
+  const [selected, setSelected] = useState<string[]>([]);
+  const [bulkAction, setBulkAction] = useState('');
+  const [destination, setDestination] = useState('');
+  const isAdmin = role === 'Administrator';
   const classList = data.classes || classes;
   const [q, setQ] = useState(''),
     [cls, setCls] = useState('All classes'),
@@ -101,6 +108,45 @@ export function Students() {
         <Stat label="Classrooms" value={classList.length} icon={<School />} tone="blue" />
       </div>
       <Card>
+        {isAdmin && (
+          <div className="filter-bar">
+            <label>
+              <input
+                type="checkbox"
+                aria-label="Select all filtered students"
+                checked={!!filtered.length && filtered.every((s) => selected.includes(s.id))}
+                onChange={(e) =>
+                  setSelected(
+                    e.target.checked
+                      ? [...new Set([...selected, ...filtered.map((s) => s.id)])]
+                      : selected.filter((id) => !filtered.some((s) => s.id === id)),
+                  )
+                }
+              />{' '}
+              Select all filtered students
+            </label>
+            <span>{selected.length} selected</span>
+            <Button
+              variant="secondary"
+              disabled={!selected.length}
+              onClick={() => setBulkAction('move')}
+            >
+              Reassign selected
+            </Button>
+            <Button
+              variant="secondary"
+              disabled={!selected.length}
+              onClick={() => setBulkAction('delete')}
+            >
+              Delete selected
+            </Button>
+            {!!selected.length && (
+              <Button variant="ghost" onClick={() => setSelected([])}>
+                Clear selection
+              </Button>
+            )}
+          </div>
+        )}
         <div className="filter-bar">
           <SearchBox
             value={q}
@@ -151,6 +197,7 @@ export function Students() {
           <table>
             <thead>
               <tr>
+                {isAdmin && <th>Select</th>}
                 <th>Student</th>
                 <th>Class / stream</th>
                 <th>Guardian contact</th>
@@ -164,6 +211,22 @@ export function Students() {
             <tbody>
               {filtered.slice((current - 1) * 8, current * 8).map((s) => (
                 <tr key={s.id}>
+                  {isAdmin && (
+                    <td>
+                      <input
+                        type="checkbox"
+                        aria-label={`Select ${s.name}`}
+                        checked={selected.includes(s.id)}
+                        onChange={(e) =>
+                          setSelected(
+                            e.target.checked
+                              ? [...selected, s.id]
+                              : selected.filter((id) => id !== s.id),
+                          )
+                        }
+                      />
+                    </td>
+                  )}
                   <td>
                     <Person name={s.name} sub={s.id} photo={s.photo} />
                   </td>
@@ -269,6 +332,71 @@ export function Students() {
         </Modal>
       )}
       {importing && <ImportStudents onClose={() => setImporting(false)} />}
+      {isAdmin && bulkAction && (
+        <Modal
+          title={
+            bulkAction === 'delete' ? 'Delete selected students?' : 'Reassign selected students'
+          }
+          onClose={() => setBulkAction('')}
+        >
+          <p>
+            {selected.length} student(s):{' '}
+            {data.students
+              .filter((s) => selected.includes(s.id))
+              .map((s) => s.name)
+              .join(', ')}
+          </p>
+          {bulkAction === 'delete' ? (
+            <p>
+              This permanently removes their student records, attendance, grades, submissions,
+              certificates, bills and payments. Linked student logins will be deactivated. This
+              cannot be undone.
+            </p>
+          ) : (
+            <>
+              <p>
+                Existing attendance, academic records, bills and payments stay with each student.
+                Moving class does not bill fees.
+              </p>
+              <Field label="Destination class">
+                <select value={destination} onChange={(e) => setDestination(e.target.value)}>
+                  <option value="">Choose a class</option>
+                  {classList.map((c) => (
+                    <option key={c}>{c}</option>
+                  ))}
+                </select>
+              </Field>
+            </>
+          )}
+          <div className="modal-actions">
+            <Button variant="secondary" onClick={() => setBulkAction('')}>
+              Cancel
+            </Button>
+            <Button
+              disabled={bulkAction === 'move' && !destination}
+              onClick={() => {
+                update(
+                  (d) =>
+                    bulkAction === 'delete'
+                      ? removeStudents(d, selected, !isSupabaseConfigured)
+                      : {
+                          ...d,
+                          students: d.students.map((s) =>
+                            selected.includes(s.id) ? { ...s, classId: destination } : s,
+                          ),
+                        },
+                  `${bulkAction === 'delete' ? 'Deleted' : 'Reassigned'} ${selected.length} selected student(s)`,
+                );
+                setSelected([]);
+                setBulkAction('');
+                notify('Student update submitted.');
+              }}
+            >
+              {bulkAction === 'delete' ? 'Confirm deletion' : 'Confirm reassignment'}
+            </Button>
+          </div>
+        </Modal>
+      )}
     </>
   );
 }
@@ -386,222 +514,4 @@ function StudentForm({
     </Modal>
   );
 }
-function ImportStudents({ onClose }: { onClose: () => void }) {
-  const { data, update, notify } = useStore();
-  const classList = data.classes || classes;
-  const [targetClass, setTargetClass] = useState(classList[0] || 'Basic 6 - Gold');
-  const [rows, setRows] = useState<Record<string, string>[]>([]);
-  const [headers, setHeaders] = useState<string[]>([]);
-  const [nameColumn, setNameColumn] = useState<string>('');
-  const [error, setError] = useState('');
 
-  async function read(file?: File) {
-    if (!file) return;
-    try {
-      if (file.size > 10 * 1024 * 1024) throw Error('Please choose a file smaller than 10 MB.');
-      let parsed: Record<string, string>[];
-      const fileName = file.name.toLowerCase();
-
-      if (fileName.endsWith('.csv')) {
-        const Papa = await import('papaparse');
-        const text = await file.text();
-        const result = Papa.default.parse<Record<string, string>>(text, {
-          header: true,
-          skipEmptyLines: true,
-        });
-        if (result.errors.length && !result.data.length) {
-          throw Error('The CSV file could not be parsed. Please check the file format.');
-        }
-        parsed = result.data.filter((row) =>
-          Object.values(row).some((val) => String(val).trim() !== ''),
-        );
-      } else {
-        const readExcel = await import('read-excel-file/browser');
-        const cells = await readExcel.readSheet(file);
-        if (!cells || cells.length < 2)
-          throw Error('The spreadsheet is empty or has no data rows.');
-        const head = (cells[0] || []).map((h) => String(h || '').trim());
-        parsed = cells
-          .slice(1)
-          .map((row) => Object.fromEntries(head.map((h, i) => [h, String(row[i] ?? '').trim()])))
-          .filter((row) => Object.values(row).some((val) => val !== ''));
-      }
-
-      if (!parsed.length) throw Error('This spreadsheet has no student rows.');
-      const rawHeads = Object.keys(parsed[0]).filter((h) => h.length > 0);
-      setHeaders(rawHeads);
-      setRows(parsed);
-
-      // Auto-detect candidate name column
-      const detectedNameCol =
-        rawHeads.find((h) => {
-          const lower = h.toLowerCase();
-          return (
-            lower === 'name' ||
-            lower === 'full name' ||
-            lower === 'fullname' ||
-            lower === 'student name' ||
-            lower === 'student' ||
-            lower === 'learner' ||
-            lower === 'pupil' ||
-            lower === 'first name'
-          );
-        }) ||
-        rawHeads[0] ||
-        '';
-
-      setNameColumn(detectedNameCol);
-      setError('');
-    } catch (e) {
-      setError(e instanceof Error ? e.message : 'Unable to read the file.');
-    }
-  }
-
-  function importRows() {
-    if (!nameColumn) {
-      setError('Please select the column that contains the student names.');
-      return;
-    }
-    if (!targetClass) {
-      setError('Please select a class for the imported students.');
-      return;
-    }
-
-    const seenIds = new Set(data.students.map((s) => s.id.toLowerCase()));
-    const added: Student[] = [];
-    let skipped = 0;
-
-    rows.forEach((r, idx) => {
-      const rawName = String(r[nameColumn] || '').trim();
-      if (!rawName) {
-        skipped++;
-        return;
-      }
-
-      // Generate a unique clean ID
-      let newId = `AOS-2026-${String(892 + data.students.length + idx + 1).padStart(4, '0')}`;
-      while (seenIds.has(newId.toLowerCase())) {
-        newId = `AOS-2026-${uid().slice(0, 6).toUpperCase()}`;
-      }
-      seenIds.add(newId.toLowerCase());
-
-      added.push({
-        id: newId,
-        name: rawName,
-        classId: targetClass,
-        gender: 'Female',
-        dob: '',
-        guardian: '',
-        phone: '',
-        status: 'Active',
-        enrolled: today(),
-      });
-    });
-
-    if (!added.length) {
-      setError('No valid student names found in the selected column.');
-      return;
-    }
-
-    update(
-      (d) => ({ ...d, students: [...d.students, ...added] }),
-      `Imported ${added.length} students into ${targetClass}`,
-    );
-    notify(
-      `Successfully imported ${added.length} student${added.length > 1 ? 's' : ''} into ${targetClass}. You can now edit full details in the directory.`,
-    );
-    onClose();
-  }
-
-  return (
-    <Modal title="Import student roster" onClose={onClose} wide>
-      <p>
-        Upload any CSV or Excel file. Only the <strong>student name</strong> will be matched and
-        imported. All other columns are safely ignored. You can edit remaining student details
-        (gender, date of birth, guardian phone, etc.) anytime from the directory.
-      </p>
-
-      <div className="form-grid" style={{ marginBottom: 16 }}>
-        <Field label="Assign to class (Available classes)">
-          <select value={targetClass} onChange={(e) => setTargetClass(e.target.value)}>
-            {classList.map((c) => (
-              <option key={c} value={c}>
-                {c}
-              </option>
-            ))}
-          </select>
-        </Field>
-      </div>
-
-      <div className="upload-zone">
-        <Upload size={28} />
-        <Field label="Choose file (.csv, .xlsx, .xls)">
-          <input
-            type="file"
-            accept=".csv,.xlsx,.xls,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel,text/csv"
-            onChange={(e) => read(e.target.files?.[0])}
-          />
-        </Field>
-      </div>
-
-      <div style={{ display: 'flex', gap: 12, alignItems: 'center', marginTop: 8 }}>
-        <Button
-          variant="ghost"
-          onClick={() =>
-            csv('sample-student-list.csv', [
-              ['Student Name'],
-              ['Kofi Mensah'],
-              ['Ama Serwaa'],
-              ['Kwame Osei'],
-              ['Abena Mansa'],
-            ])
-          }
-        >
-          <Download size={16} />
-          Download simple sample CSV
-        </Button>
-      </div>
-
-      {headers.length > 0 && (
-        <div style={{ marginTop: 16 }}>
-          <h3>Match Student Name column · {rows.length} rows detected</h3>
-          <div className="form-grid" style={{ marginTop: 8 }}>
-            <Field
-              label="Student Name column"
-              hint="Only this column is matched. All other columns are ignored."
-            >
-              <select value={nameColumn} onChange={(e) => setNameColumn(e.target.value)}>
-                <option value="">-- Select student name column --</option>
-                {headers.map((h) => (
-                  <option key={h} value={h}>
-                    {h}
-                  </option>
-                ))}
-              </select>
-            </Field>
-          </div>
-
-          <div className="notice" style={{ marginTop: 12 }}>
-            Selected class for import: <strong>{targetClass}</strong> · {rows.length} records ready
-            to import.
-          </div>
-        </div>
-      )}
-
-      {error && (
-        <p className="error" role="alert" style={{ marginTop: 12 }}>
-          {error}
-        </p>
-      )}
-
-      <div className="modal-actions" style={{ marginTop: 20 }}>
-        <Button variant="secondary" onClick={onClose}>
-          Cancel
-        </Button>
-        <Button disabled={!rows.length || !nameColumn} onClick={importRows}>
-          Import {rows.length ? `${rows.length} students` : 'students'}
-        </Button>
-      </div>
-    </Modal>
-  );
-}
