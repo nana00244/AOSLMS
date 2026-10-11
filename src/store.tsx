@@ -6,36 +6,8 @@ import { isSupabaseConfigured, supabase } from './supabase';
 import { loginIdentifier } from './accountRules';
 import { emptyState } from './emptyState';
 import { loadWorkspace, saveWorkspace, type Snapshot } from './backend';
-const KEY = 'aos-lms-demo-v1';
 export function validateState(value: unknown): value is State {
   return workspaceSchema.safeParse(value).success;
-}
-function read(): State {
-  try {
-    const raw = localStorage.getItem(KEY);
-    if (raw) {
-      const parsed = JSON.parse(raw);
-      if (validateState(parsed)) {
-        if (!parsed.classes || !parsed.classes.length) {
-          parsed.classes = [...classes];
-        }
-        const studentAccounts = parsed.users.filter((user) => user.role === 'Student');
-        if (
-          studentAccounts.length === 1 &&
-          !studentAccounts[0].studentId &&
-          parsed.students.length
-        ) {
-          studentAccounts[0].studentId =
-            parsed.students.find((student) => student.classId === studentAccounts[0].classes[0])
-              ?.id || parsed.students[0].id;
-        }
-        return parsed;
-      }
-    }
-  } catch {
-    /* Fall back to sample data without overwriting stored data. */
-  }
-  return seed();
 }
 export type Theme = 'light' | 'dark';
 
@@ -61,19 +33,13 @@ interface Store {
 }
 const Context = createContext<Store>(null!);
 export function StoreProvider({ children }: { children: ReactNode }) {
-  const [data, setData] = useState(() => (isSupabaseConfigured ? emptyState() : read()));
+  const [data, setData] = useState<State>(() => emptyState());
   const snapshot = useRef<Snapshot | null>(null);
   const busy = useRef(false);
   const generation = useRef(0);
   const [saving, setSaving] = useState(false);
-  const [role, setRoleState] = useState<Role | null>(() => {
-    if (isSupabaseConfigured) return null;
-    const r = sessionStorage.getItem('aos-role');
-    return ['Administrator', 'Teacher', 'Student', 'Accountant'].includes(r || '')
-      ? (r as Role)
-      : null;
-  });
-  const [authLoading, setAuthLoading] = useState(isSupabaseConfigured);
+  const [role, setRoleState] = useState<Role | null>(null);
+  const [authLoading, setAuthLoading] = useState(true);
   const [authProfile, setAuthProfile] = useState<User | undefined>();
 
   async function refresh() {
@@ -252,14 +218,6 @@ export function StoreProvider({ children }: { children: ReactNode }) {
             ...next.logs,
           ],
         };
-      try {
-        localStorage.setItem(KEY, JSON.stringify(next));
-        setStorageError('');
-      } catch {
-        setStorageError(
-          'Browser storage is full or unavailable. Your latest changes are in memory only. Export a backup before closing this tab.',
-        );
-      }
       return next;
     });
   }
@@ -338,8 +296,8 @@ export async function checksum(text: string) {
 export async function backup(data: State) {
   const payload = JSON.stringify(data);
   download(
-    `AOS_Demo_Backup_${new Date().toISOString().slice(0, 10)}.json`,
-    JSON.stringify({ format: 'aos-demo-v1', checksum: await checksum(payload), payload }, null, 2),
+    `AOS_Backup_${new Date().toISOString().slice(0, 10)}.json`,
+    JSON.stringify({ format: 'aos-backup-v1', checksum: await checksum(payload), payload }, null, 2),
     'application/json',
   );
 }

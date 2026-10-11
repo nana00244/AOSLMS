@@ -54,6 +54,19 @@ function readable(state: State, user: User, key: string, id: string, value: any)
   if (key === 'users') return id === user.id;
   if (key === 'teacherAssignments') return value.teacherUserId === user.id;
   if (key === 'logs') return false;
+  // Non-administrators are locked to the active term and cannot access resources or coursework of other terms.
+  if (key === 'resources' && value?.term !== undefined && value?.term !== null && value?.term !== '') {
+    const resTerm = String(value.term);
+    if (resTerm !== String(state.settings.term) && resTerm !== `Term ${state.settings.term}`) {
+      return false;
+    }
+  }
+  if (key === 'assignments' && value?.term !== undefined && value?.term !== null && value?.term !== '') {
+    const asgnTerm = String(value.term);
+    if (asgnTerm !== String(state.settings.term) && asgnTerm !== `Term ${state.settings.term}`) {
+      return false;
+    }
+  }
   if (user.role === 'Accountant') return finance.has(key) || key === 'students';
   if (user.role === 'Teacher') {
     if (finance.has(key)) return false;

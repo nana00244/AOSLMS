@@ -385,6 +385,7 @@ export function Resources() {
         searchQuery: q,
         assignedClasses: allowedClasses,
         adminUserIds: adminUserIds(data),
+        activeTerm: data.settings.term,
       }),
     [
       data,
@@ -410,7 +411,7 @@ export function Resources() {
       <PageHeader
         eyebrow="A WORLD OF IDEAS"
         title="Resource library"
-        description="Good resources open doors. Find your next discovery here."
+        description={`Good resources open doors. Find your next discovery here. · Active Term ${data.settings.term}`}
         actions={
           role !== 'Student' && (
             <Button onClick={() => setUpload(true)}>
@@ -420,6 +421,12 @@ export function Resources() {
           )
         }
       />
+      {!isAdmin && (
+        <div className="notice">
+          <ShieldCheck size={18} />
+          Resource access is locked to the school’s active term: <strong>Term {data.settings.term}</strong>.
+        </div>
+      )}
       {role === 'Teacher' && (
         <Tabs
           items={['All resources', 'My uploads']}
@@ -654,6 +661,7 @@ function ResourceForm({
             classId: classId === 'all' ? allowedClasses[0] || data.classes[0] : classId,
             targetClassIds: classId === 'all' ? ['all'] : [classId],
             category: String(f.get('category')),
+            term: role === 'Administrator' && f.get('term') ? Number(f.get('term')) : data.settings.term,
             type: url ? 'LINK' : selectedFilename?.split('.').pop()?.toUpperCase() || 'TXT',
             fileType: url ? 'LINK' : selectedFilename?.split('.').pop()?.toUpperCase() || 'TXT',
             date: today(),
@@ -732,6 +740,19 @@ function ResourceForm({
               defaultValue={resource?.url?.startsWith('data:') ? '' : resource?.url}
             />
           </Field>
+          {role === 'Administrator' ? (
+            <Field label="Academic term">
+              <select name="term" defaultValue={resource?.term || data.settings.term}>
+                {[1, 2, 3].map((t) => (
+                  <option key={t} value={t}>
+                    Term {t}
+                  </option>
+                ))}
+              </select>
+            </Field>
+          ) : (
+            <input type="hidden" name="term" value={data.settings.term} />
+          )}
         </div>
         <Field label="Description">
           <textarea name="description" defaultValue={resource?.description} rows={2} />

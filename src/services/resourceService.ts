@@ -12,6 +12,7 @@ export interface ResourceFilters {
   searchQuery: string;
   assignedClasses: string[];
   adminUserIds: string[];
+  activeTerm?: number;
 }
 
 const targetsFor = (resource: Resource) => resource.targetClassIds || [resource.classId];
@@ -34,10 +35,24 @@ export function filterResources({
   searchQuery,
   assignedClasses,
   adminUserIds,
+  activeTerm,
 }: ResourceFilters) {
   const assignedClassSet = new Set(assignedClasses);
   const q = searchQuery.trim().toLowerCase();
   return resources.filter((resource) => {
+    // Non-administrators are locked to the active term's resources
+    if (
+      role !== 'Administrator' &&
+      activeTerm !== undefined &&
+      resource.term !== undefined &&
+      resource.term !== null &&
+      resource.term !== ''
+    ) {
+      const resTerm = String(resource.term);
+      if (resTerm !== String(activeTerm) && resTerm !== `Term ${activeTerm}`) {
+        return false;
+      }
+    }
     const targets = targetsFor(resource);
     const own = resource.uploadedBy === userId;
     const adminUploaded =

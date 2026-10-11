@@ -110,6 +110,7 @@ export const workspaceSchema = z
           .enum(['Administrator', 'Teacher', 'Student', 'Accountant', 'admin'])
           .optional(),
         targetClassIds: z.array(text).optional(),
+        term: z.union([term, z.string()]).optional(),
       }),
     ),
     periods: z.array(

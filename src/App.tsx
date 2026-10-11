@@ -174,18 +174,11 @@ const studentNav = [
   { label: 'My Schedule', path: '/student/schedule', icon: CalendarDays, roles: ['Student'] },
 ];
 function Login() {
-  const { setRole, signIn, authLoading, storageError, theme, toggleTheme } = useStore();
-  const [selected, setSelected] = useState<Role>('Administrator');
+  const { signIn, authLoading, storageError, theme, toggleTheme } = useStore();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [submitting, setSubmitting] = useState(false);
-  const choices: [Role, typeof Users, string][] = [
-    ['Administrator', Users, 'Lead your school'],
-    ['Teacher', BookOpen, 'Inspire every learner'],
-    ['Student', User, 'Learn and grow'],
-    ['Accountant', Wallet, 'Keep finances in order'],
-  ];
   return (
     <main className="login-page">
       {storageError && (
@@ -249,13 +242,11 @@ function Login() {
           <div className="eyebrow">WELCOME TO YOUR SCHOOL</div>
           <h2>Good to have you here.</h2>
           <p>
-            {isSupabaseConfigured
-              ? 'Sign in with the credentials provided by your school administrator.'
-              : 'Choose a demo workspace to get started.'}
+            Sign in with the credentials provided by your school administrator to access your portal.
           </p>
           {authLoading ? (
             <p role="status">Checking your session…</p>
-          ) : isSupabaseConfigured ? (
+          ) : (
             <form
               onSubmit={async (event) => {
                 event.preventDefault();
@@ -277,6 +268,7 @@ function Login() {
                   autoCapitalize="none"
                   spellCheck={false}
                   required
+                  placeholder="Enter username or email"
                   value={email}
                   onChange={(event) => setEmail(event.target.value)}
                 />
@@ -286,6 +278,7 @@ function Login() {
                   type="password"
                   autoComplete="current-password"
                   required
+                  placeholder="Enter password"
                   value={password}
                   onChange={(event) => setPassword(event.target.value)}
                 />
@@ -300,44 +293,10 @@ function Login() {
                 <ArrowRight size={18} />
               </Button>
             </form>
-          ) : (
-            <>
-              <div className="role-grid">
-                {choices.map(([role, Icon, description]) => (
-                  <button
-                    key={role}
-                    aria-pressed={selected === role}
-                    className={`role-card ${selected === role ? 'selected' : ''}`}
-                    onClick={() => setSelected(role)}
-                  >
-                    <span className="role-icon">
-                      <Icon size={24} />
-                    </span>
-                    <strong>{role}</strong>
-                    <small>{description}</small>
-                    {selected === role && <span className="selected-dot" />}
-                  </button>
-                ))}
-              </div>
-              <Button className="login-continue" onClick={() => setRole(selected)}>
-                Explore as {selected}
-                <ArrowRight size={18} />
-              </Button>
-              <div className="demo-note">
-                <Monitor size={20} />
-                <div>
-                  <strong>Your interactive school preview</strong>
-                  <p>
-                    Explore with sample data. Changes stay in this browser. No account or password
-                    needed.
-                  </p>
-                </div>
-              </div>
-              <div className="login-help">
-                Ayisatu Owen Schools <span>·</span> Information System & LMS
-              </div>
-            </>
           )}
+          <div className="login-help">
+            Ayisatu Owen Schools <span>·</span> Official School Information System & LMS
+          </div>
         </div>
       </section>
     </main>

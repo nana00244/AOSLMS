@@ -17,6 +17,7 @@ import {
   Trash2,
   Upload,
   User,
+  ShieldCheck,
 } from 'lucide-react';
 import { csv, useStore } from '../store';
 import { downloadLearningFile, uploadLearningFile } from '../backend';
@@ -133,11 +134,13 @@ export function Coursework() {
       visibleClassIds.includes(assignment.classId) &&
       hasClassAccess(assignment.classId) &&
       hasSubjectAccess(assignment.classId, assignment.subject) &&
-      (selectedTermFilter === 'all'
-        ? true
-        : selectedTermFilter === 'current'
-          ? !assignment.term || assignment.term === `Term ${data.settings.term}`
-          : !assignment.term || assignment.term === selectedTermFilter),
+      (!isAdministrator
+        ? !assignment.term || assignment.term === `Term ${data.settings.term}` || assignment.term === String(data.settings.term)
+        : (selectedTermFilter === 'all'
+            ? true
+            : selectedTermFilter === 'current'
+              ? !assignment.term || assignment.term === `Term ${data.settings.term}`
+              : !assignment.term || assignment.term === selectedTermFilter)),
   );
   const curriculumAssignments = assignments.filter((assignment) => assignment.id.startsWith('cc_'));
   const legacyAssignments = assignments.filter((assignment) => !assignment.id.startsWith('cc_'));
@@ -345,27 +348,55 @@ export function Coursework() {
             </option>
           ))}
         </select>
-        <select
-          aria-label="Coursework term"
-          value={data.settings.term}
-          onChange={(event) => {
-            const term = Number(event.target.value);
-            update(
-              (current) => ({ ...current, settings: { ...current.settings, term } }),
-              `Switched coursework to Term ${term}`,
-            );
-            setActive('');
-            setScoreGridOpen(false);
-          }}
-        >
-          {[1, 2, 3].map((term) => (
-            <option key={term} value={term}>
-              Term {term}
-            </option>
-          ))}
-        </select>
+        {isAdministrator ? (
+          <select
+            aria-label="Coursework term"
+            value={data.settings.term}
+            onChange={(event) => {
+              const term = Number(event.target.value);
+              update(
+                (current) => ({ ...current, settings: { ...current.settings, term } }),
+                `Switched coursework to Term ${term}`,
+              );
+              setActive('');
+              setScoreGridOpen(false);
+            }}
+          >
+            {[1, 2, 3].map((term) => (
+              <option key={term} value={term}>
+                Term {term}
+              </option>
+            ))}
+          </select>
+        ) : (
+          <span className="term-lock-badge" title="Active term set by school administration">
+            <ShieldCheck size={14} />
+            Term {data.settings.term} (Active)
+          </span>
+        )}
       </div>
       <div className="coursework-card-filters">
+        <label>
+          Class
+          <select
+            aria-label="Filter coursework by class"
+            value={selectedClassFilter}
+            onChange={(e) => {
+              setSelectedClassFilter(e.target.value);
+              if (e.target.value !== 'all') setCls(e.target.value);
+              setActive('');
+              setSelectedSubjectFilter('all');
+              setScoreGridOpen(false);
+            }}
+          >
+            <option value="all">All my classes</option>
+            {allowedClasses.map((c) => (
+              <option key={c} value={c}>
+                {c}
+              </option>
+            ))}
+          </select>
+        </label>
         <label>
           Subject
           <select
@@ -381,19 +412,30 @@ export function Coursework() {
         </label>
         <label>
           Term
-          <select
-            aria-label="Filter by term"
-            value={selectedTermFilter}
-            onChange={(event) => setSelectedTermFilter(event.target.value)}
-          >
-            <option value="all">All terms</option>
-            <option value="current">Current term (Term {data.settings.term})</option>
-            {[1, 2, 3].map((term) => (
-              <option key={term} value={`Term ${term}`}>
-                Term {term}
-              </option>
-            ))}
-          </select>
+          {isAdministrator ? (
+            <select
+              aria-label="Filter by term"
+              value={selectedTermFilter}
+              onChange={(event) => setSelectedTermFilter(event.target.value)}
+            >
+              <option value="all">All terms</option>
+              <option value="current">Current term (Term {data.settings.term})</option>
+              {[1, 2, 3].map((term) => (
+                <option key={term} value={`Term ${term}`}>
+                  Term {term}
+                </option>
+              ))}
+            </select>
+          ) : (
+            <select
+              aria-label="Filter by term"
+              value="current"
+              disabled
+              title="Locked to the active term set by administrator"
+            >
+              <option value="current">Term {data.settings.term} (Active · Locked)</option>
+            </select>
+          )}
         </label>
         <label>
           Search cards

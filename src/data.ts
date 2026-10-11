@@ -69,6 +69,7 @@ export interface Resource {
   uploadedBy?: string;
   uploadedByRole?: Role | 'admin';
   targetClassIds?: string[];
+  term?: number | string;
 }
 export interface DigitalCertificate {
   id: string;

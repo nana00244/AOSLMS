@@ -5454,3 +5454,50 @@ td .person {
   color: white;
   font-weight: 700;
 }
+
+/* Bulk action bar for student directory */
+.bulk-actions-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  background: #e9f2f8;
+  border: 1px solid #c2dbe8;
+  border-radius: 8px;
+  padding: 10px 16px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.bulk-selection-count {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--navy);
+}
+
+.bulk-action-buttons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+tr.is-selected {
+  background-color: #f0f7fb !important;
+}
+
+/* Locked term indicator badge */
+.term-lock-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #eef3f7;
+  color: var(--navy);
+  border: 1px solid #d2e0ea;
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-size: 12px;
+  font-weight: 650;
+  user-select: none;
+}
+

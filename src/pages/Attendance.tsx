@@ -16,7 +16,8 @@ import {
 } from '../components/ui';
 const statuses: AttendanceStatus[] = ['Present', 'Late', 'Absent', 'Excused'];
 export function Attendance() {
-  const { data, update, notify, allowedClasses } = useStore();
+  const { data, role, update, notify, allowedClasses } = useStore();
+  const isAdministrator = role === 'Administrator';
   const [importing, setImporting] = useState(false);
   const [viewTerm, setViewTerm] = useState(data.settings.term);
   const [cls, setCls] = useState(allowedClasses[0]),
@@ -136,17 +137,28 @@ export function Attendance() {
             value={date}
             onChange={(e) => e.target.value && setDate(e.target.value)}
           />
-          <select
-            aria-label="Register term"
-            value={viewTerm}
-            onChange={(e) => setViewTerm(Number(e.target.value))}
-          >
-            {[1, 2, 3].map((term) => (
-              <option key={term} value={term}>
-                Term {term}
-              </option>
-            ))}
-          </select>
+          {isAdministrator ? (
+            <select
+              aria-label="Register term"
+              value={viewTerm}
+              onChange={(e) => setViewTerm(Number(e.target.value))}
+            >
+              {[1, 2, 3].map((term) => (
+                <option key={term} value={term}>
+                  Term {term}
+                </option>
+              ))}
+            </select>
+          ) : (
+            <select
+              aria-label="Register term"
+              value={data.settings.term}
+              disabled
+              title="Locked to active term set by administrator"
+            >
+              <option value={data.settings.term}>Term {data.settings.term} (Active · Locked)</option>
+            </select>
+          )}
         </div>
         {tab === 'Daily register' ? (
           <div className="attendance-list">

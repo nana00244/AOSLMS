@@ -35,8 +35,18 @@ function forStudent(assignment: Assignment, studentId: string): Assignment {
 export function getStudentAssignments(state: State, studentUserId: string): StudentAssignment[] {
   const student = getStudentProfile(state, studentUserId);
   if (!student?.classId) return [];
+  const activeTerm = state.settings.term;
   return state.assignments
-    .filter((assignment) => assignment.classId === student.classId)
+    .filter((assignment) => {
+      if (assignment.classId !== student.classId) return false;
+      if (assignment.term) {
+        const asgnTerm = String(assignment.term);
+        if (asgnTerm !== String(activeTerm) && asgnTerm !== `Term ${activeTerm}`) {
+          return false;
+        }
+      }
+      return true;
+    })
     .map((assignment) => {
       const submission = state.submissions.find(
         (item) => item.assignmentId === assignment.id && item.studentId === student.id,
@@ -120,7 +130,16 @@ export function getStudentStream(state: State, studentUserId: string): StudentSt
         date: message.date,
       })),
     ...state.assignments
-      .filter((assignment) => assignment.classId === classId)
+      .filter((assignment) => {
+        if (assignment.classId !== classId) return false;
+        if (assignment.term) {
+          const asgnTerm = String(assignment.term);
+          if (asgnTerm !== String(state.settings.term) && asgnTerm !== `Term ${state.settings.term}`) {
+            return false;
+          }
+        }
+        return true;
+      })
       .map((assignment) => ({
         type: 'assignment' as const,
         id: assignment.id,
@@ -130,6 +149,12 @@ export function getStudentStream(state: State, studentUserId: string): StudentSt
       })),
     ...state.resources
       .filter((resource) => {
+        if (resource.term !== undefined && resource.term !== null && resource.term !== '') {
+          const resTerm = String(resource.term);
+          if (resTerm !== String(state.settings.term) && resTerm !== `Term ${state.settings.term}`) {
+            return false;
+          }
+        }
         const targets = resource.targetClassIds || [resource.classId];
         return targets.includes('all') || targets.includes(classId);
       })

@@ -1,0 +1,6 @@
+{
+  "name": "Ayisatu Owen Schools · LMS",
+  "description": "Ayisatu Owen Schools — a connected space for learning and school life.",
+  "permissions": [],
+  "capabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

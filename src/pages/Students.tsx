@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Plus, Upload, Download, Eye, Pencil, Users, GraduationCap, School } from 'lucide-react';
+import { Plus, Upload, Download, Eye, Pencil, Users, GraduationCap, School, Trash2 } from 'lucide-react';
 import { classes, today, uid, type Student } from '../data';
 import { useStore, csv } from '../store';
 import {
@@ -24,7 +24,12 @@ export function Students() {
     [page, setPage] = useState(1),
     [edit, setEdit] = useState<Student | null>(null),
     [view, setView] = useState<Student | null>(null),
-    [importing, setImporting] = useState(false);
+    [importing, setImporting] = useState(false),
+    [selectedIds, setSelectedIds] = useState<string[]>([]),
+    [reassignModalOpen, setReassignModalOpen] = useState(false),
+    [reassignClass, setReassignClass] = useState(''),
+    [deleteConfirmOpen, setDeleteConfirmOpen] = useState(false),
+    [singleDeleteStudent, setSingleDeleteStudent] = useState<Student | null>(null);
   const filtered = data.students.filter(
     (s) =>
       (s.name + ' ' + s.id).toLowerCase().includes(q.toLowerCase()) &&
@@ -33,6 +38,71 @@ export function Students() {
   );
   const pages = Math.max(1, Math.ceil(filtered.length / 8));
   const current = Math.min(page, pages);
+  const pageStudents = filtered.slice((current - 1) * 8, current * 8);
+  const allPageSelected =
+    pageStudents.length > 0 && pageStudents.every((s) => selectedIds.includes(s.id));
+
+  const toggleSelectAll = () => {
+    if (allPageSelected) {
+      const pageIds = new Set(pageStudents.map((s) => s.id));
+      setSelectedIds((prev) => prev.filter((id) => !pageIds.has(id)));
+    } else {
+      const pageIds = pageStudents.map((s) => s.id);
+      setSelectedIds((prev) => [...new Set([...prev, ...pageIds])]);
+    }
+  };
+
+  const toggleSelectOne = (id: string) => {
+    setSelectedIds((prev) =>
+      prev.includes(id) ? prev.filter((item) => item !== id) : [...prev, id],
+    );
+  };
+
+  function handleReassign(target: string) {
+    if (!target) return;
+    const count = selectedIds.length;
+    update(
+      (d) => ({
+        ...d,
+        students: d.students.map((s) =>
+          selectedIds.includes(s.id) ? { ...s, classId: target } : s,
+        ),
+      }),
+      `Reassigned ${count} student${count === 1 ? '' : 's'} to ${target}`,
+    );
+    notify(`Successfully reassigned ${count} student${count === 1 ? '' : 's'} to ${target}.`);
+    setSelectedIds([]);
+    setReassignModalOpen(false);
+  }
+
+  function handleDeleteSelected() {
+    const count = selectedIds.length;
+    const idSet = new Set(selectedIds);
+    update(
+      (d) => ({
+        ...d,
+        students: d.students.filter((s) => !idSet.has(s.id)),
+      }),
+      `Deleted ${count} student${count === 1 ? '' : 's'} from directory`,
+    );
+    notify(`Deleted ${count} student${count === 1 ? '' : 's'}. Changes saved to database.`);
+    setSelectedIds([]);
+    setDeleteConfirmOpen(false);
+  }
+
+  function handleSingleDelete(s: Student) {
+    update(
+      (d) => ({
+        ...d,
+        students: d.students.filter((item) => item.id !== s.id),
+      }),
+      `Deleted student: ${s.name} (${s.id})`,
+    );
+    notify(`Deleted student ${s.name}. Changes saved to database.`);
+    setSelectedIds((prev) => prev.filter((id) => id !== s.id));
+    setSingleDeleteStudent(null);
+  }
+
   function save(s: Student) {
     if (data.students.some((x) => x.id === s.id && x.id !== edit?.id)) {
       notify('This admission number already exists.');
@@ -147,10 +217,47 @@ export function Students() {
             Export
           </Button>
         </div>
+        {selectedIds.length > 0 && (
+          <div className="bulk-actions-bar" role="region" aria-label="Student batch operations">
+            <div className="bulk-selection-count">
+              <strong>{selectedIds.length}</strong> student{selectedIds.length === 1 ? '' : 's'} selected
+            </div>
+            <div className="bulk-action-buttons">
+              <Button
+                variant="secondary"
+                onClick={() => {
+                  setReassignClass(classList[0] || '');
+                  setReassignModalOpen(true);
+                }}
+              >
+                <School size={16} />
+                Reassign to class
+              </Button>
+              <Button
+                variant="danger"
+                onClick={() => setDeleteConfirmOpen(true)}
+              >
+                <Trash2 size={16} />
+                Delete selected ({selectedIds.length})
+              </Button>
+              <Button variant="ghost" onClick={() => setSelectedIds([])}>
+                Deselect all
+              </Button>
+            </div>
+          </div>
+        )}
         <div className="table-scroll">
           <table>
             <thead>
               <tr>
+                <th style={{ width: '42px', textAlign: 'center' }}>
+                  <input
+                    type="checkbox"
+                    aria-label="Select all students on current page"
+                    checked={allPageSelected}
+                    onChange={toggleSelectAll}
+                  />
+                </th>
                 <th>Student</th>
                 <th>Class / stream</th>
                 <th>Guardian contact</th>
@@ -162,8 +269,16 @@ export function Students() {
               </tr>
             </thead>
             <tbody>
-              {filtered.slice((current - 1) * 8, current * 8).map((s) => (
-                <tr key={s.id}>
+              {pageStudents.map((s) => (
+                <tr key={s.id} className={selectedIds.includes(s.id) ? 'is-selected' : ''}>
+                  <td style={{ textAlign: 'center' }}>
+                    <input
+                      type="checkbox"
+                      aria-label={`Select ${s.name}`}
+                      checked={selectedIds.includes(s.id)}
+                      onChange={() => toggleSelectOne(s.id)}
+                    />
+                  </td>
                   <td>
                     <Person name={s.name} sub={s.id} photo={s.photo} />
                   </td>
@@ -194,6 +309,14 @@ export function Students() {
                         onClick={() => setEdit(s)}
                       >
                         <Pencil size={16} />
+                      </button>
+                      <button
+                        className="icon-btn"
+                        aria-label={`Delete ${s.name}`}
+                        title={`Delete ${s.name}`}
+                        onClick={() => setSingleDeleteStudent(s)}
+                      >
+                        <Trash2 size={16} />
                       </button>
                     </div>
                   </td>
@@ -240,7 +363,7 @@ export function Students() {
           <p>Class teacher: {cls === classes[0] ? 'Sarah Mensah' : 'Alex Rivera'}</p>
         </Card>
       )}
-      {edit && <StudentForm student={edit} onClose={() => setEdit(null)} onSave={save} />}{' '}
+      {edit && <StudentForm student={edit} onClose={() => setEdit(null)} onSave={save} />}
       {view && (
         <Modal title="Student profile" onClose={() => setView(null)}>
           <Person name={view.name} sub={view.id} photo={view.photo} />
@@ -266,6 +389,97 @@ export function Students() {
           >
             View report card
           </Link>
+        </Modal>
+      )}
+      {reassignModalOpen && (
+        <Modal
+          title={`Reassign ${selectedIds.length} Student${selectedIds.length === 1 ? '' : 's'} to Class`}
+          onClose={() => setReassignModalOpen(false)}
+        >
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+              handleReassign(reassignClass);
+            }}
+          >
+            <p>
+              Select the new classroom stream for the <strong>{selectedIds.length}</strong> selected student{selectedIds.length === 1 ? '' : 's'}. This change will synchronize immediately with the school database.
+            </p>
+            <Field label="Target Class">
+              <select
+                value={reassignClass}
+                onChange={(e) => setReassignClass(e.target.value)}
+                required
+              >
+                {classList.map((c) => (
+                  <option key={c} value={c}>
+                    {c}
+                  </option>
+                ))}
+              </select>
+            </Field>
+            <div className="modal-actions">
+              <Button variant="secondary" type="button" onClick={() => setReassignModalOpen(false)}>
+                Cancel
+              </Button>
+              <Button type="submit">
+                <School size={16} />
+                Reassign to class
+              </Button>
+            </div>
+          </form>
+        </Modal>
+      )}
+      {deleteConfirmOpen && (
+        <Modal
+          title={`Delete ${selectedIds.length} Student${selectedIds.length === 1 ? '' : 's'}`}
+          onClose={() => setDeleteConfirmOpen(false)}
+        >
+          <div>
+            <p>
+              Are you sure you want to permanently delete the <strong>{selectedIds.length}</strong> selected student record{selectedIds.length === 1 ? '' : 's'}?
+            </p>
+            <p className="muted" style={{ marginTop: '8px' }}>
+              This will remove them from the student directory and synchronize the deletion directly with the Supabase deployment.
+            </p>
+            <div className="modal-actions">
+              <Button variant="secondary" type="button" onClick={() => setDeleteConfirmOpen(false)}>
+                Cancel
+              </Button>
+              <Button variant="danger" type="button" onClick={handleDeleteSelected}>
+                <Trash2 size={16} />
+                Delete {selectedIds.length} student{selectedIds.length === 1 ? '' : 's'}
+              </Button>
+            </div>
+          </div>
+        </Modal>
+      )}
+      {singleDeleteStudent && (
+        <Modal
+          title={`Delete ${singleDeleteStudent.name}`}
+          onClose={() => setSingleDeleteStudent(null)}
+        >
+          <div>
+            <p>
+              Are you sure you want to permanently delete <strong>{singleDeleteStudent.name}</strong> ({singleDeleteStudent.id})?
+            </p>
+            <p className="muted" style={{ marginTop: '8px' }}>
+              This student record will be removed from the school directory and synced with the database.
+            </p>
+            <div className="modal-actions">
+              <Button variant="secondary" type="button" onClick={() => setSingleDeleteStudent(null)}>
+                Cancel
+              </Button>
+              <Button
+                variant="danger"
+                type="button"
+                onClick={() => handleSingleDelete(singleDeleteStudent)}
+              >
+                <Trash2 size={16} />
+                Delete student
+              </Button>
+            </div>
+          </div>
         </Modal>
       )}
       {importing && <ImportStudents onClose={() => setImporting(false)} />}

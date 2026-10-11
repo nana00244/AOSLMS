@@ -124,4 +124,77 @@ describe('server-side workspace access', () => {
     next.logs = [];
     expect(changesBetween(base, next).map((c) => c.collection)).toEqual(['settings']);
   });
+  it('locks resources and assignments from other terms for teachers and students', () => {
+    const stateWithTerms = structuredClone(base);
+    stateWithTerms.settings.term = 1;
+    stateWithTerms.resources = [
+      {
+        id: 'res-t1',
+        title: 'Term 1 Resource',
+        category: 'Lecture Notes',
+        subject: 'Mathematics',
+        classId: first.classId,
+        type: 'TXT',
+        date: '2026-10-01',
+        content: 'Notes',
+        term: 1,
+      },
+      {
+        id: 'res-t2',
+        title: 'Term 2 Resource',
+        category: 'Lecture Notes',
+        subject: 'Mathematics',
+        classId: first.classId,
+        type: 'TXT',
+        date: '2026-10-01',
+        content: 'Notes',
+        term: 2,
+      },
+    ];
+    stateWithTerms.assignments = [
+      {
+        ...base.assignments[0],
+        id: 'asgn-t1',
+        classId: first.classId,
+        term: 'Term 1',
+      },
+      {
+        ...base.assignments[0],
+        id: 'asgn-t2',
+        classId: first.classId,
+        term: 'Term 2',
+      },
+    ];
+
+    const teacherView = projectWorkspace(stateWithTerms, teacher);
+    expect(teacherView.resources.map((r) => r.id)).toEqual(['res-t1']);
+    expect(teacherView.assignments.map((a) => a.id)).toEqual(['asgn-t1']);
+
+    const studentView = projectWorkspace(stateWithTerms, student);
+    expect(studentView.resources.map((r) => r.id)).toEqual(['res-t1']);
+    expect(studentView.assignments.map((a) => a.id)).toEqual(['asgn-t1']);
+  });
+  it('allows admin to delete students and reassign them to another class with accurate change diffs', () => {
+    const admin: User = {
+      id: 'auth-admin',
+      name: 'Admin',
+      email: 'admin@example.test',
+      role: 'Administrator',
+      active: true,
+      classes: [],
+    };
+    const next = structuredClone(base);
+    // Delete first student
+    next.students = next.students.filter((s) => s.id !== first.id);
+    // Reassign second student
+    next.students[0].classId = 'Basic 3 - Yellow';
+
+    const changes = changesBetween(base, next);
+    expect(changes.some((c) => c.collection === 'students' && c.id === first.id && c.after === undefined)).toBe(true);
+    expect(changes.some((c) => c.collection === 'students' && c.after?.classId === 'Basic 3 - Yellow')).toBe(true);
+
+    const merged = applyChanges(base, admin, changes);
+    expect(merged.students.some((s) => s.id === first.id)).toBe(false);
+    expect(merged.students.find((s) => s.id === next.students[0].id)?.classId).toBe('Basic 3 - Yellow');
+  });
 });

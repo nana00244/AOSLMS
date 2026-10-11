@@ -55,14 +55,14 @@ export function SettingsPage() {
       if (f.size > 10 * 1024 * 1024) throw Error('Backup is too large. Maximum size is 10 MB.');
       const envelope = JSON.parse(await f.text());
       if (
-        envelope.format !== 'aos-demo-v1' ||
+        (envelope.format !== 'aos-backup-v1' && envelope.format !== 'aos-demo-v1') ||
         typeof envelope.payload !== 'string' ||
         (await checksum(envelope.payload)) !== envelope.checksum
       )
         throw Error('The backup checksum is invalid. No records were changed.');
       const parsed = JSON.parse(envelope.payload);
       if (!validateState(parsed))
-        throw Error('This file does not contain a valid LMS demo workspace.');
+        throw Error('This file does not contain a valid LMS school workspace.');
       setRestore(parsed);
       setConfirm('');
       setError('');
@@ -226,11 +226,7 @@ export function SettingsPage() {
           <Card>
             <CardTitle
               title="Workspace backup & restore"
-              description={
-                isSupabaseConfigured
-                  ? 'Export the school records currently loaded from the database.'
-                  : 'Keep a copy of your browser-local demo records.'
-              }
+              description="Export the school records currently loaded from the database."
             />
             <div className="backup-panel">
               <span className="icon-tile blue">
@@ -242,11 +238,7 @@ export function SettingsPage() {
                 variant="secondary"
                 onClick={() =>
                   backup(data)
-                    .then(() =>
-                      notify(
-                        isSupabaseConfigured ? 'Backup downloaded.' : 'Demo backup downloaded.',
-                      ),
-                    )
+                    .then(() => notify('Backup downloaded.'))
                     .catch(() => notify('Backup could not be generated.'))
                 }
               >
@@ -275,58 +267,23 @@ export function SettingsPage() {
             )}
             <div className="notice">
               <ShieldCheck size={18} />
-              {isSupabaseConfigured
-                ? 'Database records sync across devices. Exports include file references; stored files and login accounts are managed separately.'
-                : 'These backups cover this browser’s demo data.'}
+              Database records sync across devices. Exports include file references; stored files and login accounts are managed separately.
             </div>
           </Card>
-          {!isSupabaseConfigured && (
-            <Card>
-              <CardTitle
-                title="Reset demo workspace"
-                description="Start again with the original sample records."
-              />
-              <div className="danger-panel">
-                <h3>A fresh start</h3>
-                <p>
-                  This replaces local changes with the initial demonstration data. Download a backup
-                  first if you want to keep your work.
-                </p>
-                <Button
-                  variant="danger"
-                  onClick={() => {
-                    setReset(true);
-                    setConfirm('');
-                  }}
-                >
-                  <RotateCcw size={16} />
-                  Reset demo data
-                </Button>
-              </div>
-            </Card>
-          )}
         </div>
       </div>
-      {(restore || reset) && (
+      {restore && (
         <Modal
-          title={
-            restore
-              ? isSupabaseConfigured
-                ? 'Restore school records'
-                : 'Restore demo workspace'
-              : 'Reset demo workspace'
-          }
+          title="Restore school records"
           onClose={() => {
             setRestore(null);
-            setReset(false);
+            setConfirm('');
           }}
         >
           <p>
-            {restore
-              ? 'The backup checksum has been verified. Restoring will replace current school records. Login accounts are retained.'
-              : 'Resetting replaces your local changes with the initial sample data.'}
+            The backup checksum has been verified. Restoring will replace current school records. Login accounts are retained.
           </p>
-          <Field label={`Type ${restore ? 'RESTORE SYSTEM' : 'RESET DEMO'} to confirm`}>
+          <Field label="Type RESTORE SYSTEM to confirm">
             <input value={confirm} onChange={(e) => setConfirm(e.target.value)} />
           </Field>
           <div className="modal-actions">
@@ -334,38 +291,31 @@ export function SettingsPage() {
               variant="secondary"
               onClick={() => {
                 setRestore(null);
-                setReset(false);
+                setConfirm('');
               }}
             >
               Cancel
             </Button>
             <Button
               variant="danger"
-              disabled={confirm !== (restore ? 'RESTORE SYSTEM' : 'RESET DEMO')}
+              disabled={confirm !== 'RESTORE SYSTEM'}
               onClick={() => {
-                const replacement = restore || seed();
+                const replacement = restore;
                 update(
-                  (current) =>
-                    isSupabaseConfigured
-                      ? {
-                          ...replacement,
-                          users: current.users,
-                          teacherAssignments: current.teacherAssignments,
-                        }
-                      : replacement,
-                  restore ? 'School backup restored' : 'Demo workspace reset',
+                  (current) => ({
+                    ...replacement,
+                    users: current.users,
+                    teacherAssignments: current.teacherAssignments,
+                  }),
+                  'School backup restored',
                 );
                 setSettings(replacement.settings);
                 setRestore(null);
-                setReset(false);
-                notify(
-                  isSupabaseConfigured
-                    ? 'Workspace update requested.'
-                    : 'Demo workspace updated successfully.',
-                );
+                setConfirm('');
+                notify('School records restored.');
               }}
             >
-              Confirm {restore ? 'restore' : 'reset'}
+              Confirm restore
             </Button>
           </div>
         </Modal>
