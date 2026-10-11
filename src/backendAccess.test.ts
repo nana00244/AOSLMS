@@ -174,6 +174,32 @@ describe('server-side workspace access', () => {
     expect(studentView.resources.map((r) => r.id)).toEqual(['res-t1']);
     expect(studentView.assignments.map((a) => a.id)).toEqual(['asgn-t1']);
   });
+  it('diffs keyed student bills while deleting or reassigning students', () => {
+    const before = {
+      ...base,
+      studentBills: {
+        [`${first.id}|2026/2027|1`]: {
+          studentId: first.id,
+          year: '2026/2027',
+          term: 1,
+          items: { Tuition: 100 },
+          concession: 0,
+          updatedAt: '',
+        },
+      },
+    } as any;
+    const reassigned = structuredClone(before);
+    reassigned.students[0].classId = other.classId;
+    expect(changesBetween(before, reassigned).some(
+      (change) => change.collection === 'students' && change.id === first.id,
+    )).toBe(true);
+
+    const deleted = structuredClone(before);
+    deleted.students = deleted.students.filter((s: { id: string }) => s.id !== first.id);
+    expect(changesBetween(before, deleted).some(
+      (change) => change.collection === 'students' && change.id === first.id && change.after === undefined,
+    )).toBe(true);
+  });
   it('allows admin to delete students and reassign them to another class with accurate change diffs', () => {
     const admin: User = {
       id: 'auth-admin',

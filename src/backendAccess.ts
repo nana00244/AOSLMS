@@ -3,7 +3,7 @@ import { emptyState } from './emptyState.ts';
 import { normalizeTeachingAccess } from './accountRules.ts';
 
 const same = (a: unknown, b: unknown) => JSON.stringify(a) === JSON.stringify(b);
-const finance = new Set(['payments', 'expenses', 'payroll', 'fees', 'studentConcessions']);
+const finance = new Set(['payments', 'expenses', 'payroll', 'fees', 'studentConcessions', 'studentBills']);
 const academic = new Set([
   'assignments',
   'submissions',
@@ -17,7 +17,7 @@ const academic = new Set([
   'certificates',
   'messages',
 ]);
-const maps = new Set(['attendance', 'grades', 'remarks', 'conduct', 'fees', 'studentConcessions']);
+const maps = new Set(['attendance', 'grades', 'remarks', 'conduct', 'fees', 'studentConcessions', 'studentBills']);
 export function canTeach(user: User, classId: string, subject?: string): boolean {
   if (user.role !== 'Teacher' || !user.classes.includes(classId)) return false;
   const subjects = user.classAllowedSubjects?.[classId];
@@ -92,7 +92,10 @@ function readable(state: State, user: User, key: string, id: string, value: any)
 function entries(key: string, value: any): [string, any][] {
   if (key === 'settings' || key === 'classes' || key === 'version') return [['singleton', value]];
   if (maps.has(key)) return Object.entries(value || {});
-  return (value || []).map((row: any) => [typeof row === 'string' ? row : row.id, row]);
+  if (!Array.isArray(value)) {
+    throw new Error(`Invalid workspace data: ${key} must be a list. Reload the page and try again.`);
+  }
+  return value.map((row: any) => [typeof row === 'string' ? row : row.id, row]);
 }
 function materialize(key: string, rows: Map<string, any>): any {
   if (key === 'settings' || key === 'classes' || key === 'version') return rows.get('singleton');
