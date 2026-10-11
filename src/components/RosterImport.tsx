@@ -140,4 +140,3 @@ export function ImportStudents({ onClose }: { onClose: () => void }) {
     </Modal>
   );
 }
-

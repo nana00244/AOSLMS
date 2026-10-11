@@ -246,4 +246,3 @@ export function applyChanges(state: State, user: User, changes: Change[]): State
     .map((s) => s.id);
   return removed.length ? removeStudents(next, removed) : next;
 }
-

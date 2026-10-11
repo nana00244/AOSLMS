@@ -205,4 +205,3 @@ export function attendanceImportEntries(
     ),
   ) as Record<string, AttendanceStatus>;
 }
-

@@ -163,4 +163,3 @@ describe('server-side workspace access', () => {
     expect(() => changesBetween(base, malformed)).toThrow('students must be a list');
   });
 });
-

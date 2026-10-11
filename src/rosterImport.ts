@@ -156,4 +156,3 @@ export function applyRoster(
   }
   return { ...state, classes: [...classes], students };
 }
-

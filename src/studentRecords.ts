@@ -33,4 +33,3 @@ export function removeStudents(state: State, ids: string[], unlinkUsers = false)
       : state.users,
   };
 }
-

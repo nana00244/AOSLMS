@@ -514,4 +514,3 @@ function StudentForm({
     </Modal>
   );
 }
-

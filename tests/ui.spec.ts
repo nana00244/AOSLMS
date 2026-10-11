@@ -373,4 +373,3 @@ test('Excel workbook imports with mapped columns', async ({ page }) => {
   await page.getByRole('textbox', { name: 'Search name or admission number...' }).fill('XLSX-2001');
   await expect(page.locator('tbody')).toContainText('Akua Excel');
 });
-
