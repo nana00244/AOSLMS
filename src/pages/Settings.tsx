@@ -49,6 +49,7 @@ export function SettingsPage() {
     [confirm, setConfirm] = useState(''),
     [reset, setReset] = useState(false),
     [error, setError] = useState('');
+  const [savingSettings, setSavingSettings] = useState(false);
   async function readRestore(f?: File) {
     if (!f) return;
     try {
@@ -77,9 +78,9 @@ export function SettingsPage() {
         title="System settings"
         description="Your school’s identity, academic cycle, and workspace care."
         actions={
-          <Button form="settings-form" type="submit">
+          <Button form="settings-form" type="submit" disabled={savingSettings}>
             <Save size={16} />
-            Save all changes
+            {savingSettings ? 'Saving…' : 'Save all changes'}
           </Button>
         }
       />
@@ -87,10 +88,18 @@ export function SettingsPage() {
         <form
           id="settings-form"
           className="settings-column"
-          onSubmit={(e) => {
+          onSubmit={async (e) => {
             e.preventDefault();
-            update((d) => ({ ...d, settings }), 'Institution settings updated');
-            notify('School settings saved.');
+            setSavingSettings(true);
+            try {
+              const saved = await update(
+                (d) => ({ ...d, settings }),
+                'Institution settings updated',
+              );
+              if (saved) notify('School settings and logo saved.');
+            } finally {
+              setSavingSettings(false);
+            }
           }}
         >
           <Card>
@@ -102,7 +111,7 @@ export function SettingsPage() {
               <img src={settings.crest || './crest.svg'} alt="School crest" />
               <Field
                 label="Upload school crest"
-                hint="PNG or JPEG, up to 500 KB. The saved crest replaces the report card logo globally."
+                hint="PNG or JPEG, up to 500 KB. Choose Save all changes to publish this logo across the system."
               >
                 <input
                   type="file"
@@ -118,11 +127,8 @@ export function SettingsPage() {
                     r.onload = () => {
                       const crest = String(r.result);
                       setSettings((current) => ({ ...current, crest }));
-                      update(
-                        (d) => ({ ...d, settings: { ...d.settings, crest } }),
-                        'School crest updated',
-                      );
-                      notify('Saving school logo for all report cards…');
+                      e.target.value = '';
+                      notify('School logo selected. Choose Save all changes to publish it.');
                     };
                     r.onerror = () => notify('The school logo could not be read.');
                     r.readAsDataURL(f);

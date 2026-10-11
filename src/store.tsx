@@ -21,7 +21,7 @@ interface Store {
   data: State;
   role: Role | null;
   setRole: (r: Role | null) => void;
-  update: (fn: (s: State) => State, action?: string) => void;
+  update: (fn: (s: State) => State, action?: string) => Promise<boolean>;
   notify: (message: string) => void;
   toast: string;
   storageError: string;
@@ -181,36 +181,34 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     setToast(message);
     window.setTimeout(() => setToast((current) => (current === message ? '' : current)), 4500);
   }
-  function update(fn: (s: State) => State, action?: string) {
+  async function update(fn: (s: State) => State, action?: string): Promise<boolean> {
     if (isSupabaseConfigured) {
       if (!snapshot.current || busy.current) {
         notify('Please wait for the current save to finish.');
-        return;
+        return false;
       }
       const previous = snapshot.current;
       const currentGeneration = generation.current;
       busy.current = true;
       setSaving(true);
       setStorageError('');
-      void Promise.resolve()
-        .then(() => saveWorkspace(previous, fn(previous.state), action))
-        .then((result) => {
-          if (generation.current !== currentGeneration) return;
-          snapshot.current = result;
-          setData(result.state);
-          notify('Changes saved to the school database.');
-        })
-        .catch((error: unknown) => {
-          if (generation.current !== currentGeneration) return;
-          const message = error instanceof Error ? error.message : 'Could not save changes';
-          setStorageError(`Not saved: ${message}`);
-          notify(`Not saved: ${message}`);
-        })
-        .finally(() => {
-          busy.current = false;
-          setSaving(false);
-        });
-      return;
+      try {
+        const result = await saveWorkspace(previous, fn(previous.state), action);
+        if (generation.current !== currentGeneration) return false;
+        snapshot.current = result;
+        setData(result.state);
+        notify('Changes saved to the school database.');
+        return true;
+      } catch (error) {
+        if (generation.current !== currentGeneration) return false;
+        const message = error instanceof Error ? error.message : 'Could not save changes';
+        setStorageError(`Not saved: ${message}`);
+        notify(`Not saved: ${message}`);
+        return false;
+      } finally {
+        busy.current = false;
+        setSaving(false);
+      }
     }
     setData((s) => {
       let next = fn(s);
@@ -233,6 +231,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
         };
       return next;
     });
+    return true;
   }
   return (
     <Context.Provider
