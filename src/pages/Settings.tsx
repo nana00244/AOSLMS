@@ -100,7 +100,10 @@ export function SettingsPage() {
             />
             <div className="crest-upload">
               <img src={settings.crest || './crest.svg'} alt="School crest" />
-              <Field label="Upload school crest" hint="PNG or JPEG, up to 500 KB.">
+              <Field
+                label="Upload school crest"
+                hint="PNG or JPEG, up to 500 KB. The saved crest replaces the report card logo globally."
+              >
                 <input
                   type="file"
                   accept="image/png,image/jpeg"
@@ -112,7 +115,16 @@ export function SettingsPage() {
                       return;
                     }
                     const r = new FileReader();
-                    r.onload = () => setSettings({ ...settings, crest: String(r.result) });
+                    r.onload = () => {
+                      const crest = String(r.result);
+                      setSettings((current) => ({ ...current, crest }));
+                      update(
+                        (d) => ({ ...d, settings: { ...d.settings, crest } }),
+                        'School crest updated',
+                      );
+                      notify('Saving school logo for all report cards…');
+                    };
+                    r.onerror = () => notify('The school logo could not be read.');
                     r.readAsDataURL(f);
                   }}
                 />
