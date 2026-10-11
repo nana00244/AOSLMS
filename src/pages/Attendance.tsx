@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { AttendanceImport } from '../components/AttendanceImport';
 import { CheckCheck, Save, Users, UserCheck, UserX, Clock3, Check, Printer } from 'lucide-react';
 import { useStore } from '../store';
 import { today, standing, type AttendanceStatus } from '../data';
@@ -16,13 +17,15 @@ import {
 const statuses: AttendanceStatus[] = ['Present', 'Late', 'Absent', 'Excused'];
 export function Attendance() {
   const { data, update, notify, allowedClasses } = useStore();
+  const [importing, setImporting] = useState(false);
+  const [viewTerm, setViewTerm] = useState(data.settings.term);
   const [cls, setCls] = useState(allowedClasses[0]),
     [date, setDate] = useState(today()),
     [q, setQ] = useState(''),
     [tab, setTab] = useState('Daily register'),
     [draft, setDraft] = useState<Record<string, AttendanceStatus>>({});
   const roster = data.students.filter((s) => s.classId === cls && s.status === 'Active');
-  const key = (id: string) => `${date}|${data.settings.term}|${id}`;
+  const key = (id: string) => `${date}|${viewTerm}|${id}`;
   const status = (id: string) => draft[key(id)] || data.attendance[key(id)];
   const shown = roster.filter((s) => (s.name + s.id).toLowerCase().includes(q.toLowerCase()));
   const count = (s: AttendanceStatus) => roster.filter((p) => status(p.id) === s).length;
@@ -30,14 +33,18 @@ export function Attendance() {
   const days = Array.from(
     { length: new Date(Number(month.slice(0, 4)), Number(month.slice(5)), 0).getDate() },
     (_, i) => `${month}-${String(i + 1).padStart(2, '0')}`,
-  ).filter((d) => ![0, 6].includes(new Date(d + 'T12:00:00').getDay()));
+  ).filter(
+    (d) =>
+      ![0, 6].includes(new Date(d + 'T12:00:00').getDay()) ||
+      roster.some((s) => data.attendance[`${d}|${viewTerm}|${s.id}`]),
+  );
   const dirty = Object.keys(draft).length > 0;
   return (
     <>
       <PageHeader
         eyebrow="EVERY DAY COUNTS"
         title="Attendance register"
-        description={`${cls} · Term ${data.settings.term} · A good day begins with being here.`}
+        description={`${cls} · Term ${viewTerm} · A good day begins with being here.`}
         actions={
           tab === 'Daily register' ? (
             <>
@@ -79,6 +86,27 @@ export function Attendance() {
         }
       />
       <Tabs items={['Daily register', 'Monthly audit']} value={tab} onChange={setTab} />
+      <div className="filter-bar">
+        <Button
+          variant="secondary"
+          disabled={dirty || !allowedClasses.length}
+          onClick={() => setImporting(true)}
+        >
+          Import attendance CSV
+        </Button>
+        {dirty && <span>Save pending daily changes before importing.</span>}
+      </div>
+      {importing && (
+        <AttendanceImport
+          onClose={() => setImporting(false)}
+          onImported={(classId, importedMonth, term) => {
+            setCls(classId);
+            setViewTerm(term);
+            setDate(`${importedMonth}-01`);
+            setTab('Monthly audit');
+          }}
+        />
+      )}
       <div className="stats-grid">
         <Stat label="Students in class" value={roster.length} icon={<Users />} />
         <Stat label="Present" value={count('Present')} icon={<UserCheck />} tone="green" />
@@ -108,6 +136,17 @@ export function Attendance() {
             value={date}
             onChange={(e) => e.target.value && setDate(e.target.value)}
           />
+          <select
+            aria-label="Register term"
+            value={viewTerm}
+            onChange={(e) => setViewTerm(Number(e.target.value))}
+          >
+            {[1, 2, 3].map((term) => (
+              <option key={term} value={term}>
+                Term {term}
+              </option>
+            ))}
+          </select>
         </div>
         {tab === 'Daily register' ? (
           <div className="attendance-list">
@@ -156,9 +195,7 @@ export function Attendance() {
               </thead>
               <tbody>
                 {shown.map((s) => {
-                  const values = days.map(
-                    (d) => data.attendance[`${d}|${data.settings.term}|${s.id}`],
-                  );
+                  const values = days.map((d) => data.attendance[`${d}|${viewTerm}|${s.id}`]);
                   const marked = values.filter(Boolean),
                     attended = marked.filter((v) => v === 'Present' || v === 'Late').length;
                   const percent = marked.length ? (attended / marked.length) * 100 : 0;
@@ -195,7 +232,7 @@ export function Attendance() {
           <span>
             {dirty
               ? 'Unsaved changes — save the register to update report cards.'
-              : 'Saved records are stored in this browser.'}
+              : 'Attendance records are up to date.'}
           </span>
           <Badge tone={dirty ? 'amber' : 'green'}>{dirty ? 'Changes pending' : 'Up to date'}</Badge>
         </div>

@@ -29,6 +29,14 @@ Public signup is disabled. The email login provider remains enabled (`auth.email
 
 ## Deployed backend
 
+### Import monthly attendance
+
+Open **Attendance → Import attendance CSV** and select a monthly register. The sample format has a `Class: BS 1 | Month: September 2026` heading, `Student Name` and optional `Admission Number` columns, and daily columns such as `Sep 08`. Full status names or P/L/A/E are accepted; totals and percentages are ignored.
+
+Review the detected month, target class, term, student matches and replacement count before importing. `BS 1` can match `Basic 1` or a single Basic 1 stream; multiple possible streams require a class selection. Matching is limited to the selected class, uses admission numbers first, then names with punctuation/word-order differences, then conservative spelling similarity. Ambiguous names, duplicate student rows and unmatched students are skipped. Students missing from the file, blank cells and unrecognised statuses retain their existing attendance. Recognised marks replace existing marks only for the same student/date/term. Conflicting months and invalid or duplicate dates block the import. The attendance screen supports selecting historical terms.
+
+### Storage and access
+
 - Supabase Auth handles passwords and sessions. Plain usernames map internally to a reserved, non-deliverable email alias; users do not need to enter or own that address. Username accounts use administrator password resets, not email recovery. Unique usernames are enforced in the database.
 - `profiles` holds server-managed roles, active status, student links, and teaching scope.
 - `school_workspace` stores the complete school model as a versioned JSON document: classes, students, attendance, coursework, submissions, grades, reports, resources, timetables, certificates, announcements, payments, fees, concessions, expenses, payroll and settings.

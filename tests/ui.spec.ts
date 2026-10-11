@@ -1,4 +1,5 @@
 import { test, expect, type Page } from '@playwright/test';
+import { seed } from '../src/data';
 async function login(page: Page, role = 'Administrator') {
   await page.goto('/');
   await page
@@ -20,6 +21,45 @@ test('attendance persists and updates report card', async ({ page }) => {
   ).toHaveCount(6);
   await page.goto('/#/reports');
   await expect(page.locator('.report-summary')).toContainText('1 / 1 days');
+});
+
+test('monthly attendance CSV matches names and class and preserves unmatched records', async ({
+  page,
+}) => {
+  await login(page);
+  const fixture = await page.evaluate((state) => {
+    const students = state.students.filter(
+      (s: { classId: string }) => s.classId === 'Basic 1 - Green',
+    );
+    state.attendance[`2026-09-08|2|${students[1].id}`] = 'Excused';
+    localStorage.setItem('aos-lms-demo-v1', JSON.stringify(state));
+    return { first: students[0], missing: students[1] };
+  }, seed());
+  await page.reload();
+  await page.goto('/#/attendance');
+  await page.getByRole('button', { name: 'Import attendance CSV', exact: true }).click();
+  const csv = `"MONTHLY REGISTER"\n"Class: BS 1 | Month: September 2026"\nStudent Name,Admission Number,Sep 08,Sep 09,Days Present\n"${fixture.first.name.split(' ').reverse().join(' ')}",external-id,PRESENT,ABSENT,1\nUnknown Person,unknown,PRESENT,PRESENT,2`;
+  await page.getByLabel('Attendance CSV file').setInputFiles({
+    name: 'Attendance_Register_BS_1_September_2026.csv',
+    mimeType: 'text/csv',
+    buffer: Buffer.from(csv),
+  });
+  await expect(page.getByLabel('Import into class')).toHaveValue('Basic 1 - Green');
+  await page.getByLabel('Attendance term', { exact: true }).selectOption('2');
+  await expect(page.getByRole('dialog')).toContainText('1 matched students · 1 skipped rows');
+  await expect(page.getByRole('dialog')).toContainText('2026-09');
+  await page.getByRole('button', { name: 'Import 2 attendance records', exact: true }).click();
+  await expect(page.getByRole('dialog')).toHaveCount(0);
+  await expect(page.getByLabel('Attendance date')).toHaveValue('2026-09-01');
+  await expect(page.getByLabel('Register term')).toHaveValue('2');
+  await page.reload();
+  const marks = await page.evaluate(
+    () => JSON.parse(localStorage.getItem('aos-lms-demo-v1')!).attendance,
+  );
+  expect(marks[`2026-09-08|2|${fixture.first.id}`]).toBe('Present');
+  expect(marks[`2026-09-09|2|${fixture.first.id}`]).toBe('Absent');
+  expect(marks[`2026-09-08|2|${fixture.missing.id}`]).toBe('Excused');
+  expect(Object.keys(marks).some((k) => k.includes('unknown'))).toBe(false);
 });
 test('admission search and browser persistence', async ({ page }) => {
   await login(page);
