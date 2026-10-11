@@ -4730,12 +4730,15 @@ td .person {
 .assessment-remark-row {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: stretch;
   gap: 14px;
 }
 
 .assessment-remark-content {
   flex: 1;
+  min-height: 122px;
+  display: flex;
+  flex-direction: column;
 }
 
 .assessment-remark-label {
@@ -4752,6 +4755,8 @@ td .person {
   font-size: 10.5px;
   color: #334155;
   margin: 0;
+  flex: 1;
+  min-height: 72px;
   line-height: 1.4;
 }
 
@@ -4759,14 +4764,33 @@ td .person {
   font-size: 9.5px;
   color: #64748b;
   white-space: nowrap;
+  margin-top: 16px;
 }
 
-.assessment-signature-footer {
-  padding-top: 8px;
-  border-top: 1px dashed #e2e8f0;
+.assessment-school-stamp {
+  flex: 0 0 92px;
   display: flex;
-  justify-content: space-between;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.assessment-school-stamp-image {
+  display: block;
+  width: 82px;
+  height: 82px;
+  object-fit: contain;
+}
+
+.report-stamp-editor {
+  display: flex;
   align-items: center;
+  gap: 16px;
+}
+
+.report-stamp-editor > img {
+  width: 96px;
+  height: 96px;
+  object-fit: contain;
 }
 
 /* Report Card Editor Modal Styles */

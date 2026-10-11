@@ -240,6 +240,12 @@ export const workspaceSchema = z
       vacation: text,
       reopening: text,
       crest: optionalImage,
+      reportStamps: z
+        .record(
+          z.string(),
+          z.string().max(800000).regex(/^data:image\/(png|jpeg);base64,[A-Za-z0-9+/=]+$/),
+        )
+        .optional(),
     }),
   })
   .superRefine((state, ctx) => {

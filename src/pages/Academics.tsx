@@ -1334,14 +1334,25 @@ function OfficialStamp({
   term = 1,
   year = '2023/2024',
   status = 'PASSED',
+  image,
 }: {
   term?: number;
   year?: string;
   status?: string;
+  image?: string;
 }) {
+  if (image) {
+    return (
+      <img
+        className="assessment-school-stamp-image"
+        src={image}
+        alt={`Official school stamp for ${year}, term ${term}`}
+      />
+    );
+  }
+
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-      <svg width="78" height="78" viewBox="0 0 100 100" style={{ transform: 'rotate(-3deg)' }}>
+    <svg width="78" height="78" viewBox="0 0 100 100" style={{ transform: 'rotate(-3deg)' }}>
         <circle cx="50" cy="50" r="46" fill="none" stroke="#1d4ed8" strokeWidth="2.2" />
         <circle cx="50" cy="50" r="41.5" fill="none" stroke="#1d4ed8" strokeWidth="0.9" />
 
@@ -1376,19 +1387,7 @@ function OfficialStamp({
         <text x="50" y="69" textAnchor="middle" fill="#1d4ed8" fontSize="6.5" fontWeight="700">
           {year}/TERM {term}
         </text>
-      </svg>
-      <div
-        style={{
-          fontSize: '8.5px',
-          fontWeight: '750',
-          color: '#1e293b',
-          marginTop: '2px',
-          textTransform: 'none',
-        }}
-      >
-        Class Teacher Signature
-      </div>
-    </div>
+    </svg>
   );
 }
 
@@ -1731,27 +1730,16 @@ export function Reports() {
             <div className="assessment-remark-content">
               <span className="assessment-remark-label">CLASS TEACHER'S REMARKS:</span>
               <p className="assessment-remark-text">"{teacherRemark}"</p>
+              <div className="assessment-signature-line">
+                Class Teacher's Signature: ______________________
+              </div>
             </div>
-          </div>
-
-          <div
-            className="assessment-signature-footer"
-            style={{
-              paddingTop: 8,
-              borderTop: '1px dashed #e2e8f0',
-              display: 'flex',
-              justifyContent: 'space-between',
-              alignItems: 'center',
-            }}
-          >
-            <div className="assessment-signature-line">
-              Class Teacher's Signature: ______________________
-            </div>
-            <div style={{ flexShrink: 0 }}>
+            <div className="assessment-school-stamp">
               <OfficialStamp
                 term={data.settings.term}
                 year={data.settings.year}
                 status={grandTotal > 0 && overallPercent >= 40 ? 'PASSED' : 'VALIDATED'}
+                image={data.settings.reportStamps?.[`${data.settings.year}|${data.settings.term}`]}
               />
             </div>
           </div>
@@ -1776,6 +1764,7 @@ function ReportCardEditor({ student, onClose }: { student: Student; onClose: () 
   const [vacation, setVacation] = useState(data.settings.vacation);
   const [reopening, setReopening] = useState(data.settings.reopening);
   const [photo, setPhoto] = useState(student.photo || '');
+  const [reportStamps, setReportStamps] = useState(data.settings.reportStamps || {});
   const [rollOverride, setRollOverride] = useState(conductData['rollOverride'] || '');
   const [positionOverride, setPositionOverride] = useState(conductData['positionOverride'] || '');
 
@@ -1840,6 +1829,25 @@ function ReportCardEditor({ student, onClose }: { student: Student; onClose: () 
     }
     const reader = new FileReader();
     reader.onload = () => setPhoto(String(reader.result));
+    reader.readAsDataURL(file);
+  }
+
+  const reportStampKey = `${year}|${term}`;
+  const reportStamp = reportStamps[reportStampKey] || '';
+
+  function handleStampUpload(file: File) {
+    if (!['image/png', 'image/jpeg'].includes(file.type)) {
+      notify('Choose a PNG or JPEG image for the school stamp.');
+      return;
+    }
+    if (file.size > 500000) {
+      notify('Choose a school stamp image under 500 KB.');
+      return;
+    }
+    const reader = new FileReader();
+    reader.onload = () =>
+      setReportStamps((current) => ({ ...current, [reportStampKey]: String(reader.result) }));
+    reader.onerror = () => notify('The school stamp image could not be read.');
     reader.readAsDataURL(file);
   }
 
@@ -1915,7 +1923,10 @@ function ReportCardEditor({ student, onClose }: { student: Student; onClose: () 
       return {
         ...d,
         students: updatedStudents,
-        settings: updatedSettings,
+        settings: {
+          ...updatedSettings,
+          reportStamps,
+        },
         grades: updatedGrades,
         remarks: updatedRemarks,
         conduct: updatedConduct,
@@ -2029,6 +2040,54 @@ function ReportCardEditor({ student, onClose }: { student: Student; onClose: () 
                 onChange={(e) => setPromotedTo(e.target.value)}
               />
             </Field>
+          </div>
+        </fieldset>
+
+        {/* School stamps are shared by all report cards for this academic year and term. */}
+        <fieldset className="editor-fieldset" style={{ marginTop: 14 }}>
+          <legend>School Stamp · {year} · Term {term}</legend>
+          <p className="muted">
+            {role === 'Administrator'
+              ? 'This stamp is shared across every report card for the selected academic year and term.'
+              : 'The official stamp is shared across every report card for the selected academic year and term.'}
+          </p>
+          <div className="report-stamp-editor">
+            {reportStamp ? (
+              <img src={reportStamp} alt={`School stamp for ${year}, term ${term}`} />
+            ) : (
+              <OfficialStamp term={term} year={year} />
+            )}
+            {role === 'Administrator' && (
+              <div>
+                <Field label="Upload school stamp" hint="PNG or JPEG, up to 500 KB.">
+                  <input
+                    type="file"
+                    accept="image/png,image/jpeg"
+                    aria-label="Upload school stamp"
+                    onChange={(e) => {
+                      const file = e.target.files?.[0];
+                      if (file) handleStampUpload(file);
+                      e.currentTarget.value = '';
+                    }}
+                  />
+                </Field>
+                {reportStamp && (
+                  <Button
+                    variant="secondary"
+                    type="button"
+                    onClick={() =>
+                      setReportStamps((current) => {
+                        const remaining = { ...current };
+                        delete remaining[reportStampKey];
+                        return remaining;
+                      })
+                    }
+                  >
+                    Use generated stamp
+                  </Button>
+                )}
+              </div>
+            )}
           </div>
         </fieldset>
 

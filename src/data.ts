@@ -167,6 +167,7 @@ export interface Settings {
   vacation: string;
   reopening: string;
   crest?: string;
+  reportStamps?: Record<string, string>;
 }
 export interface StudentBill {
   studentId: string;
