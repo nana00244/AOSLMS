@@ -1966,27 +1966,25 @@ function ReportCardEditor({ student, onClose }: { student: Student; onClose: () 
           </p>
           <div className="report-logo-editor">
             <img src={schoolLogo || './crest.svg'} alt="School logo preview" />
-            {role === 'Administrator' && (
-              <div>
-                <Field label="Upload school logo" hint="PNG or JPEG, up to 500 KB. Save changes to publish it globally.">
-                  <input
-                    type="file"
-                    accept="image/png,image/jpeg"
-                    aria-label="Upload school logo"
-                    onChange={(e) => {
-                      const file = e.currentTarget.files?.[0];
-                      if (file) handleSchoolLogoUpload(file);
-                      e.currentTarget.value = '';
-                    }}
-                  />
-                </Field>
-                {schoolLogo && (
-                  <Button variant="secondary" type="button" onClick={() => setSchoolLogo('')}>
-                    Use graduation-cap mark
-                  </Button>
-                )}
-              </div>
-            )}
+            <div>
+              <Field label="Upload school logo" hint="PNG or JPEG, up to 500 KB. Save changes to publish it globally.">
+                <input
+                  type="file"
+                  accept="image/png,image/jpeg"
+                  aria-label="Upload school logo"
+                  onChange={(e) => {
+                    const file = e.currentTarget.files?.[0];
+                    if (file) handleSchoolLogoUpload(file);
+                    e.currentTarget.value = '';
+                  }}
+                />
+              </Field>
+              {schoolLogo && (
+                <Button variant="secondary" type="button" onClick={() => setSchoolLogo('')}>
+                  Use graduation-cap mark
+                </Button>
+              )}
+            </div>
           </div>
         </fieldset>
 
