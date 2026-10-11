@@ -1,6 +1,7 @@
 import { courseworkSubjectId, type State, type User } from './data.ts';
 import { emptyState } from './emptyState.ts';
 import { normalizeTeachingAccess } from './accountRules.ts';
+import { removeStudents } from './studentRecords.ts';
 
 const same = (a: unknown, b: unknown) => JSON.stringify(a) === JSON.stringify(b);
 const finance = new Set(['payments', 'expenses', 'payroll', 'fees', 'studentConcessions', 'studentBills']);
@@ -236,5 +237,8 @@ export function applyChanges(state: State, user: User, changes: Change[]): State
     else rows.set(id, after);
     (next as any)[key] = materialize(key, rows);
   }
-  return next;
+  const removed = state.students
+    .filter((s) => !next.students.some((n) => n.id === s.id))
+    .map((s) => s.id);
+  return removed.length ? removeStudents(next, removed) : next;
 }

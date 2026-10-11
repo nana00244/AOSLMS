@@ -122,7 +122,7 @@ try {
     const login = await client.auth.signInWithPassword({ email, password });
     if (login.error) throw login.error;
     assert.equal(result.user.username, username);
-    accounts[role] = { client, id: result.user.id, email, username };
+    accounts[role] = { client, id: result.user.id, email, username, password };
   }
   const teacherAccount = accounts.Teacher;
   const teacherProfile = (await load(teacherAccount.client)).state.users.find(
@@ -277,6 +277,50 @@ try {
     notes: '',
     term: 1,
   };
+  const billingView = await load(accounts.Accountant.client);
+  assert(
+    !Object.values(billingView.state.studentBills).some((b) => b.studentId === sid),
+    'Enrollment must not bill fees',
+  );
+  const billId = `${sid}|${billingView.state.settings.year}|1`;
+  const bill = {
+    studentId: sid,
+    year: billingView.state.settings.year,
+    term: 1,
+    items: { Tuition: 100 },
+    concession: 0,
+    updatedAt: new Date().toISOString(),
+  };
+  await save(accounts.Accountant.client, [{ collection: 'studentBills', id: billId, after: bill }]);
+  const billView = await load(learner);
+  assert.equal(billView.state.studentBills[billId].items.Tuition, 100);
+  await call(
+    learner,
+    'workspace',
+    {
+      action: 'save',
+      revision: billView.revision,
+      changes: [
+        {
+          collection: 'studentBills',
+          id: billId,
+          before: billView.state.studentBills[billId],
+          after: { ...bill, items: { Tuition: 0 } },
+        },
+      ],
+    },
+    true,
+  );
+  const teacherBillView = await load(accounts.Teacher.client);
+  assert.deepEqual(teacherBillView.state.studentBills, {});
+  await save(accounts.Accountant.client, [
+    {
+      collection: 'studentBills',
+      id: billId,
+      before: billView.state.studentBills[billId],
+      after: { ...bill, items: { Tuition: 80 } },
+    },
+  ]);
   await save(accounts.Accountant.client, [
     { collection: 'payments', id: payment.id, after: payment },
   ]);
@@ -293,6 +337,25 @@ try {
   await call(admin, 'workspace', { action: 'save', revision: stale.revision, changes: [] }, true);
   await call(admin, 'admin-create-user', { action: 'deactivate', id: accounts.Student.id });
   await call(learner, 'workspace', { action: 'load' }, true);
+  // Reactivate only this fixture, then verify that deleting the roster record revokes its existing session atomically.
+  const reactivated=await service.from('profiles').update({ active: true }).eq('id', accounts.Student.id);
+  if(reactivated.error)throw reactivated.error;
+  const unbanned=await service.auth.admin.updateUserById(accounts.Student.id, { ban_duration: 'none' });
+  if(unbanned.error)throw unbanned.error;
+  const resigned=await learner.auth.signInWithPassword({email:accounts.Student.email,password:accounts.Student.password});
+  if(resigned.error)throw resigned.error;
+  await load(learner);
+  const beforeDelete=await load(admin);
+  await save(admin, [{ collection: 'students', id: sid, before: beforeDelete.state.students.find(s=>s.id===sid) }]);
+  await call(learner, 'workspace', { action: 'load' }, true);
+  const deleted = await load(admin);
+  assert(!deleted.state.payments.some((p) => p.studentId === sid));
+  assert(!Object.values(deleted.state.studentBills).some((b) => b.studentId === sid));
+  assert(!deleted.state.submissions.some((s) => s.studentId === sid));
+  assert.equal(deleted.state.users.find((u) => u.id === accounts.Student.id).active, false);
+  console.log(
+    'PASS: enrollment unbilled; accountant issues and edits bills; student billing writes denied; teacher bills hidden; student deletion cascades records and deactivates linked login.',
+  );
   console.log(
     'PASS: admin-created student/teacher/accountant logins; cross-session persistence; private upload and authorized download; accountant file access denied; student submission; teacher grading; student self-grading denied; admin endpoint denied to student; finance payment; stale-save rejection; immediate deactivation.',
   );

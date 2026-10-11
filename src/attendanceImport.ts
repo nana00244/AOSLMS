@@ -1,14 +1,14 @@
 import Papa from 'papaparse';
 import type { AttendanceStatus, Student } from './data';
 
-const normalize = (s: string) =>
+export const normalize = (s: string) =>
   s
     .normalize('NFKD')
     .replace(/[\u0300-\u036f]/g, '')
     .toLowerCase()
     .replace(/[^\p{L}\p{N}]+/gu, ' ')
     .trim();
-const nameKey = (s: string) => normalize(s).split(' ').sort().join(' ');
+export const nameKey = (s: string) => normalize(s).split(' ').sort().join(' ');
 const months = [
   'january',
   'february',
@@ -125,7 +125,7 @@ export function parseAttendanceFile(text: string, filename: string): AttendanceF
   return { className, month, rows, ignoredCells };
 }
 
-const classKey = (s: string) =>
+export const classKey = (s: string) =>
   normalize(s)
     .replace(/^class\s+/, '')
     .replace(/^(bs|basic|primary)\s*0*(\d+)/, 'basic $2');
@@ -136,7 +136,7 @@ export function matchAttendanceClass(name: string, classes: string[]): string {
   const candidates = base ? classes.filter((c) => classKey(c).startsWith(`${base} `)) : [];
   return candidates.length === 1 ? candidates[0] : '';
 }
-function similarity(a: string, b: string): number {
+export function similarity(a: string, b: string): number {
   const row = Array.from({ length: b.length + 1 }, (_, i) => i);
   for (let i = 1; i <= a.length; i++) {
     let previous = row[0];

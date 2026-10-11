@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { BillingPanel } from '../components/BillingPanel';
+import { studentBill } from '../data';
 import {
   Plus,
   Download,
@@ -155,7 +157,10 @@ export function Finance() {
     payments = all.reduce((sum, s) => sum + paid(data, s.id), 0),
     expenses = data.expenses.reduce((sum, e) => sum + e.amount, 0);
   const transactions = data.payments.filter(
-    (p) => (!isStudent || p.studentId === ownId) && p.term === data.settings.term,
+    (p) =>
+      (!isStudent || p.studentId === ownId) &&
+      p.term === data.settings.term &&
+      (!p.year || p.year === data.settings.year),
   );
   return (
     <>
@@ -293,7 +298,13 @@ export function Finance() {
                           </td>
                           <td>
                             <Badge tone={p >= b ? 'green' : p > 0 ? 'amber' : 'red'}>
-                              {p >= b ? 'Paid in full' : p > 0 ? 'Partial balance' : 'Unpaid'}
+                              {!studentBill(data, s.id)
+                                ? 'Unbilled'
+                                : p >= b
+                                  ? 'Paid in full'
+                                  : p > 0
+                                    ? 'Partial balance'
+                                    : 'Unpaid'}
                             </Badge>
                           </td>
                         </tr>
@@ -373,7 +384,7 @@ export function Finance() {
         <div className="finance-side">
           <Card>
             <CardTitle
-              title="Fee structure"
+              title={isStudent ? 'Issued bill items' : 'Fee template (not billed)'}
               action={
                 !isStudent && (
                   <button
@@ -397,23 +408,22 @@ export function Finance() {
               ))}
             </select>
             <dl className="fee-lines">
-              {Object.entries(data.fees[isStudent ? all[0]?.classId : feeClass] || {}).map(
-                ([name, amount]) => (
-                  <div key={name}>
-                    <dt>{name}</dt>
-                    <dd>{money(amount)}</dd>
-                  </div>
-                ),
-              )}
+              {Object.entries(
+                (isStudent ? studentBill(data, ownId)?.items : data.fees[feeClass]) || {},
+              ).map(([name, amount]) => (
+                <div key={name}>
+                  <dt>{name}</dt>
+                  <dd>{money(amount)}</dd>
+                </div>
+              ))}
             </dl>
             <div className="fee-total">
               <strong>Total per term</strong>
               <strong>
                 {money(
-                  Object.values(data.fees[isStudent ? all[0]?.classId : feeClass] || {}).reduce(
-                    (a, b) => a + b,
-                    0,
-                  ),
+                  Object.values(
+                    (isStudent ? studentBill(data, ownId)?.items : data.fees[feeClass]) || {},
+                  ).reduce((a, b) => a + b, 0),
                 )}
               </strong>
             </div>
@@ -443,6 +453,7 @@ export function Finance() {
           </Card>
         </div>
       </div>
+      {!isStudent && <BillingPanel />}
       {modal === 'payment' && (
         <Modal title="Record a student payment" onClose={() => setModal('')}>
           <form
@@ -464,6 +475,7 @@ export function Finance() {
                 date: String(f.get('date')),
                 notes: String(f.get('notes')),
                 term: data.settings.term,
+                year: data.settings.year,
               };
               update(
                 (d) => ({ ...d, payments: [...d.payments, p] }),
@@ -583,7 +595,7 @@ export function Finance() {
                 (d) => ({ ...d, fees: { ...d.fees, [feeClass]: fees } }),
                 'Fee structure updated',
               );
-              notify('Fee structure saved. Student balances updated.');
+              notify('Fee template saved. Issued student bills are unchanged.');
               setModal('');
             }}
           >

@@ -1,4 +1,6 @@
 import { useMemo, useState, type FormEvent } from 'react';
+import { BillingPanel } from '../components/BillingPanel';
+import { billKey } from '../data';
 import { Link, useSearchParams } from 'react-router-dom';
 import {
   Download,
@@ -166,6 +168,15 @@ export function StudentFinanceList() {
           ...d.studentConcessions,
           ...Object.fromEntries(selected.map((id) => [id, value])),
         },
+        studentBills: Object.fromEntries(
+          Object.entries(d.studentBills || {}).map(([key, bill]) => [
+            key,
+            selected.includes(bill.studentId) &&
+            key === billKey(bill.studentId, d.settings.year, d.settings.term)
+              ? { ...bill, concession: value, updatedAt: new Date().toISOString() }
+              : bill,
+          ]),
+        ),
       }),
       `${value}% fee concession applied to ${selected.length} student(s)`,
     );
@@ -212,6 +223,7 @@ export function StudentFinanceList() {
           </Button>
         }
       />
+      <BillingPanel />
       <Card>
         <div className="finance-filters">
           <SearchBox
@@ -359,7 +371,12 @@ export function PaymentRecorder() {
         0,
         billed(data, selected) -
           data.payments
-            .filter((p) => p.studentId === selected.id && p.term === data.settings.term)
+            .filter(
+              (p) =>
+                p.studentId === selected.id &&
+                p.term === data.settings.term &&
+                (!p.year || p.year === data.settings.year),
+            )
             .reduce((a, p) => a + p.amount, 0),
       )
     : 0;
@@ -532,9 +549,14 @@ function balanceOf(state: State, studentId: string, term: number) {
   return student
     ? Math.max(
         0,
-        billed(state, student) -
+        billed(state, student, term) -
           state.payments
-            .filter((p) => p.studentId === studentId && p.term === term)
+            .filter(
+              (p) =>
+                p.studentId === studentId &&
+                p.term === term &&
+                (!p.year || p.year === state.settings.year),
+            )
             .reduce((a, p) => a + p.amount, 0),
       )
     : 0;
@@ -557,13 +579,14 @@ export function FeeManagement() {
       <PageHeader
         eyebrow="ACCOUNTS · BILLING CONFIGURATION"
         title="Fee structures & categories"
-        description="Maintain classroom fee schedules used by the student ledger."
+        description="Maintain fee templates, then explicitly issue or edit student bills."
       />
+      <BillingPanel />
       <div className="finance-layout">
         <Card>
           <CardTitle
             title="Term fee structure"
-            description="Save changes to update student billing totals."
+            description="Template changes do not change issued bills or bill newly enrolled students."
           />
           <Field label="Classroom">
             <select value={classId} onChange={(e) => setClassId(e.target.value)}>
@@ -584,7 +607,7 @@ export function FeeManagement() {
                 (d) => ({ ...d, fees: { ...d.fees, [classId]: fees } }),
                 `Fee structure updated for ${classId}`,
               );
-              notify('Fee structure saved; balances are recalculated from the updated schedule.');
+              notify('Fee template saved. Issued student bills are unchanged.');
             }}
           >
             <div className="form-grid">
