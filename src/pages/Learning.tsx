@@ -989,7 +989,15 @@ export function Certificates() {
   );
 }
 function GraduationCapLogo() {
-  return <img src="./crest.svg" alt="School crest" width="54" height="54" />;
+  const { data } = useStore();
+  return (
+    <img
+      src={data.settings.crest || './crest.svg'}
+      alt="School logo"
+      width="54"
+      height="54"
+    />
+  );
 }
 export function Community() {
   const { data, role, me, allowedClasses, update, notify } = useStore();

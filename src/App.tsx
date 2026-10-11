@@ -174,7 +174,7 @@ const studentNav = [
   { label: 'My Schedule', path: '/student/schedule', icon: CalendarDays, roles: ['Student'] },
 ];
 function Login() {
-  const { signIn, authLoading, storageError, theme, toggleTheme } = useStore();
+  const { signIn, authLoading, storageError, theme, toggleTheme, data } = useStore();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
@@ -188,8 +188,12 @@ function Login() {
       )}
       <section className="login-story">
         <div className="brand">
-          <span className="brand-icon">
-            <GraduationCap />
+          <span className={`brand-icon ${data.settings.crest ? 'has-school-logo' : ''}`}>
+            {data.settings.crest ? (
+              <img src={data.settings.crest} alt="School logo" />
+            ) : (
+              <GraduationCap />
+            )}
           </span>
           <div>
             AYISATU OWEN<small>SCHOOLS</small>
@@ -239,6 +243,11 @@ function Login() {
       </section>
       <section className="login-panel">
         <div className="login-form">
+          <img
+            className="login-school-logo"
+            src={data.settings.crest || './crest.svg'}
+            alt="School logo"
+          />
           <div className="eyebrow">WELCOME TO YOUR SCHOOL</div>
           <h2>Good to have you here.</h2>
           <p>
@@ -433,8 +442,12 @@ function Shell() {
       )}
       <aside className={`sidebar ${mobile ? 'open' : ''}`}>
         <Link to="/" className="brand" onClick={() => setMobile(false)}>
-          <span className="brand-icon">
-            <GraduationCap size={27} />
+          <span className={`brand-icon ${data.settings.crest ? 'has-school-logo' : ''}`}>
+            {data.settings.crest ? (
+              <img src={data.settings.crest} alt="School logo" />
+            ) : (
+              <GraduationCap size={27} />
+            )}
           </span>
           <div>
             Ayisatu Owen<small>SCHOOLS · SIS & LMS</small>

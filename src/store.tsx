@@ -9,6 +9,12 @@ import { loadWorkspace, saveWorkspace, type Snapshot } from './backend';
 export function validateState(value: unknown): value is State {
   return workspaceSchema.safeParse(value).success;
 }
+function emptyStateWithCachedLogo(): State {
+  const state = emptyState();
+  const logo = localStorage.getItem('aos-school-logo');
+  if (logo?.startsWith('data:image/')) state.settings.crest = logo;
+  return state;
+}
 export type Theme = 'light' | 'dark';
 
 interface Store {
@@ -33,7 +39,7 @@ interface Store {
 }
 const Context = createContext<Store>(null!);
 export function StoreProvider({ children }: { children: ReactNode }) {
-  const [data, setData] = useState<State>(() => emptyState());
+  const [data, setData] = useState<State>(() => emptyStateWithCachedLogo());
   const snapshot = useRef<Snapshot | null>(null);
   const busy = useRef(false);
   const generation = useRef(0);
@@ -41,6 +47,13 @@ export function StoreProvider({ children }: { children: ReactNode }) {
   const [role, setRoleState] = useState<Role | null>(null);
   const [authLoading, setAuthLoading] = useState(true);
   const [authProfile, setAuthProfile] = useState<User | undefined>();
+
+  useEffect(() => {
+    if (data.settings.crest) localStorage.setItem('aos-school-logo', data.settings.crest);
+    const favicon = document.querySelector<HTMLLinkElement>('link[rel="icon"]');
+    const logo = data.settings.crest || localStorage.getItem('aos-school-logo');
+    if (favicon) favicon.href = logo || './crest.svg';
+  }, [data.settings.crest]);
 
   async function refresh() {
     if (!supabase || busy.current) return;
@@ -70,7 +83,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
           setRoleState(null);
           setAuthProfile(undefined);
           snapshot.current = null;
-          setData(emptyState());
+          setData(emptyStateWithCachedLogo());
         }
       } finally {
         if (active) setAuthLoading(false);
@@ -88,7 +101,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
       } else {
         generation.current++;
         snapshot.current = null;
-        setData(emptyState());
+        setData(emptyStateWithCachedLogo());
         setAuthProfile(undefined);
         setRoleState(null);
         setAuthLoading(false);
