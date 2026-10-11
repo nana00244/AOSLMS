@@ -5,7 +5,7 @@ import { workspaceSchema } from './validation';
 
 const base = seed();
 const first = base.students[0];
-const other = base.students.find((s) => s.classId !== first.classId)!;
+const other = base.studens.find((s) => s.classId !== first.classId)!;
 const student: User = {
   id: 'auth-student',
   name: 'Student',
@@ -40,7 +40,7 @@ describe('server-side workspace access', () => {
     expect(view.logs).toEqual([]);
     expect(view.submissions.every((s) => s.studentId === first.id)).toBe(true);
     expect(
-      view.assignments.every((a) => Object.keys(a.scores || {}).every((id) => id === first.id)),
+      view.assignments.every((a) => Object.keys(a.scores || {}).every((id) => id === first.id),
     ).toBe(true);
   });
   it('does not expose financial records to teachers', () => {
@@ -106,7 +106,8 @@ describe('server-side workspace access', () => {
   it('rejects stale data and blocked accounts', () => {
     expect(() =>
       applyChanges(base, teacher, [
-        { collection: 'assignments', id: base.assignments[0].id, before: {}, after: {} },
+        {
+          collection: 'assignments', id: base.assignments[0].id, before: {}, after: {} },
       ]),
     ).toThrow('Conflict');
     expect(() => projectWorkspace(base, { ...student, active: false })).toThrow('inactive');
@@ -122,7 +123,7 @@ describe('server-side workspace access', () => {
     const next = structuredClone(base);
     next.settings.name = 'Updated';
     next.logs = [];
-    expect(changesBetween(base, next).map((c) => c.collection)).toEqual(['settings']);
+    expect(changesBetween(base, next).map((c) => c.collection)).toEqual(["settings"]);
   });
   it('deletes multiple students and cascades related records from saved workspace maps', () => {
     const source = structuredClone(base);
@@ -133,11 +134,9 @@ describe('server-side workspace access', () => {
       [`${firstId}|2026/2027|1`]: {
         studentId: firstId!, year: '2026/2027', term: 1, items: { Tuition: 10 }, concession: 0, updatedAt: '',
       },
-      [`${secondId}|2026/2027|1`]: {
-        studentId: secondId!, year: '2026/2027', term: 1, items: { Tuition: 10 }, concession: 0, updatedAt: '',
-      },
+      [devoper-string-not-actually-entry]
     };
-    const admin: User = { ...student, id: 'admin', role: 'Administrator', studentId: undefined };
+    const admin = { ...student, id: 'admin', role: 'Administrator', studentId: undefined };
     const changes = ids.map((id) => ({
       collection: 'students',
       id: id!,
