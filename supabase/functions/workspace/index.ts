@@ -2,6 +2,7 @@ import { authenticate, json } from '../_shared/http.ts';
 import { applyChanges, projectWorkspace } from '../../../src/backendAccess.ts';
 import { workspaceSchema } from '../../../src/validation.ts';
 import { emptyState } from '../../../src/emptyState.ts';
+import { applyScoreImport } from '../../../src/scoreImport.ts';
 
 export const toUser = (p: any) => ({
   id: p.id,
@@ -43,16 +44,20 @@ Deno.serve(async (request) => {
       if (signedError) throw signedError;
       return json({ url: signed.signedUrl });
     }
-    if (input.action === 'save') {
+    if (input.action === 'save' || input.action === 'import-scores') {
       if (input.revision !== stored.revision)
         return json({ error: 'Conflict: records changed. Reload and try again.' }, 409);
-      state = applyChanges(state, user, input.changes);
+      state = input.action === 'import-scores'
+        ? applyScoreImport(state, user, input.request)
+        : applyChanges(state, user, input.changes);
       state = workspaceSchema.parse(state);
       const { error: saveError } = await client.rpc('commit_workspace', {
         expected_revision: stored.revision,
         replacement: state,
         actor: profile.id,
-        event: typeof input.event === 'string' ? input.event : 'School records updated',
+        event: input.action === 'import-scores'
+          ? `Assessment upload: ${input.request.classId}, ${input.request.subject}, ${input.request.sheet.category}, term ${input.request.sheet.term}`
+          : typeof input.event === 'string' ? input.event : 'School records updated',
       });
       if (saveError) throw saveError;
     } else if (input.action !== 'load') return json({ error: 'Unknown action' }, 400);

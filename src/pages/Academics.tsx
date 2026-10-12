@@ -20,6 +20,7 @@ import {
   ShieldCheck,
 } from 'lucide-react';
 import { csv, useStore } from '../store';
+import { ScoreSheetImport } from '../components/ScoreSheetImport';
 import { downloadLearningFile, uploadLearningFile } from '../backend';
 import { isSupabaseConfigured } from '../supabase';
 import {
@@ -58,6 +59,7 @@ import {
   Tabs,
 } from '../components/ui';
 export function Coursework() {
+  const [importOpen, setImportOpen] = useState(false);
   const { data, role, ownId, allowedClasses, me, update, notify } = useStore();
   const [cls, setCls] = useState(allowedClasses[0] || ''),
     [create, setCreate] = useState(false),
@@ -135,12 +137,14 @@ export function Coursework() {
       hasClassAccess(assignment.classId) &&
       hasSubjectAccess(assignment.classId, assignment.subject) &&
       (!isAdministrator
-        ? !assignment.term || assignment.term === `Term ${data.settings.term}` || assignment.term === String(data.settings.term)
-        : (selectedTermFilter === 'all'
-            ? true
-            : selectedTermFilter === 'current'
-              ? !assignment.term || assignment.term === `Term ${data.settings.term}`
-              : !assignment.term || assignment.term === selectedTermFilter)),
+        ? !assignment.term ||
+          assignment.term === `Term ${data.settings.term}` ||
+          assignment.term === String(data.settings.term)
+        : selectedTermFilter === 'all'
+          ? true
+          : selectedTermFilter === 'current'
+            ? !assignment.term || assignment.term === `Term ${data.settings.term}`
+            : !assignment.term || assignment.term === selectedTermFilter),
   );
   const curriculumAssignments = assignments.filter((assignment) => assignment.id.startsWith('cc_'));
   const legacyAssignments = assignments.filter((assignment) => !assignment.id.startsWith('cc_'));
@@ -285,13 +289,20 @@ export function Coursework() {
         description="Small discoveries. Meaningful feedback. Lasting progress."
         actions={
           canManageCoursework && (
-            <Button onClick={() => setCreate(true)}>
-              <Plus size={17} />
-              Create assignment
-            </Button>
+            <>
+              <Button variant="secondary" onClick={() => setImportOpen(true)}>
+                <Upload size={17} />
+                Upload score sheet
+              </Button>
+              <Button onClick={() => setCreate(true)}>
+                <Plus size={17} />
+                Create assignment
+              </Button>
+            </>
           )
         }
       />
+      {importOpen && <ScoreSheetImport onClose={() => setImportOpen(false)} />}
       <div className="stats-grid three">
         <Stat
           label={student ? 'Class assignments' : 'Pending grading'}
@@ -305,6 +316,9 @@ export function Coursework() {
               ? assignments.filter(
                   (assignment) =>
                     assignment.scores?.[ownId]?.score !== undefined ||
+                    Object.values(assignment.slotScores?.[ownId] || {}).some(
+                      (entry) => entry.score !== undefined && entry.score !== null,
+                    ) ||
                     data.submissions.some(
                       (submission) =>
                         submission.assignmentId === assignment.id &&
@@ -473,6 +487,10 @@ export function Coursework() {
             (s) => s.assignmentId === a.id && s.studentId === ownId,
           );
           const ownScore = a.scores?.[ownId];
+          const ownEntries = Object.values(a.slotScores?.[ownId] || {});
+          const hasSlotGrade = ownEntries.some(
+            (entry) => entry.score !== undefined && entry.score !== null,
+          );
           return (
             <Card
               className={`assignment-card ${selected?.id === a.id ? 'is-selected' : ''}`}
@@ -485,7 +503,7 @@ export function Coursework() {
                 <Badge
                   tone={
                     student
-                      ? ownScore || mine?.score !== undefined
+                      ? ownScore || hasSlotGrade || mine?.score !== undefined
                         ? 'green'
                         : mine
                           ? 'blue'
@@ -494,7 +512,7 @@ export function Coursework() {
                   }
                 >
                   {student
-                    ? ownScore || mine?.score !== undefined
+                    ? ownScore || hasSlotGrade || mine?.score !== undefined
                       ? 'Graded'
                       : mine
                         ? 'Submitted'
@@ -517,7 +535,9 @@ export function Coursework() {
               </div>
               <div className="assignment-footer">
                 <small>
-                  {data.submissions.filter((s) => s.assignmentId === a.id).length} submissions
+                  {student && ownEntries.length
+                    ? `${ownEntries.length} assessment entries recorded`
+                    : `${Object.values(a.slotScores || {}).filter((entries) => Object.keys(entries).length).length} students assessed · ${data.submissions.filter((s) => s.assignmentId === a.id).length} submissions`}
                 </small>
                 <Button
                   variant="ghost"
@@ -533,7 +553,7 @@ export function Coursework() {
                   }}
                 >
                   {student
-                    ? mine || ownScore
+                    ? mine || ownScore || ownEntries.length
                       ? 'View work / grade'
                       : 'Open task'
                     : 'Open Excel grading sheet'}
@@ -597,13 +617,11 @@ export function Coursework() {
                   ).trim();
                   if (!value) return [];
                   const score = Number(value);
-                  if (!Number.isFinite(score) || score < 0 || score > slot.maxPoints) {
+                  const maxPoints =
+                    assignment.slotScores?.[pupil.id]?.[slot.slotKey]?.maxPoints ?? slot.maxPoints;
+                  if (!Number.isFinite(score) || score < 0 || score > maxPoints) {
                     return [
-                      [
-                        `${assignment.title} · ${slot.slotKey}`,
-                        pupil.name,
-                        slot.maxPoints,
-                      ] as const,
+                      [`${assignment.title} · ${slot.slotKey}`, pupil.name, maxPoints] as const,
                     ];
                   }
                   return [];
@@ -633,7 +651,9 @@ export function Coursework() {
                       slot.slotKey,
                       {
                         score,
-                        maxPoints: slot.maxPoints,
+                        maxPoints:
+                          assignment.slotScores?.[pupil.id]?.[slot.slotKey]?.maxPoints ??
+                          slot.maxPoints,
                         feedbackType: status,
                         feedbackReason: String(
                           form.get(`feedback-${assignment.id}-${slot.slotKey}-${pupil.id}`) || '',
@@ -716,23 +736,48 @@ export function Coursework() {
               <Button
                 type="button"
                 variant="secondary"
-                onClick={() =>
+                onClick={() => {
+                  const maxima = gridColumns.map(({ assignment, slot }) => {
+                    const values = new Set(
+                      gridPupils.flatMap((pupil) => {
+                        const entry = assignment.slotScores?.[pupil.id]?.[slot.slotKey];
+                        return entry ? [entry.maxPoints ?? slot.maxPoints] : [];
+                      }),
+                    );
+                    return values.size > 1 ? null : ([...values][0] ?? slot.maxPoints);
+                  });
+                  if (maxima.includes(null)) {
+                    notify(
+                      'This grid has different maximum marks within a column. Filter students to a common marking scale before exporting.',
+                    );
+                    return;
+                  }
                   csv(`coursework-${cls}-${scoreSubject}.csv`, [
-                    ['Student', ...gridColumns.map(({ slot }) => slot.slotKey)],
+                    ['AYISATU OWEN SCHOOLS - CONTINUOUS ASSESSMENT SCORE SHEET'],
+                    ['Subject', scoreSubject, 'Class', cls],
+                    [
+                      'Assessment Category',
+                      gridAssignments[0]?.category || '',
+                      'Term',
+                      gridAssignments[0]?.term || `Term ${data.settings.term}`,
+                    ],
+                    [
+                      'Student Name',
+                      'Admission Number',
+                      ...gridColumns.map(
+                        ({ slot }, index) => `${slot.slotKey} (/${maxima[index]})`,
+                      ),
+                    ],
                     ...gridPupils.map((pupil) => [
                       pupil.name,
+                      pupil.id,
                       ...gridColumns.map(({ assignment, slot }) => {
                         const entry = assignment.slotScores?.[pupil.id]?.[slot.slotKey];
-                        return (
-                          entry?.score ??
-                          (entry?.feedbackType && entry.feedbackType !== 'none'
-                            ? `[${courseworkFeedbackMetadata[entry.feedbackType].tag}]`
-                            : '')
-                        );
+                        return `${entry?.score ?? ''}${entry?.feedbackType && entry.feedbackType !== 'none' ? ` [${courseworkFeedbackMetadata[entry.feedbackType].tag}]` : ''}`.trim();
                       }),
                     ]),
-                  ])
-                }
+                  ]);
+                }}
               >
                 <Download size={15} /> Export CSV
               </Button>
@@ -780,11 +825,11 @@ export function Coursework() {
                               item.assignmentId === assignment.id && item.studentId === pupil.id,
                           );
                           const entry = assignment.slotScores?.[pupil.id]?.[slot.slotKey];
-                          const score =
-                            entry?.score ??
-                            (slotIndex === 0
+                          const score = entry
+                            ? entry.score
+                            : slotIndex === 0
                               ? (assignment.scores?.[pupil.id]?.score ?? submission?.score)
-                              : undefined);
+                              : undefined;
                           const feedback =
                             entry?.feedbackReason ??
                             (slotIndex === 0
@@ -796,16 +841,18 @@ export function Coursework() {
                               className="coursework-grid-score"
                             >
                               <input
+                                key={`score-${entry?.updatedAt || ''}`}
                                 aria-label={`${pupil.name} ${slot.slotKey} score`}
                                 name={`score-${assignment.id}-${slot.slotKey}-${pupil.id}`}
                                 type="number"
                                 min="0"
-                                max={slot.maxPoints}
-                                step="0.5"
-                                defaultValue={score}
+                                max={entry?.maxPoints ?? slot.maxPoints}
+                                step="any"
+                                defaultValue={score ?? ''}
                                 placeholder="—"
                               />
                               <select
+                                key={`status-${entry?.updatedAt || ''}`}
                                 aria-label={`${pupil.name} ${slot.slotKey} feedback status`}
                                 name={`status-${assignment.id}-${slot.slotKey}-${pupil.id}`}
                                 defaultValue={entry?.feedbackType || 'none'}
@@ -819,6 +866,7 @@ export function Coursework() {
                                 )}
                               </select>
                               <input
+                                key={`feedback-${entry?.updatedAt || ''}`}
                                 aria-label={`${pupil.name} ${slot.slotKey} feedback`}
                                 name={`feedback-${assignment.id}-${slot.slotKey}-${pupil.id}`}
                                 defaultValue={feedback}
@@ -1353,40 +1401,40 @@ function OfficialStamp({
 
   return (
     <svg width="78" height="78" viewBox="0 0 100 100" style={{ transform: 'rotate(-3deg)' }}>
-        <circle cx="50" cy="50" r="46" fill="none" stroke="#1d4ed8" strokeWidth="2.2" />
-        <circle cx="50" cy="50" r="41.5" fill="none" stroke="#1d4ed8" strokeWidth="0.9" />
+      <circle cx="50" cy="50" r="46" fill="none" stroke="#1d4ed8" strokeWidth="2.2" />
+      <circle cx="50" cy="50" r="41.5" fill="none" stroke="#1d4ed8" strokeWidth="0.9" />
 
-        <path id="stamp-top" d="M 17,50 A 33,33 0 1,1 83,50" fill="none" />
-        <path id="stamp-bot" d="M 83,50 A 33,33 0 0,1 17,50" fill="none" />
+      <path id="stamp-top" d="M 17,50 A 33,33 0 1,1 83,50" fill="none" />
+      <path id="stamp-bot" d="M 83,50 A 33,33 0 0,1 17,50" fill="none" />
 
-        <text fontSize="7.8" fill="#1d4ed8" fontWeight="800" letterSpacing="1.2">
-          <textPath href="#stamp-top" startOffset="50%" textAnchor="middle">
-            AYISATU OWEN SCHOOLS
-          </textPath>
-        </text>
+      <text fontSize="7.8" fill="#1d4ed8" fontWeight="800" letterSpacing="1.2">
+        <textPath href="#stamp-top" startOffset="50%" textAnchor="middle">
+          AYISATU OWEN SCHOOLS
+        </textPath>
+      </text>
 
-        <text fontSize="6.8" fill="#1d4ed8" fontWeight="750" letterSpacing="0.8">
-          <textPath href="#stamp-bot" startOffset="50%" textAnchor="middle">
-            OFFICIAL EXAMS STAMP
-          </textPath>
-        </text>
+      <text fontSize="6.8" fill="#1d4ed8" fontWeight="750" letterSpacing="0.8">
+        <textPath href="#stamp-bot" startOffset="50%" textAnchor="middle">
+          OFFICIAL EXAMS STAMP
+        </textPath>
+      </text>
 
-        <rect x="25" y="41" width="50" height="17" rx="2.5" fill="#1d4ed8" />
-        <text
-          x="50"
-          y="53.5"
-          textAnchor="middle"
-          fill="#ffffff"
-          fontSize="9.8"
-          fontWeight="900"
-          letterSpacing="1"
-        >
-          {status}
-        </text>
+      <rect x="25" y="41" width="50" height="17" rx="2.5" fill="#1d4ed8" />
+      <text
+        x="50"
+        y="53.5"
+        textAnchor="middle"
+        fill="#ffffff"
+        fontSize="9.8"
+        fontWeight="900"
+        letterSpacing="1"
+      >
+        {status}
+      </text>
 
-        <text x="50" y="69" textAnchor="middle" fill="#1d4ed8" fontSize="6.5" fontWeight="700">
-          {year}/TERM {term}
-        </text>
+      <text x="50" y="69" textAnchor="middle" fill="#1d4ed8" fontSize="6.5" fontWeight="700">
+        {year}/TERM {term}
+      </text>
     </svg>
   );
 }
@@ -1941,9 +1989,9 @@ function ReportCardEditor({ student, onClose }: { student: Student; onClose: () 
         ...d,
         students: updatedStudents,
         settings: {
-        ...updatedSettings,
-        crest: schoolLogo,
-        reportStamps,
+          ...updatedSettings,
+          crest: schoolLogo,
+          reportStamps,
         },
         grades: updatedGrades,
         remarks: updatedRemarks,
@@ -1962,12 +2010,16 @@ function ReportCardEditor({ student, onClose }: { student: Student; onClose: () 
         <fieldset className="editor-fieldset">
           <legend>Global School Logo</legend>
           <p className="muted">
-            This logo replaces the graduation-cap mark on every report card and throughout the system.
+            This logo replaces the graduation-cap mark on every report card and throughout the
+            system.
           </p>
           <div className="report-logo-editor">
             <img src={schoolLogo || './crest.svg'} alt="School logo preview" />
             <div>
-              <Field label="Upload school logo" hint="PNG or JPEG, up to 500 KB. Save changes to publish it globally.">
+              <Field
+                label="Upload school logo"
+                hint="PNG or JPEG, up to 500 KB. Save changes to publish it globally."
+              >
                 <input
                   type="file"
                   accept="image/png,image/jpeg"
@@ -2092,7 +2144,9 @@ function ReportCardEditor({ student, onClose }: { student: Student; onClose: () 
 
         {/* School stamps are shared by all report cards for this academic year and term. */}
         <fieldset className="editor-fieldset" style={{ marginTop: 14 }}>
-          <legend>School Stamp · {year} · Term {term}</legend>
+          <legend>
+            School Stamp · {year} · Term {term}
+          </legend>
           <p className="muted">
             {role === 'Administrator'
               ? 'This stamp is shared across every report card for the selected academic year and term.'

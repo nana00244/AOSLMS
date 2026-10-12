@@ -5,7 +5,8 @@ import { assignedClassIdsForTeacher } from './services/teacherService';
 import { isSupabaseConfigured, supabase } from './supabase';
 import { loginIdentifier } from './accountRules';
 import { emptyState } from './emptyState';
-import { loadWorkspace, saveWorkspace, type Snapshot } from './backend';
+import { loadWorkspace, saveWorkspace, importScoreSheet, type Snapshot } from './backend';
+import { applyScoreImport, type ScoreImportRequest } from './scoreImport';
 export function validateState(value: unknown): value is State {
   return workspaceSchema.safeParse(value).success;
 }
@@ -22,6 +23,7 @@ interface Store {
   role: Role | null;
   setRole: (r: Role | null) => void;
   update: (fn: (s: State) => State, action?: string) => Promise<boolean>;
+  importScores: (request: ScoreImportRequest) => Promise<boolean>;
   notify: (message: string) => void;
   toast: string;
   storageError: string;
@@ -43,6 +45,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
   const snapshot = useRef<Snapshot | null>(null);
   const busy = useRef(false);
   const generation = useRef(0);
+  const refreshSequence = useRef(0);
   const [saving, setSaving] = useState(false);
   const [role, setRoleState] = useState<Role | null>(null);
   const [authLoading, setAuthLoading] = useState(true);
@@ -58,8 +61,15 @@ export function StoreProvider({ children }: { children: ReactNode }) {
   async function refresh() {
     if (!supabase || busy.current) return;
     const currentGeneration = generation.current;
+    const sequence = ++refreshSequence.current;
     const result = await loadWorkspace();
-    if (currentGeneration !== generation.current || busy.current) return;
+    if (
+      currentGeneration !== generation.current ||
+      busy.current ||
+      sequence !== refreshSequence.current ||
+      (snapshot.current && result.revision < snapshot.current.revision)
+    )
+      return;
     snapshot.current = result;
     setData(result.state);
     setStorageError('');
@@ -118,6 +128,45 @@ export function StoreProvider({ children }: { children: ReactNode }) {
       listener.subscription.unsubscribe();
     };
   }, []);
+  useEffect(() => {
+    if (!supabase || !authProfile?.id) return;
+    const client = supabase;
+    let active = true;
+    let timer: ReturnType<typeof setTimeout>;
+    const reload = () => {
+      clearTimeout(timer);
+      timer = setTimeout(async () => {
+        if (!active) return;
+        if (busy.current) {
+          reload();
+          return;
+        }
+        try {
+          await refresh();
+        } catch {
+          if (active) setStorageError('Live updates interrupted. Reconnecting…');
+        }
+      }, 250);
+    };
+    // Only a revision number is broadcast. School records stay behind the scoped Edge API.
+    const channel = client
+      .channel(`workspace-revision-${authProfile.id}`)
+      .on(
+        'postgres_changes',
+        { event: 'UPDATE', schema: 'public', table: 'workspace_revisions' },
+        reload,
+      )
+      .subscribe((status) => {
+        if (status === 'SUBSCRIBED') reload();
+      });
+    const fallback = setInterval(reload, 30000);
+    return () => {
+      active = false;
+      clearTimeout(timer);
+      clearInterval(fallback);
+      void client.removeChannel(channel);
+    };
+  }, [authProfile?.id]);
   const [theme, setThemeState] = useState<Theme>(() => {
     const stored = localStorage.getItem('aos-theme');
     if (stored === 'light' || stored === 'dark') {
@@ -181,7 +230,11 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     setToast(message);
     window.setTimeout(() => setToast((current) => (current === message ? '' : current)), 4500);
   }
-  async function update(fn: (s: State) => State, action?: string): Promise<boolean> {
+  async function update(
+    fn: (s: State) => State,
+    action?: string,
+    scoreRequest?: ScoreImportRequest,
+  ): Promise<boolean> {
     if (isSupabaseConfigured) {
       if (!snapshot.current || busy.current) {
         notify('Please wait for the current save to finish.');
@@ -193,7 +246,9 @@ export function StoreProvider({ children }: { children: ReactNode }) {
       setSaving(true);
       setStorageError('');
       try {
-        const result = await saveWorkspace(previous, fn(previous.state), action);
+        const result = scoreRequest
+          ? await importScoreSheet(previous, scoreRequest)
+          : await saveWorkspace(previous, fn(previous.state), action);
         if (generation.current !== currentGeneration) return false;
         snapshot.current = result;
         setData(result.state);
@@ -233,6 +288,19 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     });
     return true;
   }
+  async function importScores(request: ScoreImportRequest) {
+    if (!user) {
+      notify('Sign in before uploading scores.');
+      return false;
+    }
+    const saved = await update(
+      (state) => applyScoreImport(state, user, request),
+      `Assessment score sheet imported: ${request.classId}, ${request.subject}, ${request.sheet.category}, term ${request.sheet.term}`,
+      request,
+    );
+    if (saved) notify('Score sheet saved. Subject cards and report cards are updated.');
+    return saved;
+  }
   return (
     <Context.Provider
       value={{
@@ -244,6 +312,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
         refresh,
         setRole,
         update,
+        importScores,
         notify,
         toast,
         storageError,
@@ -309,7 +378,11 @@ export async function backup(data: State) {
   const payload = JSON.stringify(data);
   download(
     `AOS_Backup_${new Date().toISOString().slice(0, 10)}.json`,
-    JSON.stringify({ format: 'aos-backup-v1', checksum: await checksum(payload), payload }, null, 2),
+    JSON.stringify(
+      { format: 'aos-backup-v1', checksum: await checksum(payload), payload },
+      null,
+      2,
+    ),
     'application/json',
   );
 }

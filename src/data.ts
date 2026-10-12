@@ -378,9 +378,13 @@ export function courseworkAssessment(
   studentId: string,
   classId: string,
   subject: string,
+  term = state.settings.term,
 ): CourseworkAssessment {
   const assignments = state.assignments.filter(
-    (assignment) => assignment.classId === classId && assignment.subject === subject,
+    (assignment) =>
+      assignment.classId === classId &&
+      assignment.subject === subject &&
+      (!assignment.term || assignment.term === String(term) || assignment.term === `Term ${term}`),
   );
   const categories = Object.fromEntries(
     courseworkCategories.map((category) => [category, null]),
@@ -407,12 +411,12 @@ export function courseworkAssessment(
         ? assignment.slots
         : [{ slotKey: 'Score', title: assignment.title, maxPoints: assignment.points }];
       const slotScores = slots.flatMap((slot, slotIndex) => {
-        const slotScore = assignment.slotScores?.[studentId]?.[slot.slotKey]?.score;
+        const entry = assignment.slotScores?.[studentId]?.[slot.slotKey];
         const legacyScore =
           slotIndex === 0
             ? (assignment.scores?.[studentId]?.score ?? submission?.score)
             : undefined;
-        const score = slotScore ?? legacyScore;
+        const score = entry ? entry.score : legacyScore;
         const feedbackType = assignment.slotScores?.[studentId]?.[slot.slotKey]?.feedbackType;
         if (
           score === undefined ||
@@ -437,7 +441,7 @@ export function courseworkAssessment(
     const possible = scores.reduce((sum, score) => sum + score.max, 0);
     if (category === 'Exam') {
       hasExam = true;
-      examRaw = Math.round(earned);
+      examRaw = Math.round((earned / possible) * 100);
     } else {
       hasSba = true;
       const scaled15 = Math.round((earned / possible) * 15);
@@ -454,7 +458,7 @@ export function courseworkAssessment(
   const rawSba = hasSba
     ? courseworkCategories.reduce((sum, category) => sum + (categories[category] ?? 0), 0)
     : null;
-  const sba = Math.round(((rawSba ?? 0) / 60) * 50);
+  const sba = Math.min(50, Math.round(((rawSba ?? 0) / 60) * 50));
   const exam = examRaw === null ? null : Math.round(examRaw / 2);
   const total = hasSba || hasExam ? Math.min(100, sba + (exam ?? 0)) : null;
 

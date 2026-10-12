@@ -1,6 +1,7 @@
 import { supabase } from './supabase';
 import type { State } from './data';
 import { changesBetween } from './backendAccess';
+import type { ScoreImportRequest } from './scoreImport';
 
 export async function invokeBackend(name: string, body: unknown) {
   if (!supabase) throw new Error('Supabase is not configured');
@@ -23,6 +24,11 @@ export interface Snapshot {
 }
 export const loadWorkspace = (): Promise<Snapshot> =>
   invokeBackend('workspace', { action: 'load' });
+export const importScoreSheet = (
+  snapshot: Snapshot,
+  request: ScoreImportRequest,
+): Promise<Snapshot> =>
+  invokeBackend('workspace', { action: 'import-scores', revision: snapshot.revision, request });
 export const saveWorkspace = (snapshot: Snapshot, next: State, event?: string): Promise<Snapshot> =>
   invokeBackend('workspace', {
     action: 'save',

@@ -47,9 +47,14 @@ try {
     AOS_CLOUD_TESTS: '1',
     AOS_TEST_SERVICE_KEY: key,
   };
-  if (!process.argv.includes('--browser-only'))
+  if (!process.argv.includes('--browser-only') && !process.argv.includes('--score-import'))
     run('node scripts/verify-backend-workflows.mjs', { stdio: 'inherit', env });
-  run('npm run test:e2e', { stdio: 'inherit', env });
+  run(
+    process.argv.includes('--score-import')
+      ? 'npm run test:e2e -- --grep score --workers=1'
+      : 'npm run test:e2e',
+    { stdio: 'inherit', env },
+  );
 } finally {
   const result = await client.auth.admin.deleteUser(data.user.id);
   try {
