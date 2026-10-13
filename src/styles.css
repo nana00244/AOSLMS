@@ -5513,6 +5513,17 @@ td .person {
 .pending-save-toggle {
   float: right;
 }
+.pending-save-reminder {
+  position: fixed;
+  bottom: calc(80px + env(safe-area-inset-bottom));
+  right: 12px;
+  z-index: 9500;
+  padding: 8px 12px;
+  border: 1px solid #b45309;
+  border-radius: 12px;
+  background: #fffbeb;
+  color: #78350f;
+}
 @media (max-width: 767px) {
   .pending-save-banner {
     bottom: calc(80px + env(safe-area-inset-bottom));
@@ -5539,6 +5550,7 @@ td .person {
 }
 @media print {
   .pending-save-banner,
+  .pending-save-reminder,
   .cloud-save-overlay,
   .report-batch-controls {
     display: none !important;

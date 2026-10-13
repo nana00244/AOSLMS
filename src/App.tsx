@@ -409,7 +409,18 @@ function BottomNav({ role, onOpenMenu }: { role: Role; onOpenMenu: () => void })
 }
 
 function Shell() {
-  const { role, setRole, signOut, data, me, toast, storageError, theme, toggleTheme } = useStore();
+  const {
+    role,
+    setRole,
+    signOut,
+    data,
+    me,
+    toast,
+    storageError,
+    pendingCount,
+    theme,
+    toggleTheme,
+  } = useStore();
   const [mobile, setMobile] = useState(false);
   const [compact, setCompact] = useState(false);
   const location = useLocation();
@@ -561,7 +572,7 @@ function Shell() {
           </div>
         </div>
         <main id="main-content" tabIndex={-1}>
-          {storageError && (
+          {storageError && !pendingCount && (
             <div className="notice warning" role="alert">
               {storageError}
             </div>

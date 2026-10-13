@@ -56,6 +56,8 @@ export function StoreProvider({ children }: { children: ReactNode }) {
   const [pendingCount, setPendingCount] = useState(0);
   const [syncingNow, setSyncingNow] = useState(false);
   const [pendingExpanded, setPendingExpanded] = useState(false);
+  const [pendingHidden, setPendingHidden] = useState(false);
+  const [resolving, setResolving] = useState(false);
   const [role, setRoleState] = useState<Role | null>(null);
   const [authLoading, setAuthLoading] = useState(true);
   const [authProfile, setAuthProfile] = useState<User | undefined>();
@@ -86,6 +88,8 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     snapshot.current = result;
     pendingRef.current = pending;
     setPendingCount(pending.length);
+    if (pending[0]?.conflict) setStorageError(pending[0].conflict);
+    else if (!pending.length) setStorageError('');
     const visible = pending.reduce(
       (state, save) => overlayChanges(state, save.changes),
       result.state,
@@ -150,11 +154,15 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     const execute = async () => {
       if (busy.current || current !== generation.current) return;
       busy.current = true;
-      setSyncingNow(true);
       try {
         let pending = await readPendingSaves(userId);
         while (pending.length && current === generation.current) {
           const save = pending[0];
+          if (save.conflict) {
+            if (snapshot.current) show(snapshot.current, pending);
+            return; // A human decision is required; polling cannot resolve this.
+          }
+          setSyncingNow(true);
           let result: Snapshot | undefined;
           for (let attempt = 0; attempt < 3; attempt++) {
             try {
@@ -163,6 +171,18 @@ export function StoreProvider({ children }: { children: ReactNode }) {
             } catch (error) {
               const message = error instanceof Error ? error.message : String(error);
               // Only the transactional compare-and-swap race is retryable immediately.
+              if (
+                message.startsWith('Conflict:') &&
+                !message.includes('Conflict: records changed')
+              ) {
+                await retainSave({ ...save, conflict: message });
+                pending = await readPendingSaves(userId);
+                if (current === generation.current && snapshot.current) {
+                  show(snapshot.current, pending);
+                  setPendingExpanded(true);
+                  setPendingHidden(false);
+                }
+              }
               if (attempt === 2 || !message.includes('Conflict: records changed')) throw error;
             }
           }
@@ -195,36 +215,54 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     }
   }
   async function retrySaves() {
-    if (pendingRef.current.length) await syncQueue();
+    if (pendingRef.current[0]?.conflict) await refresh();
+    else if (pendingRef.current.length) await syncQueue();
     else await refresh();
   }
-  async function resolveConflict() {
+  async function resolveConflict(keepLocal = true) {
     if (!storageError.includes('Conflict:') || !owner.current) return;
     if (
       !window.confirm(
-        'Keep the fields from your oldest pending save where they conflict with newer database entries? Other fields will be preserved. Download pending entries first if you want a separate copy.',
+        keepLocal
+          ? 'Keep your changed fields from the oldest pending save instead of the conflicting database values? Other fields will be preserved.'
+          : 'Discard only your oldest pending save and use the current database values? Download pending entries first if you want a copy. Later pending saves will be retained.',
       )
     )
       return;
-    const result = await loadWorkspace();
-    const first = (await readPendingSaves(owner.current))[0];
-    if (!first) return;
-    const changes = first.changes.map((change) => {
-      const before = recordValue(result.state, change);
-      return {
-        ...change,
-        before,
-        after: mergeSavedValue(
-          change.before,
-          change.after,
-          before,
-          `${change.collection}/${change.id}`,
-          true,
-        ),
-      };
-    });
-    await retainSave({ ...first, changes });
-    await retrySaves();
+    setResolving(true);
+    try {
+      if (syncing.current) await syncing.current;
+      const current = generation.current;
+      const userId = owner.current;
+      const result = await loadWorkspace();
+      const first = (await readPendingSaves(owner.current))[0];
+      if (!first || current !== generation.current || userId !== owner.current) return;
+      if (!keepLocal) {
+        await removeSave(first.id);
+      } else {
+        const changes = first.changes.map((change) => {
+          const before = recordValue(result.state, change);
+          return {
+            ...change,
+            before,
+            after: mergeSavedValue(
+              change.before,
+              change.after,
+              before,
+              `${change.collection}/${change.id}`,
+              true,
+            ),
+          };
+        });
+        await retainSave({ ...first, changes, conflict: undefined });
+      }
+      if (current !== generation.current) return;
+      show(result, await readPendingSaves(userId));
+      setStorageError('');
+      await retrySaves();
+    } finally {
+      setResolving(false);
+    }
   }
   useEffect(() => {
     if (!supabase) {
@@ -243,6 +281,8 @@ export function StoreProvider({ children }: { children: ReactNode }) {
           owner.current = session.user.id;
           setAuthLoading(true);
           setStorageError('');
+          setSyncingNow(false);
+          setPendingHidden(false);
           lastRefresh.current = 0;
           snapshot.current = null;
           dataRef.current = emptyState();
@@ -278,6 +318,8 @@ export function StoreProvider({ children }: { children: ReactNode }) {
         owner.current = '';
         setStorageError('');
         setPendingExpanded(false);
+        setPendingHidden(false);
+        setSyncingNow(false);
         snapshot.current = null;
         dataRef.current = emptyState();
         setData(dataRef.current);
@@ -369,11 +411,17 @@ export function StoreProvider({ children }: { children: ReactNode }) {
   }
   async function signOut() {
     if (pendingRef.current.length || writing.current) {
-      notify('Sync your pending saves before signing out. They are retained on this device.');
-      return;
+      if (
+        !window.confirm(
+          'Sign out? Unsynced entries will stay on this device for this account. Sign in again on this browser to review or sync them.',
+        )
+      )
+        return;
     }
     if (!supabase) return;
-    const result = await supabase.auth.signOut();
+    // Wait only for local persistence, never for a cloud sync or a conflict.
+    await serial.current.catch(() => {});
+    const result = await supabase.auth.signOut({ scope: 'local' });
     if (result.error) notify(result.error.message);
   }
   function update(
@@ -410,12 +458,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
             if (currentOwner !== owner.current) return false;
             show(snapshot.current!, pending);
           }
-          await syncQueue();
-          const remaining = await readPendingSaves(currentOwner);
-          if (currentOwner !== owner.current) return false;
-          const saved = !remaining.some((p) => !id || p.id === id);
-          if (saved) notify('Changes saved to the school database.');
-          return saved;
+          return id;
         } catch (error) {
           const message = error instanceof Error ? error.message : 'Could not retain this save';
           setStorageError(`Not saved: ${message}`);
@@ -424,7 +467,23 @@ export function StoreProvider({ children }: { children: ReactNode }) {
         }
       });
     serial.current = task;
-    return task.finally(() => {
+    const completion = task.then(async (id) => {
+      if (id === false || currentOwner !== owner.current) return false;
+      try {
+        await syncQueue();
+        const remaining = await readPendingSaves(currentOwner);
+        if (currentOwner !== owner.current) return false;
+        const saved = !remaining.some((p) => !id || p.id === id);
+        if (saved) notify('Changes saved to the school database.');
+        return saved;
+      } catch (error) {
+        const message = error instanceof Error ? error.message : 'Could not retain this save';
+        setStorageError(`Not saved: ${message}`);
+        notify(`Not saved: ${message}`);
+        return false;
+      }
+    });
+    return completion.finally(() => {
       writing.current--;
       if (!writing.current) setSaving(false);
     });
@@ -473,7 +532,12 @@ export function StoreProvider({ children }: { children: ReactNode }) {
       }}
     >
       {children}
-      {pendingCount > 0 && (
+      {pendingCount > 0 && pendingHidden && (
+        <button className="pending-save-reminder" onClick={() => setPendingHidden(false)}>
+          Review {pendingCount} pending save{pendingCount === 1 ? '' : 's'}
+        </button>
+      )}
+      {pendingCount > 0 && !pendingHidden && (
         <aside className="pending-save-banner" aria-label="Pending saves">
           <button
             className="pending-save-toggle"
@@ -484,19 +548,26 @@ export function StoreProvider({ children }: { children: ReactNode }) {
           </button>
           <strong>
             {pendingCount} pending save{pendingCount === 1 ? '' : 's'} —{' '}
-            {syncingNow ? 'syncing…' : 'retained on this device.'}
+            {pendingRef.current[0]?.conflict
+              ? 'needs review — retained on this device.'
+              : syncingNow
+                ? 'syncing…'
+                : 'retained on this device.'}
           </strong>
+          <button onClick={() => setPendingHidden(true)}>Dismiss notice</button>
           {pendingExpanded && (
             <>
               <span>
                 {storageError || 'Retained on this device until the database confirms the save.'}
               </span>
-              <button
-                disabled={syncingNow}
-                onClick={() => void retrySaves().catch((error) => notify(String(error)))}
-              >
-                {syncingNow ? 'Syncing…' : 'Retry sync'}
-              </button>
+              {!pendingRef.current[0]?.conflict && (
+                <button
+                  disabled={syncingNow}
+                  onClick={() => void retrySaves().catch((error) => notify(String(error)))}
+                >
+                  {syncingNow ? 'Syncing…' : 'Retry sync'}
+                </button>
+              )}
               <button
                 onClick={() =>
                   download(
@@ -509,17 +580,30 @@ export function StoreProvider({ children }: { children: ReactNode }) {
                 Download pending entries
               </button>
               {storageError.includes('Conflict:') && (
-                <button
-                  onClick={() => void resolveConflict().catch((error) => notify(String(error)))}
-                >
-                  Keep my changed fields and retry
-                </button>
+                <>
+                  <button
+                    disabled={resolving || syncingNow}
+                    onClick={() =>
+                      void resolveConflict(true).catch((error) => notify(String(error)))
+                    }
+                  >
+                    Keep my changed fields and retry
+                  </button>
+                  <button
+                    disabled={resolving || syncingNow}
+                    onClick={() =>
+                      void resolveConflict(false).catch((error) => notify(String(error)))
+                    }
+                  >
+                    Use database version for oldest save
+                  </button>
+                </>
               )}
             </>
           )}
         </aside>
       )}
-      {saving && (
+      {saving && user && (
         <div className="cloud-save-overlay" role="status" aria-live="polite">
           Saving to your school database…
         </div>

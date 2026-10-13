@@ -2,7 +2,9 @@ import { existsSync } from 'node:fs';
 import { defineConfig } from '@playwright/test';
 export default defineConfig({
   testDir: './tests',
-  testMatch: process.env.AOS_CLOUD_TESTS ? '**/cloud.spec.ts' : '**/ui.spec.ts',
+  testMatch: process.env.AOS_CLOUD_TESTS
+    ? '**/cloud.spec.ts'
+    : ['**/ui.spec.ts', '**/conflict.spec.ts'],
   fullyParallel: true,
   workers: process.env.AOS_CLOUD_TESTS ? 1 : 2,
   use: {

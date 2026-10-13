@@ -7,6 +7,7 @@ export interface PendingSave {
   changes: Change[];
   event?: string;
   scoreRequest?: ScoreImportRequest;
+  conflict?: string;
 }
 function open(): Promise<IDBDatabase> {
   return new Promise((resolve, reject) => {
