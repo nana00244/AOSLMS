@@ -1741,7 +1741,6 @@ function ReportSheet({ data, student }: { data: State; student: Student }) {
               </>
             )}
           </div>
-          <span className="assessment-photo-label">STUDENT PHOTO</span>
         </div>
       </section>
 

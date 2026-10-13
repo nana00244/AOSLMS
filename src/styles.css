@@ -4592,15 +4592,15 @@ td .person {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 80px;
+  width: 110px;
   border-left: 1px dashed #cbd5e1;
   padding-left: 12px;
   flex-shrink: 0;
 }
 
 .assessment-photo-frame {
-  width: 65px;
-  height: 76px;
+  width: 96px;
+  height: 112px;
   border: 1px solid #94a3b8;
   border-radius: 4px;
   display: flex;
@@ -4609,15 +4609,6 @@ td .person {
   justify-content: center;
   overflow: hidden;
   background: #f8fafc;
-}
-
-.assessment-photo-label {
-  font-size: 8px;
-  font-weight: 700;
-  color: #586579;
-  margin-top: 3px;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
 }
 
 .assessment-table-wrap {
@@ -5370,11 +5361,9 @@ td .person {
 }
 
 [data-theme='dark'] .assessment-card-sheet .assessment-info-cell small,
-[data-theme='dark'] .assessment-card-sheet .assessment-photo-label,
 [data-theme='dark'] .assessment-card-sheet .assessment-remark-text,
 [data-theme='dark'] .assessment-card-sheet .assessment-signature-line,
 .dark .assessment-card-sheet .assessment-info-cell small,
-.dark .assessment-card-sheet .assessment-photo-label,
 .dark .assessment-card-sheet .assessment-remark-text,
 .dark .assessment-card-sheet .assessment-signature-line {
   color: #334155;
