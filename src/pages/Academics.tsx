@@ -1735,7 +1735,7 @@ function ReportSheet({ data, student }: { data: State; student: Student }) {
             ) : (
               <>
                 <GraduationCap size={24} color="#94a3b8" />
-                <span style={{ fontSize: '7.5px', color: '#94a3b8', marginTop: 2 }}>
+                <span style={{ fontSize: '7.5px', color: '#475569', marginTop: 2 }}>
                   2" X 2" PHOTO
                 </span>
               </>

@@ -1,0 +1,288 @@
+/* Screen presentation inspired by the observed Khan Academy homepage.
+   Keep the school's fonts and content; use explicit, contrast-safe colour pairs. */
+@media screen {
+  .report-print-stack {
+    min-width: 0;
+    max-width: 100%;
+    overflow-x: auto;
+  }
+  .settings-column,
+  .settings-column > .card {
+    min-width: 0;
+  }
+  .tabs {
+    max-width: 100%;
+    overflow-x: auto;
+  }
+  @media (max-width: 560px) {
+    .settings-grid {
+      grid-template-columns: minmax(0, 1fr);
+    }
+    .settings-column .btn {
+      white-space: normal;
+    }
+    .crest-upload {
+      flex-wrap: wrap;
+    }
+  }
+  .bottom-nav-link.active {
+    color: var(--action);
+    background: var(--action-soft);
+  }
+  .assessment-photo-frame {
+    color: #475569;
+  }
+  :is([data-theme='dark'], .dark) :is(.fee-lines > div, .fee-lines dd, .transaction-row small) {
+    color: var(--muted);
+  }
+  :is([data-theme='dark'], .dark) .assessment-card-sheet td {
+    color: #1e293b;
+    background: #fff;
+  }
+  :is([data-theme='dark'], .dark) .assessment-card-sheet .assessment-pill-title {
+    background: #151521;
+    color: #fff;
+  }
+  :is([data-theme='dark'], .dark) :is(.assignment-card > p, .time-label) {
+    color: var(--muted);
+  }
+  :is([data-theme='dark'], .dark) .day-label {
+    background: #172436;
+    color: var(--ink);
+    border-color: var(--line);
+  }
+  .welcome-banner p {
+    color: #4a6258;
+  }
+  .status-option.selected.present {
+    background: #216e50;
+    border-color: #216e50;
+  }
+  .status-option.selected.late {
+    background: #805600;
+    border-color: #805600;
+  }
+  .status-option.selected.absent {
+    background: #ad303c;
+    border-color: #ad303c;
+  }
+  .status-option.selected.excused {
+    background: #2456a6;
+    border-color: #2456a6;
+  }
+  :is([data-theme='dark'], .dark)
+    :is(
+      .brand small,
+      .nav-caption,
+      .term-card small,
+      .term-card strong span,
+      .eyebrow,
+      .donut small,
+      .donut-legend > div,
+      .donut-legend strong,
+      .collection-footer,
+      .text-link,
+      .activity-row small,
+      .activity-row time,
+      .term-overview p,
+      .term-date,
+      .term-date strong,
+      .workspace-footer,
+      .resource-content > small,
+      .resource-bottom > span,
+      .term-selector button,
+      .welcome-term,
+      .stat-detail
+    ) {
+    color: var(--muted);
+  }
+  :is([data-theme='dark'], .dark) .skip-link {
+    background: #151521;
+    color: #fff;
+  }
+  :is([data-theme='dark'], .dark) .backup-panel {
+    background: #172436;
+    border-color: var(--line);
+  }
+  :is([data-theme='dark'], .dark) .backup-panel p {
+    color: var(--muted);
+  }
+  :is([data-theme='dark'], .dark) .activity-row {
+    border-color: var(--line);
+  }
+  :root {
+    --action: #4b3cdb;
+    --action-hover: #3929b8;
+    --action-soft: #efedff;
+    --focus: #5753fa;
+  }
+
+  h1,
+  h2,
+  h3 {
+    color: var(--ink);
+  }
+  h2 {
+    font-size: 20px;
+  }
+  h3 {
+    font-size: 16px;
+  }
+  .btn,
+  .nav-link,
+  .tabs button,
+  input,
+  select,
+  textarea {
+    font-size: 14px;
+  }
+  .btn,
+  .nav-link {
+    min-height: 44px;
+  }
+  input,
+  select,
+  textarea {
+    border-color: #858591;
+  }
+  input::placeholder,
+  textarea::placeholder {
+    color: var(--muted);
+    opacity: 1;
+  }
+  .btn-primary,
+  .nav-link.active,
+  .term-selector button.active {
+    background: var(--action);
+    color: #fff;
+  }
+  .btn-primary:hover:not(:disabled) {
+    background: var(--action-hover);
+  }
+  .nav-link {
+    color: var(--ink);
+    font-weight: 600;
+  }
+  .nav-link:hover:not(.active) {
+    background: var(--action-soft);
+    color: var(--action);
+  }
+  .tabs button.active {
+    color: var(--action);
+    border-bottom-color: var(--action);
+  }
+  :is(button, a, input, select, textarea):focus-visible {
+    outline: 3px solid var(--focus);
+    outline-offset: 3px;
+  }
+  .card {
+    border-color: var(--line);
+  }
+  .login-story {
+    background: #f5f4ff;
+    color: var(--ink);
+  }
+  .login-story .brand,
+  .login-story-main h1 {
+    color: var(--ink);
+  }
+  .login-story-main h1 {
+    font-size: clamp(36px, 3.5vw, 52px);
+    font-weight: 800;
+  }
+  .login-story-main h1 em {
+    color: var(--action);
+    font-family: inherit;
+    font-weight: 800;
+  }
+  .login-story .brand small,
+  .story-tag,
+  .login-story-main > p,
+  .login-footer,
+  .login-footer > span {
+    color: var(--muted);
+  }
+  .login-story-main > p,
+  .login-form > p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  .login-story .brand-icon {
+    background: var(--action);
+    color: #fff;
+  }
+  .login-story .brand-icon.has-school-logo {
+    background: transparent;
+  }
+  .login-theme-toggle {
+    color: var(--ink);
+  }
+  .login-footer {
+    border-color: var(--line);
+    flex-wrap: wrap;
+  }
+  .role-card {
+    border-color: #b7b7c3;
+    box-shadow: 0 2px 0 #15152114;
+  }
+  .role-card strong {
+    font-size: 16px;
+  }
+  .role-card small {
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--muted);
+  }
+  .role-card.selected {
+    background: var(--action-soft);
+    border-color: var(--action);
+  }
+  .role-card:hover {
+    border-color: var(--action);
+  }
+  .selected .role-icon {
+    color: var(--action);
+  }
+  .selected-dot {
+    background: var(--action);
+    box-shadow: 0 0 0 1px var(--action);
+  }
+  .login-help a {
+    color: var(--action);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .art-building {
+    background: linear-gradient(130deg, #aaa4ff, #7068e8);
+  }
+
+  :is([data-theme='dark'], .dark) {
+    --action: #b9b3ff;
+    --action-hover: #d3cfff;
+    --action-soft: #292546;
+    --focus: #c8c2ff;
+    --muted: #b6bfce;
+  }
+  :is([data-theme='dark'], .dark)
+    :is(.btn-primary, .nav-link.active, .term-selector button.active) {
+    background: var(--action);
+    color: #151521;
+  }
+  :is([data-theme='dark'], .dark) .btn-primary:hover:not(:disabled) {
+    background: var(--action-hover);
+  }
+  :is([data-theme='dark'], .dark) :is(input::placeholder, textarea::placeholder, .breadcrumbs) {
+    color: var(--muted);
+  }
+  :is([data-theme='dark'], .dark) .login-story {
+    background: #171629;
+  }
+  :is([data-theme='dark'], .dark) .role-card.selected {
+    background: var(--action-soft);
+    border-color: var(--action);
+  }
+  :is([data-theme='dark'], .dark) .tabs button.active {
+    color: var(--action);
+    border-color: var(--action);
+  }
+}
