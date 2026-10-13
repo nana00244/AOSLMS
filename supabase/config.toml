@@ -34,3 +34,6 @@ import_map = "./functions/deno.json"
 [functions.workspace]
 verify_jwt = false
 import_map = "./functions/deno.json"
+[functions.generate-report-remark]
+verify_jwt = false
+import_map = "./functions/deno.json"

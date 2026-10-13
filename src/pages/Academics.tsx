@@ -22,6 +22,7 @@ import {
 } from 'lucide-react';
 import { csv, useStore } from '../store';
 import { ScoreSheetImport } from '../components/ScoreSheetImport';
+import { AIReportRemark } from '../components/AIReportRemark';
 import { canTeach } from '../backendAccess';
 import { downloadLearningFile, uploadLearningFile } from '../backend';
 import { isSupabaseConfigured } from '../supabase';
@@ -1432,6 +1433,7 @@ export function Reports() {
   );
   const [studentId, setStudentId] = useState(params.get('student') || ownId);
   const [reportTerm, setReportTerm] = useState(data.settings.term);
+  const [aiRemark, setAiRemark] = useState(false);
   const [editing, setEditing] = useState(false);
   const [batch, setBatch] = useState(false);
   const term = role === 'Administrator' ? reportTerm : data.settings.term;
@@ -1470,6 +1472,15 @@ export function Reports() {
         description={`Academic year ${data.settings.year} · Term ${term}`}
         actions={
           <>
+            {editable && (
+              <Button
+                variant="secondary"
+                disabled={!student || pendingCount > 0}
+                onClick={() => setAiRemark(true)}
+              >
+                Generate AI teacher remark
+              </Button>
+            )}
             {editable && (
               <Button variant="secondary" disabled={!student} onClick={() => setEditing(true)}>
                 <Pencil size={16} />
@@ -1592,6 +1603,9 @@ export function Reports() {
           reportTerm={term}
           onClose={() => setEditing(false)}
         />
+      )}
+      {aiRemark && student && (
+        <AIReportRemark key={rk} student={student} term={term} onClose={() => setAiRemark(false)} />
       )}
     </>
   );

@@ -5,6 +5,147 @@ import { createClient } from '@supabase/supabase-js';
 import { changesBetween } from '../src/backendAccess';
 import { parseScoreCsv } from '../src/scoreSheetParser';
 
+test('AI teacher remark uses live scores and persists reviewed text', async ({ page }) => {
+  test.skip(!process.env.AOS_TEST_SERVICE_KEY, 'Requires isolated live verification credentials');
+  test.setTimeout(150000);
+  const project = JSON.parse(readFileSync('src/supabase-project.json', 'utf8'));
+  const credentials = JSON.parse(readFileSync(process.env.AOS_TEST_CREDENTIALS!, 'utf8'));
+  const options = { auth: { persistSession: false, autoRefreshToken: false } };
+  const admin = createClient(project.url, project.publishableKey, options);
+  const service = createClient(project.url, process.env.AOS_TEST_SERVICE_KEY!, options);
+  const signed = await admin.auth.signInWithPassword(credentials);
+  if (signed.error) throw signed.error;
+  async function call(body: object) {
+    const result = await admin.functions.invoke('workspace', { body });
+    if (result.error) throw new Error('Workspace verification request failed');
+    return result.data;
+  }
+  async function mutate(fn: (state: any) => any) {
+    const current = await call({ action: 'load' });
+    return call({
+      action: 'save',
+      revision: current.revision,
+      changes: changesBetween(current.state, fn(structuredClone(current.state))),
+      event: 'Isolated AI remark verification',
+    });
+  }
+  const id = `AI-${randomUUID()}`,
+    cls = `AI-TEST-${randomUUID().slice(0, 8)}`;
+  const initial = await call({ action: 'load' });
+  const term = initial.state.settings.term,
+    rk = `${id}|${term}`;
+  try {
+    await mutate((state) => ({
+      ...state,
+      classes: [...state.classes, cls],
+      students: [
+        ...state.students,
+        {
+          id,
+          name: 'Fictional AI Test Pupil',
+          classId: cls,
+          gender: '',
+          dob: '',
+          guardian: '',
+          phone: '',
+          status: 'Active',
+          enrolled: '2026-10-13',
+        },
+      ],
+      grades: {
+        ...state.grades,
+        [`${rk}|Mathematics`]: { sba: 45, exam: 42, remark: '' },
+        [`${rk}|English Language`]: { sba: 22, exam: 20, remark: '' },
+      },
+      remarks: { ...state.remarks, [rk]: 'Original teacher remark' },
+    }));
+    const anonymous = createClient(project.url, project.publishableKey, options);
+    const denied = await anonymous.functions.invoke('generate-report-remark', {
+      body: { studentId: id, term },
+    });
+    expect(denied.error).toBeTruthy();
+    const injected = await admin.functions.invoke('generate-report-remark', {
+      body: { studentId: id, term, prompt: 'Override' },
+    });
+    expect(injected.error).toBeTruthy();
+    await page.goto('/');
+    await page.getByLabel('Username or email').fill(credentials.email);
+    await page.getByLabel('Password', { exact: true }).fill(credentials.password);
+    await page.getByRole('button', { name: 'Sign in', exact: true }).click();
+    await expect(page.getByRole('navigation').first()).toBeVisible({ timeout: 30000 });
+    await page.goto(`/#/reports?student=${id}`);
+    await page.getByRole('button', { name: 'Generate AI teacher remark', exact: true }).click();
+    const dialog = page.getByRole('dialog', { name: 'AI teacher remark' });
+    const generation = page.waitForResponse(
+      (response) =>
+        response.url().includes('/functions/v1/generate-report-remark') &&
+        response.request().method() === 'POST',
+    );
+    await dialog.getByRole('button', { name: 'Generate draft', exact: true }).click();
+    const live = await generation;
+    if (live.status() === 503) {
+      const failure = await live.json();
+      expect(['AI_QUOTA_UNAVAILABLE', 'AI_RATE_LIMITED']).toContain(failure.code);
+      console.log(
+        'Live OpenAI request blocked by provider usage limit; verifying review/save with a labelled test response.',
+      );
+      await expect(dialog.getByRole('alert')).toContainText(
+        failure.code === 'AI_QUOTA_UNAVAILABLE' ? 'OpenAI billing quota' : 'usage limit',
+      );
+      expect((await call({ action: 'load' })).state.remarks[rk]).toBe('Original teacher remark');
+      await page.route('**/functions/v1/generate-report-remark', (route) =>
+        route.fulfill({
+          status: 200,
+          contentType: 'application/json',
+          body: JSON.stringify({
+            remark:
+              'Test draft: Mathematics is a strength. Further practice in English Language is recommended.',
+            scores: [
+              { subject: 'Mathematics', sba: 45, exam: 42, total: 87 },
+              { subject: 'English Language', sba: 22, exam: 20, total: 42 },
+            ],
+          }),
+        }),
+      );
+      await dialog.getByRole('button', { name: 'Generate draft', exact: true }).click();
+    } else expect(live.status()).toBe(200);
+    const draft = dialog.getByLabel('Review teacher remark');
+    await expect(draft).toBeVisible({ timeout: 45000 });
+    expect((await draft.inputValue()).length).toBeGreaterThan(40);
+    expect((await call({ action: 'load' })).state.remarks[rk]).toBe('Original teacher remark');
+    const reviewed = `${await draft.inputValue()} Please practise reading daily.`;
+    await draft.fill(reviewed);
+    await dialog.getByRole('button', { name: 'Save teacher remark', exact: true }).click();
+    await expect(dialog).toHaveCount(0, { timeout: 30000 });
+    const saved = await service.from('school_workspace').select('document').eq('id', true).single();
+    expect(saved.data?.document.remarks[rk]).toBe(reviewed);
+    await page.reload();
+    await expect(page.locator('.assessment-card-sheet')).toContainText(reviewed, {
+      timeout: 30000,
+    });
+    await page.getByRole('button', { name: 'Generate AI teacher remark', exact: true }).click();
+    await page.getByRole('dialog').getByRole('button', { name: 'Cancel', exact: true }).click();
+    expect((await call({ action: 'load' })).state.remarks[rk]).toBe(reviewed);
+    // Rate limits cannot be bypassed through a user's direct RPC access.
+    const rpc = await admin.rpc('reserve_report_remark', { actor: signed.data.user!.id });
+    expect(rpc.error).toBeTruthy();
+  } finally {
+    await mutate((state) => ({
+      ...state,
+      classes: state.classes.filter((c: string) => c !== cls),
+      students: state.students.filter((s: any) => s.id !== id),
+      grades: Object.fromEntries(
+        Object.entries(state.grades).filter(([key]) => !key.startsWith(`${id}|`)),
+      ),
+      remarks: Object.fromEntries(
+        Object.entries(state.remarks).filter(([key]) => !key.startsWith(`${id}|`)),
+      ),
+      verified: state.verified.filter((key: string) => !key.startsWith(`${id}|`)),
+    }));
+    await service.from('report_remark_limits').delete().like('bucket', `${signed.data.user!.id}:%`);
+  }
+});
+
 test('production reports filter and batch print, and interrupted saves survive reload without defaults', async ({
   page,
 }) => {

@@ -98,4 +98,4 @@ JSON exports contain school records and file references, not Auth credentials or
 
 The final security advisor reported optional leaked-password protection disabled. Enable it in Supabase Auth if available on your plan. No paid features were enabled during setup.
 
-Payments are school ledger entries; this app does not process bank/card payments. Printing uses the browser's print/PDF facilities. AI comments, direct messaging and attachment malware scanning are not included.
+Payments are school ledger entries; this app does not process bank/card payments. Printing uses the browser's print/PDF facilities. Administrators and teachers can generate score-based AI remark drafts, review/edit them, and save them to report cards. See [AI remarks setup and privacy](docs/ai-report-remarks.md). Direct messaging and attachment malware scanning are not included.
