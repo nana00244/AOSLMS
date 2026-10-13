@@ -3,6 +3,7 @@ import { applyChanges, projectWorkspace } from '../../../src/backendAccess.ts';
 import { workspaceSchema } from '../../../src/validation.ts';
 import { emptyState } from '../../../src/emptyState.ts';
 import { applyScoreImport } from '../../../src/scoreImport.ts';
+import { rebaseChanges } from '../../../src/saveRecovery.ts';
 
 export const toUser = (p: any) => ({
   id: p.id,
@@ -32,6 +33,35 @@ Deno.serve(async (request) => {
     if (profileError) throw profileError;
     const user = toUser(profile);
     let state = { ...emptyState(), ...stored.document, users: profiles.map(toUser) };
+    if (input.action === 'save-pending') {
+      if (typeof input.operationId !== 'string' || !/^[0-9a-f-]{36}$/i.test(input.operationId))
+        throw new Error('Invalid save identifier');
+      const receipt = await client
+        .from('workspace_save_receipts')
+        .select('revision')
+        .eq('actor', profile.id)
+        .eq('operation_id', input.operationId)
+        .maybeSingle();
+      if (receipt.error) throw receipt.error;
+      if (!receipt.data) {
+        if (!Array.isArray(input.changes) || input.changes.length > 10000)
+          throw new Error('Invalid change set');
+        const changes = rebaseChanges(state, input.changes);
+        state = input.scoreRequest
+          ? applyScoreImport(state, user, input.scoreRequest)
+          : applyChanges(state, user, changes);
+        state = workspaceSchema.parse(state);
+        const committed = await client.rpc('commit_workspace_once', {
+          expected_revision: stored.revision,
+          replacement: state,
+          actor: profile.id,
+          event: typeof input.event === 'string' ? input.event : 'School records updated',
+          operation_id: input.operationId,
+        });
+        if (committed.error) throw committed.error;
+      }
+      input.action = 'load';
+    }
     if (input.action === 'file-url') {
       const visible = projectWorkspace(state, user);
       const record = [...visible.resources, ...visible.submissions].find(
@@ -47,17 +77,21 @@ Deno.serve(async (request) => {
     if (input.action === 'save' || input.action === 'import-scores') {
       if (input.revision !== stored.revision)
         return json({ error: 'Conflict: records changed. Reload and try again.' }, 409);
-      state = input.action === 'import-scores'
-        ? applyScoreImport(state, user, input.request)
-        : applyChanges(state, user, input.changes);
+      state =
+        input.action === 'import-scores'
+          ? applyScoreImport(state, user, input.request)
+          : applyChanges(state, user, input.changes);
       state = workspaceSchema.parse(state);
       const { error: saveError } = await client.rpc('commit_workspace', {
         expected_revision: stored.revision,
         replacement: state,
         actor: profile.id,
-        event: input.action === 'import-scores'
-          ? `Assessment upload: ${input.request.classId}, ${input.request.subject}, ${input.request.sheet.category}, term ${input.request.sheet.term}`
-          : typeof input.event === 'string' ? input.event : 'School records updated',
+        event:
+          input.action === 'import-scores'
+            ? `Assessment upload: ${input.request.classId}, ${input.request.subject}, ${input.request.sheet.category}, term ${input.request.sheet.term}`
+            : typeof input.event === 'string'
+              ? input.event
+              : 'School records updated',
       });
       if (saveError) throw saveError;
     } else if (input.action !== 'load') return json({ error: 'Unknown action' }, 400);

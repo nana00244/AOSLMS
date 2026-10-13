@@ -2,11 +2,13 @@ import { supabase } from './supabase';
 import type { State } from './data';
 import { changesBetween } from './backendAccess';
 import type { ScoreImportRequest } from './scoreImport';
+import type { PendingSave } from './pendingSaves';
 
 export async function invokeBackend(name: string, body: unknown) {
   if (!supabase) throw new Error('Supabase is not configured');
   const { data, error } = await supabase.functions.invoke(name, {
     body: body as Record<string, unknown>,
+    signal: AbortSignal.timeout(60000),
   });
   if (error) {
     if (error.context instanceof Response) {
@@ -24,6 +26,14 @@ export interface Snapshot {
 }
 export const loadWorkspace = (): Promise<Snapshot> =>
   invokeBackend('workspace', { action: 'load' });
+export const commitPendingSave = (save: PendingSave): Promise<Snapshot> =>
+  invokeBackend('workspace', {
+    action: 'save-pending',
+    operationId: save.id,
+    changes: save.changes,
+    event: save.event,
+    scoreRequest: save.scoreRequest,
+  });
 export const importScoreSheet = (
   snapshot: Snapshot,
   request: ScoreImportRequest,

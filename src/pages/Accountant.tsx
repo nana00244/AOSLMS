@@ -159,27 +159,30 @@ export function StudentFinanceList() {
   );
   const toggle = (id: string) =>
     setSelected((s) => (s.includes(id) ? s.filter((x) => x !== id) : [...s, id]));
-  const applyConcession = (value: 50 | 100) => {
+  const applyConcession = async (value: 50 | 100) => {
     if (!selected.length) return;
-    update(
-      (d) => ({
-        ...d,
-        studentConcessions: {
-          ...d.studentConcessions,
-          ...Object.fromEntries(selected.map((id) => [id, value])),
-        },
-        studentBills: Object.fromEntries(
-          Object.entries(d.studentBills || {}).map(([key, bill]) => [
-            key,
-            selected.includes(bill.studentId) &&
-            key === billKey(bill.studentId, d.settings.year, d.settings.term)
-              ? { ...bill, concession: value, updatedAt: new Date().toISOString() }
-              : bill,
-          ]),
-        ),
-      }),
-      `${value}% fee concession applied to ${selected.length} student(s)`,
-    );
+    if (
+      !(await update(
+        (d) => ({
+          ...d,
+          studentConcessions: {
+            ...d.studentConcessions,
+            ...Object.fromEntries(selected.map((id) => [id, value])),
+          },
+          studentBills: Object.fromEntries(
+            Object.entries(d.studentBills || {}).map(([key, bill]) => [
+              key,
+              selected.includes(bill.studentId) &&
+              key === billKey(bill.studentId, d.settings.year, d.settings.term)
+                ? { ...bill, concession: value, updatedAt: new Date().toISOString() }
+                : bill,
+            ]),
+          ),
+        }),
+        `${value}% fee concession applied to ${selected.length} student(s)`,
+      ))
+    )
+      return;
     notify(`${value}% fee concession applied.`);
     setSelected([]);
   };
@@ -380,7 +383,7 @@ export function PaymentRecorder() {
             .reduce((a, p) => a + p.amount, 0),
       )
     : 0;
-  const submit = (e: FormEvent<HTMLFormElement>) => {
+  const submit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const f = new FormData(e.currentTarget);
     try {
@@ -397,7 +400,13 @@ export function PaymentRecorder() {
         },
         me,
       );
-      update(() => state, `Payment recorded: ${money(payment.amount)} · ${payment.receiptNumber}`);
+      if (
+        !(await update(
+          () => state,
+          `Payment recorded: ${money(payment.amount)} · ${payment.receiptNumber}`,
+        ))
+      )
+        return;
       setReceipt(payment);
       notify('Payment recorded and receipt generated.');
     } catch (err) {
@@ -597,16 +606,19 @@ export function FeeManagement() {
           </Field>
           <form
             key={classId}
-            onSubmit={(e) => {
+            onSubmit={async (e) => {
               e.preventDefault();
               const f = new FormData(e.currentTarget);
               const fees = Object.fromEntries(
                 Array.from(f.entries()).map(([k, v]) => [k, Number(v)]),
               );
-              update(
-                (d) => ({ ...d, fees: { ...d.fees, [classId]: fees } }),
-                `Fee structure updated for ${classId}`,
-              );
+              if (
+                !(await update(
+                  (d) => ({ ...d, fees: { ...d.fees, [classId]: fees } }),
+                  `Fee structure updated for ${classId}`,
+                ))
+              )
+                return;
               notify('Fee template saved. Issued student bills are unchanged.');
             }}
           >
@@ -803,7 +815,7 @@ export function ExpenditurePage() {
       {open && (
         <Modal title="New expenditure voucher" onClose={() => setOpen(false)}>
           <form
-            onSubmit={(e) => {
+            onSubmit={async (e) => {
               e.preventDefault();
               const f = new FormData(e.currentTarget);
               const cat = String(f.get('category'));
@@ -813,23 +825,26 @@ export function ExpenditurePage() {
               const status = String(f.get('status'));
               const method = String(f.get('method'));
               const reference = String(f.get('reference') || '');
-              update(
-                (d) =>
-                  financeService.recordExpenditure(
-                    d,
-                    {
-                      title: desc,
-                      category: cat,
-                      vendor: payee,
-                      amount,
-                      status,
-                      paymentMethod: method,
-                      reference,
-                    },
-                    me,
-                  ),
-                `Expenditure recorded: ${cat} ${money(amount)}`,
-              );
+              if (
+                !(await update(
+                  (d) =>
+                    financeService.recordExpenditure(
+                      d,
+                      {
+                        title: desc,
+                        category: cat,
+                        vendor: payee,
+                        amount,
+                        status,
+                        paymentMethod: method,
+                        reference,
+                      },
+                      me,
+                    ),
+                  `Expenditure recorded: ${cat} ${money(amount)}`,
+                ))
+              )
+                return;
               notify('Expenditure voucher saved.');
               setOpen(false);
             }}

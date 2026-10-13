@@ -238,7 +238,7 @@ export function Timetable() {
           onClose={() => setEditing(null)}
         >
           <form
-            onSubmit={(e) => {
+            onSubmit={async (e) => {
               e.preventDefault();
               const f = new FormData(e.currentTarget);
               const p: Period = {
@@ -262,10 +262,13 @@ export function Timetable() {
                 );
                 return;
               }
-              update(
-                (s) => ({ ...s, periods: [...s.periods.filter((x) => x.id !== p.id), p] }),
-                'Timetable period saved',
-              );
+              if (
+                !(await update(
+                  (s) => ({ ...s, periods: [...s.periods.filter((x) => x.id !== p.id), p] }),
+                  'Timetable period saved',
+                ))
+              )
+                return;
               notify('Period saved. No scheduling conflicts.');
               setEditing(null);
             }}
@@ -280,7 +283,7 @@ export function Timetable() {
               </Field>
               <Field label="Class">
                 <select name="class" defaultValue={editing.classId}>
-                  {(data.classes || classes).map((c) => (
+                  {(data.classes || []).map((c) => (
                     <option key={c}>{c}</option>
                   ))}
                 </select>
@@ -320,11 +323,14 @@ export function Timetable() {
                 <Button
                   variant="danger"
                   type="button"
-                  onClick={() => {
-                    update(
-                      (d) => ({ ...d, periods: d.periods.filter((p) => p.id !== editing.id) }),
-                      'Timetable period removed',
-                    );
+                  onClick={async () => {
+                    if (
+                      !(await update(
+                        (d) => ({ ...d, periods: d.periods.filter((p) => p.id !== editing.id) }),
+                        'Timetable period removed',
+                      ))
+                    )
+                      return;
                     setEditing(null);
                     notify('Period removed.');
                   }}
@@ -352,7 +358,7 @@ export function Resources() {
     [editing, setEditing] = useState<Resource | null>(null),
     [view, setView] = useState<Resource | null>(null);
   const isAdmin = role === 'Administrator';
-  const classesList = isAdmin ? data.classes || classes : allowedClasses;
+  const classesList = isAdmin ? data.classes || [] : allowedClasses;
   const resourceTypes = [
     ...new Set(data.resources.map((resource) => resource.fileType || resource.type)),
   ];
@@ -424,7 +430,8 @@ export function Resources() {
       {!isAdmin && (
         <div className="notice">
           <ShieldCheck size={18} />
-          Resource access is locked to the school’s active term: <strong>Term {data.settings.term}</strong>.
+          Resource access is locked to the school’s active term:{' '}
+          <strong>Term {data.settings.term}</strong>.
         </div>
       )}
       {role === 'Teacher' && (
@@ -504,20 +511,23 @@ export function Resources() {
                       <button
                         className="icon-btn"
                         aria-label={`Delete ${r.title}`}
-                        onClick={() => {
+                        onClick={async () => {
                           if (!canManageResource(r, user?.id || '', role)) return;
                           if (!window.confirm(`Delete “${r.title}”?`)) return;
-                          update(
-                            (state) => ({
-                              ...state,
-                              resources: state.resources.filter(
-                                (item) =>
-                                  item.id !== r.id ||
-                                  !canManageResource(item, user?.id || '', role),
-                              ),
-                            }),
-                            `Resource removed: ${r.title}`,
-                          );
+                          if (
+                            !(await update(
+                              (state) => ({
+                                ...state,
+                                resources: state.resources.filter(
+                                  (item) =>
+                                    item.id !== r.id ||
+                                    !canManageResource(item, user?.id || '', role),
+                                ),
+                              }),
+                              `Resource removed: ${r.title}`,
+                            ))
+                          )
+                            return;
                           notify('Resource removed.');
                         }}
                       >
@@ -634,7 +644,7 @@ function ResourceForm({
   return (
     <Modal title="Share a classroom resource" onClose={onClose}>
       <form
-        onSubmit={(e) => {
+        onSubmit={async (e) => {
           e.preventDefault();
           const f = new FormData(e.currentTarget);
           const url = String(f.get('url'));
@@ -661,7 +671,10 @@ function ResourceForm({
             classId: classId === 'all' ? allowedClasses[0] || data.classes[0] : classId,
             targetClassIds: classId === 'all' ? ['all'] : [classId],
             category: String(f.get('category')),
-            term: role === 'Administrator' && f.get('term') ? Number(f.get('term')) : data.settings.term,
+            term:
+              role === 'Administrator' && f.get('term')
+                ? Number(f.get('term'))
+                : data.settings.term,
             type: url ? 'LINK' : selectedFilename?.split('.').pop()?.toUpperCase() || 'TXT',
             fileType: url ? 'LINK' : selectedFilename?.split('.').pop()?.toUpperCase() || 'TXT',
             date: today(),
@@ -676,19 +689,22 @@ function ResourceForm({
             setError('You can only edit resources you uploaded.');
             return;
           }
-          update(
-            (d) => ({
-              ...d,
-              resources: resource
-                ? d.resources.map((item) =>
-                    item.id === resource.id && canManageResource(item, user?.id || '', role)
-                      ? r
-                      : item,
-                  )
-                : [r, ...d.resources],
-            }),
-            resource ? `Resource updated: ${r.title}` : `Resource shared: ${r.title}`,
-          );
+          if (
+            !(await update(
+              (d) => ({
+                ...d,
+                resources: resource
+                  ? d.resources.map((item) =>
+                      item.id === resource.id && canManageResource(item, user?.id || '', role)
+                        ? r
+                        : item,
+                    )
+                  : [r, ...d.resources],
+              }),
+              resource ? `Resource updated: ${r.title}` : `Resource shared: ${r.title}`,
+            ))
+          )
+            return;
           notify(resource ? 'Resource updated.' : 'Resource shared with the class.');
           onClose();
         }}
@@ -943,7 +959,7 @@ export function Certificates() {
       {create && (
         <Modal title="Celebrate an achievement" onClose={() => setCreate(false)}>
           <form
-            onSubmit={(e) => {
+            onSubmit={async (e) => {
               e.preventDefault();
               const f = new FormData(e.currentTarget);
               const certificate = certificateService.createCertificate(
@@ -951,13 +967,16 @@ export function Certificates() {
                 user?.id || 'unknown',
                 user?.name || 'Unknown user',
               );
-              update(
-                (d) => ({
-                  ...d,
-                  certificates: [...d.certificates, certificate],
-                }),
-                'Certificate issued',
-              );
+              if (
+                !(await update(
+                  (d) => ({
+                    ...d,
+                    certificates: [...d.certificates, certificate],
+                  }),
+                  'Certificate issued',
+                ))
+              )
+                return;
               setCreate(false);
               setView(certificate.id);
               notify('Certificate issued.');
@@ -991,18 +1010,13 @@ export function Certificates() {
 function GraduationCapLogo() {
   const { data } = useStore();
   return (
-    <img
-      src={data.settings.crest || './crest.svg'}
-      alt="School logo"
-      width="54"
-      height="54"
-    />
+    <img src={data.settings.crest || './crest.svg'} alt="School logo" width="54" height="54" />
   );
 }
 export function Community() {
   const { data, role, me, allowedClasses, update, notify } = useStore();
   const isAdmin = role === 'Administrator';
-  const classList = isAdmin ? data.classes || classes : allowedClasses;
+  const classList = isAdmin ? data.classes || [] : allowedClasses;
   const [tab, setTab] = useState(isAdmin ? 'Classrooms & Streams' : 'Classroom updates');
   const [createPost, setCreatePost] = useState(false);
   const [createClass, setCreateClass] = useState(false);
@@ -1017,7 +1031,7 @@ export function Community() {
     (m) => m.classId === 'All classes' || allowedClasses.includes(m.classId),
   );
 
-  function handleCreateClass(e: React.FormEvent) {
+  async function handleCreateClass(e: React.FormEvent) {
     e.preventDefault();
     const name = newClassName.trim();
     if (!name) {
@@ -1029,24 +1043,17 @@ export function Community() {
       return;
     }
 
-    update((d) => {
-      const currentClasses = d.classes || classes;
-      const nextClasses = [...currentClasses, name];
-      const nextFees = {
-        ...d.fees,
-        [name]: {
-          Tuition: name.toUpperCase().startsWith('JHS') ? 600 : 450,
-          'ICT levy': 50,
-          'PTA dues': 20,
-          ...(name.toUpperCase().startsWith('JHS') ? { 'Science laboratory': 100 } : {}),
-        },
-      };
-      return {
-        ...d,
-        classes: nextClasses,
-        fees: nextFees,
-      };
-    }, `Class created: ${name}`);
+    if (
+      !(await update((d) => {
+        const currentClasses = d.classes || [];
+        const nextClasses = [...currentClasses, name];
+        return {
+          ...d,
+          classes: nextClasses,
+        };
+      }, `Class created: ${name}`))
+    )
+      return;
 
     setNewClassName('');
     setClassError('');
@@ -1054,7 +1061,7 @@ export function Community() {
     notify(`Class "${name}" created successfully.`);
   }
 
-  function handleEditClass(e: React.FormEvent) {
+  async function handleEditClass(e: React.FormEvent) {
     e.preventDefault();
     if (!editTarget) return;
     const oldName = editTarget;
@@ -1072,53 +1079,56 @@ export function Community() {
       return;
     }
 
-    update((d) => {
-      const currentClasses = d.classes || classes;
-      const nextClasses = currentClasses.map((c) => (c === oldName ? newName : c));
-      const nextStudents = d.students.map((s) =>
-        s.classId === oldName ? { ...s, classId: newName } : s,
-      );
-      const nextAssignments = d.assignments.map((a) =>
-        a.classId === oldName ? { ...a, classId: newName } : a,
-      );
-      const nextResources = d.resources.map((r) =>
-        r.classId === oldName ? { ...r, classId: newName } : r,
-      );
-      const nextPeriods = d.periods.map((p) =>
-        p.classId === oldName ? { ...p, classId: newName } : p,
-      );
-      const nextMessages = d.messages.map((m) =>
-        m.classId === oldName ? { ...m, classId: newName } : m,
-      );
-      const nextUsers = d.users.map((u) => ({
-        ...u,
-        classes: u.classes.map((c) => (c === oldName ? newName : c)),
-        classAllowedSubjects: Object.fromEntries(
-          Object.entries(u.classAllowedSubjects || {}).map(([c, subjects]) => [
-            c === oldName ? newName : c,
-            subjects,
-          ]),
-        ),
-      }));
+    if (
+      !(await update((d) => {
+        const currentClasses = d.classes || [];
+        const nextClasses = currentClasses.map((c) => (c === oldName ? newName : c));
+        const nextStudents = d.students.map((s) =>
+          s.classId === oldName ? { ...s, classId: newName } : s,
+        );
+        const nextAssignments = d.assignments.map((a) =>
+          a.classId === oldName ? { ...a, classId: newName } : a,
+        );
+        const nextResources = d.resources.map((r) =>
+          r.classId === oldName ? { ...r, classId: newName } : r,
+        );
+        const nextPeriods = d.periods.map((p) =>
+          p.classId === oldName ? { ...p, classId: newName } : p,
+        );
+        const nextMessages = d.messages.map((m) =>
+          m.classId === oldName ? { ...m, classId: newName } : m,
+        );
+        const nextUsers = d.users.map((u) => ({
+          ...u,
+          classes: u.classes.map((c) => (c === oldName ? newName : c)),
+          classAllowedSubjects: Object.fromEntries(
+            Object.entries(u.classAllowedSubjects || {}).map(([c, subjects]) => [
+              c === oldName ? newName : c,
+              subjects,
+            ]),
+          ),
+        }));
 
-      const nextFees = { ...d.fees };
-      if (nextFees[oldName]) {
-        nextFees[newName] = nextFees[oldName];
-        delete nextFees[oldName];
-      }
+        const nextFees = { ...d.fees };
+        if (nextFees[oldName]) {
+          nextFees[newName] = nextFees[oldName];
+          delete nextFees[oldName];
+        }
 
-      return {
-        ...d,
-        classes: nextClasses,
-        students: nextStudents,
-        assignments: nextAssignments,
-        resources: nextResources,
-        periods: nextPeriods,
-        messages: nextMessages,
-        users: nextUsers,
-        fees: nextFees,
-      };
-    }, `Class renamed: ${oldName} to ${newName}`);
+        return {
+          ...d,
+          classes: nextClasses,
+          students: nextStudents,
+          assignments: nextAssignments,
+          resources: nextResources,
+          periods: nextPeriods,
+          messages: nextMessages,
+          users: nextUsers,
+          fees: nextFees,
+        };
+      }, `Class renamed: ${oldName} to ${newName}`))
+    )
+      return;
 
     setEditTarget(null);
     setEditClassName('');
@@ -1126,7 +1136,7 @@ export function Community() {
     notify(`Class renamed from "${oldName}" to "${newName}".`);
   }
 
-  function handleDeleteClass() {
+  async function handleDeleteClass() {
     if (!deleteTarget) return;
     const target = deleteTarget;
     const remaining = classList.filter((c) => c !== target);
@@ -1138,43 +1148,46 @@ export function Community() {
 
     const fallbackClass = reassignClass || remaining[0];
 
-    update((d) => {
-      const currentClasses = d.classes || classes;
-      const nextClasses = currentClasses.filter((c) => c !== target);
-      // Reassign students in this class to fallback class
-      const nextStudents = d.students.map((s) =>
-        s.classId === target ? { ...s, classId: fallbackClass } : s,
-      );
-      const nextAssignments = d.assignments.map((a) =>
-        a.classId === target ? { ...a, classId: fallbackClass } : a,
-      );
-      const nextResources = d.resources.map((r) =>
-        r.classId === target ? { ...r, classId: fallbackClass } : r,
-      );
-      const nextPeriods = d.periods.filter((p) => p.classId !== target);
-      const nextMessages = d.messages.map((m) =>
-        m.classId === target ? { ...m, classId: fallbackClass } : m,
-      );
-      const nextUsers = d.users.map((u) => ({
-        ...u,
-        classes: u.classes.filter((c) => c !== target),
-      }));
+    if (
+      !(await update((d) => {
+        const currentClasses = d.classes || [];
+        const nextClasses = currentClasses.filter((c) => c !== target);
+        // Reassign students in this class to fallback class
+        const nextStudents = d.students.map((s) =>
+          s.classId === target ? { ...s, classId: fallbackClass } : s,
+        );
+        const nextAssignments = d.assignments.map((a) =>
+          a.classId === target ? { ...a, classId: fallbackClass } : a,
+        );
+        const nextResources = d.resources.map((r) =>
+          r.classId === target ? { ...r, classId: fallbackClass } : r,
+        );
+        const nextPeriods = d.periods.filter((p) => p.classId !== target);
+        const nextMessages = d.messages.map((m) =>
+          m.classId === target ? { ...m, classId: fallbackClass } : m,
+        );
+        const nextUsers = d.users.map((u) => ({
+          ...u,
+          classes: u.classes.filter((c) => c !== target),
+        }));
 
-      const nextFees = { ...d.fees };
-      delete nextFees[target];
+        const nextFees = { ...d.fees };
+        delete nextFees[target];
 
-      return {
-        ...d,
-        classes: nextClasses,
-        students: nextStudents,
-        assignments: nextAssignments,
-        resources: nextResources,
-        periods: nextPeriods,
-        messages: nextMessages,
-        users: nextUsers,
-        fees: nextFees,
-      };
-    }, `Class deleted: ${target}`);
+        return {
+          ...d,
+          classes: nextClasses,
+          students: nextStudents,
+          assignments: nextAssignments,
+          resources: nextResources,
+          periods: nextPeriods,
+          messages: nextMessages,
+          users: nextUsers,
+          fees: nextFees,
+        };
+      }, `Class deleted: ${target}`))
+    )
+      return;
 
     setDeleteTarget(null);
     setReassignClass('');
@@ -1548,26 +1561,29 @@ export function Community() {
       {createPost && (
         <Modal title="Share a classroom update" onClose={() => setCreatePost(false)}>
           <form
-            onSubmit={(e) => {
+            onSubmit={async (e) => {
               e.preventDefault();
               const f = new FormData(e.currentTarget);
-              update(
-                (d) => ({
-                  ...d,
-                  messages: [
-                    {
-                      id: uid(),
-                      author: me,
-                      title: String(f.get('title')),
-                      body: String(f.get('body')),
-                      classId: String(f.get('class')),
-                      date: new Date().toISOString(),
-                    },
-                    ...d.messages,
-                  ],
-                }),
-                'Classroom update posted',
-              );
+              if (
+                !(await update(
+                  (d) => ({
+                    ...d,
+                    messages: [
+                      {
+                        id: uid(),
+                        author: me,
+                        title: String(f.get('title')),
+                        body: String(f.get('body')),
+                        classId: String(f.get('class')),
+                        date: new Date().toISOString(),
+                      },
+                      ...d.messages,
+                    ],
+                  }),
+                  'Classroom update posted',
+                ))
+              )
+                return;
               setCreatePost(false);
               notify('Update shared with your classroom.');
             }}

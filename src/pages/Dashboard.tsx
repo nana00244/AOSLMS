@@ -53,7 +53,7 @@ export function Dashboard() {
                 variant="secondary"
                 onClick={() =>
                   backup(data)
-                    .then(() => notify('Demo backup downloaded.'))
+                    .then(() => notify('Backup downloaded.'))
                     .catch(() => notify('Unable to create backup. Please try again.'))
                 }
               >
@@ -127,7 +127,7 @@ export function Dashboard() {
                   ? money(totalBilled)
                   : teacher
                     ? allowedClasses.length
-                    : (data.classes || classes).length
+                    : (data.classes || []).length
               }
               icon={finance ? <FileText /> : <School />}
               tone="green"

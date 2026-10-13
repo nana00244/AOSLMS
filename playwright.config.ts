@@ -4,7 +4,7 @@ export default defineConfig({
   testDir: './tests',
   testMatch: process.env.AOS_CLOUD_TESTS ? '**/cloud.spec.ts' : '**/ui.spec.ts',
   fullyParallel: true,
-  workers: 2,
+  workers: process.env.AOS_CLOUD_TESTS ? 1 : 2,
   use: {
     baseURL: 'http://127.0.0.1:5173',
     headless: true,

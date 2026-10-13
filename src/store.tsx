@@ -1,23 +1,19 @@
 import { workspaceSchema } from './validation';
 import { createContext, useContext, useEffect, useRef, useState, type ReactNode } from 'react';
-import { seed, uid, type State, type Role, type User, classes } from './data';
+import { type State, type Role, type User } from './data';
 import { assignedClassIdsForTeacher } from './services/teacherService';
-import { isSupabaseConfigured, supabase } from './supabase';
+import { supabase } from './supabase';
 import { loginIdentifier } from './accountRules';
 import { emptyState } from './emptyState';
-import { loadWorkspace, saveWorkspace, importScoreSheet, type Snapshot } from './backend';
+import { loadWorkspace, commitPendingSave, type Snapshot } from './backend';
+import { changesBetween } from './backendAccess';
 import { applyScoreImport, type ScoreImportRequest } from './scoreImport';
+import { overlayChanges, mergeSavedValue, recordValue } from './saveRecovery';
+import { readPendingSaves, retainSave, removeSave, type PendingSave } from './pendingSaves';
 export function validateState(value: unknown): value is State {
   return workspaceSchema.safeParse(value).success;
 }
-function emptyStateWithCachedLogo(): State {
-  const state = emptyState();
-  const logo = localStorage.getItem('aos-school-logo');
-  if (logo?.startsWith('data:image/')) state.settings.crest = logo;
-  return state;
-}
 export type Theme = 'light' | 'dark';
-
 interface Store {
   data: State;
   role: Role | null;
@@ -35,121 +31,259 @@ interface Store {
   signIn: (identifier: string, password: string) => Promise<void>;
   signOut: () => Promise<void>;
   refresh: () => Promise<void>;
+  pendingCount: number;
+  retrySaves: () => Promise<void>;
   theme: Theme;
   setTheme: (t: Theme) => void;
   toggleTheme: () => void;
 }
 const Context = createContext<Store>(null!);
 export function StoreProvider({ children }: { children: ReactNode }) {
-  const [data, setData] = useState<State>(() => emptyStateWithCachedLogo());
+  const [data, setData] = useState<State>(emptyState);
+  const dataRef = useRef(data);
   const snapshot = useRef<Snapshot | null>(null);
+  const owner = useRef('');
   const busy = useRef(false);
   const generation = useRef(0);
-  const refreshSequence = useRef(0);
+  const refreshing = useRef<Promise<void> | null>(null);
+  const refreshAgain = useRef(false);
+  const serial = useRef<Promise<unknown>>(Promise.resolve());
+  const pendingRef = useRef<PendingSave[]>([]);
+  const writing = useRef(0);
   const [saving, setSaving] = useState(false);
+  const [pendingCount, setPendingCount] = useState(0);
   const [role, setRoleState] = useState<Role | null>(null);
   const [authLoading, setAuthLoading] = useState(true);
   const [authProfile, setAuthProfile] = useState<User | undefined>();
-
+  const [toast, setToast] = useState('');
+  const [storageError, setStorageError] = useState('');
+  const [theme, setThemeState] = useState<Theme>(() => {
+    const stored = localStorage.getItem('aos-theme');
+    return stored === 'light' || stored === 'dark'
+      ? stored
+      : window.matchMedia('(prefers-color-scheme: dark)').matches
+        ? 'dark'
+        : 'light';
+  });
   useEffect(() => {
-    if (data.settings.crest) localStorage.setItem('aos-school-logo', data.settings.crest);
+    localStorage.setItem('aos-theme', theme);
+    document.documentElement.setAttribute('data-theme', theme);
+    document.documentElement.classList.toggle('dark', theme === 'dark');
+  }, [theme]);
+  useEffect(() => {
     const favicon = document.querySelector<HTMLLinkElement>('link[rel="icon"]');
-    const logo = data.settings.crest || localStorage.getItem('aos-school-logo');
-    if (favicon) favicon.href = logo || './crest.svg';
+    if (favicon) favicon.href = data.settings.crest || './crest.svg';
   }, [data.settings.crest]);
-
-  async function refresh() {
-    if (!supabase || busy.current) return;
-    const currentGeneration = generation.current;
-    const sequence = ++refreshSequence.current;
-    const result = await loadWorkspace();
-    if (
-      currentGeneration !== generation.current ||
-      busy.current ||
-      sequence !== refreshSequence.current ||
-      (snapshot.current && result.revision < snapshot.current.revision)
-    )
-      return;
+  function notify(message: string) {
+    setToast(message);
+    window.setTimeout(() => setToast((current) => (current === message ? '' : current)), 4500);
+  }
+  function show(result: Snapshot, pending: PendingSave[]) {
     snapshot.current = result;
-    setData(result.state);
-    setStorageError('');
-    const { data: session } = await supabase.auth.getSession();
-    if (currentGeneration !== generation.current) return;
-    const profile = result.state.users.find((u) => u.id === session.session?.user.id);
+    pendingRef.current = pending;
+    setPendingCount(pending.length);
+    const visible = pending.reduce(
+      (state, save) => overlayChanges(state, save.changes),
+      result.state,
+    );
+    dataRef.current = visible;
+    setData(visible);
+    const profile = result.state.users.find((u) => u.id === owner.current);
     setAuthProfile(profile);
     setRoleState(profile?.role || null);
   }
-
-  useEffect(() => {
-    const client = supabase;
-    if (!client) return;
-    let active = true;
-    const load = async () => {
-      try {
-        await refresh();
-      } catch (error) {
-        if (active) {
-          setStorageError(error instanceof Error ? error.message : 'Could not load school records');
-          setRoleState(null);
-          setAuthProfile(undefined);
-          snapshot.current = null;
-          setData(emptyStateWithCachedLogo());
+  async function refresh() {
+    if (!supabase || busy.current || !owner.current) return;
+    if (refreshing.current) {
+      refreshAgain.current = true;
+      return refreshing.current;
+    }
+    const current = generation.current,
+      userId = owner.current;
+    const task = (async () => {
+      const result = await loadWorkspace();
+      const pending = await readPendingSaves(userId);
+      if (
+        current !== generation.current ||
+        busy.current ||
+        (snapshot.current && result.revision < snapshot.current.revision)
+      )
+        return;
+      show(result, pending);
+      if (!pending.length) setStorageError('');
+    })();
+    refreshing.current = task;
+    try {
+      await task;
+    } finally {
+      if (refreshing.current === task) {
+        refreshing.current = null;
+        if (refreshAgain.current) {
+          refreshAgain.current = false;
+          // An invalidation during a slow read needs one trailing read, not overlapping requests.
+          void refresh().catch(() => {});
         }
+      }
+    }
+  }
+  async function syncQueue() {
+    if (!owner.current || !supabase) return;
+    const userId = owner.current,
+      current = generation.current;
+    const execute = async () => {
+      if (busy.current || current !== generation.current) return;
+      busy.current = true;
+      try {
+        let pending = await readPendingSaves(userId);
+        while (pending.length && current === generation.current) {
+          const save = pending[0];
+          let result: Snapshot | undefined;
+          for (let attempt = 0; attempt < 3; attempt++) {
+            try {
+              result = await commitPendingSave(save);
+              break;
+            } catch (error) {
+              const message = error instanceof Error ? error.message : String(error);
+              // Only the transactional compare-and-swap race is retryable immediately.
+              if (attempt === 2 || !message.includes('Conflict: records changed')) throw error;
+            }
+          }
+          if (!result || current !== generation.current) return;
+          await removeSave(save.id);
+          pending = await readPendingSaves(userId);
+          show(result, pending);
+        }
+        if (current === generation.current) setStorageError('');
+      } catch (error) {
+        if (current === generation.current)
+          setStorageError(
+            `Not synced: ${error instanceof Error ? error.message : 'Connection failed'}. Your pending entries are retained on this device.`,
+          );
       } finally {
-        if (active) setAuthLoading(false);
+        busy.current = false;
       }
     };
-    const { data: listener } = client.auth.onAuthStateChange((_event, session) => {
+    if (navigator.locks) await navigator.locks.request(`aos-save-${userId}`, execute);
+    else await execute();
+  }
+  async function retrySaves() {
+    await syncQueue();
+    await refresh().catch(() => {});
+  }
+  async function resolveConflict() {
+    if (!storageError.includes('Conflict:') || !owner.current) return;
+    if (
+      !window.confirm(
+        'Keep the fields from your oldest pending save where they conflict with newer database entries? Other fields will be preserved. Download pending entries first if you want a separate copy.',
+      )
+    )
+      return;
+    const result = await loadWorkspace();
+    const first = (await readPendingSaves(owner.current))[0];
+    if (!first) return;
+    const changes = first.changes.map((change) => {
+      const before = recordValue(result.state, change);
+      return {
+        ...change,
+        before,
+        after: mergeSavedValue(
+          change.before,
+          change.after,
+          before,
+          `${change.collection}/${change.id}`,
+          true,
+        ),
+      };
+    });
+    await retainSave({ ...first, changes });
+    await retrySaves();
+  }
+  useEffect(() => {
+    if (!supabase) {
+      setAuthLoading(false);
+      setStorageError('Supabase is not configured. Saving is unavailable.');
+      return;
+    }
+    let active = true;
+    const { data: listener } = supabase.auth.onAuthStateChange((event, session) => {
       if (session) {
-        if (_event !== 'TOKEN_REFRESHED') {
-          setAuthLoading(true);
-          // Supabase callbacks must not await another auth operation under its lock.
-          window.setTimeout(() => {
-            if (active) void load();
-          }, 0);
+        if (owner.current !== session.user.id) {
+          generation.current++;
+          refreshing.current = null;
+          refreshAgain.current = false;
+          owner.current = session.user.id;
+          snapshot.current = null;
+          dataRef.current = emptyState();
+          setData(dataRef.current);
+          pendingRef.current = [];
+          setPendingCount(0);
+          setAuthProfile(undefined);
+          setRoleState(null);
         }
+        if (event !== 'TOKEN_REFRESHED')
+          window.setTimeout(async () => {
+            if (!active) return;
+            try {
+              await refresh();
+              await syncQueue();
+            } catch (error) {
+              if (active)
+                setStorageError(
+                  error instanceof Error ? error.message : 'Could not load school records',
+                );
+            } finally {
+              if (active) setAuthLoading(false);
+            }
+          }, 0);
       } else {
         generation.current++;
+        refreshing.current = null;
+        refreshAgain.current = false;
+        owner.current = '';
         snapshot.current = null;
-        setData(emptyStateWithCachedLogo());
+        dataRef.current = emptyState();
+        setData(dataRef.current);
+        pendingRef.current = [];
+        setPendingCount(0);
         setAuthProfile(undefined);
         setRoleState(null);
         setAuthLoading(false);
       }
     });
-    const onFocus = () => {
-      if (snapshot.current && !busy.current) void load();
+    const reload = () => {
+      if (owner.current) void retrySaves().catch(() => {});
     };
-    window.addEventListener('focus', onFocus);
+    const beforeUnload = (event: BeforeUnloadEvent) => {
+      if (pendingRef.current.length || writing.current) {
+        event.preventDefault();
+        event.returnValue = '';
+      }
+    };
+    window.addEventListener('online', reload);
+    window.addEventListener('focus', reload);
+    window.addEventListener('hashchange', reload);
+    window.addEventListener('beforeunload', beforeUnload);
     return () => {
       active = false;
       generation.current++;
-      window.removeEventListener('focus', onFocus);
       listener.subscription.unsubscribe();
+      window.removeEventListener('online', reload);
+      window.removeEventListener('focus', reload);
+      window.removeEventListener('hashchange', reload);
+      window.removeEventListener('beforeunload', beforeUnload);
     };
   }, []);
   useEffect(() => {
     if (!supabase || !authProfile?.id) return;
-    const client = supabase;
     let active = true;
     let timer: ReturnType<typeof setTimeout>;
     const reload = () => {
       clearTimeout(timer);
-      timer = setTimeout(async () => {
-        if (!active) return;
-        if (busy.current) {
-          reload();
-          return;
-        }
-        try {
-          await refresh();
-        } catch {
-          if (active) setStorageError('Live updates interrupted. Reconnecting…');
-        }
+      timer = setTimeout(() => {
+        if (active) void retrySaves().catch(() => {});
       }, 250);
     };
-    // Only a revision number is broadcast. School records stay behind the scoped Edge API.
-    const channel = client
+    const channel = supabase
       .channel(`workspace-revision-${authProfile.id}`)
       .on(
         'postgres_changes',
@@ -159,143 +293,91 @@ export function StoreProvider({ children }: { children: ReactNode }) {
       .subscribe((status) => {
         if (status === 'SUBSCRIBED') reload();
       });
-    const fallback = setInterval(reload, 30000);
+    const interval = setInterval(reload, 15000);
     return () => {
       active = false;
       clearTimeout(timer);
-      clearInterval(fallback);
-      void client.removeChannel(channel);
+      clearInterval(interval);
+      void supabase?.removeChannel(channel);
     };
   }, [authProfile?.id]);
-  const [theme, setThemeState] = useState<Theme>(() => {
-    const stored = localStorage.getItem('aos-theme');
-    if (stored === 'light' || stored === 'dark') {
-      document.documentElement.setAttribute('data-theme', stored);
-      document.documentElement.classList.toggle('dark', stored === 'dark');
-      return stored;
-    }
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const initial = prefersDark ? 'dark' : 'light';
-    document.documentElement.setAttribute('data-theme', initial);
-    document.documentElement.classList.toggle('dark', initial === 'dark');
-    return initial;
-  });
-  const [toast, setToast] = useState('');
-  const [storageError, setStorageError] = useState('');
-
-  function setTheme(t: Theme) {
-    setThemeState(t);
-    localStorage.setItem('aos-theme', t);
-    document.documentElement.setAttribute('data-theme', t);
-    document.documentElement.classList.toggle('dark', t === 'dark');
-  }
-
-  function toggleTheme() {
-    setTheme(theme === 'light' ? 'dark' : 'light');
-  }
-
-  const roleId =
-    role === 'Teacher' ? 'u2' : role === 'Student' ? 'u3' : role === 'Accountant' ? 'u4' : 'u1';
-  const user = isSupabaseConfigured
-    ? authProfile
-    : data.users.find((u) => u.id === roleId && u.active);
+  const user = authProfile;
   const linkedStudent =
-    role === 'Student'
-      ? data.students.find((student) => student.id === user?.studentId || student.id === user?.id)
-      : undefined;
-  const me = user?.name || role || 'Guest';
-  function setRole(r: Role | null) {
-    if (isSupabaseConfigured) return;
-    setRoleState(r);
-    if (r) sessionStorage.setItem('aos-role', r);
-    else sessionStorage.removeItem('aos-role');
-  }
+    role === 'Student' ? data.students.find((s) => s.id === user?.studentId) : undefined;
   async function signIn(identifier: string, password: string) {
-    if (!supabase) throw new Error('Supabase is not configured.');
-    const { error } = await supabase.auth.signInWithPassword({
+    if (!supabase) throw new Error('Supabase is not configured');
+    const result = await supabase.auth.signInWithPassword({
       email: loginIdentifier(identifier),
       password,
     });
-    if (error) throw error;
+    if (result.error) throw result.error;
   }
   async function signOut() {
-    if (supabase) {
-      const { error } = await supabase.auth.signOut();
-      if (error) throw error;
-    } else {
-      setRole(null);
+    if (pendingRef.current.length || writing.current) {
+      notify('Sync your pending saves before signing out. They are retained on this device.');
+      return;
     }
+    if (!supabase) return;
+    const result = await supabase.auth.signOut();
+    if (result.error) notify(result.error.message);
   }
-  function notify(message: string) {
-    setToast(message);
-    window.setTimeout(() => setToast((current) => (current === message ? '' : current)), 4500);
-  }
-  async function update(
+  function update(
     fn: (s: State) => State,
     action?: string,
     scoreRequest?: ScoreImportRequest,
   ): Promise<boolean> {
-    if (isSupabaseConfigured) {
-      if (!snapshot.current || busy.current) {
-        notify('Please wait for the current save to finish.');
-        return false;
-      }
-      const previous = snapshot.current;
-      const currentGeneration = generation.current;
-      busy.current = true;
-      setSaving(true);
-      setStorageError('');
-      try {
-        const result = scoreRequest
-          ? await importScoreSheet(previous, scoreRequest)
-          : await saveWorkspace(previous, fn(previous.state), action);
-        if (generation.current !== currentGeneration) return false;
-        snapshot.current = result;
-        setData(result.state);
-        notify('Changes saved to the school database.');
-        return true;
-      } catch (error) {
-        if (generation.current !== currentGeneration) return false;
-        const message = error instanceof Error ? error.message : 'Could not save changes';
-        setStorageError(`Not saved: ${message}`);
-        notify(`Not saved: ${message}`);
-        return false;
-      } finally {
-        busy.current = false;
-        setSaving(false);
-      }
-    }
-    setData((s) => {
-      let next = fn(s);
-      if (!next.classes || !next.classes.length) {
-        next.classes = [...classes];
-      }
-      if (action)
-        next = {
-          ...next,
-          logs: [
-            {
-              id: uid(),
-              action,
-              actor: me,
-              date: new Date().toISOString(),
-              type: role || 'System',
-            },
-            ...next.logs,
-          ],
-        };
-      return next;
+    writing.current++;
+    setSaving(true);
+    const currentOwner = owner.current;
+    const task = serial.current
+      .catch(() => {})
+      .then(async () => {
+        if (!supabase || !snapshot.current || !currentOwner || currentOwner !== owner.current) {
+          notify('Sign in and load school records before saving.');
+          return false;
+        }
+        try {
+          const next = fn(dataRef.current);
+          const changes = changesBetween(dataRef.current, next);
+          let id = '';
+          if (changes.length) {
+            const save: PendingSave = {
+              id: crypto.randomUUID(),
+              owner: currentOwner,
+              createdAt: new Date().toISOString(),
+              changes,
+              event: action,
+              scoreRequest,
+            };
+            await retainSave(save); // Durable before sending; do not announce success yet.
+            id = save.id;
+            const pending = await readPendingSaves(currentOwner);
+            if (currentOwner !== owner.current) return false;
+            show(snapshot.current!, pending);
+          }
+          await syncQueue();
+          const remaining = await readPendingSaves(currentOwner);
+          const saved = !remaining.some((p) => !id || p.id === id);
+          if (saved) notify('Changes saved to the school database.');
+          return saved;
+        } catch (error) {
+          const message = error instanceof Error ? error.message : 'Could not retain this save';
+          setStorageError(`Not saved: ${message}`);
+          notify(`Not saved: ${message}`);
+          return false;
+        }
+      });
+    serial.current = task;
+    return task.finally(() => {
+      writing.current--;
+      if (!writing.current) setSaving(false);
     });
-    return true;
   }
   async function importScores(request: ScoreImportRequest) {
-    if (!user) {
-      notify('Sign in before uploading scores.');
-      return false;
-    }
+    if (!user) return false;
     const saved = await update(
       (state) => applyScoreImport(state, user, request),
-      `Assessment score sheet imported: ${request.classId}, ${request.subject}, ${request.sheet.category}, term ${request.sheet.term}`,
+      `Assessment upload: ${request.classId}, ${request.subject}, ${request.sheet.category}, term ${request.sheet.term}`,
       request,
     );
     if (saved) notify('Score sheet saved. Subject cards and report cards are updated.');
@@ -306,11 +388,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
       value={{
         data,
         role,
-        authLoading,
-        signIn,
-        signOut,
-        refresh,
-        setRole,
+        setRole: () => {},
         update,
         importScores,
         notify,
@@ -320,19 +398,52 @@ export function StoreProvider({ children }: { children: ReactNode }) {
           role === 'Teacher'
             ? assignedClassIdsForTeacher(data, user)
             : role === 'Student'
-              ? linkedStudent?.classId
+              ? linkedStudent
                 ? [linkedStudent.classId]
                 : []
-              : data.classes || classes,
-        me,
+              : data.classes,
+        me: user?.name || 'Guest',
         ownId: linkedStudent?.id || (role === 'Student' ? '' : data.students[0]?.id || ''),
         user,
+        authLoading,
+        signIn,
+        signOut,
+        refresh,
+        pendingCount,
+        retrySaves,
         theme,
-        setTheme,
-        toggleTheme,
+        setTheme: setThemeState,
+        toggleTheme: () => setThemeState(theme === 'light' ? 'dark' : 'light'),
       }}
     >
       {children}
+      {pendingCount > 0 && (
+        <aside className="pending-save-banner" role="status">
+          <strong>
+            {pendingCount} pending save{pendingCount === 1 ? '' : 's'} — not yet synced to Supabase.
+          </strong>
+          <span>
+            {storageError || 'Retained on this device until the database confirms the save.'}
+          </span>
+          <button onClick={() => void retrySaves()}>Retry sync</button>
+          <button
+            onClick={() =>
+              download(
+                'pending-school-saves.json',
+                JSON.stringify(pendingRef.current, null, 2),
+                'application/json',
+              )
+            }
+          >
+            Download pending entries
+          </button>
+          {storageError.includes('Conflict:') && (
+            <button onClick={() => void resolveConflict().catch((error) => notify(String(error)))}>
+              Keep my changed fields and retry
+            </button>
+          )}
+        </aside>
+      )}
       {saving && (
         <div className="cloud-save-overlay" role="status" aria-live="polite">
           Saving to your school database…
@@ -341,6 +452,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     </Context.Provider>
   );
 }
+
 export const useStore = () => useContext(Context);
 export function download(name: string, content: string, type = 'text/plain') {
   const url = URL.createObjectURL(new Blob([content], { type }));

@@ -14,7 +14,7 @@ npm run build
 
 The app connects to Supabase project `itqfnzqksuacbeemrqok` by default. `src/supabase-project.json` contains only the public project URL and publishable key. Database access is protected on the server; the service-role key is never shipped to the browser. Optional `.env.local` values override the public connection settings.
 
-Use `VITE_DEMO_MODE=true` explicitly to explore the isolated browser-local demo. Real accounts start with an empty school, and demo data is never automatically uploaded.
+The app requires Supabase sign-in and has no demo workspace. Empty schools start without sample records or preset fees. Missing report-card values remain blank until entered or calculated from recorded assessments.
 
 ## First use
 
@@ -46,7 +46,9 @@ Review the detected month, target class, term, student matches and replacement c
 - `learning-files` is a private Storage bucket. Active school users upload into their own folder; authorized downloads use short-lived signed URLs. PDF, supported Office files, text and images are limited to 5 MB.
 - `audit_log` records server timestamps and authenticated actors. The app displays the latest 1,000 events.
 
-The original starter relational academic tables are retained by the migration history but are not used by the running app or exposed to browser roles. School data currently uses a single transactional document. This keeps the existing detailed models intact; it is suitable for a small school, but large deployments should split high-volume collections into indexed relational tables. Concurrent edits can require a reload and retry. Views refresh on login, reload, window focus, and successful saves; this is not a realtime subscription.
+The original starter relational academic tables are retained by the migration history but are not used by the running app or exposed to browser roles. School data currently uses a single transactional document. This keeps the existing detailed models intact; it is suitable for a small school, but large deployments should split high-volume collections into indexed relational tables. Realtime revision notifications refresh open views, with navigation, focus and periodic refresh as fallbacks.
+
+Workspace saves are retained on the device before transmission and confirmed only after Supabase commits them. Transactional operation receipts prevent duplicate retries. Unrelated concurrent fields merge; conflicting fields remain pending for review. Pending entries survive reload and retry when connectivity returns, but remain local until confirmed. See [report cards and saving](docs/report-cards-and-saving.md) for class batch printing and recovery behavior, and [assessment uploads](docs/assessment-uploads.md) for teacher score-sheet imports.
 
 ## CLI deployment
 
@@ -82,7 +84,7 @@ node scripts/verify-backend-workflows.mjs
 node scripts/verify-with-temporary-admin.mjs
 ```
 
-The standard browser suite runs in explicit demo mode. For the live administrator browser smoke test, set `AOS_CLOUD_TESTS=1` and run `npm run test:e2e`. Live tests read the local credential file and do not print its contents. `verify-backend-workflows.mjs` temporarily creates uniquely named test records/accounts, verifies permissions and persistence, and removes its fixtures and files afterward. Run it against a test environment before broad deployments.
+For the production browser checks, set `AOS_CLOUD_TESTS=1` and run `npm run test:e2e`, or use the temporary-administrator wrapper below. The old demo browser suite is retained as historical coverage and is not a production acceptance test. Live tests read the local credential file and do not print its contents. `verify-backend-workflows.mjs` temporarily creates uniquely named test records/accounts, verifies permissions and persistence, and removes its fixtures and files afterward. Run it against a test environment before broad deployments.
 
 `verify-with-temporary-admin.mjs` uses the logged-in Supabase CLI to create an isolated administrator, runs the live workflow and browser tests, and removes that account and its temporary credential file afterward. It never resets an existing administrator password. Its browser test creates a plain username through the actual form, assigns mixed class/subject permissions, and signs in as that teacher.
 

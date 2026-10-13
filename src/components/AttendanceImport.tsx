@@ -123,18 +123,21 @@ export function AttendanceImport({
           <div className="modal-actions">
             <Button
               disabled={!classId || !allowedClasses.includes(classId) || !changed.length}
-              onClick={() => {
-                update(
-                  (d) => ({
-                    ...d,
-                    attendance: {
-                      ...d.attendance,
-                      ...attendanceImportEntries(file, d.students, classId, term),
-                    },
-                  }),
-                  `Attendance CSV imported: ${classId}, ${file.month}, term ${term}`,
-                );
-                notify('Attendance import submitted.');
+              onClick={async () => {
+                if (
+                  !(await update(
+                    (d) => ({
+                      ...d,
+                      attendance: {
+                        ...d.attendance,
+                        ...attendanceImportEntries(file, d.students, classId, term),
+                      },
+                    }),
+                    `Attendance CSV imported: ${classId}, ${file.month}, term ${term}`,
+                  ))
+                )
+                  return;
+                notify('Attendance import saved.');
                 onImported(classId, file.month, term);
                 onClose();
               }}

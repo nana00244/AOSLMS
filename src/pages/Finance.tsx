@@ -140,12 +140,12 @@ export function AdminFinanceDashboard() {
 
 export function Finance() {
   const { data, role, ownId, update, notify } = useStore();
-  const classList = data.classes || classes;
+  const classList = data.classes || [];
   const [q, setQ] = useState(''),
     [modal, setModal] = useState(''),
     [receipt, setReceipt] = useState<Payment | null>(null),
     [tab, setTab] = useState('Student billing'),
-    [feeClass, setFeeClass] = useState(classList[0] || 'Basic 6 - Gold'),
+    [feeClass, setFeeClass] = useState(classList[0] || ''),
     [paper, setPaper] = useState('A4');
   const isStudent = role === 'Student';
   const students = data.students.filter(
@@ -457,7 +457,7 @@ export function Finance() {
       {modal === 'payment' && (
         <Modal title="Record a student payment" onClose={() => setModal('')}>
           <form
-            onSubmit={(e) => {
+            onSubmit={async (e) => {
               e.preventDefault();
               const f = new FormData(e.currentTarget);
               const studentId = String(f.get('student'));
@@ -477,10 +477,13 @@ export function Finance() {
                 term: data.settings.term,
                 year: data.settings.year,
               };
-              update(
-                (d) => ({ ...d, payments: [...d.payments, p] }),
-                `Payment recorded: ${money(p.amount)} for ${s.name}`,
-              );
+              if (
+                !(await update(
+                  (d) => ({ ...d, payments: [...d.payments, p] }),
+                  `Payment recorded: ${money(p.amount)} for ${s.name}`,
+                ))
+              )
+                return;
               setModal('');
               setReceipt(p);
               notify('Payment recorded. Your receipt is ready to print.');
@@ -525,27 +528,30 @@ export function Finance() {
       {modal === 'expense' && (
         <Modal title="Record an expense" onClose={() => setModal('')}>
           <form
-            onSubmit={(e) => {
+            onSubmit={async (e) => {
               e.preventDefault();
               const f = new FormData(e.currentTarget);
-              update(
-                (d) => ({
-                  ...d,
-                  expenses: [
-                    {
-                      id: uid(),
-                      title: String(f.get('title')),
-                      category: String(f.get('category')),
-                      vendor: String(f.get('vendor')),
-                      amount: Number(f.get('amount')),
-                      status: String(f.get('status')),
-                      date: today(),
-                    },
-                    ...d.expenses,
-                  ],
-                }),
-                'Operating expense recorded',
-              );
+              if (
+                !(await update(
+                  (d) => ({
+                    ...d,
+                    expenses: [
+                      {
+                        id: uid(),
+                        title: String(f.get('title')),
+                        category: String(f.get('category')),
+                        vendor: String(f.get('vendor')),
+                        amount: Number(f.get('amount')),
+                        status: String(f.get('status')),
+                        date: today(),
+                      },
+                      ...d.expenses,
+                    ],
+                  }),
+                  'Operating expense recorded',
+                ))
+              )
+                return;
               notify('Expense saved.');
               setModal('');
             }}
@@ -585,16 +591,19 @@ export function Finance() {
       {modal === 'fees' && (
         <Modal title={`Fee structure · ${feeClass}`} onClose={() => setModal('')}>
           <form
-            onSubmit={(e) => {
+            onSubmit={async (e) => {
               e.preventDefault();
               const f = new FormData(e.currentTarget);
               const fees = Object.fromEntries(
                 Array.from(f.entries()).map(([k, v]) => [k, Number(v)]),
               );
-              update(
-                (d) => ({ ...d, fees: { ...d.fees, [feeClass]: fees } }),
-                'Fee structure updated',
-              );
+              if (
+                !(await update(
+                  (d) => ({ ...d, fees: { ...d.fees, [feeClass]: fees } }),
+                  'Fee structure updated',
+                ))
+              )
+                return;
               notify('Fee template saved. Issued student bills are unchanged.');
               setModal('');
             }}
@@ -768,7 +777,7 @@ export function Payroll() {
       {edit && (
         <Modal title={`Payroll · ${edit.name}`} onClose={() => setEdit(null)}>
           <form
-            onSubmit={(e) => {
+            onSubmit={async (e) => {
               e.preventDefault();
               const fields = new FormData(e.currentTarget);
               const record = {
@@ -782,10 +791,13 @@ export function Payroll() {
                 notify('Deductions cannot exceed total salary and allowances.');
                 return;
               }
-              update(
-                (d) => ({ ...d, payroll: d.payroll.map((p) => (p.id === edit.id ? record : p)) }),
-                'Payroll record updated',
-              );
+              if (
+                !(await update(
+                  (d) => ({ ...d, payroll: d.payroll.map((p) => (p.id === edit.id ? record : p)) }),
+                  'Payroll record updated',
+                ))
+              )
+                return;
               setEdit(null);
               notify('Payroll record saved.');
             }}

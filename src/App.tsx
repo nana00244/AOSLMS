@@ -31,7 +31,6 @@ import {
 import { StoreProvider, useStore } from './store';
 import { type Role } from './data';
 import { Button, Toast, Avatar, Field } from './components/ui';
-import { isSupabaseConfigured } from './supabase';
 import { Dashboard } from './pages/Dashboard';
 import { Students } from './pages/Students';
 import { Attendance } from './pages/Attendance';
@@ -251,7 +250,8 @@ function Login() {
           <div className="eyebrow">WELCOME TO YOUR SCHOOL</div>
           <h2>Good to have you here.</h2>
           <p>
-            Sign in with the credentials provided by your school administrator to access your portal.
+            Sign in with the credentials provided by your school administrator to access your
+            portal.
           </p>
           {authLoading ? (
             <p role="status">Checking your session…</p>
@@ -519,10 +519,6 @@ function Shell() {
             <strong>{items.find((n) => n.path === location.pathname)?.label || 'Overview'}</strong>
           </div>
           <div className="topbar-right">
-            <span className="demo-badge">
-              <span />
-              Demo workspace
-            </span>
             <button
               className="icon-btn theme-toggle"
               aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}

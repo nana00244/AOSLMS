@@ -5,12 +5,229 @@ import { createClient } from '@supabase/supabase-js';
 import { changesBetween } from '../src/backendAccess';
 import { parseScoreCsv } from '../src/scoreSheetParser';
 
+test('production reports filter and batch print, and interrupted saves survive reload without defaults', async ({
+  page,
+}) => {
+  test.skip(!process.env.AOS_TEST_SERVICE_KEY, 'Requires isolated live verification credentials');
+  test.setTimeout(180000);
+  const project = JSON.parse(readFileSync('src/supabase-project.json', 'utf8'));
+  const credentials = JSON.parse(readFileSync(process.env.AOS_TEST_CREDENTIALS!, 'utf8'));
+  const options = { auth: { persistSession: false, autoRefreshToken: false } };
+  const admin = createClient(project.url, project.publishableKey, options);
+  const service = createClient(project.url, process.env.AOS_TEST_SERVICE_KEY!, options);
+  const signed = await admin.auth.signInWithPassword(credentials);
+  if (signed.error) throw signed.error;
+  async function call(body: object) {
+    const result = await admin.functions.invoke('workspace', { body });
+    if (result.error)
+      throw new Error(
+        result.error.context instanceof Response
+          ? await result.error.context.text()
+          : result.error.message,
+      );
+    return result.data;
+  }
+  async function mutate(fn: (state: any) => any) {
+    const current = await call({ action: 'load' });
+    return call({
+      action: 'save',
+      revision: current.revision,
+      changes: changesBetween(current.state, fn(structuredClone(current.state))),
+      event: 'Isolated production verification',
+    });
+  }
+  const suffix = randomUUID().slice(0, 8),
+    classes = [`REPORT-A-${suffix}`, `REPORT-B-${suffix}`];
+  const ids = [1, 2, 3].map((i) => `REPORT-${suffix}-${i}`);
+  const initial = await call({ action: 'load' });
+  const term = initial.state.settings.term,
+    rk = `${ids[0]}|${term}`;
+  try {
+    await mutate((state) => ({
+      ...state,
+      classes: [...state.classes, ...classes],
+      students: [
+        ...state.students,
+        ...ids.map((id, i) => ({
+          id,
+          name: `Report Test ${i + 1}`,
+          classId: classes[i === 2 ? 1 : 0],
+          gender: '',
+          dob: '',
+          guardian: '',
+          phone: '',
+          status: 'Active',
+          enrolled: '2026-10-12',
+        })),
+      ],
+    }));
+    await page.goto('/');
+    await page.getByLabel('Username or email').fill(credentials.email);
+    await page.getByLabel('Password', { exact: true }).fill(credentials.password);
+    await page.getByRole('button', { name: 'Sign in', exact: true }).click();
+    await expect(page.getByRole('navigation').first()).toBeVisible({ timeout: 30000 });
+    await expect(page.getByText('Demo workspace', { exact: true })).toHaveCount(0);
+    await page.goto('/#/coursework');
+    await expect(
+      page.getByRole('button', { name: 'Upload score sheet', exact: true }),
+    ).toBeVisible();
+    const unchanged = await call({ action: 'load' });
+    expect(unchanged.state.assignments.filter((a: any) => classes.includes(a.classId))).toEqual([]);
+    await page.goto(`/#/reports?student=${ids[0]}`);
+    await page.getByLabel('Report class').selectOption(classes[0]);
+    await expect(page.getByLabel('Report student').locator('option')).toHaveCount(2);
+    await expect(page.locator('.assessment-card-sheet')).not.toContainText('EXEMPLARY');
+    await expect(page.locator('.assessment-card-sheet')).not.toContainText(
+      'commendable engagement',
+    );
+    await expect(page.locator('.assessment-bar')).toContainText('— OUT OF —');
+    await page.getByLabel('Report class').selectOption(classes[1]);
+    await expect(page.getByLabel('Report student').locator('option')).toHaveCount(1);
+    await page.getByLabel('Report class').selectOption(classes[0]);
+    await page.evaluate(() => {
+      window.print = () => {};
+    });
+    await page.getByRole('button', { name: 'Print selected class (2)', exact: true }).click();
+    await expect(page.locator('.assessment-card-sheet')).toHaveCount(2);
+    await expect(page.locator('.report-print-stack')).not.toContainText('Report Test 3');
+    const pdf = await page.pdf({
+      path: 'test-results/class-reports.pdf',
+      preferCSSPageSize: true,
+      printBackground: true,
+    });
+    expect(pdf.toString('latin1').match(/\/Type \/Page\b/g)?.length).toBe(2);
+    const returnToSingle = page.getByRole('button', {
+      name: 'Return to single report',
+      exact: true,
+    });
+    if (await returnToSingle.isVisible()) await returnToSingle.click();
+    await page.getByRole('button', { name: 'Edit report card', exact: true }).click();
+    await expect(page.getByLabel('Class Teacher’s Remarks')).toHaveValue('');
+    await expect(page.getByLabel('Mathematics SBA', { exact: true })).toHaveValue('');
+    await page.getByLabel('Class Teacher’s Remarks').fill('Retained during connection failure');
+    const endpoint = '**/functions/v1/workspace';
+    await page.route(endpoint, async (route) => {
+      if (
+        route.request().method() === 'POST' &&
+        route.request().postDataJSON()?.action === 'save-pending'
+      )
+        await route.abort('failed');
+      else await route.continue();
+    });
+    await page.getByRole('button', { name: 'Save changes', exact: true }).click();
+    await expect(page.locator('.pending-save-banner')).toContainText('1 pending save', {
+      timeout: 30000,
+    });
+    await expect(page.getByRole('dialog')).toBeVisible();
+    await expect(page.getByLabel('Class Teacher’s Remarks')).toHaveValue(
+      'Retained during connection failure',
+    );
+    expect((await call({ action: 'load' })).state.remarks[rk]).toBeUndefined();
+    await page.reload();
+    await expect(page.locator('.pending-save-banner')).toContainText('1 pending save', {
+      timeout: 30000,
+    });
+    await expect(page.locator('.assessment-remark-text')).toContainText(
+      'Retained during connection failure',
+    );
+    await page.unroute(endpoint);
+    await page.getByRole('button', { name: 'Retry sync', exact: true }).click();
+    await expect(page.locator('.pending-save-banner')).toHaveCount(0, { timeout: 30000 });
+    const recovered = await call({ action: 'load' });
+    expect(recovered.state.remarks[rk]).toBe('Retained during connection failure');
+    expect(Object.keys(recovered.state.grades).filter((k) => k.startsWith(`${ids[0]}|`))).toEqual(
+      [],
+    );
+    expect(recovered.state.conduct[rk].attendanceAttended).toBe('');
+    expect(recovered.state.conduct[rk].Conduct).toBeUndefined();
+    // Simulate a committed request whose HTTP response was lost.
+    const id = randomUUID();
+    const operation = {
+      action: 'save-pending',
+      operationId: id,
+      changes: [
+        {
+          collection: 'remarks',
+          id: rk,
+          before: recovered.state.remarks[rk],
+          after: 'Saved exactly once',
+        },
+      ],
+      event: 'Production idempotency verification',
+    };
+    const once = await call(operation),
+      twice = await call(operation);
+    expect(twice.revision).toBe(once.revision);
+    expect(twice.state.remarks[rk]).toBe('Saved exactly once');
+    const receipts = await service
+      .from('workspace_save_receipts')
+      .select('operation_id')
+      .eq('operation_id', id);
+    expect(receipts.error).toBeNull();
+    expect(receipts.data).toHaveLength(1);
+    // A stale snapshot can merge unrelated fields without dropping either change.
+    const before = twice.state.conduct[rk];
+    await call({
+      action: 'save-pending',
+      operationId: randomUUID(),
+      changes: [
+        {
+          collection: 'conduct',
+          id: rk,
+          before,
+          after: { ...before, Conduct: 'Recorded conduct' },
+        },
+      ],
+    });
+    const merged = await call({
+      action: 'save-pending',
+      operationId: randomUUID(),
+      changes: [
+        {
+          collection: 'conduct',
+          id: rk,
+          before,
+          after: { ...before, 'Work Ethic': 'Recorded work ethic' },
+        },
+      ],
+    });
+    expect(merged.state.conduct[rk]).toMatchObject({
+      Conduct: 'Recorded conduct',
+      'Work Ethic': 'Recorded work ethic',
+    });
+    await page.goto('/#/students');
+    await page.goto(`/#/reports?student=${ids[0]}`);
+    await expect(page.locator('.assessment-remark-text')).toContainText('Saved exactly once', {
+      timeout: 30000,
+    });
+    await page.screenshot({ path: 'test-results/production-reports.png', fullPage: true });
+  } finally {
+    await page.close();
+    await mutate((state) => ({
+      ...state,
+      classes: state.classes.filter((c: string) => !classes.includes(c)),
+      students: state.students.filter((s: any) => !ids.includes(s.id)),
+      assignments: state.assignments.filter((a: any) => !classes.includes(a.classId)),
+      grades: Object.fromEntries(
+        Object.entries(state.grades).filter(([k]) => !ids.some((id) => k.startsWith(`${id}|`))),
+      ),
+      remarks: Object.fromEntries(
+        Object.entries(state.remarks).filter(([k]) => !ids.some((id) => k.startsWith(`${id}|`))),
+      ),
+      conduct: Object.fromEntries(
+        Object.entries(state.conduct).filter(([k]) => !ids.some((id) => k.startsWith(`${id}|`))),
+      ),
+    }));
+    await admin.auth.signOut({ scope: 'local' });
+  }
+});
+
 test('teacher score sheet upload persists marks and updates an open report in realtime', async ({
   page,
   browser,
 }) => {
   test.skip(!process.env.AOS_TEST_SERVICE_KEY, 'Requires isolated live verification credentials');
-  test.setTimeout(150000);
+  test.setTimeout(240000);
   const project = JSON.parse(readFileSync('src/supabase-project.json', 'utf8'));
   const credentials = JSON.parse(readFileSync(process.env.AOS_TEST_CREDENTIALS!, 'utf8'));
   const options = { auth: { persistSession: false, autoRefreshToken: false } };
@@ -96,6 +313,10 @@ test('teacher score sheet upload persists marks and updates an open report in re
       .filter({ hasText: 'English Language' });
     await expect(reportRow.locator('td').nth(2)).toHaveText('25');
     const teacherPage = await teacherContext.newPage();
+    teacherPage.on('requestfailed', (request) => {
+      if (request.url().includes('/functions/v1/workspace'))
+        console.log('Workspace request failed:', request.failure()?.errorText);
+    });
     await teacherPage.goto('/');
     await teacherPage.getByLabel('Username or email').fill(email);
     await teacherPage.getByLabel('Password', { exact: true }).fill(password);
@@ -103,7 +324,7 @@ test('teacher score sheet upload persists marks and updates an open report in re
     await expect(teacherPage.getByRole('navigation').first()).toBeVisible({ timeout: 30000 });
     await teacherPage.goto('/#/coursework');
     await expect(
-      teacherPage.getByRole('button', { name: 'Open Excel grading sheet' }).first(),
+      teacherPage.getByRole('button', { name: 'Upload score sheet', exact: true }),
     ).toBeVisible({ timeout: 30000 });
     const text = `Subject,English Language,Class,${cls}\nAssessment Category,Class Exercises,Term,Term ${term}\nStudent Name,Admission Number,EXE1 (/15),EXE2 (/15),EXE3 (/15)\nScore Test Learner,${sid},[ABS],11,14`;
     async function upload(content: string) {
@@ -125,10 +346,17 @@ test('teacher score sheet upload persists marks and updates an open report in re
         teacherPage.getByText('Score sheet saved. Subject cards and report cards are updated.', {
           exact: true,
         }),
-      ).toBeVisible({ timeout: 30000 });
+      ).toBeVisible({ timeout: 65000 });
     }
     await upload(text);
-    // This tab stays open throughout the upload; the 15s deadline is shorter than fallback polling.
+    const uploaded = await service
+      .from('school_workspace')
+      .select('document,revision')
+      .eq('id', true)
+      .single();
+    expect(uploaded.error).toBeNull();
+    expect(uploaded.data?.document.grades[key]).toEqual({ sba: 11, exam: 25, remark: 'Preserved' });
+    // This tab stays open throughout the upload.
     await expect(reportRow.locator('td').nth(1)).toHaveText('11', { timeout: 15000 });
     await expect(reportRow.locator('td').nth(3)).toHaveText('36');
     let stored = await service

@@ -3,7 +3,17 @@ import { ImportStudents } from '../components/RosterImport';
 import { removeStudents } from '../studentRecords';
 import { isSupabaseConfigured } from '../supabase';
 import { Link } from 'react-router-dom';
-import { Plus, Upload, Download, Eye, Pencil, Users, GraduationCap, School, Trash2 } from 'lucide-react';
+import {
+  Plus,
+  Upload,
+  Download,
+  Eye,
+  Pencil,
+  Users,
+  GraduationCap,
+  School,
+  Trash2,
+} from 'lucide-react';
 import { classes, today, uid, type Student } from '../data';
 import { useStore, csv } from '../store';
 import {
@@ -24,7 +34,7 @@ export function Students() {
   const [bulkAction, setBulkAction] = useState('');
   const [destination, setDestination] = useState('');
   const isAdmin = role === 'Administrator';
-  const classList = data.classes || classes;
+  const classList = data.classes || [];
   const [q, setQ] = useState(''),
     [cls, setCls] = useState('All classes'),
     [status, setStatus] = useState('All statuses'),
@@ -65,52 +75,61 @@ export function Students() {
     );
   };
 
-  function handleReassign(target: string) {
+  async function handleReassign(target: string) {
     if (!target) return;
     const count = selectedIds.length;
-    update(
-      (d) => ({
-        ...d,
-        students: d.students.map((s) =>
-          selectedIds.includes(s.id) ? { ...s, classId: target } : s,
-        ),
-      }),
-      `Reassigned ${count} student${count === 1 ? '' : 's'} to ${target}`,
-    );
+    if (
+      !(await update(
+        (d) => ({
+          ...d,
+          students: d.students.map((s) =>
+            selectedIds.includes(s.id) ? { ...s, classId: target } : s,
+          ),
+        }),
+        `Reassigned ${count} student${count === 1 ? '' : 's'} to ${target}`,
+      ))
+    )
+      return;
     notify(`Successfully reassigned ${count} student${count === 1 ? '' : 's'} to ${target}.`);
     setSelectedIds([]);
     setReassignModalOpen(false);
   }
 
-  function handleDeleteSelected() {
+  async function handleDeleteSelected() {
     const count = selectedIds.length;
     const idSet = new Set(selectedIds);
-    update(
-      (d) => ({
-        ...d,
-        students: d.students.filter((s) => !idSet.has(s.id)),
-      }),
-      `Deleted ${count} student${count === 1 ? '' : 's'} from directory`,
-    );
+    if (
+      !(await update(
+        (d) => ({
+          ...d,
+          students: d.students.filter((s) => !idSet.has(s.id)),
+        }),
+        `Deleted ${count} student${count === 1 ? '' : 's'} from directory`,
+      ))
+    )
+      return;
     notify(`Deleted ${count} student${count === 1 ? '' : 's'}. Changes saved to database.`);
     setSelectedIds([]);
     setDeleteConfirmOpen(false);
   }
 
-  function handleSingleDelete(s: Student) {
-    update(
-      (d) => ({
-        ...d,
-        students: d.students.filter((item) => item.id !== s.id),
-      }),
-      `Deleted student: ${s.name} (${s.id})`,
-    );
+  async function handleSingleDelete(s: Student) {
+    if (
+      !(await update(
+        (d) => ({
+          ...d,
+          students: d.students.filter((item) => item.id !== s.id),
+        }),
+        `Deleted student: ${s.name} (${s.id})`,
+      ))
+    )
+      return;
     notify(`Deleted student ${s.name}. Changes saved to database.`);
     setSelectedIds((prev) => prev.filter((id) => id !== s.id));
     setSingleDeleteStudent(null);
   }
 
-  function save(s: Student) {
+  async function save(s: Student) {
     if (data.students.some((x) => x.id === s.id && x.id !== edit?.id)) {
       notify('This admission number already exists.');
       return;
@@ -122,15 +141,18 @@ export function Students() {
         : previous
           ? `Student record updated: ${s.name}`
           : `Student admitted: ${s.name}`;
-    update(
-      (d) => ({
-        ...d,
-        students: d.students.some((x) => x.id === s.id)
-          ? d.students.map((x) => (x.id === s.id ? s : x))
-          : [...d.students, s],
-      }),
-      action,
-    );
+    if (
+      !(await update(
+        (d) => ({
+          ...d,
+          students: d.students.some((x) => x.id === s.id)
+            ? d.students.map((x) => (x.id === s.id ? s : x))
+            : [...d.students, s],
+        }),
+        action,
+      ))
+    )
+      return;
     setEdit(null);
     notify('Student record saved.');
   }
@@ -266,7 +288,8 @@ export function Students() {
         {selectedIds.length > 0 && (
           <div className="bulk-actions-bar" role="region" aria-label="Student batch operations">
             <div className="bulk-selection-count">
-              <strong>{selectedIds.length}</strong> student{selectedIds.length === 1 ? '' : 's'} selected
+              <strong>{selectedIds.length}</strong> student{selectedIds.length === 1 ? '' : 's'}{' '}
+              selected
             </div>
             <div className="bulk-action-buttons">
               <Button
@@ -279,10 +302,7 @@ export function Students() {
                 <School size={16} />
                 Reassign to class
               </Button>
-              <Button
-                variant="danger"
-                onClick={() => setDeleteConfirmOpen(true)}
-              >
+              <Button variant="danger" onClick={() => setDeleteConfirmOpen(true)}>
                 <Trash2 size={16} />
                 Delete selected ({selectedIds.length})
               </Button>
@@ -449,7 +469,9 @@ export function Students() {
             }}
           >
             <p>
-              Select the new classroom stream for the <strong>{selectedIds.length}</strong> selected student{selectedIds.length === 1 ? '' : 's'}. This change will synchronize immediately with the school database.
+              Select the new classroom stream for the <strong>{selectedIds.length}</strong> selected
+              student{selectedIds.length === 1 ? '' : 's'}. This change will synchronize immediately
+              with the school database.
             </p>
             <Field label="Target Class">
               <select
@@ -483,10 +505,12 @@ export function Students() {
         >
           <div>
             <p>
-              Are you sure you want to permanently delete the <strong>{selectedIds.length}</strong> selected student record{selectedIds.length === 1 ? '' : 's'}?
+              Are you sure you want to permanently delete the <strong>{selectedIds.length}</strong>{' '}
+              selected student record{selectedIds.length === 1 ? '' : 's'}?
             </p>
             <p className="muted" style={{ marginTop: '8px' }}>
-              This will remove them from the student directory and synchronize the deletion directly with the Supabase deployment.
+              This will remove them from the student directory and synchronize the deletion directly
+              with the Supabase deployment.
             </p>
             <div className="modal-actions">
               <Button variant="secondary" type="button" onClick={() => setDeleteConfirmOpen(false)}>
@@ -507,13 +531,19 @@ export function Students() {
         >
           <div>
             <p>
-              Are you sure you want to permanently delete <strong>{singleDeleteStudent.name}</strong> ({singleDeleteStudent.id})?
+              Are you sure you want to permanently delete{' '}
+              <strong>{singleDeleteStudent.name}</strong> ({singleDeleteStudent.id})?
             </p>
             <p className="muted" style={{ marginTop: '8px' }}>
-              This student record will be removed from the school directory and synced with the database.
+              This student record will be removed from the school directory and synced with the
+              database.
             </p>
             <div className="modal-actions">
-              <Button variant="secondary" type="button" onClick={() => setSingleDeleteStudent(null)}>
+              <Button
+                variant="secondary"
+                type="button"
+                onClick={() => setSingleDeleteStudent(null)}
+              >
                 Cancel
               </Button>
               <Button
@@ -571,19 +601,22 @@ export function Students() {
             </Button>
             <Button
               disabled={bulkAction === 'move' && !destination}
-              onClick={() => {
-                update(
-                  (d) =>
-                    bulkAction === 'delete'
-                      ? removeStudents(d, selected, !isSupabaseConfigured)
-                      : {
-                          ...d,
-                          students: d.students.map((s) =>
-                            selected.includes(s.id) ? { ...s, classId: destination } : s,
-                          ),
-                        },
-                  `${bulkAction === 'delete' ? 'Deleted' : 'Reassigned'} ${selected.length} selected student(s)`,
-                );
+              onClick={async () => {
+                if (
+                  !(await update(
+                    (d) =>
+                      bulkAction === 'delete'
+                        ? removeStudents(d, selected, !isSupabaseConfigured)
+                        : {
+                            ...d,
+                            students: d.students.map((s) =>
+                              selected.includes(s.id) ? { ...s, classId: destination } : s,
+                            ),
+                          },
+                    `${bulkAction === 'delete' ? 'Deleted' : 'Reassigned'} ${selected.length} selected student(s)`,
+                  ))
+                )
+                  return;
                 setSelected([]);
                 setBulkAction('');
                 notify('Student update submitted.');
@@ -607,7 +640,7 @@ function StudentForm({
   onSave: (s: Student) => void;
 }) {
   const { data } = useStore();
-  const classList = data.classes || classes;
+  const classList = data.classes || [];
   const [s, setS] = useState(student);
   return (
     <Modal title={student.id ? 'Edit student' : 'Welcome a new student'} onClose={onClose}>

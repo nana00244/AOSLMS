@@ -230,7 +230,8 @@ export function AssignmentDetail() {
             ? await uploadLearningFile(file)
             : assignment?.submission?.storagePath,
       });
-      update(() => result.state, `Student submitted assignment ${assignment!.title}`);
+      if (!(await update(() => result.state, `Student submitted assignment ${assignment!.title}`)))
+        return;
       notify('Your work has been submitted.');
       setText('');
       setLink('');
@@ -311,7 +312,7 @@ export function AssignmentDetail() {
             hint={
               isSupabaseConfigured
                 ? 'Private school storage · maximum 5 MB.'
-                : 'The demo stores the filename only.'
+                : 'Connect to Supabase to upload documents.'
             }
           >
             <input

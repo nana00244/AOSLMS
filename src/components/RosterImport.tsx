@@ -123,12 +123,15 @@ export function ImportStudents({ onClose }: { onClose: () => void }) {
           <div className="modal-actions">
             <Button
               disabled={!count('create') && !count('move')}
-              onClick={() => {
-                update(
-                  (d) => applyRoster(d, rows, mapping),
-                  'Class rosters imported from workbook',
-                );
-                notify('Roster update submitted.');
+              onClick={async () => {
+                if (
+                  !(await update(
+                    (d) => applyRoster(d, rows, mapping),
+                    'Class rosters imported from workbook',
+                  ))
+                )
+                  return;
+                notify('Roster update saved.');
                 onClose();
               }}
             >

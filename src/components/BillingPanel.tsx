@@ -39,26 +39,29 @@ export function BillingPanel() {
       {open && (
         <Modal title="Issue or edit student bills" onClose={() => setOpen(false)} wide>
           <form
-            onSubmit={(e) => {
+            onSubmit={async (e) => {
               e.preventDefault();
               if (!targets.length) return;
-              update((d) => {
-                const bills = { ...d.studentBills };
-                for (const s of d.students.filter((s) => targets.some((t) => t.id === s.id))) {
-                  const key = billKey(s.id, d.settings.year, term);
-                  if (mode === 'class' && !replace && bills[key]) continue;
-                  bills[key] = {
-                    studentId: s.id,
-                    year: d.settings.year,
-                    term,
-                    items: { ...items },
-                    concession,
-                    updatedAt: new Date().toISOString(),
-                  };
-                }
-                return { ...d, studentBills: bills };
-              }, `Student bills issued/edited: ${targets.length} student(s), ${data.settings.year}, term ${term}`);
-              notify('Student billing update submitted.');
+              if (
+                !(await update((d) => {
+                  const bills = { ...d.studentBills };
+                  for (const s of d.students.filter((s) => targets.some((t) => t.id === s.id))) {
+                    const key = billKey(s.id, d.settings.year, term);
+                    if (mode === 'class' && !replace && bills[key]) continue;
+                    bills[key] = {
+                      studentId: s.id,
+                      year: d.settings.year,
+                      term,
+                      items: { ...items },
+                      concession,
+                      updatedAt: new Date().toISOString(),
+                    };
+                  }
+                  return { ...d, studentBills: bills };
+                }, `Student bills issued/edited: ${targets.length} student(s), ${data.settings.year}, term ${term}`))
+              )
+                return;
+              notify('Student billing update saved.');
               setOpen(false);
             }}
           >

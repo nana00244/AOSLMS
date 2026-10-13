@@ -64,11 +64,14 @@ export function Attendance() {
                 Mark all present
               </Button>
               <Button
-                onClick={() => {
-                  update(
-                    (d) => ({ ...d, attendance: { ...d.attendance, ...draft } }),
-                    `Attendance saved for ${cls}, ${date}`,
-                  );
+                onClick={async () => {
+                  if (
+                    !(await update(
+                      (d) => ({ ...d, attendance: { ...d.attendance, ...draft } }),
+                      `Attendance saved for ${cls}, ${date}`,
+                    ))
+                  )
+                    return;
                   setDraft({});
                   notify('Attendance saved. Report card counts updated.');
                 }}
@@ -156,7 +159,9 @@ export function Attendance() {
               disabled
               title="Locked to active term set by administrator"
             >
-              <option value={data.settings.term}>Term {data.settings.term} (Active · Locked)</option>
+              <option value={data.settings.term}>
+                Term {data.settings.term} (Active · Locked)
+              </option>
             </select>
           )}
         </div>

@@ -5501,6 +5501,61 @@ td .person {
   font-weight: 700;
 }
 
+.pending-save-banner {
+  position: fixed;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9500;
+  width: min(850px, 94vw);
+  padding: 16px;
+  border: 1px solid #b45309;
+  border-radius: 12px;
+  background: #fffbeb;
+  color: #78350f;
+  box-shadow: 0 4px 24px #0002;
+}
+.pending-save-banner span {
+  display: block;
+  margin: 6px 0;
+}
+.pending-save-banner button {
+  padding: 8px 12px;
+  margin: 4px;
+  cursor: pointer;
+}
+.report-print-stack {
+  display: grid;
+  gap: 24px;
+}
+.report-filters {
+  flex-wrap: wrap;
+}
+.report-filters select {
+  min-width: 180px;
+}
+@media print {
+  .pending-save-banner,
+  .report-batch-controls {
+    display: none !important;
+  }
+  .report-print-stack.print-area {
+    display: block;
+    position: static !important;
+    width: 100% !important;
+  }
+  .report-print-stack .assessment-card-sheet {
+    position: relative !important;
+    break-after: page;
+    page-break-after: always;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .report-print-stack .assessment-card-sheet:last-child {
+    break-after: auto;
+    page-break-after: auto;
+  }
+}
 /* Bulk action bar for student directory */
 .bulk-actions-bar {
   display: flex;
@@ -5546,4 +5601,3 @@ tr.is-selected {
   font-weight: 650;
   user-select: none;
 }
-

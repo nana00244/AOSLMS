@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { flushSync } from 'react-dom';
 import { useSearchParams } from 'react-router-dom';
 import {
   Plus,
@@ -21,6 +22,7 @@ import {
 } from 'lucide-react';
 import { csv, useStore } from '../store';
 import { ScoreSheetImport } from '../components/ScoreSheetImport';
+import { canTeach } from '../backendAccess';
 import { downloadLearningFile, uploadLearningFile } from '../backend';
 import { isSupabaseConfigured } from '../supabase';
 import {
@@ -40,6 +42,7 @@ import {
   courseworkFeedbackMetadata,
   ensureClassCourseworkCards,
   courseworkSubjectId,
+  type State,
   type FeedbackType,
   type Assignment,
   type Student,
@@ -92,7 +95,7 @@ export function Coursework() {
       configured.includes(subject)
     );
   };
-  useEffect(() => {
+  async function prepareCourseworkCards() {
     if (!canManageCoursework) return;
     const targetClasses = selectedClassFilter === 'all' ? allowedClasses : [selectedClassFilter];
     if (!targetClasses.length) return;
@@ -112,24 +115,18 @@ export function Coursework() {
       createdCount += result.createdCount;
     }
     if (createdCount) {
-      update(
-        (current) => ({ ...current, assignments: nextAssignments }),
-        `Populated ${targetClasses.length} class${targetClasses.length === 1 ? '' : 'es'} with ${createdCount} coursework cards`,
-      );
+      if (
+        !(await update(
+          (current) => ({ ...current, assignments: nextAssignments }),
+          `Populated ${targetClasses.length} class${targetClasses.length === 1 ? '' : 'es'} with ${createdCount} coursework cards`,
+        ))
+      )
+        return;
       notify(
         `Populated ${targetClasses.length} class${targetClasses.length === 1 ? '' : 'es'} with coursework cards for the active term.`,
       );
     }
-  }, [
-    data,
-    notify,
-    update,
-    selectedClassFilter,
-    allowedClasses,
-    classAllowedSubjectsMap,
-    isAdministrator,
-    canManageCoursework,
-  ]);
+  }
   const visibleClassIds = selectedClassFilter === 'all' ? allowedClasses : [selectedClassFilter];
   const assignments = data.assignments.filter(
     (assignment) =>
@@ -290,6 +287,9 @@ export function Coursework() {
         actions={
           canManageCoursework && (
             <>
+              <Button variant="secondary" onClick={() => void prepareCourseworkCards()}>
+                Prepare blank coursework cards
+              </Button>
               <Button variant="secondary" onClick={() => setImportOpen(true)}>
                 <Upload size={17} />
                 Upload score sheet
@@ -366,12 +366,15 @@ export function Coursework() {
           <select
             aria-label="Coursework term"
             value={data.settings.term}
-            onChange={(event) => {
+            onChange={async (event) => {
               const term = Number(event.target.value);
-              update(
-                (current) => ({ ...current, settings: { ...current.settings, term } }),
-                `Switched coursework to Term ${term}`,
-              );
+              if (
+                !(await update(
+                  (current) => ({ ...current, settings: { ...current.settings, term } }),
+                  `Switched coursework to Term ${term}`,
+                ))
+              )
+                return;
               setActive('');
               setScoreGridOpen(false);
             }}
@@ -606,7 +609,7 @@ export function Coursework() {
             description="Enter scores for multiple assignments in one pass. Blank cells remain ungraded and are excluded from category scaling."
           />
           <form
-            onSubmit={(e) => {
+            onSubmit={async (e) => {
               e.preventDefault();
               const form = new FormData(e.currentTarget);
               const pupils = data.students.filter((pupil) => pupil.classId === cls);
@@ -668,46 +671,49 @@ export function Coursework() {
                 notify('Enter at least one score before saving.');
                 return;
               }
-              update((d) => {
-                const next = {
-                  ...d,
-                  assignments: d.assignments.map((assignment) => {
-                    const assignmentUpdates = updates.filter(([id]) => id === assignment.id);
-                    if (!assignmentUpdates.length) return assignment;
-                    return {
-                      ...assignment,
-                      slots: assignment.slots?.length
-                        ? assignment.slots
-                        : gridColumns
-                            .filter((column) => column.assignment.id === assignment.id)
-                            .map(({ slot }) => slot),
-                      slotScores: assignmentUpdates.reduce(
-                        (all, [, pupilId, slotKey, result]) => ({
-                          ...all,
-                          [pupilId]: {
-                            ...all[pupilId],
-                            [slotKey]: result,
-                          },
-                        }),
-                        { ...assignment.slotScores },
-                      ),
-                    };
-                  }),
-                };
-                const grades = { ...d.grades };
-                for (const pupil of pupils) {
-                  const assessment = courseworkAssessment(next, pupil.id, cls, scoreSubject);
-                  if (!assessment.hasSba && !assessment.hasExam) continue;
-                  const key = gradeKey(pupil.id, d.settings.term, scoreSubject);
-                  const current = grades[key] || { sba: 0, exam: 0, remark: '' };
-                  grades[key] = {
-                    ...current,
-                    ...(assessment.hasSba ? { sba: assessment.sba ?? 0 } : {}),
-                    ...(assessment.hasExam ? { exam: assessment.exam ?? 0 } : {}),
+              if (
+                !(await update((d) => {
+                  const next = {
+                    ...d,
+                    assignments: d.assignments.map((assignment) => {
+                      const assignmentUpdates = updates.filter(([id]) => id === assignment.id);
+                      if (!assignmentUpdates.length) return assignment;
+                      return {
+                        ...assignment,
+                        slots: assignment.slots?.length
+                          ? assignment.slots
+                          : gridColumns
+                              .filter((column) => column.assignment.id === assignment.id)
+                              .map(({ slot }) => slot),
+                        slotScores: assignmentUpdates.reduce(
+                          (all, [, pupilId, slotKey, result]) => ({
+                            ...all,
+                            [pupilId]: {
+                              ...all[pupilId],
+                              [slotKey]: result,
+                            },
+                          }),
+                          { ...assignment.slotScores },
+                        ),
+                      };
+                    }),
                   };
-                }
-                return { ...next, grades };
-              }, `Scores entered: ${updates.length} assignment marks for ${scoreSubject}`);
+                  const grades = { ...d.grades };
+                  for (const pupil of pupils) {
+                    const assessment = courseworkAssessment(next, pupil.id, cls, scoreSubject);
+                    if (!assessment.hasSba && !assessment.hasExam) continue;
+                    const key = gradeKey(pupil.id, d.settings.term, scoreSubject);
+                    const current = grades[key] || { sba: 0, exam: 0, remark: '' };
+                    grades[key] = {
+                      ...current,
+                      ...(assessment.hasSba ? { sba: assessment.sba ?? 0 } : {}),
+                      ...(assessment.hasExam ? { exam: assessment.exam ?? 0 } : {}),
+                    };
+                  }
+                  return { ...next, grades };
+                }, `Scores entered: ${updates.length} assignment marks for ${scoreSubject}`))
+              )
+                return;
               notify(
                 `Saved ${updates.length} score${updates.length === 1 ? '' : 's'} to the SBA scorebook and report cards.`,
               );
@@ -1065,49 +1071,52 @@ export function Coursework() {
             )}
           </div>
           <form
-            onSubmit={(e) => {
+            onSubmit={async (e) => {
               e.preventDefault();
               const f = new FormData(e.currentTarget);
               const score = Number(f.get('score'));
               const feedback = String(f.get('feedback'));
-              update((d) => {
-                const next = {
-                  ...d,
-                  assignments: d.assignments.map((assignment) =>
-                    assignment.id === grading.assignmentId
-                      ? {
-                          ...assignment,
-                          scores: {
-                            ...assignment.scores,
-                            [grading.studentId]: { score, feedback },
-                          },
-                        }
-                      : assignment,
-                  ),
-                  submissions: d.submissions.map((s) =>
-                    s.id === grading.id ? { ...s, score, feedback } : s,
-                  ),
-                };
-                const assessment = courseworkAssessment(
-                  next,
-                  grading.studentId,
-                  selected.classId,
-                  selected.subject,
-                );
-                const key = gradeKey(grading.studentId, d.settings.term, selected.subject);
-                const grade = d.grades[key] || { sba: 0, exam: 0, remark: '' };
-                return {
-                  ...next,
-                  grades: {
-                    ...d.grades,
-                    [key]: {
-                      ...grade,
-                      ...(assessment.hasSba ? { sba: assessment.sba ?? 0 } : {}),
-                      ...(assessment.hasExam ? { exam: assessment.exam ?? 0 } : {}),
+              if (
+                !(await update((d) => {
+                  const next = {
+                    ...d,
+                    assignments: d.assignments.map((assignment) =>
+                      assignment.id === grading.assignmentId
+                        ? {
+                            ...assignment,
+                            scores: {
+                              ...assignment.scores,
+                              [grading.studentId]: { score, feedback },
+                            },
+                          }
+                        : assignment,
+                    ),
+                    submissions: d.submissions.map((s) =>
+                      s.id === grading.id ? { ...s, score, feedback } : s,
+                    ),
+                  };
+                  const assessment = courseworkAssessment(
+                    next,
+                    grading.studentId,
+                    selected.classId,
+                    selected.subject,
+                  );
+                  const key = gradeKey(grading.studentId, d.settings.term, selected.subject);
+                  const grade = d.grades[key] || { sba: 0, exam: 0, remark: '' };
+                  return {
+                    ...next,
+                    grades: {
+                      ...d.grades,
+                      [key]: {
+                        ...grade,
+                        ...(assessment.hasSba ? { sba: assessment.sba ?? 0 } : {}),
+                        ...(assessment.hasExam ? { exam: assessment.exam ?? 0 } : {}),
+                      },
                     },
-                  },
-                };
-              }, `Graded ${selected.title}`);
+                  };
+                }, `Graded ${selected.title}`))
+              )
+                return;
               notify('Grade saved. The category scorebook and report card were updated.');
               setGrading(null);
             }}
@@ -1161,7 +1170,7 @@ function AssignmentForm({ cls, onClose }: { cls: string; onClose: () => void }) 
   return (
     <Modal title="Create an assignment" onClose={onClose}>
       <form
-        onSubmit={(e) => {
+        onSubmit={async (e) => {
           e.preventDefault();
           const f = new FormData(e.currentTarget);
           const selectedSubject = String(f.get('subject') || '');
@@ -1179,10 +1188,13 @@ function AssignmentForm({ cls, onClose }: { cls: string; onClose: () => void }) 
             due: String(f.get('due')),
             category: String(f.get('category')),
           };
-          update(
-            (d) => ({ ...d, assignments: [a, ...d.assignments] }),
-            `Assignment published: ${a.title}`,
-          );
+          if (
+            !(await update(
+              (d) => ({ ...d, assignments: [a, ...d.assignments] }),
+              `Assignment published: ${a.title}`,
+            ))
+          )
+            return;
           notify('Assignment published to the class.');
           onClose();
         }}
@@ -1307,10 +1319,13 @@ function SubmissionForm({
             storagePath,
             date: new Date().toISOString(),
           };
-          update(
-            (d) => ({ ...d, submissions: [...d.submissions.filter((x) => x.id !== s.id), s] }),
-            `Submitted ${a.title}`,
-          );
+          if (
+            !(await update(
+              (d) => ({ ...d, submissions: [...d.submissions.filter((x) => x.id !== s.id), s] }),
+              `Submitted ${a.title}`,
+            ))
+          )
+            return;
           notify('Your work has been submitted.');
           onClose();
         }}
@@ -1337,7 +1352,7 @@ function SubmissionForm({
           hint={
             isSupabaseConfigured
               ? 'Private school storage · maximum 5 MB.'
-              : 'Demo stores the filename only.'
+              : 'Connect to school storage to upload documents.'
           }
         >
           <input
@@ -1399,64 +1414,187 @@ function OfficialStamp({
     );
   }
 
-  return (
-    <svg width="78" height="78" viewBox="0 0 100 100" style={{ transform: 'rotate(-3deg)' }}>
-      <circle cx="50" cy="50" r="46" fill="none" stroke="#1d4ed8" strokeWidth="2.2" />
-      <circle cx="50" cy="50" r="41.5" fill="none" stroke="#1d4ed8" strokeWidth="0.9" />
-
-      <path id="stamp-top" d="M 17,50 A 33,33 0 1,1 83,50" fill="none" />
-      <path id="stamp-bot" d="M 83,50 A 33,33 0 0,1 17,50" fill="none" />
-
-      <text fontSize="7.8" fill="#1d4ed8" fontWeight="800" letterSpacing="1.2">
-        <textPath href="#stamp-top" startOffset="50%" textAnchor="middle">
-          AYISATU OWEN SCHOOLS
-        </textPath>
-      </text>
-
-      <text fontSize="6.8" fill="#1d4ed8" fontWeight="750" letterSpacing="0.8">
-        <textPath href="#stamp-bot" startOffset="50%" textAnchor="middle">
-          OFFICIAL EXAMS STAMP
-        </textPath>
-      </text>
-
-      <rect x="25" y="41" width="50" height="17" rx="2.5" fill="#1d4ed8" />
-      <text
-        x="50"
-        y="53.5"
-        textAnchor="middle"
-        fill="#ffffff"
-        fontSize="9.8"
-        fontWeight="900"
-        letterSpacing="1"
-      >
-        {status}
-      </text>
-
-      <text x="50" y="69" textAnchor="middle" fill="#1d4ed8" fontSize="6.5" fontWeight="700">
-        {year}/TERM {term}
-      </text>
-    </svg>
-  );
+  return null;
 }
 
 export function Reports() {
-  const { data, role, ownId, allowedClasses, update, notify } = useStore();
+  const { data, role, ownId, allowedClasses, update, notify, pendingCount } = useStore();
   const [params] = useSearchParams();
-  const [cls, setCls] = useState(allowedClasses[0]);
-  const roster = data.students.filter(
-    (s) => allowedClasses.includes(s.classId) && (role !== 'Student' || s.id === ownId),
+  const [cls, setCls] = useState(
+    () => data.students.find((s) => s.id === params.get('student'))?.classId || '',
   );
   const [studentId, setStudentId] = useState(params.get('student') || ownId);
-  const student =
-    roster.find((s) => s.id === studentId) || roster.find((s) => s.classId === cls) || roster[0];
+  const [reportTerm, setReportTerm] = useState(data.settings.term);
   const [editing, setEditing] = useState(false);
-
-  if (!student)
-    return (
-      <Empty title="No report cards yet" text="Enroll a student to start preparing report cards." />
+  const [batch, setBatch] = useState(false);
+  const term = role === 'Administrator' ? reportTerm : data.settings.term;
+  const viewData = { ...data, settings: { ...data.settings, term } };
+  const roster = data.students
+    .filter(
+      (s) =>
+        allowedClasses.includes(s.classId) &&
+        (!cls || s.classId === cls) &&
+        (role !== 'Student' || s.id === ownId),
+    )
+    .sort((a, b) => a.name.localeCompare(b.name));
+  const student = roster.find((s) => s.id === studentId) || roster[0];
+  const editable = role === 'Administrator' || role === 'Teacher';
+  useEffect(() => {
+    const reset = () => setBatch(false);
+    window.addEventListener('afterprint', reset);
+    return () => window.removeEventListener('afterprint', reset);
+  }, []);
+  async function printReports(all: boolean) {
+    flushSync(() => setBatch(all));
+    await document.fonts.ready;
+    await Promise.all(
+      Array.from(document.querySelectorAll<HTMLImageElement>('.report-print-stack img')).map(
+        (image) => image.decode().catch(() => {}),
+      ),
     );
+    window.print();
+  }
+  const rk = student ? `${student.id}|${term}` : '';
+  return (
+    <>
+      <PageHeader
+        eyebrow="CELEBRATE THEIR PROGRESS"
+        title="Termly report cards"
+        description={`Academic year ${data.settings.year} · Term ${term}`}
+        actions={
+          <>
+            {editable && (
+              <Button variant="secondary" disabled={!student} onClick={() => setEditing(true)}>
+                <Pencil size={16} />
+                Edit report card
+              </Button>
+            )}
+            <Button
+              disabled={!student || pendingCount > 0}
+              onClick={() => void printReports(false)}
+            >
+              <Printer size={16} />
+              Print / Save PDF
+            </Button>
+            {editable && (
+              <Button
+                disabled={!cls || !roster.length || pendingCount > 0}
+                onClick={() => void printReports(true)}
+              >
+                <Printer size={16} />
+                Print selected class ({cls ? roster.length : 0})
+              </Button>
+            )}
+          </>
+        }
+      />
+      <div className="filter-bar report-filters">
+        {role !== 'Student' && (
+          <select
+            aria-label="Report class"
+            value={cls}
+            onChange={(e) => {
+              setCls(e.target.value);
+              setStudentId('');
+              setBatch(false);
+            }}
+          >
+            <option value="">All classes — select a class to batch print</option>
+            {allowedClasses.map((c) => (
+              <option key={c} value={c}>
+                {c}
+              </option>
+            ))}
+          </select>
+        )}
+        <select
+          aria-label="Report student"
+          value={student?.id || ''}
+          onChange={(e) => {
+            setStudentId(e.target.value);
+            setBatch(false);
+          }}
+          disabled={!student}
+        >
+          {!student && <option value="">No students in this class</option>}
+          {roster.map((s) => (
+            <option value={s.id} key={s.id}>
+              {s.name} · {s.classId}
+            </option>
+          ))}
+        </select>
+        {role === 'Administrator' && (
+          <select
+            aria-label="Report term"
+            value={term}
+            onChange={(e) => {
+              setReportTerm(Number(e.target.value));
+              setBatch(false);
+            }}
+          >
+            {[1, 2, 3].map((t) => (
+              <option key={t} value={t}>
+                Term {t}
+              </option>
+            ))}
+          </select>
+        )}
+        {editable && student && (
+          <Button
+            variant="secondary"
+            disabled={pendingCount > 0}
+            onClick={async () => {
+              if (
+                await update(
+                  (d) => ({ ...d, verified: [...new Set([...d.verified, rk])] }),
+                  'Report card verified',
+                )
+              )
+                notify('Report card marked as verified.');
+            }}
+          >
+            <CheckCircle2 size={16} />
+            {data.verified.includes(rk) ? 'Verified' : 'Verify report'}
+          </Button>
+        )}
+      </div>
+      {batch && (
+        <p className="report-batch-controls">
+          {roster.length} reports prepared for {cls}.{' '}
+          <Button variant="ghost" onClick={() => setBatch(false)}>
+            Return to single report
+          </Button>
+        </p>
+      )}
+      {!student ? (
+        <Empty
+          title="No report cards in this class"
+          text="Select another class or enroll a student."
+        />
+      ) : (
+        <div className="report-print-stack print-area">
+          {(batch ? roster : [student]).map((pupil) => (
+            <ReportSheet key={pupil.id} data={viewData} student={pupil} />
+          ))}
+        </div>
+      )}
+      {editing && student && (
+        <ReportCardEditor
+          key={rk}
+          student={student}
+          reportTerm={term}
+          onClose={() => setEditing(false)}
+        />
+      )}
+    </>
+  );
+}
 
+function ReportSheet({ data, student }: { data: State; student: Student }) {
   const grades = studentGrades(data, student);
+  const hasGrades = grades.some(
+    (g) => !!data.grades[gradeKey(student.id, data.settings.term, g.subject)],
+  );
   const peers = data.students.filter((s) => s.classId === student.classId);
   const avg = average(data, student);
   const position = rank(
@@ -1468,7 +1606,6 @@ export function Reports() {
   );
   const attended = marks.filter(([, v]) => v === 'Present' || v === 'Late').length;
   const rk = `${student.id}|${data.settings.term}`;
-  const editable = role !== 'Student';
 
   // Calculations for total aggregates
   const totalSBA = grades.reduce((sum, g) => sum + g.sba, 0);
@@ -1479,336 +1616,271 @@ export function Reports() {
 
   const conductData = data.conduct[rk] || {};
   const traits = [
-    { label: 'Conduct:', value: conductData['Conduct'] || 'EXEMPLARY' },
-    { label: 'Work Ethic:', value: conductData['Work Ethic'] || 'COMMENDABLE' },
-    { label: 'Neatness:', value: conductData['Neatness'] || 'NEAT & ORDERLY' },
-    { label: 'Sociability:', value: conductData['Sociability'] || 'RESPECTFUL' },
-    { label: 'Debate & Oratory:', value: conductData['Debate & Oratory'] || 'VERY ACTIVE' },
-    { label: 'Science Expo:', value: conductData['Science Expo'] || 'INNOVATIVE' },
-    { label: 'Mental Drill:', value: conductData['Mental Drill'] || 'QUICK & SHARP' },
+    { label: 'Conduct:', value: conductData['Conduct'] || '—' },
+    { label: 'Work Ethic:', value: conductData['Work Ethic'] || '—' },
+    { label: 'Neatness:', value: conductData['Neatness'] || '—' },
+    { label: 'Sociability:', value: conductData['Sociability'] || '—' },
+    { label: 'Debate & Oratory:', value: conductData['Debate & Oratory'] || '—' },
+    { label: 'Science Expo:', value: conductData['Science Expo'] || '—' },
+    { label: 'Mental Drill:', value: conductData['Mental Drill'] || '—' },
     {
       label: 'Reading Comprehension:',
-      value: conductData['Reading Comprehension'] || 'FLUENT & EXPRESSIVE',
+      value: conductData['Reading Comprehension'] || '—',
     },
   ];
 
   const customAttended =
     conductData['attendanceAttended'] !== undefined && conductData['attendanceAttended'] !== ''
       ? conductData['attendanceAttended']
-      : attended || 20;
+      : marks.length
+        ? attended
+        : '—';
   const customTotalSessions =
     conductData['attendanceTotal'] !== undefined && conductData['attendanceTotal'] !== ''
       ? conductData['attendanceTotal']
-      : marks.length || 20;
+      : marks.length || '—';
   const customRoll = conductData['rollOverride'] || `${peers.length} Pupils`;
   const customPosition =
-    conductData['positionOverride'] || `${ordinal(position)} of ${peers.length}`;
+    conductData['positionOverride'] ||
+    (hasGrades ? `${ordinal(position)} of ${peers.length}` : '—');
 
-  const teacherRemark =
-    data.remarks[rk] ||
-    `${student.name.split(' ')[0]} has shown commendable engagement and steady progress. Regular attendance and active participation are strongly encouraged.`;
+  const teacherRemark = data.remarks[rk] || '';
   const promotedTo = conductData['promotedTo'] || '';
 
   return (
-    <>
-      <PageHeader
-        eyebrow="CELEBRATE THEIR PROGRESS"
-        title="Termly report cards"
-        description={`Academic year ${data.settings.year} · Term ${data.settings.term}`}
-        actions={
-          <>
-            {editable && (
-              <Button variant="secondary" onClick={() => setEditing(true)}>
-                <Pencil size={16} />
-                Edit report card
-              </Button>
-            )}
-            <Button onClick={() => window.print()}>
-              <Printer size={16} />
-              Print / Save PDF
-            </Button>
-          </>
-        }
-      />
+    <article className="assessment-card-sheet">
+      {/* Header Section */}
+      <header className="assessment-header">
+        <img
+          className="assessment-crest"
+          src={data.settings.crest || './crest.svg'}
+          alt="School crest"
+        />
+        <h1 className="assessment-school-title">{data.settings.name}</h1>
+        <div className="assessment-school-sub">
+          {[data.settings.address, data.settings.motto].filter(Boolean).join(' • ')}
+        </div>
+        <div className="assessment-pill-title">BASIC SCHOOL ASSESSMENT CARD</div>
+      </header>
 
-      <div className="filter-bar report-filters">
-        <select
-          aria-label="Report student"
-          value={student.id}
-          onChange={(e) => setStudentId(e.target.value)}
-        >
-          {roster.map((s) => (
-            <option value={s.id} key={s.id}>
-              {s.name} · {s.classId}
-            </option>
-          ))}
-        </select>
-        {role === 'Administrator' && (
-          <select
-            aria-label="Report term"
-            value={data.settings.term}
-            onChange={(e) =>
-              update(
-                (d) => ({ ...d, settings: { ...d.settings, term: Number(e.target.value) } }),
-                'Active term changed',
-              )
-            }
-          >
-            <option value={1}>Term 1</option>
-            <option value={2}>Term 2</option>
-            <option value={3}>Term 3</option>
-          </select>
-        )}
-        {editable && (
-          <Button
-            variant="secondary"
-            onClick={() => {
-              update(
-                (d) => ({ ...d, verified: [...new Set([...d.verified, rk])] }),
-                'Report card verified',
-              );
-              notify('Report card marked as verified.');
-            }}
-          >
-            <CheckCircle2 size={16} />
-            {data.verified.includes(rk) ? 'Verified' : 'Verify report'}
-          </Button>
-        )}
-      </div>
-
-      <article className="assessment-card-sheet print-area">
-        {/* Header Section */}
-        <header className="assessment-header">
-          <img
-            className="assessment-crest"
-            src={data.settings.crest || './crest.svg'}
-            alt="School crest"
-          />
-          <h1 className="assessment-school-title">
-            {data.settings.name || 'AYISATU OWEN SCHOOLS'}
-          </h1>
-          <div className="assessment-school-sub">
-            (P.O . BOX 252, AYISATU OWEN SCHOOLS, TECHIMAN • MOTTO: DEEPER UNDERSTANDING)
+      {/* Student Information Box */}
+      <section className="assessment-info-box">
+        <div className="assessment-info-grid">
+          <div className="assessment-info-cell">
+            <small>NAME OF PUPIL</small>
+            <strong>{student.name.toUpperCase()}</strong>
           </div>
-          <div className="assessment-pill-title">BASIC SCHOOL ASSESSMENT CARD</div>
-        </header>
-
-        {/* Student Information Box */}
-        <section className="assessment-info-box">
-          <div className="assessment-info-grid">
-            <div className="assessment-info-cell">
-              <small>NAME OF PUPIL</small>
-              <strong>{student.name.toUpperCase()}</strong>
-            </div>
-            <div className="assessment-info-cell">
-              <small>CLASS</small>
-              <strong>{student.classId.toUpperCase()}</strong>
-            </div>
-            <div className="assessment-info-cell">
-              <small>TERM & ACADEMIC YEAR</small>
-              <strong>
-                Term {data.settings.term} ({data.settings.year})
-              </strong>
-            </div>
-            <div className="assessment-info-cell">
-              <small>NO. ON ROLL</small>
-              <strong>{customRoll}</strong>
-            </div>
-
-            <div className="assessment-info-cell">
-              <small>POSITION IN CLASS</small>
-              <strong style={{ color: '#1d4ed8' }}>{customPosition}</strong>
-            </div>
-            <div className="assessment-info-cell">
-              <small>ADMISSION NUMBER</small>
-              <strong>{student.id.toUpperCase()}</strong>
-            </div>
-            <div className="assessment-info-cell">
-              <small>VACATION DATE</small>
-              <strong>{formatLongDate(data.settings.vacation)}</strong>
-            </div>
-            <div className="assessment-info-cell">
-              <small>NEXT TERM BEGINS</small>
-              <strong>{formatLongDate(data.settings.reopening)}</strong>
-            </div>
+          <div className="assessment-info-cell">
+            <small>CLASS</small>
+            <strong>{student.classId.toUpperCase()}</strong>
+          </div>
+          <div className="assessment-info-cell">
+            <small>TERM & ACADEMIC YEAR</small>
+            <strong>
+              Term {data.settings.term} ({data.settings.year})
+            </strong>
+          </div>
+          <div className="assessment-info-cell">
+            <small>NO. ON ROLL</small>
+            <strong>{customRoll}</strong>
           </div>
 
-          <div className="assessment-photo-container">
-            <div className="assessment-photo-frame">
-              {student.photo ? (
-                <img
-                  src={student.photo}
-                  alt={student.name}
-                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                />
-              ) : (
-                <>
-                  <GraduationCap size={24} color="#94a3b8" />
-                  <span style={{ fontSize: '7.5px', color: '#94a3b8', marginTop: 2 }}>
-                    2" X 2" PHOTO
-                  </span>
-                </>
-              )}
-            </div>
-            <span className="assessment-photo-label">STUDENT PHOTO</span>
+          <div className="assessment-info-cell">
+            <small>POSITION IN CLASS</small>
+            <strong style={{ color: '#1d4ed8' }}>{customPosition}</strong>
           </div>
-        </section>
-
-        {/* Academic Performance Table */}
-        <div className="assessment-table-wrap">
-          <table className="assessment-table">
-            <thead>
-              <tr>
-                <th style={{ textAlign: 'left', width: '35%' }}>SUBJECTS</th>
-                <th style={{ width: '15%' }}>CLASS SCORE (SBA 50%)</th>
-                <th style={{ width: '14%' }}>EXAMS SCORE (50%)</th>
-                <th style={{ width: '14%' }}>TOTAL SCORE (100%)</th>
-                <th style={{ width: '9%' }}>POS.</th>
-                <th style={{ width: '13%' }}>REMARKS</th>
-              </tr>
-            </thead>
-            <tbody>
-              {grades.map((g) => {
-                const total = g.sba + g.exam;
-                const isSBAOnly = g.sba > 0 && g.exam === 0;
-                const subjectRank = ordinal(
-                  rank(
-                    total,
-                    peers.map((s) => {
-                      const v = data.grades[gradeKey(s.id, data.settings.term, g.subject)];
-                      return v ? v.sba + v.exam : 0;
-                    }),
-                  ),
-                );
-
-                let remarkText = g.remark;
-                if (!remarkText) {
-                  if (total >= 80) remarkText = 'EXCELLENT';
-                  else if (total >= 70) remarkText = 'VERY GOOD';
-                  else if (total >= 60) remarkText = 'GOOD';
-                  else if (total >= 50) remarkText = 'CREDIT';
-                  else if (total >= 40) remarkText = 'PASS';
-                  else if (total > 0) remarkText = 'FAIL';
-                  else remarkText = '-';
-                }
-
-                return (
-                  <tr key={g.subject}>
-                    <td className="subject-col">{g.subject}</td>
-                    <td>{g.sba > 0 ? g.sba : '-'}</td>
-                    <td>{g.exam > 0 ? g.exam : '-'}</td>
-                    <td style={{ fontWeight: 800 }}>{total > 0 ? total : '-'}</td>
-                    <td>{total > 0 ? subjectRank : '-'}</td>
-                    <td>
-                      {isSBAOnly ? (
-                        <span
-                          style={{
-                            color: '#b91c1c',
-                            fontWeight: '800',
-                            fontSize: '9.5px',
-                            lineHeight: '1.1',
-                            display: 'block',
-                          }}
-                        >
-                          SBA
-                          <br />
-                          ONLY
-                        </span>
-                      ) : (
-                        <span style={{ fontWeight: 700, fontSize: '9.5px' }}>{remarkText}</span>
-                      )}
-                    </td>
-                  </tr>
-                );
-              })}
-              {/* Total Aggregate Row */}
-              <tr style={{ background: '#f8fafc', fontWeight: 800 }}>
-                <td className="subject-col" style={{ fontWeight: 850 }}>
-                  TOTAL / AGGREGATE
-                </td>
-                <td style={{ color: '#1d4ed8', fontWeight: 800 }}>
-                  {totalSBA > 0 ? totalSBA : '-'}
-                </td>
-                <td style={{ fontWeight: 800 }}>{totalExam > 0 ? totalExam : '-'}</td>
-                <td style={{ fontWeight: 850, fontSize: '12px' }}>
-                  {grandTotal > 0 ? grandTotal : '-'}
-                </td>
-                <td style={{ fontWeight: 800 }}>{ordinal(position)}</td>
-                <td style={{ padding: '4px 6px' }}>
-                  <div style={{ lineHeight: '1.1' }}>
-                    <span style={{ fontSize: '8px', color: '#64748b', display: 'block' }}>
-                      OVERALL:
-                    </span>
-                    <strong style={{ fontSize: '10.5px' }}>
-                      {overallGrade} ({Math.round(overallPercent)}%)
-                    </strong>
-                  </div>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+          <div className="assessment-info-cell">
+            <small>ADMISSION NUMBER</small>
+            <strong>{student.id.toUpperCase()}</strong>
+          </div>
+          <div className="assessment-info-cell">
+            <small>VACATION DATE</small>
+            <strong>{formatLongDate(data.settings.vacation)}</strong>
+          </div>
+          <div className="assessment-info-cell">
+            <small>NEXT TERM BEGINS</small>
+            <strong>{formatLongDate(data.settings.reopening)}</strong>
+          </div>
         </div>
 
-        {/* Attitudes & Personal Development */}
-        <section className="assessment-box">
-          <div className="assessment-box-title">ATTITUDES & PERSONAL DEVELOPMENT</div>
-          <div className="assessment-attitudes-grid">
-            {traits.map((t) => (
-              <div key={t.label} className="assessment-attitude-item">
-                <span>{t.label}</span> <strong>{t.value}</strong>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Attendance & Promotion Bar */}
-        <section className="assessment-bar">
-          <div>
-            ATTENDANCE: <strong style={{ color: '#1d4ed8' }}>{customAttended}</strong> OUT OF{' '}
-            <strong>{customTotalSessions}</strong> SESSIONS
-          </div>
-          <div>
-            PROMOTED TO: <strong>{promotedTo || '—'}</strong>
-          </div>
-        </section>
-
-        {/* Remarks & Signatures */}
-        <section className="assessment-remarks-container">
-          <div className="assessment-remark-row">
-            <div className="assessment-remark-content">
-              <span className="assessment-remark-label">CLASS TEACHER'S REMARKS:</span>
-              <p className="assessment-remark-text">"{teacherRemark}"</p>
-              <div className="assessment-signature-line">
-                Class Teacher's Signature: ______________________
-              </div>
-            </div>
-            <div className="assessment-school-stamp">
-              <OfficialStamp
-                term={data.settings.term}
-                year={data.settings.year}
-                status={grandTotal > 0 && overallPercent >= 40 ? 'PASSED' : 'VALIDATED'}
-                image={data.settings.reportStamps?.[`${data.settings.year}|${data.settings.term}`]}
+        <div className="assessment-photo-container">
+          <div className="assessment-photo-frame">
+            {student.photo ? (
+              <img
+                src={student.photo}
+                alt={student.name}
+                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
               />
+            ) : (
+              <>
+                <GraduationCap size={24} color="#94a3b8" />
+                <span style={{ fontSize: '7.5px', color: '#94a3b8', marginTop: 2 }}>
+                  2" X 2" PHOTO
+                </span>
+              </>
+            )}
+          </div>
+          <span className="assessment-photo-label">STUDENT PHOTO</span>
+        </div>
+      </section>
+
+      {/* Academic Performance Table */}
+      <div className="assessment-table-wrap">
+        <table className="assessment-table">
+          <thead>
+            <tr>
+              <th style={{ textAlign: 'left', width: '35%' }}>SUBJECTS</th>
+              <th style={{ width: '15%' }}>CLASS SCORE (SBA 50%)</th>
+              <th style={{ width: '14%' }}>EXAMS SCORE (50%)</th>
+              <th style={{ width: '14%' }}>TOTAL SCORE (100%)</th>
+              <th style={{ width: '9%' }}>POS.</th>
+              <th style={{ width: '13%' }}>REMARKS</th>
+            </tr>
+          </thead>
+          <tbody>
+            {grades.map((g) => {
+              const recorded = !!data.grades[gradeKey(student.id, data.settings.term, g.subject)];
+              const total = g.sba + g.exam;
+              const isSBAOnly = g.sba > 0 && g.exam === 0;
+              const subjectRank = ordinal(
+                rank(
+                  total,
+                  peers.map((s) => {
+                    const v = data.grades[gradeKey(s.id, data.settings.term, g.subject)];
+                    return v ? v.sba + v.exam : 0;
+                  }),
+                ),
+              );
+
+              let remarkText = g.remark;
+              if (!remarkText) {
+                if (total >= 80) remarkText = 'EXCELLENT';
+                else if (total >= 70) remarkText = 'VERY GOOD';
+                else if (total >= 60) remarkText = 'GOOD';
+                else if (total >= 50) remarkText = 'CREDIT';
+                else if (total >= 40) remarkText = 'PASS';
+                else if (total > 0) remarkText = 'FAIL';
+                else remarkText = '-';
+              }
+
+              return (
+                <tr key={g.subject}>
+                  <td className="subject-col">{g.subject}</td>
+                  <td>{recorded ? g.sba : '-'}</td>
+                  <td>{recorded ? g.exam : '-'}</td>
+                  <td style={{ fontWeight: 800 }}>{recorded ? total : '-'}</td>
+                  <td>{recorded ? subjectRank : '-'}</td>
+                  <td>
+                    {isSBAOnly ? (
+                      <span
+                        style={{
+                          color: '#b91c1c',
+                          fontWeight: '800',
+                          fontSize: '9.5px',
+                          lineHeight: '1.1',
+                          display: 'block',
+                        }}
+                      >
+                        SBA
+                        <br />
+                        ONLY
+                      </span>
+                    ) : (
+                      <span style={{ fontWeight: 700, fontSize: '9.5px' }}>{remarkText}</span>
+                    )}
+                  </td>
+                </tr>
+              );
+            })}
+            {/* Total Aggregate Row */}
+            <tr style={{ background: '#f8fafc', fontWeight: 800 }}>
+              <td className="subject-col" style={{ fontWeight: 850 }}>
+                TOTAL / AGGREGATE
+              </td>
+              <td style={{ color: '#1d4ed8', fontWeight: 800 }}>{hasGrades ? totalSBA : '-'}</td>
+              <td style={{ fontWeight: 800 }}>{hasGrades ? totalExam : '-'}</td>
+              <td style={{ fontWeight: 850, fontSize: '12px' }}>{hasGrades ? grandTotal : '-'}</td>
+              <td style={{ fontWeight: 800 }}>{hasGrades ? ordinal(position) : '—'}</td>
+              <td style={{ padding: '4px 6px' }}>
+                <div style={{ lineHeight: '1.1' }}>
+                  <span style={{ fontSize: '8px', color: '#64748b', display: 'block' }}>
+                    OVERALL:
+                  </span>
+                  <strong style={{ fontSize: '10.5px' }}>
+                    {hasGrades ? `${overallGrade} (${Math.round(overallPercent)}%)` : '—'}
+                  </strong>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      {/* Attitudes & Personal Development */}
+      <section className="assessment-box">
+        <div className="assessment-box-title">ATTITUDES & PERSONAL DEVELOPMENT</div>
+        <div className="assessment-attitudes-grid">
+          {traits.map((t) => (
+            <div key={t.label} className="assessment-attitude-item">
+              <span>{t.label}</span> <strong>{t.value}</strong>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Attendance & Promotion Bar */}
+      <section className="assessment-bar">
+        <div>
+          ATTENDANCE: <strong style={{ color: '#1d4ed8' }}>{customAttended}</strong> OUT OF{' '}
+          <strong>{customTotalSessions}</strong> SESSIONS
+        </div>
+        <div>
+          PROMOTED TO: <strong>{promotedTo || '—'}</strong>
+        </div>
+      </section>
+
+      {/* Remarks & Signatures */}
+      <section className="assessment-remarks-container">
+        <div className="assessment-remark-row">
+          <div className="assessment-remark-content">
+            <span className="assessment-remark-label">CLASS TEACHER'S REMARKS:</span>
+            <p className="assessment-remark-text">"{teacherRemark}"</p>
+            <div className="assessment-signature-line">
+              Class Teacher's Signature: ______________________
             </div>
           </div>
-        </section>
-      </article>
-
-      {editing && <ReportCardEditor student={student} onClose={() => setEditing(false)} />}
-    </>
+          <div className="assessment-school-stamp">
+            <OfficialStamp
+              term={data.settings.term}
+              year={data.settings.year}
+              status={grandTotal > 0 && overallPercent >= 40 ? 'PASSED' : 'VALIDATED'}
+              image={data.settings.reportStamps?.[`${data.settings.year}|${data.settings.term}`]}
+            />
+          </div>
+        </div>
+      </section>
+    </article>
   );
 }
 
-function ReportCardEditor({ student, onClose }: { student: Student; onClose: () => void }) {
-  const { data, update, notify, role } = useStore();
-  const rk = `${student.id}|${data.settings.term}`;
+function ReportCardEditor({
+  student,
+  reportTerm,
+  onClose,
+}: {
+  student: Student;
+  reportTerm: number;
+  onClose: () => void;
+}) {
+  const { data, update, notify, role, user } = useStore();
+  const rk = `${student.id}|${reportTerm}`;
   const conductData = data.conduct[rk] || {};
 
   // Form states for Pupil & School Info
   const [name, setName] = useState(student.name);
   const [classId, setClassId] = useState(student.classId);
   const [year, setYear] = useState(data.settings.year);
-  const [term, setTerm] = useState(data.settings.term);
+  const [term, setTerm] = useState(reportTerm);
   const [vacation, setVacation] = useState(data.settings.vacation);
   const [reopening, setReopening] = useState(data.settings.reopening);
   const [photo, setPhoto] = useState(student.photo || '');
@@ -1819,38 +1891,45 @@ function ReportCardEditor({ student, onClose }: { student: Student; onClose: () 
 
   // Attendance & Promotion
   const marks = Object.entries(data.attendance).filter(([k]) =>
-    k.endsWith(`|${data.settings.term}|${student.id}`),
+    k.endsWith(`|${reportTerm}|${student.id}`),
   );
-  const defaultAttended = marks.filter(([, v]) => v === 'Present' || v === 'Late').length || 20;
-  const defaultTotalSessions = marks.length || 20;
+  const defaultAttended = marks.filter(([, v]) => v === 'Present' || v === 'Late').length;
+  const defaultTotalSessions = marks.length;
 
   const [attended, setAttended] = useState(
     conductData['attendanceAttended'] !== undefined
       ? String(conductData['attendanceAttended'])
-      : String(defaultAttended),
+      : marks.length
+        ? String(defaultAttended)
+        : '',
   );
   const [totalSessions, setTotalSessions] = useState(
     conductData['attendanceTotal'] !== undefined
       ? String(conductData['attendanceTotal'])
-      : String(defaultTotalSessions),
+      : marks.length
+        ? String(defaultTotalSessions)
+        : '',
   );
   const [promotedTo, setPromotedTo] = useState(conductData['promotedTo'] || '');
 
   // Subject Grades
-  const [grades, setGrades] = useState(
-    studentGrades(data, student).map((g) => ({
-      subject: g.subject,
-      sba: g.sba,
-      exam: g.exam,
-      remark: g.remark || '',
-    })),
+  const [grades, setGrades] = useState<
+    { subject: string; sba: number | string; exam: number | string; remark: string }[]
+  >(
+    studentGrades({ ...data, settings: { ...data.settings, term: reportTerm } }, student)
+      .filter(
+        (g) => role === 'Administrator' || (user && canTeach(user, student.classId, g.subject)),
+      )
+      .map((g) => ({
+        subject: g.subject,
+        sba: data.grades[gradeKey(student.id, reportTerm, g.subject)]?.sba ?? '',
+        exam: data.grades[gradeKey(student.id, reportTerm, g.subject)]?.exam ?? '',
+        remark: g.remark || '',
+      })),
   );
 
   // Remarks
-  const [teacherRemark, setTeacherRemark] = useState(
-    data.remarks[rk] ||
-      `${student.name.split(' ')[0]} has shown commendable engagement and steady progress. Regular attendance and active participation are strongly encouraged.`,
-  );
+  const [teacherRemark, setTeacherRemark] = useState(data.remarks[rk] || '');
   // Attitudes / Traits
   const traitKeys = [
     'Conduct',
@@ -1917,88 +1996,98 @@ function ReportCardEditor({ student, onClose }: { student: Student; onClose: () 
   }
 
   function addSubject() {
-    setGrades([...grades, { subject: 'New Subject', sba: 0, exam: 0, remark: '' }]);
+    setGrades([...grades, { subject: '', sba: '', exam: '', remark: '' }]);
   }
 
   function removeSubject(index: number) {
     setGrades(grades.filter((_, i) => i !== index));
   }
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    update((d) => {
-      // 1. Update student data
-      const updatedStudents = d.students.map((s) =>
-        s.id === student.id
-          ? {
-              ...s,
-              name: name.trim() || s.name,
-              classId: classId || s.classId,
-              photo: photo || s.photo,
-            }
-          : s,
-      );
+    if (
+      !(await update((d) => {
+        // 1. Update student data
+        const updatedStudents = d.students.map((s) =>
+          s.id === student.id
+            ? {
+                ...s,
+                name: name.trim() || s.name,
+                classId: classId || s.classId,
+                photo: photo || undefined,
+              }
+            : s,
+        );
 
-      // 2. Update settings if admin modified academic dates/year/term
-      const updatedSettings = {
-        ...d.settings,
-        year: year || d.settings.year,
-        term: Number(term) || d.settings.term,
-        vacation: vacation || d.settings.vacation,
-        reopening: reopening || d.settings.reopening,
-      };
+        // 2. Update settings if admin modified academic dates/year/term
+        const updatedSettings = {
+          ...d.settings,
+          year: year || d.settings.year,
+          term: d.settings.term,
+          vacation,
+          reopening,
+        };
 
-      // 3. Update grades for this student and term
-      const updatedGrades = { ...d.grades };
-      // Remove any existing grades for this student & term
-      for (const key of Object.keys(updatedGrades)) {
-        if (key.startsWith(`${student.id}|${term}|`)) {
-          delete updatedGrades[key];
+        // 3. Update grades for this student and term
+        const updatedGrades = { ...d.grades };
+        // Remove any existing grades for this student & term
+        for (const key of Object.keys(updatedGrades)) {
+          if (
+            key.startsWith(`${student.id}|${term}|`) &&
+            (role === 'Administrator' ||
+              grades.some((g) => key === gradeKey(student.id, term, g.subject)))
+          ) {
+            delete updatedGrades[key];
+          }
         }
-      }
-      for (const g of grades) {
-        if (g.subject.trim()) {
-          updatedGrades[gradeKey(student.id, Number(term), g.subject.trim())] = {
-            sba: Math.min(50, Math.max(0, Number(g.sba) || 0)),
-            exam: Math.min(50, Math.max(0, Number(g.exam) || 0)),
-            remark: g.remark.trim(),
-          };
+        for (const g of grades) {
+          if (g.subject.trim() && (g.sba !== '' || g.exam !== '' || g.remark.trim())) {
+            updatedGrades[gradeKey(student.id, Number(term), g.subject.trim())] = {
+              sba: Math.min(50, Math.max(0, Number(g.sba) || 0)),
+              exam: Math.min(50, Math.max(0, Number(g.exam) || 0)),
+              remark: g.remark.trim(),
+            };
+          }
         }
-      }
 
-      // 4. Update remarks
-      const updatedRemarks = {
-        ...d.remarks,
-        [`${student.id}|${term}`]: teacherRemark,
-      };
+        // 4. Update remarks
+        const updatedRemarks = {
+          ...d.remarks,
+          [`${student.id}|${term}`]: teacherRemark,
+        };
 
-      // 5. Update conduct & traits & custom overrides
-      const updatedConduct = {
-        ...d.conduct,
-        [`${student.id}|${term}`]: {
-          ...conduct,
-          promotedTo,
-          attendanceAttended: attended,
-          attendanceTotal: totalSessions,
-          rollOverride: rollOverride.trim(),
-          positionOverride: positionOverride.trim(),
-        },
-      };
+        // 5. Update conduct & traits & custom overrides
+        const updatedConduct = {
+          ...d.conduct,
+          [`${student.id}|${term}`]: {
+            ...conduct,
+            promotedTo,
+            attendanceAttended: attended,
+            attendanceTotal: totalSessions,
+            rollOverride: rollOverride.trim(),
+            positionOverride: positionOverride.trim(),
+          },
+        };
 
-      return {
-        ...d,
-        students: updatedStudents,
-        settings: {
-          ...updatedSettings,
-          crest: schoolLogo,
-          reportStamps,
-        },
-        grades: updatedGrades,
-        remarks: updatedRemarks,
-        conduct: updatedConduct,
-        verified: d.verified.filter((k) => k !== `${student.id}|${term}`),
-      };
-    }, `Report card updated for ${student.name}`);
+        return {
+          ...d,
+          students: role === 'Administrator' ? updatedStudents : d.students,
+          settings:
+            role === 'Administrator'
+              ? {
+                  ...updatedSettings,
+                  crest: schoolLogo,
+                  reportStamps,
+                }
+              : d.settings,
+          grades: updatedGrades,
+          remarks: updatedRemarks,
+          conduct: updatedConduct,
+          verified: d.verified.filter((k) => k !== `${student.id}|${term}`),
+        };
+      }, `Report card updated for ${student.name}`))
+    )
+      return;
 
     notify('Report card changes saved successfully.');
     onClose();
@@ -2007,7 +2096,7 @@ function ReportCardEditor({ student, onClose }: { student: Student; onClose: () 
   return (
     <Modal title={`Edit Report Card · ${student.name}`} onClose={onClose} wide>
       <form onSubmit={handleSubmit} className="report-card-editor-form">
-        <fieldset className="editor-fieldset">
+        <fieldset className="editor-fieldset" disabled={role !== 'Administrator'}>
           <legend>Global School Logo</legend>
           <p className="muted">
             This logo replaces the graduation-cap mark on every report card and throughout the
@@ -2048,12 +2137,17 @@ function ReportCardEditor({ student, onClose }: { student: Student; onClose: () 
               <input
                 required
                 value={name}
+                readOnly={role !== 'Administrator'}
                 onChange={(e) => setName(e.target.value)}
                 placeholder="e.g. KWAME MENSAH"
               />
             </Field>
             <Field label="Class">
-              <select value={classId} onChange={(e) => setClassId(e.target.value)}>
+              <select
+                value={classId}
+                disabled={role !== 'Administrator'}
+                onChange={(e) => setClassId(e.target.value)}
+              >
                 {(data.classes || []).map((c) => (
                   <option key={c} value={c}>
                     {c}
@@ -2065,12 +2159,13 @@ function ReportCardEditor({ student, onClose }: { student: Student; onClose: () 
               <input
                 required
                 value={year}
+                readOnly={role !== 'Administrator'}
                 onChange={(e) => setYear(e.target.value)}
                 placeholder="2023/2024"
               />
             </Field>
             <Field label="Academic Term">
-              <select value={term} onChange={(e) => setTerm(Number(e.target.value))}>
+              <select value={term} disabled>
                 <option value={1}>Term 1</option>
                 <option value={2}>Term 2</option>
                 <option value={3}>Term 3</option>
@@ -2082,16 +2177,16 @@ function ReportCardEditor({ student, onClose }: { student: Student; onClose: () 
             <Field label="Vacation Date">
               <input
                 type="date"
-                required
                 value={vacation}
+                readOnly={role !== 'Administrator'}
                 onChange={(e) => setVacation(e.target.value)}
               />
             </Field>
             <Field label="Next Term Begins Date">
               <input
                 type="date"
-                required
                 value={reopening}
+                readOnly={role !== 'Administrator'}
                 onChange={(e) => setReopening(e.target.value)}
               />
             </Field>
@@ -2264,12 +2359,16 @@ function ReportCardEditor({ student, onClose }: { student: Student; onClose: () 
                           min="0"
                           max="50"
                           step="1"
-                          required
                           value={g.sba}
                           onChange={(e) =>
                             setGrades((gs) =>
                               gs.map((v, j) =>
-                                j === i ? { ...v, sba: Number(e.target.value) } : v,
+                                j === i
+                                  ? {
+                                      ...v,
+                                      sba: e.target.value === '' ? '' : Number(e.target.value),
+                                    }
+                                  : v,
                               ),
                             )
                           }
@@ -2282,12 +2381,16 @@ function ReportCardEditor({ student, onClose }: { student: Student; onClose: () 
                           min="0"
                           max="50"
                           step="1"
-                          required
                           value={g.exam}
                           onChange={(e) =>
                             setGrades((gs) =>
                               gs.map((v, j) =>
-                                j === i ? { ...v, exam: Number(e.target.value) } : v,
+                                j === i
+                                  ? {
+                                      ...v,
+                                      exam: e.target.value === '' ? '' : Number(e.target.value),
+                                    }
+                                  : v,
                               ),
                             )
                           }
@@ -2409,7 +2512,6 @@ function ReportCardEditor({ student, onClose }: { student: Student; onClose: () 
             <Field label="Class Teacher’s Remarks">
               <textarea
                 rows={3}
-                required
                 value={teacherRemark}
                 onChange={(e) => setTeacherRemark(e.target.value)}
                 placeholder="Enter class teacher remark..."

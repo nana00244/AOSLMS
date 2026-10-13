@@ -15,16 +15,7 @@ import {
   Moon,
 } from 'lucide-react';
 import { useStore, backup, checksum, validateState, csv } from '../store';
-import {
-  seed,
-  uid,
-  classes,
-  classSubjects,
-  courseworkSubjectId,
-  type State,
-  type User,
-  type Role,
-} from '../data';
+import { uid, classSubjects, courseworkSubjectId, type State, type User, type Role } from '../data';
 import {
   PageHeader,
   Button,
@@ -56,7 +47,7 @@ export function SettingsPage() {
       if (f.size > 10 * 1024 * 1024) throw Error('Backup is too large. Maximum size is 10 MB.');
       const envelope = JSON.parse(await f.text());
       if (
-        (envelope.format !== 'aos-backup-v1' && envelope.format !== 'aos-demo-v1') ||
+        envelope.format !== 'aos-backup-v1' ||
         typeof envelope.payload !== 'string' ||
         (await checksum(envelope.payload)) !== envelope.checksum
       )
@@ -285,7 +276,8 @@ export function SettingsPage() {
             )}
             <div className="notice">
               <ShieldCheck size={18} />
-              Database records sync across devices. Exports include file references; stored files and login accounts are managed separately.
+              Database records sync across devices. Exports include file references; stored files
+              and login accounts are managed separately.
             </div>
           </Card>
         </div>
@@ -299,7 +291,8 @@ export function SettingsPage() {
           }}
         >
           <p>
-            The backup checksum has been verified. Restoring will replace current school records. Login accounts are retained.
+            The backup checksum has been verified. Restoring will replace current school records.
+            Login accounts are retained.
           </p>
           <Field label="Type RESTORE SYSTEM to confirm">
             <input value={confirm} onChange={(e) => setConfirm(e.target.value)} />
@@ -317,16 +310,19 @@ export function SettingsPage() {
             <Button
               variant="danger"
               disabled={confirm !== 'RESTORE SYSTEM'}
-              onClick={() => {
+              onClick={async () => {
                 const replacement = restore;
-                update(
-                  (current) => ({
-                    ...replacement,
-                    users: current.users,
-                    teacherAssignments: current.teacherAssignments,
-                  }),
-                  'School backup restored',
-                );
+                if (
+                  !(await update(
+                    (current) => ({
+                      ...replacement,
+                      users: current.users,
+                      teacherAssignments: current.teacherAssignments,
+                    }),
+                    'School backup restored',
+                  ))
+                )
+                  return;
                 setSettings(replacement.settings);
                 setRestore(null);
                 setConfirm('');
@@ -470,7 +466,7 @@ export function UsersPage() {
           onClose={() => setEdit(null)}
         >
           <form
-            onSubmit={(e) => {
+            onSubmit={async (e) => {
               e.preventDefault();
               let username: string | undefined;
               let teaching: { classes: string[]; classAllowedSubjects: Record<string, string[]> };
@@ -544,17 +540,20 @@ export function UsersPage() {
                 email: username ? usernameAuthEmail(username) : edit.email,
                 id: edit.id || uid(),
               };
-              update(
-                (d) => {
-                  let next: State = {
-                    ...d,
-                    users: [...d.users.filter((existing) => existing.id !== user.id), user],
-                  };
-                  next = adminService.syncTeacherAssignments(next, user, adminUser?.id || 'u1');
-                  return next;
-                },
-                `${user.role === 'Teacher' ? 'Teacher assignment/profile' : 'User profile'} saved: ${user.name}`,
-              );
+              if (
+                !(await update(
+                  (d) => {
+                    let next: State = {
+                      ...d,
+                      users: [...d.users.filter((existing) => existing.id !== user.id), user],
+                    };
+                    next = adminService.syncTeacherAssignments(next, user, adminUser?.id || 'u1');
+                    return next;
+                  },
+                  `${user.role === 'Teacher' ? 'Teacher assignment/profile' : 'User profile'} saved: ${user.name}`,
+                ))
+              )
+                return;
               setEdit(null);
               notify('User profile saved.');
             }}
@@ -652,7 +651,7 @@ export function UsersPage() {
             {edit.role === 'Teacher' && (
               <fieldset className="class-checkboxes">
                 <legend>Assigned classes</legend>
-                {(data.classes || classes).map((c) => (
+                {(data.classes || []).map((c) => (
                   <label key={c}>
                     <input
                       type="checkbox"
@@ -742,7 +741,7 @@ export function UsersPage() {
           <p>
             {isSupabaseConfigured
               ? `Deactivate ${remove.name}'s login and database access? Their historical records will be retained.`
-              : `Remove ${remove.name} from the demo team directory?`}
+              : `Remove ${remove.name} from the school team directory?`}
           </p>
           <div className="modal-actions">
             <Button variant="secondary" onClick={() => setRemove(null)}>
@@ -751,7 +750,7 @@ export function UsersPage() {
             <Button
               variant="danger"
               disabled={savingAccount}
-              onClick={() => {
+              onClick={async () => {
                 if (isSupabaseConfigured) {
                   setSavingAccount(true);
                   void invokeBackend('admin-create-user', { action: 'deactivate', id: remove.id })
@@ -764,10 +763,13 @@ export function UsersPage() {
                     .finally(() => setSavingAccount(false));
                   return;
                 }
-                update(
-                  (d) => ({ ...d, users: d.users.filter((u) => u.id !== remove.id) }),
-                  'User profile removed',
-                );
+                if (
+                  !(await update(
+                    (d) => ({ ...d, users: d.users.filter((u) => u.id !== remove.id) }),
+                    'User profile removed',
+                  ))
+                )
+                  return;
                 setRemove(null);
                 notify('User profile removed.');
               }}
@@ -791,7 +793,7 @@ export function Audit() {
       <PageHeader
         eyebrow="A CLEARER PICTURE"
         title="Activity log"
-        description="A chronological record of changes in this demo workspace."
+        description="A chronological record of changes in the school workspace."
         actions={
           <Button
             variant="secondary"
@@ -842,7 +844,7 @@ export function Audit() {
       <p className="muted">
         {isSupabaseConfigured
           ? 'These events are recorded by the backend with the authenticated actor and server timestamp.'
-          : 'This browser-local activity log is a demo.'}
+          : 'School activity is recorded in the database.'}
       </p>
     </>
   );
