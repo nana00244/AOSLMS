@@ -583,6 +583,7 @@ export function Coursework() {
                 <Button
                   variant="ghost"
                   onClick={() => {
+                    setCls(assignment.classId);
                     setActive(assignment.id);
                     setGridAssignmentId(assignment.id);
                     setScoreSubjectSelection(assignment.subject);
@@ -603,12 +604,17 @@ export function Coursework() {
         />
       )}
       {scoreGridOpen && canManageCoursework && (
-        <Card className="coursework-score-entry">
+        <Modal
+          fullScreen
+          title={`${cls} · ${scoreSubject} · ${gridAssignments[0]?.title || 'Score entry'}`}
+          onClose={() => setScoreGridOpen(false)}
+        >
           <CardTitle
             title={`Class score grid · ${scoreSubject}`}
             description="Enter scores for multiple assignments in one pass. Blank cells remain ungraded and are excluded from category scaling."
           />
           <form
+            className="coursework-score-entry"
             onSubmit={async (e) => {
               e.preventDefault();
               const form = new FormData(e.currentTarget);
@@ -717,6 +723,7 @@ export function Coursework() {
               notify(
                 `Saved ${updates.length} score${updates.length === 1 ? '' : 's'} to the SBA scorebook and report cards.`,
               );
+              setScoreGridOpen(false);
             }}
           >
             <div className="coursework-grid-tools">
@@ -897,7 +904,7 @@ export function Coursework() {
               </Button>
             </div>
           </form>
-        </Card>
+        </Modal>
       )}
       <Card className="coursework-scorebook-card">
         <div className="section-heading">

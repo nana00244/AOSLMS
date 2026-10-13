@@ -1,3 +1,4 @@
+import { createPortal } from 'react-dom';
 import {
   useEffect,
   useRef,
@@ -234,11 +235,13 @@ export function Modal({
   children,
   onClose,
   wide = false,
+  fullScreen = false,
 }: {
   title: string;
   children: ReactNode;
   onClose: () => void;
   wide?: boolean;
+  fullScreen?: boolean;
 }) {
   const ref = useRef<HTMLDivElement>(null);
   const closeRef = useRef(onClose);
@@ -247,7 +250,7 @@ export function Modal({
     const before = document.activeElement as HTMLElement;
     const overflow = document.body.style.overflow;
     document.body.style.overflow = 'hidden';
-    ref.current?.focus();
+    ref.current?.focus({ preventScroll: true });
     const handler = (e: KeyboardEvent) => {
       if (e.key === 'Escape') closeRef.current();
       if (e.key === 'Tab') {
@@ -273,12 +276,12 @@ export function Modal({
     return () => {
       document.body.style.overflow = overflow;
       document.removeEventListener('keydown', handler);
-      before?.focus();
+      before?.focus({ preventScroll: true });
     };
   }, []);
-  return (
+  const dialog = (
     <div
-      className="modal-overlay"
+      className={`modal-overlay ${fullScreen ? 'modal-overlay-fullscreen' : ''}`}
       onMouseDown={(e) => {
         if (e.target === e.currentTarget) onClose();
       }}
@@ -289,7 +292,7 @@ export function Modal({
         role="dialog"
         aria-modal="true"
         aria-label={title}
-        className={`modal ${wide ? 'modal-wide' : ''}`}
+        className={`modal ${wide ? 'modal-wide' : ''} ${fullScreen ? 'modal-fullscreen' : ''}`}
       >
         <div className="modal-heading">
           <h2>{title}</h2>
@@ -301,6 +304,7 @@ export function Modal({
       </div>
     </div>
   );
+  return fullScreen ? createPortal(dialog, document.body) : dialog;
 }
 export function Toast({ message }: { message: string }) {
   return message ? (

@@ -401,7 +401,12 @@ test('teacher score sheet upload persists marks and updates an open report in re
     await expect(
       teacherPage.locator(`input[name="score-${assignmentId}-EXE2-${sid}"]`),
     ).toHaveValue('11');
+    await teacherPage
+      .getByRole('dialog')
+      .getByRole('button', { name: 'Cancel', exact: true })
+      .click();
     await upload(text.replace(',11,14', ',15,15'));
+    await openExerciseCard.getByRole('button', { name: 'Open Excel grading sheet' }).click();
     await expect(
       teacherPage.locator(`input[name="score-${assignmentId}-EXE2-${sid}"]`),
     ).toHaveValue('15');
@@ -425,7 +430,53 @@ test('teacher score sheet upload persists marks and updates an open report in re
     await expect(
       teacherPage.locator(`input[name="score-${assignmentId}-EXE2-${sid}"]`),
     ).toHaveValue('15');
-    await teacherPage.screenshot({ path: 'test-results/score-upload-grid.png', fullPage: true });
+    await teacherPage.screenshot({
+      path: 'test-results/score-upload-grid.png',
+      animations: 'disabled',
+    });
+    const dialog = teacherPage.getByRole('dialog');
+    await expect(dialog).toBeVisible();
+    const bounds = await dialog.boundingBox();
+    expect(bounds?.x).toBe(0);
+    expect(bounds?.y).toBe(0);
+    expect(bounds?.height).toBe(teacherPage.viewportSize()!.height);
+    expect(bounds?.width).toBe(teacherPage.viewportSize()!.width);
+    const scoreInput = teacherPage.locator(`input[name="score-${assignmentId}-EXE2-${sid}"]`);
+    await scoreInput.fill('12');
+    await dialog.getByRole('button', { name: 'Save scores', exact: true }).click();
+    await expect(dialog).toHaveCount(0, { timeout: 65000 });
+    const afterEntry = await service
+      .from('school_workspace')
+      .select('document')
+      .eq('id', true)
+      .single();
+    expect(afterEntry.error).toBeNull();
+    expect(
+      afterEntry.data?.document.assignments.find((a: any) => a.id === assignmentId).slotScores[sid]
+        .EXE2.score,
+    ).toBe(12);
+    const opener = exerciseCard.getByRole('button', { name: 'Open Excel grading sheet' });
+    await opener.click();
+    await expect(scoreInput).toHaveValue('12');
+    await scoreInput.fill('9');
+    await dialog.getByRole('button', { name: 'Cancel', exact: true }).click();
+    await expect(opener).toBeFocused();
+    await opener.click();
+    await expect(scoreInput).toHaveValue('12');
+    await dialog.getByRole('button', { name: 'Close dialog', exact: true }).click();
+    await expect(opener).toBeFocused();
+    await teacherPage.setViewportSize({ width: 390, height: 844 });
+    await opener.click();
+    const mobileBounds = await dialog.boundingBox();
+    expect(mobileBounds?.x).toBe(0);
+    expect(mobileBounds?.width).toBe(390);
+    expect(mobileBounds?.height).toBe(844);
+    await teacherPage.screenshot({
+      path: 'test-results/score-entry-mobile.png',
+      animations: 'disabled',
+    });
+    await teacherPage.keyboard.press('Escape');
+    await expect(dialog).toHaveCount(0);
   } finally {
     await teacherContext.close();
     await page.close();
