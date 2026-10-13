@@ -96,10 +96,18 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     setAuthProfile(profile);
     setRoleState(profile?.role || null);
   }
-  async function refresh() {
+  async function refresh(minimumRevision?: number) {
     if (!supabase || !owner.current) return;
     if (syncing.current) await syncing.current;
     if (!owner.current) return;
+    // A save response already includes its resulting snapshot. Its realtime event
+    // can arrive before the response, so check only after the save has finished.
+    if (
+      minimumRevision !== undefined &&
+      snapshot.current &&
+      minimumRevision <= snapshot.current.revision
+    )
+      return;
     if (refreshing.current) {
       refreshAgain.current = true;
       return refreshing.current;
@@ -162,6 +170,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
           await removeSave(save.id);
           pending = await readPendingSaves(userId);
           show(result, pending);
+          lastRefresh.current = Date.now();
         }
         if (current === generation.current) setStorageError('');
       } catch (error) {
@@ -309,10 +318,21 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     if (!supabase || !authProfile?.id) return;
     let active = true;
     let timer: ReturnType<typeof setTimeout>;
-    const reload = () => {
+    let queuedRevision: number | undefined;
+    let fullCheck = false;
+    const reload = (revision?: number) => {
+      if (revision === undefined) fullCheck = true;
+      else queuedRevision = Math.max(queuedRevision ?? revision, revision);
       clearTimeout(timer);
       timer = setTimeout(() => {
-        if (active && document.visibilityState !== 'hidden') void retrySaves().catch(() => {});
+        const minimumRevision = fullCheck ? undefined : queuedRevision;
+        queuedRevision = undefined;
+        fullCheck = false;
+        if (active && document.visibilityState !== 'hidden') {
+          // External edits still arrive promptly; ignore own/duplicate revisions.
+          const task = minimumRevision === undefined ? retrySaves() : refresh(minimumRevision);
+          void task.catch(() => {});
+        }
       }, 250);
     };
     const channel = supabase
@@ -320,12 +340,15 @@ export function StoreProvider({ children }: { children: ReactNode }) {
       .on(
         'postgres_changes',
         { event: 'UPDATE', schema: 'public', table: 'workspace_revisions' },
-        reload,
+        (payload) => {
+          const revision = payload.new.revision;
+          reload(Number.isSafeInteger(revision) && revision >= 0 ? revision : undefined);
+        },
       )
       .subscribe((status) => {
         if (status === 'SUBSCRIBED') reload();
       });
-    const interval = setInterval(reload, 60000);
+    const interval = setInterval(() => reload(), 60000);
     return () => {
       active = false;
       clearTimeout(timer);

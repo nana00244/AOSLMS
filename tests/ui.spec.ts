@@ -476,3 +476,115 @@ test('pending timeout keeps navigation usable and retries the durable operation'
   expect(operations[1]).toBe(operations[0]);
   expect(loads).toBeLessThanOrEqual(2);
 });
+
+test('realtime skips the confirmed save revision and still loads another user edit', async ({
+  page,
+}) => {
+  const state = seed();
+  const userId = '00000000-0000-4000-8000-000000000001';
+  state.users = [
+    {
+      id: userId,
+      name: 'Test Admin',
+      email: 'test@example.com',
+      role: 'Administrator',
+      active: true,
+      classes: [],
+    },
+  ];
+  state.settings.vacation = '2026-12-18';
+  state.settings.reopening = '2027-01-05';
+  await page.addInitScript(
+    ({ userId }) => {
+      localStorage.setItem(
+        'sb-itqfnzqksuacbeemrqok-auth-token',
+        JSON.stringify({
+          access_token: 'test-token',
+          refresh_token: 'test-refresh',
+          expires_at: Math.floor(Date.now() / 1000) + 3600,
+          token_type: 'bearer',
+          user: {
+            id: userId,
+            email: 'test@example.com',
+            aud: 'authenticated',
+            role: 'authenticated',
+          },
+        }),
+      );
+    },
+    { userId },
+  );
+  const loads: (number | undefined)[] = [];
+  let saves = 0;
+  let revision = 1;
+  let releaseSave!: () => void;
+  const saveGate = new Promise<void>((resolve) => {
+    releaseSave = resolve;
+  });
+  await page.route('**/functions/v1/workspace', async (route) => {
+    const body = route.request().postDataJSON();
+    if (body.action === 'load') {
+      loads.push(body.knownRevision);
+      await route.fulfill({
+        json: body.knownRevision === revision ? { unchanged: true, revision } : { state, revision },
+      });
+      return;
+    }
+    if (body.action === 'save-pending') {
+      saves++;
+      await saveGate;
+      revision = 2;
+      state.settings.name = 'Locally updated school';
+      await route.fulfill({ json: { state, revision } });
+      return;
+    }
+    await route.fulfill({ status: 400, json: { error: 'Unexpected request' } });
+  });
+  async function emitRevision(value: number) {
+    await page.evaluate(async (revision) => {
+      const modulePath = '/src/supabase.ts';
+      const { supabase } = await import(modulePath);
+      const channel = supabase
+        .getChannels()
+        .find((entry: any) => entry.topic.includes('workspace-revision-'));
+      // Deliver a decoded event to the real registered handler; the fixture does
+      // not connect to or change a live school's realtime database.
+      const binding = channel?.bindings.postgres_changes.find(
+        (entry: any) => entry.filter.table === 'workspace_revisions',
+      );
+      if (!binding) throw new Error('Workspace realtime handler was not registered');
+      binding.callback({ new: { id: true, revision } });
+    }, value);
+  }
+  await page.goto('/#/settings');
+  await expect(page.getByLabel('School name', { exact: true })).toBeVisible();
+  await page.getByRole('button', { name: 'Save all changes' }).click();
+  await expect(page.locator('.cloud-save-overlay')).toBeHidden();
+  expect(saves).toBe(0); // Re-saving unchanged settings must not write a document.
+  await page.getByLabel('School name', { exact: true }).fill('Locally updated school');
+  await page.getByRole('button', { name: 'Save all changes' }).click();
+  await expect.poll(() => saves).toBe(1);
+  const initialLoads = loads.length;
+  await emitRevision(2);
+  await page.waitForTimeout(350); // Event handler is now waiting for the in-flight save.
+  releaseSave();
+  await expect(page.locator('.cloud-save-overlay')).toBeHidden();
+  await page.waitForTimeout(350);
+  expect(loads).toHaveLength(initialLoads);
+  await emitRevision(1); // Out-of-order older events are also already represented.
+  await page.waitForTimeout(350);
+  expect(loads).toHaveLength(initialLoads);
+  revision = 3;
+  state.settings.name = 'Updated by another administrator';
+  state.users[0].name = 'Remote Administrator';
+  await emitRevision(3);
+  await expect.poll(() => loads.length).toBe(initialLoads + 1);
+  expect(loads.at(-1)).toBe(2);
+  await expect(page.getByRole('button', { name: /Remote Administrator/ })).toBeVisible();
+  await page.getByRole('link', { name: 'Student directory', exact: true }).click();
+  await expect(page.getByLabel('School name', { exact: true })).toBeHidden();
+  await page.goto('/#/settings');
+  await expect(page.getByLabel('School name', { exact: true })).toHaveValue(
+    'Updated by another administrator',
+  );
+});
