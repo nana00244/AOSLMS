@@ -5479,14 +5479,17 @@ td .person {
     grid-template-columns: 1fr;
   }
 }
-/* Block duplicate edits while a transactional cloud save is in flight. */
+/* Save progress never blocks navigation or other records. */
 .cloud-save-overlay {
   position: fixed;
-  inset: 0;
+  top: 12px;
+  right: 12px;
+  max-width: calc(100vw - 24px);
+  padding: 10px 16px;
+  border-radius: 10px;
+  pointer-events: none;
   z-index: 10000;
-  display: grid;
-  place-items: center;
-  background: #10182899;
+  background: #101828;
   color: white;
   font-weight: 700;
 }
@@ -5497,13 +5500,23 @@ td .person {
   left: 50%;
   transform: translateX(-50%);
   z-index: 9500;
-  width: min(850px, 94vw);
+  width: min(600px, 94vw);
+  max-height: 40vh;
+  overflow: auto;
   padding: 16px;
   border: 1px solid #b45309;
   border-radius: 12px;
   background: #fffbeb;
   color: #78350f;
   box-shadow: 0 4px 24px #0002;
+}
+.pending-save-toggle {
+  float: right;
+}
+@media (max-width: 767px) {
+  .pending-save-banner {
+    bottom: calc(80px + env(safe-area-inset-bottom));
+  }
 }
 .pending-save-banner span {
   display: block;
@@ -5526,6 +5539,7 @@ td .person {
 }
 @media print {
   .pending-save-banner,
+  .cloud-save-overlay,
   .report-batch-controls {
     display: none !important;
   }

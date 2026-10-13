@@ -1,0 +1,11 @@
+# Workspace timeout investigation
+
+Database logs showed statement timeouts both reading `school_workspace` and committing changes. The workspace document was approximately 7 MB, mostly student images. Each load previously fetched the document and profiles twice. Fifteen-second polling, navigation reloads and repeated sign-in events added redundant requests. The database service role inherited an eight-second statement timeout. These are observed contributors; they do not establish that every intermittent login failure has the same cause.
+
+The new service-only snapshot RPC reads one consistent snapshot and returns only the revision when unchanged. Loads reuse their first snapshot; saves still read back the committed result. Refresh requests and sync attempts share in-flight work, navigation no longer reloads the workspace, and fallback polling runs every minute with realtime updates preserved. The targeted database functions have a 20-second statement budget and commits have a three-second lock budget. No global timeout or browser database permissions were broadened.
+
+Saving now uses a nonblocking progress chip. Pending changes remain on the device with a compact expandable notice, retry and download controls. The mobile notice clears the navigation bar. Retried operations retain their original idempotency key. Failed initial workspace loads offer a retry button.
+
+Validation: 55 unit tests passed, two existing optional tests skipped; production build passed. The browser timeout regression verifies navigation while saving, retained pending changes after a simulated database timeout, expandable details and successful retry using the same operation ID. Live SQL verified the unchanged-revision response and service-only permissions. The migration and workspace Edge Function were deployed before the frontend push.
+
+REA passively inspected the local app running with synthetic records: evidence `ev_a66405aa2f030508d10b0c7a676ffe9b0adf5eba567be82008a1047e643eead9`. This confirms the inspected runtime surface, not production timeout recovery. Database logs and automated regression tests provide the timeout evidence; REA did not observe historical production requests. Splitting images out of the shared document remains a potential future performance improvement. These checks cannot guarantee the absence of unrelated application defects.

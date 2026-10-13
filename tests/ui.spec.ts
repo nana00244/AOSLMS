@@ -373,3 +373,106 @@ test('Excel workbook imports with mapped columns', async ({ page }) => {
   await page.getByRole('textbox', { name: 'Search name or admission number...' }).fill('XLSX-2001');
   await expect(page.locator('tbody')).toContainText('Akua Excel');
 });
+
+test('pending timeout keeps navigation usable and retries the durable operation', async ({
+  page,
+}) => {
+  const state = emptyState();
+  const userId = '00000000-0000-4000-8000-000000000001';
+  state.users = [
+    {
+      id: userId,
+      name: 'Test Admin',
+      email: 'test@example.com',
+      role: 'Administrator',
+      active: true,
+      classes: [],
+    },
+  ];
+  state.settings = {
+    ...state.settings,
+    name: 'Test School',
+    motto: 'Learn',
+    address: 'Test address',
+    phone: '12345',
+    email: 'test@example.com',
+    year: '2026/2027',
+    vacation: '2026-12-18',
+    reopening: '2027-01-05',
+  };
+  await page.addInitScript(
+    ({ userId }) => {
+      localStorage.setItem(
+        'sb-itqfnzqksuacbeemrqok-auth-token',
+        JSON.stringify({
+          access_token: 'test-token',
+          refresh_token: 'test-refresh',
+          expires_at: Math.floor(Date.now() / 1000) + 3600,
+          token_type: 'bearer',
+          user: {
+            id: userId,
+            email: 'test@example.com',
+            aud: 'authenticated',
+            role: 'authenticated',
+          },
+        }),
+      );
+    },
+    { userId },
+  );
+  let releaseSave!: () => void;
+  const saveGate = new Promise<void>((resolve) => {
+    releaseSave = resolve;
+  });
+  const operations: string[] = [];
+  let loads = 0;
+  await page.route('**/functions/v1/workspace', async (route) => {
+    const body = route.request().postDataJSON();
+    if (body.action === 'load') {
+      loads++;
+      await route.fulfill({
+        json: body.knownRevision === 1 ? { unchanged: true, revision: 1 } : { state, revision: 1 },
+      });
+      return;
+    }
+    if (body.action === 'save-pending') {
+      operations.push(body.operationId);
+      if (operations.length === 1) {
+        await saveGate;
+        await route.fulfill({
+          status: 503,
+          json: { error: 'canceling statement due to statement timeout' },
+        });
+      } else {
+        await route.fulfill({
+          json: {
+            state: { ...state, settings: { ...state.settings, name: 'Updated School' } },
+            revision: 2,
+          },
+        });
+      }
+      return;
+    }
+    await route.fulfill({ status: 400, json: { error: 'Unexpected test request' } });
+  });
+  await page.goto('/#/settings');
+  await page.getByLabel('School name', { exact: true }).fill('Updated School');
+  await page.getByRole('button', { name: 'Save all changes' }).click();
+  await expect(page.locator('.cloud-save-overlay')).toBeVisible();
+  await page.getByRole('link', { name: 'Student directory', exact: true }).click();
+  await expect(page).toHaveURL(/students/);
+  releaseSave();
+  const notice = page.getByRole('complementary', { name: 'Pending saves' });
+  await expect(notice).toContainText('retained on this device.');
+  await expect(page.locator('.cloud-save-overlay')).toBeHidden();
+  await notice.getByRole('button', { name: 'Show details' }).click();
+  await expect(notice).toContainText('statement timeout');
+  await notice.getByRole('button', { name: 'Hide details' }).click();
+  await expect(notice).not.toContainText('statement timeout');
+  await notice.getByRole('button', { name: 'Show details' }).click();
+  await notice.getByRole('button', { name: 'Retry sync' }).click();
+  await expect(notice).toBeHidden();
+  expect(operations).toHaveLength(2);
+  expect(operations[1]).toBe(operations[0]);
+  expect(loads).toBeLessThanOrEqual(2);
+});

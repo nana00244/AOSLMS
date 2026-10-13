@@ -24,8 +24,15 @@ export interface Snapshot {
   state: State;
   revision: number;
 }
-export const loadWorkspace = (): Promise<Snapshot> =>
-  invokeBackend('workspace', { action: 'load' });
+export function loadWorkspace(): Promise<Snapshot>;
+export function loadWorkspace(
+  knownRevision: number | undefined,
+): Promise<Snapshot | { unchanged: true; revision: number }>;
+export function loadWorkspace(
+  knownRevision?: number,
+): Promise<Snapshot | { unchanged: true; revision: number }> {
+  return invokeBackend('workspace', { action: 'load', knownRevision });
+}
 export const commitPendingSave = (save: PendingSave): Promise<Snapshot> =>
   invokeBackend('workspace', {
     action: 'save-pending',

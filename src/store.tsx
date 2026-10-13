@@ -44,6 +44,8 @@ export function StoreProvider({ children }: { children: ReactNode }) {
   const snapshot = useRef<Snapshot | null>(null);
   const owner = useRef('');
   const busy = useRef(false);
+  const syncing = useRef<Promise<void> | null>(null);
+  const lastRefresh = useRef(0);
   const generation = useRef(0);
   const refreshing = useRef<Promise<void> | null>(null);
   const refreshAgain = useRef(false);
@@ -52,6 +54,8 @@ export function StoreProvider({ children }: { children: ReactNode }) {
   const writing = useRef(0);
   const [saving, setSaving] = useState(false);
   const [pendingCount, setPendingCount] = useState(0);
+  const [syncingNow, setSyncingNow] = useState(false);
+  const [pendingExpanded, setPendingExpanded] = useState(false);
   const [role, setRoleState] = useState<Role | null>(null);
   const [authLoading, setAuthLoading] = useState(true);
   const [authProfile, setAuthProfile] = useState<User | undefined>();
@@ -93,7 +97,9 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     setRoleState(profile?.role || null);
   }
   async function refresh() {
-    if (!supabase || busy.current || !owner.current) return;
+    if (!supabase || !owner.current) return;
+    if (syncing.current) await syncing.current;
+    if (!owner.current) return;
     if (refreshing.current) {
       refreshAgain.current = true;
       return refreshing.current;
@@ -101,7 +107,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     const current = generation.current,
       userId = owner.current;
     const task = (async () => {
-      const result = await loadWorkspace();
+      const result = await loadWorkspace(snapshot.current?.revision);
       const pending = await readPendingSaves(userId);
       if (
         current !== generation.current ||
@@ -109,7 +115,9 @@ export function StoreProvider({ children }: { children: ReactNode }) {
         (snapshot.current && result.revision < snapshot.current.revision)
       )
         return;
-      show(result, pending);
+      if (!('unchanged' in result)) show(result, pending);
+      else if (snapshot.current) show(snapshot.current, pending);
+      lastRefresh.current = Date.now();
       if (!pending.length) setStorageError('');
     })();
     refreshing.current = task;
@@ -128,11 +136,13 @@ export function StoreProvider({ children }: { children: ReactNode }) {
   }
   async function syncQueue() {
     if (!owner.current || !supabase) return;
+    if (syncing.current) return syncing.current;
     const userId = owner.current,
       current = generation.current;
     const execute = async () => {
       if (busy.current || current !== generation.current) return;
       busy.current = true;
+      setSyncingNow(true);
       try {
         let pending = await readPendingSaves(userId);
         while (pending.length && current === generation.current) {
@@ -161,14 +171,23 @@ export function StoreProvider({ children }: { children: ReactNode }) {
           );
       } finally {
         busy.current = false;
+        if (current === generation.current) setSyncingNow(false);
       }
     };
-    if (navigator.locks) await navigator.locks.request(`aos-save-${userId}`, execute);
-    else await execute();
+    const task = (async () => {
+      if (navigator.locks) await navigator.locks.request(`aos-save-${userId}`, execute);
+      else await execute();
+    })();
+    syncing.current = task;
+    try {
+      await task;
+    } finally {
+      if (syncing.current === task) syncing.current = null;
+    }
   }
   async function retrySaves() {
-    await syncQueue();
-    await refresh().catch(() => {});
+    if (pendingRef.current.length) await syncQueue();
+    else await refresh();
   }
   async function resolveConflict() {
     if (!storageError.includes('Conflict:') || !owner.current) return;
@@ -207,11 +226,15 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     let active = true;
     const { data: listener } = supabase.auth.onAuthStateChange((event, session) => {
       if (session) {
-        if (owner.current !== session.user.id) {
+        const changedUser = owner.current !== session.user.id;
+        if (changedUser) {
           generation.current++;
           refreshing.current = null;
           refreshAgain.current = false;
           owner.current = session.user.id;
+          setAuthLoading(true);
+          setStorageError('');
+          lastRefresh.current = 0;
           snapshot.current = null;
           dataRef.current = emptyState();
           setData(dataRef.current);
@@ -220,19 +243,23 @@ export function StoreProvider({ children }: { children: ReactNode }) {
           setAuthProfile(undefined);
           setRoleState(null);
         }
-        if (event !== 'TOKEN_REFRESHED')
+        if (changedUser || (!snapshot.current && event !== 'TOKEN_REFRESHED'))
           window.setTimeout(async () => {
-            if (!active) return;
+            const authGeneration = generation.current;
+            if (!active || owner.current !== session.user.id) return;
             try {
               await refresh();
-              await syncQueue();
+              if (active && authGeneration === generation.current) {
+                setAuthLoading(false);
+                if (pendingRef.current.length) await syncQueue();
+              }
             } catch (error) {
-              if (active)
+              if (active && authGeneration === generation.current)
                 setStorageError(
                   error instanceof Error ? error.message : 'Could not load school records',
                 );
             } finally {
-              if (active) setAuthLoading(false);
+              if (active && authGeneration === generation.current) setAuthLoading(false);
             }
           }, 0);
       } else {
@@ -240,6 +267,8 @@ export function StoreProvider({ children }: { children: ReactNode }) {
         refreshing.current = null;
         refreshAgain.current = false;
         owner.current = '';
+        setStorageError('');
+        setPendingExpanded(false);
         snapshot.current = null;
         dataRef.current = emptyState();
         setData(dataRef.current);
@@ -251,7 +280,12 @@ export function StoreProvider({ children }: { children: ReactNode }) {
       }
     });
     const reload = () => {
-      if (owner.current) void retrySaves().catch(() => {});
+      if (
+        owner.current &&
+        document.visibilityState !== 'hidden' &&
+        (pendingRef.current.length || Date.now() - lastRefresh.current > 30000)
+      )
+        void retrySaves().catch(() => {});
     };
     const beforeUnload = (event: BeforeUnloadEvent) => {
       if (pendingRef.current.length || writing.current) {
@@ -261,7 +295,6 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     };
     window.addEventListener('online', reload);
     window.addEventListener('focus', reload);
-    window.addEventListener('hashchange', reload);
     window.addEventListener('beforeunload', beforeUnload);
     return () => {
       active = false;
@@ -269,7 +302,6 @@ export function StoreProvider({ children }: { children: ReactNode }) {
       listener.subscription.unsubscribe();
       window.removeEventListener('online', reload);
       window.removeEventListener('focus', reload);
-      window.removeEventListener('hashchange', reload);
       window.removeEventListener('beforeunload', beforeUnload);
     };
   }, []);
@@ -280,7 +312,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     const reload = () => {
       clearTimeout(timer);
       timer = setTimeout(() => {
-        if (active) void retrySaves().catch(() => {});
+        if (active && document.visibilityState !== 'hidden') void retrySaves().catch(() => {});
       }, 250);
     };
     const channel = supabase
@@ -293,7 +325,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
       .subscribe((status) => {
         if (status === 'SUBSCRIBED') reload();
       });
-    const interval = setInterval(reload, 15000);
+    const interval = setInterval(reload, 60000);
     return () => {
       active = false;
       clearTimeout(timer);
@@ -357,6 +389,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
           }
           await syncQueue();
           const remaining = await readPendingSaves(currentOwner);
+          if (currentOwner !== owner.current) return false;
           const saved = !remaining.some((p) => !id || p.id === id);
           if (saved) notify('Changes saved to the school database.');
           return saved;
@@ -418,29 +451,48 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     >
       {children}
       {pendingCount > 0 && (
-        <aside className="pending-save-banner" role="status">
-          <strong>
-            {pendingCount} pending save{pendingCount === 1 ? '' : 's'} — not yet synced to Supabase.
-          </strong>
-          <span>
-            {storageError || 'Retained on this device until the database confirms the save.'}
-          </span>
-          <button onClick={() => void retrySaves()}>Retry sync</button>
+        <aside className="pending-save-banner" aria-label="Pending saves">
           <button
-            onClick={() =>
-              download(
-                'pending-school-saves.json',
-                JSON.stringify(pendingRef.current, null, 2),
-                'application/json',
-              )
-            }
+            className="pending-save-toggle"
+            aria-expanded={pendingExpanded}
+            onClick={() => setPendingExpanded(!pendingExpanded)}
           >
-            Download pending entries
+            {pendingExpanded ? 'Hide details' : 'Show details'}
           </button>
-          {storageError.includes('Conflict:') && (
-            <button onClick={() => void resolveConflict().catch((error) => notify(String(error)))}>
-              Keep my changed fields and retry
-            </button>
+          <strong>
+            {pendingCount} pending save{pendingCount === 1 ? '' : 's'} —{' '}
+            {syncingNow ? 'syncing…' : 'retained on this device.'}
+          </strong>
+          {pendingExpanded && (
+            <>
+              <span>
+                {storageError || 'Retained on this device until the database confirms the save.'}
+              </span>
+              <button
+                disabled={syncingNow}
+                onClick={() => void retrySaves().catch((error) => notify(String(error)))}
+              >
+                {syncingNow ? 'Syncing…' : 'Retry sync'}
+              </button>
+              <button
+                onClick={() =>
+                  download(
+                    'pending-school-saves.json',
+                    JSON.stringify(pendingRef.current, null, 2),
+                    'application/json',
+                  )
+                }
+              >
+                Download pending entries
+              </button>
+              {storageError.includes('Conflict:') && (
+                <button
+                  onClick={() => void resolveConflict().catch((error) => notify(String(error)))}
+                >
+                  Keep my changed fields and retry
+                </button>
+              )}
+            </>
           )}
         </aside>
       )}

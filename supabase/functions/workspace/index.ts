@@ -23,14 +23,26 @@ Deno.serve(async (request) => {
   try {
     const { client, profile } = await authenticate(request);
     const input = await request.json();
-    const { data: stored, error } = await client
-      .from('school_workspace')
-      .select('*')
-      .eq('id', true)
-      .single();
-    if (error) throw error;
-    const { data: profiles, error: profileError } = await client.from('profiles').select('*');
-    if (profileError) throw profileError;
+    if (!['load', 'save-pending', 'save', 'import-scores', 'file-url'].includes(input.action))
+      return json({ error: 'Unknown action' }, 400);
+    const requestWasSave = ['save-pending', 'save', 'import-scores'].includes(input.action);
+    const readSnapshot = async (knownRevision: number | null = null) => {
+      const { data, error } = await client.rpc('read_workspace_snapshot', {
+        known_revision: knownRevision,
+      });
+      if (error) throw error;
+      if (!data) throw new Error('School workspace is unavailable');
+      return data;
+    };
+    const stored = await readSnapshot(
+      input.action === 'load' &&
+        Number.isSafeInteger(input.knownRevision) &&
+        input.knownRevision >= 0
+        ? input.knownRevision
+        : null,
+    );
+    if (stored.unchanged) return json({ unchanged: true, revision: stored.revision });
+    const profiles = stored.profiles;
     const user = toUser(profile);
     let state = { ...emptyState(), ...stored.document, users: profiles.map(toUser) };
     if (input.action === 'save-pending') {
@@ -95,17 +107,9 @@ Deno.serve(async (request) => {
       });
       if (saveError) throw saveError;
     } else if (input.action !== 'load') return json({ error: 'Unknown action' }, 400);
-    // Re-read after save and account changes, returning a consistent current snapshot.
-    const { data: current, error: readError } = await client
-      .from('school_workspace')
-      .select('*')
-      .eq('id', true)
-      .single();
-    if (readError) throw readError;
-    const { data: currentProfiles, error: currentProfilesError } = await client
-      .from('profiles')
-      .select('*');
-    if (currentProfilesError) throw currentProfilesError;
+    // Loads reuse the snapshot already read. Only writes need a post-commit read.
+    const current = requestWasSave ? await readSnapshot() : stored;
+    const currentProfiles = current.profiles;
     const currentUser = currentProfiles.find((p: any) => p.id === profile.id);
     if (!currentUser?.active) return json({ error: 'Account is inactive' }, 403);
     state = { ...emptyState(), ...current.document, users: currentProfiles.map(toUser), logs: [] };
@@ -134,8 +138,14 @@ Deno.serve(async (request) => {
         ? error.message
         : (error as any)?.message || 'Workspace request failed';
     return json(
-      { error: message },
-      message.includes('Conflict') ? 409 : message === 'Unauthorized' ? 401 : 400,
+      { error: message, code: (error as any)?.code },
+      message.includes('Conflict')
+        ? 409
+        : message === 'Unauthorized'
+          ? 401
+          : ['57014', '55P03', '53300'].includes((error as any)?.code)
+            ? 503
+            : 400,
     );
   }
 });

@@ -173,7 +173,7 @@ const studentNav = [
   { label: 'My Schedule', path: '/student/schedule', icon: CalendarDays, roles: ['Student'] },
 ];
 function Login() {
-  const { signIn, authLoading, storageError, theme, toggleTheme, data } = useStore();
+  const { signIn, authLoading, storageError, theme, toggleTheme, data, refresh } = useStore();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
@@ -183,6 +183,22 @@ function Login() {
       {storageError && (
         <div role="alert" className="notice">
           {storageError}
+          <button
+            disabled={submitting}
+            onClick={async () => {
+              setSubmitting(true);
+              setError('');
+              try {
+                await refresh();
+              } catch (cause) {
+                setError(cause instanceof Error ? cause.message : 'Unable to load records.');
+              } finally {
+                setSubmitting(false);
+              }
+            }}
+          >
+            Retry loading records
+          </button>
         </div>
       )}
       <section className="login-story">
