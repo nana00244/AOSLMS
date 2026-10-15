@@ -3,7 +3,8 @@ import { applyChanges, projectWorkspace } from '../../../src/backendAccess.ts';
 import { workspaceSchema } from '../../../src/validation.ts';
 import { emptyState } from '../../../src/emptyState.ts';
 import { applyScoreImport } from '../../../src/scoreImport.ts';
-import { rebaseChanges } from '../../../src/saveRecovery.ts';
+import { isFastSave } from '../../../src/saveBatch.ts';
+import { rebaseChanges, recordValue, overlayChanges } from '../../../src/saveRecovery.ts';
 
 export const toUser = (p: any) => ({
   id: p.id,
@@ -23,9 +24,15 @@ Deno.serve(async (request) => {
   try {
     const { client, profile } = await authenticate(request);
     const input = await request.json();
-    if (!['load', 'save-pending', 'save', 'import-scores', 'file-url'].includes(input.action))
+    if (
+      !['load', 'save-batch', 'save-pending', 'save', 'import-scores', 'file-url'].includes(
+        input.action,
+      )
+    )
       return json({ error: 'Unknown action' }, 400);
-    const requestWasSave = ['save-pending', 'save', 'import-scores'].includes(input.action);
+    const requestWasSave = ['save-batch', 'save-pending', 'save', 'import-scores'].includes(
+      input.action,
+    );
     const readSnapshot = async (knownRevision: number | null = null) => {
       const { data, error } = await client.rpc('read_workspace_snapshot', {
         known_revision: knownRevision,
@@ -43,8 +50,84 @@ Deno.serve(async (request) => {
     );
     if (stored.unchanged) return json({ unchanged: true, revision: stored.revision });
     const profiles = stored.profiles;
-    const user = toUser(profile);
+    const snapshotProfile = profiles.find((p: any) => p.id === profile.id);
+    if (!snapshotProfile?.active) return json({ error: 'Account is inactive' }, 403);
+    const user = toUser(snapshotProfile);
     let state = { ...emptyState(), ...stored.document, users: profiles.map(toUser) };
+    let savedSnapshot: any;
+    if (input.action === 'save-batch' || (input.action === 'save-pending' && isFastSave(input))) {
+      const saves = input.action === 'save-batch' ? input.saves : [input];
+      if (
+        !Array.isArray(saves) ||
+        saves.length < 1 ||
+        saves.length > 10 ||
+        saves.some(
+          (save: any) =>
+            !save ||
+            !isFastSave(save) ||
+            save.changes.length > 10000 ||
+            typeof save.operationId !== 'string' ||
+            !/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(
+              save.operationId,
+            ),
+        ) ||
+        new Set(saves.map((save: any) => save.operationId)).size !== saves.length
+      )
+        throw new Error('Invalid save batch');
+      const receipts = await client
+        .from('workspace_save_receipts')
+        .select('operation_id,revision')
+        .eq('actor', profile.id)
+        .in(
+          'operation_id',
+          saves.map((save: any) => save.operationId),
+        );
+      if (receipts.error) throw receipts.error;
+      if (receipts.data.some((r: any) => Number(r.revision) > stored.revision))
+        throw new Error('Conflict: records changed. Reload and try again.');
+      const completed = new Set(receipts.data.map((r: any) => r.operation_id));
+      const remaining = saves.filter((save: any) => !completed.has(save.operationId));
+      const initial = state;
+      for (const save of remaining)
+        state = workspaceSchema.parse(
+          applyChanges(state, user, rebaseChanges(state, save.changes)),
+        );
+      if (remaining.length) {
+        // Only explicitly edited keys are written; schema normalization must not
+        // rewrite unrelated records as a side effect of a small edit.
+        const touched = new Map<string, any>();
+        for (const save of remaining)
+          for (const change of save.changes)
+            touched.set(JSON.stringify([change.collection, change.id]), change);
+        const changes = [...touched.values()]
+          .map((change) => ({
+            collection: change.collection,
+            id: change.id,
+            before: recordValue(initial, change),
+            after: recordValue(state, change),
+          }))
+          .filter((change) => JSON.stringify(change.before) !== JSON.stringify(change.after));
+        state = overlayChanges(initial, changes);
+        const committed = await client.rpc('commit_workspace_maps_once', {
+          expected_revision: stored.revision,
+          changes,
+          actor: profile.id,
+          operations: remaining.map((save: any) => ({
+            id: save.operationId,
+            event: typeof save.event === 'string' ? save.event : 'School records updated',
+          })),
+        });
+        if (committed.error) throw committed.error;
+        // CAS guarantees state is the snapshot we committed. A duplicate receipt race
+        // needs a fresh read because another request may have committed different work.
+        if (!committed.data.alreadyApplied)
+          savedSnapshot = { ...stored, document: state, revision: committed.data.revision };
+      } else {
+        // All receipts are at or before the snapshot revision checked above.
+        savedSnapshot = stored;
+      }
+      input.action = 'load';
+    }
     if (input.action === 'save-pending') {
       if (typeof input.operationId !== 'string' || !/^[0-9a-f-]{36}$/i.test(input.operationId))
         throw new Error('Invalid save identifier');
@@ -108,7 +191,7 @@ Deno.serve(async (request) => {
       if (saveError) throw saveError;
     } else if (input.action !== 'load') return json({ error: 'Unknown action' }, 400);
     // Loads reuse the snapshot already read. Only writes need a post-commit read.
-    const current = requestWasSave ? await readSnapshot() : stored;
+    const current = savedSnapshot || (requestWasSave ? await readSnapshot() : stored);
     const currentProfiles = current.profiles;
     const currentUser = currentProfiles.find((p: any) => p.id === profile.id);
     if (!currentUser?.active) return json({ error: 'Account is inactive' }, 403);

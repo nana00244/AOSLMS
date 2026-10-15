@@ -5,7 +5,8 @@ import { assignedClassIdsForTeacher } from './services/teacherService';
 import { supabase } from './supabase';
 import { loginIdentifier } from './accountRules';
 import { emptyState } from './emptyState';
-import { loadWorkspace, commitPendingSave, type Snapshot } from './backend';
+import { loadWorkspace, commitPendingSave, commitPendingSaves, type Snapshot } from './backend';
+import { pendingSaveBatch } from './saveBatch';
 import { changesBetween } from './backendAccess';
 import { applyScoreImport, type ScoreImportRequest } from './scoreImport';
 import { overlayChanges, mergeSavedValue, recordValue } from './saveRecovery';
@@ -163,12 +164,22 @@ export function StoreProvider({ children }: { children: ReactNode }) {
             return; // A human decision is required; polling cannot resolve this.
           }
           setSyncingNow(true);
+          setStorageError('');
+          let batch = pendingSaveBatch(pending);
           let result: Snapshot | undefined;
           for (let attempt = 0; attempt < 3; attempt++) {
             try {
-              result = await commitPendingSave(save);
+              result = await (batch.length > 1
+                ? commitPendingSaves(batch)
+                : commitPendingSave(save));
               break;
             } catch (error) {
+              // Isolate failures without dropping any operation IDs. A batch may
+              // have committed before its response was lost; receipts make retry safe.
+              if (batch.length > 1) {
+                batch = [save];
+                continue;
+              }
               const message = error instanceof Error ? error.message : String(error);
               // Only the transactional compare-and-swap race is retryable immediately.
               if (
@@ -187,7 +198,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
             }
           }
           if (!result || current !== generation.current) return;
-          await removeSave(save.id);
+          for (const committed of batch) await removeSave(committed.id);
           pending = await readPendingSaves(userId);
           show(result, pending);
           lastRefresh.current = Date.now();

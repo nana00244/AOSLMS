@@ -55,6 +55,7 @@ try {
   await db.exec('begin');
   await db.exec(sql('20261013173811_incremental_workspace_storage.sql'));
   await db.exec(sql('20261013222536_bounded_workspace_query_memory.sql'));
+  await db.exec(sql('20261015084704_targeted_workspace_saves.sql'));
   await db.exec('commit');
   const snapshot = async () => (await db.query('select * from public.school_workspace')).rows[0];
   assert.deepEqual((await snapshot()).document, original, 'migration must be lossless');
@@ -98,12 +99,70 @@ try {
   const unchanged = (await db.query('select public.read_workspace_snapshot($1) result', [revision]))
     .rows[0].result;
   assert.deepEqual(unchanged, { unchanged: true, revision });
+  // Targeted commits retain per-operation receipts and never touch photograph tuples.
+  const mapOperation = '00000000-0000-4000-8000-000000000003';
+  const mapOperation2 = '00000000-0000-4000-8000-000000000004';
+  const mapCommit = (rev, changes, operations) =>
+    db
+      .query('select public.commit_workspace_maps_once($1,$2,$3,$4) result', [
+        rev,
+        JSON.stringify(changes),
+        actor,
+        JSON.stringify(operations),
+      ])
+      .then((r) => r.rows[0].result);
+  const mapBefore = await tuples();
+  const ops = [
+    { id: mapOperation, event: 'First' },
+    { id: mapOperation2, event: 'Second' },
+  ];
+  const mapped = await mapCommit(revision, [{ collection: 'grades', id: 'a', after: 10 }], ops);
+  assert.equal(mapped.alreadyApplied, false);
+  assert.equal(
+    (await mapCommit(revision, [], ops)).alreadyApplied,
+    true,
+    'lost-response retry is idempotent',
+  );
+  assert.equal(
+    (await db.query('select count(*)::int n from public.audit_log')).rows[0].n,
+    3,
+    'one audit per original save, no duplicates',
+  );
+  const mapAfter = await tuples();
+  assert.deepEqual(
+    mapAfter
+      .filter(
+        (r) =>
+          mapBefore.find((b) => b.section === r.section && b.entry_key === r.entry_key)?.tuple !==
+          r.tuple,
+      )
+      .map((r) => r.section),
+    ['grades'],
+  );
+  await assert.rejects(
+    mapCommit(mapped.revision, [], [ops[0], { id: '00000000-0000-4000-8000-000000000005' }]),
+    /Conflict/,
+  );
+  await assert.rejects(
+    mapCommit(revision, [], [{ id: '00000000-0000-4000-8000-000000000005' }]),
+    /Conflict/,
+  );
+  await assert.rejects(
+    mapCommit(
+      mapped.revision,
+      [{ collection: 'students', id: 'a', after: {} }],
+      [{ id: '00000000-0000-4000-8000-000000000005' }],
+    ),
+    /Invalid targeted/,
+  );
+  assert.equal((await snapshot()).document.grades.a, 10);
+  replacement.grades.a = 10;
   replacement.students.reverse();
   replacement.students.unshift({ id: 'c', photo: 'new' });
   delete replacement.grades.a;
   delete replacement.duplicateIds;
   replacement.nil = { key: null };
-  await commit(replacement, revision);
+  await commit(replacement, mapped.revision);
   assert.deepEqual(
     (await snapshot()).document,
     replacement,
@@ -149,6 +208,7 @@ try {
       'read_workspace_snapshot(bigint)',
       'commit_workspace(bigint,jsonb,uuid,text)',
       'commit_workspace_once(bigint,jsonb,uuid,text,uuid)',
+      'commit_workspace_maps_once(bigint,jsonb,uuid,jsonb)',
     ]) {
       assert.equal(
         (

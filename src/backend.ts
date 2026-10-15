@@ -41,6 +41,15 @@ export const commitPendingSave = (save: PendingSave): Promise<Snapshot> =>
     event: save.event,
     scoreRequest: save.scoreRequest,
   });
+export const commitPendingSaves = (saves: PendingSave[]): Promise<Snapshot> =>
+  invokeBackend('workspace', {
+    action: 'save-batch',
+    saves: saves.map((save) => ({
+      operationId: save.id,
+      changes: save.changes,
+      event: save.event,
+    })),
+  });
 export const importScoreSheet = (
   snapshot: Snapshot,
   request: ScoreImportRequest,
