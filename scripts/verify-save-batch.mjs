@@ -51,6 +51,35 @@ try {
       event: 'Synthetic no-op batch verification',
     })),
   };
+  const recoveryEntries = operations.map((idValue) => ({
+    id: idValue,
+    owner: id,
+    createdAt: new Date().toISOString(),
+    changes: [],
+  }));
+  const preview = async (entries) => {
+    const response = await fetch(project.url + '/functions/v1/workspace', {
+      method: 'POST',
+      headers: {
+        Authorization: `Bearer ${signed.data.session.access_token}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ action: 'preview-recovery', saves: entries }),
+      signal: AbortSignal.timeout(60000),
+    });
+    return { status: response.status, data: await response.json() };
+  };
+  const before = await preview(recoveryEntries);
+  assert.equal(before.status, 200);
+  assert.deepEqual(
+    before.data.rows.map((r) => r.status),
+    ['ready', 'ready'],
+  );
+  const wrongOwner = await preview([{ ...recoveryEntries[0], owner: randomUUID() }]);
+  assert.equal(wrongOwner.status, 400);
+  console.log(
+    'PASS: live recovery preview marks unconfirmed saves ready and rejects another owner.',
+  );
   let revision;
   for (const mode of ['batch', 'retry']) {
     const start = Date.now();
@@ -69,6 +98,13 @@ try {
     revision = data.revision;
     console.log(JSON.stringify({ mode, status: response.status, elapsedMs: Date.now() - start }));
   }
+  const after = await preview(recoveryEntries);
+  assert.equal(after.status, 200);
+  assert.deepEqual(
+    after.data.rows.map((r) => r.status),
+    ['confirmed', 'confirmed'],
+  );
+  console.log('PASS: live recovery preview skips already-confirmed saves.');
   // Use a separate service client: sign-in above changes the first client's auth header.
   const service = createClient(project.url, key, {
     auth: { persistSession: false, autoRefreshToken: false },

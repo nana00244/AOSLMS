@@ -143,3 +143,151 @@ for (const keepLocal of [false, true]) {
     await expect(page.getByRole('alert')).toHaveCount(0);
   });
 }
+
+test('recover pending upload previews, skips receipts, rejects another owner and syncs only ready entries', async ({
+  page,
+}) => {
+  const userId = '00000000-0000-4000-8000-000000000001';
+  const state = emptyState();
+  state.users = [
+    {
+      id: userId,
+      name: 'Recovery Admin',
+      email: 'test@example.com',
+      role: 'Administrator',
+      active: true,
+      classes: [],
+    },
+  ];
+  await page.addInitScript(
+    ({ userId }) => {
+      localStorage.setItem(
+        'sb-itqfnzqksuacbeemrqok-auth-token',
+        JSON.stringify({
+          access_token: 'test-token',
+          refresh_token: 'test-refresh',
+          expires_at: Math.floor(Date.now() / 1000) + 3600,
+          token_type: 'bearer',
+          user: {
+            id: userId,
+            email: 'test@example.com',
+            aud: 'authenticated',
+            role: 'authenticated',
+          },
+        }),
+      );
+    },
+    { userId },
+  );
+  const saves = [2, 3, 4].map((n) => ({
+    id: '00000000-0000-4000-8000-' + String(n).padStart(12, '0'),
+    owner: userId,
+    createdAt: new Date(2026, 9, 15, 0, n).toISOString(),
+    event: 'Recovery example ' + n,
+    changes: [{ collection: 'remarks', id: 'example|1', after: 'Draft ' + n }],
+  }));
+  let writes = 0;
+  let previews = 0;
+  const transactions: any[] = [];
+  await page.route('**/functions/v1/workspace', async (route) => {
+    const body = route.request().postDataJSON();
+    let response: any;
+    if (body.action === 'load') response = { state, revision: 1 };
+    else if (body.action === 'preview-recovery') {
+      previews++;
+      response = {
+        rows: saves.map((s, i) => ({
+          id: s.id,
+          status: i === 0 || (writes && i === 1) ? 'confirmed' : i === 1 ? 'ready' : 'conflict',
+          reason: i === 2 ? 'Conflict: another save changed this remark.' : 'Checked.',
+        })),
+        revision: 1,
+      };
+    } else {
+      writes++;
+      expect(body.action).toBe('save-pending');
+      expect(body.operationId).toBe(saves[1].id);
+      response = { state, revision: 2 };
+    }
+    transactions.push({ request: body, response });
+    await route.fulfill({ json: response });
+  });
+  await page.goto('/');
+  await expect(page.locator('.app-shell')).toBeVisible();
+  await page.getByRole('button', { name: 'Recover pending entries', exact: true }).click();
+  const dialog = page.getByRole('dialog');
+  const file = dialog.getByLabel('Pending entries file');
+  await file.setInputFiles({
+    name: 'pending-school-saves.json',
+    mimeType: 'application/json',
+    buffer: Buffer.from(JSON.stringify([{ ...saves[0], owner: 'other' }])),
+  });
+  await expect(dialog).toContainText('another account');
+  expect(previews).toBe(0);
+  await file.setInputFiles({
+    name: 'pending-school-saves.json',
+    mimeType: 'application/json',
+    buffer: Buffer.from(JSON.stringify(saves)),
+  });
+  await expect(dialog).toContainText('1 ready');
+  await expect(dialog).toContainText('1 already confirmed');
+  await expect(dialog).toContainText('CONFLICT');
+  await page.screenshot({ path: '.temp/recovery-preview.png' });
+  expect(writes).toBe(0);
+  await dialog.getByRole('button', { name: 'Recover 1 ready entries and sync' }).click();
+  await expect(dialog).toContainText('Recovery sync finished');
+  expect(writes).toBe(1);
+  await expect(dialog).toContainText('2 already confirmed');
+  await expect(dialog.getByRole('button', { name: /ready entries and sync/ })).toBeDisabled();
+  const remaining = await page.evaluate(async (userId) => {
+    const path = '/src/pendingSaves.ts';
+    const { readPendingSaves } = await import(path);
+    return readPendingSaves(userId);
+  }, userId);
+  expect(remaining).toHaveLength(0);
+  // Synthetic mocked traffic only; authentication headers and tokens are omitted.
+  const { mkdirSync, writeFileSync } = await import('node:fs');
+  mkdirSync('.temp', { recursive: true });
+  writeFileSync(
+    '.temp/recovery-ui.har',
+    JSON.stringify({
+      log: {
+        version: '1.2',
+        creator: { name: 'Recovery controlled browser test', version: '1' },
+        entries: transactions.map((t) => ({
+          startedDateTime: new Date().toISOString(),
+          time: 0,
+          request: {
+            method: 'POST',
+            url: 'http://controlled-test.invalid/functions/v1/workspace',
+            httpVersion: 'HTTP/1.1',
+            headers: [],
+            queryString: [],
+            cookies: [],
+            headersSize: -1,
+            bodySize: -1,
+            postData: { mimeType: 'application/json', text: JSON.stringify(t.request) },
+          },
+          response: {
+            status: 200,
+            statusText: 'OK',
+            httpVersion: 'HTTP/1.1',
+            headers: [],
+            cookies: [],
+            headersSize: -1,
+            bodySize: -1,
+            redirectURL: '',
+            content: {
+              size: Buffer.byteLength(JSON.stringify(t.response)),
+              mimeType: 'application/json',
+              text: JSON.stringify(t.response),
+            },
+          },
+          cache: {},
+          timings: { send: 0, wait: 0, receive: 0 },
+          comment: 'Controlled mock; times not measured.',
+        })),
+      },
+    }),
+  );
+});

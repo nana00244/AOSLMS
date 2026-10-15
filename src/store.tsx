@@ -5,12 +5,25 @@ import { assignedClassIdsForTeacher } from './services/teacherService';
 import { supabase } from './supabase';
 import { loginIdentifier } from './accountRules';
 import { emptyState } from './emptyState';
-import { loadWorkspace, commitPendingSave, commitPendingSaves, type Snapshot } from './backend';
+import {
+  loadWorkspace,
+  commitPendingSave,
+  commitPendingSaves,
+  invokeBackend,
+  type Snapshot,
+} from './backend';
+import { parsePendingRecovery, type RecoveryRow } from './pendingRecovery';
 import { pendingSaveBatch } from './saveBatch';
 import { changesBetween } from './backendAccess';
 import { applyScoreImport, type ScoreImportRequest } from './scoreImport';
 import { overlayChanges, mergeSavedValue, recordValue } from './saveRecovery';
-import { readPendingSaves, retainSave, removeSave, type PendingSave } from './pendingSaves';
+import {
+  readPendingSaves,
+  retainSave,
+  retainRecoveredSaves,
+  removeSave,
+  type PendingSave,
+} from './pendingSaves';
 export function validateState(value: unknown): value is State {
   return workspaceSchema.safeParse(value).success;
 }
@@ -34,6 +47,9 @@ interface Store {
   refresh: () => Promise<void>;
   pendingCount: number;
   retrySaves: () => Promise<void>;
+  recoverPendingEntries: (
+    saves: PendingSave[],
+  ) => Promise<{ added: number; remaining: number; rows: RecoveryRow[] }>;
   theme: Theme;
   setTheme: (t: Theme) => void;
   toggleTheme: () => void;
@@ -229,6 +245,39 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     if (pendingRef.current[0]?.conflict) await refresh();
     else if (pendingRef.current.length) await syncQueue();
     else await refresh();
+  }
+  async function recoverPendingEntries(input: PendingSave[]) {
+    const userId = owner.current,
+      current = generation.current;
+    if (!userId) throw Error('Sign in before recovering entries.');
+    const saves = parsePendingRecovery(JSON.stringify(input), userId);
+    if (syncing.current) await syncing.current;
+    const checked = (await invokeBackend('workspace', { action: 'preview-recovery', saves })) as {
+      rows: RecoveryRow[];
+    };
+    if (owner.current !== userId || generation.current !== current)
+      throw Error('Account changed. Preview the file again.');
+    const ready = new Set(
+      checked.rows.filter((row) => row.status === 'ready').map((row) => row.id),
+    );
+    const added = await retainRecoveredSaves(
+      saves
+        .filter((save) => ready.has(save.id))
+        .map((save) => {
+          const { conflict: _conflict, ...entry } = save;
+          return entry;
+        }),
+    );
+    if (owner.current !== userId || generation.current !== current)
+      throw Error(
+        'Recovered entries are retained for the original account. Sign in again to sync.',
+      );
+    const pending = await readPendingSaves(userId);
+    if (snapshot.current) show(snapshot.current, pending);
+    setPendingHidden(false);
+    setPendingExpanded(true);
+    await syncQueue();
+    return { added, remaining: (await readPendingSaves(userId)).length, rows: checked.rows };
   }
   async function resolveConflict(keepLocal = true) {
     if (!storageError.includes('Conflict:') || !owner.current) return;
@@ -537,6 +586,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
         refresh,
         pendingCount,
         retrySaves,
+        recoverPendingEntries,
         theme,
         setTheme: setThemeState,
         toggleTheme: () => setThemeState(theme === 'light' ? 'dark' : 'light'),

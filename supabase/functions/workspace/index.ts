@@ -3,6 +3,7 @@ import { applyChanges, projectWorkspace } from '../../../src/backendAccess.ts';
 import { workspaceSchema } from '../../../src/validation.ts';
 import { emptyState } from '../../../src/emptyState.ts';
 import { applyScoreImport } from '../../../src/scoreImport.ts';
+import { parsePendingRecovery, previewPendingRecovery } from '../../../src/pendingRecovery.ts';
 import { isFastSave } from '../../../src/saveBatch.ts';
 import { rebaseChanges, recordValue, overlayChanges } from '../../../src/saveRecovery.ts';
 
@@ -25,9 +26,15 @@ Deno.serve(async (request) => {
     const { client, profile } = await authenticate(request);
     const input = await request.json();
     if (
-      !['load', 'save-batch', 'save-pending', 'save', 'import-scores', 'file-url'].includes(
-        input.action,
-      )
+      ![
+        'load',
+        'preview-recovery',
+        'save-batch',
+        'save-pending',
+        'save',
+        'import-scores',
+        'file-url',
+      ].includes(input.action)
     )
       return json({ error: 'Unknown action' }, 400);
     const requestWasSave = ['save-batch', 'save-pending', 'save', 'import-scores'].includes(
@@ -54,6 +61,29 @@ Deno.serve(async (request) => {
     if (!snapshotProfile?.active) return json({ error: 'Account is inactive' }, 403);
     const user = toUser(snapshotProfile);
     let state = { ...emptyState(), ...stored.document, users: profiles.map(toUser) };
+    if (input.action === 'preview-recovery') {
+      const saves = parsePendingRecovery(JSON.stringify(input.saves), profile.id);
+      const receipts = await client
+        .from('workspace_save_receipts')
+        .select('operation_id,revision')
+        .eq('actor', profile.id)
+        .in(
+          'operation_id',
+          saves.map((save) => save.id),
+        );
+      if (receipts.error) throw receipts.error;
+      if (receipts.data.some((r: any) => Number(r.revision) > stored.revision))
+        throw new Error('Records changed while checking the file. Preview it again.');
+      return json({
+        rows: previewPendingRecovery(
+          state,
+          user,
+          saves,
+          new Set(receipts.data.map((r: any) => r.operation_id)),
+        ),
+        revision: stored.revision,
+      });
+    }
     let savedSnapshot: any;
     if (input.action === 'save-batch' || (input.action === 'save-pending' && isFastSave(input))) {
       const saves = input.action === 'save-batch' ? input.saves : [input];

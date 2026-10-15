@@ -95,3 +95,24 @@ test('an already committed batch reuses the snapshot without another read or wri
   expect((await handler(request())).status).toBe(200);
   expect(rpc).toHaveBeenCalledTimes(1);
 });
+test('recovery preview checks authenticated ownership and never invokes a write RPC', async () => {
+  const { rpc, saves, profile } = setup([op1]);
+  const entries = saves.map((save) => ({
+    id: save.operationId,
+    owner: profile.id,
+    createdAt: new Date().toISOString(),
+    changes: save.changes,
+  }));
+  const make = (items: unknown) =>
+    new Request('http://localhost/workspace', {
+      method: 'POST',
+      body: JSON.stringify({ action: 'preview-recovery', saves: items }),
+    });
+  const response = await handler(make(entries));
+  expect(response.status).toBe(200);
+  expect((await response.json()).rows[0].status).toBe('confirmed');
+  expect(rpc.mock.calls.every((call) => call[0] === 'read_workspace_snapshot')).toBe(true);
+  const rejected = await handler(make([{ ...entries[0], owner: 'someone-else' }]));
+  expect(rejected.status).toBe(400);
+  expect((await rejected.json()).error).toContain('another account');
+});

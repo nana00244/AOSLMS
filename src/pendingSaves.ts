@@ -37,6 +37,40 @@ async function transact<T>(
 }
 export const retainSave = (save: PendingSave) => transact('readwrite', (s) => s.put(save));
 export const removeSave = (id: string) => transact('readwrite', (s) => s.delete(id));
+/** Atomically add recovery entries without replacing a newer local copy. */
+export async function retainRecoveredSaves(saves: PendingSave[]): Promise<number> {
+  const db = await open();
+  return new Promise((resolve, reject) => {
+    let added = 0;
+    let failure: Error | undefined;
+    const tx = db.transaction('saves', 'readwrite');
+    const store = tx.objectStore('saves');
+    for (const save of saves) {
+      const existing = store.get(save.id);
+      existing.onsuccess = () => {
+        if (existing.result && existing.result.owner !== save.owner) {
+          failure = Error(
+            'A save identifier belongs to another local account. No entries were imported.',
+          );
+          tx.abort();
+          return;
+        }
+        if (!existing.result) {
+          store.add(save);
+          added++;
+        }
+      };
+    }
+    tx.oncomplete = () => {
+      db.close();
+      resolve(added);
+    };
+    tx.onerror = tx.onabort = () => {
+      db.close();
+      reject(failure || tx.error || Error('Could not retain recovered entries.'));
+    };
+  });
+}
 export async function readPendingSaves(owner: string): Promise<PendingSave[]> {
   const all = (await transact('readonly', (s) => s.getAll())) as PendingSave[];
   return all

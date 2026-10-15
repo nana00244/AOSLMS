@@ -1,3 +1,4 @@
+import { RecoverPendingEntries } from '../components/RecoverPendingEntries';
 import { useState } from 'react';
 import {
   Save,
@@ -255,6 +256,7 @@ export function SettingsPage() {
                 Download backup
               </Button>
             </div>
+            <RecoverPendingEntries />
             <h3>Restore a saved workspace</h3>
             <p className="muted">
               Choose a backup to verify it before replacing your school records.

@@ -1,3 +1,4 @@
+import { RecoverPendingEntries } from '../components/RecoverPendingEntries';
 import { Link } from 'react-router-dom';
 import {
   Users,
@@ -48,6 +49,7 @@ export function Dashboard() {
         }
         actions={
           <>
+            <RecoverPendingEntries />
             {role === 'Administrator' && (
               <Button
                 variant="secondary"
