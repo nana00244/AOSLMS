@@ -1,6 +1,11 @@
 import { describe, expect, it } from 'vitest';
 import { seed, gradeKey, type User } from './data';
-import { reportRemarkScores, extractReportRemark } from './reportRemarks';
+import {
+  reportRemarkScores,
+  extractReportRemark,
+  geminiRemarkRequest,
+  geminiRemarkError,
+} from './reportRemarks';
 
 describe('AI report remarks privacy and authorization', () => {
   const state = seed();
@@ -46,19 +51,30 @@ describe('AI report remarks privacy and authorization', () => {
       reportRemarkScores(state, teacher, pupil.id, state.settings.term === 1 ? 2 : 1),
     ).toThrow('not available');
   });
-  it('rejects partial, refused or oversized responses', () => {
-    expect(() => extractReportRemark({ status: 'incomplete', output: [] })).toThrow();
-    expect(() =>
-      extractReportRemark({
-        status: 'completed',
-        output: [{ type: 'message', content: [{ type: 'refusal' }] }],
-      }),
-    ).toThrow();
-    const result = (text: string) => ({
-      status: 'completed',
-      output: [{ type: 'message', content: [{ type: 'output_text', text }] }],
+  it('accepts completed text and rejects incomplete or blocked output', () => {
+    const result = (text: string, finishReason = 'STOP') => ({
+      candidates: [
+        { finishReason, content: { parts: [{ thought: true, text: 'Hidden' }, { text }] } },
+      ],
     });
     expect(extractReportRemark(result(' A useful remark. '))).toBe('A useful remark.');
-    expect(() => extractReportRemark(result('a'.repeat(1201)))).toThrow();
+    for (const response of [
+      result('Partial', 'MAX_TOKENS'),
+      result('Blocked', 'SAFETY'),
+      result(''),
+      result('a'.repeat(1201)),
+      {},
+      { ...result('Text'), promptFeedback: { blockReason: 'SAFETY' } },
+    ])
+      expect(() => extractReportRemark(response)).toThrow();
+  });
+  it('sends only scores with bounded output and actionable errors', () => {
+    const scores = [{ subject: 'Mathematics', sba: 30, exam: 40, total: 70 }];
+    const request = geminiRemarkRequest(scores);
+    expect(request.generationConfig.maxOutputTokens).toBe(512);
+    expect(JSON.parse(request.contents[0].parts[0].text)).toEqual({ scores });
+    expect(geminiRemarkError(403).code).toBe('AI_KEY_INVALID');
+    expect(geminiRemarkError(429).code).toBe('AI_QUOTA_UNAVAILABLE');
+    expect(geminiRemarkError(503).code).toBe('AI_UNAVAILABLE');
   });
 });

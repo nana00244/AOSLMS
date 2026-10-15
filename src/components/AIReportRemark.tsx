@@ -34,7 +34,11 @@ export function AIReportRemark({
     setBusy(true);
     setError('');
     try {
-      const result = await invokeBackend('generate-report-remark', { studentId: student.id, term });
+      const result = await invokeBackend('generate-report-remark', {
+        studentId: student.id,
+        term,
+        provider: 'gemini',
+      });
       setRemark(result.remark);
       setSource(JSON.stringify(result.scores));
     } catch (error) {
@@ -82,7 +86,7 @@ export function AIReportRemark({
       </p>
       <p>
         Generate a draft from saved scores in subjects you can access. Only subject names and scores
-        are sent to OpenAI. Review and edit the wording before saving it to the report card.
+        are sent to Gemini. Review and edit the wording before saving it to the report card.
       </p>
       {original && <p>Current remark: {original}</p>}
       <Button onClick={() => void generate()} disabled={busy || pendingCount > 0 || !current}>
