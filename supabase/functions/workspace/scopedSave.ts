@@ -30,10 +30,15 @@ export async function scopedSave(client: any, profile: any, input: any) {
   const p = stored.profiles.find((p: any) => p.id === profile.id);
   if (!p?.active) throw Error('Account is inactive');
   const user = {
-    ...p,
+    id: p.id,
     name: p.full_name,
-    classAllowedSubjects: p.class_allowed_subjects,
-    studentId: p.student_id,
+    email: p.email,
+    role: p.role,
+    active: p.active,
+    classes: p.classes,
+    ...(p.username ? { username: p.username } : {}),
+    classAllowedSubjects: p.class_allowed_subjects || {},
+    ...(p.student_id ? { studentId: p.student_id } : {}),
   };
   const initial = { ...emptyState(), ...stored.document, users: [user] };
   // SQL NULL aggregates represent empty requested maps.

@@ -17,6 +17,7 @@ test('private photos resolve separately and retained saves drain after compact c
     },
   ];
   const ref = 'photo:' + 'a'.repeat(64) + '.png';
+  state.classes = ['BS 1'];
   state.students = [
     {
       id: 'S1',
@@ -85,6 +86,20 @@ test('private photos resolve separately and retained saves drain after compact c
   await expect(page.locator('.app-shell')).toBeVisible();
   await expect(page.getByAltText('Photo Test Pupil')).toHaveAttribute('src', png);
   expect(photoCalls).toBe(1);
+  await page.goto('/#/reports?student=S1');
+  await expect(page.locator('.assessment-photo-frame img')).toHaveAttribute('src', png);
+  await page.evaluate(() => {
+    window.print = () => {
+      (window as any).printed = true;
+    };
+  });
+  await page.getByRole('button', { name: 'Print / Save PDF', exact: true }).click();
+  await expect.poll(() => page.evaluate(() => !!(window as any).printed)).toBe(true);
+  expect(
+    await page
+      .locator('.assessment-photo-frame img')
+      .evaluate((img: HTMLImageElement) => img.naturalWidth),
+  ).toBeGreaterThan(0);
   await page.evaluate(async (owner) => {
     const path = '/src/pendingSaves.ts';
     const { retainSave } = await import(path);

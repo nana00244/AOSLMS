@@ -10,6 +10,9 @@ function setup(role = 'Administrator', completed = false) {
     email: 'staff@example.test',
     role,
     active: true,
+    student_id: null,
+    username: null,
+    class_allowed_subjects: null,
     classes: [],
   };
   const rpc = vi.fn(async (name: string) => ({
