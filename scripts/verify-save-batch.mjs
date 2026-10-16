@@ -45,6 +45,7 @@ try {
   const operations = [randomUUID(), randomUUID()];
   const body = {
     action: 'save-batch',
+    ...(process.argv.includes('--ack') ? { response: 'ack' } : {}),
     saves: operations.map((operationId) => ({
       operationId,
       changes: [],
@@ -94,9 +95,20 @@ try {
     });
     const data = await response.json();
     assert.equal(response.status, 200, data.error || 'Expected successful save');
+    if (process.argv.includes('--ack')) {
+      assert.equal(data.confirmed, true);
+      assert.equal(Object.hasOwn(data, 'state'), false);
+    }
     if (mode === 'retry') assert.equal(data.revision, revision, 'retry must not commit again');
     revision = data.revision;
-    console.log(JSON.stringify({ mode, status: response.status, elapsedMs: Date.now() - start }));
+    console.log(
+      JSON.stringify({
+        mode,
+        status: response.status,
+        elapsedMs: Date.now() - start,
+        responseBytes: Buffer.byteLength(JSON.stringify(data)),
+      }),
+    );
   }
   const after = await preview(recoveryEntries);
   assert.equal(after.status, 200);

@@ -1,4 +1,5 @@
 import { workspaceSchema } from './validation';
+import { mergeSaveResult } from './saveAcknowledgement';
 import { createContext, useContext, useEffect, useRef, useState, type ReactNode } from 'react';
 import { type State, type Role, type User } from './data';
 import { assignedClassIdsForTeacher } from './services/teacherService';
@@ -11,6 +12,7 @@ import {
   commitPendingSaves,
   invokeBackend,
   type Snapshot,
+  type SaveResult,
 } from './backend';
 import { parsePendingRecovery, type RecoveryRow } from './pendingRecovery';
 import { pendingSaveBatch } from './saveBatch';
@@ -168,6 +170,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     if (syncing.current) return syncing.current;
     const userId = owner.current,
       current = generation.current;
+    let needsRefresh = false;
     const execute = async () => {
       if (busy.current || current !== generation.current) return;
       busy.current = true;
@@ -182,7 +185,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
           setSyncingNow(true);
           setStorageError('');
           let batch = pendingSaveBatch(pending);
-          let result: Snapshot | undefined;
+          let result: SaveResult | undefined;
           for (let attempt = 0; attempt < 3; attempt++) {
             try {
               result = await (batch.length > 1
@@ -214,9 +217,17 @@ export function StoreProvider({ children }: { children: ReactNode }) {
             }
           }
           if (!result || current !== generation.current) return;
+          const merged =
+            'state' in result
+              ? result
+              : snapshot.current
+                ? mergeSaveResult(snapshot.current, result)
+                : undefined;
+          if (!merged) throw Error('Reload the workspace to finish confirming this save');
+          if (merged.revision < result.revision) needsRefresh = true;
           for (const committed of batch) await removeSave(committed.id);
           pending = await readPendingSaves(userId);
-          show(result, pending);
+          show(merged, pending);
           lastRefresh.current = Date.now();
         }
         if (current === generation.current) setStorageError('');
@@ -240,6 +251,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     } finally {
       if (syncing.current === task) syncing.current = null;
     }
+    if (needsRefresh && current === generation.current) await refresh();
   }
   async function retrySaves() {
     if (pendingRef.current[0]?.conflict) await refresh();

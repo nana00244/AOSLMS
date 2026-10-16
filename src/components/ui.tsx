@@ -1,4 +1,5 @@
 import { createPortal } from 'react-dom';
+import { StudentPhoto } from './StudentPhoto';
 import {
   useEffect,
   useRef,
@@ -121,7 +122,7 @@ export function Badge({ children, tone = 'green' }: { children: ReactNode; tone?
 }
 export function Avatar({ name, photo }: { name: string; photo?: string }) {
   return photo ? (
-    <img className="avatar" src={photo} alt={name} />
+    <StudentPhoto className="avatar" photo={photo} alt={name} />
   ) : (
     <span className={`avatar avatar-${name.length % 4}`}>{initials(name)}</span>
   );

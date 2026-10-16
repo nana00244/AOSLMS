@@ -29,7 +29,7 @@ export const workspaceSchema = z
         phone: text,
         status: z.enum(['Active', 'Inactive', 'Graduated']),
         enrolled: text,
-        photo: optionalImage,
+        photo: z.union([optionalImage, z.string().regex(/^photo:[a-f0-9]{64}\.(png|jpg)$/)]),
       }),
     ),
     assignments: z.array(
@@ -243,7 +243,10 @@ export const workspaceSchema = z
       reportStamps: z
         .record(
           z.string(),
-          z.string().max(800000).regex(/^data:image\/(png|jpeg);base64,[A-Za-z0-9+/=]+$/),
+          z
+            .string()
+            .max(800000)
+            .regex(/^data:image\/(png|jpeg);base64,[A-Za-z0-9+/=]+$/),
         )
         .optional(),
     }),

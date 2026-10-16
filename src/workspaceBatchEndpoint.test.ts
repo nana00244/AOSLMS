@@ -39,7 +39,8 @@ function setup(completed: string[] = []) {
     order: vi.fn().mockReturnThis(),
     limit: vi.fn().mockResolvedValue({ data: [] }),
   }));
-  mocks.authenticate.mockResolvedValue({ client: { rpc, from }, profile });
+  const storage = { from: vi.fn(() => ({ upload: vi.fn().mockResolvedValue({error:null}) })) };
+  mocks.authenticate.mockResolvedValue({ client: { rpc, from, storage }, profile });
   const key = `${state.students[0].id}|1`;
   const change = (before: unknown, after: string) => ({
     collection: 'remarks',

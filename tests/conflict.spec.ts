@@ -1,6 +1,126 @@
 import { test, expect } from '@playwright/test';
 import { emptyState } from '../src/emptyState';
 
+test('private photos resolve separately and retained saves drain after compact confirmation', async ({
+  page,
+}) => {
+  const owner = '00000000-0000-4000-8000-000000000001';
+  const state = emptyState();
+  state.users = [
+    {
+      id: owner,
+      name: 'Test Admin',
+      email: 'test@example.com',
+      role: 'Administrator',
+      active: true,
+      classes: [],
+    },
+  ];
+  const ref = 'photo:' + 'a'.repeat(64) + '.png';
+  state.students = [
+    {
+      id: 'S1',
+      name: 'Photo Test Pupil',
+      classId: 'BS 1',
+      gender: 'Male',
+      dob: '',
+      guardian: '',
+      phone: '',
+      status: 'Active',
+      enrolled: '2026-10-16',
+      photo: ref,
+    },
+  ];
+  let revision = 1,
+    online = false,
+    photoCalls = 0,
+    confirmed = 0;
+  const png =
+    'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+aS3sAAAAASUVORK5CYII=';
+  await page.addInitScript(
+    ({ owner }) => {
+      localStorage.setItem(
+        'sb-itqfnzqksuacbeemrqok-auth-token',
+        JSON.stringify({
+          access_token: 'test-token',
+          refresh_token: 'test-refresh',
+          expires_at: Math.floor(Date.now() / 1000) + 3600,
+          token_type: 'bearer',
+          user: {
+            id: owner,
+            email: 'test@example.com',
+            aud: 'authenticated',
+            role: 'authenticated',
+          },
+        }),
+      );
+    },
+    { owner },
+  );
+  await page.route('**/functions/v1/workspace', async (route) => {
+    const body = route.request().postDataJSON();
+    if (body.action === 'load') return route.fulfill({ json: { state, revision } });
+    if (body.action === 'photo-urls') {
+      photoCalls++;
+      expect(body.photos).toEqual([ref]);
+      return route.fulfill({ json: { urls: { [ref]: png } } });
+    }
+    if (!online)
+      return route.fulfill({ status: 503, json: { error: 'Temporary connection failure' } });
+    expect(body.response).toBe('ack');
+    const saves = body.saves || [body];
+    confirmed += saves.length;
+    state.remarks['S1|1'] = 'Second remark';
+    revision = 2;
+    return route.fulfill({
+      json: {
+        confirmed: true,
+        baseRevision: 1,
+        revision,
+        changes: [{ collection: 'remarks', id: 'S1|1', after: 'Second remark' }],
+      },
+    });
+  });
+  await page.goto('/#/students');
+  await expect(page.locator('.app-shell')).toBeVisible();
+  await expect(page.getByAltText('Photo Test Pupil')).toHaveAttribute('src', png);
+  expect(photoCalls).toBe(1);
+  await page.evaluate(async (owner) => {
+    const path = '/src/pendingSaves.ts';
+    const { retainSave } = await import(path);
+    for (let i = 0; i < 2; i++)
+      await retainSave({
+        id: `00000000-0000-4000-8000-00000000000${i + 2}`,
+        owner,
+        createdAt: new Date(Date.now() + i).toISOString(),
+        changes: [
+          {
+            collection: 'remarks',
+            id: 'S1|1',
+            before: i ? 'First remark' : undefined,
+            after: i ? 'Second remark' : 'First remark',
+          },
+        ],
+      });
+  }, owner);
+  await page.reload();
+  const notice = page.getByRole('complementary', { name: 'Pending saves' });
+  await expect(notice).toContainText('2 pending saves');
+  await notice.getByRole('button', { name: 'Show details' }).click();
+  await expect(notice).toContainText('Temporary connection failure');
+  online = true;
+  await notice.getByRole('button', { name: 'Retry sync' }).click();
+  await expect(notice).toBeHidden();
+  expect(confirmed).toBe(2);
+  expect(
+    await page.evaluate(async (owner) => {
+      const path = '/src/pendingSaves.ts';
+      const { readPendingSaves } = await import(path);
+      return (await readPendingSaves(owner)).length;
+    }, owner),
+  ).toBe(0);
+});
+
 for (const keepLocal of [false, true]) {
   test(`conflict survives reload without retrying, allows sign-out and ${keepLocal ? 'keeps local' : 'uses database'} resolution`, async ({
     page,

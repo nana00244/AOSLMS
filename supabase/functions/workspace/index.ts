@@ -1,4 +1,7 @@
 import { workspaceRecordDelta } from '../../../src/workspaceDelta.ts';
+import { normalizePhotoChanges, storeStudentPhotos } from '../../../src/studentPhotos.ts';
+import { signStudentPhotos } from './photos.ts';
+import { scopedSave } from './scopedSave.ts';
 import { createSnapshotCache } from '../../../src/workspaceSnapshotCache.ts';
 import { authenticate, json } from '../_shared/http.ts';
 import { applyChanges, projectWorkspace } from '../../../src/backendAccess.ts';
@@ -29,6 +32,13 @@ Deno.serve(async (request) => {
   try {
     const { client, profile } = await authenticate(request);
     const input = await request.json();
+    if (input.action === 'photo-urls')
+      return json(await signStudentPhotos(client, profile, input.photos));
+    if (
+      input.response === 'ack' &&
+      (input.action === 'save-batch' || (input.action === 'save-pending' && isFastSave(input)))
+    )
+      return json(await scopedSave(client, profile, input));
     if (
       ![
         'load',
@@ -61,6 +71,8 @@ Deno.serve(async (request) => {
     let state = { ...emptyState(), ...stored.document, users: profiles.map(toUser) };
     if (input.action === 'preview-recovery') {
       const saves = parsePendingRecovery(JSON.stringify(input.saves), profile.id);
+      for (const save of saves)
+        save.changes = await normalizePhotoChanges(state.students, save.changes);
       const receipts = await client
         .from('workspace_save_receipts')
         .select('operation_id,revision')
@@ -85,6 +97,10 @@ Deno.serve(async (request) => {
     const initialState = state;
     let savedSnapshot: any;
     const commitDelta = async (event: string, operationId: string | null = null) => {
+      state = {
+        ...state,
+        students: await storeStudentPhotos(client, state.students, initialState.students),
+      };
       const delta = workspaceRecordDelta(initialState, state);
       const committed = await client.rpc('commit_workspace_delta', {
         expected_revision: stored.revision,
@@ -183,7 +199,10 @@ Deno.serve(async (request) => {
       if (!receipt.data) {
         if (!Array.isArray(input.changes) || input.changes.length > 10000)
           throw new Error('Invalid change set');
-        const changes = rebaseChanges(state, input.changes);
+        const changes = rebaseChanges(
+          state,
+          await normalizePhotoChanges(state.students, input.changes),
+        );
         state = input.scoreRequest
           ? applyScoreImport(state, user, input.scoreRequest)
           : applyChanges(state, user, changes);
@@ -213,7 +232,11 @@ Deno.serve(async (request) => {
       state =
         input.action === 'import-scores'
           ? applyScoreImport(state, user, input.request)
-          : applyChanges(state, user, input.changes);
+          : applyChanges(
+              state,
+              user,
+              rebaseChanges(state, await normalizePhotoChanges(state.students, input.changes)),
+            );
       state = workspaceSchema.parse(state);
       await commitDelta(
         input.action === 'import-scores'

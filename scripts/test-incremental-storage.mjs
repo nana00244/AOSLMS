@@ -59,6 +59,13 @@ try {
   await db.exec(sql('20261015084704_targeted_workspace_saves.sql'));
   await db.exec(sql('20261016080249_workspace_record_deltas.sql'));
   await db.exec(sql('20261016081241_workspace_json_snapshot.sql'));
+  await db.exec(`create schema storage;
+    create table storage.buckets(id text primary key,name text,public boolean,file_size_limit bigint,allowed_mime_types text[]);
+    create table storage.objects(bucket_id text,name text);
+    grant usage on schema storage to service_role;
+    grant select on storage.objects to service_role;`);
+  await db.exec(sql('20261016213411_private_student_photos.sql'));
+  await db.exec(sql('20261016213625_scoped_workspace_save_context.sql'));
   await db.exec('commit');
   const snapshot = async () => (await db.query('select * from public.school_workspace')).rows[0];
   assert.deepEqual((await snapshot()).document, original, 'migration must be lossless');
@@ -215,6 +222,9 @@ try {
       'assemble_workspace(jsonb)',
       'read_workspace_snapshot(bigint)',
       'read_workspace_snapshot_json(bigint)',
+      'read_workspace_save_context(jsonb)',
+      'read_student_photo_context(jsonb)',
+      'migrate_student_photo(text,text,text)',
       'commit_workspace(bigint,jsonb,uuid,text)',
       'commit_workspace_once(bigint,jsonb,uuid,text,uuid)',
       'commit_workspace_maps_once(bigint,jsonb,uuid,jsonb)',
@@ -247,6 +257,71 @@ try {
     'service role can commit without extra privileges',
   );
   await db.exec('reset role');
+  await db.exec(
+    "insert into public.workspace_entries(section,entry_key,ordinal,value) values('grades','o:context-test',0,'10'),('grades','o:unrequested-test',0,'20')",
+  );
+  const context = (
+    await db.query('select public.read_workspace_save_context($1) result', [
+      JSON.stringify([{ collection: 'grades', id: 'context-test' }]),
+    ])
+  ).rows[0].result;
+  assert.equal(
+    context.document.students.some((s) => s.photo),
+    false,
+    'scoped reads omit photo payloads',
+  );
+  assert.deepEqual(
+    Object.keys(context.document.grades),
+    ['context-test'],
+    'only requested map keys returned',
+  );
+  assert.equal(Object.hasOwn(context.document, 'assignments'), false);
+  const photoRow = (
+    await db.query(
+      "select entry_key,value from public.workspace_entries where section='students' limit 1",
+    )
+  ).rows[0];
+  const ref = 'photo:' + 'a'.repeat(64) + '.png';
+  await assert.rejects(
+    db.query('select public.migrate_student_photo($1,$2,$3)', [
+      photoRow.entry_key,
+      photoRow.value.photo,
+      ref,
+    ]),
+    /Verified storage/,
+  );
+  await db.query('insert into storage.objects values($1,$2)', ['student-photos', ref.slice(6)]);
+  assert.equal(
+    (
+      await db.query('select public.migrate_student_photo($1,$2,$3) ok', [
+        photoRow.entry_key,
+        'wrong before photo',
+        ref,
+      ])
+    ).rows[0].ok,
+    false,
+  );
+  assert.equal(
+    (
+      await db.query('select public.migrate_student_photo($1,$2,$3) ok', [
+        photoRow.entry_key,
+        photoRow.value.photo,
+        ref,
+      ])
+    ).rows[0].ok,
+    true,
+  );
+  const changedPhoto = (
+    await db.query(
+      "select value from public.workspace_entries where section='students' and entry_key=$1",
+      [photoRow.entry_key],
+    )
+  ).rows[0].value;
+  assert.deepEqual(
+    changedPhoto,
+    { ...photoRow.value, photo: ref },
+    'photo migration preserves all student fields',
+  );
   console.log(
     'PASS: lossless migration; one-record writes; CAS; idempotency; array and map edits; profile revocation; realtime; private ACLs.',
   );

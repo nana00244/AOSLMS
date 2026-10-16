@@ -24,6 +24,13 @@ export interface Snapshot {
   state: State;
   revision: number;
 }
+export interface SaveAcknowledgement {
+  confirmed: true;
+  revision: number;
+  baseRevision: number;
+  changes: import('./backendAccess').Change[];
+}
+export type SaveResult = Snapshot | SaveAcknowledgement;
 export function loadWorkspace(): Promise<Snapshot>;
 export function loadWorkspace(
   knownRevision: number | undefined,
@@ -33,17 +40,19 @@ export function loadWorkspace(
 ): Promise<Snapshot | { unchanged: true; revision: number }> {
   return invokeBackend('workspace', { action: 'load', knownRevision });
 }
-export const commitPendingSave = (save: PendingSave): Promise<Snapshot> =>
+export const commitPendingSave = (save: PendingSave): Promise<SaveResult> =>
   invokeBackend('workspace', {
     action: 'save-pending',
+    response: 'ack',
     operationId: save.id,
     changes: save.changes,
     event: save.event,
     scoreRequest: save.scoreRequest,
   });
-export const commitPendingSaves = (saves: PendingSave[]): Promise<Snapshot> =>
+export const commitPendingSaves = (saves: PendingSave[]): Promise<SaveResult> =>
   invokeBackend('workspace', {
     action: 'save-batch',
+    response: 'ack',
     saves: saves.map((save) => ({
       operationId: save.id,
       changes: save.changes,

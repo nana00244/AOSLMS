@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
 import { flushSync } from 'react-dom';
+import { StudentPhoto } from '../components/StudentPhoto';
+import { preparePhotoUrls } from '../photoUrls';
 import { useSearchParams } from 'react-router-dom';
 import {
   Plus,
@@ -1454,6 +1456,9 @@ export function Reports() {
     return () => window.removeEventListener('afterprint', reset);
   }, []);
   async function printReports(all: boolean) {
+    try {
+      await preparePhotoUrls((all ? roster : student ? [student] : []).map((s) => s.photo));
+    } catch { window.alert('Photos could not be loaded. Check your connection and try printing again.'); return; }
     flushSync(() => setBatch(all));
     await document.fonts.ready;
     await Promise.all(
@@ -1727,8 +1732,8 @@ function ReportSheet({ data, student }: { data: State; student: Student }) {
         <div className="assessment-photo-container">
           <div className="assessment-photo-frame">
             {student.photo ? (
-              <img
-                src={student.photo}
+              <StudentPhoto
+                photo={student.photo}
                 alt={student.name}
                 style={{ width: '100%', height: '100%', objectFit: 'cover' }}
               />
