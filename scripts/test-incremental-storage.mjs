@@ -1,3 +1,4 @@
+import { workspaceRecordDelta } from '../src/workspaceDelta.ts';
 import { PGlite } from '@electric-sql/pglite';
 import { readFileSync } from 'node:fs';
 import assert from 'node:assert/strict';
@@ -56,6 +57,8 @@ try {
   await db.exec(sql('20261013173811_incremental_workspace_storage.sql'));
   await db.exec(sql('20261013222536_bounded_workspace_query_memory.sql'));
   await db.exec(sql('20261015084704_targeted_workspace_saves.sql'));
+  await db.exec(sql('20261016080249_workspace_record_deltas.sql'));
+  await db.exec(sql('20261016081241_workspace_json_snapshot.sql'));
   await db.exec('commit');
   const snapshot = async () => (await db.query('select * from public.school_workspace')).rows[0];
   assert.deepEqual((await snapshot()).document, original, 'migration must be lossless');
@@ -69,12 +72,16 @@ try {
   const replacement = structuredClone(original);
   replacement.grades.a = 9;
   const commit = async (state, revision, op = null) => {
-    const query = op
-      ? 'select public.commit_workspace_once($1,$2,$3,$4,$5) revision'
-      : 'select public.commit_workspace($1,$2,$3,$4) revision';
+    const delta = workspaceRecordDelta((await snapshot()).document, state);
     return (
-      await db.query(query, [revision, state, actor, 'Synthetic regression', ...(op ? [op] : [])])
-    ).rows[0].revision;
+      await db.query('select public.commit_workspace_delta($1,$2,$3,$4,$5) result', [
+        revision,
+        JSON.stringify(delta),
+        actor,
+        'Synthetic regression',
+        op,
+      ])
+    ).rows[0].result.revision;
   };
   const revision = await commit(replacement, 0, operation);
   const after = await tuples();
@@ -96,8 +103,9 @@ try {
     replacement,
     'stale save must leave records unchanged',
   );
-  const unchanged = (await db.query('select public.read_workspace_snapshot($1) result', [revision]))
-    .rows[0].result;
+  const unchanged = (
+    await db.query('select public.read_workspace_snapshot_json($1) result', [revision])
+  ).rows[0].result;
   assert.deepEqual(unchanged, { unchanged: true, revision });
   // Targeted commits retain per-operation receipts and never touch photograph tuples.
   const mapOperation = '00000000-0000-4000-8000-000000000003';
@@ -206,9 +214,11 @@ try {
       'workspace_structure(jsonb)',
       'assemble_workspace(jsonb)',
       'read_workspace_snapshot(bigint)',
+      'read_workspace_snapshot_json(bigint)',
       'commit_workspace(bigint,jsonb,uuid,text)',
       'commit_workspace_once(bigint,jsonb,uuid,text,uuid)',
       'commit_workspace_maps_once(bigint,jsonb,uuid,jsonb)',
+      'commit_workspace_delta(bigint,jsonb,uuid,text,uuid)',
     ]) {
       assert.equal(
         (
@@ -226,8 +236,8 @@ try {
     grant insert on public.audit_log to service_role;
     grant usage on sequence public.audit_log_id_seq to service_role;
     set role service_role;`);
-  const liveShape = (await db.query('select public.read_workspace_snapshot(null) result')).rows[0]
-    .result;
+  const liveShape = (await db.query('select public.read_workspace_snapshot_json(null) result'))
+    .rows[0].result;
   assert.deepEqual(liveShape.document, replacement, 'service role reconstructs all records');
   replacement.settings.name = 'Updated school';
   await commit(replacement, liveShape.revision);

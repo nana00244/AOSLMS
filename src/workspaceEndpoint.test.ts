@@ -19,11 +19,23 @@ const request = (body: unknown) =>
 function fixture() {
   const state = seed();
   const admin = state.users.find((u) => u.role === 'Administrator')!;
-  const profile = { id: admin.id, full_name: admin.name, email: admin.email,
-    role: admin.role, active: true, classes: [], class_allowed_subjects: {} };
-  const rpc = vi.fn().mockResolvedValue({ data: { document: state, revision: 9, profiles: [profile] } });
-  const logs = { select: vi.fn().mockReturnThis(), order: vi.fn().mockReturnThis(),
-    limit: vi.fn().mockResolvedValue({ data: [] }) };
+  const profile = {
+    id: admin.id,
+    full_name: admin.name,
+    email: admin.email,
+    role: admin.role,
+    active: true,
+    classes: [],
+    class_allowed_subjects: {},
+  };
+  const rpc = vi
+    .fn()
+    .mockResolvedValue({ data: { document: state, revision: 9, profiles: [profile] } });
+  const logs = {
+    select: vi.fn().mockReturnThis(),
+    order: vi.fn().mockReturnThis(),
+    limit: vi.fn().mockResolvedValue({ data: [] }),
+  };
   const from = vi.fn().mockReturnValue(logs);
   mocks.authenticate.mockResolvedValue({ client: { rpc, from }, profile });
   return { rpc, from };
@@ -33,7 +45,7 @@ test('initial load reads one consistent snapshot without rereading the large doc
   const response = await handler(request({ action: 'load' }));
   expect(response.status).toBe(200);
   expect((await response.json()).state.students.length).toBeGreaterThan(0);
-  expect(rpc.mock.calls).toEqual([['read_workspace_snapshot', { known_revision: null }]]);
+  expect(rpc.mock.calls).toEqual([['read_workspace_snapshot_json', { known_revision: null }]]);
   expect(from.mock.calls).toEqual([['audit_log']]);
 });
 test('unchanged polling does not load profiles, audit rows or the document again', async () => {
@@ -41,7 +53,7 @@ test('unchanged polling does not load profiles, audit rows or the document again
   rpc.mockResolvedValue({ data: { unchanged: true, revision: 9 } });
   const response = await handler(request({ action: 'load', knownRevision: 9 }));
   expect(await response.json()).toEqual({ unchanged: true, revision: 9 });
-  expect(rpc).toHaveBeenCalledWith('read_workspace_snapshot', { known_revision: 9 });
+  expect(rpc).toHaveBeenCalledWith('read_workspace_snapshot_json', { known_revision: 9 });
   expect(from).not.toHaveBeenCalled();
 });
 test('unknown actions are rejected before reading the workspace', async () => {
@@ -51,9 +63,10 @@ test('unknown actions are rejected before reading the workspace', async () => {
 });
 test('database timeout is a retryable service error with its database code', async () => {
   const { rpc } = fixture();
-  rpc.mockResolvedValue({ error: { code: '57014', message: 'canceling statement due to statement timeout' } });
+  rpc.mockResolvedValue({
+    error: { code: '57014', message: 'canceling statement due to statement timeout' },
+  });
   const response = await handler(request({ action: 'load' }));
   expect(response.status).toBe(503);
   expect((await response.json()).code).toBe('57014');
 });
-

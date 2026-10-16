@@ -1,3 +1,5 @@
+import { workspaceRecordDelta } from '../../../src/workspaceDelta.ts';
+import { createSnapshotCache } from '../../../src/workspaceSnapshotCache.ts';
 import { authenticate, json } from '../_shared/http.ts';
 import { applyChanges, projectWorkspace } from '../../../src/backendAccess.ts';
 import { workspaceSchema } from '../../../src/validation.ts';
@@ -18,6 +20,8 @@ export const toUser = (p: any) => ({
   classAllowedSubjects: p.class_allowed_subjects,
   ...(p.student_id ? { studentId: p.student_id } : {}),
 });
+
+const snapshotCache = createSnapshotCache();
 
 Deno.serve(async (request) => {
   if (request.method === 'OPTIONS') return json({});
@@ -40,14 +44,8 @@ Deno.serve(async (request) => {
     const requestWasSave = ['save-batch', 'save-pending', 'save', 'import-scores'].includes(
       input.action,
     );
-    const readSnapshot = async (knownRevision: number | null = null) => {
-      const { data, error } = await client.rpc('read_workspace_snapshot', {
-        known_revision: knownRevision,
-      });
-      if (error) throw error;
-      if (!data) throw new Error('School workspace is unavailable');
-      return data;
-    };
+    const readSnapshot = (knownRevision: number | null = null) =>
+      snapshotCache.read(client, knownRevision);
     const stored = await readSnapshot(
       input.action === 'load' &&
         Number.isSafeInteger(input.knownRevision) &&
@@ -84,7 +82,21 @@ Deno.serve(async (request) => {
         revision: stored.revision,
       });
     }
+    const initialState = state;
     let savedSnapshot: any;
+    const commitDelta = async (event: string, operationId: string | null = null) => {
+      const delta = workspaceRecordDelta(initialState, state);
+      const committed = await client.rpc('commit_workspace_delta', {
+        expected_revision: stored.revision,
+        delta,
+        actor: profile.id,
+        event,
+        operation_id: operationId,
+      });
+      if (committed.error) throw committed.error;
+      if (!committed.data.alreadyApplied && !delta.profiles && !delta.studentIds)
+        savedSnapshot = { ...stored, document: state, revision: committed.data.revision };
+    };
     if (input.action === 'save-batch' || (input.action === 'save-pending' && isFastSave(input))) {
       const saves = input.action === 'save-batch' ? input.saves : [input];
       if (
@@ -176,14 +188,10 @@ Deno.serve(async (request) => {
           ? applyScoreImport(state, user, input.scoreRequest)
           : applyChanges(state, user, changes);
         state = workspaceSchema.parse(state);
-        const committed = await client.rpc('commit_workspace_once', {
-          expected_revision: stored.revision,
-          replacement: state,
-          actor: profile.id,
-          event: typeof input.event === 'string' ? input.event : 'School records updated',
-          operation_id: input.operationId,
-        });
-        if (committed.error) throw committed.error;
+        await commitDelta(
+          typeof input.event === 'string' ? input.event : 'School records updated',
+          input.operationId,
+        );
       }
       input.action = 'load';
     }
@@ -207,21 +215,17 @@ Deno.serve(async (request) => {
           ? applyScoreImport(state, user, input.request)
           : applyChanges(state, user, input.changes);
       state = workspaceSchema.parse(state);
-      const { error: saveError } = await client.rpc('commit_workspace', {
-        expected_revision: stored.revision,
-        replacement: state,
-        actor: profile.id,
-        event:
-          input.action === 'import-scores'
-            ? `Assessment upload: ${input.request.classId}, ${input.request.subject}, ${input.request.sheet.category}, term ${input.request.sheet.term}`
-            : typeof input.event === 'string'
-              ? input.event
-              : 'School records updated',
-      });
-      if (saveError) throw saveError;
+      await commitDelta(
+        input.action === 'import-scores'
+          ? `Assessment upload: ${input.request.classId}, ${input.request.subject}, ${input.request.sheet.category}, term ${input.request.sheet.term}`
+          : typeof input.event === 'string'
+            ? input.event
+            : 'School records updated',
+      );
     } else if (input.action !== 'load') return json({ error: 'Unknown action' }, 400);
     // Loads reuse the snapshot already read. Only writes need a post-commit read.
     const current = savedSnapshot || (requestWasSave ? await readSnapshot() : stored);
+    snapshotCache.remember(current);
     const currentProfiles = current.profiles;
     const currentUser = currentProfiles.find((p: any) => p.id === profile.id);
     if (!currentUser?.active) return json({ error: 'Account is inactive' }, 403);

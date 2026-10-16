@@ -27,13 +27,14 @@ function setup(completed: string[] = []) {
   };
   const rpc = vi.fn(async (name: string) => ({
     data:
-      name === 'read_workspace_snapshot'
+      name === 'read_workspace_snapshot_json'
         ? { document: state, profiles: [profile], revision: 4 }
         : { revision: 5, alreadyApplied: false },
   }));
   const from = vi.fn(() => ({
     select: vi.fn().mockReturnThis(),
     eq: vi.fn().mockReturnThis(),
+    maybeSingle: vi.fn().mockResolvedValue({ data: null }),
     in: vi.fn().mockResolvedValue({ data: completed.map((operation_id) => ({ operation_id })) }),
     order: vi.fn().mockReturnThis(),
     limit: vi.fn().mockResolvedValue({ data: [] }),
@@ -63,7 +64,7 @@ test('sequential same-record edits commit once with both receipt IDs and one sna
   expect(response.status).toBe(200);
   expect((await response.json()).state.remarks[key]).toBe('Second remark');
   expect(rpc.mock.calls.map((c) => c[0])).toEqual([
-    'read_workspace_snapshot',
+    'read_workspace_snapshot_json',
     'commit_workspace_maps_once',
   ]);
   const payload = (rpc.mock.calls as any)[1][1];
@@ -111,8 +112,37 @@ test('recovery preview checks authenticated ownership and never invokes a write 
   const response = await handler(make(entries));
   expect(response.status).toBe(200);
   expect((await response.json()).rows[0].status).toBe('confirmed');
-  expect(rpc.mock.calls.every((call) => call[0] === 'read_workspace_snapshot')).toBe(true);
+  expect(rpc.mock.calls.every((call) => call[0] === 'read_workspace_snapshot_json')).toBe(true);
   const rejected = await handler(make([{ ...entries[0], owner: 'someone-else' }]));
   expect(rejected.status).toBe(400);
   expect((await rejected.json()).error).toContain('another account');
+});
+test('photo saves use record deltas and reuse the committed snapshot', async () => {
+  const { rpc, state } = setup();
+  const student = state.students[0];
+  const response = await handler(
+    new Request('http://localhost/workspace', {
+      method: 'POST',
+      body: JSON.stringify({
+        action: 'save-pending',
+        operationId: op1,
+        changes: [
+          {
+            collection: 'students',
+            id: student.id,
+            before: student,
+            after: { ...student, photo: 'data:image/png;base64,aGVsbG8=' },
+          },
+        ],
+      }),
+    }),
+  );
+  expect(response.status).toBe(200);
+  expect(rpc.mock.calls.map((c) => c[0])).toEqual([
+    'read_workspace_snapshot_json',
+    'commit_workspace_delta',
+  ]);
+  const payload = (rpc.mock.calls as any)[1][1];
+  expect(payload.delta.upserts.filter((row: any) => row.section === 'students')).toHaveLength(1);
+  expect(payload).not.toHaveProperty('replacement');
 });
