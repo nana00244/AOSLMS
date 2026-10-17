@@ -1,4 +1,9 @@
 import { z } from 'zod';
+import { attitudeError } from './reportAttitudes.ts';
+export const attitudesSchema = z.unknown().superRefine((value, ctx) => {
+  const message = attitudeError(value);
+  if (message) ctx.addIssue({ code: 'custom', message });
+});
 const text = z.string().max(20000);
 const id = z.string().min(1).max(150);
 const number = z.number().finite().nonnegative();
@@ -87,7 +92,10 @@ export const workspaceSchema = z
       z.object({ sba: number.max(50), exam: number.max(50), remark: text }),
     ),
     remarks: z.record(z.string(), text),
-    conduct: z.record(z.string(), z.record(z.string(), text)),
+    conduct: z.record(
+      z.string(),
+      z.object({ attitudes: attitudesSchema.optional() }).catchall(text),
+    ),
     verified: z.array(text),
     resources: z.array(
       z.object({

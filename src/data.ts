@@ -1,3 +1,4 @@
+import type { ReportConduct } from './reportAttitudes.ts';
 export type Role = 'Administrator' | 'Teacher' | 'Student' | 'Accountant';
 export type AttendanceStatus = 'Present' | 'Late' | 'Absent' | 'Excused';
 export interface Student {
@@ -191,7 +192,7 @@ export interface State {
   attendance: Record<string, AttendanceStatus>;
   grades: Record<string, Grade>;
   remarks: Record<string, string>;
-  conduct: Record<string, Record<string, string>>;
+  conduct: Record<string, ReportConduct>;
   verified: string[];
   resources: Resource[];
   periods: Period[];

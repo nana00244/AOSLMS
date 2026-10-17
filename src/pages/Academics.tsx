@@ -1,3 +1,4 @@
+import { attitudeItems, attitudeError, readAttitudes, type Attitudes } from '../reportAttitudes';
 import { useEffect, useState } from 'react';
 import { flushSync } from 'react-dom';
 import { StudentPhoto } from '../components/StudentPhoto';
@@ -1458,7 +1459,10 @@ export function Reports() {
   async function printReports(all: boolean) {
     try {
       await preparePhotoUrls((all ? roster : student ? [student] : []).map((s) => s.photo));
-    } catch { window.alert('Photos could not be loaded. Check your connection and try printing again.'); return; }
+    } catch {
+      window.alert('Photos could not be loaded. Check your connection and try printing again.');
+      return;
+    }
     flushSync(() => setBatch(all));
     await document.fonts.ready;
     await Promise.all(
@@ -1641,19 +1645,11 @@ function ReportSheet({ data, student }: { data: State; student: Student }) {
   const overallGrade = gradeLetter(overallPercent);
 
   const conductData = data.conduct[rk] || {};
-  const traits = [
-    { label: 'Conduct:', value: conductData['Conduct'] || '—' },
-    { label: 'Work Ethic:', value: conductData['Work Ethic'] || '—' },
-    { label: 'Neatness:', value: conductData['Neatness'] || '—' },
-    { label: 'Sociability:', value: conductData['Sociability'] || '—' },
-    { label: 'Debate & Oratory:', value: conductData['Debate & Oratory'] || '—' },
-    { label: 'Science Expo:', value: conductData['Science Expo'] || '—' },
-    { label: 'Mental Drill:', value: conductData['Mental Drill'] || '—' },
-    {
-      label: 'Reading Comprehension:',
-      value: conductData['Reading Comprehension'] || '—',
-    },
-  ];
+  const savedAttitudes = readAttitudes(conductData);
+  const traits = attitudeItems.map(({ key, label }) => ({
+    label: `${label}:`,
+    value: savedAttitudes[key] || '-',
+  }));
 
   const customAttended =
     conductData['attendanceAttended'] !== undefined && conductData['attendanceAttended'] !== ''
@@ -1956,17 +1952,7 @@ function ReportCardEditor({
   // Remarks
   const [teacherRemark, setTeacherRemark] = useState(data.remarks[rk] || '');
   // Attitudes / Traits
-  const traitKeys = [
-    'Conduct',
-    'Work Ethic',
-    'Neatness',
-    'Sociability',
-    'Debate & Oratory',
-    'Science Expo',
-    'Mental Drill',
-    'Reading Comprehension',
-  ];
-  const [conduct, setConduct] = useState<Record<string, string>>({ ...conductData });
+  const [attitudes, setAttitudes] = useState<Attitudes>(() => readAttitudes(conductData));
 
   // Calculation summaries
   const totalSBA = grades.reduce((sum, g) => sum + (Number(g.sba) || 0), 0);
@@ -2030,87 +2016,102 @@ function ReportCardEditor({
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
+    const error = attitudeError(attitudes);
+    if (error) {
+      notify(error);
+      return;
+    }
+    const previousAttitudes = readAttitudes(conductData);
+    const attitudeChanges = attitudeItems
+      .filter(({ key }) => (previousAttitudes[key] || '') !== (attitudes[key] || ''))
+      .map(
+        ({ key, label }) => `${label}: ${previousAttitudes[key] || '-'} → ${attitudes[key] || '-'}`,
+      );
     if (
-      !(await update((d) => {
-        // 1. Update student data
-        const updatedStudents = d.students.map((s) =>
-          s.id === student.id
-            ? {
-                ...s,
-                name: name.trim() || s.name,
-                classId: classId || s.classId,
-                photo: photo || undefined,
-              }
-            : s,
-        );
-
-        // 2. Update settings if admin modified academic dates/year/term
-        const updatedSettings = {
-          ...d.settings,
-          year: year || d.settings.year,
-          term: d.settings.term,
-          vacation,
-          reopening,
-        };
-
-        // 3. Update grades for this student and term
-        const updatedGrades = { ...d.grades };
-        // Remove any existing grades for this student & term
-        for (const key of Object.keys(updatedGrades)) {
-          if (
-            key.startsWith(`${student.id}|${term}|`) &&
-            (role === 'Administrator' ||
-              grades.some((g) => key === gradeKey(student.id, term, g.subject)))
-          ) {
-            delete updatedGrades[key];
-          }
-        }
-        for (const g of grades) {
-          if (g.subject.trim() && (g.sba !== '' || g.exam !== '' || g.remark.trim())) {
-            updatedGrades[gradeKey(student.id, Number(term), g.subject.trim())] = {
-              sba: Math.min(50, Math.max(0, Number(g.sba) || 0)),
-              exam: Math.min(50, Math.max(0, Number(g.exam) || 0)),
-              remark: g.remark.trim(),
-            };
-          }
-        }
-
-        // 4. Update remarks
-        const updatedRemarks = {
-          ...d.remarks,
-          [`${student.id}|${term}`]: teacherRemark,
-        };
-
-        // 5. Update conduct & traits & custom overrides
-        const updatedConduct = {
-          ...d.conduct,
-          [`${student.id}|${term}`]: {
-            ...conduct,
-            promotedTo,
-            attendanceAttended: attended,
-            attendanceTotal: totalSessions,
-            rollOverride: rollOverride.trim(),
-            positionOverride: positionOverride.trim(),
-          },
-        };
-
-        return {
-          ...d,
-          students: role === 'Administrator' ? updatedStudents : d.students,
-          settings:
-            role === 'Administrator'
+      !(await update(
+        (d) => {
+          // 1. Update student data
+          const updatedStudents = d.students.map((s) =>
+            s.id === student.id
               ? {
-                  ...updatedSettings,
-                  crest: schoolLogo,
-                  reportStamps,
+                  ...s,
+                  name: name.trim() || s.name,
+                  classId: classId || s.classId,
+                  photo: photo || undefined,
                 }
-              : d.settings,
-          grades: updatedGrades,
-          remarks: updatedRemarks,
-          conduct: updatedConduct,
-          verified: d.verified.filter((k) => k !== `${student.id}|${term}`),
-        };
-      }, `Report card updated for ${student.name}`))
+              : s,
+          );
+
+          // 2. Update settings if admin modified academic dates/year/term
+          const updatedSettings = {
+            ...d.settings,
+            year: year || d.settings.year,
+            term: d.settings.term,
+            vacation,
+            reopening,
+          };
+
+          // 3. Update grades for this student and term
+          const updatedGrades = { ...d.grades };
+          // Remove any existing grades for this student & term
+          for (const key of Object.keys(updatedGrades)) {
+            if (
+              key.startsWith(`${student.id}|${term}|`) &&
+              (role === 'Administrator' ||
+                grades.some((g) => key === gradeKey(student.id, term, g.subject)))
+            ) {
+              delete updatedGrades[key];
+            }
+          }
+          for (const g of grades) {
+            if (g.subject.trim() && (g.sba !== '' || g.exam !== '' || g.remark.trim())) {
+              updatedGrades[gradeKey(student.id, Number(term), g.subject.trim())] = {
+                sba: Math.min(50, Math.max(0, Number(g.sba) || 0)),
+                exam: Math.min(50, Math.max(0, Number(g.exam) || 0)),
+                remark: g.remark.trim(),
+              };
+            }
+          }
+
+          // 4. Update remarks
+          const updatedRemarks = {
+            ...d.remarks,
+            [`${student.id}|${term}`]: teacherRemark,
+          };
+
+          // 5. Update conduct & traits & custom overrides
+          const updatedConduct = {
+            ...d.conduct,
+            [`${student.id}|${term}`]: {
+              ...conductData,
+              attitudes,
+              promotedTo,
+              attendanceAttended: attended,
+              attendanceTotal: totalSessions,
+              rollOverride: rollOverride.trim(),
+              positionOverride: positionOverride.trim(),
+            },
+          };
+
+          return {
+            ...d,
+            students: role === 'Administrator' ? updatedStudents : d.students,
+            settings:
+              role === 'Administrator'
+                ? {
+                    ...updatedSettings,
+                    crest: schoolLogo || undefined,
+                    reportStamps,
+                  }
+                : d.settings,
+            grades: updatedGrades,
+            remarks: updatedRemarks,
+            conduct: updatedConduct,
+            verified: d.verified.filter((k) => k !== `${student.id}|${term}`),
+          };
+        },
+        `Report card updated for ${student.name}${attitudeChanges.length ? `; Attitudes: ${attitudeChanges.join('; ')}` : ''}`,
+      ))
     )
       return;
 
@@ -2499,34 +2500,42 @@ function ReportCardEditor({
         </fieldset>
 
         {/* Section 4: Attitudes & Personal Development */}
-        <fieldset className="editor-fieldset" style={{ marginTop: 14 }}>
-          <legend>Attitudes & Personal Development</legend>
-          <div className="form-grid">
-            {traitKeys.map((k) => (
-              <Field key={k} label={k}>
-                <input
-                  value={conduct[k] ?? ''}
-                  placeholder={
-                    k === 'Conduct'
-                      ? 'EXEMPLARY'
-                      : k === 'Work Ethic'
-                        ? 'COMMENDABLE'
-                        : k === 'Neatness'
-                          ? 'NEAT & ORDERLY'
-                          : k === 'Sociability'
-                            ? 'RESPECTFUL'
-                            : k === 'Debate & Oratory'
-                              ? 'VERY ACTIVE'
-                              : k === 'Science Expo'
-                                ? 'INNOVATIVE'
-                                : k === 'Mental Drill'
-                                  ? 'QUICK & SHARP'
-                                  : 'FLUENT & EXPRESSIVE'
-                  }
-                  onChange={(e) => setConduct({ ...conduct, [k]: e.target.value })}
-                />
-              </Field>
-            ))}
+        <fieldset className="editor-fieldset attitude-editor" style={{ marginTop: 14 }}>
+          <legend>ATTITUDES &amp; PERSONAL DEVELOPMENT</legend>
+          <div className="attitude-editor-grid">
+            {attitudeItems.map(({ key, label, options }) => {
+              const value = attitudes[key] || '';
+              const obsolete = !!value && !(options as readonly string[]).includes(value);
+              const id = `report-attitude-${key}`;
+              return (
+                <div className="field" key={key}>
+                  <label htmlFor={id}>{label}</label>
+                  <select
+                    id={id}
+                    value={value}
+                    aria-invalid={obsolete || undefined}
+                    aria-describedby={obsolete ? `${id}-hint` : undefined}
+                    onChange={(e) => setAttitudes({ ...attitudes, [key]: e.target.value })}
+                  >
+                    <option value="" disabled>
+                      Select...
+                    </option>
+                    {obsolete && <option value={value}>{value} (re-pick required)</option>}
+                    {options.map((option) => (
+                      <option key={option} value={option}>
+                        {option}
+                      </option>
+                    ))}
+                    <option value="">Leave blank</option>
+                  </select>
+                  {obsolete && (
+                    <small id={`${id}-hint`}>
+                      Previously saved value. Choose a listed option or leave blank before saving.
+                    </small>
+                  )}
+                </div>
+              );
+            })}
           </div>
         </fieldset>
 

@@ -4689,10 +4689,42 @@ td .person {
 
 .assessment-attitudes-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   row-gap: 5px;
   column-gap: 10px;
   font-size: 9.5px;
+}
+
+.assessment-attitude-item {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.assessment-attitude-item strong {
+  text-transform: uppercase;
+}
+.attitude-editor-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+.attitude-editor-grid .field {
+  min-width: 0;
+}
+.attitude-editor-grid select {
+  width: 100%;
+  min-width: 0;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+@media (max-width: 1000px) {
+  .attitude-editor-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 600px) {
+  .attitude-editor-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
 }
 
 .assessment-attitude-item span {
