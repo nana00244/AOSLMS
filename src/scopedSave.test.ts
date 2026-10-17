@@ -2,6 +2,26 @@ import { expect, test, vi } from 'vitest';
 import { scopedSave } from '../supabase/functions/workspace/scopedSave';
 import { seed } from './data';
 const operationId = '00000000-0000-4000-8000-000000000001';
+test('scoped save validates attitudes and preserves blanks in compact acknowledgements', async () => {
+  for (const [attitudes, valid] of [
+    [{ conduct: '', neatness: 'NEAT & ORDERLY' }, true],
+    [{ unknown: 'EXEMPLARY' }, false],
+    [{ conduct: 'INVALID' }, false],
+  ] as const) {
+    const { client, profile, state, id, input, rpc } = setup();
+    const request = {
+      ...input,
+      changes: [{ collection: 'conduct', id, before: state.conduct[id], after: { attitudes } }],
+    };
+    if (valid) {
+      const result = await scopedSave(client, profile, request);
+      expect(result.changes[0].after.attitudes).toEqual(attitudes);
+    } else {
+      await expect(scopedSave(client, profile, request)).rejects.toThrow();
+      expect(rpc.mock.calls.some(([name]) => name.startsWith('commit_'))).toBe(false);
+    }
+  }
+});
 function setup(role = 'Administrator', completed = false) {
   const state = seed();
   const profile = {

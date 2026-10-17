@@ -1,5 +1,6 @@
 import { beforeAll, afterAll, beforeEach, expect, test, vi } from 'vitest';
 import { seed } from './data';
+import { attitudeItems } from './reportAttitudes';
 const mocks = vi.hoisted(() => ({ authenticate: vi.fn() }));
 vi.mock('../supabase/functions/_shared/http.ts', () => ({
   authenticate: mocks.authenticate,
@@ -15,6 +16,55 @@ afterAll(() => vi.unstubAllGlobals());
 beforeEach(() => vi.clearAllMocks());
 const op1 = '00000000-0000-4000-8000-000000000001';
 const op2 = '00000000-0000-4000-8000-000000000002';
+
+test('report attitudes and remarks commit together and return all eight choices', async () => {
+  const { rpc, state, key } = setup();
+  const attitudes = Object.fromEntries(attitudeItems.map(({ key, options }) => [key, options[0]]));
+  const response = await handler(
+    new Request('http://localhost/workspace', {
+      method: 'POST',
+      body: JSON.stringify({
+        action: 'save-pending',
+        operationId: op1,
+        changes: [
+          { collection: 'conduct', id: key, before: state.conduct[key], after: { attitudes } },
+          { collection: 'remarks', id: key, before: state.remarks[key], after: 'Making progress' },
+        ],
+      }),
+    }),
+  );
+  expect(response.status).toBe(200);
+  const saved = (await response.json()).state;
+  expect(saved.conduct[key].attitudes).toEqual(attitudes);
+  expect(saved.remarks[key]).toBe('Making progress');
+  const commits = rpc.mock.calls.filter(([name]) => name.startsWith('commit_'));
+  expect(commits).toHaveLength(1);
+  expect((commits as any)[0][1].changes.map((c: any) => c.collection).sort()).toEqual([
+    'conduct',
+    'remarks',
+  ]);
+});
+
+test.each([{ conduct: 'INVALID' }, { unknown: 'EXEMPLARY' }, { conduct: 'FLUENT' }])(
+  'server rejects invalid attitudes without committing: %j',
+  async (attitudes) => {
+    const { rpc, state, key } = setup();
+    const response = await handler(
+      new Request('http://localhost/workspace', {
+        method: 'POST',
+        body: JSON.stringify({
+          action: 'save-pending',
+          operationId: op1,
+          changes: [
+            { collection: 'conduct', id: key, before: state.conduct[key], after: { attitudes } },
+          ],
+        }),
+      }),
+    );
+    expect(response.status).toBeGreaterThanOrEqual(400);
+    expect(rpc.mock.calls.some(([name]) => name.startsWith('commit_'))).toBe(false);
+  },
+);
 function setup(completed: string[] = []) {
   const state = seed();
   const profile = {
@@ -39,7 +89,7 @@ function setup(completed: string[] = []) {
     order: vi.fn().mockReturnThis(),
     limit: vi.fn().mockResolvedValue({ data: [] }),
   }));
-  const storage = { from: vi.fn(() => ({ upload: vi.fn().mockResolvedValue({error:null}) })) };
+  const storage = { from: vi.fn(() => ({ upload: vi.fn().mockResolvedValue({ error: null }) })) };
   mocks.authenticate.mockResolvedValue({ client: { rpc, from, storage }, profile });
   const key = `${state.students[0].id}|1`;
   const change = (before: unknown, after: string) => ({

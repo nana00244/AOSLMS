@@ -66,6 +66,7 @@ try {
     grant select on storage.objects to service_role;`);
   await db.exec(sql('20261016213411_private_student_photos.sql'));
   await db.exec(sql('20261016213625_scoped_workspace_save_context.sql'));
+  await db.exec(sql('20261017054715_report_card_attitudes.sql'));
   await db.exec('commit');
   const snapshot = async () => (await db.query('select * from public.school_workspace')).rows[0];
   assert.deepEqual((await snapshot()).document, original, 'migration must be lossless');
@@ -321,6 +322,59 @@ try {
     changedPhoto,
     { ...photoRow.value, photo: ref },
     'photo migration preserves all student fields',
+  );
+  // Exercise the new JSON member using real PostgreSQL, without any live records.
+  await db.query(
+    "insert into public.workspace_entries(section,entry_key,ordinal,value) values('conduct','test|1',0,$1)",
+    [{ attendanceTotal: '60' }],
+  );
+  await db.query(
+    "update public.workspace_entries set value=$1 where section='conduct' and entry_key='test|1'",
+    [{ attitudes: null, attendanceTotal: '60' }],
+  );
+  const { attitudeItems } = await import('../src/reportAttitudes.ts');
+  const attitudes = Object.fromEntries(attitudeItems.map(({ key, options }) => [key, options[0]]));
+  await db.query(
+    "update public.workspace_entries set value=$1 where section='conduct' and entry_key='test|1'",
+    [{ attitudes, attendanceTotal: '60' }],
+  );
+  assert.deepEqual(
+    (
+      await db.query(
+        "select value->'attitudes' attitudes from public.workspace_entries where section='conduct' and entry_key='test|1'",
+      )
+    ).rows[0].attitudes,
+    attitudes,
+  );
+  await db.exec('begin');
+  await db.exec(
+    "update public.workspace_entries set value='\"transaction sentinel\"' where section='grades'",
+  );
+  await assert.rejects(
+    db.query(
+      "update public.workspace_entries set value=$1 where section='conduct' and entry_key='test|1'",
+      [{ attitudes: [] }],
+    ),
+    /report_attitudes_object/,
+  );
+  await db.exec('rollback');
+  assert.equal(
+    (
+      await db.query(
+        "select count(*)::int n from public.workspace_entries where section='grades' and value='\"transaction sentinel\"'",
+      )
+    ).rows[0].n,
+    0,
+  );
+  await db.exec('alter table public.workspace_entries drop constraint report_attitudes_object');
+  assert.deepEqual(
+    (
+      await db.query(
+        "select value->'attitudes' attitudes from public.workspace_entries where section='conduct' and entry_key='test|1'",
+      )
+    ).rows[0].attitudes,
+    attitudes,
+    'undo keeps saved data',
   );
   console.log(
     'PASS: lossless migration; one-record writes; CAS; idempotency; array and map edits; profile revocation; realtime; private ACLs.',
