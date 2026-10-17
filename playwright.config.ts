@@ -4,7 +4,12 @@ export default defineConfig({
   testDir: './tests',
   testMatch: process.env.AOS_CLOUD_TESTS
     ? '**/cloud.spec.ts'
-    : ['**/ui.spec.ts', '**/conflict.spec.ts', '**/reportAttitudes.spec.ts'],
+    : [
+        '**/ui.spec.ts',
+        '**/conflict.spec.ts',
+        '**/reportAttitudes.spec.ts',
+        '**/attendanceWeekdays.spec.ts',
+      ],
   fullyParallel: true,
   workers: process.env.AOS_CLOUD_TESTS ? 1 : 2,
   use: {

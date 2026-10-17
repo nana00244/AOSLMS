@@ -32,7 +32,7 @@ export function AttendanceImport({
       <p>
         Upload a CSV monthly register with a class/month heading, Student Name and daily columns
         such as Sep 08. Unmatched or ambiguous students are skipped. Only recognised daily marks are
-        imported.
+        imported. Saturday and Sunday marks are skipped.
       </p>
       <Field label="Attendance CSV file">
         <input
@@ -91,8 +91,8 @@ export function AttendanceImport({
           {!classId && <p>Select a class to resolve the missing or ambiguous class match.</p>}
           <p>
             {matched} matched students · {matches.length - matched} skipped rows · {changed.length}{' '}
-            attendance updates ({replaced} replace existing marks). {file.ignoredCells} unrecognised
-            cells skipped; blanks leave existing marks unchanged.
+            attendance updates ({replaced} replace existing marks). {file.ignoredCells} weekend or
+            unrecognised cells skipped; blanks leave existing marks unchanged.
           </p>
           <p>
             Check the class, month, term and matches below before importing. Students missing from

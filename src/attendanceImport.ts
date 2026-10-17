@@ -1,4 +1,5 @@
 import Papa from 'papaparse';
+import { isWeekday } from './schoolDays';
 import type { AttendanceStatus, Student } from './data';
 
 export const normalize = (s: string) =>
@@ -116,7 +117,8 @@ export function parseAttendanceFile(text: string, filename: string): AttendanceF
       const marks: Record<string, AttendanceStatus> = {};
       for (const { column, date } of dates) {
         const value = row[column]?.trim().toLowerCase();
-        if (value && Object.hasOwn(statuses, value)) marks[date] = statuses[value];
+        if (value && isWeekday(date) && Object.hasOwn(statuses, value))
+          marks[date] = statuses[value];
         else if (value) ignoredCells++;
       }
       return { name: row[nameColumn].trim(), admission: row[admissionColumn]?.trim() || '', marks };
@@ -197,10 +199,9 @@ export function attendanceImportEntries(
   return Object.fromEntries(
     matchAttendanceStudents(file, students, classId).flatMap((m) =>
       m.student
-        ? Object.entries(m.row.marks).map(([date, status]) => [
-            `${date}|${term}|${m.student!.id}`,
-            status,
-          ])
+        ? Object.entries(m.row.marks)
+            .filter(([date]) => isWeekday(date))
+            .map(([date, status]) => [`${date}|${term}|${m.student!.id}`, status])
         : [],
     ),
   ) as Record<string, AttendanceStatus>;

@@ -1,4 +1,5 @@
 import { attitudeItems, attitudeError, readAttitudes, type Attitudes } from '../reportAttitudes';
+import { isSchoolAttendanceKey } from '../schoolDays';
 import { useEffect, useState } from 'react';
 import { flushSync } from 'react-dom';
 import { StudentPhoto } from '../components/StudentPhoto';
@@ -1631,8 +1632,8 @@ function ReportSheet({ data, student }: { data: State; student: Student }) {
     avg,
     peers.map((s) => average(data, s)),
   );
-  const marks = Object.entries(data.attendance).filter(([k]) =>
-    k.endsWith(`|${data.settings.term}|${student.id}`),
+  const marks = Object.entries(data.attendance).filter(
+    ([k]) => isSchoolAttendanceKey(k) && k.endsWith(`|${data.settings.term}|${student.id}`),
   );
   const attended = marks.filter(([, v]) => v === 'Present' || v === 'Late').length;
   const rk = `${student.id}|${data.settings.term}`;
@@ -1911,8 +1912,8 @@ function ReportCardEditor({
   const [positionOverride, setPositionOverride] = useState(conductData['positionOverride'] || '');
 
   // Attendance & Promotion
-  const marks = Object.entries(data.attendance).filter(([k]) =>
-    k.endsWith(`|${reportTerm}|${student.id}`),
+  const marks = Object.entries(data.attendance).filter(
+    ([k]) => isSchoolAttendanceKey(k) && k.endsWith(`|${reportTerm}|${student.id}`),
   );
   const defaultAttended = marks.filter(([, v]) => v === 'Present' || v === 'Late').length;
   const defaultTotalSessions = marks.length;

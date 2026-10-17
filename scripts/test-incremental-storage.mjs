@@ -376,6 +376,67 @@ try {
     attitudes,
     'undo keeps saved data',
   );
+  await db.query(
+    "insert into public.workspace_entries(section,entry_key,ordinal,value) values('attendance','o:2026-10-16|1|weekday-test',0,$1),('attendance','o:2026-10-17|1|weekday-test',0,$1),('conduct','o:weekday-test|1',0,$2)",
+    [
+      JSON.stringify('Present'),
+      {
+        attendanceTotal: '2',
+        attendanceAttended: '2',
+        attitudes: { conduct: 'EXEMPLARY' },
+        promotedTo: 'BS 2',
+      },
+    ],
+  );
+  await db.exec(sql('20261017144856_weekday_attendance.sql'));
+  assert.equal(
+    (
+      await db.query(
+        "select count(*)::int n from public.workspace_entries where section='attendance' and entry_key='o:2026-10-17|1|weekday-test'",
+      )
+    ).rows[0].n,
+    0,
+  );
+  assert.equal(
+    (
+      await db.query(
+        "select count(*)::int n from public.workspace_entries where section='attendance' and entry_key='o:2026-10-16|1|weekday-test'",
+      )
+    ).rows[0].n,
+    1,
+  );
+  assert.deepEqual(
+    (
+      await db.query(
+        "select value from public.workspace_entries where section='conduct' and entry_key='o:weekday-test|1'",
+      )
+    ).rows[0].value,
+    { attitudes: { conduct: 'EXEMPLARY' }, promotedTo: 'BS 2' },
+  );
+  assert.equal(
+    (await db.query('select count(*)::int n from private.weekend_attendance_recovery')).rows[0].n,
+    2,
+  );
+  await assert.rejects(
+    db.query(
+      "insert into public.workspace_entries(section,entry_key,ordinal,value) values('attendance','o:2026-10-18|1|weekday-test',0,$1)",
+      [JSON.stringify('Present')],
+    ),
+    /attendance_weekdays_only/,
+  );
+  await assert.rejects(
+    db.query(
+      "insert into public.workspace_entries(section,entry_key,ordinal,value) values('attendance','o:2026-02-30|1|weekday-test',0,$1)",
+      [JSON.stringify('Present')],
+    ),
+    /attendance_weekdays_only/,
+  );
+  await db.exec('set role service_role');
+  await db.query(
+    "insert into public.workspace_entries(section,entry_key,ordinal,value) values('attendance','o:2026-10-19|1|weekday-test',0,$1)",
+    [JSON.stringify('Present')],
+  );
+  await db.exec('reset role');
   console.log(
     'PASS: lossless migration; one-record writes; CAS; idempotency; array and map edits; profile revocation; realtime; private ACLs.',
   );

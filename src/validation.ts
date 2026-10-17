@@ -1,4 +1,5 @@
 import { z } from 'zod';
+import { isSchoolAttendanceKey } from './schoolDays.ts';
 import { attitudeError } from './reportAttitudes.ts';
 export const attitudesSchema = z.unknown().superRefine((value, ctx) => {
   const message = attitudeError(value);
@@ -86,7 +87,15 @@ export const workspaceSchema = z
         isLate: z.boolean().optional(),
       }),
     ),
-    attendance: z.record(z.string(), z.enum(['Present', 'Late', 'Absent', 'Excused'])),
+    attendance: z.record(
+      z
+        .string()
+        .refine(
+          isSchoolAttendanceKey,
+          'Attendance can only be recorded on valid Monday–Friday dates.',
+        ),
+      z.enum(['Present', 'Late', 'Absent', 'Excused']),
+    ),
     grades: z.record(
       z.string(),
       z.object({ sba: number.max(50), exam: number.max(50), remark: text }),

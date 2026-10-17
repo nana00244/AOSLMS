@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { isWeekday, schoolDaysInMonth, previousSchoolDay } from '../schoolDays';
 import { AttendanceImport } from '../components/AttendanceImport';
 import { CheckCheck, Save, Users, UserCheck, UserX, Clock3, Check, Printer } from 'lucide-react';
 import { useStore } from '../store';
@@ -21,7 +22,7 @@ export function Attendance() {
   const [importing, setImporting] = useState(false);
   const [viewTerm, setViewTerm] = useState(data.settings.term);
   const [cls, setCls] = useState(allowedClasses[0]),
-    [date, setDate] = useState(today()),
+    [date, setDate] = useState(() => previousSchoolDay(today())),
     [q, setQ] = useState(''),
     [tab, setTab] = useState('Daily register'),
     [draft, setDraft] = useState<Record<string, AttendanceStatus>>({});
@@ -31,14 +32,7 @@ export function Attendance() {
   const shown = roster.filter((s) => (s.name + s.id).toLowerCase().includes(q.toLowerCase()));
   const count = (s: AttendanceStatus) => roster.filter((p) => status(p.id) === s).length;
   const month = date.slice(0, 7);
-  const days = Array.from(
-    { length: new Date(Number(month.slice(0, 4)), Number(month.slice(5)), 0).getDate() },
-    (_, i) => `${month}-${String(i + 1).padStart(2, '0')}`,
-  ).filter(
-    (d) =>
-      ![0, 6].includes(new Date(d + 'T12:00:00').getDay()) ||
-      roster.some((s) => data.attendance[`${d}|${viewTerm}|${s.id}`]),
-  );
+  const days = schoolDaysInMonth(month);
   const dirty = Object.keys(draft).length > 0;
   return (
     <>
@@ -52,6 +46,7 @@ export function Attendance() {
               <Button
                 variant="secondary"
                 onClick={() => {
+                  if (!isWeekday(date)) return;
                   setDraft((d) => ({
                     ...d,
                     ...Object.fromEntries(
@@ -65,6 +60,10 @@ export function Attendance() {
               </Button>
               <Button
                 onClick={async () => {
+                  if (Object.keys(draft).some((key) => !isWeekday(key.split('|')[0]))) {
+                    notify('Attendance can only be recorded Monday to Friday.');
+                    return;
+                  }
                   if (
                     !(await update(
                       (d) => ({ ...d, attendance: { ...d.attendance, ...draft } }),
@@ -106,7 +105,7 @@ export function Attendance() {
           onImported={(classId, importedMonth, term) => {
             setCls(classId);
             setViewTerm(term);
-            setDate(`${importedMonth}-01`);
+            setDate(schoolDaysInMonth(importedMonth)[0]);
             setTab('Monthly audit');
           }}
         />
@@ -135,11 +134,31 @@ export function Attendance() {
             ))}
           </select>
           <input
-            aria-label="Attendance date"
-            type="date"
-            value={date}
-            onChange={(e) => e.target.value && setDate(e.target.value)}
+            aria-label="Attendance month"
+            type="month"
+            value={month}
+            onChange={(e) => {
+              const dates = schoolDaysInMonth(e.target.value);
+              if (dates.length) setDate(dates[0]);
+            }}
           />
+          <select
+            aria-label="Attendance date"
+            value={date}
+            onChange={(e) => setDate(e.target.value)}
+          >
+            {days.map((day) => (
+              <option key={day} value={day}>
+                {new Date(`${day}T12:00:00Z`).toLocaleDateString('en-GB', {
+                  weekday: 'short',
+                  day: 'numeric',
+                  month: 'short',
+                  year: 'numeric',
+                  timeZone: 'UTC',
+                })}
+              </option>
+            ))}
+          </select>
           {isAdministrator ? (
             <select
               aria-label="Register term"
@@ -240,8 +259,8 @@ export function Attendance() {
               </tbody>
             </table>
             <p className="print-caption">
-              P: Present · L: Late · A: Absent · E: Excused. Standing uses marked sessions; Present
-              and Late count as attended.
+              Monday–Friday only. P: Present · L: Late · A: Absent · E: Excused. Standing uses
+              marked sessions; Present and Late count as attended.
             </p>
           </div>
         )}

@@ -1,4 +1,5 @@
 import type { ReportConduct } from './reportAttitudes.ts';
+import { previousSchoolDay } from './schoolDays.ts';
 export type Role = 'Administrator' | 'Teacher' | 'Student' | 'Accountant';
 export type AttendanceStatus = 'Present' | 'Late' | 'Absent' | 'Excused';
 export interface Student {
@@ -676,7 +677,7 @@ export function seed(): State {
       });
     }),
   );
-  const date = today();
+  const date = previousSchoolDay(today());
   return {
     version: 1,
     classes: [...classes],

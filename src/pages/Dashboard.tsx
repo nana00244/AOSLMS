@@ -1,3 +1,4 @@
+import { isSchoolAttendanceKey } from '../schoolDays';
 import { RecoverPendingEntries } from '../components/RecoverPendingEntries';
 import { Link } from 'react-router-dom';
 import {
@@ -28,7 +29,9 @@ export function Dashboard() {
   const totalBilled = data.students.reduce((a, s) => a + billed(data, s), 0),
     totalPaid = data.students.reduce((a, s) => a + paid(data, s.id), 0);
   const percent = totalBilled ? Math.round((totalPaid / totalBilled) * 100) : 0;
-  const attend = Object.values(data.attendance);
+  const attend = Object.entries(data.attendance)
+    .filter(([key]) => isSchoolAttendanceKey(key))
+    .map(([, value]) => value);
   const present = attend.filter((s) => s === 'Present' || s === 'Late').length;
   const rate = attend.length ? Math.round((present / attend.length) * 100) : 0;
   const finance = role === 'Accountant';
