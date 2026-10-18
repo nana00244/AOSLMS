@@ -86,7 +86,8 @@ export function AIReportRemark({
       </p>
       <p>
         Generate a draft from saved scores in subjects you can access. Only subject names and scores
-        are sent to Gemini. Review and edit the wording before saving it to the report card.
+        are sent to DeepSeek through Dahl, with Gemini as backup if DeepSeek cannot generate a
+        draft. Review and edit the wording before saving it to the report card.
       </p>
       {original && <p>Current remark: {original}</p>}
       <Button onClick={() => void generate()} disabled={busy || pendingCount > 0 || !current}>

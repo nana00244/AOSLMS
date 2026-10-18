@@ -1,5 +1,9 @@
 # AI teacher remarks
 
+Current provider configuration: DeepSeek through Dahl first, Gemini as automatic
+fallback. See [provider setup](gemini-report-remarks.md). The OpenAI implementation
+and verification notes below are historical and have been superseded.
+
 On Report cards, select a pupil and term, choose **Generate AI teacher remark**, then **Generate draft**. Review/edit the result and choose **Save teacher remark**. Cancel leaves the saved remark untouched. Saving uses the same durable Supabase-backed queue as other report edits and clears report verification so the changed report can be reviewed again. Pending score saves must finish before generation. Changed scores or a remotely changed remark require regeneration or reopening the dialog.
 
 The `generate-report-remark` Edge Function validates the authenticated, active staff profile on every call. Administrators can select any report term; teachers can use only their assigned classes, subjects and the active term. Scores come from the private database document, never a client-supplied prompt. Missing grades are excluded, while recorded zero scores are retained. Only canonical subject names and numeric scores are sent to OpenAI; names, IDs, existing remarks and other student information are not included. A subject-restricted teacher's draft covers only their accessible subjects.

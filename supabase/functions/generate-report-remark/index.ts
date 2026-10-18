@@ -4,6 +4,7 @@ import {
   geminiRemarkRequest,
   geminiRemarkError,
   extractReportRemark,
+  reportRemarkInstructions,
 } from '../../../src/reportRemarks.ts';
 
 Deno.serve(async (request) => {
@@ -75,12 +76,46 @@ Deno.serve(async (request) => {
       return json({ error: (error as Error).message }, 403);
     }
     const key = Deno.env.get('GEMINI_API_KEY');
-    if (!key)
+    const dahlKey = Deno.env.get('DAHL_API_KEY');
+    if (!key && !dahlKey)
       return json({ error: 'AI remarks are not configured. Contact the administrator.' }, 503);
     const limit = await client.rpc('reserve_report_remark', { actor: profile.id });
     if (limit.error) throw limit.error;
     if (!limit.data)
       return json({ error: 'AI request limit reached. Please try again later.' }, 429);
+    if (dahlKey) {
+      try {
+        const response = await fetch('https://inference.dahl.global/v1/chat/completions', {
+          method: 'POST',
+          headers: { Authorization: `Bearer ${dahlKey}`, 'Content-Type': 'application/json' },
+          signal: AbortSignal.timeout(20000),
+          body: JSON.stringify({
+            model: 'deepseek-ai/DeepSeek-V4-Flash-0731',
+            messages: [
+              { role: 'system', content: reportRemarkInstructions },
+              { role: 'user', content: JSON.stringify({ scores }) },
+            ],
+            max_tokens: 2048,
+          }),
+        });
+        if (!response.ok) throw new Error('DeepSeek unavailable');
+        const result = await response.json();
+        const choice = result?.choices?.[0];
+        const remark =
+          typeof choice?.message?.content === 'string' ? choice.message.content.trim() : '';
+        if (choice?.finish_reason !== 'stop' || !remark || remark.length > 1200)
+          throw new Error('Unusable DeepSeek remark');
+        return json({ remark, scores, provider: 'deepseek' });
+      } catch {
+        // Do not log provider bodies, credentials, scores or remarks.
+        console.warn('DeepSeek unavailable; trying Gemini fallback');
+      }
+    }
+    if (!key)
+      return json(
+        { error: 'AI is unavailable. Please try later or enter a remark manually.' },
+        503,
+      );
     const response = await fetch(
       'https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent',
       {
@@ -102,7 +137,7 @@ Deno.serve(async (request) => {
       return json(geminiRemarkError(response.status), 503);
     }
     const remark = extractReportRemark(await response.json());
-    return json({ remark, scores });
+    return json({ remark, scores, provider: 'gemini' });
   } catch {
     return json(
       { error: 'Unable to generate a remark. Please try again or enter one manually.' },
