@@ -72,16 +72,16 @@ describe('school calculations', () => {
     state.submissions = [];
     const assessment = courseworkAssessment(state, student.id, student.classId, 'Mathematics');
     expect(assessment.categoryDetails.Exercise).toEqual({
-      earnedRaw: 8,
-      maxRaw: 10,
-      scaled15: 11,
+      earnedRaw: 11.25,
+      maxRaw: 15,
+      scaled15: 11.25,
       count: 1,
     });
-    expect(assessment.rawSba).toBe(11);
-    expect(assessment.sba).toBe(9);
+    expect(assessment.rawSba).toBe(11.25);
+    expect(assessment.sba).toBe(8);
     expect(assessment.examRaw).toBe(79);
     expect(assessment.exam).toBe(40);
-    expect(assessment.total).toBe(49);
+    expect(assessment.total).toBe(48);
     expect(assessment.grade).toBe('E');
   });
   it('excludes unscored category columns and treats an empty subject as zero for ranking', () => {

@@ -51,19 +51,46 @@ function setup() {
   return { state, user, request };
 }
 describe('assessment score sheet upload', () => {
+  it('recalculates classmates when a groupwork import increases the shared required count', () => {
+    const { state, user, request } = setup();
+    request.sheet.category = 'groupwork';
+    const row = (admission: string, count: number) => ({
+      admission,
+      name: admission,
+      cells: Array.from({ length: count }, (_, index) => ({
+        slotKey: `GW${index + 1}`,
+        score: 15,
+        maxPoints: 15,
+        feedbackType: 'none' as const,
+      })),
+    });
+    request.sheet.rows = [row('SN-1', 3), row('SN-2', 5)];
+    const next = applyScoreImport(state, user, request);
+    const key = gradeKey('SN-1', 1, 'English Language');
+    expect(next.grades[key].sba).toBe(6);
+    next.grades[key].exam = 38;
+    next.grades[key].remark = 'Keep remark';
+    request.sheet.rows = [row('SN-2', 7)];
+    const updated = applyScoreImport(next, user, request);
+    expect(updated.grades[key]).toEqual({ sba: 4, exam: 38, remark: 'Keep remark' });
+    expect(
+      courseworkAssessment(updated, 'SN-1', 'JHS 1', 'English Language').categoryDetails.Groupwork
+        .maxRaw,
+    ).toBe(105);
+  });
   it('parses the sample format, preserves zero and absence, and updates cards and grades atomically', () => {
     const { state, user, request } = setup();
     const next = applyScoreImport(state, user, request);
     const assessment = courseworkAssessment(next, 'SN-1', 'JHS 1', 'English Language');
     expect(assessment.categoryDetails.Exercise).toEqual({
       earnedRaw: 25,
-      maxRaw: 30,
-      scaled15: 13,
-      count: 2,
+      maxRaw: 300,
+      scaled15: 1.25,
+      count: 3,
     });
-    expect(next.grades[gradeKey('SN-1', 1, 'English Language')].sba).toBe(11);
-    expect(next.grades[gradeKey('SN-2', 1, 'English Language')].sba).toBe(5);
-    expect(next.grades[gradeKey('SN-3', 1, 'English Language')]).toBeUndefined();
+    expect(next.grades[gradeKey('SN-1', 1, 'English Language')].sba).toBe(1);
+    expect(next.grades[gradeKey('SN-2', 1, 'English Language')].sba).toBe(1);
+    expect(next.grades[gradeKey('SN-3', 1, 'English Language')].sba).toBe(0);
     expect(state.assignments).toHaveLength(0);
     expect(state.grades).toEqual({});
   });
@@ -121,8 +148,8 @@ describe('assessment score sheet upload', () => {
     next = applyScoreImport(next, user, request);
     expect(
       courseworkAssessment(next, 'SN-1', 'JHS 1', 'English Language').categoryDetails.Exercise,
-    ).toMatchObject({ earnedRaw: 29, maxRaw: 30, count: 2 });
-    expect(next.grades[key]).toEqual({ sba: 13, exam: 35, remark: 'Keep remark' });
+    ).toMatchObject({ earnedRaw: 29, maxRaw: 300, count: 3 });
+    expect(next.grades[key]).toEqual({ sba: 1, exam: 35, remark: 'Keep remark' });
     expect(() =>
       applyScoreImport({ ...next, settings: { ...next.settings, term: 2 } }, user, request),
     ).toThrow('active term');

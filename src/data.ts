@@ -405,51 +405,61 @@ export function courseworkAssessment(
     const categoryAssignments = assignments.filter(
       (assignment) => courseworkCategory(assignment.category) === category,
     );
-    const scores = categoryAssignments.flatMap((assignment) => {
-      const submission = state.submissions.find(
-        (item) => item.assignmentId === assignment.id && item.studentId === studentId,
-      );
-      const slots = assignment.slots?.length
-        ? assignment.slots
-        : [{ slotKey: 'Score', title: assignment.title, maxPoints: assignment.points }];
-      const slotScores = slots.flatMap((slot, slotIndex) => {
-        const entry = assignment.slotScores?.[studentId]?.[slot.slotKey];
-        const legacyScore =
-          slotIndex === 0
-            ? (assignment.scores?.[studentId]?.score ?? submission?.score)
-            : undefined;
-        const score = entry ? entry.score : legacyScore;
-        const feedbackType = assignment.slotScores?.[studentId]?.[slot.slotKey]?.feedbackType;
-        if (
-          score === undefined ||
-          score === null ||
-          !Number.isFinite(score) ||
-          feedbackType === 'absent' ||
-          feedbackType === 'not_submitted'
-        )
-          return [];
-        const max =
-          assignment.slotScores?.[studentId]?.[slot.slotKey]?.maxPoints ??
-          slot.maxPoints ??
-          assignment.points;
-        if (max <= 0) return [];
-        return [{ earned: Math.max(0, score), max }];
+    const scoresFor = (pupilId: string) =>
+      categoryAssignments.flatMap((assignment) => {
+        const submission = state.submissions.find(
+          (item) => item.assignmentId === assignment.id && item.studentId === pupilId,
+        );
+        const slots = assignment.slots?.length
+          ? assignment.slots
+          : [{ slotKey: 'Score', title: assignment.title, maxPoints: assignment.points }];
+        const slotScores = slots.flatMap((slot, slotIndex) => {
+          const entry = assignment.slotScores?.[pupilId]?.[slot.slotKey];
+          const legacyScore =
+            slotIndex === 0
+              ? (assignment.scores?.[pupilId]?.score ?? submission?.score)
+              : undefined;
+          const score = entry ? entry.score : legacyScore;
+          const feedbackType = entry?.feedbackType;
+          const missing = feedbackType === 'absent' || feedbackType === 'not_submitted';
+          if (missing && category !== 'Exam') return [{ earned: 0, max: 15 }];
+          if (score === undefined || score === null || !Number.isFinite(score) || missing)
+            return [];
+          const max = entry?.maxPoints ?? slot.maxPoints ?? assignment.points;
+          if (!Number.isFinite(max) || max <= 0) return [];
+          // Historic imports can have other marking scales. Give every SBA entry
+          // the same /15 weight without rewriting the original marks.
+          return category === 'Exam'
+            ? [{ earned: Math.min(max, Math.max(0, score)), max }]
+            : [{ earned: Math.min(1, Math.max(0, score) / max) * 15, max: 15 }];
+        });
+        return slotScores;
       });
-      return slotScores;
-    });
-    if (!scores.length) continue;
-
+    const scores = scoresFor(studentId);
     const earned = scores.reduce((sum, score) => sum + score.earned, 0);
-    const possible = scores.reduce((sum, score) => sum + score.max, 0);
     if (category === 'Exam') {
+      if (!scores.length) continue;
+      const possible = scores.reduce((sum, score) => sum + score.max, 0);
       hasExam = true;
       examRaw = Math.round((earned / possible) * 100);
     } else {
+      const highestCount = state.students
+        .filter((pupil) => pupil.classId === classId)
+        .reduce((highest, pupil) => Math.max(highest, scoresFor(pupil.id).length), 0);
+      if (!highestCount) continue;
+      const requiredCount =
+        category === 'Exercise' || category === 'Homework'
+          ? categoryAssignments.reduce(
+              (total, assignment) => total + (assignment.slots?.length || 1),
+              0,
+            )
+          : highestCount;
+      const possible = requiredCount * 15;
       hasSba = true;
-      const scaled15 = Math.round((earned / possible) * 15);
+      const scaled15 = (earned / possible) * 15;
       categoryDetails[category] = {
-        earnedRaw: Math.round(earned),
-        maxRaw: Math.round(possible),
+        earnedRaw: earned,
+        maxRaw: possible,
         scaled15,
         count: scores.length,
       };
@@ -460,7 +470,7 @@ export function courseworkAssessment(
   const rawSba = hasSba
     ? courseworkCategories.reduce((sum, category) => sum + (categories[category] ?? 0), 0)
     : null;
-  const sba = Math.min(50, Math.round(((rawSba ?? 0) / 60) * 50));
+  const sba = Math.min(50, Math.round(((rawSba ?? 0) / 75) * 50));
   const exam = examRaw === null ? null : Math.round(examRaw / 2);
   const total = hasSba || hasExam ? Math.min(100, sba + (exam ?? 0)) : null;
 
@@ -567,14 +577,20 @@ export function paid(state: State, id: string) {
     .reduce((a, p) => a + p.amount, 0);
 }
 export function studentGrades(state: State, s: Student) {
-  return classSubjects(s.classId).map((subject) => ({
-    subject,
-    ...(state.grades[gradeKey(s.id, state.settings.term, subject)] || {
-      sba: 0,
-      exam: 0,
-      remark: '',
-    }),
-  }));
+  return classSubjects(s.classId).map((subject) => {
+    const assessment = courseworkAssessment(state, s.id, s.classId, subject);
+    const saved = state.grades[gradeKey(s.id, state.settings.term, subject)];
+    return {
+      subject,
+      ...(saved || {
+        sba: 0,
+        exam: 0,
+        remark: '',
+      }),
+      ...(assessment.hasSba ? { sba: assessment.sba ?? 0 } : {}),
+      recorded: !!saved || assessment.hasSba || assessment.hasExam,
+    };
+  });
 }
 export function average(state: State, s: Student) {
   const gs = studentGrades(state, s);

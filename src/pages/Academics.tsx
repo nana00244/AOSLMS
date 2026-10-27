@@ -249,7 +249,7 @@ export function Coursework() {
           'Groupwork /15',
           'Quiz /15',
           'Project /15',
-          'Raw SBA /60',
+          'Raw SBA /75',
           'SBA /50',
           'Terminal exam /100',
           'Exam /50',
@@ -927,7 +927,9 @@ export function Coursework() {
             </div>
             <div className="modal-actions">
               <p className="score-grid-rule">
-                Only entered scores count toward SBA. Blank cells remain ungraded.
+                Exercises and homework use all card slots. Group work, quizzes and projects use the
+                class’s highest entry count. Missing required work counts as zero. Five categories
+                /75 scale to SBA /50.
               </p>
               <Button variant="secondary" type="button" onClick={() => setScoreGridOpen(false)}>
                 Cancel
@@ -974,7 +976,7 @@ export function Coursework() {
                 <th>GW /15</th>
                 <th>Quiz /15</th>
                 <th>PW /15</th>
-                <th>Raw SBA /60</th>
+                <th>Raw SBA /75</th>
                 <th>SBA /50</th>
                 <th>Exam /100</th>
                 <th>Exam /50</th>
@@ -989,12 +991,16 @@ export function Coursework() {
                   <td>
                     <Person name={pupil.name} />
                   </td>
-                  <td>{assessment.categories.Exercise ?? '—'}</td>
-                  <td>{assessment.categories.Homework ?? '—'}</td>
-                  <td>{assessment.categories.Groupwork ?? '—'}</td>
-                  <td>{assessment.categories.Quiz ?? '—'}</td>
-                  <td>{assessment.categories.Project ?? '—'}</td>
-                  <td>{assessment.rawSba ?? 0}</td>
+                  {(['Exercise', 'Homework', 'Groupwork', 'Quiz', 'Project'] as const).map(
+                    (category) => (
+                      <td key={category}>
+                        {assessment.categories[category] === null
+                          ? '—'
+                          : Number(assessment.categories[category].toFixed(2))}
+                      </td>
+                    ),
+                  )}
+                  <td>{Number((assessment.rawSba ?? 0).toFixed(2))}</td>
                   <td>{assessment.sba ?? 0}</td>
                   <td>{assessment.examRaw ?? '—'}</td>
                   <td>{assessment.exam ?? '—'}</td>
@@ -1136,25 +1142,24 @@ export function Coursework() {
                       s.id === grading.id ? { ...s, score, feedback } : s,
                     ),
                   };
-                  const assessment = courseworkAssessment(
-                    next,
-                    grading.studentId,
-                    selected.classId,
-                    selected.subject,
-                  );
-                  const key = gradeKey(grading.studentId, d.settings.term, selected.subject);
-                  const grade = d.grades[key] || { sba: 0, exam: 0, remark: '' };
-                  return {
-                    ...next,
-                    grades: {
-                      ...d.grades,
-                      [key]: {
-                        ...grade,
-                        ...(assessment.hasSba ? { sba: assessment.sba ?? 0 } : {}),
-                        ...(assessment.hasExam ? { exam: assessment.exam ?? 0 } : {}),
-                      },
-                    },
-                  };
+                  const grades = { ...d.grades };
+                  for (const pupil of d.students.filter(
+                    (pupil) => pupil.classId === selected.classId,
+                  )) {
+                    const assessment = courseworkAssessment(
+                      next,
+                      pupil.id,
+                      selected.classId,
+                      selected.subject,
+                    );
+                    const key = gradeKey(pupil.id, d.settings.term, selected.subject);
+                    grades[key] = {
+                      ...(d.grades[key] || { sba: 0, exam: 0, remark: '' }),
+                      ...(assessment.hasSba ? { sba: assessment.sba ?? 0 } : {}),
+                      ...(assessment.hasExam ? { exam: assessment.exam ?? 0 } : {}),
+                    };
+                  }
+                  return { ...next, grades };
                 }, `Graded ${selected.title}`))
               )
                 return;
@@ -1652,9 +1657,7 @@ export function Reports() {
 
 function ReportSheet({ data, student }: { data: State; student: Student }) {
   const grades = studentGrades(data, student);
-  const hasGrades = grades.some(
-    (g) => !!data.grades[gradeKey(student.id, data.settings.term, g.subject)],
-  );
+  const hasGrades = grades.some((g) => g.recorded);
   const peers = data.students.filter((s) => s.classId === student.classId);
   const avg = average(data, student);
   const position = rank(
@@ -1790,14 +1793,14 @@ function ReportSheet({ data, student }: { data: State; student: Student }) {
           </thead>
           <tbody>
             {grades.map((g) => {
-              const recorded = !!data.grades[gradeKey(student.id, data.settings.term, g.subject)];
+              const recorded = g.recorded;
               const total = g.sba + g.exam;
               const isSBAOnly = g.sba > 0 && g.exam === 0;
               const subjectRank = ordinal(
                 rank(
                   total,
                   peers.map((s) => {
-                    const v = data.grades[gradeKey(s.id, data.settings.term, g.subject)];
+                    const v = studentGrades(data, s).find((grade) => grade.subject === g.subject);
                     return v ? v.sba + v.exam : 0;
                   }),
                 ),
@@ -1973,8 +1976,8 @@ function ReportCardEditor({
       )
       .map((g) => ({
         subject: g.subject,
-        sba: data.grades[gradeKey(student.id, reportTerm, g.subject)]?.sba ?? '',
-        exam: data.grades[gradeKey(student.id, reportTerm, g.subject)]?.exam ?? '',
+        sba: g.recorded ? g.sba : '',
+        exam: g.recorded ? g.exam : '',
         remark: g.remark || '',
       })),
   );

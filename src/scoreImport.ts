@@ -176,7 +176,12 @@ export function applyScoreImport(state: State, user: User, request: ScoreImportR
   });
   if (!affected.size) throw new Error('The sheet contains no scores or feedback to upload');
   next.assignments = next.assignments.map((a) => (a.id === id ? assignment : a));
-  for (const sid of affected) {
+  // A new entry can increase the shared denominator for every classmate.
+  const recalculate =
+    sheet.category === 'exam'
+      ? [...affected]
+      : next.students.filter((pupil) => pupil.classId === classId).map((pupil) => pupil.id);
+  for (const sid of recalculate) {
     const assessment = courseworkAssessment(next, sid, classId, subject, sheet.term);
     const key = gradeKey(sid, sheet.term, subject);
     const grade = next.grades[key] || { sba: 0, exam: 0, remark: '' };
