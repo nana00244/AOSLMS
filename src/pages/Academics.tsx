@@ -927,9 +927,8 @@ export function Coursework() {
             </div>
             <div className="modal-actions">
               <p className="score-grid-rule">
-                Exercises and homework use all card slots. Group work, quizzes and projects use the
-                class’s highest entry count. Missing required work counts as zero. Five categories
-                /75 scale to SBA /50.
+                All five SBA categories use the class’s highest entry count. Missing required work
+                counts as zero. Five categories /75 scale to SBA /50.
               </p>
               <Button variant="secondary" type="button" onClick={() => setScoreGridOpen(false)}>
                 Cancel

@@ -447,14 +447,7 @@ export function courseworkAssessment(
         .filter((pupil) => pupil.classId === classId)
         .reduce((highest, pupil) => Math.max(highest, scoresFor(pupil.id).length), 0);
       if (!highestCount) continue;
-      const requiredCount =
-        category === 'Exercise' || category === 'Homework'
-          ? categoryAssignments.reduce(
-              (total, assignment) => total + (assignment.slots?.length || 1),
-              0,
-            )
-          : highestCount;
-      const possible = requiredCount * 15;
+      const possible = highestCount * 15;
       hasSba = true;
       const scaled15 = (earned / possible) * 15;
       categoryDetails[category] = {

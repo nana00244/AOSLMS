@@ -57,15 +57,20 @@ describe('required-entry SBA calculation', () => {
     ).toMatchObject({ sba: 50, exam: 40, remark: 'Keep this', recorded: true });
   });
 
-  it.each(['groupwork', 'quiz', 'project'])(
+  it.each(['exercise', 'homework', 'groupwork', 'quiz', 'project'])(
     'uses seven shared required entries for %s, including students with no marks',
     (category) => {
       const { card, fill, assess } = fixture();
       fill(card(category), 'A', 5);
       fill(card(category), 'B', 3);
       fill(card(category), 'C', 7);
-      const key = { groupwork: 'Groupwork', quiz: 'Quiz', project: 'Project' }[category] as
-        'Groupwork' | 'Quiz' | 'Project';
+      const key = {
+        exercise: 'Exercise',
+        homework: 'Homework',
+        groupwork: 'Groupwork',
+        quiz: 'Quiz',
+        project: 'Project',
+      }[category] as 'Exercise' | 'Homework' | 'Groupwork' | 'Quiz' | 'Project';
       for (const id of ['A', 'B', 'C', 'D'])
         expect(assess(id).categoryDetails[key].maxRaw).toBe(105);
       expect(assess('A').categories[key]).toBeCloseTo((75 / 105) * 15);
@@ -75,14 +80,14 @@ describe('required-entry SBA calculation', () => {
     },
   );
 
-  it('does not reward missing exercise/homework slots and rounds only the final SBA', () => {
+  it('ignores unused template slots and rounds only the final SBA', () => {
     const { card, fill, assess } = fixture();
     fill(card('exercise'), 'A', 1);
     fill(card('homework'), 'A', 10);
     expect(assess('A')).toMatchObject({
-      categories: { Exercise: 0.75, Homework: 7.5 },
-      rawSba: 8.25,
-      sba: 6,
+      categories: { Exercise: 15, Homework: 15 },
+      rawSba: 30,
+      sba: 20,
     });
     fill(card('exercise'), 'A', 20, 12);
     fill(card('homework'), 'A', 20, 12);

@@ -2,13 +2,11 @@
 
 For each class, subject and term:
 
-- Exercises and homework: all slots on their cards are required. Twenty slots
-  have a maximum of 300 marks. Category score = total earned / 300 × 15.
-- Group work, quizzes and projects: use the highest recorded entry count among
+- Exercises, homework, group work, quizzes and projects use the highest recorded entry count among
   enrolled classmates as the shared required count, separately for each category.
   Counts of 5, 3 and 7 therefore use a denominator of 7 × 15 = 105 for everyone.
   Missing required work contributes zero; unused template slots do not increase
-  these three denominators.
+  any category’s denominator. Category score = total earned / (highest entry count × 15) × 15.
 - Numeric zero, absence and non-submission records count as entries. Absence and
   non-submission earn zero; late submissions retain their numeric marks.
 - Each category contributes at most 15. Sum the five categories out of 75,

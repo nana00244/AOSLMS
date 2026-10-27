@@ -84,12 +84,12 @@ describe('assessment score sheet upload', () => {
     const assessment = courseworkAssessment(next, 'SN-1', 'JHS 1', 'English Language');
     expect(assessment.categoryDetails.Exercise).toEqual({
       earnedRaw: 25,
-      maxRaw: 300,
-      scaled15: 1.25,
+      maxRaw: 45,
+      scaled15: (25 / 45) * 15,
       count: 3,
     });
-    expect(next.grades[gradeKey('SN-1', 1, 'English Language')].sba).toBe(1);
-    expect(next.grades[gradeKey('SN-2', 1, 'English Language')].sba).toBe(1);
+    expect(next.grades[gradeKey('SN-1', 1, 'English Language')].sba).toBe(6);
+    expect(next.grades[gradeKey('SN-2', 1, 'English Language')].sba).toBe(4);
     expect(next.grades[gradeKey('SN-3', 1, 'English Language')].sba).toBe(0);
     expect(state.assignments).toHaveLength(0);
     expect(state.grades).toEqual({});
@@ -148,8 +148,8 @@ describe('assessment score sheet upload', () => {
     next = applyScoreImport(next, user, request);
     expect(
       courseworkAssessment(next, 'SN-1', 'JHS 1', 'English Language').categoryDetails.Exercise,
-    ).toMatchObject({ earnedRaw: 29, maxRaw: 300, count: 3 });
-    expect(next.grades[key]).toEqual({ sba: 1, exam: 35, remark: 'Keep remark' });
+    ).toMatchObject({ earnedRaw: 29, maxRaw: 45, count: 3 });
+    expect(next.grades[key]).toEqual({ sba: 6, exam: 35, remark: 'Keep remark' });
     expect(() =>
       applyScoreImport({ ...next, settings: { ...next.settings, term: 2 } }, user, request),
     ).toThrow('active term');
