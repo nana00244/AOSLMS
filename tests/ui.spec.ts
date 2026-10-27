@@ -1,6 +1,7 @@
 import { test, expect, type Page } from '@playwright/test';
 import { seed } from '../src/data';
 import { emptyState } from '../src/emptyState';
+import { applyChanges } from '../src/backendAccess';
 async function login(page: Page, role = 'Administrator') {
   await page.goto('/');
   await page
@@ -10,6 +11,117 @@ async function login(page: Page, role = 'Administrator') {
   await page.getByRole('button', { name: `Explore as ${role}` }).click();
   await expect(page.getByRole('heading', { name: /Good morning/ })).toBeVisible();
 }
+
+test('compact grading grid preserves edits through search and contains horizontal scrolling', async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 1440, height: 900 });
+  let state = seed();
+  state.students = Array.from({ length: 24 }, (_, i) => ({
+    ...state.students[0],
+    id: `GRID-${i}`,
+    name: `Grid pupil ${String(i).padStart(2, '0')}`,
+  }));
+  const owner = state.users.find((user) => user.role === 'Administrator')!;
+  state.assignments = [
+    {
+      id: 'cc_grid',
+      title: 'Class Exercises',
+      subject: 'English Language',
+      classId: state.students[0].classId,
+      points: 15,
+      due: '2026-10-27',
+      description: '',
+      category: 'Exercise',
+      term: `Term ${state.settings.term}`,
+    },
+  ];
+  let revision = 1;
+  await page.routeWebSocket('**', (socket) => socket.close());
+  await page.addInitScript((owner) => {
+    localStorage.setItem(
+      'sb-itqfnzqksuacbeemrqok-auth-token',
+      JSON.stringify({
+        access_token: 'test-token',
+        refresh_token: 'test-refresh',
+        expires_at: Math.floor(Date.now() / 1000) + 3600,
+        token_type: 'bearer',
+        user: { id: owner.id, email: owner.email, aud: 'authenticated', role: 'authenticated' },
+      }),
+    );
+  }, owner);
+  await page.route('https://*.supabase.co/**', async (route) => {
+    if (!route.request().url().includes('/functions/v1/workspace'))
+      return route.fulfill({ json: {} });
+    const body = route.request().postDataJSON();
+    if (body.action !== 'load') {
+      for (const save of body.saves || [body])
+        state = applyChanges(state, owner, save.changes) as typeof state;
+      revision++;
+    }
+    return route.fulfill({ json: { state, revision } });
+  });
+  await page.goto('/#/coursework');
+  await page
+    .locator('.assignment-card')
+    .filter({ hasText: state.students[0].classId })
+    .first()
+    .getByRole('button', { name: 'Open Excel grading sheet' })
+    .click();
+  const grid = page.locator('.coursework-grid-scroll');
+  const rows = grid.locator('tbody tr:visible');
+  await expect(rows).toHaveCount(24);
+  const bounds = await grid.boundingBox();
+  const eighth = await rows.nth(7).boundingBox();
+  expect(eighth!.y + eighth!.height).toBeLessThan(bounds!.y + bounds!.height);
+  const score = rows.first().locator('input[type=number]').first();
+  await score.fill('0');
+  await rows.first().locator('summary').first().click();
+  await rows.first().locator('select').first().selectOption('late');
+  await rows.first().locator('input[placeholder=Feedback]').first().fill('Submitted after class');
+  await rows.first().locator('summary').first().click();
+  await page.getByLabel('Search students', { exact: true }).fill('Grid pupil 01');
+  await expect(rows).toHaveCount(1);
+  await page.getByLabel('Search students', { exact: true }).fill('');
+  await expect(score).toHaveValue('0');
+  const url = page.url();
+  await grid.hover();
+  await page.mouse.wheel(900, 0);
+  await expect.poll(() => grid.evaluate((el) => el.scrollLeft)).toBeGreaterThan(0);
+  await page.mouse.wheel(-5000, 0);
+  await expect.poll(() => grid.evaluate((el) => el.scrollLeft)).toBe(0);
+  await page.mouse.wheel(-5000, 0);
+  await expect(page).toHaveURL(url);
+  expect(
+    await page.evaluate(() => getComputedStyle(document.documentElement).overscrollBehaviorX),
+  ).toBe('none');
+  await page.screenshot({ path: 'test-results/compact-score-grid.png' });
+  await page.evaluate(() => document.documentElement.setAttribute('data-theme', 'dark'));
+  await page.screenshot({ path: 'test-results/compact-score-grid-dark.png' });
+  await page.setViewportSize({ width: 390, height: 844 });
+  await expect(page.getByRole('button', { name: 'Save scores', exact: true })).toBeInViewport();
+  expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(390);
+  await page.screenshot({ path: 'test-results/compact-score-grid-mobile.png' });
+  await page.setViewportSize({ width: 1440, height: 900 });
+  await page.getByRole('button', { name: 'Save scores', exact: true }).click();
+  await expect(page.getByRole('dialog')).toHaveCount(0);
+  const saved = state;
+  const entries = saved.assignments.flatMap(
+    (a: {
+      slotScores?: Record<
+        string,
+        Record<string, { score: number; feedbackType: string; feedbackReason: string }>
+      >;
+    }) => Object.values(a.slotScores?.['GRID-0'] || {}),
+  );
+  expect(entries).toContainEqual(
+    expect.objectContaining({
+      score: 0,
+      feedbackType: 'late',
+      feedbackReason: 'Submitted after class',
+    }),
+  );
+});
 
 test('supplied multi-sheet workbook imports all classes once', async ({ page }) => {
   test.skip(!process.env.AOS_ROSTER_SAMPLE_PATH, 'Optional private reference workbook');

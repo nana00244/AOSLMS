@@ -195,6 +195,10 @@ export function Coursework() {
         : [{ slotKey: 'Score', title: assignment.title, maxPoints: assignment.points }];
     return slots.map((slot) => ({ assignment, slot }));
   });
+  const [feedbackDrafts, setFeedbackDrafts] = useState<Record<string, FeedbackType>>({});
+  useEffect(() => {
+    if (!scoreGridOpen) setFeedbackDrafts({});
+  }, [scoreGridOpen]);
   const gridPupils = data.students.filter((pupil) => {
     if (pupil.classId !== cls) return false;
     const matches = `${pupil.name} ${pupil.id}`.toLowerCase().includes(gridSearch.toLowerCase());
@@ -616,7 +620,7 @@ export function Coursework() {
         >
           <CardTitle
             title={`Class score grid · ${scoreSubject}`}
-            description="Enter scores for multiple assignments in one pass. Blank cells remain ungraded and are excluded from category scaling."
+            description="Enter scores directly in the grid. Select a cell’s feedback button to record an absence, late submission, or comment."
           />
           <form
             className="coursework-score-entry"
@@ -804,16 +808,14 @@ export function Coursework() {
               <table className="coursework-grid-table">
                 <thead>
                   <tr>
-                    <th className="coursework-grid-student">Student</th>
+                    <th className="coursework-grid-student">Student name & ID</th>
                     {gridColumns.map(({ assignment, slot }) => (
                       <th
                         key={`${assignment.id}-${slot.slotKey}`}
                         className="coursework-grid-assignment"
                       >
                         <strong>{slot.slotKey}</strong>
-                        <small>
-                          {assignment.title} · /{slot.maxPoints}
-                        </small>
+                        <small>/{slot.maxPoints} points</small>
                         <small>
                           {
                             data.students.filter(
@@ -831,75 +833,102 @@ export function Coursework() {
                   </tr>
                 </thead>
                 <tbody>
-                  {gridPupils.map((pupil) => {
-                    return (
-                      <tr key={pupil.id}>
-                        <td className="coursework-grid-student">
-                          <Person name={pupil.name} />
-                        </td>
-                        {gridColumns.map(({ assignment, slot }, slotIndex) => {
-                          const submission = data.submissions.find(
-                            (item) =>
-                              item.assignmentId === assignment.id && item.studentId === pupil.id,
-                          );
-                          const entry = assignment.slotScores?.[pupil.id]?.[slot.slotKey];
-                          const score = entry
-                            ? entry.score
-                            : slotIndex === 0
-                              ? (assignment.scores?.[pupil.id]?.score ?? submission?.score)
-                              : undefined;
-                          const feedback =
-                            entry?.feedbackReason ??
-                            (slotIndex === 0
-                              ? (assignment.scores?.[pupil.id]?.feedback ?? submission?.feedback)
-                              : '');
-                          return (
-                            <td
-                              key={`${assignment.id}-${slot.slotKey}`}
-                              className="coursework-grid-score"
-                            >
-                              <input
-                                key={`score-${entry?.updatedAt || ''}`}
-                                aria-label={`${pupil.name} ${slot.slotKey} score`}
-                                name={`score-${assignment.id}-${slot.slotKey}-${pupil.id}`}
-                                type="number"
-                                min="0"
-                                max={entry?.maxPoints ?? slot.maxPoints}
-                                step="any"
-                                defaultValue={score ?? ''}
-                                placeholder="—"
-                              />
-                              <select
-                                key={`status-${entry?.updatedAt || ''}`}
-                                aria-label={`${pupil.name} ${slot.slotKey} feedback status`}
-                                name={`status-${assignment.id}-${slot.slotKey}-${pupil.id}`}
-                                defaultValue={entry?.feedbackType || 'none'}
+                  {data.students
+                    .filter((pupil) => pupil.classId === cls)
+                    .map((pupil) => {
+                      return (
+                        <tr
+                          key={pupil.id}
+                          hidden={!gridPupils.some((visible) => visible.id === pupil.id)}
+                        >
+                          <td className="coursework-grid-student">
+                            <Person name={pupil.name} sub={pupil.id} />
+                          </td>
+                          {gridColumns.map(({ assignment, slot }, slotIndex) => {
+                            const submission = data.submissions.find(
+                              (item) =>
+                                item.assignmentId === assignment.id && item.studentId === pupil.id,
+                            );
+                            const entry = assignment.slotScores?.[pupil.id]?.[slot.slotKey];
+                            const score = entry
+                              ? entry.score
+                              : slotIndex === 0
+                                ? (assignment.scores?.[pupil.id]?.score ?? submission?.score)
+                                : undefined;
+                            const feedback =
+                              entry?.feedbackReason ??
+                              (slotIndex === 0
+                                ? (assignment.scores?.[pupil.id]?.feedback ?? submission?.feedback)
+                                : '');
+                            const cellKey = `${assignment.id}-${slot.slotKey}-${pupil.id}`;
+                            const feedbackType =
+                              feedbackDrafts[cellKey] ?? entry?.feedbackType ?? 'none';
+                            return (
+                              <td
+                                key={`${assignment.id}-${slot.slotKey}`}
+                                className="coursework-grid-score"
                               >
-                                {Object.entries(courseworkFeedbackMetadata).map(
-                                  ([value, metadata]) => (
-                                    <option key={value} value={value}>
-                                      {metadata.tag}
-                                    </option>
-                                  ),
-                                )}
-                              </select>
-                              <input
-                                key={`feedback-${entry?.updatedAt || ''}`}
-                                aria-label={`${pupil.name} ${slot.slotKey} feedback`}
-                                name={`feedback-${assignment.id}-${slot.slotKey}-${pupil.id}`}
-                                defaultValue={feedback}
-                                placeholder="Feedback"
-                              />
-                            </td>
-                          );
-                        })}
-                      </tr>
-                    );
-                  })}
+                                <input
+                                  key={`score-${entry?.updatedAt || ''}`}
+                                  aria-label={`${pupil.name} ${slot.slotKey} score`}
+                                  name={`score-${assignment.id}-${slot.slotKey}-${pupil.id}`}
+                                  type="number"
+                                  min="0"
+                                  max={entry?.maxPoints ?? slot.maxPoints}
+                                  step="any"
+                                  defaultValue={score ?? ''}
+                                  placeholder="—"
+                                />
+                                <details className="score-feedback" data-status={feedbackType}>
+                                  <summary
+                                    aria-label={`${pupil.name} ${slot.slotKey} edit feedback`}
+                                  >
+                                    {feedbackType === 'none'
+                                      ? 'Feedback'
+                                      : courseworkFeedbackMetadata[feedbackType].tag}
+                                  </summary>
+                                  <select
+                                    key={`status-${entry?.updatedAt || ''}`}
+                                    aria-label={`${pupil.name} ${slot.slotKey} feedback status`}
+                                    name={`status-${assignment.id}-${slot.slotKey}-${pupil.id}`}
+                                    defaultValue={entry?.feedbackType || 'none'}
+                                    onChange={(event) =>
+                                      setFeedbackDrafts((current) => ({
+                                        ...current,
+                                        [`${assignment.id}-${slot.slotKey}-${pupil.id}`]: event
+                                          .target.value as FeedbackType,
+                                      }))
+                                    }
+                                  >
+                                    {Object.entries(courseworkFeedbackMetadata).map(
+                                      ([value, metadata]) => (
+                                        <option key={value} value={value}>
+                                          {metadata.tag}
+                                        </option>
+                                      ),
+                                    )}
+                                  </select>
+                                  <input
+                                    key={`feedback-${entry?.updatedAt || ''}`}
+                                    aria-label={`${pupil.name} ${slot.slotKey} feedback`}
+                                    name={`feedback-${assignment.id}-${slot.slotKey}-${pupil.id}`}
+                                    defaultValue={feedback}
+                                    placeholder="Feedback"
+                                  />
+                                </details>
+                              </td>
+                            );
+                          })}
+                        </tr>
+                      );
+                    })}
                 </tbody>
               </table>
             </div>
             <div className="modal-actions">
+              <p className="score-grid-rule">
+                Only entered scores count toward SBA. Blank cells remain ungraded.
+              </p>
               <Button variant="secondary" type="button" onClick={() => setScoreGridOpen(false)}>
                 Cancel
               </Button>

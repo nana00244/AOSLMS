@@ -1,0 +1,149 @@
+/* Keep horizontal touchpad scrolling inside the app, including at table edges. */
+:is([data-theme='dark'], .dark) .modal-fullscreen > .modal-heading {
+  background: #152232;
+  border-color: #29384d;
+}
+html,
+body,
+#root,
+.table-scroll,
+.modal-body {
+  overscroll-behavior-x: none;
+}
+
+.modal-fullscreen > .modal-body {
+  padding: 16px 20px;
+}
+.modal-fullscreen .card-title {
+  padding: 8px 0;
+  flex-shrink: 0;
+  margin-bottom: 0;
+}
+.modal-fullscreen .coursework-grid-scroll {
+  min-height: 160px;
+  overscroll-behavior: contain;
+}
+.coursework-grid-table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: max-content;
+  min-width: 100%;
+}
+.coursework-grid-table :is(th, td) {
+  min-width: 112px;
+  width: 112px;
+  padding: 4px 10px;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  font-size: 12px;
+}
+.coursework-grid-table .coursework-grid-student {
+  min-width: 250px;
+  width: 250px;
+  max-width: 250px;
+}
+.coursework-grid-table thead .coursework-grid-student {
+  z-index: 4;
+}
+.coursework-grid-table .person {
+  gap: 10px;
+}
+.coursework-grid-table .person strong {
+  font-size: 13px;
+  white-space: normal;
+}
+.coursework-grid-table .person small {
+  font-size: 11px;
+}
+.coursework-grid-table .avatar {
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  font-size: 12px;
+}
+.coursework-grid-table .coursework-grid-assignment {
+  text-align: center;
+}
+.coursework-grid-table .coursework-grid-assignment small {
+  font-size: 11px;
+}
+.coursework-grid-table .coursework-grid-score > input {
+  min-width: 0;
+  width: 76px;
+  height: 30px;
+  min-height: 30px;
+  padding: 4px 8px;
+  margin: 0 auto;
+  font-size: 13px;
+  text-align: center;
+  border-radius: 8px;
+}
+.score-feedback {
+  margin-top: 3px;
+  text-align: center;
+}
+.score-feedback[data-status='absent'] summary {
+  color: #92400e;
+  background: #fef3c7;
+}
+.score-feedback[data-status='not_submitted'] summary {
+  color: #9f1239;
+  background: #ffe4e6;
+}
+.score-feedback[data-status='late'] summary {
+  color: #5b21b6;
+  background: #ede9fe;
+}
+.score-feedback:not([data-status='none']) summary {
+  border-radius: 4px;
+  font-weight: 700;
+}
+:is([data-theme='dark'], .dark) .coursework-grid-table tbody tr:hover td {
+  background: #1e293b;
+}
+.score-feedback summary {
+  cursor: pointer;
+  font-size: 10px;
+  color: var(--muted);
+}
+.score-feedback summary:focus-visible {
+  outline: 2px solid var(--action, #5044df);
+  outline-offset: 2px;
+}
+.coursework-grid-table .score-feedback :is(input, select) {
+  width: 130px;
+  min-width: 0;
+  min-height: 32px;
+  padding: 5px;
+  font-size: 12px;
+  margin-top: 5px;
+}
+.coursework-grid-table tr[hidden] {
+  display: none;
+}
+.coursework-grid-table tbody tr:hover td {
+  background: var(--surface-raised, #f7f9fc);
+}
+.score-grid-rule {
+  margin: 0 auto 0 0;
+  color: var(--muted);
+  font-size: 12px;
+}
+.modal-fullscreen .coursework-grid-tools :is(input, select) {
+  min-height: 36px;
+  padding: 6px 10px;
+  font-size: 13px;
+}
+@media (max-width: 600px) {
+  .modal-fullscreen > .modal-body {
+    padding: 10px;
+  }
+  .coursework-grid-table .coursework-grid-student {
+    min-width: 160px;
+    width: 160px;
+    max-width: 160px;
+  }
+  .score-grid-rule {
+    width: 100%;
+  }
+}
