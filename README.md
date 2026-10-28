@@ -27,6 +27,14 @@ The app requires Supabase sign-in and has no demo workspace. Empty schools start
 
 Public signup is disabled. The email login provider remains enabled (`auth.email.enable_signup=true`), while the global `auth.enable_signup=false` prevents self-registration. Disabling the email provider would also prevent existing users from logging in.
 
+### Student login credentials
+
+In **Student directory**, use the key icon beside a student to open **Student login credentials**. The roster record and name are selected automatically. Set a username and a password of at least 12 characters, then choose **Create login account**. For a student who already has an account, the same icon opens that account so an administrator can reset the password or reactivate access without creating a duplicate.
+
+Students sign in on the normal login screen and land on their class stream dashboard. Their navigation includes assignments, fees, report cards, performance, certificates and schedule, with access scoped to their student record. Passwords cannot be retrieved from the app; assign a new password if one is forgotten.
+
+Run `node scripts/verify-with-temporary-admin.mjs --student-logins` for the opt-in live browser regression test. It verifies creation through the directory, username login, all student portal pages, session persistence and password reset, and removes its temporary account and roster record afterward.
+
 ## Deployed backend
 
 ### Import monthly attendance

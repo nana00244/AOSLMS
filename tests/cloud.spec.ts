@@ -784,3 +784,127 @@ test('administrator signs in, reloads cloud data, and navigates the empty school
   expect(errors).toEqual([]);
   await page.screenshot({ path: 'test-results/cloud-admin.png', fullPage: true });
 });
+
+test('student credentials from directory allow login and every student page', async ({
+  page,
+  browser,
+}) => {
+  test.skip(!process.env.AOS_TEST_SERVICE_KEY, 'Requires isolated live verification credentials');
+  test.setTimeout(150000);
+  const project = JSON.parse(readFileSync('src/supabase-project.json', 'utf8'));
+  const credentials = JSON.parse(readFileSync(process.env.AOS_TEST_CREDENTIALS!, 'utf8'));
+  const options = { auth: { persistSession: false, autoRefreshToken: false } };
+  const admin = createClient(project.url, project.publishableKey, options);
+  const service = createClient(project.url, process.env.AOS_TEST_SERVICE_KEY!, options);
+  const signed = await admin.auth.signInWithPassword(credentials);
+  if (signed.error) throw signed.error;
+  const suffix = randomUUID().slice(0, 8);
+  const sid = `LOGIN-${suffix}`,
+    username = `pupil-${suffix}`;
+  const password = `${randomBytes(18).toString('base64url')}!aA7`;
+  const resetPassword = `${randomBytes(18).toString('base64url')}!aA7`;
+  async function workspace(body: object) {
+    const result = await admin.functions.invoke('workspace', { body });
+    if (result.error) throw result.error;
+    return result.data;
+  }
+  const initial = await workspace({ action: 'load' });
+  const student = {
+    id: sid,
+    name: `Login pupil ${suffix}`,
+    classId: initial.state.classes[0],
+    gender: '',
+    dob: '',
+    guardian: '',
+    phone: '',
+    status: 'Active',
+    enrolled: '2026-10-28',
+  };
+  const context = await browser.newContext();
+  try {
+    await workspace({
+      action: 'save',
+      revision: initial.revision,
+      changes: [{ collection: 'students', id: sid, after: student }],
+    });
+    await page.goto('/');
+    await page.getByLabel('Username or email').fill(credentials.email);
+    await page.getByLabel('Password', { exact: true }).fill(credentials.password);
+    await page.getByRole('button', { name: 'Sign in', exact: true }).click();
+    await expect(page.getByRole('navigation').first()).toBeVisible({ timeout: 30000 });
+    await page.goto('/#/students');
+    await page
+      .getByPlaceholder(/Search/)
+      .first()
+      .fill(student.name);
+    await page.getByRole('link', { name: `Manage login for ${student.name}` }).click();
+    const dialog = page.getByRole('dialog', { name: 'Student login credentials' });
+    await expect(dialog.getByLabel('Linked student record')).toHaveValue(sid);
+    await dialog.getByLabel('Username', { exact: true }).fill(username);
+    await dialog.getByLabel('Temporary password (minimum 12 characters)').fill(password);
+    await dialog.getByRole('button', { name: 'Create login account' }).click();
+    await expect(dialog).toHaveCount(0, { timeout: 30000 });
+    const pupil = await context.newPage();
+    await pupil.goto('http://127.0.0.1:5173/');
+    await pupil.getByLabel('Username or email').fill(username.toUpperCase());
+    await pupil.getByLabel('Password', { exact: true }).fill(password);
+    await pupil.getByRole('button', { name: 'Sign in', exact: true }).click();
+    await expect(pupil.getByRole('heading', { name: /Class stream/ })).toBeVisible({
+      timeout: 30000,
+    });
+    for (const [path, heading] of [
+      ['assignments', 'My assignments'],
+      ['fees', 'My fees & payment ledger'],
+      ['report-cards', 'Terminal report card'],
+      ['performance', 'Performance tracking'],
+      ['certificates', 'My digital certificates'],
+      ['schedule', 'My schedule'],
+    ]) {
+      await pupil.goto(`http://127.0.0.1:5173/#/student/${path}`);
+      await expect(pupil.getByRole('heading', { name: heading, exact: true })).toBeVisible();
+    }
+    await pupil.reload();
+    await expect(pupil.getByRole('heading', { name: 'My schedule', exact: true })).toBeVisible();
+    await pupil.goto('http://127.0.0.1:5173/#/users');
+    await expect(pupil.getByRole('button', { name: 'Add user', exact: true })).toHaveCount(0);
+    await page.goto(`/#/users?student=${sid}`);
+    await expect(dialog.getByLabel('Username', { exact: true })).toHaveValue(username);
+    await dialog.getByLabel('New password (leave blank to keep current)').fill(resetPassword);
+    await dialog.getByRole('button', { name: 'Save user profile' }).click();
+    await expect(dialog).toHaveCount(0, { timeout: 30000 });
+    const auth = createClient(project.url, project.publishableKey, options);
+    expect(
+      (await auth.auth.signInWithPassword({ email: `${username}@users.aoslms.invalid`, password }))
+        .error,
+    ).toBeTruthy();
+    expect(
+      (
+        await auth.auth.signInWithPassword({
+          email: `${username}@users.aoslms.invalid`,
+          password: resetPassword,
+        })
+      ).error,
+    ).toBeNull();
+    await auth.auth.signOut();
+  } finally {
+    await context.close();
+    const lookup = await service
+      .from('profiles')
+      .select('id')
+      .eq('username', username)
+      .maybeSingle();
+    if (lookup.error) throw lookup.error;
+    if (lookup.data) {
+      const deleted = await service.auth.admin.deleteUser(lookup.data.id);
+      if (deleted.error) throw deleted.error;
+    }
+    const current = await workspace({ action: 'load' });
+    const record = current.state.students.find((s: { id: string }) => s.id === sid);
+    if (record)
+      await workspace({
+        action: 'save',
+        revision: current.revision,
+        changes: [{ collection: 'students', id: sid, before: record }],
+      });
+  }
+});

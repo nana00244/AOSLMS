@@ -49,19 +49,22 @@ try {
   };
   if (
     !process.argv.includes('--browser-only') &&
+    !process.argv.includes('--student-logins') &&
     !process.argv.includes('--ai-remarks') &&
     !process.argv.includes('--score-import') &&
     !process.argv.includes('--production')
   )
     run('node scripts/verify-backend-workflows.mjs', { stdio: 'inherit', env });
   run(
-    process.argv.includes('--ai-remarks')
-      ? 'npm run test:e2e -- --grep AI.teacher --workers=1'
-      : process.argv.includes('--production')
-        ? 'npm run test:e2e -- --grep production --workers=1'
-        : process.argv.includes('--score-import')
-          ? 'npm run test:e2e -- --grep score --workers=1'
-          : 'npm run test:e2e',
+    process.argv.includes('--student-logins')
+      ? 'npm run test:e2e -- --grep student.credentials --workers=1'
+      : process.argv.includes('--ai-remarks')
+        ? 'npm run test:e2e -- --grep AI.teacher --workers=1'
+        : process.argv.includes('--production')
+          ? 'npm run test:e2e -- --grep production --workers=1'
+          : process.argv.includes('--score-import')
+            ? 'npm run test:e2e -- --grep score --workers=1'
+            : 'npm run test:e2e',
     { stdio: 'inherit', env },
   );
 } finally {

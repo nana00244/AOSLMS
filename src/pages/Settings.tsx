@@ -1,5 +1,6 @@
 import { RecoverPendingEntries } from '../components/RecoverPendingEntries';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import {
   Save,
   Download,
@@ -341,10 +342,29 @@ export function SettingsPage() {
 }
 export function UsersPage() {
   const { data, user: adminUser, update, notify, refresh } = useStore();
+  const [searchParams, setSearchParams] = useSearchParams();
   const [savingAccount, setSavingAccount] = useState(false);
   const [q, setQ] = useState(''),
     [edit, setEdit] = useState<User | null>(null),
     [remove, setRemove] = useState<User | null>(null);
+  useEffect(() => {
+    const studentId = searchParams.get('student');
+    if (!studentId) return;
+    const student = data.students.find((s) => s.id === studentId);
+    if (!student) return;
+    setEdit(
+      data.users.find((u) => u.studentId === studentId) || {
+        id: '',
+        name: student.name,
+        email: '',
+        role: 'Student',
+        active: true,
+        classes: [],
+        studentId,
+      },
+    );
+    setSearchParams({}, { replace: true });
+  }, [searchParams, setSearchParams, data.students, data.users]);
   const setClassSubjectAccess = (
     user: User,
     classId: string,
@@ -369,7 +389,7 @@ export function UsersPage() {
       <PageHeader
         eyebrow="YOUR SCHOOL TEAM"
         title="Users & access"
-        description="Organise staff profiles, workspace roles, and teaching assignments."
+        description="Manage staff and student logins, passwords, roles, and teaching assignments."
         actions={
           <Button
             onClick={() =>
@@ -464,7 +484,13 @@ export function UsersPage() {
       </Card>
       {edit && (
         <Modal
-          title={edit.id ? 'Edit user profile' : 'Add a team member'}
+          title={
+            edit.role === 'Student'
+              ? 'Student login credentials'
+              : edit.id
+                ? 'Edit user profile'
+                : 'Add a team member'
+          }
           onClose={() => setEdit(null)}
         >
           <form
@@ -476,6 +502,14 @@ export function UsersPage() {
                 username = edit.username?.trim() ? normalizeUsername(edit.username) : undefined;
                 if (!edit.id && !username)
                   throw new Error('Choose a username for the new account.');
+                if (edit.role === 'Student') {
+                  if (!data.students.some((s) => s.id === edit.studentId))
+                    throw new Error('Choose a student record for this login.');
+                  if (data.users.some((u) => u.studentId === edit.studentId && u.id !== edit.id))
+                    throw new Error(
+                      'This student already has a login. Edit the existing account to reset its password.',
+                    );
+                }
                 teaching =
                   edit.role === 'Teacher'
                     ? normalizeTeachingAccess(
@@ -639,14 +673,25 @@ export function UsersPage() {
                 <select
                   required={isSupabaseConfigured}
                   value={edit.studentId || ''}
-                  onChange={(e) => setEdit({ ...edit, studentId: e.target.value || undefined })}
+                  onChange={(e) =>
+                    setEdit({
+                      ...edit,
+                      studentId: e.target.value || undefined,
+                      name: data.students.find((s) => s.id === e.target.value)?.name || edit.name,
+                    })
+                  }
                 >
                   <option value="">Choose a student</option>
-                  {data.students.map((student) => (
-                    <option key={student.id} value={student.id}>
-                      {student.name} · {student.classId}
-                    </option>
-                  ))}
+                  {data.students
+                    .filter(
+                      (student) =>
+                        !data.users.some((u) => u.studentId === student.id && u.id !== edit.id),
+                    )
+                    .map((student) => (
+                      <option key={student.id} value={student.id}>
+                        {student.name} · {student.classId}
+                      </option>
+                    ))}
                 </select>
               </Field>
             )}

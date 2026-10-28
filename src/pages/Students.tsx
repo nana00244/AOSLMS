@@ -13,6 +13,7 @@ import {
   GraduationCap,
   School,
   Trash2,
+  KeyRound,
 } from 'lucide-react';
 import { classes, today, uid, type Student } from '../data';
 import { useStore, csv } from '../store';
@@ -362,6 +363,16 @@ export function Students() {
                   </td>
                   <td>
                     <div className="row-actions">
+                      {isAdmin && (
+                        <Link
+                          className="icon-btn"
+                          to={`/users?student=${encodeURIComponent(s.id)}`}
+                          aria-label={`Manage login for ${s.name}`}
+                          title="Assign username or reset password"
+                        >
+                          <KeyRound size={16} />
+                        </Link>
+                      )}
                       <button
                         className="icon-btn"
                         aria-label={`View ${s.name}`}
