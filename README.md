@@ -83,6 +83,21 @@ When hosting the frontend, set `auth.site_url` and `auth.additional_redirect_url
 
 ## Verification
 
+### Learning Hub
+
+Open **Learning Hub** in the administrator, teacher or student navigation. The old `/khan` link redirects to `/learning-hub`.
+
+- **Courses:** browse by subject, level or search; open a lesson to read explanations and practise.
+- **Create lesson:** teaching staff can write original content, cite a curriculum standard/source, and add multiple-choice questions with explanations.
+- **Assign lesson:** choose a class, all current class members or selected students, and a due date. Class assignments capture the selected roster at assignment time.
+- **Assignments:** students open their assigned lessons, acknowledge reading and submit practice. Both learning steps are required for completion when questions are present.
+- **Progress:** filter by class/learner, review latest scores and attempt history, export CSV, or assign recommended practice to a learner. Average scores include all attempts; proficiency uses the latest attempt. Suggestions are transparent score-based guidance, not an AI diagnosis.
+- **Curriculum resources:** open the source documents for broader planning. The initial catalog covers 18 selected B7–B9 Mathematics and Science standards with 54 questions; it is not a complete NaCCA course library. Teachers can extend it through the lesson editor.
+
+The authenticated `learning-hub` Edge Function stores lessons, assignments, readings and attempts in dedicated `learning_hub_*` tables. These records are separate from the legacy workspace JSON backup; include them in database backups. Only server-authorized operations can write to those tables. Practice is graded on the server, answer keys are withheld before submission, and current class/subject permissions constrain access. External document views are not tracked as completed lessons. Reading acknowledgement is self-reported and does not measure time spent.
+
+See [REA findings](docs/learning-hub-rea.md) and [curriculum source/coverage details](docs/learning-hub-curriculum.md). Run `npm run test:e2e -- tests/learningHub.spec.ts` for isolated browser tests or `node scripts/verify-learning-hub.mjs` for opt-in live authorization and persistence verification with temporary fixtures. New deployments must apply the migration and deploy the `learning-hub` function as well as the frontend.
+
 ```sh
 npm test
 npm run build

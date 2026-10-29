@@ -36,6 +36,7 @@ import { Students } from './pages/Students';
 import { Attendance } from './pages/Attendance';
 import { Coursework, Reports } from './pages/Academics';
 import { Timetable, Resources, Certificates, Community } from './pages/Learning';
+import { LearningHub } from './pages/LearningHub';
 import { AdminFinanceDashboard, Finance, Payroll } from './pages/Finance';
 import { SettingsPage, UsersPage, Audit } from './pages/Settings';
 import { TeacherClassGuard } from './components/TeacherClassGuard';
@@ -89,6 +90,12 @@ const nav = [
     path: '/timetable',
     icon: CalendarDays,
     roles: ['Administrator', 'Teacher'],
+  },
+  {
+    label: 'Learning Hub',
+    path: '/learning-hub',
+    icon: BookOpen,
+    roles: ['Administrator', 'Teacher', 'Student'],
   },
   {
     label: 'Resource library',
@@ -154,6 +161,7 @@ const accountantNav = [
   },
 ];
 const studentNav = [
+  { label: 'Learning Hub', path: '/learning-hub', icon: BookOpen, roles: ['Student'] },
   { label: 'Class Stream', path: '/student/stream', icon: MessageSquare, roles: ['Student'] },
   { label: 'My Assignments', path: '/student/assignments', icon: BookOpen, roles: ['Student'] },
   { label: 'Fees & Financials', path: '/student/fees', icon: Wallet, roles: ['Student'] },
@@ -805,6 +813,7 @@ function Shell() {
               ['/coursework', <Coursework />],
               ['/reports', <Reports />],
               ['/timetable', <Timetable />],
+              ['/learning-hub', <LearningHub />],
               ['/resources', <Resources />],
               ['/certificates', <Certificates />],
               ['/community', <Community />],
@@ -820,6 +829,7 @@ function Shell() {
                 element={<Guard path={path as string}>{el}</Guard>}
               />
             ))}
+            <Route path="/khan" element={<Navigate to="/learning-hub" replace />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
           <footer className="workspace-footer">

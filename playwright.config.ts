@@ -9,6 +9,7 @@ export default defineConfig({
         '**/conflict.spec.ts',
         '**/reportAttitudes.spec.ts',
         '**/attendanceWeekdays.spec.ts',
+        '**/learningHub.spec.ts',
       ],
   fullyParallel: true,
   workers: process.env.AOS_CLOUD_TESTS ? 1 : 2,
