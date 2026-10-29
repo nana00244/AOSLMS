@@ -83,7 +83,9 @@ export function assessmentLessons(
   const eligible = lessons.filter((l) => l.subject === anchor.subject && l.level === anchor.level);
   if (kind === 'unit-test') return eligible;
   // Curriculum order, through the selected topic, limits a quiz to preceding material in its strand.
-  const strand = eligible.filter((l) => l.strand === anchor.strand);
+  const strand = eligible
+    .filter((l) => l.strand === anchor.strand)
+    .sort((a, b) => a.standard.localeCompare(b.standard, 'en', { numeric: true }));
   const index = strand.findIndex((l) => l.id === anchor.id);
   return strand.slice(0, index + 1);
 }

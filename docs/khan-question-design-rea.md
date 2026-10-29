@@ -1,0 +1,36 @@
+# Khan Academy exercise investigation and NaCCA question design
+
+Investigation date: 29 October 2026. Public, signed-out pages in an isolated Edge browser. REA observed pages passively; Playwright navigated and dismissed the cookie banner. No account was accessed and no Khan questions were copied into the LMS.
+
+## Findings and evidence
+
+| Finding                                                                                                                                                                             | Evidence                                                                                                                                                                                                                                            | Boundary                                                                                                                            |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| Courses are grouped by grade and units; units contain individual skills, quizzes and unit tests.                                                                                    | Math directory `ev_cfdc89c331d444697c25b1fb7562245bda4e551b876b31ccf1651fc70b03a75e`; Grade 1 `ev_0d4dcd7aa306686bba54c1d30b60c2ea2331095f5b34da1464d6da2283cfaa23`; Grade 6 `ev_a7a626c83264cd20bae62dfe205f873ec681292ee13a60798d0be54f2e4a94db`. | Observed public course structure, not server selection algorithms.                                                                  |
+| The Grade 1 place-value exercise uses a short numeric response and links several specific standards and related lessons.                                                            | `ev_6732018d71ec84b7a786c216749b2b230cc948432a440bc68789a195b4a9ed59`, [Tens and ones](https://www.khanacademy.org/math/cc-1st-grade-math/cc-1st-place-value/cc-1st-ones-tens/e/tens-and-ones).                                                     | One observed exercise; not a claim about every early-grade question.                                                                |
+| The Grade 6 ratio exercise uses a contextual table, four answer choices, an explicit standard and related instruction. Distractors include reversal and using the wrong quantities. | `ev_492bbcae3bbb424eb69b9aecb5b2bb5cc9937aa08cddb59e52508f89690354c7`, [Basic ratios](https://www.khanacademy.org/math/cc-sixth-grade-math/cc-6th-ratios-prop-topic/intro-to-ratios/e/representing-ratios).                                         | Distractor interpretation is an analyst inference from the visible choices.                                                         |
+| Both observed exercises show a seven-problem set.                                                                                                                                   | The two exercise captures above.                                                                                                                                                                                                                    | A universal four-question Khan rule is disproved by these observations. LMS four/five/ten sizes remain the user's requested policy. |
+
+The [official mastery documentation](https://support.khanacademy.org/hc/en-us/articles/360007253831-What-is-self-paced-Mastery) describes skill-level transitions and possible demotions, with mixed-skill assessments contributing to mastery. These differ from the earlier requested LMS thresholds and monotonic levels; the implementation preserves the user policy rather than labelling it Khan's exact algorithm.
+
+Khan's public [Perseus repository](https://github.com/Khan/perseus) describes its exercise presentation, interaction and grading system. This is evidence of a structured assessment renderer, not proof of the live service's entire question-pool, grade-placement or scheduling logic. No source code from that repository is incorporated here.
+
+Unknown: exact production pool sizes, all-grade item difficulty calibration, unseen-question guarantees, server-side selection weights and complete spaced-review scheduling. Neither public DOM inspection nor the two exercises proves these. The LMS scheduling intervals are independent implementation choices.
+
+## Applied authoring rules
+
+1. Select the NaCCA subject, grade, strand, content standard and full five-part content indicator. Read the actual indicator and exemplars; a topic label or extracted code alone is insufficient.
+2. Set numerical limits, vocabulary, representations and prerequisite knowledge from that indicator. Khan's US grade sequence must not replace Ghana's sequence.
+3. Write original questions assessing the stated skill. Vary quantities, contexts, representations and reasoning where appropriate. Do not merely change names or rephrase the same question to reach a pool count.
+4. Derive the correct answer and worked feedback. Distractors should expose a plausible misconception while remaining unambiguously wrong. Mathematical equality matters even when option strings differ.
+5. Preserve stable question identities, source/page provenance and explicit assessed scope. The session engine shuffles question order and answer positions separately.
+6. Combine skill questions for strand review and same-subject/grade tests. Order preceding material by numeric curriculum code, not incidental catalogue insertion order.
+7. Track missing coverage explicitly. A bank with sixteen questions can still cover only part of an indicator. Speaking, writing, performance, making and practical investigation require additional evidence, not an automatic mastery claim from MCQ results.
+
+Ghanaian Language content should use **Asante Twi**, as selected by the user. Do not substitute generic English questions for Twi literacy. Language-specific spelling, register and answer review are required before publication.
+
+## Current implementation boundary
+
+The generated maths banks cover thirty explicitly identified indicator facets across B1–B9 (32 questions each). The living-cell banks cover the animal-cell and plant-cell knowledge portions of B7.1.2.1.1 and B7.1.2.1.2 (16 questions each); their drawing/model tasks still require teacher assessment. These are additions to the existing catalogue, not complete curriculum coverage.
+
+The reference inventory currently contains 4,041 candidate indicators from 28 PDFs. Arabic is an unresolved source. `node scripts/report-learning-coverage.mjs --json` reports populated banks and every remaining missing reference. `--require-complete` deliberately blocks a full-coverage release while semantic and assessment review is incomplete. Do not describe the inventory, grade range or generated question count as fulfilment of all subjects and topics.

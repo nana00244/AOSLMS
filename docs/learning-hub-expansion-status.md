@@ -15,7 +15,7 @@ Validation: 132 unit tests passed (2 skipped); six mocked browser tests passed; 
 
 ## Release blockers
 
-1. The shipped catalogue still has only the earlier selected B7–B9 lessons and three questions per lesson. It does not satisfy this request. The new engine correctly refuses undersized banks, so the new learner flow must not be released against that catalogue.
+1. The development catalogue now adds 960 mathematics questions across thirty indicator facets in B1–B9 and 32 living-cell questions across two B7 science indicators. This still does not satisfy complete curriculum coverage. Earlier selected lessons retain three-question banks; the reader explicitly disables undersized assessments while retaining reading access.
 2. Author original, complete lessons and at least sixteen meaningful questions for every applicable NaCCA indicator in every subject Basic 1–9. Do not pad banks with identical questions or substitute generic lesson templates for instruction.
 3. Verify the entire source inventory against the PDF tables. Automated references can include preamble examples and can omit codes whose text extraction is malformed. Low extracted counts are not evidence that a subject has fewer indicators.
 4. Confirm missing sources, including lower-primary Creative Arts and all applicable JHS subjects. Primary French and Computing start at B4 in the examined curriculum; do not fabricate B1–B3 coverage.

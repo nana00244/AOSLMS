@@ -12,6 +12,7 @@ import {
 import { Button } from '../components/ui';
 import { completeHubReading, startHubPractice, submitHubSession } from '../learningHub/api';
 import {
+  assessmentLessons,
   drawQuestions,
   gradeSession,
   setSizes,
@@ -58,8 +59,13 @@ export function LessonPlayer({
   const request = useRef<{ id: string; kind: PracticeKind } | null>(null);
   const preview = useRef<ReturnType<typeof drawQuestions>>([]);
   const status = learningStatus(snapshot, studentId, lesson.id, assignmentId);
+  const available = (assessment: PracticeKind) =>
+    assessmentLessons(lesson as HubLesson, snapshot.lessons as HubLesson[], assessment).reduce(
+      (count, item) => count + item.questions.length,
+      0,
+    ) >= setSizes[assessment];
   async function start(next: PracticeKind, fresh = false) {
-    if (busy) return;
+    if (busy || !available(next)) return;
     if (
       !request.current ||
       request.current.kind !== next ||
@@ -162,7 +168,8 @@ export function LessonPlayer({
           {(['practice', 'quiz', 'unit-test'] as PracticeKind[]).map((k) => (
             <button
               key={k}
-              disabled={busy}
+              disabled={busy || !available(k)}
+              title={available(k) ? undefined : 'This question bank is still being prepared.'}
               className={kind === k ? 'active' : ''}
               onClick={() => void start(k, true)}
             >
@@ -192,6 +199,12 @@ export function LessonPlayer({
           </div>
           <h2>{lesson.title}</h2>
           <p className="lh-intro">{lesson.description}</p>
+          {!available('practice') && (
+            <p className="lh-notice">
+              This lesson is available to read. Its four-question practice bank is still being
+              prepared.
+            </p>
+          )}
           {error && (
             <div role="alert" className="lh-error">
               {error}
@@ -224,7 +237,10 @@ export function LessonPlayer({
                     {status.read ? 'Reading saved' : 'Mark as read'}
                   </Button>
                 )}
-                <Button disabled={busy} onClick={() => void start('practice', true)}>
+                <Button
+                  disabled={busy || !available('practice')}
+                  onClick={() => void start('practice', true)}
+                >
                   Start practice <ArrowRight size={17} />
                 </Button>
               </div>

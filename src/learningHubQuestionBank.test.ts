@@ -61,6 +61,15 @@ function history(
 }
 
 describe('randomized Learning Hub question bank', () => {
+  it('orders quiz prerequisites by numeric curriculum code rather than catalogue insertion', () => {
+    const early = topic('early', { standard: 'B4.1.1.1.2' });
+    const anchor = topic('anchor', { standard: 'B4.1.1.1.3' });
+    const later = topic('later', { standard: 'B4.1.1.1.10' });
+    expect(assessmentLessons(anchor, [later, anchor, early], 'quiz').map((l) => l.id)).toEqual([
+      'early',
+      'anchor',
+    ]);
+  });
   it.each<PracticeKind>(['practice', 'quiz', 'unit-test'])(
     'draws the exact unique %s size',
     (kind) => {

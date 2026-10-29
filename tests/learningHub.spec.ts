@@ -196,6 +196,25 @@ async function answerSession(
   }
 }
 
+test('Learning Hub keeps undersized question banks readable without launching an invalid session', async ({
+  page,
+}) => {
+  const { hub, requests } = await setup(page, 'Student');
+  hub.lessons = [{ ...hub.lessons[0], questions: hub.lessons[0].questions.slice(0, 3) }];
+  await page.getByRole('button', { name: 'Refresh learning progress', exact: true }).click();
+  await page.getByRole('button', { name: /Understanding equivalent fractions/ }).click();
+  await expect(
+    page.getByText(
+      'This lesson is available to read. Its four-question practice bank is still being prepared.',
+    ),
+  ).toBeVisible();
+  await expect(
+    page.getByRole('button', { name: 'Practice (4 problems)', exact: true }),
+  ).toBeDisabled();
+  await expect(page.getByRole('button', { name: 'Start practice', exact: true })).toBeDisabled();
+  expect(requests.some((r) => r.action === 'start-practice')).toBe(false);
+});
+
 test('Learning Hub learner completes assigned reading and four-question practice across reloads', async ({
   page,
 }) => {

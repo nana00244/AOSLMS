@@ -18,6 +18,13 @@ const mirroredJhs = (subject: string, file: string): CurriculumSource => ({
 });
 export const curriculumSources: CurriculumSource[] = [
   {
+    title: 'Mathematics · NaCCA B1–B3 curriculum',
+    url: 'https://mingycomputersgh.wordpress.com/wp-content/uploads/2019/08/maths-lower-primary-b1-b3.pdf',
+    description: 'NaCCA lower-primary Mathematics curriculum from the supplied archive.',
+    levels: ['B1', 'B2', 'B3'],
+    subjects: ['Mathematics'],
+  },
+  {
     title: 'NaCCA standards-based curriculum (2019)',
     url: 'https://nacca.gov.gh/learning-areas-subjects/new-standards-based-curriculum-2019/',
     description:

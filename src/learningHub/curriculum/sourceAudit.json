@@ -1,0 +1,759 @@
+[
+  {
+    "id": "primary-computing-b4-b6",
+    "subject": "Computing",
+    "subjectId": "computing",
+    "url": "https://mingycomputersgh.wordpress.com/wp-content/uploads/2019/08/computing-b4-b6.pdf",
+    "localPath": ".temp/curriculum-audit/primary-computing-b4-b6.pdf",
+    "grades": [4, 5, 6],
+    "firstContentPage": 23,
+    "sha256": "d622739de46fdc138508aa82b56a196453581677cd653bcab5f4b3723eb1ecca",
+    "pdfPages": 76,
+    "status": "references-extracted",
+    "indicatorCount": 206,
+    "byLevel": {
+      "B4": 27,
+      "B5": 81,
+      "B6": 98
+    },
+    "excludedReferences": [
+      {
+        "code": "B1.1.2.1.1",
+        "pages": [18]
+      }
+    ]
+  },
+  {
+    "id": "primary-history-b1-b6",
+    "subject": "History",
+    "subjectId": "history",
+    "url": "https://mingycomputersgh.wordpress.com/wp-content/uploads/2019/08/history-b1-b6.pdf",
+    "localPath": ".temp/curriculum-audit/primary-history-b1-b6.pdf",
+    "grades": [1, 2, 3, 4, 5, 6],
+    "firstContentPage": 24,
+    "sha256": "85600aa3d094a78549a8e7bf614d2c4a22ed1238b8213405fb0625ae9dd0f828",
+    "pdfPages": 70,
+    "status": "references-extracted",
+    "indicatorCount": 51,
+    "byLevel": {
+      "B1": 8,
+      "B2": 4,
+      "B3": 7,
+      "B4": 11,
+      "B5": 12,
+      "B6": 9
+    },
+    "excludedReferences": [
+      {
+        "code": "B1.1.1.1.1",
+        "pages": [21]
+      },
+      {
+        "code": "B1.2.3.4.1",
+        "pages": [21]
+      },
+      {
+        "code": "B4.1.1.1.1",
+        "pages": [21]
+      }
+    ]
+  },
+  {
+    "id": "primary-maths-lower-primary-b1-b3",
+    "subject": "Mathematics",
+    "subjectId": "mathematics",
+    "url": "https://mingycomputersgh.wordpress.com/wp-content/uploads/2019/08/maths-lower-primary-b1-b3.pdf",
+    "localPath": ".temp/curriculum-audit/primary-maths-lower-primary-b1-b3.pdf",
+    "grades": [1, 2, 3],
+    "firstContentPage": 23,
+    "sha256": "9d178a3a2585a82c86766a2f61b5b5bb2b503783e8ed1428a6237c43822a1aa0",
+    "pdfPages": 95,
+    "status": "references-extracted",
+    "indicatorCount": 92,
+    "byLevel": {
+      "B1": 24,
+      "B2": 29,
+      "B3": 39
+    },
+    "excludedReferences": [
+      {
+        "code": "B1.1.2.1.1",
+        "pages": [18]
+      },
+      {
+        "code": "B4.1.1.3.2",
+        "pages": [68]
+      }
+    ]
+  },
+  {
+    "id": "primary-maths-upper-primary-b4-b6",
+    "subject": "Mathematics",
+    "subjectId": "mathematics",
+    "url": "https://mingycomputersgh.wordpress.com/wp-content/uploads/2019/08/maths-upper-primary-b4-b6.pdf",
+    "localPath": ".temp/curriculum-audit/primary-maths-upper-primary-b4-b6.pdf",
+    "grades": [4, 5, 6],
+    "firstContentPage": 23,
+    "sha256": "4b4439306ad2fafc07f92ca6061dcbfbde63975549177fde3c69393faf4a427c",
+    "pdfPages": 183,
+    "status": "references-extracted",
+    "indicatorCount": 180,
+    "byLevel": {
+      "B4": 71,
+      "B5": 67,
+      "B6": 42
+    },
+    "excludedReferences": [
+      {
+        "code": "B1.1.2.1.1",
+        "pages": [18]
+      }
+    ]
+  },
+  {
+    "id": "primary-our-world-and-our-people-b1-b3-1",
+    "subject": "Our World and Our People",
+    "subjectId": "our-world-and-our-people",
+    "url": "https://mingycomputersgh.wordpress.com/wp-content/uploads/2019/08/our-world-and-our-people-b1-b3-1.pdf",
+    "localPath": ".temp/curriculum-audit/primary-our-world-and-our-people-b1-b3-1.pdf",
+    "grades": [1, 2, 3],
+    "firstContentPage": 19,
+    "sha256": "3cd06c4201b427869de54f4f83761c57434137541007e505d811aa1e6d3adb09",
+    "pdfPages": 77,
+    "status": "references-extracted",
+    "indicatorCount": 74,
+    "byLevel": {
+      "B1": 23,
+      "B2": 24,
+      "B3": 27
+    },
+    "excludedReferences": [
+      {
+        "code": "B1.2.3.4.1",
+        "pages": [16]
+      }
+    ]
+  },
+  {
+    "id": "primary-our-world-and-our-people-b4-b6-1",
+    "subject": "Our World and Our People",
+    "subjectId": "our-world-and-our-people",
+    "url": "https://mingycomputersgh.wordpress.com/wp-content/uploads/2019/08/our-world-and-our-people-b4-b6-1.pdf",
+    "localPath": ".temp/curriculum-audit/primary-our-world-and-our-people-b4-b6-1.pdf",
+    "grades": [4, 5, 6],
+    "firstContentPage": 19,
+    "sha256": "4706f53302c0ef5e986f0c9133cc4271b90c7dcd72e7c3fe96338310553946e6",
+    "pdfPages": 82,
+    "status": "references-extracted",
+    "indicatorCount": 74,
+    "byLevel": {
+      "B4": 25,
+      "B5": 25,
+      "B6": 24
+    },
+    "excludedReferences": [
+      {
+        "code": "B1.2.3.4.1",
+        "pages": [16]
+      }
+    ]
+  },
+  {
+    "id": "primary-physical-education-b1-b6",
+    "subject": "Physical Education",
+    "subjectId": "physical-education",
+    "url": "https://mingycomputersgh.wordpress.com/wp-content/uploads/2019/08/physical-education-b1-b6.pdf",
+    "localPath": ".temp/curriculum-audit/primary-physical-education-b1-b6.pdf",
+    "grades": [1, 2, 3, 4, 5, 6],
+    "firstContentPage": 23,
+    "sha256": "1d9d3435fb0674cecfcaa8be7c4ee90a64a75102e011ced949060c774e82e433",
+    "pdfPages": 112,
+    "status": "references-extracted",
+    "indicatorCount": 214,
+    "byLevel": {
+      "B1": 34,
+      "B2": 38,
+      "B3": 38,
+      "B4": 36,
+      "B5": 31,
+      "B6": 37
+    },
+    "excludedReferences": [
+      {
+        "code": "B1.1.1.1.1",
+        "pages": [18]
+      },
+      {
+        "code": "B1.1.2.1.1",
+        "pages": [19]
+      },
+      {
+        "code": "B1.1.3.1.3",
+        "pages": [18]
+      },
+      {
+        "code": "B1.2.3.4.1",
+        "pages": [20]
+      },
+      {
+        "code": "B2.1.2.1.2",
+        "pages": [18]
+      },
+      {
+        "code": "B3.1.13.1.17",
+        "pages": [18]
+      }
+    ]
+  },
+  {
+    "id": "primary-religious-and-moral-education-b1-b6",
+    "subject": "Religious and Moral Education",
+    "subjectId": "religious-and-moral-education",
+    "url": "https://mingycomputersgh.wordpress.com/wp-content/uploads/2019/08/religious-and-moral-education-b1-b6.pdf",
+    "localPath": ".temp/curriculum-audit/primary-religious-and-moral-education-b1-b6.pdf",
+    "grades": [1, 2, 3, 4, 5, 6],
+    "firstContentPage": 22,
+    "sha256": "d3c811c293fed2c5c97faadc162012ea3d02f11de676dd0a38f6a5151d23d279",
+    "pdfPages": 77,
+    "status": "references-extracted",
+    "indicatorCount": 77,
+    "byLevel": {
+      "B1": 9,
+      "B2": 13,
+      "B3": 14,
+      "B4": 13,
+      "B5": 15,
+      "B6": 13
+    },
+    "excludedReferences": [
+      {
+        "code": "B1.1.2.1.1",
+        "pages": [19]
+      }
+    ]
+  },
+  {
+    "id": "primary-science-lower-primary-b1-b3",
+    "subject": "Science",
+    "subjectId": "science",
+    "url": "https://mingycomputersgh.wordpress.com/wp-content/uploads/2019/08/science-lower-primary-b1-b3.pdf",
+    "localPath": ".temp/curriculum-audit/primary-science-lower-primary-b1-b3.pdf",
+    "grades": [1, 2, 3],
+    "firstContentPage": 22,
+    "sha256": "7fb385f2305a7bba44bc2d31f5472fd2aecd5fce3692180f361a8a0a575bc4a9",
+    "pdfPages": 65,
+    "status": "references-extracted",
+    "indicatorCount": 81,
+    "byLevel": {
+      "B1": 31,
+      "B2": 25,
+      "B3": 25
+    },
+    "excludedReferences": [
+      {
+        "code": "B1.1.1.1.1",
+        "pages": [18]
+      },
+      {
+        "code": "B2.1.1.1.1",
+        "pages": [18]
+      },
+      {
+        "code": "B3.1.1.1.1",
+        "pages": [18]
+      },
+      {
+        "code": "B3.2.4.1.2",
+        "pages": [17]
+      },
+      {
+        "code": "B4.1.1.1.1",
+        "pages": [18]
+      }
+    ]
+  },
+  {
+    "id": "primary-science-upper-primary-b4-b6",
+    "subject": "Science",
+    "subjectId": "science",
+    "url": "https://mingycomputersgh.wordpress.com/wp-content/uploads/2019/08/science-upper-primary-b4-b6.pdf",
+    "localPath": ".temp/curriculum-audit/primary-science-upper-primary-b4-b6.pdf",
+    "grades": [4, 5, 6],
+    "firstContentPage": 24,
+    "sha256": "9fd09042246256c1248d6976c4ee82b8b02c910fec771bc797ec2b05320e3c7b",
+    "pdfPages": 69,
+    "status": "references-extracted",
+    "indicatorCount": 79,
+    "byLevel": {
+      "B4": 24,
+      "B5": 29,
+      "B6": 26
+    },
+    "excludedReferences": [
+      {
+        "code": "B1.1.1.1.1",
+        "pages": [20]
+      },
+      {
+        "code": "B1.4.1.2.2",
+        "pages": [48]
+      },
+      {
+        "code": "B2.1.1.1.1",
+        "pages": [20]
+      },
+      {
+        "code": "B3.1.1.1.1",
+        "pages": [20]
+      },
+      {
+        "code": "B4.1.1.1.1",
+        "pages": [20]
+      },
+      {
+        "code": "B4.2.4.1.2",
+        "pages": [19]
+      }
+    ]
+  },
+  {
+    "id": "primary-creative-arts-b4-b6-",
+    "subject": "Creative Arts",
+    "subjectId": "creative-arts",
+    "url": "https://mingycomputersgh.wordpress.com/wp-content/uploads/2019/08/creative-arts-b4-b6-.pdf",
+    "localPath": ".temp/curriculum-audit/primary-creative-arts-b4-b6-.pdf",
+    "grades": [4, 5, 6],
+    "firstContentPage": 28,
+    "sha256": "848d2d6eac17570e2f3b3b7a492787abd50fab70daa722d8eb0c1a312a516b9f",
+    "pdfPages": 142,
+    "status": "references-extracted",
+    "indicatorCount": 141,
+    "byLevel": {
+      "B4": 47,
+      "B5": 48,
+      "B6": 46
+    },
+    "excludedReferences": []
+  },
+  {
+    "id": "jhs-mathematics-1",
+    "subject": "Mathematics",
+    "subjectId": "mathematics",
+    "url": "https://mingycomputersgh.wordpress.com/wp-content/uploads/2023/10/mathematics-1.pdf",
+    "localPath": ".temp/curriculum-audit/jhs-mathematics-1.pdf",
+    "grades": [7, 8, 9],
+    "firstContentPage": 32,
+    "sha256": "220a7c1d435ecb4d81bd90bd081c44038aeab3a28a5e9f888128a4b450ef4bd2",
+    "pdfPages": 259,
+    "status": "references-extracted",
+    "indicatorCount": 177,
+    "byLevel": {
+      "B7": 68,
+      "B8": 58,
+      "B9": 51
+    },
+    "excludedReferences": []
+  },
+  {
+    "id": "jhs-computing",
+    "subject": "Computing",
+    "subjectId": "computing",
+    "url": "https://mingycomputersgh.wordpress.com/wp-content/uploads/2023/10/computing.pdf",
+    "localPath": ".temp/curriculum-audit/jhs-computing.pdf",
+    "grades": [7, 8, 9],
+    "firstContentPage": 31,
+    "sha256": "4d157e4ed4acf74879a0b8f7378319221ee639f42ce0d3b5eb820029210253fe",
+    "pdfPages": 95,
+    "status": "references-extracted",
+    "indicatorCount": 123,
+    "byLevel": {
+      "B7": 50,
+      "B8": 37,
+      "B9": 36
+    },
+    "excludedReferences": []
+  },
+  {
+    "id": "jhs-social-studies",
+    "subject": "Social Studies",
+    "subjectId": "social-studies",
+    "url": "https://mingycomputersgh.wordpress.com/wp-content/uploads/2023/10/social-studies.pdf",
+    "localPath": ".temp/curriculum-audit/jhs-social-studies.pdf",
+    "grades": [7, 8, 9],
+    "firstContentPage": 36,
+    "sha256": "6ddd528839c3cd9fddd0eff87e5bcd818cf7fe7393653bb9faed4f6f8d88e98c",
+    "pdfPages": 158,
+    "status": "references-extracted",
+    "indicatorCount": 54,
+    "byLevel": {
+      "B7": 17,
+      "B8": 18,
+      "B9": 19
+    },
+    "excludedReferences": [
+      {
+        "code": "B7.1.1.1.1",
+        "pages": [32]
+      },
+      {
+        "code": "B7.1.1.2.1",
+        "pages": [31]
+      }
+    ]
+  },
+  {
+    "id": "jhs-creative-arts-and-design",
+    "subject": "Creative Arts and Design",
+    "subjectId": "creative-arts-and-design",
+    "url": "https://mingycomputersgh.wordpress.com/wp-content/uploads/2023/10/creative-arts-and-design.pdf",
+    "localPath": ".temp/curriculum-audit/jhs-creative-arts-and-design.pdf",
+    "grades": [7, 8, 9],
+    "firstContentPage": 45,
+    "sha256": "72fef0cb24e07307df33251e6e4b17e11214f719cab6863c82058c6f1e3d7d3c",
+    "pdfPages": 136,
+    "status": "references-extracted",
+    "indicatorCount": 100,
+    "byLevel": {
+      "B7": 33,
+      "B8": 34,
+      "B9": 33
+    },
+    "excludedReferences": [
+      {
+        "code": "B7.1.1.1.1",
+        "pages": [35, 36]
+      }
+    ]
+  },
+  {
+    "id": "jhs-career-technology-k-9-3rd-aug.08.2021",
+    "subject": "Career Technology",
+    "subjectId": "career-technology",
+    "url": "https://mingycomputersgh.wordpress.com/wp-content/uploads/2023/10/career-technology-k-9-3rd-aug.08.2021.pdf",
+    "localPath": ".temp/curriculum-audit/jhs-career-technology-k-9-3rd-aug.08.2021.pdf",
+    "grades": [7, 8, 9],
+    "firstContentPage": 40,
+    "sha256": "c9a2c685038d550acafdcea378d1b7d16d81d28cb8643c1287019da4178bb179",
+    "pdfPages": 165,
+    "status": "references-extracted",
+    "indicatorCount": 133,
+    "byLevel": {
+      "B7": 43,
+      "B8": 42,
+      "B9": 48
+    },
+    "excludedReferences": [
+      {
+        "code": "B7.1.1.1.1",
+        "pages": [36, 37]
+      }
+    ]
+  },
+  {
+    "id": "jhs-science",
+    "subject": "Science",
+    "subjectId": "science",
+    "url": "https://mingycomputersgh.wordpress.com/wp-content/uploads/2023/10/science.pdf",
+    "localPath": ".temp/curriculum-audit/jhs-science.pdf",
+    "grades": [7, 8, 9],
+    "firstContentPage": 39,
+    "sha256": "10e9fbec7adff109f4e1a67301c1f87a4b7cd62a39d9c3d9b2116314a34728b8",
+    "pdfPages": 170,
+    "status": "references-extracted",
+    "indicatorCount": 152,
+    "byLevel": {
+      "B7": 52,
+      "B8": 46,
+      "B9": 54
+    },
+    "excludedReferences": [
+      {
+        "code": "B7.2.4.1.2",
+        "pages": [33]
+      }
+    ]
+  },
+  {
+    "id": "jhs-religious-and-moral-education",
+    "subject": "Religious and Moral Education",
+    "subjectId": "religious-and-moral-education",
+    "url": "https://mingycomputersgh.wordpress.com/wp-content/uploads/2023/10/religious-and-moral-education.pdf",
+    "localPath": ".temp/curriculum-audit/jhs-religious-and-moral-education.pdf",
+    "grades": [7, 8, 9],
+    "firstContentPage": 33,
+    "sha256": "8ac4e955e2977a2cadf9fa6d0e18c544fcf029faae85d549ed7abedb92cf25a4",
+    "pdfPages": 114,
+    "status": "references-extracted",
+    "indicatorCount": 68,
+    "byLevel": {
+      "B7": 27,
+      "B8": 22,
+      "B9": 19
+    },
+    "excludedReferences": [
+      {
+        "code": "B7.1.1.1.1",
+        "pages": [30]
+      },
+      {
+        "code": "B7.2.3.4.5",
+        "pages": [29]
+      }
+    ]
+  },
+  {
+    "id": "jhs-physical-education-and-health",
+    "subject": "Physical Education and Health",
+    "subjectId": "physical-education-and-health",
+    "url": "https://mingycomputersgh.wordpress.com/wp-content/uploads/2023/10/physical-education-and-health.pdf",
+    "localPath": ".temp/curriculum-audit/jhs-physical-education-and-health.pdf",
+    "grades": [7, 8, 9],
+    "firstContentPage": 34,
+    "sha256": "1bbdc4cd05b0c56512f60b231e9fde99a8c2947f17b78ee40f04f6b03bf4d02c",
+    "pdfPages": 93,
+    "status": "references-extracted",
+    "indicatorCount": 54,
+    "byLevel": {
+      "B7": 19,
+      "B8": 18,
+      "B9": 17
+    },
+    "excludedReferences": [
+      {
+        "code": "B7.1.2.3.1",
+        "pages": [30]
+      }
+    ]
+  },
+  {
+    "id": "english-lower-primary-b1-b3",
+    "subject": "English Language",
+    "subjectId": "english-language",
+    "url": "https://mingycomputersgh.wordpress.com/wp-content/uploads/2019/08/english-lower-primary-b1-b3.pdf",
+    "localPath": ".temp/primary-languages/english-lower-primary-b1-b3.pdf",
+    "grades": [1, 2, 3],
+    "firstContentPage": 28,
+    "sha256": "e49a792637011b32ed2ed906d58f9992e5208d2b7c15425ccc971f4f51de43c8",
+    "pdfPages": 125,
+    "status": "references-extracted",
+    "indicatorCount": 217,
+    "byLevel": {
+      "B1": 72,
+      "B2": 67,
+      "B3": 78
+    },
+    "excludedReferences": [
+      {
+        "code": "B1.2.3.1.1",
+        "pages": [19]
+      },
+      {
+        "code": "B2.2.3.1.1",
+        "pages": [19]
+      },
+      {
+        "code": "B3.2.3.1.1",
+        "pages": [19]
+      }
+    ]
+  },
+  {
+    "id": "english-b4-b6",
+    "subject": "English Language",
+    "subjectId": "english-language",
+    "url": "https://mingycomputersgh.wordpress.com/wp-content/uploads/2019/08/english-b4-b6.pdf",
+    "localPath": ".temp/primary-languages/english-b4-b6.pdf",
+    "grades": [4, 5, 6],
+    "firstContentPage": 26,
+    "sha256": "31727bc67e6beba32a5687fa6cffca9b41a4d13c5220e236534f1566fc0d8bdd",
+    "pdfPages": 246,
+    "status": "references-extracted",
+    "indicatorCount": 394,
+    "byLevel": {
+      "B4": 130,
+      "B5": 133,
+      "B6": 131
+    },
+    "excludedReferences": [
+      {
+        "code": "B1.2.3.1.1",
+        "pages": [18]
+      },
+      {
+        "code": "B2.2.3.1.1",
+        "pages": [18]
+      },
+      {
+        "code": "B3.2.3.1.1",
+        "pages": [18]
+      }
+    ]
+  },
+  {
+    "id": "english-jhs",
+    "subject": "English Language",
+    "subjectId": "english-language",
+    "url": "https://mingycomputersgh.wordpress.com/wp-content/uploads/2023/10/english-language.pdf",
+    "localPath": ".temp/primary-languages/english-jhs.pdf",
+    "grades": [7, 8, 9],
+    "firstContentPage": 38,
+    "sha256": "591295cce071d3021e5b9259594a0733000be081693e2c7ece2a12ba0605b961",
+    "pdfPages": 139,
+    "status": "references-extracted",
+    "indicatorCount": 152,
+    "byLevel": {
+      "B7": 53,
+      "B8": 49,
+      "B9": 50
+    },
+    "excludedReferences": []
+  },
+  {
+    "id": "ghanaian-language-b1-b3",
+    "subject": "Ghanaian Language",
+    "subjectId": "ghanaian-language",
+    "url": "https://mingycomputersgh.wordpress.com/wp-content/uploads/2019/08/ghanaian-language-b1-b3.pdf",
+    "localPath": ".temp/primary-languages/ghanaian-language-b1-b3.pdf",
+    "grades": [1, 2, 3],
+    "firstContentPage": 53,
+    "sha256": "fa39716c2b627e3acf115e72e03ae627d0bbe098cbdcc031a0319db470074de0",
+    "pdfPages": 139,
+    "status": "references-extracted",
+    "indicatorCount": 219,
+    "byLevel": {
+      "B1": 77,
+      "B2": 69,
+      "B3": 73
+    },
+    "excludedReferences": []
+  },
+  {
+    "id": "ghanaian-language-b4-b6",
+    "subject": "Ghanaian Language",
+    "subjectId": "ghanaian-language",
+    "url": "https://mingycomputersgh.wordpress.com/wp-content/uploads/2019/08/ghanaian-language-b4-b6.pdf",
+    "localPath": ".temp/primary-languages/ghanaian-language-b4-b6.pdf",
+    "grades": [4, 5, 6],
+    "firstContentPage": 29,
+    "sha256": "3dad5f474de7d6428131efdf138e4030709448fd57ec800d551d1966bf53f9f0",
+    "pdfPages": 119,
+    "status": "references-extracted",
+    "indicatorCount": 268,
+    "byLevel": {
+      "B4": 85,
+      "B5": 89,
+      "B6": 94
+    },
+    "excludedReferences": [
+      {
+        "code": "B1.1.4.1.1",
+        "pages": [21]
+      },
+      {
+        "code": "B2.1.4.1.1",
+        "pages": [21]
+      }
+    ]
+  },
+  {
+    "id": "ghanaian-jhs",
+    "subject": "Ghanaian Language",
+    "subjectId": "ghanaian-language",
+    "url": "https://mingycomputersgh.wordpress.com/wp-content/uploads/2023/10/ghanaian-language.pdf",
+    "localPath": ".temp/primary-languages/ghanaian-jhs.pdf",
+    "grades": [7, 8, 9],
+    "firstContentPage": 36,
+    "sha256": "cb16d15f9766dec29734057627c49dc6ef40b3250212c71e96d6b0571177e077",
+    "pdfPages": 107,
+    "status": "references-extracted",
+    "indicatorCount": 104,
+    "byLevel": {
+      "B7": 48,
+      "B8": 28,
+      "B9": 28
+    },
+    "excludedReferences": [
+      {
+        "code": "B7.4.2.3.1",
+        "pages": [31]
+      }
+    ]
+  },
+  {
+    "id": "french-b1-b6",
+    "subject": "French",
+    "subjectId": "french",
+    "url": "https://mingycomputersgh.wordpress.com/wp-content/uploads/2019/08/french-b1-b6.pdf",
+    "localPath": ".temp/primary-languages/french-b1-b6.pdf",
+    "grades": [4, 5, 6],
+    "firstContentPage": 24,
+    "sha256": "3f8f8d9d475f2ef1b357fea1c0a2e55ec699a43082239c781512c19712d8f372",
+    "pdfPages": 101,
+    "status": "references-extracted",
+    "indicatorCount": 267,
+    "byLevel": {
+      "B4": 89,
+      "B5": 90,
+      "B6": 88
+    },
+    "excludedReferences": [
+      {
+        "code": "B2.4.2.3.1",
+        "pages": [18]
+      }
+    ]
+  },
+  {
+    "id": "french-jhs",
+    "subject": "French",
+    "subjectId": "french",
+    "url": "https://nacca.gov.gh/wp-content/uploads/2023/06/FRENCH-LANGUAGE.pdf",
+    "localPath": ".temp/primary-languages/french-jhs.pdf",
+    "grades": [7, 8, 9],
+    "firstContentPage": 36,
+    "sha256": "f90993e43ecc3509db61f710a7a187c8284ffb1526054e6436b7d3752c68f638",
+    "pdfPages": 185,
+    "status": "references-extracted",
+    "indicatorCount": 166,
+    "byLevel": {
+      "B7": 64,
+      "B8": 54,
+      "B9": 48
+    },
+    "excludedReferences": [
+      {
+        "code": "B7.4.2.3.1",
+        "pages": [30]
+      }
+    ]
+  },
+  {
+    "id": "primary-creative-arts-b1-b3",
+    "subject": "Creative Arts",
+    "subjectId": "creative-arts",
+    "url": "https://curriculumresources.edu.gh/basic/wp-content/uploads/2026/05/Creative-Arts-B1-B3-2.pdf",
+    "localPath": ".temp/curriculum-audit/primary-creative-arts-b1-b3.pdf",
+    "grades": [1, 2, 3],
+    "firstContentPage": 28,
+    "sha256": "60352f9ff1170cd64d2bd9db77dfbb9e58bc253cbc04dc1f274abcb9b0774a2b",
+    "pdfPages": 131,
+    "status": "references-extracted",
+    "indicatorCount": 124,
+    "byLevel": {
+      "B1": 42,
+      "B2": 42,
+      "B3": 40
+    },
+    "excludedReferences": []
+  },
+  {
+    "id": "jhs-arabic",
+    "subject": "Arabic",
+    "subjectId": "arabic",
+    "url": "https://nacca.gov.gh/wp-content/uploads/2023/06/ARABIC.pdf",
+    "localPath": ".temp/curriculum-audit/jhs-arabic.pdf",
+    "grades": [7, 8, 9],
+    "status": "source-unavailable",
+    "indicatorCount": null
+  }
+]

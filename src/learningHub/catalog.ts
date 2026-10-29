@@ -1,3 +1,5 @@
+import { generatedMathematicsLessons } from './generated/mathematics.ts';
+import { livingCellLessons } from './generated/livingCells.ts';
 /** Original learning material mapped to the cited NaCCA curriculum; not an official textbook. */
 export interface HubQuestion {
   id: string;
@@ -56,6 +58,8 @@ const lesson = (
   sourceTitle: `NaCCA ${subject} Common Core Programme, B7–B9 (mirror)`,
 });
 export const hubLessons: HubLesson[] = [
+  ...generatedMathematicsLessons,
+  ...livingCellLessons,
   lesson(
     'b7-math-fractions',
     'Fractions, decimals and percentages',
