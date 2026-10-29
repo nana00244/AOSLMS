@@ -41,6 +41,22 @@ export const lessonSchema = z
   );
 const activity = { lessonId: text(150), assignmentId: z.string().uuid().optional() };
 export const requestSchema = z.discriminatedUnion('action', [
+  z
+    .object({
+      action: z.literal('start-practice'),
+      ...activity,
+      kind: z.enum(['practice', 'quiz', 'unit-test']),
+      requestId: z.string().uuid(),
+    })
+    .strict(),
+  z
+    .object({
+      action: z.literal('submit-session'),
+      ...activity,
+      sessionId: z.string().uuid(),
+      answers: z.array(z.number().int().min(0).max(5)).min(1).max(10),
+    })
+    .strict(),
   z.object({ action: z.literal('load') }).strict(),
   z.object({ action: z.literal('create-lesson'), lesson: lessonSchema }).strict(),
   z

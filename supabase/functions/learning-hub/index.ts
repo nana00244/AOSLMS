@@ -1,6 +1,12 @@
 import { authenticate, json } from '../_shared/http.ts';
 import { hubLessons, type HubLesson } from '../../../src/learningHub/catalog.ts';
 import { gradePractice, learnerLesson, manages, profileUser, requestSchema } from './rules.ts';
+import {
+  drawQuestions,
+  masteryForLesson,
+  masteryLevels,
+  type PracticeHistory,
+} from '../../../src/learningHub/questionBank.ts';
 
 const assignmentView = (r: any) => ({
   id: r.id,
@@ -17,6 +23,12 @@ const activityView = (r: any) => ({
   studentId: r.student_id,
   assignmentId: r.assignment_id,
   createdAt: r.created_at,
+  kind: r.kind || 'legacy',
+  outcomes: (r.question_results || []).map(({ questionId, lessonId, correct }: any) => ({
+    questionId,
+    lessonId,
+    correct,
+  })),
   ...(r.score === undefined ? {} : { score: r.score, correct: r.correct, total: r.total }),
 });
 
@@ -177,6 +189,128 @@ Deno.serve(async (request) => {
       student_id: student.id,
       assignment_id: input.assignmentId || null,
     };
+    if (input.action === 'start-practice' || input.action === 'submit-session') {
+      const historyRows = (await rows(client, 'learning_hub_attempts')).filter(
+        (r) => r.student_id === student.id && r.kind !== 'legacy',
+      );
+      const history: PracticeHistory[] = historyRows.map((r) => ({
+        kind: r.kind,
+        score: r.score,
+        total: r.total,
+        createdAt: r.created_at,
+        outcomes: r.question_results || [],
+      }));
+      if (input.action === 'start-practice') {
+        const sessions = (await rows(client, 'learning_hub_sessions')).filter(
+          (s) => s.student_id === student.id,
+        );
+        let session = sessions.find((s) => s.id === input.requestId);
+        if (
+          session &&
+          (session.lesson_id !== lesson.id ||
+            session.assignment_id !== (input.assignmentId || null) ||
+            session.kind !== input.kind)
+        )
+          return json({ error: 'This request identifier belongs to a different session' }, 409);
+        if (!session) {
+          const questions = drawQuestions(
+            lesson,
+            visibleLessons,
+            input.kind,
+            history,
+            sessions.flatMap((s) => s.questions.map((q: any) => q.id)),
+          );
+          const saved = await client
+            .from('learning_hub_sessions')
+            .insert({ ...base, id: input.requestId, kind: input.kind, questions })
+            .select('*')
+            .single();
+          if (saved.error?.code === '23505') {
+            const existing = await client
+              .from('learning_hub_sessions')
+              .select('*')
+              .eq('id', input.requestId)
+              .eq('student_id', student.id)
+              .single();
+            if (existing.error) throw existing.error;
+            session = existing.data;
+          } else {
+            if (saved.error) throw saved.error;
+            session = saved.data;
+          }
+        }
+        if (
+          session.lesson_id !== lesson.id ||
+          session.assignment_id !== (input.assignmentId || null) ||
+          session.kind !== input.kind
+        )
+          return json({ error: 'This request identifier belongs to a different session' }, 409);
+        return json({
+          id: session.id,
+          kind: session.kind,
+          lessonId: session.lesson_id,
+          assignmentId: session.assignment_id,
+          questions: session.questions.map(({ id, lessonId, prompt, options }: any) => ({
+            id,
+            lessonId,
+            prompt,
+            options,
+          })),
+          expiresAt: session.expires_at,
+        });
+      }
+      const session = await client
+        .from('learning_hub_sessions')
+        .select('*')
+        .eq('id', input.sessionId)
+        .eq('student_id', student.id)
+        .single();
+      if (
+        session.error ||
+        session.data.lesson_id !== lesson.id ||
+        session.data.assignment_id !== (input.assignmentId || null)
+      )
+        return json(
+          { error: 'This session is not assigned to you or belongs to another lesson' },
+          403,
+        );
+      const saved = await client.rpc('finish_learning_hub_session', {
+        session_key: input.sessionId,
+        learner_key: student.id,
+        answers: input.answers,
+      });
+      if (saved.error) throw saved.error;
+      const attempt = saved.data;
+      const previous = historyRows
+        .filter((r) => r.id !== attempt.id)
+        .map((r) => ({
+          kind: r.kind,
+          score: r.score,
+          total: r.total,
+          createdAt: r.created_at,
+          outcomes: r.question_results || [],
+        }));
+      const before = masteryForLesson(lesson.id, previous);
+      const after = masteryForLesson(lesson.id, [
+        ...previous,
+        {
+          kind: attempt.kind,
+          score: attempt.score,
+          total: attempt.total,
+          createdAt: attempt.created_at,
+          outcomes: attempt.question_results,
+        },
+      ]);
+      return json({
+        attempt: activityView(attempt),
+        feedback: attempt.question_results,
+        mastery: {
+          before,
+          after,
+          upgraded: masteryLevels.indexOf(after) > masteryLevels.indexOf(before),
+        },
+      });
+    }
     if (input.action === 'complete-reading') {
       const result = await client.from('learning_hub_readings').upsert(base, {
         onConflict: 'student_id,lesson_id,assignment_id',

@@ -1,4 +1,5 @@
 import type { HubSnapshot } from './types';
+import { masteryForLesson, type PracticeHistory } from './questionBank';
 
 export function learningStatus(
   snapshot: HubSnapshot,
@@ -9,7 +10,7 @@ export function learningStatus(
   const attempts = snapshot.attempts.filter(
     (a) =>
       a.studentId === studentId &&
-      a.lessonId === lessonId &&
+      (a.lessonId === lessonId || a.outcomes?.some((o) => o.lessonId === lessonId)) &&
       (!assignmentId || a.assignmentId === assignmentId),
   );
   const latest = [...attempts].sort((a, b) => b.createdAt.localeCompare(a.createdAt))[0];
@@ -20,20 +21,26 @@ export function learningStatus(
       (!assignmentId || r.assignmentId === assignmentId),
   );
   const hasQuestions = !!snapshot.lessons.find((l) => l.id === lessonId)?.questions.length;
+  const history: PracticeHistory[] = attempts.flatMap((a) =>
+    a.kind && a.kind !== 'legacy' && a.outcomes
+      ? [
+          {
+            kind: a.kind,
+            score: a.score,
+            total: a.total,
+            createdAt: a.createdAt,
+            outcomes: a.outcomes,
+          },
+        ]
+      : [],
+  );
+  const mastery = masteryForLesson(lessonId, history);
   return {
     attempts,
     latest,
     read,
     complete: read && (!hasQuestions || !!latest),
-    label: latest
-      ? latest.score >= 80
-        ? 'Proficient'
-        : latest.score >= 50
-          ? 'Developing'
-          : 'Needs practice'
-      : read
-        ? 'Lesson read'
-        : 'Not started',
+    label: mastery === 'Not started' && latest ? 'Attempted' : mastery,
   };
 }
 export function recommendation(score: number | undefined, read: boolean): string {

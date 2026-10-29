@@ -18,6 +18,7 @@ import {
   Lightbulb,
   X,
 } from 'lucide-react';
+import { LessonPlayer } from './LessonPlayer';
 import { useStore, csv } from '../store';
 import { Button, Field, Modal } from '../components/ui';
 import { canTeach } from '../backendAccess';
@@ -139,7 +140,7 @@ export function LearningHub() {
       {!loading && !error && (
         <>
           {lesson ? (
-            <LessonView
+            <LessonPlayer
               key={`${lesson.id}-${assignmentId || ''}`}
               lesson={lesson}
               assignmentId={assignmentId}
@@ -442,223 +443,6 @@ function EmptyHub({ title, text }: { title: string; text: string }) {
     </div>
   );
 }
-function LessonView({
-  lesson,
-  assignmentId,
-  snapshot,
-  studentId,
-  staff,
-  onBack,
-  onAssign,
-  onSaved,
-}: {
-  lesson: LearningLesson;
-  assignmentId?: string;
-  snapshot: HubSnapshot;
-  studentId: string;
-  staff: boolean;
-  onBack: () => void;
-  onAssign: () => void;
-  onSaved: () => Promise<void>;
-}) {
-  const [practice, setPractice] = useState(false),
-    [busy, setBusy] = useState(false),
-    [error, setError] = useState('');
-  const [answers, setAnswers] = useState<number[]>([]),
-    [result, setResult] = useState<HubPracticeResult | null>(null);
-  const status = learningStatus(snapshot, studentId, lesson.id, assignmentId);
-  async function markRead() {
-    setBusy(true);
-    setError('');
-    try {
-      await completeHubReading(lesson.id, assignmentId);
-      await onSaved();
-    } catch (e) {
-      setError(e instanceof Error ? e.message : 'Could not save reading progress.');
-    } finally {
-      setBusy(false);
-    }
-  }
-  async function submit() {
-    setBusy(true);
-    setError('');
-    try {
-      setResult(await submitHubPractice(lesson.id, answers, assignmentId));
-      await onSaved();
-    } catch (e) {
-      setError(e instanceof Error ? e.message : 'Could not save your answers.');
-    } finally {
-      setBusy(false);
-    }
-  }
-  return (
-    <section className="lh-lesson-page">
-      <button className="lh-back" onClick={onBack}>
-        <ArrowLeft size={17} /> Back to {assignmentId ? 'assignments' : 'courses'}
-      </button>
-      <div className="lh-lesson-layout">
-        <aside className="lh-outline">
-          <span className="lh-eyebrow">
-            {levelName(lesson.level)} · {lesson.subject}
-          </span>
-          <h3>{lesson.strand}</h3>
-          <button className={!practice ? 'active' : ''} onClick={() => setPractice(false)}>
-            <BookOpen size={18} /> Read lesson {status.read && <CheckCircle2 size={16} />}
-          </button>
-          {lesson.questions.length > 0 && (
-            <button className={practice ? 'active' : ''} onClick={() => setPractice(true)}>
-              <Target size={18} /> Practice {status.latest && <span>{status.latest.score}%</span>}
-            </button>
-          )}
-          <div className="lh-standard">
-            <strong>Curriculum standard</strong>
-            <p>{lesson.standard}</p>
-            <a href={lesson.sourceUrl} target="_blank" rel="noreferrer">
-              {lesson.sourceTitle} <ExternalLink size={13} />
-            </a>
-          </div>
-        </aside>
-        <article className="lh-article">
-          <div className="lh-article-heading">
-            <span className="lh-eyebrow">
-              {practice ? 'BUILD YOUR SKILLS' : 'UNDERSTAND THE IDEA'}
-            </span>
-            {staff && <Button onClick={onAssign}>Assign lesson</Button>}
-          </div>
-          <h2>{lesson.title}</h2>
-          <p className="lh-intro">{lesson.description}</p>
-          {error && (
-            <p role="alert" className="lh-error">
-              {error}
-            </p>
-          )}
-          {!practice ? (
-            <>
-              <div className="lh-reading">
-                {lesson.body.map((p, i) => (
-                  <p key={i}>{p}</p>
-                ))}
-              </div>
-              <aside className="lh-tip">
-                <Lightbulb size={22} />
-                <p>
-                  Pause and explain the idea in your own words. Try an example on paper before
-                  moving to practice.
-                </p>
-              </aside>
-              <div className="lh-actions">
-                {!staff && (
-                  <Button
-                    variant="secondary"
-                    disabled={busy || status.read}
-                    onClick={() => void markRead()}
-                  >
-                    {status.read ? (
-                      <>
-                        <CheckCircle2 size={17} /> Reading saved
-                      </>
-                    ) : (
-                      'Mark as read'
-                    )}
-                  </Button>
-                )}
-                {lesson.questions.length > 0 && (
-                  <Button onClick={() => setPractice(true)}>
-                    Start practice <ArrowRight size={17} />
-                  </Button>
-                )}
-              </div>
-            </>
-          ) : (
-            <>
-              {staff && (
-                <p className="lh-notice">
-                  Teacher preview. Student answers are scored and saved when a student submits.
-                </p>
-              )}
-              {lesson.questions.map((q, i) => (
-                <fieldset className="lh-question" key={q.id}>
-                  <legend>
-                    <span>{i + 1}</span> {q.prompt}
-                  </legend>
-                  {q.options.map((o, n) => (
-                    <label
-                      key={n}
-                      className={`${answers[i] === n ? 'selected' : ''} ${result?.feedback[i]?.answer === n ? 'correct' : ''}`}
-                    >
-                      <input
-                        type="radio"
-                        name={`answer-${i}`}
-                        checked={answers[i] === n}
-                        disabled={!!result}
-                        onChange={() =>
-                          setAnswers((a) => {
-                            const next = [...a];
-                            next[i] = n;
-                            return next;
-                          })
-                        }
-                      />
-                      <span>{String.fromCharCode(65 + n)}</span>
-                      {o}
-                    </label>
-                  ))}
-                  {result && (
-                    <p
-                      className={`lh-feedback ${result.feedback[i]?.correct ? 'correct' : 'incorrect'}`}
-                    >
-                      {result.feedback[i]?.correct ? 'Correct. ' : 'Review this idea. '}
-                      {result.feedback[i]?.explanation}
-                    </p>
-                  )}
-                  {staff && q.answer !== undefined && (
-                    <details>
-                      <summary>View answer and explanation</summary>
-                      <p>
-                        {q.options[q.answer]} — {q.explanation}
-                      </p>
-                    </details>
-                  )}
-                </fieldset>
-              ))}
-              {result ? (
-                <div className="lh-result" role="status">
-                  <h3>
-                    {result.attempt.correct} of {result.attempt.total} correct ·{' '}
-                    {result.attempt.score}%
-                  </h3>
-                  <p>{recommendation(result.attempt.score, status.read)}</p>
-                  {!status.read && (
-                    <p>Return to the lesson and mark it as read to complete both learning steps.</p>
-                  )}
-                  <Button
-                    variant="secondary"
-                    onClick={() => {
-                      setResult(null);
-                      setAnswers([]);
-                    }}
-                  >
-                    Try again
-                  </Button>
-                </div>
-              ) : (
-                !staff && (
-                  <Button
-                    disabled={busy || lesson.questions.some((_, i) => answers[i] === undefined)}
-                    onClick={() => void submit()}
-                  >
-                    {busy ? 'Saving answers…' : 'Submit answers'}
-                  </Button>
-                )
-              )}
-            </>
-          )}
-        </article>
-      </div>
-    </section>
-  );
-}
-
 function AssignDialog({
   lesson,
   initialStudent,
@@ -1034,8 +818,10 @@ function ProgressView({
         </div>
         <div>
           <span>Proficient skills</span>
-          <strong>{rows.filter((r) => (r.status.latest?.score ?? -1) >= 80).length}</strong>
-          <small>Latest score at least 80%</small>
+          <strong>
+            {rows.filter((r) => ['Proficient', 'Mastered'].includes(r.status.label)).length}
+          </strong>
+          <small>Proficient or mastered through assessed practice</small>
         </div>
       </div>
       {!rows.length ? (
@@ -1048,7 +834,7 @@ function ProgressView({
           <div className="lh-section-heading">
             <h3>Skills & recommendations</h3>
             <span className="lh-legend">
-              Not started · Needs practice &lt;50% · Developing 50–79% · Proficient ≥80%
+              Not started · Attempted · Familiar · Proficient · Mastered
             </span>
           </div>
           <div className="lh-table-wrap">

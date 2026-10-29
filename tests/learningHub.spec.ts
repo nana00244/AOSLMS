@@ -1,6 +1,6 @@
 import { test, expect, type Page } from '@playwright/test';
 import { seed, type Role } from '../src/data';
-import type { HubSnapshot, LearningLesson } from '../src/learningHub/types';
+import type { HubSnapshot, LearningLesson, PracticeSession } from '../src/learningHub/types';
 
 const lesson: LearningLesson = {
   id: 'hub-test-lesson',
@@ -16,18 +16,11 @@ const lesson: LearningLesson = {
   ],
   sourceUrl: 'https://nacca.gov.gh/',
   sourceTitle: 'NaCCA curriculum',
-  questions: [
-    {
-      id: 'q1',
-      prompt: 'Which fraction is equivalent to one half?',
-      options: ['2/4', '1/4', '3/4'],
-    },
-    {
-      id: 'q2',
-      prompt: 'Which fraction is equivalent to two thirds?',
-      options: ['2/6', '4/6', '3/4'],
-    },
-  ],
+  questions: Array.from({ length: 12 }, (_, i) => ({
+    id: 'q' + (i + 1),
+    prompt: 'Which fraction is equivalent to ' + (i + 1) + '/' + (i + 2) + '?',
+    options: [2 * (i + 1) + '/' + 2 * (i + 2), i + 1 + '/' + 2 * (i + 2), i + 3 + '/' + (i + 2)],
+  })),
 };
 async function setup(page: Page, role: Role) {
   const state = seed();
@@ -46,6 +39,8 @@ async function setup(page: Page, role: Role) {
   state.users = [owner];
   const hub: HubSnapshot = { lessons: [lesson], assignments: [], attempts: [], readings: [] };
   const requests: Record<string, any>[] = [];
+  const sessions = new Map<string, PracticeSession & { correctAnswers: number[] }>();
+  const requestsToSessions = new Map<string, string>();
   if (role === 'Student')
     hub.assignments.push({
       id: 'hub-assignment',
@@ -99,29 +94,77 @@ async function setup(page: Page, role: Role) {
       hub.readings.push(reading);
       return route.fulfill({ json: reading });
     }
-    if (body.action === 'submit-practice') {
+    if (body.action === 'start-practice') {
+      const existingId = requestsToSessions.get(body.requestId);
+      if (existingId) {
+        const { correctAnswers, ...existing } = sessions.get(existingId)!;
+        return route.fulfill({ json: existing });
+      }
+      const serial = sessions.size;
+      const total = body.kind === 'quiz' ? 5 : body.kind === 'unit-test' ? 10 : 4;
+      const correctAnswers: number[] = [];
+      const questions = Array.from({ length: total }, (_, i) => {
+        const q = lesson.questions[(serial * 4 + i) % lesson.questions.length];
+        const shift = serial % q.options.length;
+        const options = [...q.options.slice(shift), ...q.options.slice(0, shift)];
+        correctAnswers.push(options.indexOf(q.options[0]));
+        return { id: q.id, lessonId: lesson.id, prompt: q.prompt, options };
+      });
+      const session = {
+        id: 'session-' + serial,
+        kind: body.kind,
+        lessonId: body.lessonId,
+        assignmentId: body.assignmentId || null,
+        expiresAt: '2030-01-01T00:00:00Z',
+        questions,
+      };
+      sessions.set(session.id, { ...session, correctAnswers });
+      requestsToSessions.set(body.requestId, session.id);
+      return route.fulfill({ json: session });
+    }
+    if (body.action === 'submit-session') {
+      const session = sessions.get(body.sessionId)!;
       const correct = body.answers.filter(
-        (answer: number, i: number) => answer === [0, 1][i],
+        (answer: number, i: number) => answer === session.correctAnswers[i],
       ).length;
+      const total = session.questions.length;
       const attempt = {
-        id: `attempt-${hub.attempts.length}`,
+        id: 'attempt-' + hub.attempts.length,
         lessonId: body.lessonId,
         assignmentId: body.assignmentId || null,
         studentId: owner.studentId!,
-        score: correct * 50,
+        kind: session.kind,
+        score: Math.round((correct / total) * 100),
         correct,
-        total: 2,
+        total,
+        outcomes: session.questions.map((q, i) => ({
+          questionId: q.id,
+          lessonId: q.lessonId,
+          correct: body.answers[i] === session.correctAnswers[i],
+        })),
         createdAt: new Date().toISOString(),
       };
       hub.attempts.push(attempt);
       return route.fulfill({
         json: {
           attempt,
-          feedback: lesson.questions.map((q, i) => ({
+          mastery: {
+            before: 'Not started',
+            after:
+              correct === total
+                ? session.kind === 'practice'
+                  ? 'Familiar'
+                  : session.kind === 'quiz'
+                    ? 'Proficient'
+                    : 'Mastered'
+                : 'Attempted',
+            upgraded: true,
+          },
+          feedback: session.questions.map((q, i) => ({
             questionId: q.id,
-            correct: body.answers[i] === [0, 1][i],
-            answer: [0, 1][i],
-            explanation: 'Multiply both parts by the same number.',
+            correct: body.answers[i] === session.correctAnswers[i],
+            answer: session.correctAnswers[i],
+            explanation: 'Multiply the numerator and denominator by the same number.',
           })),
         },
       });
@@ -134,13 +177,29 @@ async function setup(page: Page, role: Role) {
     return route.fulfill({ status: 400, json: { error: 'Unexpected test action' } });
   });
   await page.goto('/#/learning-hub');
-  return { state, hub, requests };
+  return { state, hub, requests, sessions };
 }
 
-test('Learning Hub learner completes assigned reading and scored practice across reloads', async ({
+async function answerSession(
+  page: Page,
+  session: PracticeSession & { correctAnswers: number[] },
+  correctCount = session.questions.length,
+) {
+  const questions = page.locator('.lh-question');
+  await expect(questions).toHaveCount(session.questions.length);
+  for (let i = 0; i < session.questions.length; i++) {
+    const index =
+      i < correctCount
+        ? session.correctAnswers[i]
+        : (session.correctAnswers[i] + 1) % session.questions[i].options.length;
+    await questions.nth(i).getByRole('radio').nth(index).check();
+  }
+}
+
+test('Learning Hub learner completes assigned reading and four-question practice across reloads', async ({
   page,
 }) => {
-  const { hub, requests } = await setup(page, 'Student');
+  const { hub, requests, sessions } = await setup(page, 'Student');
   await expect(page.getByRole('heading', { name: 'Learning Hub', exact: true })).toBeVisible();
   await page.getByRole('button', { name: 'My assignments', exact: true }).click();
   await page.getByRole('button', { name: 'Continue', exact: true }).click();
@@ -149,17 +208,22 @@ test('Learning Hub learner completes assigned reading and scored practice across
   await expect.poll(() => hub.readings.length).toBe(1);
   expect(hub.readings[0].assignmentId).toBe('hub-assignment');
   await page.getByRole('button', { name: 'Start practice', exact: true }).click();
-  await page.getByLabel(/2\/4/).check();
-  await page.getByLabel(/2\/6/).check();
+  await expect.poll(() => sessions.size).toBe(1);
+  await answerSession(page, sessions.get('session-0')!, 2);
   await page.getByRole('button', { name: 'Submit answers', exact: true }).click();
   await expect.poll(() => hub.attempts.length).toBe(1);
   expect(hub.attempts[0].score).toBe(50);
-  expect(requests.find((r) => r.action === 'submit-practice')).toMatchObject({
-    answers: [0, 0],
+  expect(hub.attempts[0].total).toBe(4);
+  expect(requests.find((r) => r.action === 'submit-session')).toMatchObject({
+    sessionId: 'session-0',
     assignmentId: 'hub-assignment',
   });
-  expect(requests.find((r) => r.action === 'submit-practice')).not.toHaveProperty('score');
-  await expect(page.getByText(/1 of 2 correct · 50%/)).toBeVisible();
+  expect(requests.find((r) => r.action === 'submit-session')).not.toHaveProperty('score');
+  await expect(page.getByText('2 of 4 correct · 50%', { exact: true })).toBeVisible();
+  await expect(page.getByText('Level up to Attempted!', { exact: true })).toBeVisible();
+  await page.getByRole('button', { name: 'Return to lesson', exact: true }).click();
+  await expect(page.getByText(lesson.body[0], { exact: true })).toBeVisible();
+  await expect(page.locator('.lh-question')).toHaveCount(0);
   await page.reload();
   await expect(page.getByRole('button', { name: 'Reading saved', exact: true })).toBeVisible();
   await page.getByRole('button', { name: 'My assignments', exact: true }).click();
@@ -254,34 +318,40 @@ test('Learning Hub teacher authors a curriculum lesson and exercise', async ({ p
   ).toBeVisible();
 });
 
-test('Learning Hub preserves answers and reports a failed save without claiming completion', async ({
+test('Learning Hub preserves answers and session identity after a failed save', async ({
   page,
 }) => {
-  const { hub } = await setup(page, 'Student');
+  const { hub, requests, sessions } = await setup(page, 'Student');
   let fail = true;
+  const submissions: Record<string, unknown>[] = [];
   await page.route('**/functions/v1/learning-hub', async (route) => {
-    if (route.request().postDataJSON()?.action === 'submit-practice' && fail) {
-      return route.fulfill({
-        status: 503,
-        json: { error: 'Practice could not be saved. Please retry.' },
-      });
+    const body = route.request().postDataJSON();
+    if (body?.action === 'submit-session') {
+      submissions.push(body);
+      if (fail)
+        return route.fulfill({
+          status: 503,
+          json: { error: 'Practice could not be saved. Please retry.' },
+        });
     }
     return route.fallback();
   });
   await page.getByRole('button', { name: 'My assignments', exact: true }).click();
   await page.getByRole('button', { name: 'Continue', exact: true }).click();
   await page.getByRole('button', { name: 'Start practice', exact: true }).click();
-  await page.getByLabel(/2\/4/).check();
-  await page.getByLabel(/4\/6/).check();
+  await expect.poll(() => sessions.size).toBe(1);
+  await answerSession(page, sessions.get('session-0')!);
   await page.getByRole('button', { name: 'Submit answers', exact: true }).click();
   await expect(page.getByRole('alert')).toHaveText('Practice could not be saved. Please retry.');
   expect(hub.attempts).toHaveLength(0);
-  await expect(page.getByLabel(/2\/4/)).toBeChecked();
-  await expect(page.getByLabel(/4\/6/)).toBeChecked();
+  await expect(page.locator('.lh-question input:checked')).toHaveCount(4);
   fail = false;
   await page.getByRole('button', { name: 'Submit answers', exact: true }).click();
-  await expect(page.getByText('2 of 2 correct · 100%', { exact: true })).toBeVisible();
+  await expect(page.getByText('4 of 4 correct · 100%', { exact: true })).toBeVisible();
   expect(hub.attempts).toHaveLength(1);
+  expect(submissions).toHaveLength(2);
+  expect(submissions[1]).toEqual(submissions[0]);
+  expect(requests.filter((r) => r.action === 'start-practice')).toHaveLength(1);
 });
 
 test('Learning Hub recommends practice from latest results and targets the selected learner', async ({
@@ -316,7 +386,7 @@ test('Learning Hub recommends practice from latest results and targets the selec
   const row = page.locator('.lh-progress-table tbody tr');
   await expect(row).toHaveCount(1);
   await expect(row).toContainText('Hub learner 2');
-  await expect(row).toContainText('Developing');
+  await expect(row).toContainText('Attempted');
   await expect(row).toContainText('50%');
   await expect(row).toContainText('Review the feedback on missed questions');
   await row.getByRole('button', { name: 'Assign practice', exact: true }).click();
@@ -331,4 +401,55 @@ test('Learning Hub recommends practice from latest results and targets the selec
   expect(hub.assignments[0].studentIds).toEqual(['hub-student-1']);
   await page.setViewportSize({ width: 1440, height: 1000 });
   await page.screenshot({ path: 'test-results/learning-hub-populated-progress.png' });
+});
+
+test('Learning Hub creates fresh practice sets and exact five-question quizzes and ten-question unit tests', async ({
+  page,
+}) => {
+  const { requests, sessions } = await setup(page, 'Student');
+  await page.getByRole('button', { name: /Understanding equivalent fractions/ }).click();
+  await page.getByRole('button', { name: 'Practice (4 problems)', exact: true }).click();
+  await expect.poll(() => sessions.size).toBe(1);
+  const first = sessions.get('session-0')!;
+  await answerSession(page, first);
+  await page.getByRole('button', { name: 'Submit answers', exact: true }).click();
+  await expect(page.getByText('Level up to Familiar!', { exact: true })).toBeVisible();
+  await page
+    .getByRole('button', { name: 'Practise again (fresh 4 questions)', exact: true })
+    .click();
+  await expect.poll(() => sessions.size).toBe(2);
+  const second = sessions.get('session-1')!;
+  await expect(page.locator('.lh-question')).toHaveCount(4);
+  expect(second.id).not.toBe(first.id);
+  expect(second.questions.map((q) => q.id)).not.toEqual(first.questions.map((q) => q.id));
+  expect(second.correctAnswers).not.toEqual(first.correctAnswers);
+  expect(second.questions.every((q) => !first.questions.some((old) => old.id === q.id))).toBe(true);
+  const starts = requests.filter((r) => r.action === 'start-practice');
+  expect(starts[0].requestId).not.toBe(starts[1].requestId);
+  await expect(page.locator('.lh-question input:checked')).toHaveCount(0);
+  await page.getByRole('button', { name: 'Quiz (5 problems)', exact: true }).click();
+  await expect.poll(() => sessions.size).toBe(3);
+  await answerSession(page, sessions.get('session-2')!);
+  await page.getByRole('button', { name: 'Submit answers', exact: true }).click();
+  await expect(page.getByText('5 of 5 correct · 100%', { exact: true })).toBeVisible();
+  await page.getByRole('button', { name: 'Retake quiz', exact: true }).click();
+  await expect.poll(() => sessions.size).toBe(4);
+  await expect(page.locator('.lh-question')).toHaveCount(5);
+  expect(sessions.get('session-3')!.questions.map((q) => q.id)).not.toEqual(
+    sessions.get('session-2')!.questions.map((q) => q.id),
+  );
+  await page.getByRole('button', { name: 'Unit Test (10 problems)', exact: true }).click();
+  await expect.poll(() => sessions.size).toBe(5);
+  await answerSession(page, sessions.get('session-4')!);
+  await page.getByRole('button', { name: 'Submit answers', exact: true }).click();
+  await expect(page.getByText('10 of 10 correct · 100%', { exact: true })).toBeVisible();
+  await page.getByRole('button', { name: 'Return to lesson', exact: true }).click();
+  await expect(page.getByText(lesson.body[0], { exact: true })).toBeVisible();
+  expect(requests.filter((r) => r.action === 'start-practice').map((r) => r.kind)).toEqual([
+    'practice',
+    'practice',
+    'quiz',
+    'quiz',
+    'unit-test',
+  ]);
 });

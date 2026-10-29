@@ -1,4 +1,5 @@
 import type { HubLesson } from './catalog';
+import type { PracticeKind, MasteryLevel, QuestionOutcome } from './questionBank';
 
 export type LearningLesson = Omit<HubLesson, 'questions'> & {
   questions: (Omit<HubLesson['questions'][number], 'answer' | 'explanation'> & {
@@ -16,6 +17,8 @@ export interface HubAssignment {
   createdAt: string;
 }
 export interface HubAttempt {
+  kind?: PracticeKind | 'legacy';
+  outcomes?: QuestionOutcome[];
   id: string;
   lessonId: string;
   studentId: string;
@@ -39,6 +42,15 @@ export interface HubSnapshot {
   readings: HubReading[];
 }
 export interface HubPracticeResult {
+  mastery?: { before: MasteryLevel; after: MasteryLevel; upgraded: boolean };
   attempt: HubAttempt;
   feedback: { questionId: string; correct: boolean; answer: number; explanation: string }[];
+}
+export interface PracticeSession {
+  id: string;
+  kind: PracticeKind;
+  lessonId: string;
+  assignmentId: string | null;
+  expiresAt: string;
+  questions: { id: string; lessonId: string; prompt: string; options: string[] }[];
 }

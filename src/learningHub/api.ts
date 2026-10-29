@@ -1,5 +1,7 @@
 import { invokeBackend } from '../backend';
 import type { HubLesson } from './catalog';
+import type { PracticeKind } from './questionBank';
+import type { PracticeSession } from './types';
 import type {
   HubAssignment,
   HubPracticeResult,
@@ -26,3 +28,29 @@ export const submitHubPractice = (
   assignmentId?: string,
 ): Promise<HubPracticeResult> =>
   invokeBackend('learning-hub', { action: 'submit-practice', lessonId, answers, assignmentId });
+export const startHubPractice = (
+  lessonId: string,
+  kind: PracticeKind,
+  requestId: string,
+  assignmentId?: string,
+): Promise<PracticeSession> =>
+  invokeBackend('learning-hub', {
+    action: 'start-practice',
+    lessonId,
+    kind,
+    requestId,
+    assignmentId,
+  });
+export const submitHubSession = (
+  lessonId: string,
+  sessionId: string,
+  answers: number[],
+  assignmentId?: string,
+): Promise<HubPracticeResult> =>
+  invokeBackend('learning-hub', {
+    action: 'submit-session',
+    lessonId,
+    sessionId,
+    answers,
+    assignmentId,
+  });
