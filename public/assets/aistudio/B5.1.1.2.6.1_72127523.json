@@ -1,0 +1,365 @@
+{
+  "indicator": {
+    "code": "B5.1.1.2.6.1",
+    "subject": "Mathematics",
+    "level": "Basic 5",
+    "strand": "Number",
+    "sub_strand": "Number Operations",
+    "content_standard": "Not clearly printed in extract",
+    "objective": "Solve simple addition and subtraction problems involving integers",
+    "source_page": 92
+  },
+  "spec": {
+    "skills": [
+      {
+        "tag": "add_integers_number_line",
+        "description": "Use a number line to add positive and negative integers.",
+        "minQuestions": 2
+      },
+      {
+        "tag": "subtract_integers_number_line",
+        "description": "Use a number line to subtract positive and negative integers.",
+        "minQuestions": 2
+      },
+      {
+        "tag": "solve_integer_word_problems",
+        "description": "Solve simple word problems involving integers (e.g., temperature, depth).",
+        "minQuestions": 2
+      }
+    ],
+    "difficultyPlan": "20 questions: 5 at difficulty 1, 7 at difficulty 2, 5 at difficulty 3, 3 at difficulty 4.",
+    "misconceptions": [
+      "Thinking subtracting a negative is the same as subtracting a positive.",
+      "Ignoring the direction on the number line.",
+      "Confusing addition and subtraction rules for integers."
+    ],
+    "needsTeacherAssessment": false
+  },
+  "questions": [
+    {
+      "skill_tag": "add_integers_number_line",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What is -3 + 5?",
+      "options": [
+        "-8",
+        "-2",
+        "2",
+        "8"
+      ],
+      "answer": 2,
+      "hints": [
+        "Start at -3 on a number line and move 5 steps right."
+      ],
+      "explanation": "-3 + 5 = 2.",
+      "misconception": "Adding absolute values and keeping the negative sign.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "add_integers_number_line",
+      "type": "numeric",
+      "difficulty": 1,
+      "stem": "What is -4 + 6?",
+      "answer": 2,
+      "check": "-4+6",
+      "hints": [
+        "Start at -4 and move 6 steps to the right."
+      ],
+      "explanation": "-4 + 6 = 2.",
+      "misconception": "Giving -2 by subtracting.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "add_integers_number_line",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "What is -7 + 3?",
+      "options": [
+        "-10",
+        "-4",
+        "4",
+        "10"
+      ],
+      "answer": 1,
+      "hints": [
+        "Start at -7 and move 3 steps right."
+      ],
+      "explanation": "-7 + 3 = -4.",
+      "misconception": "Adding 7 and 3 to get 10.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "add_integers_number_line",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "What is 5 + (-8)?",
+      "answer": -3,
+      "check": "5+(-8)",
+      "hints": [
+        "Start at 5 and move 8 steps left."
+      ],
+      "explanation": "5 + (-8) = -3.",
+      "misconception": "Subtracting 5 from 8 to get 3 (positive).",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "add_integers_number_line",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "What is -6 + (-2)?",
+      "options": [
+        "-8",
+        "-4",
+        "4",
+        "8"
+      ],
+      "answer": 0,
+      "hints": [
+        "Start at -6 and move 2 steps left."
+      ],
+      "explanation": "-6 + (-2) = -8.",
+      "misconception": "Adding as positive numbers to get 8.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "add_integers_number_line",
+      "type": "numeric",
+      "difficulty": 3,
+      "stem": "What is -9 + 4?",
+      "answer": -5,
+      "check": "-9+4",
+      "hints": [
+        "Start at -9 and move 4 steps right."
+      ],
+      "explanation": "-9 + 4 = -5.",
+      "misconception": "Giving 5 by ignoring the negative sign.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "add_integers_number_line",
+      "type": "numeric",
+      "difficulty": 4,
+      "stem": "A diver is at -12 metres. She rises 5 metres. What is her new depth?",
+      "answer": -7,
+      "check": "-12+5",
+      "hints": [
+        "Start at -12 and add 5."
+      ],
+      "explanation": "-12 + 5 = -7 metres.",
+      "misconception": "Adding 12 and 5 to get 17.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "subtract_integers_number_line",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What is 4 - 6?",
+      "options": [
+        "-2",
+        "2",
+        "10",
+        "-10"
+      ],
+      "answer": 0,
+      "hints": [
+        "Start at 4 and move 6 steps left."
+      ],
+      "explanation": "4 - 6 = -2.",
+      "misconception": "Subtracting 4 from 6 to get 2 (positive).",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "subtract_integers_number_line",
+      "type": "numeric",
+      "difficulty": 1,
+      "stem": "What is -3 - 2?",
+      "answer": -5,
+      "check": "-3-2",
+      "hints": [
+        "Start at -3 and move 2 steps left."
+      ],
+      "explanation": "-3 - 2 = -5.",
+      "misconception": "Adding 3 and 2 to get 5.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "subtract_integers_number_line",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "What is 5 - (-3)?",
+      "options": [
+        "2",
+        "8",
+        "-2",
+        "-8"
+      ],
+      "answer": 1,
+      "hints": [
+        "Subtracting a negative is the same as adding a positive."
+      ],
+      "explanation": "5 - (-3) = 5 + 3 = 8.",
+      "misconception": "Subtracting 3 from 5 to get 2.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "subtract_integers_number_line",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "What is -2 - (-5)?",
+      "answer": 3,
+      "check": "-2-(-5)",
+      "hints": [
+        "Subtracting a negative is adding a positive."
+      ],
+      "explanation": "-2 - (-5) = -2 + 5 = 3.",
+      "misconception": "Subtracting 5 from 2 to get -7.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "subtract_integers_number_line",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "What is -8 - (-3)?",
+      "options": [
+        "-11",
+        "-5",
+        "5",
+        "11"
+      ],
+      "answer": 1,
+      "hints": [
+        "Subtracting a negative is adding a positive."
+      ],
+      "explanation": "-8 - (-3) = -8 + 3 = -5.",
+      "misconception": "Adding 8 and 3 to get 11.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "subtract_integers_number_line",
+      "type": "numeric",
+      "difficulty": 3,
+      "stem": "What is 6 - 9?",
+      "answer": -3,
+      "check": "6-9",
+      "hints": [
+        "Start at 6 and move 9 steps left."
+      ],
+      "explanation": "6 - 9 = -3.",
+      "misconception": "Subtracting 6 from 9 to get 3.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "subtract_integers_number_line",
+      "type": "numeric",
+      "difficulty": 4,
+      "stem": "A temperature is -4°C. It drops by 7°C. What is the new temperature?",
+      "answer": -11,
+      "check": "-4-7",
+      "hints": [
+        "Start at -4 and subtract 7."
+      ],
+      "explanation": "-4 - 7 = -11°C.",
+      "misconception": "Adding 4 and 7 to get 11.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "solve_integer_word_problems",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "A submarine is at -50 m. It rises 20 m. What is its new depth?",
+      "options": [
+        "-70 m",
+        "-30 m",
+        "30 m",
+        "70 m"
+      ],
+      "answer": 1,
+      "hints": [
+        "Start at -50 and add 20."
+      ],
+      "explanation": "-50 + 20 = -30 m.",
+      "misconception": "Adding 50 and 20 to get 70.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "solve_integer_word_problems",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "A bank account has -15 cedis. A deposit of 40 cedis is made. What is the new balance?",
+      "answer": 25,
+      "check": "-15+40",
+      "hints": [
+        "Start at -15 and add 40."
+      ],
+      "explanation": "-15 + 40 = 25 cedis.",
+      "misconception": "Subtracting 15 from 40 to get 25 (positive) is correct, but some may give -55 by adding negatives.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "solve_integer_word_problems",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "The temperature was 3°C, then it fell by 8°C. What is the new temperature?",
+      "options": [
+        "-11°C",
+        "-5°C",
+        "5°C",
+        "11°C"
+      ],
+      "answer": 1,
+      "hints": [
+        "Start at 3 and subtract 8."
+      ],
+      "explanation": "3 - 8 = -5°C.",
+      "misconception": "Adding 3 and 8 to get 11.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "solve_integer_word_problems",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "A bird is flying at 20 m above sea level. A fish is 15 m below sea level. What is the difference in their heights?",
+      "answer": 35,
+      "check": "20-(-15)",
+      "hints": [
+        "Difference = 20 - (-15)."
+      ],
+      "explanation": "20 - (-15) = 20 + 15 = 35 m.",
+      "misconception": "Subtracting 15 from 20 to get 5.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "solve_integer_word_problems",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "A lift starts at -2 floor and goes up 5 floors. Then it goes down 3 floors. Which floor is it on?",
+      "options": [
+        "0",
+        "1",
+        "-1",
+        "5"
+      ],
+      "answer": 0,
+      "hints": [
+        "Start at -2, add 5, then subtract 3."
+      ],
+      "explanation": "-2 + 5 - 3 = 0.",
+      "misconception": "Adding all numbers to get 10.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "solve_integer_word_problems",
+      "type": "numeric",
+      "difficulty": 4,
+      "stem": "A diver is at -20 m. He descends another 15 m, then ascends 10 m. What is his final depth?",
+      "answer": -25,
+      "check": "-20-15+10",
+      "hints": [
+        "Start at -20, subtract 15, then add 10."
+      ],
+      "explanation": "-20 - 15 + 10 = -25 m.",
+      "misconception": "Adding 20, 15, and 10 to get 45.",
+      "uncertain": []
+    }
+  ]
+}

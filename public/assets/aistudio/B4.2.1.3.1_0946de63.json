@@ -1,0 +1,268 @@
+{
+  "indicator": {
+    "code": "B4.2.1.3.1",
+    "subject": "Science",
+    "level": "Basic 4",
+    "strand": "CYCLES",
+    "sub_strand": "Earth Science",
+    "content_standard": "B4.2.1.3 Show understanding of the roles of condensation, evaporation, transpiration and precipitation in the hydrological (water) cycle",
+    "objective": "Demonstrate the process of evapotranspiration",
+    "source_page": 27
+  },
+  "spec": {
+    "skills": [
+      {"tag": "define_evapotranspiration", "description": "State simply that evapotranspiration is water vapour leaving plants and animals/the ground into the air.", "minQuestions": 3},
+      {"tag": "transpiration_plants", "description": "Describe transpiration as the loss of water vapour from plant leaves.", "minQuestions": 4},
+      {"tag": "evaporation_water", "description": "Recognise evaporation as water changing into vapour from surfaces like soil, rivers and puddles.", "minQuestions": 3},
+      {"tag": "human_breath", "description": "Describe how breathing out onto a surface shows water vapour leaving the body.", "minQuestions": 3},
+      {"tag": "bag_experiment", "description": "Explain what happens when a plastic bag is tied over a leafy plant (water droplets form inside).", "minQuestions": 4},
+      {"tag": "why_important", "description": "State one reason evapotranspiration is important in the water cycle.", "minQuestions": 3}
+    ],
+    "difficultyPlan": "20 questions total — Difficulty 1: 5; Difficulty 2: 7; Difficulty 3: 5; Difficulty 4: 3.",
+    "misconceptions": [
+      "Plants do not release water.",
+      "Evapotranspiration is only about evaporation from rivers.",
+      "Water droplets in the bag come from outside the bag.",
+      "Only animals breathe out water vapour.",
+      "Transpiration is the same as respiration.",
+      "Evapotranspiration happens only at night."
+    ],
+    "needsTeacherAssessment": false
+  },
+  "questions": [
+    {
+      "skill_tag": "define_evapotranspiration",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What is evapotranspiration?",
+      "options": ["When water freezes into ice", "When water vapour leaves plants and the ground into the air", "When rain falls from the sky", "When water is poured into a bottle"],
+      "answer": 1,
+      "hints": ["Think about 'evaporation' plus 'transpiration'.", "Both processes send water vapour into the air."],
+      "explanation": "Evapotranspiration is when water vapour leaves plants (transpiration) and the ground (evaporation) and goes into the air.",
+      "misconception": "Evapotranspiration is only about evaporation from rivers.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "transpiration_plants",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What is transpiration in plants?",
+      "options": ["When plants make food", "When plants lose water vapour from their leaves", "When plants grow taller", "When plants drop their leaves"],
+      "answer": 1,
+      "hints": ["Does a plant release water into the air?", "The water comes out through the leaves."],
+      "explanation": "Transpiration is the loss of water vapour from plant leaves into the air.",
+      "misconception": "Plants do not release water.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "evaporation_water",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "When a puddle dries up after the rain, what has happened to the water?",
+      "options": ["It has changed into vapour and gone into the air", "It has turned into soil", "It has been drunk by ants", "It has frozen into ice"],
+      "answer": 0,
+      "hints": ["Does the water disappear or change into vapour?", "The sun helps this happen."],
+      "explanation": "The water changes into vapour (evaporation) and goes into the air. This is part of evapotranspiration when it happens from the ground.",
+      "misconception": "Evapotranspiration is only about evaporation from rivers.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "human_breath",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "When you breathe out onto a mirror or glass, what appears on the surface?",
+      "options": ["Dust", "Tiny drops of water", "Smoke", "Colour changes"],
+      "answer": 1,
+      "hints": ["Breath contains water vapour.", "Vapour turns into droplets when it hits a cool surface."],
+      "explanation": "Your breath contains water vapour. When it touches a cool surface, the vapour changes into tiny water droplets.",
+      "misconception": "Only animals breathe out water vapour.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "why_important",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Why is evapotranspiration important in the water cycle?",
+      "options": ["It adds water vapour to the air", "It makes the rain stop", "It turns air into rocks", "It removes oxygen from the air"],
+      "answer": 0,
+      "hints": ["What does evapotranspiration put into the air?", "Water vapour in the air helps form clouds."],
+      "explanation": "Evapotranspiration puts water vapour into the air, which helps form clouds and leads to rain in the water cycle.",
+      "misconception": "Evapotranspiration has nothing to do with the water cycle.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "transpiration_plants",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which part of a plant loses most of its water through transpiration?",
+      "options": ["Root", "Stem", "Flower", "Leaf"],
+      "answer": 3,
+      "hints": ["Which part has tiny openings?", "Leaves have tiny holes called stomata."],
+      "explanation": "Most water vapour is lost from plant leaves through tiny openings called stomata.",
+      "misconception": "Plants lose water mainly through the roots.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "bag_experiment",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "A learner ties a clear plastic bag over a young plant for one hour. What will be seen inside the bag after some time?",
+      "options": ["Smoke", "Tiny water droplets", "Sand", "Nothing at all"],
+      "answer": 1,
+      "hints": ["The plant releases water vapour.", "When vapour cools, it forms droplets."],
+      "explanation": "The plant releases water vapour through transpiration. The vapour collects inside the bag, cools, and forms tiny water droplets.",
+      "misconception": "Plants do not release water.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "bag_experiment",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "In the plastic bag experiment, where do the water droplets inside the bag come from?",
+      "options": ["They come from the plant through transpiration", "They come from outside the bag through the plastic", "They come from the learner's hands", "They are already inside the bag before the plant is covered"],
+      "answer": 0,
+      "hints": ["The plant is inside the bag.", "The plant loses water through its leaves."],
+      "explanation": "The water droplets come from the plant. The plant loses water vapour through transpiration, and the vapour condenses on the inside of the bag.",
+      "misconception": "Water droplets in the bag come from outside the bag.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "define_evapotranspiration",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Evapotranspiration is made up of which two processes?",
+      "options": ["Evaporation and transpiration", "Condensation and precipitation", "Melting and boiling", "Freezing and thawing"],
+      "answer": 0,
+      "hints": ["Look at the word — what two words are combined?", "One process is from the ground; the other is from plants."],
+      "explanation": "Evapotranspiration combines evaporation (water from the ground and surfaces) and transpiration (water from plants).",
+      "misconception": "Evapotranspiration is the same as condensation.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "evaporation_water",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "On a hot day, a wet towel dries quickly outside. Which process explains this?",
+      "options": ["Boiling", "Melting", "Evaporation", "Condensation"],
+      "answer": 2,
+      "hints": ["The water changes into vapour.", "The heat of the sun helps the water dry."],
+      "explanation": "The heat of the sun causes water in the towel to change into vapour. This is evaporation, a part of evapotranspiration.",
+      "misconception": "Water disappears completely when it dries.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "human_breath",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "What appears on a cool glass surface when you breathe out on it?",
+      "answer": ["tiny drops of water", "water droplets", "water vapour condenses into droplets", "small water drops"],
+      "hints": ["Breath has water vapour in it.", "Vapour turns into droplets on a cool surface."],
+      "explanation": "When you breathe on a cool surface, the water vapour in your breath changes into tiny water droplets on the surface.",
+      "misconception": "Only plants release water vapour.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "why_important",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "How does evapotranspiration help the water cycle?",
+      "options": ["It puts water vapour into the air, which can form clouds", "It stops rain from falling", "It removes water from the ocean", "It causes the sun to shine"],
+      "answer": 0,
+      "hints": ["Where does the water vapour go?", "What forms from water vapour in the sky?"],
+      "explanation": "Evapotranspiration releases water vapour into the air. This vapour rises, cools and helps form clouds, which eventually produce rain.",
+      "misconception": "Evapotranspiration has nothing to do with the water cycle.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "transpiration_plants",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Explain how transpiration happens in plants.",
+      "answer": ["plants lose water vapour through tiny openings in their leaves", "water in the plant leaves the plant as vapour from the leaves"],
+      "hints": ["Which plant part is involved?", "The water leaves as vapour."],
+      "explanation": "Plants take up water through their roots. Some of this water travels to the leaves, where it is released as water vapour through tiny openings. This is transpiration.",
+      "misconception": "Plants do not release water.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "bag_experiment",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "In the plastic bag experiment, why are the water droplets inside the bag?",
+      "answer": ["because the plant releases water vapour that condenses into droplets inside the bag", "the plant transpires and the water vapour condenses"],
+      "hints": ["The plant gives off water vapour.", "Why does the vapour turn into droplets?"],
+      "explanation": "The plant releases water vapour through transpiration. The vapour cannot escape through the plastic, so it cools and condenses into droplets inside the bag.",
+      "misconception": "The droplets come from outside the bag.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "bag_experiment",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "In the plastic bag experiment, why should the learner mop off any water droplets on the plant leaves before starting?",
+      "answer": ["so that any water droplets found later come from the plant's transpiration and not from the water already on the leaves", "to ensure that the water droplets inside the bag come only from the plant"],
+      "hints": ["Where could the water in the bag come from if the leaves are wet?", "We want to prove that the plant itself releases water."],
+      "explanation": "If the leaves are already wet, we cannot tell whether water in the bag came from the wet leaves or from transpiration. Mopping the leaves first makes the experiment more reliable.",
+      "misconception": "It does not matter if the leaves are wet at the start.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "define_evapotranspiration",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "What is evapotranspiration?",
+      "answer": ["it is the release of water vapour from plants and the ground into the air", "the loss of water vapour from plants and the ground into the air", "water vapour leaving plants and the ground into the air"],
+      "hints": ["Think of evaporation plus transpiration.", "It involves plants and the ground."],
+      "explanation": "Evapotranspiration is the combined process of water vapour leaving plants (transpiration) and the ground (evaporation) into the air.",
+      "misconception": "Evapotranspiration is only about evaporation from rivers.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "evaporation_water",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "On a sunny day, water evaporates from a pond. Which statement explains this in the context of evapotranspiration?",
+      "options": ["Water from the pond changes into vapour and goes into the air", "Fish in the pond drink all the water", "The pond is turned into land", "The sun becomes water"],
+      "answer": 0,
+      "hints": ["What happens to water when the sun heats it?", "It changes into vapour."],
+      "explanation": "Water from the pond changes into vapour (evaporation) when heated by the sun. This adds water vapour to the air and is part of evapotranspiration.",
+      "misconception": "Evapotranspiration is only about evaporation from rivers.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "human_breath",
+      "type": "mcq",
+      "difficulty": 4,
+      "stem": "Why does water form on a cool glass when you breathe on it, but not on a warm glass?",
+      "options": ["Because the cool glass warms the breath", "Because the water in the breath changes to vapour on the warm glass", "Because the breath contains more water vapour than the warm glass", "Because the water vapour in the breath changes into droplets faster when it meets a cool surface"],
+      "answer": 3,
+      "hints": ["What happens to water vapour when it cools?", "Does vapour condense faster on a cool or warm surface?"],
+      "explanation": "Water vapour in your breath condenses into droplets faster on a cool surface because the cool surface causes the vapour to lose heat and change into liquid.",
+      "misconception": "Water vapour is only in warm breath.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "why_important",
+      "type": "short_answer",
+      "difficulty": 4,
+      "stem": "Give one reason why evapotranspiration is important for the water cycle.",
+      "answer": ["it adds water vapour into the air which helps form clouds and brings rain", "it supplies water vapour that forms clouds and rain", "it puts water vapour in the air that cools and forms rain"],
+      "hints": ["What does evapotranspiration add to the air?", "How does this lead to rain?"],
+      "explanation": "Evapotranspiration adds water vapour to the air. This vapour rises, cools and condenses to form clouds, which later release rain.",
+      "misconception": "Evapotranspiration has nothing to do with the water cycle.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "transpiration_plants",
+      "type": "mcq",
+      "difficulty": 4,
+      "stem": "A learner says, 'Transpiration is when a plant breathes out carbon dioxide.' Is this correct?",
+      "options": ["Yes, transpiration is the same as respiration", "No, transpiration is the loss of water vapour, not carbon dioxide", "Yes, plants only release carbon dioxide", "No, transpiration is about taking in water, not releasing it"],
+      "answer": 1,
+      "hints": ["What does 'transpiration' actually involve?", "Is water vapour released or carbon dioxide?"],
+      "explanation": "Transpiration is the loss of water vapour from plant leaves. It is different from respiration, which involves gases like carbon dioxide and oxygen.",
+      "misconception": "Transpiration is the same as respiration.",
+      "uncertain": []
+    }
+  ]
+}

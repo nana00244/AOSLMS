@@ -1,0 +1,270 @@
+{
+  "indicator": {
+    "code": "B4.1.5.1.2",
+    "subject": "Mathematics",
+    "level": "Basic 4",
+    "strand": "Number",
+    "sub_strand": "Percent",
+    "content_standard": "B4.1.5.1 Demonstrate an understanding of percent (limited to whole numbers) concretely, pictorially, and symbolically)",
+    "objective": "Compare and order a mixture of common, decimal and percent fractions (up to hundredths)",
+    "source_page": 50
+  },
+  "spec": {
+    "skills": [
+      {"tag": "convert_all_to_decimals", "description": "Convert fractions and percents to decimals to compare.", "minQuestions": 2},
+      {"tag": "order_mixed_types", "description": "Order a mixture of fractions, decimals, and percents.", "minQuestions": 2}
+    ],
+    "difficultyPlan": "20 questions: 5 at difficulty 1, 7 at difficulty 2, 5 at difficulty 3, 3 at difficulty 4.",
+    "misconceptions": [
+      "Comparing numerators/denominators directly across different forms (e.g., thinking 1/3 > 0.5 because 3 > 2).",
+      "Thinking 50% is less than 1/4 because 50 is a larger number than 4."
+    ],
+    "needsTeacherAssessment": false
+  },
+  "questions": [
+    {
+      "skill_tag": "convert_all_to_decimals",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which is larger: 0.5 or 40%?",
+      "options": ["0.5", "40%", "They are equal", "Cannot tell"],
+      "answer": 0,
+      "hints": ["Convert 40% to a decimal.", "40% = 0.40.", "Compare 0.5 and 0.4."],
+      "explanation": "40% = 0.40. 0.5 is larger than 0.40.",
+      "misconception": "Thinking 40% is larger because 40 > 5.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "convert_all_to_decimals",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which is smaller: 1/4 or 30%?",
+      "options": ["1/4", "30%", "They are equal", "Cannot tell"],
+      "answer": 0,
+      "hints": ["Convert 1/4 to a decimal.", "1/4 = 0.25.", "30% = 0.30."],
+      "explanation": "1/4 = 0.25. 30% = 0.30. 0.25 is smaller than 0.30.",
+      "misconception": "Thinking 1/4 is 4%.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "order_mixed_types",
+      "type": "short_answer",
+      "difficulty": 1,
+      "stem": "Compare 1/2 and 50%. Are they >, <, or =?",
+      "answer": ["=", "equal"],
+      "hints": ["Convert 1/2 to a percent.", "1/2 = 50%."],
+      "explanation": "1/2 is exactly 50%.",
+      "misconception": "Thinking they are different.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "convert_all_to_decimals",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which is largest: 0.8, 75%, or 4/5?",
+      "options": ["0.8", "75%", "4/5", "All are equal"],
+      "answer": 0,
+      "hints": ["Convert all to decimals.", "75% = 0.75.", "4/5 = 0.8."],
+      "explanation": "0.8 = 0.80. 75% = 0.75. 4/5 = 0.80. 0.8 and 4/5 are equal and larger than 75%.",
+      "misconception": "Thinking 75% is largest because 75 > 8.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "convert_all_to_decimals",
+      "type": "numeric",
+      "difficulty": 1,
+      "stem": "Convert 1/4 to a decimal to compare with 0.2. Which is larger? (Enter the larger number)",
+      "answer": 0.25,
+      "check": "1/4",
+      "hints": ["1/4 = 0.25.", "Compare 0.25 and 0.20."],
+      "explanation": "1/4 = 0.25. 0.25 is larger than 0.2.",
+      "misconception": "Thinking 0.2 is larger because 2 > 1.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "order_mixed_types",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Order from smallest to largest: 0.1, 1/2, 25%.",
+      "options": ["0.1, 25%, 1/2", "1/2, 25%, 0.1", "25%, 0.1, 1/2", "0.1, 1/2, 25%"],
+      "answer": 0,
+      "hints": ["Convert all to decimals.", "0.1 = 0.10.", "1/2 = 0.50.", "25% = 0.25."],
+      "explanation": "0.10 < 0.25 < 0.50.",
+      "misconception": "Ordering by the numbers shown.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "order_mixed_types",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Order from smallest to largest: 50%, 1/4, 0.75.",
+      "answer": ["1/4, 50%, 0.75", "1/4, 50%, 0.75"],
+      "hints": ["1/4 = 0.25.", "50% = 0.5.", "0.75 = 0.75."],
+      "explanation": "0.25 < 0.5 < 0.75.",
+      "misconception": "Ordering 50% first.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "convert_all_to_decimals",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "Convert 3/4 to a decimal.",
+      "answer": 0.75,
+      "check": "3/4",
+      "hints": ["3 divided by 4.", "3/4 = 75/100."],
+      "explanation": "3/4 = 0.75.",
+      "misconception": "Writing 0.34.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "convert_all_to_decimals",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which is NOT equal to 0.5?",
+      "options": ["50%", "1/2", "5/100", "0.50"],
+      "answer": 2,
+      "hints": ["5/100 is 5 hundredths.", "0.5 is 50 hundredths."],
+      "explanation": "5/100 = 0.05, not 0.5.",
+      "misconception": "Thinking 5/100 is the same as 5/10.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "order_mixed_types",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Order from smallest to largest: 0.2, 15%, 1/5.",
+      "answer": ["15%, 0.2, 1/5", "15%, 0.2, 1/5"],
+      "hints": ["15% = 0.15.", "0.2 = 0.20.", "1/5 = 0.20."],
+      "explanation": "0.15 < 0.20 = 0.20. So 15%, then 0.2 and 1/5.",
+      "misconception": "Thinking 15% is largest.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "convert_all_to_decimals",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Compare 2/5 and 0.35.",
+      "options": ["2/5 > 0.35", "2/5 < 0.35", "2/5 = 0.35", "Cannot tell"],
+      "answer": 0,
+      "hints": ["2/5 = 4/10 = 0.40.", "Compare 0.40 and 0.35."],
+      "explanation": "2/5 = 0.40. 0.40 > 0.35.",
+      "misconception": "Thinking 2/5 is 0.25.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "convert_all_to_decimals",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "Convert 60% to a decimal.",
+      "answer": 0.6,
+      "check": "60/100",
+      "hints": ["Percent means out of 100.", "60/100."],
+      "explanation": "60% = 0.60.",
+      "misconception": "Writing 0.06.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "order_mixed_types",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "Order from smallest to largest: 1/3, 0.25, 30%.",
+      "options": ["0.25, 30%, 1/3", "1/3, 0.25, 30%", "30%, 1/3, 0.25", "0.25, 1/3, 30%"],
+      "answer": 0,
+      "hints": ["0.25 = 0.25.", "30% = 0.30.", "1/3 ≈ 0.33."],
+      "explanation": "0.25 < 0.30 < 0.33.",
+      "misconception": "Thinking 1/3 is 0.3.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "convert_all_to_decimals",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "Explain how to compare 3/4 and 70%.",
+      "hints": ["Convert 3/4 to a percent.", "3/4 = 75%."],
+      "explanation": "First, convert 3/4 to a percent: 3/4 = 75%. Then compare 75% and 70%. Since 75% > 70%, 3/4 is larger.",
+      "rubric": {
+        "criteria": [
+          {"description": "Converts 3/4 to 75%.", "marks": 1},
+          {"description": "Concludes 3/4 > 70%.", "marks": 1}
+        ]
+      },
+      "misconception": "Comparing 3 and 70 directly.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "convert_all_to_decimals",
+      "type": "numeric",
+      "difficulty": 3,
+      "stem": "Convert 3/10 to a decimal.",
+      "answer": 0.3,
+      "check": "3/10",
+      "hints": ["Tenths place.", "3 divided by 10."],
+      "explanation": "3/10 = 0.3.",
+      "misconception": "Writing 0.03.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "order_mixed_types",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "Which is the smallest: 0.4, 1/3, 45%, 30%?",
+      "options": ["0.4", "1/3", "45%", "30%"],
+      "answer": 3,
+      "hints": ["Convert all to decimals.", "0.4 = 0.40.", "1/3 ≈ 0.33.", "45% = 0.45.", "30% = 0.30."],
+      "explanation": "30% (0.30) is the smallest.",
+      "misconception": "Thinking 1/3 is the smallest.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "order_mixed_types",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Order from smallest to largest: 1/8, 10%, 0.15.",
+      "answer": ["10%, 1/8, 0.15", "10%, 1/8, 0.15"],
+      "hints": ["10% = 0.10.", "1/8 = 0.125.", "0.15 = 0.15."],
+      "explanation": "0.10 < 0.125 < 0.15.",
+      "misconception": "Thinking 1/8 is 0.8.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "order_mixed_types",
+      "type": "written",
+      "difficulty": 4,
+      "stem": "Explain a real-life situation where you might need to compare a fraction and a percent.",
+      "hints": ["Think about shopping discounts or test scores.", "e.g., 1/4 off vs 20% off."],
+      "explanation": "For example, a shop might offer 1/4 off the price, while another offers 30% off. To know which is a better deal, you convert 1/4 to 25% and compare it to 30%.",
+      "rubric": {
+        "criteria": [
+          {"description": "Gives a valid real-life context.", "marks": 1},
+          {"description": "Explains the need to convert for comparison.", "marks": 1}
+        ]
+      },
+      "misconception": "Thinking fractions and percents cannot be compared.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "order_mixed_types",
+      "type": "mcq",
+      "difficulty": 4,
+      "stem": "A shop offers 1/3 off. Another offers 30% off. Which is the better discount?",
+      "options": ["1/3 off", "30% off", "They are the same", "Cannot tell"],
+      "answer": 0,
+      "hints": ["1/3 ≈ 33.3%.", "Compare 33.3% and 30%."],
+      "explanation": "1/3 is approximately 33.3%, which is greater than 30%.",
+      "misconception": "Thinking 30% is larger because 30 > 3.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "convert_all_to_decimals",
+      "type": "numeric",
+      "difficulty": 4,
+      "stem": "Convert 2/3 to a percent, rounded to the nearest whole number. (Enter the number only)",
+      "answer": 67,
+      "check": "round(200/3)",
+      "hints": ["2/3 ≈ 0.666...", "Multiply by 100.", "Round to the nearest whole number."],
+      "explanation": "2/3 ≈ 66.6%, which rounds to 67%.",
+      "misconception": "Saying 66%.",
+      "uncertain": []
+    }
+  ]
+}

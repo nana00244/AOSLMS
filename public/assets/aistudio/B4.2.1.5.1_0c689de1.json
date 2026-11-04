@@ -1,0 +1,269 @@
+{
+  "indicator": {
+    "code": "B4.2.1.5.1",
+    "subject": "Science",
+    "level": "Basic 4",
+    "strand": "CYCLES",
+    "sub_strand": "Earth Science",
+    "content_standard": "B4.2.1.5 Recognise water and air as important natural resources",
+    "objective": "Demonstrate ways of making water safe for use",
+    "source_page": 28
+  },
+  "spec": {
+    "skills": [
+      {"tag": "sources_of_water", "description": "Identify common sources of water in the community (river, well, borehole, pond, standpipe, lagoon).", "minQuestions": 3},
+      {"tag": "good_water_quality", "description": "State simple qualities of good drinking water (clear, odourless, free from germs).", "minQuestions": 3},
+      {"tag": "methods_safe", "description": "Identify ways of making water safe (boiling, filtering, chlorination, adding iodine tablets, using alum, water filters).", "minQuestions": 4},
+      {"tag": "boiling_explanation", "description": "Explain simply why boiling makes water safe (it kills germs).", "minQuestions": 4},
+      {"tag": "filtering_explanation", "description": "Explain simply how filtering removes dirt particles from water.", "minQuestions": 3},
+      {"tag": "dangers_unsafe", "description": "State one danger of drinking unsafe water (e.g. sickness, diarrhoea, cholera).", "minQuestions": 3}
+    ],
+    "difficultyPlan": "20 questions total — Difficulty 1: 5; Difficulty 2: 7; Difficulty 3: 5; Difficulty 4: 3.",
+    "misconceptions": [
+      "Clear water is always safe to drink.",
+      "Filtering water kills all germs.",
+      "Boiling water adds medicine to it.",
+      "Water from a borehole never needs treatment.",
+      "Adding alum makes water taste better, not cleaner.",
+      "Only dirty-looking water can make you sick."
+    ],
+    "needsTeacherAssessment": false
+  },
+  "questions": [
+    {
+      "skill_tag": "sources_of_water",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which of these is a common source of water in a Ghanaian community?",
+      "options": ["Borehole", "Tarmac road", "School chalkboard", "Cooking pot"],
+      "answer": 0,
+      "hints": ["Think of places where people fetch water.", "A borehole is dug deep into the ground for water."],
+      "explanation": "A borehole is a common source of water in many Ghanaian communities. Others include rivers, wells, ponds, lagoons and standpipes.",
+      "misconception": "Only bottled water is a water source.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "good_water_quality",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which quality shows that water is good for drinking?",
+      "options": ["It has a bad smell", "It is muddy", "It is clear and has no smell", "It has oil on top"],
+      "answer": 2,
+      "hints": ["Would you drink water with a bad smell?", "Good drinking water should be clear and odourless."],
+      "explanation": "Good drinking water is clear and has no bad smell. It should also be free from germs.",
+      "misconception": "Clear water is always safe to drink.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "sources_of_water",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Where does water from a standpipe come from?",
+      "options": ["A tree", "A pipe supplied by the water company", "A bag of sand", "A bottle of oil"],
+      "answer": 1,
+      "hints": ["A standpipe has a tap connected to a pipe.", "Ghana Water Company supplies it."],
+      "explanation": "A standpipe is a public tap connected to a water supply pipe. It is a common source of water in many communities.",
+      "misconception": "Water only comes from rivers.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "methods_safe",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which of these makes water safe to drink?",
+      "options": ["Adding sand to the water", "Stirring the water with a spoon", "Boiling the water", "Adding sugar to the water"],
+      "answer": 2,
+      "hints": ["Heat can kill germs in water.", "What does your family do to make water safe?"],
+      "explanation": "Boiling water kills germs, making it safe to drink. Adding sand, sugar or stirring does not make water safe.",
+      "misconception": "Boiling water adds medicine to it.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "dangers_unsafe",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What can happen if you drink unsafe water?",
+      "options": ["You may become sick with diarrhoea or cholera", "You will grow taller", "You will feel stronger", "Nothing will happen"],
+      "answer": 0,
+      "hints": ["Unsafe water contains germs.", "Germs can make you sick."],
+      "explanation": "Drinking unsafe water can make you sick with diseases like diarrhoea, cholera or typhoid.",
+      "misconception": "Only dirty-looking water can make you sick.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "good_water_quality",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Ama fetches water from a well. The water looks clear but has a slight smell. Is this water safe to drink?",
+      "options": ["Yes, because it looks clear", "No, because it has a smell and may contain germs", "Yes, because it comes from a well", "Yes, because it is water"],
+      "answer": 1,
+      "hints": ["Good drinking water should have no smell.", "Clear water can still contain germs."],
+      "explanation": "Water with a smell may contain germs. It should be treated (e.g. by boiling) before drinking, even if it looks clear.",
+      "misconception": "Clear water is always safe to drink.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "methods_safe",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which of these is used to make water safe by killing germs?",
+      "options": ["Adding alum", "Adding chlorine", "Filtering with a cloth", "Letting the water settle"],
+      "answer": 1,
+      "hints": ["Chlorine is added to water in some treatment plants.", "Chlorine kills germs."],
+      "explanation": "Adding chlorine kills germs in water. Alum helps particles settle, and filtering with a cloth removes some dirt but does not kill germs.",
+      "misconception": "Filtering water kills all germs.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "boiling_explanation",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Why does boiling make water safe to drink?",
+      "options": ["It adds flavour to the water", "It changes the water into vapour", "It kills harmful germs in the water", "It makes the water look clear"],
+      "answer": 2,
+      "hints": ["Heat can kill tiny living things.", "What happens to germs at high heat?"],
+      "explanation": "Boiling water to a high temperature kills harmful germs. This makes the water safe to drink.",
+      "misconception": "Boiling water adds medicine to it.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "filtering_explanation",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "What does filtering water do?",
+      "options": ["It removes dirt particles from the water", "It kills all germs in the water", "It adds minerals to the water", "It makes the water sweet"],
+      "answer": 0,
+      "hints": ["A filter has tiny holes.", "What gets trapped in the filter?"],
+      "explanation": "Filtering removes dirt and solid particles from water. It does not kill germs, so filtered water may still need boiling.",
+      "misconception": "Filtering water kills all germs.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "sources_of_water",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Name two sources of water in your community.",
+      "answer": ["river and well", "borehole and pond", "standpipe and river", "well and borehole"],
+      "hints": ["Where do people fetch water?", "Think of a river and a well."],
+      "explanation": "Common water sources include rivers, wells, boreholes, ponds, lagoons and standpipes.",
+      "misconception": "Water only comes from one source.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "methods_safe",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "What is alum used for when making water safe?",
+      "options": ["To kill all germs", "To add sweetness", "To help dirt settle to the bottom", "To change the colour of the water"],
+      "answer": 2,
+      "hints": ["Alum makes particles clump together.", "The clumps settle at the bottom."],
+      "explanation": "Alum helps tiny dirt particles clump together and settle at the bottom, making the water clearer. It does not kill germs.",
+      "misconception": "Adding alum makes water completely safe to drink.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "boiling_explanation",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Why should you boil water before drinking it?",
+      "answer": ["to kill germs in the water", "boiling kills harmful germs", "to make the water safe by killing germs"],
+      "hints": ["What happens to germs when water is boiled?", "Boiling water makes it safe."],
+      "explanation": "Boiling water kills harmful germs. This makes the water safe to drink and helps prevent diseases.",
+      "misconception": "Boiling water adds medicine to it.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "dangers_unsafe",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "State one disease you can get from drinking unsafe water.",
+      "answer": ["cholera", "diarrhoea", "typhoid fever", "typhoid"],
+      "hints": ["Unsafe water contains germs.", "One disease is often linked to dirty water in Ghana."],
+      "explanation": "Drinking unsafe water can cause diseases such as cholera, diarrhoea or typhoid fever.",
+      "misconception": "Unsafe water does not cause disease.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "methods_safe",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "A family collects rainwater in a barrel. Which is the best way to make it safe before drinking?",
+      "options": ["Boil the water and let it cool", "Leave the water in the sun", "Add sugar to the water", "Stir the water with a clean spoon"],
+      "answer": 0,
+      "hints": ["Which method kills germs?", "Heat is needed."],
+      "explanation": "Boiling the rainwater kills germs. Letting it cool before drinking makes it safe.",
+      "misconception": "Rainwater is always safe to drink.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "boiling_explanation",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "Kojo boiled water for drinking. His friend said, 'Boiling removes the dirt from the water.' Is the friend correct?",
+      "options": ["Yes, boiling removes all dirt", "Yes, boiling turns dirt into gas", "No, boiling kills germs but does not remove dirt", "No, boiling makes the water taste bad"],
+      "answer": 2,
+      "hints": ["What does boiling actually do?", "Can boiling remove solid particles?"],
+      "explanation": "Boiling water kills germs, but it does not remove dirt particles. Dirt is usually removed by filtering or letting the water settle.",
+      "misconception": "Boiling water removes dirt.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "filtering_explanation",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "Which statement best describes filtering water?",
+      "options": ["It removes all germs from the water", "It removes dirt particles but not all germs", "It adds chemicals to the water", "It makes the water boil"],
+      "answer": 1,
+      "hints": ["A filter traps solid particles.", "Does filtering kill germs?"],
+      "explanation": "Filtering removes dirt particles from water, but it does not kill germs. Germs are too small to be trapped by most simple filters.",
+      "misconception": "Filtering water kills all germs.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "good_water_quality",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "State two qualities of good drinking water.",
+      "answer": ["it is clear and has no smell", "it is colourless and odourless", "it is clear and free from germs"],
+      "hints": ["Should drinking water have a smell?", "Should it be clear?"],
+      "explanation": "Good drinking water should be clear, free from bad smell and free from germs.",
+      "misconception": "Clear water is always safe to drink.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "dangers_unsafe",
+      "type": "short_answer",
+      "difficulty": 4,
+      "stem": "Explain why clear water from a stream may still be unsafe to drink.",
+      "answer": ["because it may contain germs that cannot be seen with the eyes", "because germs are too small to see, so the water can look clear but still have germs"],
+      "hints": ["Can you see germs with your eyes?", "Clear does not mean germ-free."],
+      "explanation": "Water can look clear but still contain germs that are too small to see. These germs can cause diseases, so the water should be treated (e.g. boiled) before drinking.",
+      "misconception": "Clear water is always safe to drink.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "boiling_explanation",
+      "type": "mcq",
+      "difficulty": 4,
+      "stem": "Which sequence correctly describes a simple way to make water safe from a river?",
+      "options": ["Boil the water, let it cool, then drink", "Filter the water with a cloth, then drink", "Add alum, then drink", "Let the water settle, then drink"],
+      "answer": 0,
+      "hints": ["Which method kills germs?", "Filtering and settling do not kill germs."],
+      "explanation": "Boiling kills germs. Filtering, adding alum or letting water settle only removes dirt; boiling is needed to make it safe from germs.",
+      "misconception": "Filtering water kills all germs.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "methods_safe",
+      "type": "mcq",
+      "difficulty": 4,
+      "stem": "A pupil has three water samples: river water, well water and borehole water. Which is the most important step to make ALL of them safe to drink?",
+      "options": ["Boil each sample before drinking", "Smell each sample first", "Add sugar to each sample", "Pour each sample into a bottle"],
+      "answer": 0,
+      "hints": ["Which method works for all water sources?", "Heat kills germs in any water."],
+      "explanation": "Boiling kills germs in any water sample, whether from a river, well or borehole. It is the most reliable way to make water safe.",
+      "misconception": "Water from a borehole never needs treatment.",
+      "uncertain": []
+    }
+  ]
+}

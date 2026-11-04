@@ -1,0 +1,275 @@
+{
+  "indicator": {
+    "code": "B6.2.2.1.2",
+    "subject": "Science",
+    "level": "Basic 6",
+    "strand": "CYCLES",
+    "sub_strand": "Life Cycles of Organisms",
+    "content_standard": "B6.2.2.1 Demonstrate understanding of the life cycle of a plant",
+    "objective": "Observe the life cycle of a plant (okra or maize plant)",
+    "source_page": 59
+  },
+  "spec": {
+    "skills": [
+      {"tag": "stage_seed", "description": "Identify the seed as the starting stage of the plant life cycle.", "minQuestions": 3},
+      {"tag": "stage_germination", "description": "Describe germination as the sprouting of a seed into a seedling.", "minQuestions": 3},
+      {"tag": "stage_growth", "description": "Describe the growth stage (seedling becomes a mature plant with leaves, stem, roots).", "minQuestions": 4},
+      {"tag": "stage_flowering", "description": "Identify flowering as a stage in the life cycle (okra/maize produce flowers).", "minQuestions": 3},
+      {"tag": "stage_fruiting_seed", "description": "Recognise that fruits/seeds are produced, completing the cycle.", "minQuestions": 4},
+      {"tag": "sequence_stages", "description": "Arrange the stages of the life cycle in the correct order.", "minQuestions": 3}
+    ],
+    "difficultyPlan": "20 questions total — Difficulty 1: 5; Difficulty 2: 7; Difficulty 3: 5; Difficulty 4: 3.",
+    "misconceptions": [
+      "A seed is not part of the life cycle.",
+      "Plants do not produce seeds until they are old.",
+      "Germination and growth are the same stage.",
+      "Maize plants do not produce flowers.",
+      "The life cycle stops at the mature plant.",
+      "Fruits are not connected to seeds."
+    ],
+    "needsTeacherAssessment": true
+  },
+  "questions": [
+    {
+      "skill_tag": "stage_seed",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What is the first stage of a plant's life cycle?",
+      "options": ["Seed", "Seedling", "Flower", "Fruit"],
+      "answer": 0,
+      "hints": ["It is small and can be planted.", "It grows into a new plant."],
+      "explanation": "The seed is the first stage of the plant life cycle.",
+      "misconception": "A seed is not part of the life cycle.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "stage_seed",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Where does a new plant come from?",
+      "options": ["A seed", "A stone", "A leaf only", "Water"],
+      "answer": 0,
+      "hints": ["It is small and hard.", "It is planted in the soil."],
+      "explanation": "A new plant grows from a seed.",
+      "misconception": "Plants grow from stones.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "stage_seed",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "What is the first stage of a plant's life cycle?",
+      "answer": ["seed", "the seed"],
+      "hints": ["It is planted in the soil.", "It grows into a seedling."],
+      "explanation": "The seed is the first stage of the plant life cycle.",
+      "misconception": "The life cycle starts with a flower.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "stage_germination",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What is germination?",
+      "options": ["The sprouting of a seed into a seedling", "The production of flowers", "The formation of fruits", "The death of a plant"],
+      "answer": 0,
+      "hints": ["It is when a seed starts to grow.", "A small shoot appears."],
+      "explanation": "Germination is the sprouting of a seed into a seedling.",
+      "misconception": "Germination is the same as growth.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "stage_germination",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "What do we call the young plant that comes out of a germinating seed?",
+      "options": ["Seedling", "Mature plant", "Flower", "Fruit"],
+      "answer": 0,
+      "hints": ["It is small and young.", "It has just started to grow."],
+      "explanation": "The young plant that comes out of a germinating seed is called a seedling.",
+      "misconception": "A seedling is a mature plant.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "stage_germination",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Describe what happens during germination.",
+      "answer": ["a seed sprouts and a small seedling appears", "the seed begins to grow into a seedling", "a shoot comes out of the seed"],
+      "hints": ["Think about a seed starting to grow.", "A small plant appears."],
+      "explanation": "During germination, a seed sprouts and a small seedling appears.",
+      "misconception": "Germination is when the plant flowers.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "stage_growth",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What happens during the growth stage of a plant?",
+      "options": ["The seedling becomes a mature plant with more leaves", "The plant produces flowers", "The plant dies", "The seed is formed"],
+      "answer": 0,
+      "hints": ["The plant gets bigger.", "It develops more leaves and a stronger stem."],
+      "explanation": "During the growth stage, the seedling grows into a mature plant with more leaves, a taller stem and deeper roots.",
+      "misconception": "Growth happens after flowering.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "stage_growth",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which of these shows that a plant is in the growth stage?",
+      "options": ["It is getting taller and developing more leaves", "It is producing flowers", "It is forming fruits", "It is drying up"],
+      "answer": 0,
+      "hints": ["Growth means getting bigger.", "More leaves appear."],
+      "explanation": "A plant in the growth stage gets taller and develops more leaves.",
+      "misconception": "Growth is the same as flowering.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "stage_growth",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "What happens to a seedling during the growth stage?",
+      "answer": ["it grows into a mature plant with more leaves and a taller stem", "it gets bigger and develops more leaves", "it becomes a mature plant"],
+      "hints": ["Think about getting bigger.", "More leaves and a stronger stem."],
+      "explanation": "During the growth stage, the seedling grows into a mature plant with more leaves and a taller stem.",
+      "misconception": "The seedling stays the same size.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "stage_growth",
+      "type": "mcq",
+      "difficulty": 4,
+      "stem": "A pupil observes a maize plant that is taller than the seedling stage but has not yet produced flowers. What stage is the plant in?",
+      "options": ["Growth stage", "Germination stage", "Seed stage", "Fruiting stage"],
+      "answer": 0,
+      "hints": ["It has grown but not flowered yet.", "It is getting bigger."],
+      "explanation": "The plant is in the growth stage because it has grown taller but has not yet produced flowers.",
+      "misconception": "The plant is in the flowering stage.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "stage_flowering",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "What happens during the flowering stage of a maize plant?",
+      "options": ["The plant produces flowers", "The plant produces seeds only", "The plant dies", "The seed germinates"],
+      "answer": 0,
+      "hints": ["Maize plants produce tassels and silks.", "These are flowers."],
+      "explanation": "During the flowering stage, the maize plant produces flowers (tassels and silks).",
+      "misconception": "Maize plants do not produce flowers.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "stage_flowering",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Why is the flowering stage important in the life cycle of a plant?",
+      "answer": ["flowers help the plant produce fruits and seeds", "flowers are needed for reproduction", "flowers lead to seed formation"],
+      "hints": ["Flowers are connected to seeds.", "They help make fruits."],
+      "explanation": "The flowering stage is important because flowers help the plant produce fruits and seeds for the next generation.",
+      "misconception": "Flowers are not important.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "stage_flowering",
+      "type": "mcq",
+      "difficulty": 4,
+      "stem": "A farmer notices that his okra plants have started producing yellow flowers. What stage of the life cycle are the plants in?",
+      "options": ["Flowering stage", "Germination stage", "Seed stage", "Growth stage"],
+      "answer": 0,
+      "hints": ["The flowers have appeared.", "This is the flowering stage."],
+      "explanation": "The okra plants are in the flowering stage because they have started producing flowers.",
+      "misconception": "The plants are still in the growth stage only.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "stage_fruiting_seed",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "What happens after the flowering stage in the life cycle of a plant?",
+      "options": ["Fruits and seeds are produced", "The plant germinates", "The seedling appears", "The seed is planted"],
+      "answer": 0,
+      "hints": ["Flowers lead to fruits.", "Fruits contain seeds."],
+      "explanation": "After flowering, the plant produces fruits and seeds, completing the life cycle.",
+      "misconception": "The life cycle stops at flowering.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "stage_fruiting_seed",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "What is the final stage of the life cycle of a maize plant?",
+      "options": ["Production of fruits and seeds", "Germination", "Flowering", "Seedling growth"],
+      "answer": 0,
+      "hints": ["Maize produces cobs.", "Cobs contain seeds."],
+      "explanation": "The final stage is the production of fruits (cobs) and seeds, which can grow into new plants.",
+      "misconception": "The life cycle ends at flowering.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "stage_fruiting_seed",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "What does a plant produce at the end of its life cycle?",
+      "answer": ["fruits and seeds", "seeds", "fruits containing seeds"],
+      "hints": ["These can grow into new plants.", "They come after flowers."],
+      "explanation": "At the end of its life cycle, a plant produces fruits and seeds.",
+      "misconception": "Plants do not produce seeds.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "stage_fruiting_seed",
+      "type": "mcq",
+      "difficulty": 4,
+      "stem": "A maize cob is full of maize seeds. What does this show about the plant's life cycle?",
+      "options": ["The plant has completed its life cycle by producing seeds", "The plant is still in the germination stage", "The plant has not yet flowered", "The plant has stopped growing"],
+      "answer": 0,
+      "hints": ["Seeds are the final stage.", "The cycle is complete when seeds are formed."],
+      "explanation": "The cob full of seeds shows that the plant has completed its life cycle by producing seeds for the next generation.",
+      "misconception": "Seeds are not part of the life cycle.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "sequence_stages",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which sequence correctly shows the life cycle of a maize plant?",
+      "options": ["Seed → germination → growth → flowering → fruiting/seeds", "Seed → flowering → growth → germination → fruiting", "Germination → seed → growth → flowering → fruiting", "Seed → growth → germination → fruiting → flowering"],
+      "answer": 0,
+      "hints": ["Start with the seed.", "Flowering comes before fruiting."],
+      "explanation": "The correct sequence is: seed → germination → growth → flowering → fruiting/seeds.",
+      "misconception": "Flowering comes before growth.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "sequence_stages",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Arrange these stages in the correct order: flowering, seed, growth, germination, fruiting.",
+      "answer": ["seed, germination, growth, flowering, fruiting", "seed → germination → growth → flowering → fruiting"],
+      "hints": ["Start with the seed.", "Germination comes before growth."],
+      "explanation": "The correct order is: seed, germination, growth, flowering, fruiting.",
+      "misconception": "Flowering comes before growth.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "sequence_stages",
+      "type": "practical",
+      "difficulty": 4,
+      "stem": "In groups, plant a maize or okra seed and observe it over several weeks. Record the stages you observe (germination, growth, flowering, fruiting). Present your findings to the class.",
+      "rubric": {
+        "criteria": [
+          {"description": "Planted a seed and cared for it", "marks": 1},
+          {"description": "Observed and recorded at least three stages of the life cycle", "marks": 2},
+          {"description": "Arranged the stages in the correct order", "marks": 2},
+          {"description": "Presented findings clearly to the class", "marks": 1}
+        ]
+      },
+      "answer": "",
+      "hints": ["Plant the seed and water it.", "Watch for germination, growth, flowers, and fruits."],
+      "explanation": "This is a practical task. Your teacher will mark it using the rubric.",
+      "misconception": "The life cycle stops at the mature plant.",
+      "uncertain": []
+    }
+  ]
+}

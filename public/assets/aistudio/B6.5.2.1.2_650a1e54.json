@@ -1,0 +1,282 @@
+{
+  "indicator": {
+    "code": "B6.5.2.1.2",
+    "subject": "Science",
+    "level": "Basic 6",
+    "strand": "HUMANS AND THE ENVIRONMENT",
+    "sub_strand": "Diseases",
+    "content_standard": "B6.5.2.1 Demonstrate knowledge of common diseases of humans; causes, symptoms, effects and prevention",
+    "objective": "Know how to prevent meningitis",
+    "source_page": 67
+  },
+  "spec": {
+    "skills": [
+      {"tag": "cause_meningitis", "description": "Recognise that meningitis is caused by germs that affect the brain and spinal cord.", "minQuestions": 3},
+      {"tag": "symptoms_meningitis", "description": "Identify common symptoms of meningitis (e.g. fever, headache, stiff neck).", "minQuestions": 3},
+      {"tag": "spread_meningitis", "description": "Describe how meningitis can spread (e.g. coughing, sneezing, close contact).", "minQuestions": 3},
+      {"tag": "prevention_meningitis", "description": "Identify ways to prevent meningitis (e.g. vaccination, avoiding close contact with infected persons, covering mouth).", "minQuestions": 4},
+      {"tag": "action_meningitis", "description": "State what to do if someone shows signs of meningitis (seek medical help immediately).", "minQuestions": 3},
+      {"tag": "importance_vaccination", "description": "Explain why vaccination is important in preventing meningitis.", "minQuestions": 4}
+    ],
+    "difficultyPlan": "20 questions total — Difficulty 1: 5; Difficulty 2: 7; Difficulty 3: 5; Difficulty 4: 3.",
+    "misconceptions": [
+      "Meningitis is caused by dirty water.",
+      "Meningitis cannot be prevented.",
+      "Meningitis is the same as malaria.",
+      "Vaccination is not important.",
+      "Meningitis spreads through the air only.",
+      "A stiff neck is not a sign of meningitis."
+    ],
+    "needsTeacherAssessment": true
+  },
+  "questions": [
+    {
+      "skill_tag": "cause_meningitis",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What causes meningitis?",
+      "options": ["Germs that affect the brain and spinal cord", "Drinking dirty water", "Eating too much food", "Sleeping late at night"],
+      "answer": 0,
+      "hints": ["Meningitis affects the brain and spinal cord.", "It is caused by germs."],
+      "explanation": "Meningitis is caused by germs that infect the membranes covering the brain and spinal cord.",
+      "misconception": "Meningitis is caused by dirty water.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "symptoms_meningitis",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which of these is a common symptom of meningitis?",
+      "options": ["Stiff neck", "Broken leg", "Toothache", "Hiccups"],
+      "answer": 0,
+      "hints": ["Meningitis affects the neck and head.", "A stiff neck is a warning sign."],
+      "explanation": "A stiff neck is a common symptom of meningitis.",
+      "misconception": "A stiff neck is not a sign of meningitis.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "prevention_meningitis",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which of these helps prevent meningitis?",
+      "options": ["Vaccination", "Eating sweets", "Sleeping during the day", "Playing in the sun"],
+      "answer": 0,
+      "hints": ["A vaccine protects you from diseases.", "Meningitis can be prevented by vaccination."],
+      "explanation": "Vaccination helps prevent meningitis by protecting the body against the germs that cause it.",
+      "misconception": "Vaccination is not important.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "action_meningitis",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What should you do if someone shows signs of meningitis?",
+      "options": ["Seek medical help immediately", "Hide the person", "Give the person sweets", "Ignore the person"],
+      "answer": 0,
+      "hints": ["Meningitis is serious.", "A health worker can help."],
+      "explanation": "If someone shows signs of meningitis, seek medical help immediately.",
+      "misconception": "Meningitis does not need urgent medical attention.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "importance_vaccination",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Why is vaccination important for preventing meningitis?",
+      "options": ["It protects the body against the germs that cause meningitis", "It makes the body weaker", "It causes meningitis", "It makes the body taller"],
+      "answer": 0,
+      "hints": ["Vaccines protect against diseases.", "They help the body fight germs."],
+      "explanation": "Vaccination is important because it protects the body against the germs that cause meningitis.",
+      "misconception": "Vaccination causes diseases.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "cause_meningitis",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Ama says, 'Meningitis is caused by dirty water.' What is the best correction?",
+      "options": ["Yes, meningitis comes from dirty water", "No, meningitis is caused by germs that affect the brain and spinal cord", "No, meningitis is caused by too much sun", "No, meningitis is caused by eating too much"],
+      "answer": 1,
+      "hints": ["Meningitis affects the brain and spinal cord.", "It is caused by germs, not dirty water."],
+      "explanation": "Meningitis is caused by germs that infect the brain and spinal cord, not by dirty water.",
+      "misconception": "Meningitis is caused by dirty water.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "symptoms_meningitis",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which set lists common symptoms of meningitis?",
+      "options": ["Fever, headache, stiff neck", "Broken arm, headache, sneezing", "Toothache, hiccups, back pain", "Runny nose, earache, cough"],
+      "answer": 0,
+      "hints": ["Meningitis causes fever and headache.", "The neck becomes stiff."],
+      "explanation": "Common symptoms of meningitis include fever, headache and a stiff neck.",
+      "misconception": "Meningitis only causes a headache.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "spread_meningitis",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "How can meningitis spread from one person to another?",
+      "options": ["Through coughing and sneezing", "Through sharing a pencil", "Through looking at someone", "Through wearing the same colour"],
+      "answer": 0,
+      "hints": ["Think about droplets from the mouth and nose.", "Coughing and sneezing send germs into the air."],
+      "explanation": "Meningitis can spread through coughing and sneezing, which send germs into the air.",
+      "misconception": "Meningitis spreads through the air only.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "prevention_meningitis",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which of these is a way to prevent meningitis from spreading in a school?",
+      "options": ["Keeping a sick learner away from others", "Sharing water bottles", "Playing close together", "Sharing food"],
+      "answer": 0,
+      "hints": ["Sick learners should rest at home.", "Keeping away reduces spread."],
+      "explanation": "Keeping a sick learner away from others helps prevent meningitis from spreading in the school.",
+      "misconception": "Meningitis cannot spread in school.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "action_meningitis",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Kofi sits near a learner who has meningitis. What should Kofi do?",
+      "options": ["Tell the teacher and wash his hands", "Share the learner's food", "Ignore it and continue playing", "Hide the sick learner"],
+      "answer": 0,
+      "hints": ["Tell an adult.", "Wash hands to stay clean."],
+      "explanation": "Kofi should tell the teacher and wash his hands. The teacher can then take the right steps to protect others.",
+      "misconception": "You should hide a sick person.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "importance_vaccination",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Why should children receive the meningitis vaccine?",
+      "options": ["To protect them from getting meningitis", "To make them taller", "To make them run faster", "To make them hungry"],
+      "answer": 0,
+      "hints": ["Vaccines protect against diseases.", "They help the body fight germs."],
+      "explanation": "Children should receive the meningitis vaccine to protect them from getting the disease.",
+      "misconception": "Vaccines are not necessary.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "cause_meningitis",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "What causes meningitis?",
+      "answer": ["germs that affect the brain and spinal cord", "germs", "bacteria or viruses that infect the brain and spinal cord"],
+      "hints": ["It is caused by germs.", "It affects the brain and spinal cord."],
+      "explanation": "Meningitis is caused by germs (bacteria or viruses) that infect the brain and spinal cord.",
+      "misconception": "Meningitis is caused by dirty water.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "symptoms_meningitis",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Name two symptoms of meningitis.",
+      "answer": ["fever and headache", "headache and stiff neck", "fever and stiff neck"],
+      "hints": ["Meningitis causes fever.", "The neck becomes stiff."],
+      "explanation": "Common symptoms of meningitis include fever, headache and a stiff neck.",
+      "misconception": "Meningitis only causes a headache.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "prevention_meningitis",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Give one way to prevent meningitis.",
+      "answer": ["vaccination", "get vaccinated", "avoid close contact with infected persons", "cover mouth when coughing"],
+      "hints": ["A vaccine protects you.", "Avoid close contact with sick people."],
+      "explanation": "Meningitis can be prevented by vaccination, avoiding close contact with infected persons, and covering the mouth when coughing.",
+      "misconception": "Meningitis cannot be prevented.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "importance_vaccination",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Explain why vaccination is important in preventing meningitis.",
+      "answer": ["it protects the body against the germs that cause meningitis", "vaccines help the body fight meningitis germs", "it reduces the chance of getting meningitis"],
+      "hints": ["Vaccines protect against diseases.", "They help the body fight germs."],
+      "explanation": "Vaccination is important because it protects the body against the germs that cause meningitis, reducing the chance of getting the disease.",
+      "misconception": "Vaccination is not important.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "spread_meningitis",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Describe one way meningitis can spread from one person to another.",
+      "answer": ["through coughing and sneezing", "when an infected person coughs or sneezes near others", "through droplets from the mouth or nose"],
+      "hints": ["Think about droplets from the mouth.", "Coughing and sneezing spread germs."],
+      "explanation": "Meningitis can spread through droplets from coughing and sneezing, or through close contact with an infected person.",
+      "misconception": "Meningitis spreads through the air only.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "prevention_meningitis",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "A learner has meningitis. Which action will BEST help prevent other learners from getting it?",
+      "options": ["The sick learner should stay at home and rest", "The sick learner should share books with everyone", "The sick learner should play close to others", "The sick learner should continue to cough in class"],
+      "answer": 0,
+      "hints": ["Sick learners need rest.", "Staying away reduces spread."],
+      "explanation": "The sick learner should stay at home and rest. This reduces the chance of spreading meningitis to other learners.",
+      "misconception": "Meningitis cannot spread in school.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "action_meningitis",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "What should you do if you think you have been exposed to meningitis?",
+      "answer": ["tell an adult and see a health worker", "tell a parent or teacher and visit a health centre", "inform an adult and go to a health worker"],
+      "hints": ["Tell someone you trust.", "A health worker can help."],
+      "explanation": "If you think you have been exposed to meningitis, tell an adult and see a health worker for advice.",
+      "misconception": "You should hide from health workers.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "importance_vaccination",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "Design a simple poster for your school to encourage learners to get vaccinated against meningitis. Include a short message and one reason why vaccination is important.",
+      "rubric": {
+        "criteria": [
+          {"description": "Included a short encouraging message about vaccination", "marks": 1},
+          {"description": "Stated one correct reason why vaccination is important for preventing meningitis", "marks": 2},
+          {"description": "Used clear drawings or symbols", "marks": 2},
+          {"description": "Poster is neat and suitable for learners", "marks": 1}
+        ]
+      },
+      "answer": "",
+      "hints": ["Write a message like 'Vaccinate to protect yourself!'", "Explain that vaccines protect against meningitis."],
+      "explanation": "This is a written/drawing task. Your teacher will mark it using the rubric.",
+      "misconception": "Vaccination is not important.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "action_meningitis",
+      "type": "oral",
+      "difficulty": 4,
+      "stem": "In a group, role-play a situation where a learner notices a classmate with a fever, severe headache and stiff neck. Act out what the learner should do and say. Explain why immediate action is important.",
+      "rubric": {
+        "criteria": [
+          {"description": "Recognised the signs of meningitis (fever, headache, stiff neck)", "marks": 1},
+          {"description": "Told an adult or teacher immediately", "marks": 1},
+          {"description": "Advised seeking medical help right away", "marks": 1},
+          {"description": "Explained that meningitis is serious and needs urgent treatment", "marks": 2}
+        ]
+      },
+      "answer": "",
+      "hints": ["Tell an adult immediately.", "Meningitis needs urgent medical help."],
+      "explanation": "This is an oral/role-play task. Your teacher will mark it using the rubric.",
+      "misconception": "Meningitis does not need urgent attention.",
+      "uncertain": []
+    }
+  ]
+}

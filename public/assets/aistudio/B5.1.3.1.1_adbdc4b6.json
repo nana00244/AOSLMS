@@ -1,0 +1,262 @@
+{
+  "indicator": {
+    "code": "B5.1.3.1.1",
+    "subject": "Mathematics",
+    "level": "Basic 5",
+    "strand": "Number",
+    "sub_strand": "Fractions",
+    "content_standard": "B5.1.3.1 Demonstrate understanding of strategies for comparing, adding, subtracting and multiplying fractions",
+    "objective": "Determine equivalent fractions of given fractions",
+    "source_page": 93
+  },
+  "spec": {
+    "skills": [
+      {"tag": "find_equivalent_fractions", "description": "Generate equivalent fractions by multiplying or dividing numerator and denominator by the same number.", "minQuestions": 2},
+      {"tag": "simplify_fractions", "description": "Simplify fractions to lowest terms.", "minQuestions": 2},
+      {"tag": "use_lcd", "description": "Find the Lowest Common Denominator for two fractions.", "minQuestions": 2}
+    ],
+    "difficultyPlan": "20 questions: 5 at difficulty 1, 7 at difficulty 2, 5 at difficulty 3, 3 at difficulty 4.",
+    "misconceptions": [
+      "Adding the same number to numerator and denominator instead of multiplying.",
+      "Thinking a fraction with a larger denominator is always larger.",
+      "Not simplifying fully."
+    ],
+    "needsTeacherAssessment": false
+  },
+  "questions": [
+    {
+      "skill_tag": "find_equivalent_fractions",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which fraction is equivalent to 1/2?",
+      "options": ["2/3", "2/4", "1/3", "3/4"],
+      "answer": 1,
+      "hints": ["Multiply numerator and denominator by the same number.", "1/2 = (1×2)/(2×2)."],
+      "explanation": "1/2 = 2/4.",
+      "misconception": "Choosing 2/3 because it has a 2.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "find_equivalent_fractions",
+      "type": "short_answer",
+      "difficulty": 1,
+      "stem": "Write an equivalent fraction for 1/3 by multiplying numerator and denominator by 2.",
+      "answer": ["2/6"],
+      "hints": ["Multiply 1×2 and 3×2."],
+      "explanation": "1/3 = 2/6.",
+      "misconception": "Writing 2/3 (only multiplying numerator).",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "simplify_fractions",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Simplify 4/8.",
+      "options": ["1/2", "2/4", "1/4", "3/4"],
+      "answer": 0,
+      "hints": ["Divide numerator and denominator by their HCF, 4."],
+      "explanation": "4/8 = 1/2.",
+      "misconception": "Saying 2/4 (not fully simplified).",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "simplify_fractions",
+      "type": "numeric",
+      "difficulty": 1,
+      "stem": "Simplify 6/9. Write the numerator of the simplified fraction.",
+      "answer": 2,
+      "check": "6/3",
+      "hints": ["Divide both by 3."],
+      "explanation": "6/9 = 2/3, numerator is 2.",
+      "misconception": "Saying 3.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "use_lcd",
+      "type": "numeric",
+      "difficulty": 1,
+      "stem": "What is the Lowest Common Denominator (LCD) of 1/2 and 1/3?",
+      "answer": 6,
+      "check": "6",
+      "hints": ["LCM of 2 and 3."],
+      "explanation": "The LCD of 2 and 3 is 6.",
+      "misconception": "Adding denominators to get 5.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "find_equivalent_fractions",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which fraction is equivalent to 3/5?",
+      "options": ["6/10", "5/7", "4/6", "9/10"],
+      "answer": 0,
+      "hints": ["Multiply numerator and denominator by 2."],
+      "explanation": "3/5 = 6/10.",
+      "misconception": "Choosing 4/6 because both add 1.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "find_equivalent_fractions",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "Find the missing numerator: 2/7 = ?/21.",
+      "answer": 6,
+      "check": "2*3",
+      "hints": ["7 × 3 = 21, so multiply 2 by 3."],
+      "explanation": "2/7 = 6/21, missing numerator is 6.",
+      "misconception": "Saying 3.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "simplify_fractions",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Simplify 10/15.",
+      "options": ["2/3", "5/10", "3/5", "1/2"],
+      "answer": 0,
+      "hints": ["Divide both by 5."],
+      "explanation": "10/15 = 2/3.",
+      "misconception": "Saying 5/10.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "simplify_fractions",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Simplify 18/24.",
+      "answer": ["3/4"],
+      "hints": ["HCF of 18 and 24 is 6."],
+      "explanation": "18/24 = 3/4.",
+      "misconception": "Simplifying by 2 only to get 9/12.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "use_lcd",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "What is the LCD of 1/4 and 1/6?",
+      "options": ["10", "12", "24", "8"],
+      "answer": 1,
+      "hints": ["LCM of 4 and 6."],
+      "explanation": "LCM of 4 and 6 is 12.",
+      "misconception": "Multiplying 4×6=24.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "use_lcd",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "Find the LCD of 3/8 and 5/12.",
+      "answer": 24,
+      "check": "24",
+      "hints": ["LCM of 8 and 12."],
+      "explanation": "LCM of 8 and 12 is 24.",
+      "misconception": "Multiplying 8×12=96.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "find_equivalent_fractions",
+      "type": "written",
+      "difficulty": 2,
+      "stem": "Explain how to find an equivalent fraction for 3/4.",
+      "hints": ["Multiply numerator and denominator by the same number."],
+      "explanation": "Multiply both 3 and 4 by the same number, e.g., 2 to get 6/8.",
+      "rubric": {
+        "criteria": [
+          {"description": "States multiply numerator and denominator by same number.", "marks": 1},
+          {"description": "Gives a correct example.", "marks": 1}
+        ]
+      },
+      "misconception": "Adding the same number to both.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "simplify_fractions",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "A pupil says 6/12 simplifies to 3/6. Is the pupil correct? Explain.",
+      "hints": ["Can 3/6 be simplified further?"],
+      "explanation": "The pupil is partially correct but did not simplify fully. 6/12 = 3/6 = 1/2. The simplest form is 1/2.",
+      "rubric": {
+        "criteria": [
+          {"description": "States 3/6 can be simplified further.", "marks": 1},
+          {"description": "Gives simplest form 1/2.", "marks": 1}
+        ]
+      },
+      "misconception": "Thinking 3/6 is fully simplified.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "find_equivalent_fractions",
+      "type": "numeric",
+      "difficulty": 3,
+      "stem": "Find the missing denominator: 4/5 = 12/?",
+      "answer": 15,
+      "check": "5*3",
+      "hints": ["4 × 3 = 12, so multiply 5 by 3."],
+      "explanation": "4/5 = 12/15, missing denominator is 15.",
+      "misconception": "Saying 9.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "use_lcd",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "Explain how to find the LCD of 2/3 and 3/4.",
+      "hints": ["Find LCM of 3 and 4."],
+      "explanation": "The LCM of 3 and 4 is 12, so the LCD is 12.",
+      "rubric": {
+        "criteria": [
+          {"description": "States LCM of 3 and 4 is 12.", "marks": 1},
+          {"description": "Concludes LCD is 12.", "marks": 1}
+        ]
+      },
+      "misconception": "Multiplying denominators to get 12 (correct here but not always LCD).",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "simplify_fractions",
+      "type": "numeric",
+      "difficulty": 3,
+      "stem": "Simplify 24/36. Write the numerator of the simplified fraction.",
+      "answer": 2,
+      "check": "24/12",
+      "hints": ["HCF of 24 and 36 is 12."],
+      "explanation": "24/36 = 2/3, numerator is 2.",
+      "misconception": "Saying 4.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "find_equivalent_fractions",
+      "type": "written",
+      "difficulty": 4,
+      "stem": "A pupil says 2/3 = 4/5 because 2+2=4 and 3+2=5. Explain why this is incorrect.",
+      "hints": ["Equivalent fractions use multiplication, not addition."],
+      "explanation": "Adding the same number to numerator and denominator does not give an equivalent fraction. You must multiply both by the same number.",
+      "rubric": {
+        "criteria": [
+          {"description": "States addition is incorrect.", "marks": 1},
+          {"description": "Explains multiplication is needed.", "marks": 1}
+        ]
+      },
+      "misconception": "Thinking adding the same number works.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "use_lcd",
+      "type": "written",
+      "difficulty": 4,
+      "stem": "Find the LCD of 5/6 and 7/9. Explain your method.",
+      "hints": ["Find LCM of 6 and 9."],
+      "explanation": "Multiples of 6: 6,12,18; multiples of 9: 9,18. LCM is 18, so LCD is 18.",
+      "rubric": {
+        "criteria": [
+          {"description": "Finds LCM as 18.", "marks": 1},
+          {"description": "Concludes LCD is 18.", "marks": 1}
+        ]
+      },
+      "misconception": "Using product 54 as LCD.",
+      "uncertain": []
+    }
+  ]
+}

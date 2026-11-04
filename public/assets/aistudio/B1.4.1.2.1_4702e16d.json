@@ -1,0 +1,50 @@
+{
+  "indicator": {
+    "code": "B1.4.1.2.1",
+    "subject": "Science",
+    "level": "Basic 1",
+    "strand": "FORCES AND ENERGY",
+    "sub_strand": "Sources and Forms of Energy",
+    "content_standard": "B1.4.1.2: Show understanding of the concept of heat energy in terms of its importance, effects, sources and transfer from one medium to another",
+    "objective": "Explain the terms hot and cold",
+    "source_page": 29
+  },
+  "spec": {
+    "skills": [
+      {"tag": "EN2-MEANING", "description": "Explain in simple words what 'hot' and 'cold' mean", "minQuestions": 3},
+      {"tag": "EN2-SORT", "description": "Sort familiar items into hot and cold", "minQuestions": 3},
+      {"tag": "EN2-SOURCES", "description": "Name simple sources of heat", "minQuestions": 2},
+      {"tag": "EN2-EFFECT", "description": "Say what happens when something is heated or cooled", "minQuestions": 2}
+    ],
+    "difficultyPlan": "5x D1, 7x D2, 5x D3, 3x D4",
+    "misconceptions": [
+      "Cold is a kind of energy that comes from ice.",
+      "If it is not on fire, it is cold.",
+      "Hot and cold are the same as hard and soft.",
+      "Objects become cold by gaining coldness, not by losing heat."
+    ],
+    "needsTeacherAssessment": false
+  },
+  "questions": [
+    {"skill_tag": "EN2-SORT", "type": "mcq", "difficulty": 1, "stem": "Which of these is usually hot?", "options": ["Ice", "Fire", "Snow", "Cold water"], "answer": 1, "hints": ["It burns and gives light.", "It is very dangerous to touch."], "explanation": "Fire is very hot.", "misconception": "Pupils may think fire is cold.", "uncertain": []},
+    {"skill_tag": "EN2-SORT", "type": "mcq", "difficulty": 1, "stem": "Which of these is usually cold?", "options": ["The sun", "Ice cream", "A boiling pot", "A lighted candle"], "answer": 1, "hints": ["It is kept in the fridge.", "It melts in your hand."], "explanation": "Ice cream is cold because it is kept frozen.", "misconception": "Pupils may think all food is hot.", "uncertain": []},
+    {"skill_tag": "EN2-MEANING", "type": "mcq", "difficulty": 1, "stem": "How does a hot cup of tea feel when you touch it?", "options": ["Cold", "Warm/hot", "Like a stone", "Wet"], "answer": 1, "hints": ["It has just been boiled.", "It gives off steam."], "explanation": "A hot cup of tea feels warm or hot to the touch.", "misconception": "Pupils may confuse hot with just being wet.", "uncertain": []},
+    {"skill_tag": "EN2-MEANING", "type": "mcq", "difficulty": 1, "stem": "When you touch a piece of ice, how does it feel?", "options": ["Hot", "Cold", "Soft", "Rough"], "answer": 1, "hints": ["It is frozen water.", "It makes your hand feel chilly."], "explanation": "Ice feels cold to the touch.", "misconception": "Pupils may think ice is hot because the sun melts it.", "uncertain": []},
+    {"skill_tag": "EN2-SOURCES", "type": "mcq", "difficulty": 1, "stem": "What is the main natural source of heat for the Earth?", "options": ["The moon", "The sun", "The stars", "The wind"], "answer": 1, "hints": ["It gives us light during the day.", "It makes us feel warm."], "explanation": "The sun is the main natural source of heat.", "misconception": "Pupils may think the moon gives heat.", "uncertain": []},
+    {"skill_tag": "EN2-SORT", "type": "mcq", "difficulty": 2, "stem": "Ama is sorting items. Which group is all cold?", "options": ["Ice, cold water, ice block", "Fire, sun, candle", "Hot tea, fire, sun", "Stove, iron, boiling water"], "answer": 0, "hints": ["Which group has things from the fridge/freezer?", "The other groups have fire or heat."], "explanation": "Ice, cold water, and an ice block are all cold items.", "misconception": "Pupils may think water is always cold.", "uncertain": []},
+    {"skill_tag": "EN2-SOURCES", "type": "mcq", "difficulty": 2, "stem": "Which of these is a source of heat at home?", "options": ["A stove", "A cup", "A bed", "A book"], "answer": 0, "hints": ["You cook on it.", "It uses fire or electricity."], "explanation": "A stove is a source of heat used for cooking.", "misconception": "Pupils may think only the sun gives heat.", "uncertain": []},
+    {"skill_tag": "EN2-EFFECT", "type": "mcq", "difficulty": 2, "stem": "What happens to an ice block when you leave it in the sun?", "options": ["It gets bigger", "It melts", "It becomes a stone", "It catches fire"], "answer": 1, "hints": ["The sun is hot.", "It turns into water."], "explanation": "An ice block melts when left in the sun because the heat turns it into liquid water.", "misconception": "Pupils may think ice stays solid in the sun.", "uncertain": []},
+    {"skill_tag": "EN2-EFFECT", "type": "mcq", "difficulty": 2, "stem": "What happens to water when you put it in a fridge?", "options": ["It becomes hot", "It becomes cold", "It turns into fire", "It turns into a stone"], "answer": 1, "hints": ["A fridge is cool inside.", "It keeps food fresh."], "explanation": "Water becomes cold when placed in a fridge.", "misconception": "Pupils may think a fridge adds cold energy.", "uncertain": []},
+    {"skill_tag": "EN2-MEANING", "type": "mcq", "difficulty": 2, "stem": "If something is NOT hot, we say it is...", "options": ["Cold", "Hard", "Soft", "Loud"], "answer": 0, "hints": ["Think of ice.", "It is the opposite of hot."], "explanation": "The opposite of hot is cold.", "misconception": "Pupils may confuse temperature with texture (hard/soft).", "uncertain": []},
+    {"skill_tag": "EN2-SORT", "type": "short_answer", "difficulty": 2, "stem": "Name one hot thing and one cold thing in your home.", "answer": ["hot: fire/stove/iron, cold: ice/water in fridge"], "hints": ["What do you use to cook?", "What do you use to cool a drink?"], "explanation": "A stove is hot, and ice is cold.", "misconception": "Pupils may list items that are room temperature.", "uncertain": []},
+    {"skill_tag": "EN2-SOURCES", "type": "short_answer", "difficulty": 2, "stem": "Name one thing that gives us heat.", "answer": ["sun", "fire", "stove", "electric iron", "candle", "heater"], "hints": ["You can cook on it.", "It is in the sky."], "explanation": "The sun and fire are sources of heat.", "misconception": "Pupils may name cold things.", "uncertain": []},
+    {"skill_tag": "EN2-EFFECT", "type": "mcq", "difficulty": 3, "stem": "Why do we put ice in a bottle of water on a hot day?", "options": ["To make it sweet", "To make it cold", "To make it hot", "To make it dirty"], "answer": 1, "hints": ["Ice is cold.", "It cools the water down."], "explanation": "We put ice in water to make it cold because ice is cold.", "misconception": "Pupils may think ice adds flavor.", "uncertain": []},
+    {"skill_tag": "EN2-SOURCES", "type": "mcq", "difficulty": 3, "stem": "Kwame wants to make his water hot. Which of these can he use?", "options": ["A fridge", "An electric kettle", "A bucket of cold water", "A fan"], "answer": 1, "hints": ["It heats water using electricity.", "It boils water."], "explanation": "An electric kettle is a source of heat used to boil water.", "misconception": "Pupils may think a fan makes water hot.", "uncertain": []},
+    {"skill_tag": "EN2-EFFECT", "type": "mcq", "difficulty": 3, "stem": "What happens to a hot iron when you unplug it and leave it for a long time?", "options": ["It becomes hotter", "It cools down", "It turns into ice", "It stops working"], "answer": 1, "hints": ["It is no longer connected to electricity.", "The heat goes away."], "explanation": "The hot iron cools down when unplugged because it loses heat to the air.", "misconception": "Pupils may think the iron stays hot forever.", "uncertain": []},
+    {"skill_tag": "EN2-MEANING", "type": "written", "difficulty": 3, "stem": "Explain how you can tell if something is hot or cold just by touching it.", "rubric": {"criteria": [{"description": "States that hot things feel warm or burning", "marks": 1}, {"description": "States that cold things feel chilly or cool", "marks": 1}]}, "hints": ["Touch a cup of tea.", "Touch a piece of ice."], "explanation": "We use our sense of touch to feel if something is hot (warm/burning) or cold (chilly/cool).", "uncertain": []},
+    {"skill_tag": "EN2-SORT", "type": "mcq", "difficulty": 3, "stem": "Which of these is true about a boiling pot of water and a piece of ice?", "options": ["Both are hot", "Both are cold", "The water is hot and the ice is cold", "The water is cold and the ice is hot"], "answer": 2, "hints": ["Boiling water has been heated.", "Ice is frozen."], "explanation": "Boiling water is hot, and ice is cold.", "misconception": "Pupils may confuse the two states.", "uncertain": []},
+    {"skill_tag": "EN2-EFFECT", "type": "mcq", "difficulty": 4, "stem": "Why does a metal spoon left in a hot cup of tea feel hot after some time?", "options": ["The tea is hot and the heat moves to the spoon", "The spoon makes its own heat", "The spoon was already hot", "The tea is cold"], "answer": 0, "hints": ["The spoon is in the hot tea.", "Heat moves from the tea to the spoon."], "explanation": "The heat from the hot tea moves to the metal spoon, making the spoon feel hot.", "misconception": "Pupils may think the spoon generates heat.", "uncertain": []},
+    {"skill_tag": "EN2-SOURCES", "type": "mcq", "difficulty": 4, "stem": "Which of these is NOT a source of heat?", "options": ["The sun", "A lighted candle", "A block of ice", "A fire"], "answer": 2, "hints": ["Which one is cold?", "It is frozen water."], "explanation": "A block of ice is not a source of heat; it is cold.", "misconception": "Pupils may think all solids give off heat.", "uncertain": []},
+    {"skill_tag": "EN2-MEANING", "type": "oral", "difficulty": 4, "stem": "Tell me one thing that is hot and one thing that is cold, and explain how you know.", "rubric": {"criteria": [{"description": "Names a hot object and says it feels warm/burning", "marks": 1}, {"description": "Names a cold object and says it feels chilly/cool", "marks": 1}]}, "hints": ["Think of a fire.", "Think of ice."], "explanation": "This tests the understanding of hot and cold through touch.", "uncertain": []}
+  ]
+}

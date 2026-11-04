@@ -1,0 +1,279 @@
+{
+  "indicator": {
+    "code": "B5.2.1.1.7",
+    "subject": "Mathematics",
+    "level": "Basic 5",
+    "strand": "Algebra",
+    "sub_strand": "Patterns and Relationships",
+    "content_standard": "B5.2.1.1 Determine the pattern rule to make predictions about subsequent elements",
+    "objective": "Write a rule in words and in algebra to represent a given pattern",
+    "source_page": 109
+  },
+  "spec": {
+    "skills": [
+      {"tag": "write_rule_words", "description": "Write a pattern rule in words.", "minQuestions": 2},
+      {"tag": "write_rule_algebra", "description": "Write a pattern rule using a letter for the variable (e.g., 2n + 1).", "minQuestions": 2}
+    ],
+    "difficultyPlan": "20 questions: 5 at difficulty 1, 7 at difficulty 2, 5 at difficulty 3, 3 at difficulty 4.",
+    "misconceptions": [
+      "Writing the rule as a list of numbers.",
+      "Using the wrong operation.",
+      "Confusing the variable with a specific term."
+    ],
+    "needsTeacherAssessment": false
+  },
+  "questions": [
+    {
+      "skill_tag": "write_rule_words",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which words describe the rule for the pattern 3, 6, 9, 12?",
+      "options": ["Add 3", "Add 4", "Multiply by 2", "Subtract 3"],
+      "answer": 0,
+      "hints": ["6 - 3 = 3.", "9 - 6 = 3."],
+      "explanation": "The rule is “add 3”.",
+      "misconception": "Saying multiply by 2 because 3×2=6.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "write_rule_words",
+      "type": "short_answer",
+      "difficulty": 1,
+      "stem": "Write the rule in words for the pattern 10, 20, 30, 40.",
+      "answer": ["add 10", "skip count by 10"],
+      "hints": ["20 - 10 = 10."],
+      "explanation": "The rule is “add 10” or “skip count by 10”.",
+      "misconception": "Saying “add 20”.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "write_rule_algebra",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "The pattern is 2, 4, 6, 8, ... Which rule uses n for the term number?",
+      "options": ["2n", "n + 2", "n × 2 + 1", "n + 1"],
+      "answer": 0,
+      "hints": ["Term 1: 2×1=2.", "Term 2: 2×2=4."],
+      "explanation": "The rule is 2n (multiply the term number by 2).",
+      "misconception": "Saying n+2.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "write_rule_words",
+      "type": "written",
+      "difficulty": 1,
+      "stem": "Write the rule in words for the pattern 5, 8, 11, 14.",
+      "hints": ["Look at the difference."],
+      "explanation": "The rule is “add 3”.",
+      "rubric": {
+        "criteria": [
+          {"description": "States “add 3”.", "marks": 1}
+        ]
+      },
+      "misconception": "Saying “add 2”.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "write_rule_algebra",
+      "type": "short_answer",
+      "difficulty": 1,
+      "stem": "Write the algebraic rule for the pattern 3, 6, 9, 12 using n.",
+      "answer": ["3n"],
+      "hints": ["Term 1: 3×1=3.", "Term 2: 3×2=6."],
+      "explanation": "The rule is 3n.",
+      "misconception": "Saying n+3.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "write_rule_words",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which words describe the rule for the pattern 20, 18, 16, 14?",
+      "options": ["Subtract 2", "Add 2", "Subtract 4", "Multiply by 2"],
+      "answer": 0,
+      "hints": ["20 - 2 = 18."],
+      "explanation": "The rule is “subtract 2”.",
+      "misconception": "Saying “add 2” because the difference is 2.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "write_rule_words",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Write the rule in words for the pattern 1, 4, 9, 16.",
+      "answer": ["multiply the term number by itself", "square the term number", "n x n"],
+      "hints": ["1×1=1, 2×2=4, 3×3=9."],
+      "explanation": "The rule is “multiply the term number by itself” or “square the term number”.",
+      "misconception": "Saying “add 3”.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "write_rule_algebra",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "The pattern is 5, 10, 15, 20, ... What is the value of the rule 5n when n = 6?",
+      "answer": 30,
+      "check": "5*6",
+      "hints": ["Substitute n = 6 into 5n."],
+      "explanation": "5 × 6 = 30.",
+      "misconception": "Saying 11 (5+6).",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "write_rule_algebra",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which algebraic rule matches the pattern 4, 7, 10, 13, ...?",
+      "options": ["3n + 1", "n + 3", "4n", "2n + 2"],
+      "answer": 0,
+      "hints": ["n=1: 3×1+1=4.", "n=2: 3×2+1=7."],
+      "explanation": "The rule is 3n + 1.",
+      "misconception": "Saying n+3.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "write_rule_words",
+      "type": "written",
+      "difficulty": 2,
+      "stem": "A pattern starts at 2 and doubles each time: 2, 4, 8, 16. Write the rule in words.",
+      "hints": ["Each term is multiplied by 2."],
+      "explanation": "The rule is “multiply by 2” or “double”.",
+      "rubric": {
+        "criteria": [
+          {"description": "States “multiply by 2” or “double”.", "marks": 1}
+        ]
+      },
+      "misconception": "Saying “add 2”.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "write_rule_algebra",
+      "type": "written",
+      "difficulty": 2,
+      "stem": "Explain how to write the algebraic rule for the pattern 6, 12, 18, 24.",
+      "hints": ["Compare term number to term value."],
+      "explanation": "Term 1 is 6×1=6, term 2 is 6×2=12. The rule is 6n.",
+      "rubric": {
+        "criteria": [
+          {"description": "States the rule is 6n.", "marks": 1},
+          {"description": "Explains that each term is 6 times the term number.", "marks": 1}
+        ]
+      },
+      "misconception": "Saying n+6.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "write_rule_algebra",
+      "type": "numeric",
+      "difficulty": 3,
+      "stem": "The pattern rule is 4n + 1. What is the 5th term?",
+      "answer": 21,
+      "check": "4*5+1",
+      "hints": ["Substitute n = 5."],
+      "explanation": "4×5+1 = 21.",
+      "misconception": "Saying 20.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "write_rule_words",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "Write the rule in words for the pattern 100, 90, 80, 70.",
+      "hints": ["Subtract 10 each time."],
+      "explanation": "The rule is “subtract 10”.",
+      "rubric": {
+        "criteria": [
+          {"description": "States “subtract 10”.", "marks": 1}
+        ]
+      },
+      "misconception": "Saying “add 10”.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "write_rule_algebra",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "Which algebraic rule matches the pattern 2, 5, 8, 11, ...?",
+      "options": ["3n - 1", "3n + 1", "2n + 1", "n + 3"],
+      "answer": 0,
+      "hints": ["n=1: 3×1-1=2.", "n=2: 3×2-1=5."],
+      "explanation": "The rule is 3n - 1.",
+      "misconception": "Saying 3n+1.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "write_rule_algebra",
+      "type": "numeric",
+      "difficulty": 3,
+      "stem": "The pattern rule is 2n + 3. What is the 10th term?",
+      "answer": 23,
+      "check": "2*10+3",
+      "hints": ["Substitute n = 10."],
+      "explanation": "2×10+3 = 23.",
+      "misconception": "Saying 20.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "write_rule_words",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "A pupil says the rule for 2, 5, 10, 17 is “add 3”. Explain why this is incorrect.",
+      "hints": ["Check differences: +3, +5, +7."],
+      "explanation": "The differences are not constant. The rule is not “add 3”. The differences increase by 2.",
+      "rubric": {
+        "criteria": [
+          {"description": "States “add 3” is incorrect.", "marks": 1},
+          {"description": "Explains differences increase by 2.", "marks": 1}
+        ]
+      },
+      "misconception": "Agreeing with the pupil.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "write_rule_algebra",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "Write the algebraic rule for the pattern 1, 4, 9, 16, ... using n.",
+      "hints": ["Square numbers: n × n."],
+      "explanation": "The rule is n² or n × n.",
+      "rubric": {
+        "criteria": [
+          {"description": "States n² or n × n.", "marks": 1}
+        ]
+      },
+      "misconception": "Saying 2n.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "write_rule_algebra",
+      "type": "written",
+      "difficulty": 4,
+      "stem": "A pattern has the rule 5n - 2. Write the first four terms.",
+      "hints": ["Substitute n = 1, 2, 3, 4."],
+      "explanation": "n=1: 5-2=3; n=2: 10-2=8; n=3: 15-2=13; n=4: 20-2=18. Terms: 3, 8, 13, 18.",
+      "rubric": {
+        "criteria": [
+          {"description": "Lists 3, 8, 13, 18.", "marks": 1}
+        ]
+      },
+      "misconception": "Using n+5 instead.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "write_rule_words",
+      "type": "written",
+      "difficulty": 4,
+      "stem": "Explain the difference between the rules for 2, 4, 6, 8 and 2, 4, 8, 16.",
+      "hints": ["Compare how each term changes."],
+      "explanation": "The first pattern adds 2 each time (rule: add 2). The second pattern doubles each time (rule: multiply by 2).",
+      "rubric": {
+        "criteria": [
+          {"description": "States first is add 2.", "marks": 1},
+          {"description": "States second is multiply by 2.", "marks": 1}
+        ]
+      },
+      "misconception": "Thinking they are the same rule.",
+      "uncertain": []
+    }
+  ]
+}

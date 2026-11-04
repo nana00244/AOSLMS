@@ -1,0 +1,276 @@
+{
+  "indicator": {
+    "code": "B5.4.1.2.1",
+    "subject": "Science",
+    "level": "Basic 5",
+    "strand": "FORCES AND ENERGY",
+    "sub_strand": "Sources and Forms of Energy",
+    "content_standard": "B5.4.1.2 Show understanding of the concept of heat energy in terms of its importance, effects, sources and transfer from one medium to another",
+    "objective": "Show the relationship between heat and temperature",
+    "source_page": 48
+  },
+  "spec": {
+    "skills": [
+      {"tag": "define_heat", "description": "Explain heat as a form of energy that makes things warm or hot.", "minQuestions": 3},
+      {"tag": "define_temperature", "description": "Explain temperature as the degree of hotness or coldness of a body.", "minQuestions": 3},
+      {"tag": "heat_changes_temperature", "description": "Explain that when heat is gained, temperature increases; when heat is lost, temperature decreases.", "minQuestions": 4},
+      {"tag": "heat_transfer", "description": "Recognise that heat moves from a hotter object to a cooler object.", "minQuestions": 4},
+      {"tag": "examples_everyday", "description": "Give everyday examples of heat affecting temperature (e.g. putting a stone in the sun, placing water in a fridge).", "minQuestions": 3},
+      {"tag": "distinguish_heat_temp", "description": "Distinguish between heat and temperature (heat is energy; temperature is a measure of hotness).", "minQuestions": 3}
+    ],
+    "difficultyPlan": "20 questions total — Difficulty 1: 5; Difficulty 2: 7; Difficulty 3: 5; Difficulty 4: 3.",
+    "misconceptions": [
+      "Heat and temperature are the same thing.",
+      "A big object always has a higher temperature than a small object.",
+      "Coldness is a form of energy.",
+      "Heat flows from cold to hot.",
+      "Temperature is the amount of heat in an object.",
+      "When heat is added, temperature always drops."
+    ],
+    "needsTeacherAssessment": true
+  },
+  "questions": [
+    {
+      "skill_tag": "define_heat",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What is heat?",
+      "options": ["A form of energy that makes things warm or hot", "A type of light", "A kind of sound", "A solid material"],
+      "answer": 0,
+      "hints": ["Think about what the sun gives.", "It makes you feel warm."],
+      "explanation": "Heat is a form of energy that makes things warm or hot.",
+      "misconception": "Heat is not a form of energy.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "define_heat",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which of these best describes heat?",
+      "options": ["The flow of energy from a hotter object to a cooler one", "The amount of matter in an object", "The colour of an object", "The speed of an object"],
+      "answer": 0,
+      "hints": ["Heat moves from hot to cold.", "It is a form of energy."],
+      "explanation": "Heat is the flow of energy from a hotter object to a cooler one.",
+      "misconception": "Heat is not related to energy flow.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "define_heat",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Explain what heat is.",
+      "answer": ["a form of energy that makes things warm or hot", "heat is a form of energy", "energy that makes things warm"],
+      "hints": ["Think about the sun.", "It makes things warm."],
+      "explanation": "Heat is a form of energy that makes things warm or hot.",
+      "misconception": "Heat is not a form of energy.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "define_temperature",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What is temperature?",
+      "options": ["The degree of hotness or coldness of a body", "The amount of heat in a body", "The weight of an object", "The colour of an object"],
+      "answer": 0,
+      "hints": ["It tells you how hot or cold something is.", "It is measured with a thermometer."],
+      "explanation": "Temperature is the degree of hotness or coldness of a body.",
+      "misconception": "Temperature is the same as heat.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "define_temperature",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which instrument is used to measure temperature?",
+      "options": ["Thermometer", "Ruler", "Scale", "Clock"],
+      "answer": 0,
+      "hints": ["It measures how hot or cold something is.", "Doctors use it to check for fever."],
+      "explanation": "A thermometer is used to measure temperature.",
+      "misconception": "Temperature is measured with a ruler.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "define_temperature",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "What does temperature measure?",
+      "answer": ["the degree of hotness or coldness of a body", "how hot or cold something is", "the hotness or coldness of an object"],
+      "hints": ["Think about hot and cold.", "It tells you the degree of hotness."],
+      "explanation": "Temperature measures the degree of hotness or coldness of a body.",
+      "misconception": "Temperature measures the amount of heat.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "heat_changes_temperature",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "When heat is added to a substance, what happens to its temperature?",
+      "options": ["It increases", "It decreases", "It stays the same", "It disappears"],
+      "answer": 0,
+      "hints": ["Heating makes things hotter.", "Temperature goes up."],
+      "explanation": "When heat is added to a substance, its temperature increases.",
+      "misconception": "Heating makes temperature drop.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "heat_changes_temperature",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "When a substance loses heat, what happens to its temperature?",
+      "options": ["It decreases", "It increases", "It stays the same", "It becomes zero"],
+      "answer": 0,
+      "hints": ["Cooling makes things colder.", "Temperature goes down."],
+      "explanation": "When a substance loses heat, its temperature decreases.",
+      "misconception": "Losing heat makes temperature rise.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "heat_changes_temperature",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "A stone is placed in the sun. After some time, it feels hot. Why?",
+      "options": ["It gained heat from the sun", "It lost heat to the sun", "It gained cold from the sun", "It did not change"],
+      "answer": 0,
+      "hints": ["The sun gives heat.", "The stone absorbed heat."],
+      "explanation": "The stone gained heat from the sun, so its temperature increased and it feels hot.",
+      "misconception": "The sun gives cold.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "heat_changes_temperature",
+      "type": "practical",
+      "difficulty": 4,
+      "stem": "In groups, plan and carry out a simple experiment to show that heat changes the temperature of a substance. Describe what you did and what you observed.",
+      "rubric": {
+        "criteria": [
+          {"description": "Planned a simple experiment involving heating or cooling a substance", "marks": 1},
+          {"description": "Carried out the experiment safely", "marks": 1},
+          {"description": "Observed and recorded the change in temperature", "marks": 2},
+          {"description": "Explained that heat gained or lost caused the temperature change", "marks": 2}
+        ]
+      },
+      "answer": "",
+      "hints": ["You could heat water and measure its temperature.", "Or place a stone in the sun and feel it.", "What happens to the temperature?"],
+      "explanation": "This is a practical task. Your teacher will mark it using the rubric.",
+      "misconception": "Heat does not affect temperature.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "heat_transfer",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "In which direction does heat flow?",
+      "options": ["From a hotter object to a cooler object", "From a cooler object to a hotter object", "From a smaller object to a larger object", "From a lighter object to a heavier object"],
+      "answer": 0,
+      "hints": ["Hot things cool down.", "Cold things warm up."],
+      "explanation": "Heat flows from a hotter object to a cooler object.",
+      "misconception": "Heat flows from cold to hot.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "heat_transfer",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "A metal spoon is placed in a cup of hot tea. What happens to the spoon?",
+      "options": ["It gains heat from the tea", "It loses heat to the tea", "It stays the same", "It becomes cold"],
+      "answer": 0,
+      "hints": ["The tea is hot.", "The spoon is cooler."],
+      "explanation": "The metal spoon gains heat from the hot tea because heat flows from the hotter tea to the cooler spoon.",
+      "misconception": "The spoon gives heat to the tea.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "heat_transfer",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "Why does a metal spoon left in hot tea become hot after some time?",
+      "options": ["Heat is transferred from the tea to the spoon", "The spoon generates its own heat", "The tea absorbs cold from the spoon", "The spoon absorbs light from the tea"],
+      "answer": 0,
+      "hints": ["Heat moves from hot to cold.", "The tea is hotter than the spoon."],
+      "explanation": "Heat is transferred from the hot tea to the cooler spoon, making the spoon hot.",
+      "misconception": "The spoon produces heat on its own.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "heat_transfer",
+      "type": "short_answer",
+      "difficulty": 4,
+      "stem": "Explain how heat is transferred from a hot object to a cooler object.",
+      "answer": ["heat flows from the hotter object to the cooler object until both reach the same temperature", "heat moves from hot to cold", "heat transfers from the hotter object to the cooler one"],
+      "hints": ["Think about hot tea and a cold spoon.", "Which way does heat go?"],
+      "explanation": "Heat flows from a hotter object to a cooler object until both reach the same temperature.",
+      "misconception": "Heat flows from cold to hot.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "examples_everyday",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which of these is an example of heat affecting temperature?",
+      "options": ["A stone becoming hot in the sun", "A stone changing colour", "A stone becoming heavier", "A stone moving"],
+      "answer": 0,
+      "hints": ["The sun gives heat.", "The stone gets hotter."],
+      "explanation": "A stone becoming hot in the sun is an example of heat affecting temperature.",
+      "misconception": "Heat does not affect temperature.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "examples_everyday",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "When you put water in a fridge, what happens to its temperature?",
+      "options": ["It decreases", "It increases", "It stays the same", "It becomes zero"],
+      "answer": 0,
+      "hints": ["The fridge is cold.", "The water loses heat."],
+      "explanation": "When water is put in a fridge, it loses heat, so its temperature decreases.",
+      "misconception": "The fridge adds heat to the water.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "examples_everyday",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Give one example of heat affecting temperature in everyday life.",
+      "answer": ["putting water in a fridge makes it colder", "a stone left in the sun becomes hot", "heating water on a fire increases its temperature", "an ice cube melts in the sun"],
+      "hints": ["Think about something getting hot or cold.", "The sun or a fridge can cause changes."],
+      "explanation": "An example is putting water in a fridge, which makes it colder as it loses heat.",
+      "misconception": "Heat does not affect everyday objects.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "distinguish_heat_temp",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which statement correctly distinguishes heat and temperature?",
+      "options": ["Heat is a form of energy, while temperature is a measure of hotness", "Heat is a measure of hotness, while temperature is a form of energy", "Heat and temperature are the same thing", "Heat is measured in degrees, while temperature is measured in joules"],
+      "answer": 0,
+      "hints": ["Heat is energy.", "Temperature tells you how hot or cold something is."],
+      "explanation": "Heat is a form of energy, while temperature is a measure of the degree of hotness or coldness.",
+      "misconception": "Heat and temperature are the same.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "distinguish_heat_temp",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "A large bucket of warm water and a small cup of boiling water are compared. Which statement is true?",
+      "options": ["The boiling water has a higher temperature, but the bucket may contain more heat", "The bucket has a higher temperature", "The cup contains more heat", "They have the same temperature"],
+      "answer": 0,
+      "hints": ["Temperature is about hotness.", "Heat depends on the amount of substance too."],
+      "explanation": "The boiling water has a higher temperature because it is boiling, but the large bucket of warm water may contain more total heat because it has more water.",
+      "misconception": "A larger object always has a higher temperature.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "distinguish_heat_temp",
+      "type": "short_answer",
+      "difficulty": 4,
+      "stem": "Explain the difference between heat and temperature.",
+      "answer": ["heat is a form of energy, while temperature is a measure of the degree of hotness or coldness", "heat is energy, temperature is how hot or cold something is", "heat is energy that flows, temperature is a measure of hotness"],
+      "hints": ["Heat is energy.", "Temperature tells you hot or cold."],
+      "explanation": "Heat is a form of energy that flows from hot to cold, while temperature is a measure of how hot or cold an object is.",
+      "misconception": "Heat and temperature are the same thing.",
+      "uncertain": []
+    }
+  ]
+}

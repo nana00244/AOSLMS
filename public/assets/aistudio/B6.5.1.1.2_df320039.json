@@ -1,0 +1,281 @@
+{
+  "indicator": {
+    "code": "B6.5.1.1.2",
+    "subject": "Science",
+    "level": "Basic 6",
+    "strand": "HUMANS AND THE ENVIRONMENT",
+    "sub_strand": "Personal Hygiene and Sanitation",
+    "content_standard": "B6.5.1.1 Recognise the importance of personal hygiene",
+    "objective": "Describe ways of minimising waste",
+    "source_page": 66
+  },
+  "spec": {
+    "skills": [
+      {"tag": "define_minimising_waste", "description": "Explain what minimising waste means (reducing the amount of waste produced).", "minQuestions": 3},
+      {"tag": "identify_waste_types", "description": "Identify types of waste produced at home, school and community.", "minQuestions": 3},
+      {"tag": "methods_minimising_waste", "description": "Describe ways to minimise waste (e.g. reuse, recycle, avoid single-use plastics, compost food waste).", "minQuestions": 4},
+      {"tag": "waste_minimisation_locations", "description": "Suggest waste minimisation measures for different places (classroom, home, market, hospital).", "minQuestions": 4},
+      {"tag": "importance_minimising_waste", "description": "Explain why minimising waste is important for the environment and health.", "minQuestions": 3},
+      {"tag": "design_litterbin", "description": "Plan and design a litterbin for the class or school community.", "minQuestions": 3}
+    ],
+    "difficultyPlan": "20 questions total — Difficulty 1: 5; Difficulty 2: 7; Difficulty 3: 5; Difficulty 4: 3.",
+    "misconceptions": [
+      "Waste minimisation means burning all waste.",
+      "Only factories can minimise waste.",
+      "Reusing items is not minimising waste.",
+      "Composting food waste is not useful.",
+      "Litterbins are not part of waste minimisation.",
+      "Single-use plastics cannot be avoided."
+    ],
+    "needsTeacherAssessment": true
+  },
+  "questions": [
+    {
+      "skill_tag": "define_minimising_waste",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What does minimising waste mean?",
+      "options": ["Reducing the amount of waste produced", "Burning all waste", "Throwing waste anywhere", "Making more waste"],
+      "answer": 0,
+      "hints": ["Think about using less and reusing items.", "It is about reducing waste."],
+      "explanation": "Minimising waste means reducing the amount of waste we produce.",
+      "misconception": "Waste minimisation means burning all waste.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "define_minimising_waste",
+      "type": "short_answer",
+      "difficulty": 1,
+      "stem": "What is waste minimisation?",
+      "answer": ["reducing the amount of waste produced", "using less and reusing items", "avoiding waste"],
+      "hints": ["Think about producing less waste.", "Reusing items is one way."],
+      "explanation": "Waste minimisation is reducing the amount of waste we produce by using less, reusing items and recycling.",
+      "misconception": "Waste minimisation means making more waste.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_waste_types",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which of these is a type of waste?",
+      "options": ["Plastic bottle", "Clean water", "Fresh air", "Sunlight"],
+      "answer": 0,
+      "hints": ["Which item is thrown away after use?", "It is made of plastic."],
+      "explanation": "A plastic bottle is a type of waste. It is thrown away after use.",
+      "misconception": "Only factories produce waste.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_waste_types",
+      "type": "short_answer",
+      "difficulty": 1,
+      "stem": "Name two types of waste produced at home.",
+      "answer": ["paper and plastic", "food waste and bottles", "plastic bags and cans"],
+      "hints": ["Think about what you throw away.", "Food waste and plastic are common."],
+      "explanation": "Common types of waste at home include paper, plastic, food waste, bottles and cans.",
+      "misconception": "Only factories produce waste.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "methods_minimising_waste",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which of these is a way to minimise waste?",
+      "options": ["Reusing plastic bags", "Burning all waste", "Throwing waste in the river", "Buying more plastic"],
+      "answer": 0,
+      "hints": ["Reusing means using again.", "It stops waste from piling up."],
+      "explanation": "Reusing plastic bags is a way to minimise waste because it reduces the amount of waste produced.",
+      "misconception": "Burning all waste is the best way to minimise waste.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "methods_minimising_waste",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "What does 'recycle' mean?",
+      "options": ["Making new things from used materials", "Throwing away waste", "Burning waste", "Burying waste"],
+      "answer": 0,
+      "hints": ["Recycling turns old things into new things.", "Think about plastic bottles being made into new items."],
+      "explanation": "Recycling means making new things from used materials, which helps minimise waste.",
+      "misconception": "Recycling is the same as throwing waste away.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "waste_minimisation_locations",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "How can a school minimise waste in the classroom?",
+      "options": ["Use a bin for paper and plastic", "Throw waste on the floor", "Burn waste in class", "Leave waste on desks"],
+      "answer": 0,
+      "hints": ["Waste should go into a bin.", "Separating paper and plastic helps."],
+      "explanation": "Using a bin for paper and plastic helps minimise waste in the classroom by keeping it tidy and making recycling easier.",
+      "misconception": "Throwing waste on the floor is acceptable.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "waste_minimisation_locations",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Give one way to minimise waste at home.",
+      "answer": ["reuse containers", "compost food waste", "avoid single-use plastics", "recycle paper"],
+      "hints": ["Think about reusing things.", "Composting food waste is one way."],
+      "explanation": "Ways to minimise waste at home include reusing containers, composting food waste, avoiding single-use plastics and recycling paper.",
+      "misconception": "Waste cannot be minimised at home.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "importance_minimising_waste",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Why is minimising waste important?",
+      "options": ["It keeps the environment clean", "It makes more waste", "It causes pollution", "It wastes money"],
+      "answer": 0,
+      "hints": ["Think about a clean environment.", "Less waste means less pollution."],
+      "explanation": "Minimising waste is important because it keeps the environment clean and reduces pollution.",
+      "misconception": "Minimising waste is not important.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "design_litterbin",
+      "type": "drawing",
+      "difficulty": 3,
+      "stem": "Design a simple litterbin for your classroom using local materials. Label the materials you would use and write one sentence explaining how it will help minimise waste.",
+      "rubric": {
+        "criteria": [
+          {"description": "Drew a simple design of a litterbin", "marks": 1},
+          {"description": "Labeled at least one suitable local material", "marks": 1},
+          {"description": "Explained how the litterbin helps minimise waste", "marks": 2},
+          {"description": "Design is neat and clear", "marks": 1}
+        ]
+      },
+      "answer": "",
+      "hints": ["Think about using cardboard, plastic or wood.", "A litterbin keeps waste in one place."],
+      "explanation": "This is a drawing task. Your teacher will mark it using the rubric.",
+      "misconception": "Litterbins are not part of waste minimisation.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "define_minimising_waste",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which statement best describes minimising waste?",
+      "options": ["Reducing waste by using less and reusing items", "Increasing waste by buying more", "Burning all waste", "Hiding waste"],
+      "answer": 0,
+      "hints": ["Think about using less.", "Reusing items helps."],
+      "explanation": "Minimising waste means reducing waste by using less and reusing items.",
+      "misconception": "Minimising waste means increasing waste.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_waste_types",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which of these is food waste?",
+      "options": ["Banana peel", "Plastic bag", "Glass bottle", "Old newspaper"],
+      "answer": 0,
+      "hints": ["It comes from food.", "It is the skin of a fruit."],
+      "explanation": "A banana peel is food waste.",
+      "misconception": "Food waste is not a type of waste.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "methods_minimising_waste",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Give one way to reuse waste.",
+      "answer": ["use plastic bottles as plant pots", "reuse paper for drawing", "use old jars for storage"],
+      "hints": ["Think about using something again.", "Plastic bottles can be used as plant pots."],
+      "explanation": "One way to reuse waste is to use plastic bottles as plant pots.",
+      "misconception": "Reusing items is not minimising waste.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "waste_minimisation_locations",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "A market produces a lot of waste. Which action best minimises waste?",
+      "options": ["Encourage traders to use reusable bags", "Burn all waste", "Throw waste in drains", "Use more plastic bags"],
+      "answer": 0,
+      "hints": ["Reusable bags reduce waste.", "Burning and throwing waste in drains cause problems."],
+      "explanation": "Encouraging traders to use reusable bags helps minimise waste at the market.",
+      "misconception": "Burning all waste is the best way to minimise waste.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "importance_minimising_waste",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Explain why minimising waste is important for the community.",
+      "answer": ["it keeps the community clean and reduces disease", "it reduces pollution and saves resources"],
+      "hints": ["Think about cleanliness and health.", "Less waste means less pollution."],
+      "explanation": "Minimising waste is important for the community because it keeps the environment clean, reduces disease and saves resources.",
+      "misconception": "Minimising waste has no benefit.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "methods_minimising_waste",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "Which of these is an example of reducing waste?",
+      "options": ["Buying only what you need", "Buying extra food", "Throwing away leftovers", "Using more packaging"],
+      "answer": 0,
+      "hints": ["Reducing means using less.", "Buying only what you need prevents waste."],
+      "explanation": "Buying only what you need is an example of reducing waste because it prevents unnecessary items from becoming waste.",
+      "misconception": "Buying extra food reduces waste.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "waste_minimisation_locations",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "How can a hospital minimise waste?",
+      "options": ["Use reusable equipment where safe", "Burn all waste", "Throw waste in open bins", "Mix all waste together"],
+      "answer": 0,
+      "hints": ["Reusable equipment reduces waste.", "Hospitals must manage waste carefully."],
+      "explanation": "A hospital can minimise waste by using reusable equipment where it is safe to do so.",
+      "misconception": "Hospitals cannot minimise waste.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "design_litterbin",
+      "type": "written",
+      "difficulty": 4,
+      "stem": "Plan three steps to make a litterbin for your classroom using local materials. Write each step clearly.",
+      "rubric": {
+        "criteria": [
+          {"description": "Wrote three clear steps for making a litterbin", "marks": 3},
+          {"description": "Steps are realistic and use local materials", "marks": 2},
+          {"description": "Plan is neat and easy to follow", "marks": 1}
+        ]
+      },
+      "answer": "",
+      "hints": ["Think about collecting materials.", "Then assembling the bin.", "Then placing it in the classroom."],
+      "explanation": "This is a written task. Your teacher will mark it using the rubric.",
+      "misconception": "Planning a litterbin is not useful.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "design_litterbin",
+      "type": "short_answer",
+      "difficulty": 4,
+      "stem": "Why is it important to label a litterbin (e.g. 'Plastics Only')?",
+      "answer": ["to help people put waste in the correct bin", "to separate waste properly", "to make recycling easier"],
+      "hints": ["Think about separating waste.", "Labels help people know where to put waste."],
+      "explanation": "Labelling a litterbin is important because it helps people put the correct type of waste in it, making waste separation and recycling easier.",
+      "misconception": "Labels on litterbins are not important.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "importance_minimising_waste",
+      "type": "mcq",
+      "difficulty": 4,
+      "stem": "A pupil says, 'Minimising waste is only the job of the government.' What is the best correction?",
+      "options": ["Everyone can help minimise waste", "Only the government can minimise waste", "Only adults can minimise waste", "Minimising waste is not important"],
+      "answer": 0,
+      "hints": ["Think about what you can do at home and school.", "Everyone produces waste, so everyone can help."],
+      "explanation": "Everyone can help minimise waste by reusing items, recycling and avoiding single-use plastics.",
+      "misconception": "Only the government can minimise waste.",
+      "uncertain": []
+    }
+  ]
+}

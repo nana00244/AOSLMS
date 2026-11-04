@@ -1,0 +1,268 @@
+{
+  "indicator": {
+    "code": "B6.1.1.1.1",
+    "subject": "Science",
+    "level": "Basic 6",
+    "strand": "DIVERSITY OF MATTER",
+    "sub_strand": "Living and Non-Living Things",
+    "content_standard": "B6.1.1.1 Show understanding of the physical features and life processes of living things and use this understanding to classify them",
+    "objective": "Classify plants based on their root system",
+    "source_page": 56
+  },
+  "spec": {
+    "skills": [
+      {"tag": "identify_root_types", "description": "Name the two main root systems: tap root and fibrous root.", "minQuestions": 3},
+      {"tag": "describe_tap_root", "description": "Describe a tap root as one main root with smaller side roots (e.g. mango, cassava, bean).", "minQuestions": 4},
+      {"tag": "describe_fibrous_root", "description": "Describe a fibrous root as many thin roots of similar size spreading out (e.g. grass, maize, rice).", "minQuestions": 4},
+      {"tag": "classify_by_root", "description": "Classify named plants into tap root or fibrous root groups.", "minQuestions": 4},
+      {"tag": "give_reasons", "description": "Give a simple reason for classifying a plant into a root group based on observable features.", "minQuestions": 3},
+      {"tag": "compare_root_systems", "description": "Compare the differences between tap roots and fibrous roots.", "minQuestions": 2}
+    ],
+    "difficultyPlan": "20 questions total — Difficulty 1: 5; Difficulty 2: 7; Difficulty 3: 5; Difficulty 4: 3.",
+    "misconceptions": [
+      "All plants have the same root system.",
+      "Cassava has a fibrous root.",
+      "Grass has a tap root.",
+      "Tap roots are always bigger than the whole plant.",
+      "Fibrous roots are just broken tap roots.",
+      "You cannot classify plants by their roots."
+    ],
+    "needsTeacherAssessment": true
+  },
+  "questions": [
+    {
+      "skill_tag": "identify_root_types",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which two main root systems are used to classify plants?",
+      "options": ["Tap root and fibrous root", "Long root and short root", "Wet root and dry root", "Hard root and soft root"],
+      "answer": 0,
+      "hints": ["One has a single main root.", "The other has many thin roots."],
+      "explanation": "Plants are classified by their root systems into tap roots and fibrous roots.",
+      "misconception": "All plants have the same root system.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_root_types",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What is a tap root system?",
+      "options": ["One main root with smaller side roots", "Many thin roots of the same size", "Roots that grow above the ground", "Roots that only grow in water"],
+      "answer": 0,
+      "hints": ["Think about a carrot or a mango seedling.", "It has one thick main root."],
+      "explanation": "A tap root system has one main root with smaller side roots growing from it.",
+      "misconception": "Tap roots have many equal-sized roots.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_root_types",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Name the two main types of root systems.",
+      "answer": ["tap root and fibrous root", "taproot and fibrous root", "tap root, fibrous root"],
+      "hints": ["One is thick and single.", "The other is many thin roots."],
+      "explanation": "The two main root systems are tap root and fibrous root.",
+      "misconception": "Plants only have one type of root.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_tap_root",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which of these plants has a tap root?",
+      "options": ["Mango", "Grass", "Maize", "Rice"],
+      "answer": 0,
+      "hints": ["Which one has one main root?", "Grass and maize have many thin roots."],
+      "explanation": "A mango plant has a tap root — one main root with smaller side roots.",
+      "misconception": "Mango has a fibrous root.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_tap_root",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which description best fits a tap root?",
+      "options": ["Many thin roots of similar size spreading out", "One thick main root with smaller side roots", "Roots that grow from the leaves", "Roots that grow only sideways"],
+      "answer": 1,
+      "hints": ["Tap roots have one main root.", "Side roots grow from it."],
+      "explanation": "A tap root is one thick main root with smaller side roots growing from it.",
+      "misconception": "Tap roots are many thin roots.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_tap_root",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Describe a tap root system.",
+      "answer": ["one main root with smaller side roots", "one thick main root and smaller side roots", "a single main root with side roots"],
+      "hints": ["Think about one main root.", "Smaller roots branch off it."],
+      "explanation": "A tap root system has one main root with smaller side roots growing from it.",
+      "misconception": "Tap roots are many thin roots.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_tap_root",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "A pupil uproots a bean plant and sees one main root with smaller roots branching from it. What type of root system is this?",
+      "options": ["Fibrous root", "Tap root", "Aerial root", "No root"],
+      "answer": 1,
+      "hints": ["There is one main root.", "Smaller roots branch from it."],
+      "explanation": "The bean plant has a tap root system — one main root with smaller side roots.",
+      "misconception": "Beans have fibrous roots.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_fibrous_root",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which of these plants has a fibrous root?",
+      "options": ["Grass", "Mango", "Cassava", "Bean"],
+      "answer": 0,
+      "hints": ["Which one has many thin roots?", "Mango and cassava have one main root."],
+      "explanation": "Grass has a fibrous root system — many thin roots of similar size spreading out.",
+      "misconception": "Grass has a tap root.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_fibrous_root",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which description best fits a fibrous root?",
+      "options": ["One thick main root with side roots", "Many thin roots of similar size spreading out", "Roots that only grow upwards", "Roots that do not absorb water"],
+      "answer": 1,
+      "hints": ["Fibrous roots are many and thin.", "They are all about the same size."],
+      "explanation": "A fibrous root system has many thin roots of similar size spreading out from the base of the stem.",
+      "misconception": "Fibrous roots are one main root.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_fibrous_root",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Describe a fibrous root system.",
+      "answer": ["many thin roots of similar size spreading out", "many thin roots of the same size", "many fine roots spreading out from the stem"],
+      "hints": ["Think about many thin roots.", "They are all about the same size."],
+      "explanation": "A fibrous root system has many thin roots of similar size spreading out from the base of the stem.",
+      "misconception": "Fibrous roots are one main root.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_fibrous_root",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "A pupil uproots a maize plant and sees many thin roots of the same size. What type of root system is this?",
+      "options": ["Tap root", "Fibrous root", "Aerial root", "No root"],
+      "answer": 1,
+      "hints": ["There are many thin roots.", "They are all the same size."],
+      "explanation": "The maize plant has a fibrous root system — many thin roots of similar size.",
+      "misconception": "Maize has a tap root.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "classify_by_root",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which group correctly lists plants with tap roots?",
+      "options": ["Mango, cassava, bean", "Grass, maize, rice", "Grass, mango, rice", "Maize, cassava, bean"],
+      "answer": 0,
+      "hints": ["Which plants have one main root?", "Mango, cassava and bean all have one main root."],
+      "explanation": "Mango, cassava and bean have tap roots.",
+      "misconception": "Cassava has a fibrous root.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "classify_by_root",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which group correctly lists plants with fibrous roots?",
+      "options": ["Grass, maize, rice", "Mango, cassava, bean", "Grass, mango, bean", "Cassava, maize, rice"],
+      "answer": 0,
+      "hints": ["Which plants have many thin roots?", "Grass, maize and rice all have many thin roots."],
+      "explanation": "Grass, maize and rice have fibrous roots.",
+      "misconception": "Maize has a tap root.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "classify_by_root",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Classify these plants into tap roots and fibrous roots: mango, grass, cassava, maize.",
+      "answer": ["tap roots: mango, cassava; fibrous roots: grass, maize", "mango and cassava are tap roots; grass and maize are fibrous roots", "tap: mango, cassava; fibrous: grass, maize"],
+      "hints": ["Which have one main root?", "Which have many thin roots?"],
+      "explanation": "Mango and cassava have tap roots. Grass and maize have fibrous roots.",
+      "misconception": "All plants have the same root type.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "classify_by_root",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "A pupil classifies a plant as having a fibrous root because it has many thin roots. Which plant could it be?",
+      "options": ["Rice", "Mango", "Cassava", "Bean"],
+      "answer": 0,
+      "hints": ["Which plant has many thin roots?", "Rice has a fibrous root system."],
+      "explanation": "Rice has many thin roots of similar size, so it has a fibrous root system.",
+      "misconception": "Rice has a tap root.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "give_reasons",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Why is a cassava plant classified as having a tap root?",
+      "options": ["It has one main root with smaller side roots", "It has many thin roots", "It has no roots", "It has roots that grow above the ground"],
+      "answer": 0,
+      "hints": ["Cassava has one main root.", "Smaller roots branch from it."],
+      "explanation": "Cassava is classified as having a tap root because it has one main root with smaller side roots.",
+      "misconception": "Cassava has a fibrous root.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "give_reasons",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Give one reason why a maize plant is classified as having a fibrous root.",
+      "answer": ["it has many thin roots of similar size", "it has many thin roots spreading out", "it has many fine roots of the same size"],
+      "hints": ["Think about the number of roots.", "They are all thin and similar."],
+      "explanation": "Maize is classified as having a fibrous root because it has many thin roots of similar size spreading out from the base of the stem.",
+      "misconception": "Maize has a tap root.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "give_reasons",
+      "type": "mcq",
+      "difficulty": 4,
+      "stem": "A pupil says, 'A plant with a tap root must be bigger than a plant with a fibrous root.' Is the pupil correct?",
+      "options": ["Yes, tap root plants are always bigger", "No, root type does not determine plant size", "Yes, fibrous root plants are always smaller", "No, only the roots are different"],
+      "answer": 1,
+      "hints": ["Can a small plant have a tap root?", "Root type and plant size are not the same."],
+      "explanation": "No, root type does not determine plant size. Small plants can have tap roots, and large plants can have fibrous roots.",
+      "misconception": "Tap roots are always bigger than the whole plant.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "compare_root_systems",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "Which statement correctly compares tap roots and fibrous roots?",
+      "options": ["Tap roots have one main root; fibrous roots have many thin roots of similar size", "Tap roots have many thin roots; fibrous roots have one main root", "Both have one main root", "Both have many thin roots"],
+      "answer": 0,
+      "hints": ["One has a single main root.", "The other has many equal-sized roots."],
+      "explanation": "Tap roots have one main root with smaller side roots, while fibrous roots have many thin roots of similar size.",
+      "misconception": "Tap roots and fibrous roots are the same.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "compare_root_systems",
+      "type": "short_answer",
+      "difficulty": 4,
+      "stem": "Explain one difference between a tap root and a fibrous root.",
+      "answer": ["a tap root has one main root with side roots, while a fibrous root has many thin roots of similar size", "tap root: one main root; fibrous root: many thin roots of the same size", "tap roots have one main root, fibrous roots have many equal-sized roots"],
+      "hints": ["Think about the number of main roots.", "One has one main root; the other has many."],
+      "explanation": "A tap root has one main root with smaller side roots, while a fibrous root has many thin roots of similar size.",
+      "misconception": "Tap roots and fibrous roots are the same.",
+      "uncertain": []
+    }
+  ]
+}

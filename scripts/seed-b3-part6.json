@@ -1,0 +1,1960 @@
+[
+  {
+    "file_name": "B3.1.2.2.1..json",
+    "indicator": {
+      "code": "B3.1.2.1.1",
+      "subject": "Mathematics",
+      "level": "Basic 3",
+      "strand": "Number",
+      "sub_strand": "Number Operations (Addition, Subtraction, Multiplication and Division)",
+      "content_standard": "B3.1.2.1 Develop and use standard strategies for adding and subtracting within 1000",
+      "objective": "Use standard strategy or procedure to do addition or subtraction within 1000",
+      "source_page": 69
+    },
+    "spec": {
+      "skills": [
+        {"tag": "use_standard_add_sub", "description": "Use standard procedure to add or subtract within 1000.", "minQuestions": 2},
+        {"tag": "explain_unknown_symbol", "description": "Explain the purpose of a symbol (e.g., □) in an addition/subtraction sentence.", "minQuestions": 2},
+        {"tag": "solve_with_unknown", "description": "Solve addition/subtraction with one unknown using a variety of strategies.", "minQuestions": 2},
+        {"tag": "decompose_add_sub", "description": "Use decomposition to find sums and differences within 1000.", "minQuestions": 2}
+      ],
+      "difficultyPlan": "20 questions: 5 at difficulty 1, 7 at difficulty 2, 5 at difficulty 3, 3 at difficulty 4.",
+      "misconceptions": [
+        "Forgetting to regroup.",
+        "Subtracting the smaller digit from the larger regardless of position.",
+        "Ignoring the unknown."
+      ],
+      "needsTeacherAssessment": false
+    },
+    "questions": [
+      {
+        "skill_tag": "use_standard_add_sub",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "A market woman in Techiman has 234 oranges. She buys 125 more. How many oranges does she have now?",
+        "options": ["359", "349", "459", "369"],
+        "answer": 0,
+        "hints": ["Add the hundreds, then the tens, then the ones.", "234 + 125."],
+        "explanation": "234 + 125. Add ones: 4 + 5 = 9. Add tens: 3 + 2 = 5. Add hundreds: 2 + 1 = 3. The answer is 359.",
+        "misconception": "Adding incorrectly and getting 349 or 369.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "use_standard_add_sub",
+        "type": "numeric",
+        "difficulty": 1,
+        "stem": "Subtract: 456 - 123",
+        "answer": 333,
+        "check": "456-123",
+        "hints": ["Subtract the ones, then the tens, then the hundreds.", "6 - 3, 5 - 2, 4 - 1."],
+        "explanation": "456 - 123. Subtract ones: 6 - 3 = 3. Tens: 5 - 2 = 3. Hundreds: 4 - 1 = 3. The answer is 333.",
+        "misconception": "Subtracting from right to left without borrowing when it's not needed.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "use_standard_add_sub",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "What is 345 + 278?",
+        "options": ["623", "513", "523", "613"],
+        "answer": 0,
+        "hints": ["Add the ones: 5 + 8 = 13. Write 3, carry 1.", "Add the tens: 4 + 7 + 1 = 12. Write 2, carry 1."],
+        "explanation": "345 + 278. Ones: 5 + 8 = 13 (write 3, carry 1). Tens: 4 + 7 + 1 = 12 (write 2, carry 1). Hundreds: 3 + 2 + 1 = 6. The answer is 623.",
+        "misconception": "Forgetting to add the carry-over number.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "use_standard_add_sub",
+        "type": "numeric",
+        "difficulty": 2,
+        "stem": "Subtract: 502 - 147",
+        "answer": 355,
+        "check": "502-147",
+        "hints": ["You cannot take 7 from 2, so borrow from the tens.", "The tens digit is 0, so you must borrow from the hundreds first."],
+        "explanation": "502 - 147. Borrow 1 hundred to make 10 tens. Then borrow 1 ten to make 12 ones. 12 - 7 = 5. 9 - 4 = 5. 4 - 1 = 3. The answer is 355.",
+        "misconception": "Subtracting 2 - 7 and getting 5 (ignoring place value).",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "use_standard_add_sub",
+        "type": "numeric",
+        "difficulty": 3,
+        "stem": "A school in Accra has 678 pencils. They receive 234 more pencils. How many pencils do they have altogether?",
+        "answer": 912,
+        "check": "678+234",
+        "hints": ["Add the ones: 8 + 4 = 12. Carry 1.", "Add the tens: 7 + 3 + 1 = 11. Carry 1."],
+        "explanation": "678 + 234. Ones: 8 + 4 = 12 (write 2, carry 1). Tens: 7 + 3 + 1 = 11 (write 1, carry 1). Hundreds: 6 + 2 + 1 = 9. The answer is 912.",
+        "misconception": "Forgetting to carry over in multiple places.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "use_standard_add_sub",
+        "type": "short_answer",
+        "difficulty": 4,
+        "stem": "Subtract: 600 - 245",
+        "answer": ["355"],
+        "hints": ["You cannot take 5 from 0, so you must borrow from the hundreds across the zeros.", "Borrow 1 hundred to make 10 tens, then borrow 1 ten to make 10 ones."],
+        "explanation": "600 - 245. Borrow 1 hundred to make 10 tens. Borrow 1 ten to make 10 ones. 10 - 5 = 5. 9 - 4 = 5. 5 - 2 = 3. The answer is 355.",
+        "misconception": "Subtracting the smaller digit from the larger digit (e.g., 5 - 0 = 5, 4 - 0 = 4).",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "explain_unknown_symbol",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "In the number sentence 25 + □ = 40, what does the square (□) represent?",
+        "options": ["The missing number", "A shape", "The answer to the question", "The number 10"],
+        "answer": 0,
+        "hints": ["It stands in the place of a number we do not know yet.", "We need to find what we add to 25 to get 40."],
+        "explanation": "The square (□) is a symbol used to represent the unknown or missing number in the sentence.",
+        "misconception": "Thinking the square represents a shape or the final answer.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "explain_unknown_symbol",
+        "type": "short_answer",
+        "difficulty": 2,
+        "stem": "In the sentence 100 - ___ = 65, what does the blank (___) mean?",
+        "answer": ["the missing number", "the unknown number", "a number we don't know yet"],
+        "hints": ["Think about what we are trying to find.", "It is the number being subtracted."],
+        "explanation": "The blank represents the unknown number that must be subtracted from 100 to get 65.",
+        "misconception": "Thinking the blank is just a space to write the answer.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "explain_unknown_symbol",
+        "type": "written",
+        "difficulty": 3,
+        "stem": "Explain why the square (□) in 150 + □ = 200 is different from the square (□) in 150 + 50 = □.",
+        "hints": ["In the first sentence, is the square the answer or a part of the question?", "In the second sentence, what does the square represent?"],
+        "explanation": "In 150 + □ = 200, the square represents a missing addend (a part) that we add to 150 to get 200. In 150 + 50 = □, the square represents the result or sum of the addition.",
+        "rubric": {
+          "criteria": [
+            {"description": "Explains that the first square is a missing part (addend).", "marks": 1},
+            {"description": "Explains that the second square is the total (sum/result).", "marks": 1},
+            {"description": "Uses clear Basic 3 language.", "marks": 1}
+          ]
+        },
+        "misconception": "Thinking the square always means the answer at the end.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "solve_with_unknown",
+        "type": "numeric",
+        "difficulty": 2,
+        "stem": "Find the missing number: 45 + □ = 80",
+        "answer": 35,
+        "check": "80-45",
+        "hints": ["What number added to 45 gives 80?", "You can subtract 45 from 80."],
+        "explanation": "80 - 45 = 35. So, 45 + 35 = 80.",
+        "misconception": "Adding the two numbers together (45 + 80 = 125).",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "solve_with_unknown",
+        "type": "numeric",
+        "difficulty": 2,
+        "stem": "Find the missing number: □ - 120 = 300",
+        "answer": 420,
+        "check": "300+120",
+        "hints": ["What number take away 120 leaves 300?", "Add 300 and 120."],
+        "explanation": "300 + 120 = 420. So, 420 - 120 = 300.",
+        "misconception": "Subtracting 120 from 300 (300 - 120 = 180).",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "solve_with_unknown",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "Find the missing number: 500 - □ = 255",
+        "options": ["245", "355", "255", "345"],
+        "answer": 0,
+        "hints": ["Subtract 255 from 500.", "500 - 200 = 300, then 300 - 55 = 245."],
+        "explanation": "500 - 255 = 245. So, 500 - 245 = 255.",
+        "misconception": "Adding 500 and 255 to get 755.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "solve_with_unknown",
+        "type": "short_answer",
+        "difficulty": 3,
+        "stem": "Find the missing number: □ + 340 = 600",
+        "answer": ["260"],
+        "hints": ["What number plus 340 gives 600?", "Subtract 340 from 600."],
+        "explanation": "600 - 340 = 260. So, 260 + 340 = 600.",
+        "misconception": "Adding 600 and 340.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "solve_with_unknown",
+        "type": "numeric",
+        "difficulty": 4,
+        "stem": "Find the missing number: 850 - □ = 299",
+        "answer": 551,
+        "check": "850-299",
+        "hints": ["Subtract 299 from 850.", "You can do 850 - 300 = 550, then add 1 back to get 551."],
+        "explanation": "850 - 299 = 551. So, 850 - 551 = 299.",
+        "misconception": "Making a subtraction error and getting 549 or 651.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "decompose_add_sub",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "How can you decompose (break apart) the number 345?",
+        "options": ["300 + 40 + 5", "30 + 40 + 5", "300 + 45", "3 + 4 + 5"],
+        "answer": 0,
+        "hints": ["Look at the hundreds, tens, and ones digits.", "3 is in the hundreds place, 4 in the tens, 5 in the ones."],
+        "explanation": "345 is made up of 3 hundreds (300), 4 tens (40), and 5 ones (5). So, 300 + 40 + 5.",
+        "misconception": "Writing 3 + 4 + 5 instead of the place values.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "decompose_add_sub",
+        "type": "short_answer",
+        "difficulty": 2,
+        "stem": "Use decomposition to subtract: 950 - 780. (Hint: 950 - 700 - 80 = ?)",
+        "answer": ["170"],
+        "hints": ["Subtract the hundreds first: 950 - 700 = 250.", "Then subtract the tens: 250 - 80."],
+        "explanation": "Decompose 780 into 700 + 80. 950 - 700 = 250. Then 250 - 80 = 170.",
+        "misconception": "Subtracting incorrectly and getting 230.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "decompose_add_sub",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "Which of these shows a correct decomposition to solve 560 + 270?",
+        "options": ["500 + 200 + 60 + 70", "500 + 60 + 200 + 70", "500 + 200 + 60 + 7", "560 + 200 + 70"],
+        "answer": 0,
+        "hints": ["Break both numbers into hundreds and tens.", "560 is 500 + 60. 270 is 200 + 70."],
+        "explanation": "560 is 500 + 60, and 270 is 200 + 70. So the correct decomposition is 500 + 200 + 60 + 70.",
+        "misconception": "Misaligning the tens and hundreds.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "decompose_add_sub",
+        "type": "numeric",
+        "difficulty": 3,
+        "stem": "Use decomposition to add: 350 + 460",
+        "answer": 810,
+        "check": "350+460",
+        "hints": ["300 + 400 = ?", "50 + 60 = ?", "Add those two sums together."],
+        "explanation": "350 + 460. Add hundreds: 300 + 400 = 700. Add tens: 50 + 60 = 110. Add the parts: 700 + 110 = 810.",
+        "misconception": "Adding tens and getting 11 instead of 110.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "decompose_add_sub",
+        "type": "written",
+        "difficulty": 3,
+        "stem": "Explain how you can use decomposition to solve 825 - 472.",
+        "hints": ["Break 472 into 400 + 70 + 2.", "Subtract the hundreds, then the tens, then the ones from 825."],
+        "explanation": "Decompose 472 into 400 + 70 + 2. Start with 825. Subtract 400 to get 425. Subtract 70 to get 355. Subtract 2 to get 353.",
+        "rubric": {
+          "criteria": [
+            {"description": "Decomposes 472 into 400 + 70 + 2.", "marks": 1},
+            {"description": "Shows the step-by-step subtraction (e.g., 825 - 400 = 425).", "marks": 1},
+            {"description": "Arrives at the correct answer (353).", "marks": 1}
+          ]
+        },
+        "misconception": "Subtracting from left to right without adjusting for place value.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "decompose_add_sub",
+        "type": "mcq",
+        "difficulty": 4,
+        "stem": "Use decomposition to solve 405 + 390.",
+        "options": ["795", "695", "805", "785"],
+        "answer": 0,
+        "hints": ["400 + 300 = ?", "0 + 90 = ?", "5 + 0 = ?"],
+        "explanation": "405 + 390. Break apart: (400 + 0 + 5) + (300 + 90 + 0). Add hundreds: 400 + 300 = 700. Add tens: 0 + 90 = 90. Add ones: 5 + 0 = 5. 700 + 90 + 5 = 795.",
+        "misconception": "Forgetting the zero in the tens place of 405.",
+        "uncertain": []
+      }
+    ]
+  },
+  {
+    "file_name": "B3.1.2.1.1..json",
+    "indicator": {
+      "code": "B4.1.1.3.2",
+      "subject": "Mathematics",
+      "level": "Basic 3",
+      "strand": "Number",
+      "sub_strand": "Counting, Representation, Cardinality & Ordinality",
+      "content_standard": "Not clearly printed in source (misprinted as B4.1.1.3).",
+      "objective": "Count forwards and backwards with positive and negative whole numbers through zero",
+      "source_page": 68
+    },
+    "spec": {
+      "skills": [
+        {"tag": "count_through_zero", "description": "Count forwards and backwards through zero (e.g., -3, -2, -1, 0, 1, 2).", "minQuestions": 2},
+        {"tag": "hop_on_number_line", "description": "Hop from one number to another through zero on a number line.", "minQuestions": 2}
+      ],
+      "difficultyPlan": "20 questions: 5 at difficulty 1, 7 at difficulty 2, 5 at difficulty 3, 3 at difficulty 4.",
+      "misconceptions": [
+        "Skipping zero when counting through it (e.g., -1, 1).",
+        "Thinking -3 is greater than -2.",
+        "Counting forwards when asked to go backwards through zero."
+      ],
+      "needsTeacherAssessment": true
+    },
+    "questions": [
+      {
+        "skill_tag": "count_through_zero",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "Count forwards: -2, -1, 0, 1, ___. What number comes next?",
+        "options": ["2", "-2", "3", "0"],
+        "answer": 0,
+        "hints": ["Counting forwards means adding 1 each time.", "1 plus 1."],
+        "explanation": "The pattern adds 1. 1 + 1 = 2.",
+        "misconception": "Going backwards to -2.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "count_through_zero",
+        "type": "short_answer",
+        "difficulty": 1,
+        "stem": "Count backwards: 2, 1, 0, -1, ___. What number comes next?",
+        "answer": ["-2"],
+        "hints": ["Counting backwards means subtracting 1 each time.", "-1 take away 1."],
+        "explanation": "The pattern subtracts 1. -1 - 1 = -2.",
+        "misconception": "Going forwards to 2.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "count_through_zero",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "Which number comes just after 0 when counting forwards?",
+        "options": ["1", "-1", "0", "2"],
+        "answer": 0,
+        "hints": ["Forwards means moving to the right on the number line.", "What comes after 0?"],
+        "explanation": "When counting forwards, the number immediately after 0 is 1.",
+        "misconception": "Saying -1 because it is next to 0.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "count_through_zero",
+        "type": "numeric",
+        "difficulty": 1,
+        "stem": "Count forwards by 1s: -3, -2, -1, 0, ___. What number comes next?",
+        "answer": 1,
+        "check": "0+1",
+        "hints": ["Add 1 to 0.", "Move one step to the right."],
+        "explanation": "The pattern adds 1. 0 + 1 = 1.",
+        "misconception": "Saying -1.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "hop_on_number_line",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "If you are at 0 on the number line and hop 1 step to the left, where are you?",
+        "options": ["-1", "1", "0", "-2"],
+        "answer": 0,
+        "hints": ["Left means negative direction.", "One step left from 0."],
+        "explanation": "Hopping 1 step to the left from 0 takes you to -1.",
+        "misconception": "Landing on +1.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "count_through_zero",
+        "type": "numeric",
+        "difficulty": 2,
+        "stem": "Count backwards by 1s: 3, 2, 1, 0, -1, ___. What number comes next?",
+        "answer": -2,
+        "check": "-1-1",
+        "hints": ["Subtract 1 each time.", "-1 take away 1."],
+        "explanation": "The pattern subtracts 1. -1 - 1 = -2.",
+        "misconception": "Counting forwards to 1.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "count_through_zero",
+        "type": "short_answer",
+        "difficulty": 2,
+        "stem": "Count forwards by 1s from -4. What number comes after -4?",
+        "answer": ["-3"],
+        "hints": ["Add 1 to -4.", "Move one step right."],
+        "explanation": "-4 + 1 = -3.",
+        "misconception": "Saying -5 (going backwards).",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "hop_on_number_line",
+        "type": "numeric",
+        "difficulty": 2,
+        "stem": "A pupil is on 2 on the number line. They hop 3 steps to the left. Where do they land?",
+        "answer": -1,
+        "check": "2-3",
+        "hints": ["Left means subtract.", "2 minus 3."],
+        "explanation": "2 - 3 = -1. The pupil lands on -1.",
+        "misconception": "Landing on 5 (adding instead of subtracting).",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "count_through_zero",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "Which sequence correctly counts backwards through zero?",
+        "options": ["2, 1, 0, -1, -2", "-2, -1, 0, 1, 2", "2, 1, -1, -2, 0", "0, -1, 1, -2, 2"],
+        "answer": 0,
+        "hints": ["Backwards means decreasing by 1.", "Start at 2 and go down."],
+        "explanation": "Counting backwards means subtracting 1 each time: 2, 1, 0, -1, -2.",
+        "misconception": "Counting forwards instead of backwards.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "hop_on_number_line",
+        "type": "numeric",
+        "difficulty": 2,
+        "stem": "Start at -3. Hop 5 steps right. Where are you?",
+        "answer": 2,
+        "check": "-3+5",
+        "hints": ["Right means add.", "-3 plus 5."],
+        "explanation": "-3 + 5 = 2.",
+        "misconception": "Landing on -8.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "count_through_zero",
+        "type": "short_answer",
+        "difficulty": 2,
+        "stem": "Fill in the missing number: 4, 3, 2, __, 0, -1",
+        "answer": ["1"],
+        "hints": ["Count backwards by 1s.", "What comes after 2?"],
+        "explanation": "The sequence counts backwards by 1: 4, 3, 2, 1, 0, -1.",
+        "misconception": "Skipping 1 and going straight to 0.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "count_through_zero",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "Which sequence correctly counts forwards through zero?",
+        "options": ["-2, -1, 0, 1, 2", "2, 1, 0, -1, -2", "-2, -1, 1, 2, 0", "0, 1, -1, 2, -2"],
+        "answer": 0,
+        "hints": ["Forwards means increasing by 1.", "Start at -2 and go up."],
+        "explanation": "Counting forwards means adding 1 each time: -2, -1, 0, 1, 2.",
+        "misconception": "Counting backwards instead of forwards.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "hop_on_number_line",
+        "type": "numeric",
+        "difficulty": 3,
+        "stem": "Start at 0, hop 4 steps left, then 2 steps right. Where do you land?",
+        "answer": -2,
+        "check": "0-4+2",
+        "hints": ["Left 4 takes you to -4.", "Then right 2 adds 2."],
+        "explanation": "0 - 4 = -4. Then -4 + 2 = -2.",
+        "misconception": "Landing on +2 because they moved right.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "hop_on_number_line",
+        "type": "mcq",
+        "difficulty": 3,
+        "stem": "A pupil hops from -2 to 2 on a number line. How many steps did they take?",
+        "options": ["4", "0", "2", "8"],
+        "answer": 0,
+        "hints": ["Count from -2 to 0 (that's 2 steps).", "Then from 0 to 2 (that's 2 steps). 2 + 2 = 4."],
+        "explanation": "From -2 to 0 is 2 steps. From 0 to 2 is 2 steps. Total = 4 steps.",
+        "misconception": "Adding the numbers to get 0.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "count_through_zero",
+        "type": "written",
+        "difficulty": 3,
+        "stem": "Write the numbers from 3 down to -3 in backwards order.",
+        "hints": ["Start at 3.", "Subtract 1 each time until you reach -3."],
+        "explanation": "The sequence is 3, 2, 1, 0, -1, -2, -3.",
+        "rubric": {
+          "criteria": [
+            {"description": "Starts at 3.", "marks": 1},
+            {"description": "Includes 0 in the correct place.", "marks": 1},
+            {"description": "Ends at -3 with all numbers correct.", "marks": 1}
+          ]
+        },
+        "misconception": "Skipping zero or going from 1 straight to -1.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "count_through_zero",
+        "type": "short_answer",
+        "difficulty": 3,
+        "stem": "Count forwards from -5 to 0. What is the last number before 0?",
+        "answer": ["-1"],
+        "hints": ["The number just before 0 when counting forwards.", "It is negative."],
+        "explanation": "The number just before 0 is -1.",
+        "misconception": "Saying 1.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "count_through_zero",
+        "type": "mcq",
+        "difficulty": 3,
+        "stem": "What is 2 less than 0?",
+        "options": ["-2", "2", "-1", "0"],
+        "answer": 0,
+        "hints": ["Start at 0 and count backwards 2 steps.", "0, -1, -2."],
+        "explanation": "Counting backwards 2 steps from 0 gives -2.",
+        "misconception": "Saying +2 because 'less' is confusing.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "hop_on_number_line",
+        "type": "numeric",
+        "difficulty": 4,
+        "stem": "Start at 3. Hop left 5 steps, then right 6 steps. Where are you?",
+        "answer": 4,
+        "check": "3-5+6",
+        "hints": ["Left 5 takes you to -2.", "Then right 6 from -2."],
+        "explanation": "3 - 5 = -2. Then -2 + 6 = 4.",
+        "misconception": "Landing on -4 by subtracting 6 instead of adding.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "hop_on_number_line",
+        "type": "written",
+        "difficulty": 4,
+        "stem": "Describe how to hop from 1 to -3 on a number line. Which direction do you move and how many steps?",
+        "hints": ["You are moving to the left.", "Count the steps from 1 to 0, then 0 to -3."],
+        "explanation": "You move to the left. From 1 to 0 is 1 step, and from 0 to -3 is 3 steps. Total is 4 steps left.",
+        "rubric": {
+          "criteria": [
+            {"description": "States moving to the left.", "marks": 1},
+            {"description": "States 4 steps.", "marks": 1},
+            {"description": "Explains the movement clearly.", "marks": 1}
+          ]
+        },
+        "misconception": "Saying you move right because the numbers are getting 'bigger' negatively.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "count_through_zero",
+        "type": "mcq",
+        "difficulty": 4,
+        "stem": "Which number is greater: -4 or -1?",
+        "options": ["-1", "-4", "They are equal", "0"],
+        "answer": 0,
+        "hints": ["On a number line, which is further to the right?", "-1 is to the right of -4."],
+        "explanation": "-1 is greater than -4 because it is further to the right on the number line.",
+        "misconception": "Thinking -4 is greater because 4 > 1.",
+        "uncertain": []
+      }
+    ]
+  },
+  {
+    "file_name": "Next 1.1.1.3..json",
+    "indicator": {
+      "code": "B3.1.1.2.2",
+      "subject": "Mathematics",
+      "level": "Basic 3",
+      "strand": "Number",
+      "sub_strand": "Counting, Representation, Cardinality & Ordinality",
+      "content_standard": "B3.1.1.2 Develop an understanding of positive and negative numbers",
+      "objective": "Use real life contexts to deduce positive and negative number representations",
+      "source_page": 67
+    },
+    "spec": {
+      "skills": [
+        {"tag": "deduce_positive_negative", "description": "Use contexts such as above/below sea level, temperature, or money gained/lost to deduce positive and negative representations.", "minQuestions": 2},
+        {"tag": "introduce_minus_sign", "description": "Introduce the minus sign to indicate values below a reference point (e.g., under sea level).", "minQuestions": 2}
+      ],
+      "difficultyPlan": "20 questions: 5 at difficulty 1, 7 at difficulty 2, 5 at difficulty 3, 3 at difficulty 4.",
+      "misconceptions": [
+        "Thinking negative numbers are 'less than nothing'.",
+        "Not recognising that 0 is the reference point.",
+        "Confusing 'below sea level' with a positive number."
+      ],
+      "needsTeacherAssessment": true
+    },
+    "questions": [
+      {
+        "skill_tag": "deduce_positive_negative",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "If 0 is the level of the sea, what number represents a bird flying 10 metres above the sea?",
+        "options": ["+10", "-10", "0", "+100"],
+        "answer": 0,
+        "hints": ["Above sea level is positive.", "We use a plus sign for above."],
+        "explanation": "Above sea level is represented by positive numbers, so 10 metres above is +10.",
+        "misconception": "Using a minus sign for above sea level.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "introduce_minus_sign",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "What does the minus sign (-) mean in the number -5?",
+        "options": ["Below or less than zero", "Above or more than zero", "Equal to zero", "Times"],
+        "answer": 0,
+        "hints": ["Think about temperature below freezing.", "Minus means the opposite of plus."],
+        "explanation": "The minus sign indicates a value below the reference point (zero).",
+        "misconception": "Thinking the minus sign just means 'take away' in this context.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "deduce_positive_negative",
+        "type": "short_answer",
+        "difficulty": 1,
+        "stem": "If gaining 5 cedis is written as +5, how do we write losing 5 cedis?",
+        "answer": ["-5", "minus 5", "negative 5"],
+        "hints": ["Losing is the opposite of gaining.", "Use a minus sign."],
+        "explanation": "Losing money is the opposite of gaining, so it is represented by -5.",
+        "misconception": "Writing +5 for a loss.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "deduce_positive_negative",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "What is the reference point for measuring height or depth at the beach?",
+        "options": ["Sea level (0)", "+10", "-10", "The sky"],
+        "answer": 0,
+        "hints": ["It is the starting point between above and below.", "It is represented by zero."],
+        "explanation": "Sea level is the reference point, represented by 0.",
+        "misconception": "Thinking the bottom of the sea is the starting point.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "introduce_minus_sign",
+        "type": "short_answer",
+        "difficulty": 1,
+        "stem": "How do we write '3 degrees below zero' using a number and a sign?",
+        "answer": ["-3", "minus 3", "negative 3"],
+        "hints": ["Below zero means negative.", "Use the minus sign."],
+        "explanation": "Three degrees below zero is written as -3.",
+        "misconception": "Writing +3 or just 3.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "deduce_positive_negative",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "A trader in Techiman made a loss of 20 cedis. Which number represents this loss?",
+        "options": ["-20", "+20", "0", "+200"],
+        "answer": 0,
+        "hints": ["A loss is negative.", "Use the minus sign."],
+        "explanation": "A loss of 20 cedis is represented as -20.",
+        "misconception": "Writing +20 because it is a number of cedis.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "introduce_minus_sign",
+        "type": "numeric",
+        "difficulty": 2,
+        "stem": "A submarine is 50 metres below sea level. Write this depth as a number.",
+        "answer": -50,
+        "check": "0-50",
+        "hints": ["Below sea level is negative.", "Put the minus sign before 50."],
+        "explanation": "50 metres below sea level is written as -50.",
+        "misconception": "Writing 50 without the minus sign.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "deduce_positive_negative",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "At Lake Bosomtwe, a bird is 15 m above the surface and a fish is 5 m below. Which number represents the fish's position?",
+        "options": ["-5", "+5", "+15", "-15"],
+        "answer": 0,
+        "hints": ["Below the surface is negative.", "The fish is 5 m below, so use -5."],
+        "explanation": "The fish is below the surface (reference point), so its position is -5.",
+        "misconception": "Using +5 because the fish is only 5 m down.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "introduce_minus_sign",
+        "type": "short_answer",
+        "difficulty": 2,
+        "stem": "In a game, Esi lost 5 points. How would you write her score change using a sign?",
+        "answer": ["-5", "minus 5"],
+        "hints": ["Losing points is a negative change.", "Use the minus sign."],
+        "explanation": "Losing 5 points is written as -5.",
+        "misconception": "Writing 5 or +5.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "deduce_positive_negative",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "Which real-life situation is represented by the number -20?",
+        "options": ["A loss of 20 cedis", "Gaining 20 cedis", "Having exactly 0 cedis", "Walking 20 steps forward"],
+        "answer": 0,
+        "hints": ["Negative means a decrease or loss.", "Think about money."],
+        "explanation": "-20 represents a loss or decrease of 20.",
+        "misconception": "Thinking -20 means gaining 20.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "deduce_positive_negative",
+        "type": "short_answer",
+        "difficulty": 2,
+        "stem": "A plane flies 500 metres above sea level. A submarine dives 50 metres below sea level. Write the submarine's depth as a number.",
+        "answer": ["-50"],
+        "hints": ["Below sea level is negative.", "The submarine is 50 m down."],
+        "explanation": "The submarine is 50 metres below sea level, so its depth is -50.",
+        "misconception": "Writing +50 because it is a small number.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "introduce_minus_sign",
+        "type": "numeric",
+        "difficulty": 2,
+        "stem": "The temperature in Aburi is 4 degrees below zero. Write this temperature as a number.",
+        "answer": -4,
+        "check": "0-4",
+        "hints": ["Below zero is negative.", "Use the minus sign."],
+        "explanation": "4 degrees below zero is written as -4.",
+        "misconception": "Writing 4.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "introduce_minus_sign",
+        "type": "drawing",
+        "difficulty": 3,
+        "stem": "Draw a straight horizontal line to represent sea level. Label it 0. Draw a bird 10 metres above the line and label it +10. Draw a fish 5 metres below the line and label it -5.",
+        "hints": ["Draw the sea level line first.", "Above is up, below is down."],
+        "explanation": "The learner should draw a horizontal line (0), place the bird above it (+10) and the fish below it (-5).",
+        "rubric": {
+          "criteria": [
+            {"description": "Draws and labels the sea level line as 0.", "marks": 1},
+            {"description": "Places the bird above the line and labels it +10.", "marks": 1},
+            {"description": "Places the fish below the line and labels it -5.", "marks": 1}
+          ]
+        },
+        "misconception": "Drawing both items above the line or confusing the labels.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "deduce_positive_negative",
+        "type": "mcq",
+        "difficulty": 3,
+        "stem": "A trader made a loss of 15 cedis on Monday and a gain of 10 cedis on Tuesday. Which number represents Monday's loss?",
+        "options": ["-15", "+15", "-10", "+10"],
+        "answer": 0,
+        "hints": ["Loss means negative.", "Monday's loss was 15 cedis."],
+        "explanation": "Monday's loss of 15 cedis is represented as -15.",
+        "misconception": "Choosing -10 because it is the other number.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "deduce_positive_negative",
+        "type": "short_answer",
+        "difficulty": 3,
+        "stem": "Kwame borrowed 20 cedis from a friend. How do we represent his debt as a number?",
+        "answer": ["-20"],
+        "hints": ["Borrowing is a debt, which is negative.", "Use the minus sign."],
+        "explanation": "Owing 20 cedis is represented as -20.",
+        "misconception": "Writing +20 because he received the money.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "deduce_positive_negative",
+        "type": "mcq",
+        "difficulty": 3,
+        "stem": "The temperature was +3 degrees. It dropped by 5 degrees. What is the new temperature?",
+        "options": ["-2", "2", "8", "-8"],
+        "answer": 0,
+        "hints": ["Start at 3 and count backwards 5 steps.", "3 to 0 is 3 steps, then 2 more steps gets to -2."],
+        "explanation": "Starting at +3 and dropping 5 gives 3 - 5 = -2.",
+        "misconception": "Thinking you cannot go below zero, so stopping at 0.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "deduce_positive_negative",
+        "type": "written",
+        "difficulty": 3,
+        "stem": "Explain how a number line can represent the depth of a fish and the height of a bird above sea level.",
+        "hints": ["Where is sea level on the number line?", "Where are positive numbers?", "Where are negative numbers?"],
+        "explanation": "Sea level is at 0. The bird's height is above 0 (positive numbers), and the fish's depth is below 0 (negative numbers).",
+        "rubric": {
+          "criteria": [
+            {"description": "Places sea level at 0.", "marks": 1},
+            {"description": "Explains that above sea level is positive.", "marks": 1},
+            {"description": "Explains that below sea level is negative.", "marks": 1}
+          ]
+        },
+        "misconception": "Thinking both are positive because they are distances.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "deduce_positive_negative",
+        "type": "written",
+        "difficulty": 4,
+        "stem": "Explain the difference between '0 degrees' and '-5 degrees' in real life.",
+        "hints": ["What happens to water at 0 degrees?", "What happens at -5 degrees?"],
+        "explanation": "0 degrees is the freezing point of water. -5 degrees is colder than freezing, meaning the water is well below freezing.",
+        "rubric": {
+          "criteria": [
+            {"description": "Explains that 0 is the freezing point.", "marks": 1},
+            {"description": "Explains that -5 is colder than 0.", "marks": 1},
+            {"description": "Uses clear Basic 3 language.", "marks": 1}
+          ]
+        },
+        "misconception": "Thinking -5 is warmer because it is a bigger-looking number.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "introduce_minus_sign",
+        "type": "mcq",
+        "difficulty": 4,
+        "stem": "A game player starts at 0. She loses 15 points, then gains 5 points. What is her net score?",
+        "options": ["-10", "+10", "-20", "0"],
+        "answer": 0,
+        "hints": ["Start at 0. Losing 15 takes you to -15.", "Then gaining 5 takes you up to -10."],
+        "explanation": "0 - 15 = -15. Then -15 + 5 = -10.",
+        "misconception": "Adding 15 and 5 to get 20, ignoring the signs.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "deduce_positive_negative",
+        "type": "written",
+        "difficulty": 4,
+        "stem": "A bank statement shows +200 and -50. Explain what these two numbers mean in a real-life bank account.",
+        "hints": ["What does the plus sign mean for money?", "What does the minus sign mean?"],
+        "explanation": "+200 means 200 cedis was deposited (added) to the account. -50 means 50 cedis was withdrawn (taken out).",
+        "rubric": {
+          "criteria": [
+            {"description": "Explains +200 as a deposit or money added.", "marks": 1},
+            {"description": "Explains -50 as a withdrawal or money taken out.", "marks": 1},
+            {"description": "Uses clear Basic 3 language.", "marks": 1}
+          ]
+        },
+        "misconception": "Thinking -50 means a negative balance (owing the bank).",
+        "uncertain": []
+      }
+    ]
+  },
+  {
+    "file_name": "B3.1.1.2.2..json",
+    "indicator": {
+      "code": "B3.1.1.2.1",
+      "subject": "Mathematics",
+      "level": "Basic 3",
+      "strand": "Number",
+      "sub_strand": "Counting, Representation, Cardinality & Ordinality",
+      "content_standard": "B3.1.1.2 Develop an understanding of positive and negative numbers",
+      "objective": "Describe situations having opposite directions or values",
+      "source_page": 67
+    },
+    "spec": {
+      "skills": [
+        {"tag": "describe_opposite_directions", "description": "Describe situations with opposite directions (e.g., forward/backward, up/down, left/right).", "minQuestions": 2},
+        {"tag": "describe_opposite_values", "description": "Describe situations with opposite values (e.g., gain/loss, hot/cold, more/less).", "minQuestions": 2}
+      ],
+      "difficultyPlan": "20 questions: 5 at difficulty 1, 7 at difficulty 2, 5 at difficulty 3, 3 at difficulty 4.",
+      "misconceptions": [
+        "Thinking 'opposite' only means left and right.",
+        "Confusing opposite values with equal values.",
+        "Not recognising opposites in real-life contexts."
+      ],
+      "needsTeacherAssessment": true
+    },
+    "questions": [
+      {
+        "skill_tag": "describe_opposite_directions",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "Kofi walks forward to greet his teacher. What is the opposite of walking forward?",
+        "options": ["Walking backwards", "Walking sideways", "Standing still", "Running"],
+        "answer": 0,
+        "hints": ["Think about how you move when you reverse.", "It is the reverse of forward."],
+        "explanation": "The opposite of moving forward is moving backwards.",
+        "misconception": "Thinking 'standing still' is the opposite of forward.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "describe_opposite_directions",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "Ama raises her right hand. What is the opposite direction?",
+        "options": ["Left hand", "Both hands", "Right foot", "Down"],
+        "answer": 0,
+        "hints": ["The opposite of right is left.", "Which hand is on the other side?"],
+        "explanation": "The opposite of raising the right hand is raising the left hand.",
+        "misconception": "Thinking 'down' is the opposite of right.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "describe_opposite_directions",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "A trotro is travelling North to Kumasi. What direction is the opposite of North?",
+        "options": ["South", "East", "West", "Up"],
+        "answer": 0,
+        "hints": ["North and South are opposite directions on a map.", "Think about the compass."],
+        "explanation": "The opposite of North is South.",
+        "misconception": "Confusing East and West with the opposite of North.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "describe_opposite_directions",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "Yaw is walking backwards. What is the opposite of walking backwards?",
+        "options": ["Walking forward", "Running", "Jumping", "Standing"],
+        "answer": 0,
+        "hints": ["Reverse the action.", "It is the normal way to walk."],
+        "explanation": "The opposite of walking backwards is walking forward.",
+        "misconception": "Confusing it with running or standing.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "describe_opposite_values",
+        "type": "numeric",
+        "difficulty": 1,
+        "stem": "What number is the opposite of -10?",
+        "answer": 10,
+        "check": "0-(-10)",
+        "hints": ["The opposite of a negative number is a positive number.", "It is the same distance from 0, but on the right."],
+        "explanation": "The opposite of -10 is 10.",
+        "misconception": "Thinking the opposite of -10 is 0 or -20.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "describe_opposite_directions",
+        "type": "short_answer",
+        "difficulty": 2,
+        "stem": "If you climb up the stairs, what is the opposite direction?",
+        "answer": ["down", "downstairs", "climb down"],
+        "hints": ["Think about going the other way on the stairs.", "It starts with 'd'."],
+        "explanation": "The opposite of climbing up is going down.",
+        "misconception": "Saying 'sideways' or 'backwards'.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "describe_opposite_directions",
+        "type": "short_answer",
+        "difficulty": 2,
+        "stem": "A pupil walks 10 steps to the East. Then she walks 10 steps in the opposite direction. Which direction did she walk next?",
+        "answer": ["west"],
+        "hints": ["East and West are opposites.", "If East is to the right, West is to the left."],
+        "explanation": "The opposite of East is West.",
+        "misconception": "Confusing North or South with the opposite of East.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "describe_opposite_directions",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "If you face South-West, what is the opposite direction?",
+        "options": ["North-East", "South-East", "North-West", "South"],
+        "answer": 0,
+        "hints": ["Reverse both parts: South becomes North, West becomes East.", "North-East is directly across."],
+        "explanation": "The opposite of South-West is North-East.",
+        "misconception": "Changing only one part of the direction (e.g., North-West).",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "describe_opposite_values",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "Akosua gained 5 cedis in the market. What is the opposite of gaining?",
+        "options": ["Losing", "Keeping", "Spending", "Saving"],
+        "answer": 0,
+        "hints": ["If you don't gain, you might lose.", "It is the opposite of winning."],
+        "explanation": "The opposite of gaining is losing.",
+        "misconception": "Confusing spending with the opposite of gaining.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "describe_opposite_values",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "Kojo deposited 20 cedis into his bank account. What is the opposite of depositing?",
+        "options": ["Withdrawing", "Saving", "Borrowing", "Spending"],
+        "answer": 0,
+        "hints": ["When you put money in, the opposite is taking it out.", "It starts with 'w'."],
+        "explanation": "The opposite of depositing money is withdrawing it.",
+        "misconception": "Thinking borrowing is the opposite of depositing.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "describe_opposite_values",
+        "type": "short_answer",
+        "difficulty": 2,
+        "stem": "The eagle is flying above sea level. What is the opposite of 'above sea level'?",
+        "answer": ["below sea level", "under sea level"],
+        "hints": ["Think about where a fish swims.", "It is the opposite of 'above'."],
+        "explanation": "The opposite of above sea level is below sea level.",
+        "misconception": "Saying 'on sea level'.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "describe_opposite_values",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "The temperature in Tamale is 10 degrees above zero. What is the opposite?",
+        "options": ["10 degrees below zero", "20 degrees above zero", "0 degrees", "10 degrees"],
+        "answer": 0,
+        "hints": ["Above zero becomes below zero.", "Keep the same number, flip the direction."],
+        "explanation": "The opposite of 10 degrees above zero is 10 degrees below zero.",
+        "misconception": "Thinking 0 is the opposite of 10.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "describe_opposite_values",
+        "type": "short_answer",
+        "difficulty": 2,
+        "stem": "Fufu is very hot. What is the opposite of hot?",
+        "answer": ["cold"],
+        "hints": ["Think about food that comes from the fridge.", "It starts with 'c'."],
+        "explanation": "The opposite of hot is cold.",
+        "misconception": "Saying 'warm' or 'spicy'.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "describe_opposite_values",
+        "type": "short_answer",
+        "difficulty": 3,
+        "stem": "A trader lost 30 cedis. What is the opposite of losing 30 cedis?",
+        "answer": ["gaining 30 cedis", "gain 30 cedis", "earning 30 cedis", "+30", "30"],
+        "hints": ["The opposite of losing is gaining.", "Keep the number 30."],
+        "explanation": "The opposite of losing 30 cedis is gaining 30 cedis.",
+        "misconception": "Thinking the opposite is 'having 0 cedis'.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "describe_opposite_values",
+        "type": "mcq",
+        "difficulty": 3,
+        "stem": "A fisherman is 20 metres below sea level. What is the opposite of being 20 metres below sea level?",
+        "options": ["20 metres above sea level", "40 metres below sea level", "0 metres", "10 metres above sea level"],
+        "answer": 0,
+        "hints": ["Below becomes above.", "Keep the number 20."],
+        "explanation": "The opposite of 20 metres below sea level is 20 metres above sea level.",
+        "misconception": "Thinking 0 metres is the opposite.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "describe_opposite_values",
+        "type": "short_answer",
+        "difficulty": 3,
+        "stem": "A pupil owes the teacher 5 pencils. What is the opposite situation?",
+        "answer": ["the teacher owes the pupil 5 pencils", "the pupil has 5 pencils", "being owed 5 pencils"],
+        "hints": ["Owing means being in debt.", "The opposite is being owed or having a positive amount."],
+        "explanation": "The opposite of owing 5 pencils is being owed 5 pencils (or having 5 pencils).",
+        "misconception": "Saying 'owing 10 pencils'.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "describe_opposite_directions",
+        "type": "short_answer",
+        "difficulty": 3,
+        "stem": "A car travels 5 km to the North. It then travels in the opposite direction. What direction does the car travel next?",
+        "answer": ["south"],
+        "hints": ["North and South are opposites.", "If North is up on a map, South is down."],
+        "explanation": "The opposite of North is South.",
+        "misconception": "Saying East or West.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "describe_opposite_directions",
+        "type": "written",
+        "difficulty": 3,
+        "stem": "Describe a time in school when you moved in one direction, and then in the opposite direction.",
+        "hints": ["Think about moving to the board and back.", "Or walking to the window and then to the door."],
+        "explanation": "You might walk forward to the chalkboard, then walk backward to your seat. Or walk right to the window, then left to the door.",
+        "rubric": {
+          "criteria": [
+            {"description": "Describes a first direction (e.g., walking to the board).", "marks": 1},
+            {"description": "Describes the opposite direction (e.g., walking back).", "marks": 1},
+            {"description": "Uses clear Basic 3 language.", "marks": 1}
+          ]
+        },
+        "misconception": "Describing two movements that are not opposite.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "describe_opposite_directions",
+        "type": "mcq",
+        "difficulty": 4,
+        "stem": "Kwame moves 2 steps to the left and 3 steps down. What is the opposite movement?",
+        "options": ["2 steps right and 3 steps up", "2 steps left and 3 steps up", "2 steps right and 3 steps down", "3 steps right and 2 steps up"],
+        "answer": 0,
+        "hints": ["Left becomes right, down becomes up.", "Reverse both parts of the movement."],
+        "explanation": "The opposite of left is right, and the opposite of down is up. So the opposite movement is 2 steps right and 3 steps up.",
+        "misconception": "Changing only one direction (e.g., just left to right).",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "describe_opposite_values",
+        "type": "written",
+        "difficulty": 4,
+        "stem": "Explain opposite values using a bank account. Give an example of a deposit and a withdrawal.",
+        "hints": ["What happens to your money when you deposit?", "What happens when you withdraw?"],
+        "explanation": "A deposit is adding money to the account (positive), while a withdrawal is taking money out (negative).",
+        "rubric": {
+          "criteria": [
+            {"description": "States that deposit and withdrawal are opposite actions.", "marks": 1},
+            {"description": "Gives a correct example (e.g., depositing 10 cedis vs withdrawing 10 cedis).", "marks": 1},
+            {"description": "Uses clear Basic 3 language.", "marks": 1}
+          ]
+        },
+        "misconception": "Thinking deposit and withdrawal are the same.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "describe_opposite_values",
+        "type": "mcq",
+        "difficulty": 4,
+        "stem": "Amina owes the shopkeeper 50 cedis. What is the opposite situation?",
+        "options": ["The shopkeeper owes Amina 50 cedis", "Amina owes 100 cedis", "Amina pays the 50 cedis", "Amina borrows 50 cedis"],
+        "answer": 0,
+        "hints": ["Owing is a negative situation.", "The opposite is being owed (a positive situation)."],
+        "explanation": "If Amina owes 50 cedis, the opposite situation is that the shopkeeper owes Amina 50 cedis.",
+        "misconception": "Thinking paying the debt is the opposite situation.",
+        "uncertain": []
+      }
+    ]
+  },
+  {
+    "file_name": "B3.1.1.2.1..json",
+    "indicator": {
+      "code": "[Uncoded p.65]",
+      "subject": "Mathematics",
+      "level": "Basic 3",
+      "strand": "Number",
+      "sub_strand": "Counting, Representation, Cardinality & Ordinality",
+      "content_standard": "B3.1.1.1 Count and estimate quantities from 0 to 10,000.CONT'D",
+      "objective": "using other possible representations of place value which include manipulatives such as threaded 100s, 10s, and loose bottle caps; and multi- base ten material (units, flats and squares)",
+      "source_page": 65
+    },
+    "spec": {
+      "skills": [
+        {"tag": "model_place_value", "description": "Model quantities up to 10,000 using multi-base materials (units, flats, squares, blocks).", "minQuestions": 2},
+        {"tag": "decompose_numbers", "description": "Decompose numbers up to 1000 into 100s, 10s, and 1s expressions.", "minQuestions": 2},
+        {"tag": "explain_digit_value", "description": "Explain why the value of a digit depends on its placement.", "minQuestions": 2},
+        {"tag": "read_numbers_by_value", "description": "Read a number up to 1000 by indicating the value of each digit (e.g., 435 as four hundred and thirty-five).", "minQuestions": 2}
+      ],
+      "difficultyPlan": "20 questions: 5 at difficulty 1, 7 at difficulty 2, 5 at difficulty 3, 3 at difficulty 4.",
+      "misconceptions": [
+        "Reading 435 as “four three five”.",
+        "Saying 4036 is 4000 + 30 + 6 but writing 4036 as 4000 + 300 + 6.",
+        "Ignoring zero placeholders."
+      ],
+      "needsTeacherAssessment": true
+    },
+    "questions": [
+      {
+        "skill_tag": "model_place_value",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "A pupil uses multi-base blocks: 3 flats and 2 rods. If a flat is 100 and a rod is 10, what number did the pupil build?",
+        "options": ["320", "32", "302", "230"],
+        "answer": 0,
+        "hints": ["3 flats means 300.", "2 rods means 20."],
+        "explanation": "3 flats = 300. 2 rods = 20. 300 + 20 = 320.",
+        "misconception": "Confusing the value of the blocks (e.g., thinking 3 flats = 30).",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "model_place_value",
+        "type": "short_answer",
+        "difficulty": 2,
+        "stem": "If one loose bottle cap represents 1 unit, what represents 1 ten?",
+        "answer": ["a bundle of 10 caps", "10 bottle caps", "bundle of ten"],
+        "hints": ["Think about how many ones make a ten.", "You need to group them."],
+        "explanation": "A bundle of 10 bottle caps represents 1 ten.",
+        "misconception": "Thinking 1 cap represents a ten.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "model_place_value",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "In multi-base ten materials, which block represents 1 hundred?",
+        "options": ["Flat", "Rod", "Unit", "Cube"],
+        "answer": 0,
+        "hints": ["It is a square made of 100 units.", "It is called a flat."],
+        "explanation": "A flat represents 1 hundred because it is made up of 100 units.",
+        "misconception": "Confusing the rod (10) with the flat (100).",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "model_place_value",
+        "type": "practical",
+        "difficulty": 3,
+        "stem": "Use multi-base ten blocks (or straws) to model the number 245. Show your model to the teacher.",
+        "hints": ["How many hundreds do you need?", "How many tens and ones?"],
+        "explanation": "The learner should build 245 using 2 flats (200), 4 rods (40), and 5 units (5).",
+        "rubric": {
+          "criteria": [
+            {"description": "Correctly selects 2 hundreds (flats).", "marks": 1},
+            {"description": "Correctly selects 4 tens (rods).", "marks": 1},
+            {"description": "Correctly selects 5 ones (units).", "marks": 1}
+          ]
+        },
+        "misconception": "Using the wrong number of blocks for each place value.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "model_place_value",
+        "type": "written",
+        "difficulty": 4,
+        "stem": "Explain how you would use flats and rods to build the number 130. Why do you need zero units?",
+        "hints": ["How many hundreds are in 130?", "How many tens?", "How many ones?"],
+        "explanation": "You need 1 flat (100) and 3 rods (30). You need zero units because there are 0 ones in 130.",
+        "rubric": {
+          "criteria": [
+            {"description": "States to use 1 flat (100).", "marks": 1},
+            {"description": "States to use 3 rods (30).", "marks": 1},
+            {"description": "Explains that zero units are needed because there are 0 ones.", "marks": 1}
+          ]
+        },
+        "misconception": "Thinking you need blocks for a zero digit.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "decompose_numbers",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "What number is 500 + 40 + 6?",
+        "options": ["546", "5046", "456", "5406"],
+        "answer": 0,
+        "hints": ["5 hundreds, 4 tens, and 6 ones.", "Put them together."],
+        "explanation": "500 + 40 + 6 = 546.",
+        "misconception": "Adding the digits incorrectly (e.g., getting 456).",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "decompose_numbers",
+        "type": "numeric",
+        "difficulty": 2,
+        "stem": "Decompose 367 into hundreds, tens, and ones. What is the hundreds digit?",
+        "answer": 3,
+        "check": "300/100",
+        "hints": ["The hundreds place is the first digit.", "367 is 300 + 60 + 7."],
+        "explanation": "367 is 300 + 60 + 7. The hundreds digit is 3.",
+        "misconception": "Confusing the tens digit with the hundreds digit.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "decompose_numbers",
+        "type": "short_answer",
+        "difficulty": 2,
+        "stem": "Write the number for 200 + 50 + 3.",
+        "answer": ["253"],
+        "hints": ["2 hundreds, 5 tens, 3 ones.", "Put them in order."],
+        "explanation": "200 + 50 + 3 = 253.",
+        "misconception": "Writing 200503 or 20053.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "decompose_numbers",
+        "type": "numeric",
+        "difficulty": 3,
+        "stem": "What is the missing number in this expression: 800 + ___ + 5 = 805?",
+        "answer": 0,
+        "check": "805-800-5",
+        "hints": ["What is the tens digit in 805?", "There are zero tens."],
+        "explanation": "805 is 800 + 0 + 5. The missing number is 0.",
+        "misconception": "Thinking the missing number must be 10 or 50.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "decompose_numbers",
+        "type": "written",
+        "difficulty": 3,
+        "stem": "Decompose the number 940 into hundreds, tens, and ones using an addition expression.",
+        "hints": ["How many hundreds in 940?", "How many tens?", "How many ones?"],
+        "explanation": "940 = 900 + 40 + 0.",
+        "rubric": {
+          "criteria": [
+            {"description": "Writes 900 for the hundreds.", "marks": 1},
+            {"description": "Writes 40 for the tens.", "marks": 1},
+            {"description": "Writes 0 for the ones (or omits it correctly).", "marks": 1}
+          ]
+        },
+        "misconception": "Forgetting the zero in the ones place.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "explain_digit_value",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "In the number 472, what is the value of the digit 4?",
+        "options": ["400", "4", "40", "4000"],
+        "answer": 0,
+        "hints": ["The 4 is in the hundreds place.", "It represents 4 hundreds."],
+        "explanation": "The digit 4 is in the hundreds place, so its value is 400.",
+        "misconception": "Thinking the value is just the digit itself (4).",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "explain_digit_value",
+        "type": "mcq",
+        "difficulty": 3,
+        "stem": "Why does the digit 2 have a different value in 328 than in 285?",
+        "options": ["Because it is in a different place value position.", "Because it is a bigger number.", "Because 328 is larger than 285.", "Because the number of digits is different."],
+        "answer": 0,
+        "hints": ["Look at where the 2 is in each number.", "One is in the tens place, the other is in the hundreds place."],
+        "explanation": "In 328, 2 is in the tens place (20). In 285, 2 is in the hundreds place (200). Its position determines its value.",
+        "misconception": "Thinking the value of a digit never changes.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "explain_digit_value",
+        "type": "short_answer",
+        "difficulty": 3,
+        "stem": "In the number 608, what is the value of the digit 6?",
+        "answer": ["600"],
+        "hints": ["The 6 is in the hundreds place.", "6 hundreds."],
+        "explanation": "The digit 6 is in the hundreds place, so its value is 600.",
+        "misconception": "Thinking the value is 6 or 60.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "explain_digit_value",
+        "type": "written",
+        "difficulty": 4,
+        "stem": "Explain why the value of a digit depends on its placement in a numeral. Use the digit 5 in the numbers 500 and 50 as an example.",
+        "hints": ["Where is the 5 in 500?", "Where is the 5 in 50?"],
+        "explanation": "In 500, the 5 is in the hundreds place, so it means 500. In 50, the 5 is in the tens place, so it means 50.",
+        "rubric": {
+          "criteria": [
+            {"description": "Explains that placement determines the value.", "marks": 1},
+            {"description": "Correctly identifies the value of 5 in 500 as 500.", "marks": 1},
+            {"description": "Correctly identifies the value of 5 in 50 as 50.", "marks": 1}
+          ]
+        },
+        "misconception": "Thinking a digit's value is always the same regardless of position.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "read_numbers_by_value",
+        "type": "short_answer",
+        "difficulty": 1,
+        "stem": "How do you read the number 435?",
+        "answer": ["four hundred and thirty-five", "four hundred thirty-five"],
+        "hints": ["Say the hundreds, then the tens, then the ones.", "Do not say 'four three five'."],
+        "explanation": "435 is read as four hundred and thirty-five.",
+        "misconception": "Reading it as 'four three five'.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "read_numbers_by_value",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "Which is the correct way to read 206?",
+        "options": ["Two hundred and six", "Two zero six", "Two hundred six", "Twenty-six"],
+        "answer": 0,
+        "hints": ["There is a zero in the tens place.", "Say 'two hundred and six'."],
+        "explanation": "206 is read as two hundred and six.",
+        "misconception": "Reading it as 'two zero six' or ignoring the zero.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "read_numbers_by_value",
+        "type": "numeric",
+        "difficulty": 2,
+        "stem": "Write the numeral for the number 'seven hundred and forty'.",
+        "answer": 740,
+        "check": "700+40",
+        "hints": ["Seven hundreds.", "Four tens."],
+        "explanation": "'Seven hundred and forty' is written as 740.",
+        "misconception": "Writing 74 or 704.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "read_numbers_by_value",
+        "type": "short_answer",
+        "difficulty": 2,
+        "stem": "Write the numeral for the number 'nine hundred and five'.",
+        "answer": ["905"],
+        "hints": ["Nine hundreds.", "Zero tens.", "Five ones."],
+        "explanation": "'Nine hundred and five' is written as 905.",
+        "misconception": "Writing 95 or 950.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "read_numbers_by_value",
+        "type": "written",
+        "difficulty": 4,
+        "stem": "Write the number 4036 in words.",
+        "hints": ["Break it down: four thousand, zero hundreds, three tens, six ones.", "Use the word 'and' for the tens."],
+        "explanation": "4036 is written as four thousand and thirty-six.",
+        "rubric": {
+          "criteria": [
+            {"description": "Writes 'four thousand'.", "marks": 1},
+            {"description": "Correctly writes 'and thirty-six'.", "marks": 1},
+            {"description": "Does not write 'and zero hundred'.", "marks": 1}
+          ]
+        },
+        "misconception": "Writing 'four thousand and zero hundred and thirty-six'.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "read_numbers_by_value",
+        "type": "mcq",
+        "difficulty": 4,
+        "stem": "Which numeral represents 'five thousand and forty'?",
+        "options": ["5040", "5400", "5004", "504"],
+        "answer": 0,
+        "hints": ["Five thousands.", "Zero hundreds.", "Four tens."],
+        "explanation": "'Five thousand and forty' means 5000 + 40, which is 5040.",
+        "misconception": "Writing 5400 (five thousand four hundred).",
+        "uncertain": []
+      }
+    ]
+  },
+  {
+    "file_name": "B3.1.1.1.2.json",
+    "indicator": {
+      "code": "B3.1.1.1.2",
+      "subject": "Mathematics",
+      "level": "Basic 3",
+      "strand": "Number",
+      "sub_strand": "Counting, Representation, Cardinality & Ordinality",
+      "content_standard": "B3.1.1.1 Count and estimate quantities from 0 to 10,000",
+      "objective": "Identify numbers in different positions around a given number in a number chart",
+      "source_page": 64
+    },
+    "spec": {
+      "skills": [
+        {"tag": "navigate_number_chart", "description": "Identify numbers above, below, left, and right of a chosen number on a 0–10,000 chart.", "minQuestions": 2},
+        {"tag": "apply_chart_patterns", "description": "Apply chart patterns (e.g., moving up subtracts 10, moving down adds 10).", "minQuestions": 2}
+      ],
+      "difficultyPlan": "20 questions: 5 at difficulty 1, 7 at difficulty 2, 5 at difficulty 3, 3 at difficulty 4.",
+      "misconceptions": [
+        "Confusing rows and columns.",
+        "Adding 1 instead of 10 when moving down.",
+        "Treating a 1000s chart like a 100s chart."
+      ],
+      "needsTeacherAssessment": false
+    },
+    "questions": [
+      {
+        "skill_tag": "navigate_number_chart",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "On a number chart, what number is directly to the right of 25?",
+        "options": ["24", "26", "35", "15"],
+        "answer": 1,
+        "hints": ["Moving right adds 1.", "25 plus 1."],
+        "explanation": "On a number chart, moving right adds 1. 25 + 1 = 26.",
+        "misconception": "Adding 10 instead of 1 when moving right.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "navigate_number_chart",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "On a number chart, what number is directly below 43?",
+        "options": ["33", "43", "53", "44"],
+        "answer": 2,
+        "hints": ["Moving down adds 10.", "43 plus 10."],
+        "explanation": "On a number chart, the number directly below is 10 more. 43 + 10 = 53.",
+        "misconception": "Adding 1 instead of 10 when moving down.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "apply_chart_patterns",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "When you move to the right on a number chart, the numbers increase by...",
+        "options": ["10", "100", "0", "1"],
+        "answer": 3,
+        "hints": ["Think about moving from 25 to 26.", "The number gets bigger by 1."],
+        "explanation": "Moving to the right on a number chart increases the number by 1.",
+        "misconception": "Thinking moving right adds 10 (confusing with rows).",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "apply_chart_patterns",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "When you move down to the next row on a number chart, the numbers increase by...",
+        "options": ["10", "1", "100", "5"],
+        "answer": 0,
+        "hints": ["Think about moving from 43 to 53.", "The number gets bigger by 10."],
+        "explanation": "Moving down one row on a number chart increases the number by 10.",
+        "misconception": "Thinking moving down adds 1.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "apply_chart_patterns",
+        "type": "short_answer",
+        "difficulty": 1,
+        "stem": "On a number chart, moving one space to the left subtracts what number?",
+        "answer": ["1"],
+        "hints": ["Moving left makes the number smaller by 1.", "It is the opposite of moving right."],
+        "explanation": "Moving left subtracts 1, just as moving right adds 1.",
+        "misconception": "Thinking moving left subtracts 10.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "navigate_number_chart",
+        "type": "numeric",
+        "difficulty": 2,
+        "stem": "On a number chart, what number is directly above 150?",
+        "answer": 140,
+        "check": "150-10",
+        "hints": ["Moving up subtracts 10.", "150 take away 10."],
+        "explanation": "On a number chart, the number directly above is 10 less. 150 - 10 = 140.",
+        "misconception": "Subtracting 1 instead of 10 when moving up.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "navigate_number_chart",
+        "type": "numeric",
+        "difficulty": 2,
+        "stem": "On a number chart, what number is 2 spaces to the right of 340?",
+        "answer": 342,
+        "check": "340+2",
+        "hints": ["Moving right adds 1 for each space.", "340 plus 2."],
+        "explanation": "Moving right adds 1 per space, so moving 2 spaces right adds 2. 340 + 2 = 342.",
+        "misconception": "Adding 20 instead of 2.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "navigate_number_chart",
+        "type": "numeric",
+        "difficulty": 2,
+        "stem": "On a number chart, what number is 3 spaces to the left of 500?",
+        "answer": 497,
+        "check": "500-3",
+        "hints": ["Moving left subtracts 1 for each space.", "500 take away 3."],
+        "explanation": "Moving left subtracts 1 per space, so moving 3 spaces left subtracts 3. 500 - 3 = 497.",
+        "misconception": "Subtracting 30 instead of 3.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "apply_chart_patterns",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "On a number chart, what does moving UP one row do to the number?",
+        "options": ["Adds 1", "Adds 100", "Subtracts 10", "Subtracts 20"],
+        "answer": 2,
+        "hints": ["Moving up is the opposite of moving down.", "Moving down adds 10."],
+        "explanation": "Moving up subtracts 10, while moving down adds 10.",
+        "misconception": "Thinking moving up subtracts 1.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "apply_chart_patterns",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "If you move down 2 rows on a number chart, how much is added to the number?",
+        "options": ["2", "20", "200", "10"],
+        "answer": 1,
+        "hints": ["Each row down adds 10.", "2 rows down means 10 + 10."],
+        "explanation": "Moving down 1 row adds 10. Moving down 2 rows adds 20.",
+        "misconception": "Adding 2 instead of 20.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "apply_chart_patterns",
+        "type": "numeric",
+        "difficulty": 2,
+        "stem": "What number is 10 more than 670?",
+        "answer": 680,
+        "check": "670+10",
+        "hints": ["10 more means add 10.", "670 plus 10."],
+        "explanation": "10 more than 670 is 680.",
+        "misconception": "Adding 1 instead of 10.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "apply_chart_patterns",
+        "type": "numeric",
+        "difficulty": 2,
+        "stem": "What number is 100 less than 850?",
+        "answer": 750,
+        "check": "850-100",
+        "hints": ["100 less means subtract 100.", "850 take away 100."],
+        "explanation": "100 less than 850 is 750.",
+        "misconception": "Subtracting 10 instead of 100.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "navigate_number_chart",
+        "type": "mcq",
+        "difficulty": 3,
+        "stem": "On a number chart, if you start at 56 and move 2 spaces left and 1 space down, where do you land?",
+        "options": ["44", "55", "67", "64"],
+        "answer": 3,
+        "hints": ["Left 2 means subtract 2. Down 1 means add 10.", "56 - 2 = 54, then 54 + 10."],
+        "explanation": "Start at 56. Move left 2: 56 - 2 = 54. Move down 1: 54 + 10 = 64.",
+        "misconception": "Confusing up with down or right with left.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "navigate_number_chart",
+        "type": "mcq",
+        "difficulty": 3,
+        "stem": "Start at 200 on a number chart. Move 1 space right and 2 spaces up. What number do you reach?",
+        "options": ["181", "221", "199", "182"],
+        "answer": 0,
+        "hints": ["Right 1 adds 1. Up 2 subtracts 20.", "200 + 1 = 201, then 201 - 20."],
+        "explanation": "Start at 200. Move right 1: 200 + 1 = 201. Move up 2: 201 - 20 = 181.",
+        "misconception": "Adding 20 instead of subtracting 20.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "apply_chart_patterns",
+        "type": "short_answer",
+        "difficulty": 3,
+        "stem": "If you move diagonally down and to the right on a number chart, how much is added to the number?",
+        "answer": ["11"],
+        "hints": ["Down adds 10 and right adds 1.", "10 + 1."],
+        "explanation": "Moving down adds 10 and moving right adds 1, so moving diagonally down-right adds 11.",
+        "misconception": "Thinking it adds 9 or 20.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "apply_chart_patterns",
+        "type": "short_answer",
+        "difficulty": 3,
+        "stem": "What number is 1 row down and 1 column right from 345?",
+        "answer": ["356"],
+        "hints": ["Down 1 adds 10. Right 1 adds 1.", "345 + 10 + 1."],
+        "explanation": "Moving down 1 row adds 10, and moving right 1 adds 1. 345 + 10 + 1 = 356.",
+        "misconception": "Adding 20 instead of 11.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "navigate_number_chart",
+        "type": "written",
+        "difficulty": 3,
+        "stem": "Describe how to find the number directly below 34 on a number chart. Then state the number.",
+        "hints": ["Think about how rows work.", "Moving down adds 10."],
+        "explanation": "To find the number directly below, add 10 to 34. The number is 44.",
+        "rubric": {
+          "criteria": [
+            {"description": "Explains that moving down means adding 10.", "marks": 1},
+            {"description": "States the correct answer: 44.", "marks": 1},
+            {"description": "Uses clear Basic 3 language.", "marks": 1}
+          ]
+        },
+        "misconception": "Adding 1 instead of 10.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "navigate_number_chart",
+        "type": "numeric",
+        "difficulty": 4,
+        "stem": "On a number chart, what number is 4 spaces left and 3 spaces down from 500?",
+        "answer": 526,
+        "check": "500-4+30",
+        "hints": ["Left 4 means subtract 4. Down 3 means add 30.", "500 - 4 = 496, then 496 + 30."],
+        "explanation": "Start at 500. Move left 4: 500 - 4 = 496. Move down 3: 496 + 30 = 526.",
+        "misconception": "Subtracting 30 instead of adding 30.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "apply_chart_patterns",
+        "type": "mcq",
+        "difficulty": 4,
+        "stem": "If you start at 1000 on a number chart and move 2 rows down and 5 columns right, what number do you reach?",
+        "options": ["1007", "1205", "1025", "1105"],
+        "answer": 2,
+        "hints": ["Down 2 rows adds 20. Right 5 adds 5.", "1000 + 20 + 5."],
+        "explanation": "Moving down 2 rows adds 20, and moving right 5 adds 5. 1000 + 20 + 5 = 1025.",
+        "misconception": "Adding 200 instead of 20 for rows.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "apply_chart_patterns",
+        "type": "written",
+        "difficulty": 4,
+        "stem": "Explain why moving 1 space right and 1 space down on a number chart always adds 11. Give an example.",
+        "hints": ["What does moving right add?", "What does moving down add?"],
+        "explanation": "Moving right adds 1, and moving down adds 10. Together, 1 + 10 = 11. For example, starting at 23: move right to 24, then down to 34 (23 + 11 = 34).",
+        "rubric": {
+          "criteria": [
+            {"description": "States that moving right adds 1.", "marks": 1},
+            {"description": "States that moving down adds 10.", "marks": 1},
+            {"description": "Explains that 1 + 10 = 11.", "marks": 1},
+            {"description": "Gives a correct example (e.g., 23 -> 34).", "marks": 1}
+          ]
+        },
+        "misconception": "Thinking the pattern adds 9 or 10.",
+        "uncertain": []
+      }
+    ]
+  },
+  {
+    "file_name": "B3.1.1.1.1.json",
+    "indicator": {
+      "code": "B3.1.1.1.1",
+      "subject": "Mathematics",
+      "level": "Basic 3",
+      "strand": "Number",
+      "sub_strand": "Counting, Representation, Cardinality & Ordinality",
+      "content_standard": "B3.1.1.1 Count and estimate quantities from 0 to 10,000",
+      "objective": "Use number names and the counting sequence to count and estimate quantities up to 10,000.",
+      "source_page": 63
+    },
+    "spec": {
+      "skills": [
+        {"tag": "skip_count_forwards", "description": "Skip count forwards by 10s, 50s, 100s, 500s, and 1000s from any starting point.", "minQuestions": 2},
+        {"tag": "skip_count_backwards", "description": "Skip count backwards by 10s, 50s, 100s, 500s, and 1000s.", "minQuestions": 2},
+        {"tag": "estimate_quantities", "description": "Select the most appropriate of three estimates for a collection and justify the choice.", "minQuestions": 2},
+        {"tag": "write_numerals_to_1000", "description": "Represent numbers or quantities to 1000 with written numerals.", "minQuestions": 2},
+        {"tag": "write_number_words", "description": "Write number words for multiples of ten to 9999 and multiples of 100 to 99990.", "minQuestions": 2}
+      ],
+      "difficultyPlan": "20 questions: 5 at difficulty 1, 7 at difficulty 2, 5 at difficulty 3, 3 at difficulty 4.",
+      "misconceptions": [
+        "Losing place value when skip counting.",
+        "Thinking 1000 is the largest number.",
+        "Confusing the written numeral with the word form.",
+        "Estimating without a reference point."
+      ],
+      "needsTeacherAssessment": false
+    },
+    "questions": [
+      {
+        "skill_tag": "skip_count_forwards",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "Start at 10 and skip count by 10s: 10, 20, 30, ___. What number comes next?",
+        "options": ["40", "35", "50", "31"],
+        "answer": 0,
+        "hints": ["Add 10 each time.", "30 plus 10."],
+        "explanation": "The pattern adds 10. 30 + 10 = 40.",
+        "misconception": "Adding 5 or 1 instead of 10.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "skip_count_forwards",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "Skip count by 100s: 100, 200, 300, ___. Which number is next?",
+        "options": ["400", "350", "500", "310"],
+        "answer": 0,
+        "hints": ["Add 100 each time.", "300 plus 100."],
+        "explanation": "The pattern adds 100. 300 + 100 = 400.",
+        "misconception": "Adding 10 instead of 100.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "skip_count_backwards",
+        "type": "short_answer",
+        "difficulty": 1,
+        "stem": "Skip count backwards by 10s: 50, 40, 30, ___. What number comes next?",
+        "answer": ["20"],
+        "hints": ["Subtract 10 each time.", "30 take away 10."],
+        "explanation": "The pattern subtracts 10. 30 - 10 = 20.",
+        "misconception": "Subtracting 1 instead of 10.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "write_numerals_to_1000",
+        "type": "numeric",
+        "difficulty": 1,
+        "stem": "Write the numeral for five hundred.",
+        "answer": 500,
+        "check": "500",
+        "hints": ["Five hundred means 5 hundreds.", "Write a 5 followed by two zeros."],
+        "explanation": "Five hundred is written as 500.",
+        "misconception": "Writing 5000 (five thousand) instead of 500.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "estimate_quantities",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "A large jar is filled with beans. About how many beans are in the jar? Choose the best estimate.",
+        "options": ["100", "10", "1000", "5"],
+        "answer": 0,
+        "hints": ["A jar holds many beans, but not thousands.", "Think of a reasonable number between 10 and 1000."],
+        "explanation": "A large jar can hold about 100 beans. 10 is too small, and 1000 is too large.",
+        "misconception": "Choosing the largest number (1000) or a very small number (5).",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "skip_count_forwards",
+        "type": "numeric",
+        "difficulty": 2,
+        "stem": "Skip count by 50s: 0, 50, 100, ___. What number comes next?",
+        "answer": 150,
+        "check": "100+50",
+        "hints": ["Add 50 each time.", "100 plus 50."],
+        "explanation": "The pattern adds 50. 100 + 50 = 150.",
+        "misconception": "Adding 10 instead of 50.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "skip_count_forwards",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "Skip count by 500s: 500, 1000, 1500, ___. What number comes next?",
+        "options": ["2000", "2500", "3000", "1500"],
+        "answer": 0,
+        "hints": ["Add 500 each time.", "1500 plus 500."],
+        "explanation": "The pattern adds 500. 1500 + 500 = 2000.",
+        "misconception": "Adding 100 instead of 500.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "estimate_quantities",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "Which is the best estimate for the number of pupils in a large primary school?",
+        "options": ["50", "5000", "500", "100"],
+        "answer": 2,
+        "hints": ["A large school has hundreds of pupils.", "500 is in the middle of the choices."],
+        "explanation": "A large primary school usually has about 500 pupils. 50 is too small, and 5000 is too large.",
+        "misconception": "Choosing the largest number (5000).",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "estimate_quantities",
+        "type": "short_answer",
+        "difficulty": 2,
+        "stem": "A bag of oranges contains about 10, 100, or 1000 oranges. Write the best estimate.",
+        "answer": ["100"],
+        "hints": ["A bag can carry about 100 oranges.", "10 is too few, 1000 is too many."],
+        "explanation": "A bag of oranges usually contains about 100 oranges.",
+        "misconception": "Choosing 10 because the bag is not very large.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "write_number_words",
+        "type": "short_answer",
+        "difficulty": 2,
+        "stem": "Write the number 40 in words.",
+        "answer": ["forty"],
+        "hints": ["It is four tens.", "Do not forget the 'f'."],
+        "explanation": "40 is written as forty.",
+        "misconception": "Writing 'fourty' instead of 'forty'.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "write_number_words",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "How do you write the number 100 in words?",
+        "options": ["one hundred", "ten", "one thousand", "hundred"],
+        "answer": 0,
+        "hints": ["It is one group of one hundred.", "Start with 'one'."],
+        "explanation": "100 is written as one hundred.",
+        "misconception": "Writing 'one thousand' or just 'hundred'.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "write_number_words",
+        "type": "short_answer",
+        "difficulty": 2,
+        "stem": "Write the number 200 in words.",
+        "answer": ["two hundred"],
+        "hints": ["It is two groups of one hundred.", "Start with 'two'."],
+        "explanation": "200 is written as two hundred.",
+        "misconception": "Writing 'two thousands' or 'twenty hundred'.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "skip_count_backwards",
+        "type": "numeric",
+        "difficulty": 3,
+        "stem": "Skip count backwards by 50s: 200, 150, 100, ___. What number comes next?",
+        "answer": 50,
+        "check": "100-50",
+        "hints": ["Subtract 50 each time.", "100 take away 50."],
+        "explanation": "The pattern subtracts 50. 100 - 50 = 50.",
+        "misconception": "Subtracting 10 instead of 50.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "skip_count_backwards",
+        "type": "mcq",
+        "difficulty": 3,
+        "stem": "Skip count backwards by 100s: 500, 400, 300, ___. What number comes next?",
+        "options": ["200", "100", "250", "400"],
+        "answer": 0,
+        "hints": ["Subtract 100 each time.", "300 take away 100."],
+        "explanation": "The pattern subtracts 100. 300 - 100 = 200.",
+        "misconception": "Subtracting 200 instead of 100.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "estimate_quantities",
+        "type": "written",
+        "difficulty": 3,
+        "stem": "A basket contains 48 mangoes. Which is the best estimate: 10, 50, or 100? Explain your choice.",
+        "hints": ["Think about how close 48 is to each number.", "50 is very close to 48."],
+        "explanation": "50 is the best estimate because 48 is very close to 50. 10 is too small, and 100 is too large.",
+        "rubric": {
+          "criteria": [
+            {"description": "Chooses 50 as the best estimate.", "marks": 1},
+            {"description": "Explains that 48 is close to 50.", "marks": 1},
+            {"description": "Uses clear Basic 3 language.", "marks": 1}
+          ]
+        },
+        "misconception": "Choosing 100 because it is the largest number.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "write_numerals_to_1000",
+        "type": "numeric",
+        "difficulty": 3,
+        "stem": "Write the numeral for nine hundred and ninety-nine.",
+        "answer": 999,
+        "check": "999",
+        "hints": ["Nine hundreds, nine tens, and nine ones.", "Write three 9s."],
+        "explanation": "Nine hundred and ninety-nine is written as 999.",
+        "misconception": "Writing 909 or 990 instead of 999.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "write_numerals_to_1000",
+        "type": "short_answer",
+        "difficulty": 3,
+        "stem": "Write the numeral for one thousand.",
+        "answer": ["1000"],
+        "hints": ["One thousand is 10 hundreds.", "Write a 1 followed by three zeros."],
+        "explanation": "One thousand is written as 1000.",
+        "misconception": "Writing 100 (one hundred) instead of 1000.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "skip_count_forwards",
+        "type": "numeric",
+        "difficulty": 4,
+        "stem": "Skip count by 1000s: 1000, 2000, 3000, ___. What number comes next?",
+        "answer": 4000,
+        "check": "3000+1000",
+        "hints": ["Add 1000 each time.", "3000 plus 1000."],
+        "explanation": "The pattern adds 1000. 3000 + 1000 = 4000.",
+        "misconception": "Adding 100 instead of 1000.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "estimate_quantities",
+        "type": "mcq",
+        "difficulty": 4,
+        "stem": "A classroom has 5, 50, or 500 chairs? Choose the most reasonable estimate.",
+        "options": ["5", "50", "500", "10"],
+        "answer": 1,
+        "hints": ["A classroom holds many pupils, not just 5.", "It is not as big as a large hall."],
+        "explanation": "A normal classroom has about 50 chairs. 5 is too few, and 500 is too many.",
+        "misconception": "Choosing 5 or 500 without thinking about the size of a classroom.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "write_number_words",
+        "type": "written",
+        "difficulty": 4,
+        "stem": "Write the number 1000 in words.",
+        "hints": ["It is ten hundreds.", "Start with 'one'."],
+        "explanation": "1000 is written as one thousand.",
+        "rubric": {
+          "criteria": [
+            {"description": "Writes 'one thousand' correctly.", "marks": 1},
+            {"description": "Spells the words correctly.", "marks": 1}
+          ]
+        },
+        "misconception": "Writing 'one hundred' or 'ten hundred'.",
+        "uncertain": []
+      }
+    ]
+  }
+]

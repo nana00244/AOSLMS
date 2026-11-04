@@ -1,0 +1,263 @@
+{
+  "indicator": {
+    "code": "B5.1.4.1.5",
+    "subject": "Mathematics",
+    "level": "Basic 5",
+    "strand": "Number",
+    "sub_strand": "Decimals",
+    "content_standard": "Not clearly printed in extract",
+    "objective": "Use models to explain the result of multiplying a decimal (up to the thousandths) by a whole number",
+    "source_page": 101
+  },
+  "spec": {
+    "skills": [
+      {"tag": "multiply_decimal_whole", "description": "Multiply a decimal (up to thousandths) by a whole number.", "minQuestions": 2},
+      {"tag": "place_decimal_point", "description": "Place the decimal point correctly in the product.", "minQuestions": 2}
+    ],
+    "difficultyPlan": "20 questions: 5 at difficulty 1, 7 at difficulty 2, 5 at difficulty 3, 3 at difficulty 4.",
+    "misconceptions": [
+      "Ignoring the decimal point.",
+      "Placing the decimal point at the wrong position.",
+      "Multiplying as if the decimal were a whole number then misplacing the point."
+    ],
+    "needsTeacherAssessment": true
+  },
+  "questions": [
+    {
+      "skill_tag": "multiply_decimal_whole",
+      "type": "numeric",
+      "difficulty": 1,
+      "stem": "What is 0.3 × 4?",
+      "answer": 1.2,
+      "check": "0.3*4",
+      "hints": ["3 × 4 = 12.", "One decimal place: 1.2."],
+      "explanation": "1.2.",
+      "misconception": "Saying 12.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "multiply_decimal_whole",
+      "type": "numeric",
+      "difficulty": 1,
+      "stem": "What is 0.5 × 6?",
+      "answer": 3,
+      "check": "0.5*6",
+      "hints": ["5 × 6 = 30.", "One decimal place: 3.0 or 3."],
+      "explanation": "3.",
+      "misconception": "Saying 30.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "multiply_decimal_whole",
+      "type": "numeric",
+      "difficulty": 1,
+      "stem": "What is 1.2 × 3?",
+      "answer": 3.6,
+      "check": "1.2*3",
+      "hints": ["12 × 3 = 36.", "One decimal place: 3.6."],
+      "explanation": "3.6.",
+      "misconception": "Saying 36.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "place_decimal_point",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "If 4 × 5 = 20, where does the decimal point go in 0.4 × 5?",
+      "options": ["20", "2.0", "0.20", "0.02"],
+      "answer": 1,
+      "hints": ["0.4 has one decimal place, so the answer has one."],
+      "explanation": "0.4 × 5 = 2.0.",
+      "misconception": "Saying 20.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "multiply_decimal_whole",
+      "type": "numeric",
+      "difficulty": 1,
+      "stem": "What is 0.25 × 2?",
+      "answer": 0.5,
+      "check": "0.25*2",
+      "hints": ["25 × 2 = 50.", "Two decimal places: 0.50 = 0.5."],
+      "explanation": "0.5.",
+      "misconception": "Saying 50.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "multiply_decimal_whole",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "What is 0.15 × 4?",
+      "answer": 0.6,
+      "check": "0.15*4",
+      "hints": ["15 × 4 = 60.", "Two decimal places: 0.60 = 0.6."],
+      "explanation": "0.6.",
+      "misconception": "Saying 60.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "multiply_decimal_whole",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "What is 2.5 × 4?",
+      "answer": 10,
+      "check": "2.5*4",
+      "hints": ["25 × 4 = 100.", "One decimal place: 10.0 = 10."],
+      "explanation": "10.",
+      "misconception": "Saying 100.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "place_decimal_point",
+      "type": "written",
+      "difficulty": 2,
+      "stem": "Explain how to place the decimal point when multiplying 0.25 by 4.",
+      "hints": ["Count decimal places in the factor."],
+      "explanation": "0.25 has two decimal places. Multiply 25 × 4 = 100. Place the decimal point two places from the right: 1.00 = 1.",
+      "rubric": {
+        "criteria": [
+          {"description": "States two decimal places.", "marks": 1},
+          {"description": "Gets 1.00 or 1.", "marks": 1}
+        ]
+      },
+      "misconception": "Placing the point incorrectly.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "multiply_decimal_whole",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "What is 0.125 × 8?",
+      "answer": 1,
+      "check": "0.125*8",
+      "hints": ["125 × 8 = 1000.", "Three decimal places: 1.000 = 1."],
+      "explanation": "1.",
+      "misconception": "Saying 1000.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "multiply_decimal_whole",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "What is 1.5 × 6?",
+      "options": ["9", "90", "0.9", "0.09"],
+      "answer": 0,
+      "hints": ["15 × 6 = 90.", "One decimal place: 9.0 = 9."],
+      "explanation": "9.",
+      "misconception": "Saying 90.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "multiply_decimal_whole",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "What is 3.2 × 5?",
+      "answer": 16,
+      "check": "3.2*5",
+      "hints": ["32 × 5 = 160.", "One decimal place: 16.0 = 16."],
+      "explanation": "16.",
+      "misconception": "Saying 160.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "multiply_decimal_whole",
+      "type": "written",
+      "difficulty": 2,
+      "stem": "A pupil says 0.4 × 3 = 12. Explain the mistake.",
+      "hints": ["Check decimal places."],
+      "explanation": "The pupil ignored the decimal point. 0.4 has one decimal place, so the answer should be 1.2, not 12.",
+      "rubric": {
+        "criteria": [
+          {"description": "Identifies missing decimal point.", "marks": 1},
+          {"description": "Correct answer 1.2.", "marks": 1}
+        ]
+      },
+      "misconception": "Ignoring the decimal point.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "multiply_decimal_whole",
+      "type": "numeric",
+      "difficulty": 3,
+      "stem": "What is 0.75 × 6?",
+      "answer": 4.5,
+      "check": "0.75*6",
+      "hints": ["75 × 6 = 450.", "Two decimal places: 4.50 = 4.5."],
+      "explanation": "4.5.",
+      "misconception": "Saying 450.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "multiply_decimal_whole",
+      "type": "numeric",
+      "difficulty": 3,
+      "stem": "What is 2.05 × 3?",
+      "answer": 6.15,
+      "check": "2.05*3",
+      "hints": ["205 × 3 = 615.", "Two decimal places: 6.15."],
+      "explanation": "6.15.",
+      "misconception": "Saying 615.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "multiply_decimal_whole",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "Explain how to use a model to show 0.3 × 4.",
+      "hints": ["Use 4 groups of 0.3."],
+      "explanation": "You can draw 4 groups, each with 3 tenths (0.3). Count the total shaded parts: 12 tenths = 1.2.",
+      "rubric": {
+        "criteria": [
+          {"description": "Mentions 4 groups of 0.3.", "marks": 1},
+          {"description": "Gets 1.2.", "marks": 1}
+        ]
+      },
+      "misconception": "Not relating to tenths.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "multiply_decimal_whole",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "A pupil calculates 1.25 × 4 and gets 5.00. Are they correct? Explain.",
+      "hints": ["125 × 4 = 500.", "Two decimal places: 5.00."],
+      "explanation": "Yes, they are correct. 125 × 4 = 500, and with two decimal places it is 5.00 or 5.",
+      "rubric": {
+        "criteria": [
+          {"description": "States correct.", "marks": 1},
+          {"description": "Explains 125 × 4 = 500 with two decimals.", "marks": 1}
+        ]
+      },
+      "misconception": "Thinking it is wrong.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "multiply_decimal_whole",
+      "type": "numeric",
+      "difficulty": 4,
+      "stem": "What is 3.125 × 8?",
+      "answer": 25,
+      "check": "3.125*8",
+      "hints": ["3125 × 8 = 25000.", "Three decimal places: 25.000 = 25."],
+      "explanation": "25.",
+      "misconception": "Saying 25000.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "place_decimal_point",
+      "type": "written",
+      "difficulty": 4,
+      "stem": "A pupil multiplies 0.45 by 6 and writes 270. Explain the mistake and give the correct answer.",
+      "hints": ["0.45 has two decimal places."],
+      "explanation": "The pupil forgot the decimal point. 45 × 6 = 270, but 0.45 has two decimal places, so the answer is 2.70.",
+      "rubric": {
+        "criteria": [
+          {"description": "Identifies missing decimal point.", "marks": 1},
+          {"description": "Correct answer 2.70.", "marks": 1}
+        ]
+      },
+      "misconception": "Ignoring decimal places.",
+      "uncertain": []
+    }
+  ]
+}

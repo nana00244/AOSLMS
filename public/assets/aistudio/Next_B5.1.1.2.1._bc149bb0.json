@@ -1,0 +1,277 @@
+{
+  "indicator": {
+    "code": "B5.1.1.1.6",
+    "subject": "Mathematics",
+    "level": "Basic 5",
+    "strand": "Number",
+    "sub_strand": "Counting, Representation & Cardinality",
+    "content_standard": "B5.1.1.1 Demonstrate an understanding of quantities and place value for multi-digit numerals up to 1000,000",
+    "objective": "Skip count forwards and backwards in 500s 1000s etc. up to and from 100,000",
+    "source_page": 80
+  },
+  "spec": {
+    "skills": [
+      {"tag": "skip_count_forwards_large", "description": "Skip count forwards by 500s, 1000s, etc. up to 100,000.", "minQuestions": 2},
+      {"tag": "skip_count_backwards_large", "description": "Skip count backwards by 500s, 1000s, etc. from 100,000.", "minQuestions": 2},
+      {"tag": "identify_skip_count_errors", "description": "Identify and correct errors in a skip counting sequence.", "minQuestions": 2}
+    ],
+    "difficultyPlan": "20 questions: 5 at difficulty 1, 7 at difficulty 2, 5 at difficulty 3, 3 at difficulty 4.",
+    "misconceptions": [
+      "Losing place value when skip counting (e.g., 10,000, 20,000, 30,000, 40,000, 50,000, then 6,000).",
+      "Stopping at 100,000 instead of continuing.",
+      "Skipping a zero when counting by 1,000s."
+    ],
+    "needsTeacherAssessment": false
+  },
+  "questions": [
+    {
+      "skill_tag": "skip_count_forwards_large",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Skip count forwards by 1,000s: 10,000, 11,000, 12,000, ___. What number comes next?",
+      "options": ["12,500", "13,000", "20,000", "13,500"],
+      "answer": 1,
+      "hints": ["Add 1,000 each time.", "12,000 + 1,000."],
+      "explanation": "12,000 + 1,000 = 13,000.",
+      "misconception": "Adding 500 instead of 1,000.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "skip_count_forwards_large",
+      "type": "numeric",
+      "difficulty": 1,
+      "stem": "Skip count forwards by 500s: 20,000, 20,500, 21,000, ___. What number comes next?",
+      "answer": 21500,
+      "check": "21000+500",
+      "hints": ["Add 500 each time."],
+      "explanation": "21,000 + 500 = 21,500.",
+      "misconception": "Adding 1,000 instead of 500.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "skip_count_backwards_large",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Skip count backwards by 1,000s: 50,000, 49,000, 48,000, ___. What number comes next?",
+      "options": ["47,000", "46,000", "49,000", "40,000"],
+      "answer": 0,
+      "hints": ["Subtract 1,000 each time."],
+      "explanation": "48,000 - 1,000 = 47,000.",
+      "misconception": "Subtracting 500 instead of 1,000.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "skip_count_backwards_large",
+      "type": "numeric",
+      "difficulty": 1,
+      "stem": "Skip count backwards by 500s: 30,000, 29,500, 29,000, ___. What number comes next?",
+      "answer": 28500,
+      "check": "29000-500",
+      "hints": ["Subtract 500 each time."],
+      "explanation": "29,000 - 500 = 28,500.",
+      "misconception": "Subtracting 1,000 instead of 500.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_skip_count_errors",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Find the error in this skip counting by 1,000s: 5,000, 6,000, 7,000, 8,500, 9,000.",
+      "options": ["5,000", "7,000", "8,500", "9,000"],
+      "answer": 2,
+      "hints": ["The pattern adds 1,000 each time."],
+      "explanation": "8,500 is wrong; it should be 8,000.",
+      "misconception": "Not noticing the jump from 7,000 to 8,500.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "skip_count_forwards_large",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "Skip count forwards by 1,000s from 95,000. What is the next number?",
+      "answer": 96000,
+      "check": "95000+1000",
+      "hints": ["Add 1,000 to 95,000."],
+      "explanation": "95,000 + 1,000 = 96,000.",
+      "misconception": "Saying 95,100.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "skip_count_forwards_large",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Skip count forwards by 500s: 48,000, 48,500, 49,000, ___. What number comes next?",
+      "options": ["49,500", "50,000", "49,100", "49,050"],
+      "answer": 0,
+      "hints": ["Add 500 each time."],
+      "explanation": "49,000 + 500 = 49,500.",
+      "misconception": "Adding 100 instead of 500.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "skip_count_backwards_large",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "Skip count backwards by 1,000s from 100,000. What is the next number?",
+      "answer": 99000,
+      "check": "100000-1000",
+      "hints": ["Subtract 1,000 from 100,000."],
+      "explanation": "100,000 - 1,000 = 99,000.",
+      "misconception": "Saying 99,900.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "skip_count_backwards_large",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Skip count backwards by 500s: 75,000, 74,500, 74,000, ___. What number comes next?",
+      "options": ["73,500", "73,000", "74,500", "72,500"],
+      "answer": 0,
+      "hints": ["Subtract 500 each time."],
+      "explanation": "74,000 - 500 = 73,500.",
+      "misconception": "Subtracting 1,000 instead of 500.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_skip_count_errors",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "Find the wrong number in this pattern: 12,000, 13,000, 14,000, 15,500, 16,000.",
+      "answer": 15500,
+      "check": "15500",
+      "hints": ["The pattern adds 1,000 each time."],
+      "explanation": "15,500 is wrong; it should be 15,000.",
+      "misconception": "Saying 16,000 is wrong.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_skip_count_errors",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Find the error in skip counting by 500s: 10,000, 10,500, 11,000, 11,200, 12,000.",
+      "options": ["10,500", "11,000", "11,200", "12,000"],
+      "answer": 2,
+      "hints": ["The pattern adds 500 each time."],
+      "explanation": "11,200 is wrong; it should be 11,500.",
+      "misconception": "Not checking the step size.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "skip_count_forwards_large",
+      "type": "written",
+      "difficulty": 2,
+      "stem": "Explain how to skip count by 1,000s from 60,000 to 65,000.",
+      "hints": ["Start at 60,000 and add 1,000 each time."],
+      "explanation": "Start at 60,000. Add 1,000 to get 61,000, then 62,000, 63,000, 64,000, 65,000.",
+      "rubric": {
+        "criteria": [
+          {"description": "Lists the numbers correctly.", "marks": 1},
+          {"description": "States the rule (add 1,000).", "marks": 1}
+        ]
+      },
+      "misconception": "Starting at a different number.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "skip_count_backwards_large",
+      "type": "written",
+      "difficulty": 2,
+      "stem": "Explain how to skip count backwards by 500s from 20,000 to 18,000.",
+      "hints": ["Start at 20,000 and subtract 500 each time."],
+      "explanation": "20,000, 19,500, 19,000, 18,500, 18,000.",
+      "rubric": {
+        "criteria": [
+          {"description": "Lists the numbers correctly.", "marks": 1}
+        ]
+      },
+      "misconception": "Subtracting 1,000 instead of 500.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "skip_count_forwards_large",
+      "type": "numeric",
+      "difficulty": 3,
+      "stem": "Skip count forwards by 500s from 96,000. What is the next number after 97,000?",
+      "answer": 97500,
+      "check": "97000+500",
+      "hints": ["Continue adding 500."],
+      "explanation": "97,000 + 500 = 97,500.",
+      "misconception": "Saying 98,000.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "skip_count_backwards_large",
+      "type": "numeric",
+      "difficulty": 3,
+      "stem": "Skip count backwards by 1,000s from 100,000. What is the number after 97,000?",
+      "answer": 96000,
+      "check": "97000-1000",
+      "hints": ["Continue subtracting 1,000."],
+      "explanation": "97,000 - 1,000 = 96,000.",
+      "misconception": "Saying 96,500.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_skip_count_errors",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "Find and explain the error: 80,000, 81,000, 82,000, 83,500, 84,000.",
+      "hints": ["The pattern should add 1,000 each time."],
+      "explanation": "83,500 is the error. It should be 83,000. The pattern adds 1,000 each time.",
+      "rubric": {
+        "criteria": [
+          {"description": "Identifies 83,500 as the error.", "marks": 1},
+          {"description": "Explains the rule.", "marks": 1}
+        ]
+      },
+      "misconception": "Not recognizing the step size.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "skip_count_forwards_large",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "A pupil skip counts by 500s: 10,000, 10,500, 11,000, 11,500, 12,000. What is the next number?",
+      "hints": ["Add 500."],
+      "explanation": "12,000 + 500 = 12,500.",
+      "rubric": {
+        "criteria": [
+          {"description": "States 12,500.", "marks": 1}
+        ]
+      },
+      "misconception": "Adding 1,000.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "skip_count_backwards_large",
+      "type": "written",
+      "difficulty": 4,
+      "stem": "Explain how to skip count backwards by 500s from 100,000 to 98,500.",
+      "hints": ["Subtract 500 each time."],
+      "explanation": "100,000, 99,500, 99,000, 98,500.",
+      "rubric": {
+        "criteria": [
+          {"description": "Lists the numbers correctly.", "marks": 1}
+        ]
+      },
+      "misconception": "Subtracting 1,000.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_skip_count_errors",
+      "type": "written",
+      "difficulty": 4,
+      "stem": "A pupil skip counts by 1,000s: 25,000, 26,000, 27,000, 28,500, 29,000, 30,000. Identify the error and correct it.",
+      "hints": ["The pattern should add 1,000."],
+      "explanation": "28,500 is the error; it should be 28,000.",
+      "rubric": {
+        "criteria": [
+          {"description": "Identifies 28,500 as the error.", "marks": 1},
+          {"description": "Corrects to 28,000.", "marks": 1}
+        ]
+      },
+      "misconception": "Not recognizing the step size.",
+      "uncertain": []
+    }
+  ]
+}

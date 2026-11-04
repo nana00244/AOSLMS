@@ -1,0 +1,291 @@
+{
+  "indicator": {
+    "code": "B6.4.2.1.2",
+    "subject": "Science",
+    "level": "Basic 6",
+    "strand": "FORCES AND ENERGY",
+    "sub_strand": "Electricity and Electronics",
+    "content_standard": "B6.4.2.1 Demonstrate knowledge of generation of electricity, its transmission and transformation into other forms",
+    "objective": "Identify the symbols used in representing various components in a given circuit diagram",
+    "source_page": 63
+  },
+  "spec": {
+    "skills": [
+      {"tag": "identify_symbols", "description": "Recognise the symbols for battery, switch, bulb, connecting wire, and other components.", "minQuestions": 4},
+      {"tag": "match_symbol_component", "description": "Match a symbol to its correct component name.", "minQuestions": 4},
+      {"tag": "draw_circuit_symbols", "description": "Draw a simple circuit diagram using correct symbols for battery, switch, and bulb.", "minQuestions": 3},
+      {"tag": "classify_conductors_insulators", "description": "Classify materials as conductors, semi-conductors and insulators based on their ability to carry electricity.", "minQuestions": 4},
+      {"tag": "explain_cable_coating", "description": "Explain why electrical wires are coated with plastic (insulation).", "minQuestions": 3},
+      {"tag": "test_materials", "description": "Describe how to test materials using an open circuit to see if they conduct electricity.", "minQuestions": 2}
+    ],
+    "difficultyPlan": "20 questions total — Difficulty 1: 5; Difficulty 2: 7; Difficulty 3: 5; Difficulty 4: 3.",
+    "misconceptions": [
+      "All materials conduct electricity.",
+      "Plastic is a conductor.",
+      "Symbols are the same as real components.",
+      "The plastic coating on wires carries electricity.",
+      "Semi-conductors are the same as insulators.",
+      "A bulb can be used to test conductivity without a battery."
+    ],
+    "needsTeacherAssessment": true
+  },
+  "questions": [
+    {
+      "skill_tag": "identify_symbols",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "In a circuit diagram, what does a long line and a short line side by side represent?",
+      "options": ["A battery", "A bulb", "A switch", "A wire"],
+      "answer": 0,
+      "hints": ["It has a positive and a negative end.", "It supplies energy."],
+      "explanation": "A long line and a short line side by side represent a battery (or cell) in a circuit diagram.",
+      "misconception": "Symbols are the same as real components.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_symbols",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "In a circuit diagram, what does a circle with a cross inside represent?",
+      "options": ["A bulb", "A battery", "A switch", "A wire"],
+      "answer": 0,
+      "hints": ["It gives out light.", "It has a filament inside."],
+      "explanation": "A circle with a cross inside represents a bulb in a circuit diagram.",
+      "misconception": "A circle with a cross is a battery.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_symbols",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "What component does a circle with a cross inside represent in a circuit diagram?",
+      "answer": ["bulb", "a bulb", "lamp"],
+      "hints": ["It gives light.", "It is a common circuit component."],
+      "explanation": "A circle with a cross inside represents a bulb.",
+      "misconception": "The symbol represents a battery.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_symbols",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "In a circuit diagram, what does a line with a gap and a small angled line represent?",
+      "options": ["A switch", "A bulb", "A battery", "A wire"],
+      "answer": 0,
+      "hints": ["It can be open or closed.", "It controls the flow of electricity."],
+      "explanation": "A line with a gap and a small angled line represents a switch in a circuit diagram.",
+      "misconception": "The symbol represents a bulb.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "match_symbol_component",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which component matches the symbol of two parallel lines (one long, one short)?",
+      "options": ["Battery", "Bulb", "Switch", "Wire"],
+      "answer": 0,
+      "hints": ["It stores energy.", "It has positive and negative terminals."],
+      "explanation": "Two parallel lines (one long, one short) represent a battery.",
+      "misconception": "The symbol represents a switch.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "match_symbol_component",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Which component is represented by a straight line in a circuit diagram?",
+      "answer": ["connecting wire", "wire", "a wire"],
+      "hints": ["It connects components.", "Electricity flows through it."],
+      "explanation": "A straight line in a circuit diagram represents a connecting wire.",
+      "misconception": "A straight line represents a battery.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "match_symbol_component",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "Which set correctly matches symbols to their components?",
+      "options": ["Long and short line → battery; circle with cross → bulb; line with gap → switch", "Long and short line → bulb; circle with cross → battery; line with gap → wire", "Long and short line → switch; circle with cross → wire; line with gap → bulb", "Long and short line → wire; circle with cross → switch; line with gap → battery"],
+      "answer": 0,
+      "hints": ["Battery symbol has two lines.", "Bulb symbol is a circle with a cross.", "Switch symbol has a gap."],
+      "explanation": "The correct matching is: battery → long and short line; bulb → circle with cross; switch → line with gap.",
+      "misconception": "Symbols are mixed up.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "match_symbol_component",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "A pupil sees a circle with a cross in a circuit diagram. Which component should be connected there?",
+      "options": ["A bulb", "A battery", "A switch", "A wire"],
+      "answer": 0,
+      "hints": ["It lights up.", "It gives out light energy."],
+      "explanation": "The circle with a cross represents a bulb, so a bulb should be connected there.",
+      "misconception": "A battery should be connected at the bulb symbol.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "classify_conductors_insulators",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What is a conductor?",
+      "options": ["A material that allows electricity to pass through it", "A material that blocks electricity", "A material that makes electricity", "A material that stores electricity"],
+      "answer": 0,
+      "hints": ["Metals are conductors.", "Electricity flows through them."],
+      "explanation": "A conductor is a material that allows electricity to pass through it.",
+      "misconception": "All materials conduct electricity.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "classify_conductors_insulators",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What is an insulator?",
+      "options": ["A material that does not allow electricity to pass through it", "A material that allows electricity to pass through", "A material that makes electricity", "A material that stores electricity"],
+      "answer": 0,
+      "hints": ["Plastic is an insulator.", "It blocks electricity."],
+      "explanation": "An insulator is a material that does not allow electricity to pass through it.",
+      "misconception": "Plastic is a conductor.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "classify_conductors_insulators",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Is a metal spoon a conductor or an insulator?",
+      "answer": ["conductor", "a conductor"],
+      "hints": ["Metals carry electricity.", "It is shiny and hard."],
+      "explanation": "A metal spoon is a conductor because it allows electricity to pass through it.",
+      "misconception": "Metal is an insulator.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "classify_conductors_insulators",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "Which set contains only insulators?",
+      "options": ["Plastic ruler, glass rod, piece of wood", "Metal spoon, copper wire, iron nail", "Aluminium foil, key, coin", "Copper wire, plastic ruler, iron nail"],
+      "answer": 0,
+      "hints": ["Insulators do not conduct electricity.", "Plastic, glass and wood are insulators."],
+      "explanation": "Plastic, glass and wood are insulators. They do not allow electricity to pass through them.",
+      "misconception": "Plastic is a conductor.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "explain_cable_coating",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Why are electrical wires coated with plastic?",
+      "options": ["To insulate the wire and prevent electric shock", "To make the wire heavier", "To make the wire shiny", "To help electricity flow faster"],
+      "answer": 0,
+      "hints": ["Plastic is an insulator.", "It protects people from electricity."],
+      "explanation": "Electrical wires are coated with plastic to insulate them and prevent electric shock.",
+      "misconception": "The plastic coating carries electricity.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "explain_cable_coating",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Why is plastic used to cover electrical wires?",
+      "answer": ["because it is an insulator and prevents electric shock", "plastic is an insulator so it stops electricity from escaping", "it insulates the wire and protects people"],
+      "hints": ["Think about safety.", "Plastic does not conduct electricity."],
+      "explanation": "Plastic is used to cover electrical wires because it is an insulator, which prevents electric shock and keeps electricity inside the wire.",
+      "misconception": "The plastic coating carries electricity.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "explain_cable_coating",
+      "type": "mcq",
+      "difficulty": 4,
+      "stem": "A pupil says, 'The plastic coating on a wire helps electricity flow.' What is the best correction?",
+      "options": ["Yes, plastic helps electricity flow", "No, plastic is an insulator that stops electricity from flowing out and prevents shock", "No, plastic is a conductor", "No, plastic makes the wire heavier"],
+      "answer": 1,
+      "hints": ["Plastic is an insulator.", "The metal inside carries electricity."],
+      "explanation": "Plastic is an insulator. It does not help electricity flow; it stops electricity from flowing out of the wire and protects people from shock.",
+      "misconception": "The plastic coating carries electricity.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "test_materials",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "How can you test whether a material is a conductor or an insulator?",
+      "options": ["Place it in a simple circuit with a battery and bulb; if the bulb lights, it is a conductor", "Place it in water and see if it floats", "Heat it and see if it melts", "Weigh it on a scale"],
+      "answer": 0,
+      "hints": ["Use a circuit with a battery and bulb.", "If the bulb lights, electricity flows."],
+      "explanation": "To test whether a material is a conductor or insulator, place it in a simple circuit with a battery and bulb. If the bulb lights, the material is a conductor.",
+      "misconception": "A bulb can test conductivity without a battery.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "test_materials",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Describe how you would test a material to see if it conducts electricity.",
+      "answer": ["set up a simple circuit with a battery and bulb and place the material in the circuit; if the bulb lights it is a conductor", "use a circuit with a battery and bulb and put the material in the gap; if the bulb lights it conducts", "connect the material into an open circuit; if the bulb lights, it conducts electricity"],
+      "hints": ["Use a simple circuit.", "Watch the bulb."],
+      "explanation": "Set up a simple circuit with a battery and bulb. Place the material in the circuit (in the gap). If the bulb lights, the material is a conductor; if it does not, it is an insulator.",
+      "misconception": "You can test conductivity without a circuit.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "draw_circuit_symbols",
+      "type": "drawing",
+      "difficulty": 2,
+      "stem": "Draw a simple circuit diagram using the correct symbols for a battery, a switch and a bulb.",
+      "rubric": {
+        "criteria": [
+          {"description": "Used the correct symbol for a battery", "marks": 1},
+          {"description": "Used the correct symbol for a switch", "marks": 1},
+          {"description": "Used the correct symbol for a bulb", "marks": 1},
+          {"description": "Connected the symbols in a complete loop", "marks": 2}
+        ]
+      },
+      "answer": "",
+      "hints": ["Battery: long and short line.", "Bulb: circle with a cross.", "Switch: line with a gap."],
+      "explanation": "This is a drawing task. Your teacher will mark it using the rubric.",
+      "misconception": "Symbols are the same as real components.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "draw_circuit_symbols",
+      "type": "drawing",
+      "difficulty": 3,
+      "stem": "Draw a circuit diagram using symbols for a battery, a switch and a bulb. Show the switch in the closed position so the bulb would light.",
+      "rubric": {
+        "criteria": [
+          {"description": "Used the correct symbol for a battery", "marks": 1},
+          {"description": "Used the correct symbol for a switch", "marks": 1},
+          {"description": "Used the correct symbol for a bulb", "marks": 1},
+          {"description": "Drew the switch in the closed position", "marks": 1},
+          {"description": "The circuit forms a complete loop", "marks": 1}
+        ]
+      },
+      "answer": "",
+      "hints": ["Use simple symbols.", "Closed switch means the circuit is complete."],
+      "explanation": "This is a drawing task. Your teacher will mark it using the rubric.",
+      "misconception": "Open and closed switches look the same.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "draw_circuit_symbols",
+      "type": "drawing",
+      "difficulty": 4,
+      "stem": "Draw two circuit diagrams. In the first, draw a battery, a bulb and a switch in the open position. In the second, draw the same circuit with the switch closed. Use correct circuit symbols and label each component.",
+      "rubric": {
+        "criteria": [
+          {"description": "Used correct symbols for battery, bulb and switch in both diagrams", "marks": 2},
+          {"description": "Drew the switch in the open position in the first diagram", "marks": 1},
+          {"description": "Drew the switch in the closed position in the second diagram", "marks": 1},
+          {"description": "Labeled each component correctly", "marks": 1}
+        ]
+      },
+      "answer": "",
+      "hints": ["Open switch = gap.", "Closed switch = complete.", "Label each symbol."],
+      "explanation": "This is a drawing task. Your teacher will mark it using the rubric.",
+      "misconception": "Open and closed switches look the same.",
+      "uncertain": []
+    }
+  ]
+}

@@ -1,0 +1,1676 @@
+[
+  {
+    "file_name": "B3.1.3.1.1.json",
+    "indicator": {
+      "code": "B3.1.3.1.1",
+      "subject": "Mathematics",
+      "level": "Basic 3",
+      "strand": "Number",
+      "sub_strand": "Fractions",
+      "content_standard": "B3.1.3.1 Develop an understanding of fractions using concrete and pictorial representations and write fractions in words and symbols",
+      "objective": "Understand a unit fraction by explaining the fraction 1/2 as the quantity obtained by taking 1 part when a whole is partitioned into f equal parts and that a fraction 1/2 is the quantity obtained by taking parts of the 1/2 size",
+      "source_page": 78
+    },
+    "spec": {
+      "skills": [
+        {"tag": "identify_unit_fraction", "description": "Identify unit fractions (1/2, 1/3, 1/4, etc.) from pictures or shapes.", "minQuestions": 2},
+        {"tag": "write_fraction_notation", "description": "Write the symbol for a unit fraction.", "minQuestions": 2},
+        {"tag": "match_fraction_symbol", "description": "Match pictures of unit fractions to their symbols.", "minQuestions": 2}
+      ],
+      "difficultyPlan": "20 questions: 5 at difficulty 1, 7 at difficulty 2, 5 at difficulty 3, 3 at difficulty 4.",
+      "misconceptions": [
+        "Thinking the denominator is the number of shaded parts.",
+        "Writing fractions upside down (e.g., 2/1 instead of 1/2).",
+        "Confusing the number of parts with the size of the parts."
+      ],
+      "needsTeacherAssessment": true
+    },
+    "questions": [
+      {
+        "skill_tag": "identify_unit_fraction",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "A shape is divided into 4 equal parts and 1 part is shaded. What fraction is shaded?",
+        "options": ["1/4", "4/1", "1/2", "3/4"],
+        "answer": 0,
+        "hints": ["1 part shaded out of 4 total parts."],
+        "explanation": "1/4.",
+        "misconception": "Writing 4/1.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "write_fraction_notation",
+        "type": "short_answer",
+        "difficulty": 1,
+        "stem": "Write the symbol for one-third.",
+        "answer": ["1/3"],
+        "hints": ["One part out of three."],
+        "explanation": "1/3.",
+        "misconception": "Writing 3/1.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "identify_unit_fraction",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "Which fraction represents the shaded part of a circle divided into 8 equal parts with 1 part shaded?",
+        "options": ["1/8", "8/1", "1/4", "1/2"],
+        "answer": 0,
+        "hints": ["1 out of 8."],
+        "explanation": "1/8.",
+        "misconception": "Saying 8/1.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "match_fraction_symbol",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "Which picture shows 1/2?",
+        "options": ["A circle divided into 2 equal parts with 1 shaded", "A circle divided into 3 equal parts with 1 shaded", "A circle divided into 4 equal parts with 1 shaded", "A circle divided into 2 equal parts with both shaded"],
+        "answer": 0,
+        "hints": ["1/2 means 1 out of 2 equal parts."],
+        "explanation": "A circle with 2 equal parts, 1 shaded.",
+        "misconception": "Choosing the picture with 2 shaded parts.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "write_fraction_notation",
+        "type": "short_answer",
+        "difficulty": 1,
+        "stem": "Write 1/5 in words.",
+        "answer": ["one-fifth", "one fifth"],
+        "hints": ["The denominator is fifth."],
+        "explanation": "One-fifth.",
+        "misconception": "Writing 'one five'.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "identify_unit_fraction",
+        "type": "numeric",
+        "difficulty": 2,
+        "stem": "A rectangle is divided into 6 equal parts. What is the denominator of the unit fraction?",
+        "answer": 6,
+        "check": "6",
+        "hints": ["The denominator is the total number of parts."],
+        "explanation": "6.",
+        "misconception": "Saying 1.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "write_fraction_notation",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "Which fraction is 'one-tenth'?",
+        "options": ["1/10", "10/1", "1/100", "1/5"],
+        "answer": 0,
+        "hints": ["One part out of ten."],
+        "explanation": "1/10.",
+        "misconception": "Saying 10/1.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "match_fraction_symbol",
+        "type": "short_answer",
+        "difficulty": 2,
+        "stem": "Match the fraction 1/3 to its word form.",
+        "answer": ["one-third", "one third"],
+        "hints": ["Denominator 3 is third."],
+        "explanation": "One-third.",
+        "misconception": "Writing 'one three'.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "identify_unit_fraction",
+        "type": "written",
+        "difficulty": 2,
+        "stem": "Draw a shape and shade 1/4 of it.",
+        "hints": ["Divide into 4 equal parts.", "Shade 1 part."],
+        "explanation": "Any shape divided into 4 equal parts with 1 shaded.",
+        "rubric": {
+          "criteria": [
+            {"description": "Divides shape into 4 equal parts.", "marks": 1},
+            {"description": "Shades exactly 1 part.", "marks": 1}
+          ]
+        },
+        "misconception": "Dividing into unequal parts.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "write_fraction_notation",
+        "type": "numeric",
+        "difficulty": 2,
+        "stem": "In the fraction 1/8, what is the numerator?",
+        "answer": 1,
+        "check": "1",
+        "hints": ["The top number."],
+        "explanation": "The numerator is 1.",
+        "misconception": "Saying 8.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "identify_unit_fraction",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "Which unit fraction is the largest?",
+        "options": ["1/2", "1/3", "1/4", "1/5"],
+        "answer": 0,
+        "hints": ["Fewer parts mean larger parts."],
+        "explanation": "1/2 is the largest because the whole is divided into fewer parts.",
+        "misconception": "Thinking 1/5 is largest because 5 is the biggest denominator.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "write_fraction_notation",
+        "type": "short_answer",
+        "difficulty": 2,
+        "stem": "Write the fraction for '1 part out of 12 equal parts'.",
+        "answer": ["1/12"],
+        "hints": ["Numerator is 1, denominator is 12."],
+        "explanation": "1/12.",
+        "misconception": "Writing 12/1.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "match_fraction_symbol",
+        "type": "written",
+        "difficulty": 3,
+        "stem": "Explain how you know a shape is divided into fourths.",
+        "hints": ["How many equal parts?", "Are they all the same size?"],
+        "explanation": "A shape is divided into fourths when it is cut into 4 equal parts. Each part is one-fourth (1/4) of the whole.",
+        "rubric": {
+          "criteria": [
+            {"description": "Mentions 4 equal parts.", "marks": 1},
+            {"description": "States each part is 1/4.", "marks": 1}
+          ]
+        },
+        "misconception": "Thinking any 4 parts are fourths, even if unequal.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "identify_unit_fraction",
+        "type": "numeric",
+        "difficulty": 3,
+        "stem": "A pizza is cut into 8 equal slices. If you eat 1 slice, what fraction of the pizza have you eaten? Write the denominator.",
+        "answer": 8,
+        "check": "8",
+        "hints": ["Denominator is total slices."],
+        "explanation": "8.",
+        "misconception": "Saying 1.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "write_fraction_notation",
+        "type": "written",
+        "difficulty": 3,
+        "stem": "Write a fraction that represents one part of a whole divided into 6 equal parts. Write it in symbols and words.",
+        "hints": ["Numerator is 1.", "Denominator is 6."],
+        "explanation": "1/6, one-sixth.",
+        "rubric": {
+          "criteria": [
+            {"description": "Writes 1/6 in symbols.", "marks": 1},
+            {"description": "Writes 'one-sixth' in words.", "marks": 1}
+          ]
+        },
+        "misconception": "Writing 6/1.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "match_fraction_symbol",
+        "type": "mcq",
+        "difficulty": 3,
+        "stem": "Which picture shows 1/3 of a rectangle?",
+        "options": ["3 equal parts, 1 shaded", "3 equal parts, 2 shaded", "2 equal parts, 1 shaded", "4 equal parts, 1 shaded"],
+        "answer": 0,
+        "hints": ["1/3 means 1 out of 3 parts."],
+        "explanation": "3 equal parts with 1 shaded.",
+        "misconception": "Choosing 3 equal parts with 2 shaded (that is 2/3).",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "identify_unit_fraction",
+        "type": "written",
+        "difficulty": 3,
+        "stem": "A pupil says 1/5 is larger than 1/2 because 5 is larger than 2. Explain why this is incorrect.",
+        "hints": ["Draw a whole divided into 2 and another into 5.", "Which piece is bigger?"],
+        "explanation": "1/2 is larger than 1/5 because when a whole is divided into fewer parts, each part is larger. Dividing into 5 parts gives smaller pieces than dividing into 2 parts.",
+        "rubric": {
+          "criteria": [
+            {"description": "States 1/2 is larger.", "marks": 1},
+            {"description": "Explains that fewer parts mean larger pieces.", "marks": 1}
+          ]
+        },
+        "misconception": "Thinking larger denominator means larger fraction.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "match_fraction_symbol",
+        "type": "written",
+        "difficulty": 4,
+        "stem": "Create a real-life example of a unit fraction (e.g., 1/4 of a cake). Describe it.",
+        "hints": ["Think of sharing food.", "Cut into equal parts."],
+        "explanation": "For example, if a cake is cut into 4 equal slices, one slice is 1/4 of the cake.",
+        "rubric": {
+          "criteria": [
+            {"description": "Gives a valid example.", "marks": 1},
+            {"description": "Uses correct fraction language.", "marks": 1}
+          ]
+        },
+        "misconception": "Using unequal parts.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "write_fraction_notation",
+        "type": "written",
+        "difficulty": 4,
+        "stem": "Explain the difference between the numerator and denominator in a unit fraction.",
+        "hints": ["Top vs bottom number."],
+        "explanation": "The numerator (top number) tells how many parts are taken, which is always 1 for a unit fraction. The denominator (bottom number) tells how many equal parts the whole is divided into.",
+        "rubric": {
+          "criteria": [
+            {"description": "Explains numerator is 1 part taken.", "marks": 1},
+            {"description": "Explains denominator is total parts.", "marks": 1}
+          ]
+        },
+        "misconception": "Swapping their meanings.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "identify_unit_fraction",
+        "type": "numeric",
+        "difficulty": 4,
+        "stem": "A shape is divided into 10 equal parts. 1 part is shaded. Write the fraction as a decimal.",
+        "answer": 0.1,
+        "check": "1/10",
+        "hints": ["1/10 = 0.1."],
+        "explanation": "0.1.",
+        "misconception": "Saying 0.01.",
+        "uncertain": []
+      }
+    ]
+  },
+  {
+    "file_name": "B3.1.2.6.3.json",
+    "indicator": {
+      "code": "B3.1.2.6.3",
+      "subject": "Mathematics",
+      "level": "Basic 3",
+      "strand": "Number",
+      "sub_strand": "Number Operations (Addition, Subtraction, Multiplication and Division)",
+      "content_standard": "B3.1.2.6 Demonstrate an understanding of division",
+      "objective": "Use concrete and pictorial representation to explain division as inverse of multiplication",
+      "source_page": 77
+    },
+    "spec": {
+      "skills": [
+        {"tag": "rewrite_div_as_mult", "description": "Rewrite a division as a missing factor multiplication (e.g., 12 ÷ 3 = □ means 3 × □ = 12).", "minQuestions": 2},
+        {"tag": "use_chart_for_div", "description": "Use a multiplication chart to solve division.", "minQuestions": 2}
+      ],
+      "difficultyPlan": "20 questions: 5 at difficulty 1, 7 at difficulty 2, 5 at difficulty 3, 3 at difficulty 4.",
+      "misconceptions": [
+        "Thinking division and multiplication are unrelated.",
+        "Looking at the wrong row/column on the chart."
+      ],
+      "needsTeacherAssessment": false
+    },
+    "questions": [
+      {
+        "skill_tag": "rewrite_div_as_mult",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "12 ÷ 3 = □ is the same as which multiplication?",
+        "options": ["3 × □ = 12", "12 × □ = 3", "3 × 12 = □", "□ ÷ 3 = 12"],
+        "answer": 0,
+        "hints": ["Division is the inverse of multiplication.", "3 times what number gives 12?"],
+        "explanation": "12 ÷ 3 = □ means 3 × □ = 12.",
+        "misconception": "Writing 12 × □ = 3.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "use_chart_for_div",
+        "type": "numeric",
+        "difficulty": 1,
+        "stem": "Using a multiplication chart, what is 15 ÷ 3?",
+        "answer": 5,
+        "check": "15/3",
+        "hints": ["Find 3 in the left column and 5 in the top row, product 15.", "Or think 3 x ? = 15."],
+        "explanation": "15 ÷ 3 = 5.",
+        "misconception": "Saying 3.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "rewrite_div_as_mult",
+        "type": "short_answer",
+        "difficulty": 1,
+        "stem": "Write the multiplication fact for 20 ÷ 4 = 5.",
+        "answer": ["4 x 5 = 20", "5 x 4 = 20"],
+        "hints": ["Divisor × quotient = dividend."],
+        "explanation": "4 × 5 = 20.",
+        "misconception": "Writing 20 × 4 = 5.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "use_chart_for_div",
+        "type": "numeric",
+        "difficulty": 1,
+        "stem": "Use the multiplication chart to find 24 ÷ 6.",
+        "answer": 4,
+        "check": "24/6",
+        "hints": ["Find 6 on the chart. What number times 6 gives 24?"],
+        "explanation": "24 ÷ 6 = 4.",
+        "misconception": "Saying 6.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "rewrite_div_as_mult",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "Which multiplication fact helps you solve 18 ÷ 3?",
+        "options": ["3 × 6 = 18", "6 × 3 = 18", "18 × 3 = 54", "3 × 3 = 9"],
+        "answer": 0,
+        "hints": ["3 times what number equals 18?"],
+        "explanation": "3 × 6 = 18.",
+        "misconception": "Choosing 18 × 3 = 54.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "rewrite_div_as_mult",
+        "type": "numeric",
+        "difficulty": 2,
+        "stem": "If 7 × 8 = 56, then 56 ÷ 7 = ___.",
+        "answer": 8,
+        "check": "56/7",
+        "hints": ["Use the inverse relationship."],
+        "explanation": "56 ÷ 7 = 8.",
+        "misconception": "Saying 7.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "use_chart_for_div",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "On a multiplication chart, to find 36 ÷ 9, you look for 36 in the row for 9. What column number do you find?",
+        "options": ["4", "6", "9", "36"],
+        "answer": 0,
+        "hints": ["9 × ? = 36."],
+        "explanation": "9 × 4 = 36, so the column is 4.",
+        "misconception": "Choosing 6.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "rewrite_div_as_mult",
+        "type": "short_answer",
+        "difficulty": 2,
+        "stem": "Rewrite 45 ÷ 5 = 9 as a multiplication sentence.",
+        "answer": ["5 x 9 = 45", "9 x 5 = 45"],
+        "hints": ["Divisor × quotient = dividend."],
+        "explanation": "5 × 9 = 45.",
+        "misconception": "Writing 45 × 5 = 9.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "use_chart_for_div",
+        "type": "numeric",
+        "difficulty": 2,
+        "stem": "What is 42 ÷ 7?",
+        "answer": 6,
+        "check": "42/7",
+        "hints": ["7 × ? = 42."],
+        "explanation": "42 ÷ 7 = 6.",
+        "misconception": "Saying 7.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "rewrite_div_as_mult",
+        "type": "written",
+        "difficulty": 2,
+        "stem": "Explain how you can use multiplication to solve 32 ÷ 8.",
+        "hints": ["What number times 8 equals 32?"],
+        "explanation": "Think of the multiplication fact: 8 × ? = 32. Since 8 × 4 = 32, then 32 ÷ 8 = 4.",
+        "rubric": {
+          "criteria": [
+            {"description": "States to find what number times 8 equals 32.", "marks": 1},
+            {"description": "Gives the answer 4.", "marks": 1}
+          ]
+        },
+        "misconception": "Trying to divide directly without using multiplication.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "use_chart_for_div",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "A pupil wants to find 63 ÷ 9 using a multiplication chart. Which row and column should they look at?",
+        "options": ["Row 9, column 7", "Row 7, column 9", "Row 63, column 9", "Row 9, column 63"],
+        "answer": 0,
+        "hints": ["9 × 7 = 63.", "Either row 9 column 7 or row 7 column 9."],
+        "explanation": "Look at row 9 and column 7 (or row 7 and column 9). The product is 63.",
+        "misconception": "Looking for 63 on the axes.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "rewrite_div_as_mult",
+        "type": "numeric",
+        "difficulty": 2,
+        "stem": "If 6 × 7 = 42, then 42 ÷ 6 = ___.",
+        "answer": 7,
+        "check": "42/6",
+        "hints": ["Use the inverse."],
+        "explanation": "42 ÷ 6 = 7.",
+        "misconception": "Saying 6.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "rewrite_div_as_mult",
+        "type": "numeric",
+        "difficulty": 2,
+        "stem": "Solve 54 ÷ 9 by thinking of the missing factor.",
+        "answer": 6,
+        "check": "54/9",
+        "hints": ["9 × ? = 54."],
+        "explanation": "54 ÷ 9 = 6.",
+        "misconception": "Saying 9.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "rewrite_div_as_mult",
+        "type": "written",
+        "difficulty": 3,
+        "stem": "Explain why 36 ÷ 4 = 9 and 4 × 9 = 36 are related.",
+        "hints": ["They are inverse operations."],
+        "explanation": "They are inverse operations. Division undoes multiplication. If 4 × 9 = 36, then 36 ÷ 4 = 9.",
+        "rubric": {
+          "criteria": [
+            {"description": "States they are inverse operations.", "marks": 1},
+            {"description": "Explains how division undoes multiplication.", "marks": 1}
+          ]
+        },
+        "misconception": "Thinking they are unrelated.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "use_chart_for_div",
+        "type": "numeric",
+        "difficulty": 3,
+        "stem": "Use a multiplication chart to find 72 ÷ 8.",
+        "answer": 9,
+        "check": "72/8",
+        "hints": ["8 × ? = 72."],
+        "explanation": "72 ÷ 8 = 9.",
+        "misconception": "Saying 8.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "rewrite_div_as_mult",
+        "type": "mcq",
+        "difficulty": 3,
+        "stem": "Which of these is NOT a correct way to rewrite 48 ÷ 6 = 8?",
+        "options": ["6 × 8 = 48", "8 × 6 = 48", "48 ÷ 8 = 6", "6 × 48 = 8"],
+        "answer": 3,
+        "hints": ["The product should be the dividend."],
+        "explanation": "6 × 48 = 8 is incorrect because 6 × 48 = 288, not 8.",
+        "misconception": "Thinking any rearrangement is valid.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "rewrite_div_as_mult",
+        "type": "short_answer",
+        "difficulty": 3,
+        "stem": "Write two multiplication facts for 56 ÷ 7 = 8.",
+        "answer": ["7 x 8 = 56, 8 x 7 = 56"],
+        "hints": ["Commutative property."],
+        "explanation": "7 × 8 = 56 and 8 × 7 = 56.",
+        "misconception": "Writing only one.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "use_chart_for_div",
+        "type": "written",
+        "difficulty": 4,
+        "stem": "Explain how to use a multiplication chart to solve 81 ÷ 9.",
+        "hints": ["Find the row for 9.", "Look for 81 in that row.", "The column number is the answer."],
+        "explanation": "Find the row for 9. Look along the row until you find 81. The column number where 81 is located is 9. So, 81 ÷ 9 = 9.",
+        "rubric": {
+          "criteria": [
+            {"description": "Mentions using the row for 9.", "marks": 1},
+            {"description": "Explains finding 81 and reading the column.", "marks": 1}
+          ]
+        },
+        "misconception": "Looking for 9 in the 81 row.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "rewrite_div_as_mult",
+        "type": "written",
+        "difficulty": 4,
+        "stem": "A pupil says 'I can solve 35 ÷ 5 by thinking 5 × ? = 35.' Is this a good strategy? Explain.",
+        "hints": ["What number times 5 equals 35?"],
+        "explanation": "Yes, it is a good strategy. Since 5 × 7 = 35, then 35 ÷ 5 = 7.",
+        "rubric": {
+          "criteria": [
+            {"description": "States it is a good strategy.", "marks": 1},
+            {"description": "Explains using the inverse relationship to get 7.", "marks": 1}
+          ]
+        },
+        "misconception": "Thinking multiplication cannot be used for division.",
+        "uncertain": []
+      }
+    ]
+  },
+  {
+    "file_name": "B3.1.2.6.2.json",
+    "indicator": {
+      "code": "B3.1.2.6.2",
+      "subject": "Mathematics",
+      "level": "Basic 3",
+      "strand": "Number",
+      "sub_strand": "Number Operations (Addition, Subtraction, Multiplication and Division)",
+      "content_standard": "B3.1.2.6 Demonstrate an understanding of division",
+      "objective": "Use concrete and pictorial representations to explain division as repeated subtraction or determining the number of times given equal groups can be obtained in (i.e. goes into or can be subtracted from) a given number",
+      "source_page": 77
+    },
+    "spec": {
+      "skills": [
+        {"tag": "repeated_subtraction", "description": "Use repeated subtraction to find how many groups of a given size are in a number.", "minQuestions": 2},
+        {"tag": "count_groups", "description": "Count the number of equal groups formed from a given quantity.", "minQuestions": 2}
+      ],
+      "difficultyPlan": "20 questions: 5 at difficulty 1, 7 at difficulty 2, 5 at difficulty 3, 3 at difficulty 4.",
+      "misconceptions": [
+        "Losing track of the number of subtractions.",
+        "Subtracting the wrong amount."
+      ],
+      "needsTeacherAssessment": true
+    },
+    "questions": [
+      {
+        "skill_tag": "repeated_subtraction",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "If you repeatedly subtract 3 from 12, how many times can you subtract before reaching 0?",
+        "options": ["3", "4", "5", "6"],
+        "answer": 1,
+        "hints": ["12 - 3 = 9, 9 - 3 = 6...", "Count the subtractions."],
+        "explanation": "12 - 3 = 9, 9 - 3 = 6, 6 - 3 = 3, 3 - 3 = 0. That is 4 times.",
+        "misconception": "Saying 3.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "count_groups",
+        "type": "numeric",
+        "difficulty": 1,
+        "stem": "How many groups of 4 can you make from 16?",
+        "answer": 4,
+        "check": "16/4",
+        "hints": ["16 ÷ 4."],
+        "explanation": "16 ÷ 4 = 4 groups.",
+        "misconception": "Saying 12.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "repeated_subtraction",
+        "type": "numeric",
+        "difficulty": 1,
+        "stem": "How many times can you subtract 5 from 20?",
+        "answer": 4,
+        "check": "20/5",
+        "hints": ["20, 15, 10, 5, 0."],
+        "explanation": "4 times.",
+        "misconception": "Saying 5.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "count_groups",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "A pupil has 18 bottle tops. He puts them into groups of 3. How many groups does he make?",
+        "options": ["3", "6", "9", "18"],
+        "answer": 1,
+        "hints": ["18 ÷ 3."],
+        "explanation": "18 ÷ 3 = 6 groups.",
+        "misconception": "Saying 3.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "repeated_subtraction",
+        "type": "short_answer",
+        "difficulty": 1,
+        "stem": "Write the repeated subtraction for 10 ÷ 2.",
+        "answer": ["10-2-2-2-2-2=0", "10-2=8, 8-2=6, 6-2=4, 4-2=2, 2-2=0"],
+        "hints": ["Subtract 2 each time until 0."],
+        "explanation": "10 - 2 = 8, 8 - 2 = 6, 6 - 2 = 4, 4 - 2 = 2, 2 - 2 = 0.",
+        "misconception": "Stopping early.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "count_groups",
+        "type": "numeric",
+        "difficulty": 2,
+        "stem": "How many groups of 6 can you make from 24?",
+        "answer": 4,
+        "check": "24/6",
+        "hints": ["24 ÷ 6."],
+        "explanation": "4 groups.",
+        "misconception": "Saying 6.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "repeated_subtraction",
+        "type": "numeric",
+        "difficulty": 2,
+        "stem": "A pupil subtracts 7 from 35 repeatedly. How many times can he subtract?",
+        "answer": 5,
+        "check": "35/7",
+        "hints": ["35, 28, 21, 14, 7, 0."],
+        "explanation": "5 times.",
+        "misconception": "Saying 7.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "count_groups",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "A teacher has 30 pencils. She wants to give 5 pencils to each pupil. How many pupils will get pencils?",
+        "options": ["5", "6", "7", "30"],
+        "answer": 1,
+        "hints": ["30 ÷ 5."],
+        "explanation": "30 ÷ 5 = 6 pupils.",
+        "misconception": "Saying 5.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "repeated_subtraction",
+        "type": "written",
+        "difficulty": 2,
+        "stem": "Explain how repeated subtraction can help you find 12 ÷ 4.",
+        "hints": ["Subtract 4 from 12 until you reach 0.", "Count the subtractions."],
+        "explanation": "Subtract 4 from 12: 12 - 4 = 8, 8 - 4 = 4, 4 - 4 = 0. You subtracted 3 times, so 12 ÷ 4 = 3.",
+        "rubric": {
+          "criteria": [
+            {"description": "Shows the subtraction steps.", "marks": 1},
+            {"description": "States the answer is 3.", "marks": 1}
+          ]
+        },
+        "misconception": "Not counting the last subtraction.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "count_groups",
+        "type": "numeric",
+        "difficulty": 2,
+        "stem": "How many groups of 8 are in 32?",
+        "answer": 4,
+        "check": "32/8",
+        "hints": ["32 ÷ 8."],
+        "explanation": "4 groups.",
+        "misconception": "Saying 8.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "repeated_subtraction",
+        "type": "short_answer",
+        "difficulty": 2,
+        "stem": "How many times can you subtract 4 from 28?",
+        "answer": ["7"],
+        "hints": ["28 ÷ 4."],
+        "explanation": "7 times.",
+        "misconception": "Saying 6.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "repeated_subtraction",
+        "type": "numeric",
+        "difficulty": 2,
+        "stem": "A pupil has 45 oranges. He puts them into bags of 9. How many bags does he fill?",
+        "answer": 5,
+        "check": "45/9",
+        "hints": ["45 ÷ 9."],
+        "explanation": "5 bags.",
+        "misconception": "Saying 9.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "count_groups",
+        "type": "written",
+        "difficulty": 3,
+        "stem": "Explain the difference between 20 ÷ 4 and 20 ÷ 5 using the idea of making groups.",
+        "hints": ["20 ÷ 4 means groups of 4.", "20 ÷ 5 means groups of 5."],
+        "explanation": "20 ÷ 4 means making groups of 4, which gives 5 groups. 20 ÷ 5 means making groups of 5, which gives 4 groups.",
+        "rubric": {
+          "criteria": [
+            {"description": "Explains 20 ÷ 4 = 5 groups.", "marks": 1},
+            {"description": "Explains 20 ÷ 5 = 4 groups.", "marks": 1}
+          ]
+        },
+        "misconception": "Thinking they should give the same number of groups.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "repeated_subtraction",
+        "type": "numeric",
+        "difficulty": 3,
+        "stem": "How many times can you subtract 6 from 54?",
+        "answer": 9,
+        "check": "54/6",
+        "hints": ["54 ÷ 6."],
+        "explanation": "9 times.",
+        "misconception": "Saying 8.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "count_groups",
+        "type": "mcq",
+        "difficulty": 3,
+        "stem": "A farmer has 48 eggs. He packs them into trays of 8. How many trays does he need?",
+        "options": ["6", "8", "12", "40"],
+        "answer": 0,
+        "hints": ["48 ÷ 8."],
+        "explanation": "48 ÷ 8 = 6 trays.",
+        "misconception": "Saying 8.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "repeated_subtraction",
+        "type": "written",
+        "difficulty": 3,
+        "stem": "A pupil solves 24 ÷ 6 by repeatedly subtracting 6. They write 24 - 6 = 18, 18 - 6 = 12, 12 - 6 = 6. What should they do next?",
+        "hints": ["They need to reach 0.", "Subtract 6 one more time."],
+        "explanation": "They should subtract 6 from 6 to get 0. They subtracted 4 times in total, so 24 ÷ 6 = 4.",
+        "rubric": {
+          "criteria": [
+            {"description": "States to subtract 6 from 6 to get 0.", "marks": 1},
+            {"description": "Concludes 24 ÷ 6 = 4.", "marks": 1}
+          ]
+        },
+        "misconception": "Stopping at 6.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "count_groups",
+        "type": "numeric",
+        "difficulty": 3,
+        "stem": "How many groups of 7 are in 63?",
+        "answer": 9,
+        "check": "63/7",
+        "hints": ["63 ÷ 7."],
+        "explanation": "9 groups.",
+        "misconception": "Saying 8.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "repeated_subtraction",
+        "type": "numeric",
+        "difficulty": 4,
+        "stem": "A pupil subtracts 8 from 72 repeatedly. How many times can he subtract?",
+        "answer": 9,
+        "check": "72/8",
+        "hints": ["72 ÷ 8."],
+        "explanation": "9 times.",
+        "misconception": "Saying 8.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "count_groups",
+        "type": "written",
+        "difficulty": 4,
+        "stem": "Explain why 36 ÷ 6 = 6 and 36 ÷ 9 = 4 give different answers.",
+        "hints": ["What does the divisor represent?", "6 groups vs 9 groups."],
+        "explanation": "36 ÷ 6 means dividing 36 into groups of 6, giving 6 groups. 36 ÷ 9 means dividing 36 into groups of 9, giving 4 groups. The divisor (group size) changes, so the number of groups changes.",
+        "rubric": {
+          "criteria": [
+            {"description": "Explains 36 ÷ 6 = 6 groups.", "marks": 1},
+            {"description": "Explains 36 ÷ 9 = 4 groups.", "marks": 1}
+          ]
+        },
+        "misconception": "Thinking the divisor doesn't affect the number of groups.",
+        "uncertain": []
+      }
+    ]
+  },
+  {
+    "file_name": "B3.1.2.6.1.json",
+    "indicator": {
+      "code": "B3.1.2.6.1",
+      "subject": "Mathematics",
+      "level": "Basic 3",
+      "strand": "Number",
+      "sub_strand": "Number Operations (Addition, Subtraction, Multiplication and Division)",
+      "content_standard": "B3.1.2.6 Demonstrate an understanding of division",
+      "objective": "Use concrete and pictorial representations to explain division as equal sharing or partitioning equally into given groups and finding how many are in each group",
+      "source_page": 77
+    },
+    "spec": {
+      "skills": [
+        {"tag": "share_equally", "description": "Share a quantity equally into a given number of groups and state how many in each group.", "minQuestions": 2},
+        {"tag": "match_division_to_sharing", "description": "Match a division sentence to a picture of equal sharing.", "minQuestions": 2}
+      ],
+      "difficultyPlan": "20 questions: 5 at difficulty 1, 7 at difficulty 2, 5 at difficulty 3, 3 at difficulty 4.",
+      "misconceptions": [
+        "Dealing like a deck of cards instead of sharing equally.",
+        "Leaving remainders unshared.",
+        "Confusing the number of groups with the number in each group."
+      ],
+      "needsTeacherAssessment": true
+    },
+    "questions": [
+      {
+        "skill_tag": "share_equally",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "You have 12 oranges and 3 baskets. If you share them equally, how many oranges are in each basket?",
+        "options": ["3", "4", "6", "12"],
+        "answer": 1,
+        "hints": ["12 ÷ 3.", "How many groups of 3 make 12?"],
+        "explanation": "12 ÷ 3 = 4 oranges per basket.",
+        "misconception": "Saying 3 because there are 3 baskets.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "match_division_to_sharing",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "Which picture shows 10 ÷ 2?",
+        "options": ["10 items in 2 equal groups of 5", "10 items in 5 equal groups of 2", "2 items in 10 groups", "10 items in 1 group"],
+        "answer": 0,
+        "hints": ["10 divided by 2 means 2 groups.", "How many in each group? 10 ÷ 2 = 5."],
+        "explanation": "10 ÷ 2 means 2 groups with 5 items each.",
+        "misconception": "Choosing 5 groups of 2 (that is 10 ÷ 5).",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "share_equally",
+        "type": "numeric",
+        "difficulty": 1,
+        "stem": "Share 15 sweets equally among 5 friends. How many sweets does each friend get?",
+        "answer": 3,
+        "check": "15/5",
+        "hints": ["15 ÷ 5.", "5 x ? = 15."],
+        "explanation": "15 ÷ 5 = 3 sweets each.",
+        "misconception": "Saying 5.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "match_division_to_sharing",
+        "type": "short_answer",
+        "difficulty": 1,
+        "stem": "Write the division sentence for: '12 pencils shared equally among 4 pupils.'",
+        "answer": ["12 / 4", "12 ÷ 4"],
+        "hints": ["Total items divided by number of groups."],
+        "explanation": "12 ÷ 4.",
+        "misconception": "Writing 4 ÷ 12.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "share_equally",
+        "type": "numeric",
+        "difficulty": 1,
+        "stem": "A farmer has 20 eggs and puts them equally into 4 trays. How many eggs per tray?",
+        "answer": 5,
+        "check": "20/4",
+        "hints": ["20 ÷ 4."],
+        "explanation": "20 ÷ 4 = 5 eggs per tray.",
+        "misconception": "Saying 4.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "share_equally",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "Ama shares 18 pencils among 3 friends. How many pencils does each friend get?",
+        "options": ["3", "6", "9", "18"],
+        "answer": 1,
+        "hints": ["18 ÷ 3.", "3 x ? = 18."],
+        "explanation": "18 ÷ 3 = 6 pencils.",
+        "misconception": "Saying 9 because 18 ÷ 2.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "share_equally",
+        "type": "numeric",
+        "difficulty": 2,
+        "stem": "24 bottle tops are shared equally into 6 groups. How many in each group?",
+        "answer": 4,
+        "check": "24/6",
+        "hints": ["24 ÷ 6.", "6 x ? = 24."],
+        "explanation": "24 ÷ 6 = 4 bottle tops.",
+        "misconception": "Saying 6.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "match_division_to_sharing",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "Which division sentence matches the picture: 8 circles divided into 4 equal groups of 2?",
+        "options": ["8 ÷ 4 = 2", "8 ÷ 2 = 4", "4 ÷ 8 = 2", "2 ÷ 8 = 4"],
+        "answer": 0,
+        "hints": ["Total items (8) divided by number of groups (4) gives items per group (2)."],
+        "explanation": "8 ÷ 4 = 2.",
+        "misconception": "Choosing 8 ÷ 2 = 4.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "share_equally",
+        "type": "written",
+        "difficulty": 2,
+        "stem": "Draw a picture to show 12 ÷ 3 = 4.",
+        "hints": ["Draw 3 circles (groups).", "Put 4 dots in each circle."],
+        "explanation": "The learner should draw 3 groups, each containing 4 items.",
+        "rubric": {
+          "criteria": [
+            {"description": "Draws 3 equal groups.", "marks": 1},
+            {"description": "Each group has 4 items.", "marks": 1}
+          ]
+        },
+        "misconception": "Drawing 4 groups of 3.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "share_equally",
+        "type": "numeric",
+        "difficulty": 2,
+        "stem": "A teacher has 25 pencils. She shares them equally among 5 pupils. How many pencils does each pupil get?",
+        "answer": 5,
+        "check": "25/5",
+        "hints": ["25 ÷ 5."],
+        "explanation": "25 ÷ 5 = 5 pencils.",
+        "misconception": "Saying 20.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "match_division_to_sharing",
+        "type": "short_answer",
+        "difficulty": 2,
+        "stem": "If 16 counters are shared into 4 equal groups, write the division sentence and the answer.",
+        "answer": ["16 / 4 = 4"],
+        "hints": ["Total ÷ groups = per group."],
+        "explanation": "16 ÷ 4 = 4.",
+        "misconception": "Writing 4 ÷ 16.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "share_equally",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "You have 20 sweets. You want to give 5 sweets to each friend. How many friends will get sweets?",
+        "options": ["2", "4", "5", "10"],
+        "answer": 1,
+        "hints": ["20 ÷ 5.", "How many groups of 5 in 20?"],
+        "explanation": "20 ÷ 5 = 4 friends.",
+        "misconception": "Saying 5 because you have 5 sweets per friend.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "share_equally",
+        "type": "numeric",
+        "difficulty": 2,
+        "stem": "A bag contains 36 oranges. If you share them equally into 4 baskets, how many are in each basket?",
+        "answer": 9,
+        "check": "36/4",
+        "hints": ["36 ÷ 4."],
+        "explanation": "36 ÷ 4 = 9 oranges.",
+        "misconception": "Saying 6.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "share_equally",
+        "type": "written",
+        "difficulty": 3,
+        "stem": "Explain how to share 30 pencils equally among 5 pupils.",
+        "hints": ["Divide 30 by 5.", "Give one to each pupil at a time."],
+        "explanation": "Divide 30 by 5. 30 ÷ 5 = 6. Each pupil gets 6 pencils.",
+        "rubric": {
+          "criteria": [
+            {"description": "States to divide 30 by 5.", "marks": 1},
+            {"description": "Calculates 6 pencils each.", "marks": 1}
+          ]
+        },
+        "misconception": "Trying to subtract repeatedly without grouping.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "share_equally",
+        "type": "numeric",
+        "difficulty": 3,
+        "stem": "A class has 28 pupils. They are divided equally into 7 groups. How many pupils in each group?",
+        "answer": 4,
+        "check": "28/7",
+        "hints": ["28 ÷ 7."],
+        "explanation": "28 ÷ 7 = 4 pupils per group.",
+        "misconception": "Saying 7.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "share_equally",
+        "type": "mcq",
+        "difficulty": 3,
+        "stem": "A teacher has 45 exercise books. She wants to give 5 books to each pupil. How many pupils will receive books?",
+        "options": ["5", "9", "10", "40"],
+        "answer": 1,
+        "hints": ["45 ÷ 5."],
+        "explanation": "45 ÷ 5 = 9 pupils.",
+        "misconception": "Saying 5.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "match_division_to_sharing",
+        "type": "written",
+        "difficulty": 3,
+        "stem": "Explain why 20 ÷ 4 = 5 and 20 ÷ 5 = 4 give different answers even though they use the same numbers.",
+        "hints": ["What does the divisor represent?", "Number of groups vs size of groups."],
+        "explanation": "20 ÷ 4 means sharing 20 into 4 groups, giving 5 in each. 20 ÷ 5 means sharing 20 into 5 groups, giving 4 in each. The divisor is the number of groups, which changes the result.",
+        "rubric": {
+          "criteria": [
+            {"description": "Explains 20 ÷ 4 as 4 groups of 5.", "marks": 1},
+            {"description": "Explains 20 ÷ 5 as 5 groups of 4.", "marks": 1}
+          ]
+        },
+        "misconception": "Thinking they should be the same.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "share_equally",
+        "type": "numeric",
+        "difficulty": 4,
+        "stem": "A pupil has 42 sweets. He shares them equally among 6 friends. How many sweets does each friend get?",
+        "answer": 7,
+        "check": "42/6",
+        "hints": ["42 ÷ 6."],
+        "explanation": "42 ÷ 6 = 7 sweets.",
+        "misconception": "Saying 6.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "match_division_to_sharing",
+        "type": "written",
+        "difficulty": 4,
+        "stem": "Create a word problem that matches 32 ÷ 8 = 4.",
+        "hints": ["32 items, 8 groups, 4 per group."],
+        "explanation": "For example: A farmer has 32 eggs. He packs them equally into 8 trays. How many eggs are in each tray?",
+        "rubric": {
+          "criteria": [
+            {"description": "Creates a problem with 32 items.", "marks": 1},
+            {"description": "Shares into 8 groups with 4 per group.", "marks": 1}
+          ]
+        },
+        "misconception": "Creating a problem for 8 ÷ 32.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "share_equally",
+        "type": "written",
+        "difficulty": 4,
+        "stem": "A teacher has 24 pencils. She wants to share them equally among some pupils. Each pupil gets 3 pencils. How many pupils are there? Write the division sentence and solve.",
+        "hints": ["24 ÷ ? = 3.", "24 ÷ 3 = ?"],
+        "explanation": "24 ÷ 3 = 8 pupils.",
+        "rubric": {
+          "criteria": [
+            {"description": "Writes 24 ÷ 3 = 8.", "marks": 1},
+            {"description": "States 8 pupils.", "marks": 1}
+          ]
+        },
+        "misconception": "Saying 3 pupils.",
+        "uncertain": []
+      }
+    ]
+  },
+  {
+    "file_name": "B3.1.2.5.2.json",
+    "indicator": {
+      "code": "B3.1.2.5.2",
+      "subject": "Mathematics",
+      "level": "Basic 3",
+      "strand": "Number",
+      "sub_strand": "Number Operations (Addition, Subtraction, Multiplication and Division)",
+      "content_standard": "B3.1.2.5 Demonstrate an understanding of multiplication up to 5 × 5",
+      "objective": "Represent and explain multiplication using rectangular arrays;",
+      "source_page": 75
+    },
+    "spec": {
+      "skills": [
+        {"tag": "count_array_dots", "description": "Count the number of dots (intersections) in a rectangular array.", "minQuestions": 2},
+        {"tag": "model_mult_arrays", "description": "Model a multiplication sentence using an array.", "minQuestions": 2},
+        {"tag": "use_mult_chart", "description": "Use a multiplication chart up to 9x9 to find products.", "minQuestions": 2}
+      ],
+      "difficultyPlan": "20 questions: 5 at difficulty 1, 7 at difficulty 2, 5 at difficulty 3, 3 at difficulty 4.",
+      "misconceptions": [
+        "Counting lines instead of intersections.",
+        "Confusing rows and columns."
+      ],
+      "needsTeacherAssessment": true
+    },
+    "questions": [
+      {
+        "skill_tag": "count_array_dots",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "A rectangular array has 3 rows and 4 columns of dots. How many dots are there?",
+        "options": ["7", "12", "9", "16"],
+        "answer": 1,
+        "hints": ["Multiply rows by columns.", "3 x 4."],
+        "explanation": "3 x 4 = 12 dots.",
+        "misconception": "Adding 3 + 4 = 7.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "model_mult_arrays",
+        "type": "numeric",
+        "difficulty": 1,
+        "stem": "What multiplication sentence does a 2 by 5 array represent?",
+        "answer": 10,
+        "check": "2*5",
+        "hints": ["2 rows of 5.", "2 x 5."],
+        "explanation": "2 x 5 = 10.",
+        "misconception": "Saying 7.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "use_mult_chart",
+        "type": "numeric",
+        "difficulty": 1,
+        "stem": "Using a multiplication chart, what is 4 x 4?",
+        "answer": 16,
+        "check": "4*4",
+        "hints": ["Look at the 4 row and 4 column.", "4 x 4."],
+        "explanation": "16.",
+        "misconception": "Saying 8.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "count_array_dots",
+        "type": "numeric",
+        "difficulty": 1,
+        "stem": "How many dots in a 5 by 2 array?",
+        "answer": 10,
+        "check": "5*2",
+        "hints": ["5 rows of 2."],
+        "explanation": "10 dots.",
+        "misconception": "Saying 7.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "model_mult_arrays",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "Which array represents 3 x 3?",
+        "options": ["3 rows of 3", "3 rows of 2", "2 rows of 3", "4 rows of 3"],
+        "answer": 0,
+        "hints": ["3 rows and 3 columns."],
+        "explanation": "3 rows of 3.",
+        "misconception": "Choosing 3 rows of 2.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "use_mult_chart",
+        "type": "numeric",
+        "difficulty": 2,
+        "stem": "Use a multiplication chart to find 5 x 5.",
+        "answer": 25,
+        "check": "5*5",
+        "hints": ["Row 5, column 5."],
+        "explanation": "25.",
+        "misconception": "Saying 10.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "count_array_dots",
+        "type": "numeric",
+        "difficulty": 2,
+        "stem": "An array has 4 rows and 6 columns. How many dots?",
+        "answer": 24,
+        "check": "4*6",
+        "hints": ["4 x 6."],
+        "explanation": "24 dots.",
+        "misconception": "Saying 10.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "model_mult_arrays",
+        "type": "short_answer",
+        "difficulty": 2,
+        "stem": "Draw a 2 by 4 array and write the multiplication sentence.",
+        "answer": ["2 x 4 = 8"],
+        "hints": ["2 rows, 4 columns."],
+        "explanation": "2 x 4 = 8.",
+        "misconception": "Drawing 4 rows of 2.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "count_array_dots",
+        "type": "written",
+        "difficulty": 2,
+        "stem": "Explain how to find the total number of dots in a 3 by 5 array.",
+        "hints": ["Multiply rows by columns."],
+        "explanation": "Multiply the number of rows by the number of columns. 3 x 5 = 15.",
+        "rubric": {
+          "criteria": [
+            {"description": "States to multiply rows by columns.", "marks": 1},
+            {"description": "Calculates 15.", "marks": 1}
+          ]
+        },
+        "misconception": "Counting one by one without multiplying.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "use_mult_chart",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "On a multiplication chart, where would you find the product of 2 x 6?",
+        "options": ["At the intersection of row 2 and column 6.", "At the intersection of row 6 and column 2.", "Both A and B.", "In the first row."],
+        "answer": 2,
+        "hints": ["The chart is commutative.", "2x6 is the same as 6x2."],
+        "explanation": "Both A and B give the same product (12).",
+        "misconception": "Thinking only one location is correct.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "model_mult_arrays",
+        "type": "numeric",
+        "difficulty": 2,
+        "stem": "A pupil draws an array with 5 rows and 4 columns. What is the product?",
+        "answer": 20,
+        "check": "5*4",
+        "hints": ["5 x 4."],
+        "explanation": "20.",
+        "misconception": "Saying 9.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "use_mult_chart",
+        "type": "numeric",
+        "difficulty": 2,
+        "stem": "What is 3 x 6?",
+        "answer": 18,
+        "check": "3*6",
+        "hints": ["3 groups of 6.", "3 x 6."],
+        "explanation": "18.",
+        "misconception": "Saying 9.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "count_array_dots",
+        "type": "written",
+        "difficulty": 3,
+        "stem": "An array has 20 dots arranged in 4 rows. How many columns are there?",
+        "hints": ["4 x ? = 20."],
+        "explanation": "4 x 5 = 20, so there are 5 columns.",
+        "rubric": {
+          "criteria": [
+            {"description": "States 5 columns.", "marks": 1},
+            {"description": "Explains 4 x 5 = 20.", "marks": 1}
+          ]
+        },
+        "misconception": "Saying 16 columns.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "model_mult_arrays",
+        "type": "mcq",
+        "difficulty": 3,
+        "stem": "Which multiplication sentence is shown by an array with 3 rows and 5 columns?",
+        "options": ["3 x 5", "5 x 3", "Both A and B", "3 + 5"],
+        "answer": 2,
+        "hints": ["3 rows of 5 is 3x5.", "5 columns of 3 is 5x3."],
+        "explanation": "Both A and B represent the same array.",
+        "misconception": "Thinking only one is correct.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "use_mult_chart",
+        "type": "numeric",
+        "difficulty": 3,
+        "stem": "Use the chart to find the product of 4 and 7.",
+        "answer": 28,
+        "check": "4*7",
+        "hints": ["4 x 7."],
+        "explanation": "28.",
+        "misconception": "Saying 11.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "use_mult_chart",
+        "type": "written",
+        "difficulty": 3,
+        "stem": "Explain how a multiplication chart is organized.",
+        "hints": ["Rows and columns.", "What do the headers represent?"],
+        "explanation": "A multiplication chart has numbers along the top and side. The product of the row number and column number is found at their intersection.",
+        "rubric": {
+          "criteria": [
+            {"description": "Mentions rows and columns.", "marks": 1},
+            {"description": "Explains the intersection is the product.", "marks": 1}
+          ]
+        },
+        "misconception": "Thinking it's a random arrangement.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "model_mult_arrays",
+        "type": "written",
+        "difficulty": 4,
+        "stem": "Create a real-life situation that can be represented by a 4 by 5 array.",
+        "hints": ["4 rows of 5.", "Think of seating arrangements, eggs in a carton, etc."],
+        "explanation": "For example, a classroom with 4 rows of desks and 5 desks in each row.",
+        "rubric": {
+          "criteria": [
+            {"description": "Describes a situation with 4 rows.", "marks": 1},
+            {"description": "Each row has 5 items.", "marks": 1}
+          ]
+        },
+        "misconception": "Using 5 rows of 4.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "count_array_dots",
+        "type": "numeric",
+        "difficulty": 4,
+        "stem": "An array has 30 dots. If there are 5 rows, how many columns are there?",
+        "answer": 6,
+        "check": "30/5",
+        "hints": ["5 x ? = 30."],
+        "explanation": "6 columns.",
+        "misconception": "Saying 25.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "use_mult_chart",
+        "type": "written",
+        "difficulty": 4,
+        "stem": "Explain why the multiplication chart is symmetrical along the diagonal.",
+        "hints": ["Look at 3x4 and 4x3.", "Commutativity."],
+        "explanation": "The chart is symmetrical because multiplication is commutative. 3x4 is the same as 4x3, so the numbers mirror across the diagonal.",
+        "rubric": {
+          "criteria": [
+            {"description": "Mentions commutativity.", "marks": 1},
+            {"description": "Explains the symmetry.", "marks": 1}
+          ]
+        },
+        "misconception": "Thinking it's just a coincidence.",
+        "uncertain": []
+      }
+    ]
+  },
+  {
+    "file_name": "B3.1.2.5.1.json",
+    "indicator": {
+      "code": "B3.1.2.5.1",
+      "subject": "Mathematics",
+      "level": "Basic 3",
+      "strand": "Number",
+      "sub_strand": "Number Operations (Addition, Subtraction, Multiplication and Division)",
+      "content_standard": "B3.1.2.5 Demonstrate an understanding of multiplication up to 5 × 5",
+      "objective": "Represent and explain multiplication using equal groupings",
+      "source_page": 74
+    },
+    "spec": {
+      "skills": [
+        {"tag": "form_equal_groups", "description": "Form equal groups from a given quantity.", "minQuestions": 2},
+        {"tag": "match_groups_to_mult", "description": "Match equal groups to a multiplication sentence.", "minQuestions": 2},
+        {"tag": "explain_mult_groups", "description": "Explain what a multiplication sentence means in terms of groups.", "minQuestions": 2}
+      ],
+      "difficultyPlan": "20 questions: 5 at difficulty 1, 7 at difficulty 2, 5 at difficulty 3, 3 at difficulty 4.",
+      "misconceptions": [
+        "Making unequal groups.",
+        "Confusing the number of groups with the size of the group."
+      ],
+      "needsTeacherAssessment": true
+    },
+    "questions": [
+      {
+        "skill_tag": "form_equal_groups",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "You have 12 straws. Which of these shows equal groups?",
+        "options": ["3 groups of 4", "2 groups of 5", "4 groups of 2 and 1 group of 4", "1 group of 12"],
+        "answer": 0,
+        "hints": ["3 x 4 = 12.", "The groups must be the same size."],
+        "explanation": "3 groups of 4 is equal grouping because 3 x 4 = 12.",
+        "misconception": "Choosing unequal groups.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "match_groups_to_mult",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "Which multiplication sentence represents 4 groups of 3?",
+        "options": ["4 x 3", "3 x 3", "4 + 3", "3 + 3 + 3"],
+        "answer": 0,
+        "hints": ["Number of groups x size of each group."],
+        "explanation": "4 groups of 3 is 4 x 3.",
+        "misconception": "Writing 3 x 3.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "form_equal_groups",
+        "type": "numeric",
+        "difficulty": 1,
+        "stem": "If you have 10 apples and make 2 equal groups, how many apples in each group?",
+        "answer": 5,
+        "check": "10/2",
+        "hints": ["10 / 2."],
+        "explanation": "5 apples in each group.",
+        "misconception": "Saying 8.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "match_groups_to_mult",
+        "type": "numeric",
+        "difficulty": 1,
+        "stem": "What is 3 groups of 5?",
+        "answer": 15,
+        "check": "3*5",
+        "hints": ["3 x 5."],
+        "explanation": "15.",
+        "misconception": "Saying 8 (adding 3+5).",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "explain_mult_groups",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "What does 2 x 4 mean in terms of groups?",
+        "options": ["2 groups of 4", "4 groups of 2", "2 + 4", "4 - 2"],
+        "answer": 0,
+        "hints": ["The first number is the number of groups.", "The second is the size."],
+        "explanation": "2 x 4 means 2 groups of 4.",
+        "misconception": "Saying 4 groups of 2.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "form_equal_groups",
+        "type": "numeric",
+        "difficulty": 2,
+        "stem": "You have 15 pencils. You make 3 equal groups. How many pencils in each group?",
+        "answer": 5,
+        "check": "15/3",
+        "hints": ["15 / 3."],
+        "explanation": "5 pencils.",
+        "misconception": "Saying 12.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "match_groups_to_mult",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "Which picture represents 4 x 2?",
+        "options": ["4 groups of 2", "2 groups of 4", "4 groups of 4", "2 groups of 2"],
+        "answer": 0,
+        "hints": ["4 groups of 2."],
+        "explanation": "4 groups of 2.",
+        "misconception": "Choosing 2 groups of 4.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "explain_mult_groups",
+        "type": "short_answer",
+        "difficulty": 2,
+        "stem": "Write a multiplication sentence for 5 groups of 2.",
+        "answer": ["5 * 2", "5 x 2", "2 * 5", "2 x 5"],
+        "hints": ["5 groups of 2."],
+        "explanation": "5 x 2.",
+        "misconception": "Writing 5 + 2.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "form_equal_groups",
+        "type": "numeric",
+        "difficulty": 2,
+        "stem": "You have 20 oranges. You want 4 equal groups. How many in each?",
+        "answer": 5,
+        "check": "20/4",
+        "hints": ["20 / 4."],
+        "explanation": "5 oranges.",
+        "misconception": "Saying 16.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "match_groups_to_mult",
+        "type": "numeric",
+        "difficulty": 2,
+        "stem": "What is the total if you have 5 groups of 4?",
+        "answer": 20,
+        "check": "5*4",
+        "hints": ["5 x 4."],
+        "explanation": "20.",
+        "misconception": "Saying 9.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "explain_mult_groups",
+        "type": "written",
+        "difficulty": 2,
+        "stem": "Explain what 3 x 4 means using the idea of groups.",
+        "hints": ["3 groups.", "4 items per group."],
+        "explanation": "3 x 4 means 3 equal groups with 4 items in each group, totaling 12.",
+        "rubric": {
+          "criteria": [
+            {"description": "Mentions 3 groups.", "marks": 1},
+            {"description": "Mentions 4 items per group.", "marks": 1}
+          ]
+        },
+        "misconception": "Saying 4 groups of 3.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "form_equal_groups",
+        "type": "numeric",
+        "difficulty": 2,
+        "stem": "How many equal groups of 2 can you make from 10?",
+        "answer": 5,
+        "check": "10/2",
+        "hints": ["10 / 2."],
+        "explanation": "5 groups.",
+        "misconception": "Saying 8.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "match_groups_to_mult",
+        "type": "short_answer",
+        "difficulty": 3,
+        "stem": "A pupil has 4 groups of 3. Write the multiplication sentence and the total.",
+        "answer": ["4 x 3 = 12"],
+        "hints": ["4 groups of 3."],
+        "explanation": "4 x 3 = 12.",
+        "misconception": "Writing 3 x 4 = 12 (also correct, but 4x3 matches the phrasing).",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "explain_mult_groups",
+        "type": "mcq",
+        "difficulty": 3,
+        "stem": "Which statement is true about 5 x 3 and 3 x 5?",
+        "options": ["They both equal 15, but represent different groupings.", "They are the same grouping.", "5 x 3 is larger.", "3 x 5 is larger."],
+        "answer": 0,
+        "hints": ["5 groups of 3 vs 3 groups of 5."],
+        "explanation": "Both equal 15, but 5x3 is 5 groups of 3, and 3x5 is 3 groups of 5.",
+        "misconception": "Thinking they are exactly the same grouping.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "form_equal_groups",
+        "type": "written",
+        "difficulty": 3,
+        "stem": "Use counters to show 5 groups of 2. Draw what you did.",
+        "hints": ["Draw 5 circles.", "Put 2 dots in each."],
+        "explanation": "The learner should draw 5 groups, each containing 2 items.",
+        "rubric": {
+          "criteria": [
+            {"description": "Draws 5 groups.", "marks": 1},
+            {"description": "Each group has 2 items.", "marks": 1}
+          ]
+        },
+        "misconception": "Drawing 2 groups of 5.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "match_groups_to_mult",
+        "type": "mcq",
+        "difficulty": 3,
+        "stem": "If 6 groups of 4 equals 24, what does 4 groups of 6 equal?",
+        "options": ["24", "10", "12", "20"],
+        "answer": 0,
+        "hints": ["4 x 6 = 24."],
+        "explanation": "24.",
+        "misconception": "Saying 10.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "form_equal_groups",
+        "type": "written",
+        "difficulty": 3,
+        "stem": "You have 24 bottle tops. Show two different ways to make equal groups.",
+        "hints": ["Think of factors of 24.", "3 groups of 8, 4 groups of 6, etc."],
+        "explanation": "For example: 3 groups of 8 and 4 groups of 6.",
+        "rubric": {
+          "criteria": [
+            {"description": "Gives one valid grouping.", "marks": 1},
+            {"description": "Gives a second valid grouping.", "marks": 1}
+          ]
+        },
+        "misconception": "Giving unequal groups.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "explain_mult_groups",
+        "type": "written",
+        "difficulty": 4,
+        "stem": "Explain why 5 x 2 equals 2 x 5 using the concept of equal groups.",
+        "hints": ["5 groups of 2 vs 2 groups of 5."],
+        "explanation": "5 groups of 2 has 10 items. 2 groups of 5 also has 10 items. The total is the same even though the arrangement is different.",
+        "rubric": {
+          "criteria": [
+            {"description": "Describes 5x2 as 5 groups of 2.", "marks": 1},
+            {"description": "Describes 2x5 as 2 groups of 5.", "marks": 1},
+            {"description": "Concludes both totals are 10.", "marks": 1}
+          ]
+        },
+        "misconception": "Thinking the groupings must be identical.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "form_equal_groups",
+        "type": "numeric",
+        "difficulty": 4,
+        "stem": "A teacher has 18 sweets. She wants to give each pupil 3 sweets. How many pupils will get sweets?",
+        "answer": 6,
+        "check": "18/3",
+        "hints": ["18 / 3."],
+        "explanation": "6 pupils.",
+        "misconception": "Saying 15.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "match_groups_to_mult",
+        "type": "written",
+        "difficulty": 4,
+        "stem": "Write a word problem that represents 4 x 5.",
+        "hints": ["4 groups.", "5 items."],
+        "explanation": "For example: Ama has 4 baskets. Each basket has 5 oranges. How many oranges does she have?",
+        "rubric": {
+          "criteria": [
+            {"description": "Includes 4 groups.", "marks": 1},
+            {"description": "Includes 5 items in each group.", "marks": 1}
+          ]
+        },
+        "misconception": "Creating a problem for 5 x 4.",
+        "uncertain": []
+      }
+    ]
+  }
+]

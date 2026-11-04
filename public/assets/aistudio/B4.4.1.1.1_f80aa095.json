@@ -1,0 +1,264 @@
+{
+  "indicator": {
+    "code": "B4.4.1.1.1",
+    "subject": "Mathematics",
+    "level": "Basic 4",
+    "strand": "Data",
+    "sub_strand": "Data Collection, Organization, Presentation, Interpretation and Analysis",
+    "content_standard": "B4.4.1.1 Demonstrate an understanding of many-to-one correspondence in displaying, and reading or interpreting, graphs",
+    "objective": "Use an understanding of one-to-one correspondence to read and interpret graphs",
+    "source_page": 68
+  },
+  "spec": {
+    "skills": [
+      {"tag": "read_pictograph", "description": "Read data from a pictograph where one picture represents one item.", "minQuestions": 2},
+      {"tag": "interpret_bar_graph", "description": "Read and interpret data from a bar graph.", "minQuestions": 2},
+      {"tag": "answer_questions_from_graph", "description": "Answer questions comparing or totaling data from a graph.", "minQuestions": 2}
+    ],
+    "difficultyPlan": "20 questions: 5 at difficulty 1, 7 at difficulty 2, 5 at difficulty 3, 3 at difficulty 4.",
+    "misconceptions": [
+      "Miscounting icons.",
+      "Not checking the key (although this indicator is one-to-one, later questions may test if they notice).",
+      "Adding the categories incorrectly."
+    ],
+    "needsTeacherAssessment": false
+  },
+  "questions": [
+    {
+      "skill_tag": "read_pictograph",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "A pictograph shows 4 apples for Monday and 6 apples for Tuesday. If each apple picture represents 1 apple, how many apples on Tuesday?",
+      "options": ["4", "5", "6", "10"],
+      "answer": 2,
+      "hints": ["Count the apple pictures for Tuesday.", "There are 6."],
+      "explanation": "6 apples.",
+      "misconception": "Adding Monday and Tuesday.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "interpret_bar_graph",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "A bar graph shows: Maths = 5 pupils, English = 3 pupils. Which subject is more popular?",
+      "options": ["Maths", "English", "They are equal", "Cannot tell"],
+      "answer": 0,
+      "hints": ["Compare the heights of the bars.", "5 > 3."],
+      "explanation": "Maths is more popular.",
+      "misconception": "Saying English.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "answer_questions_from_graph",
+      "type": "numeric",
+      "difficulty": 1,
+      "stem": "A graph shows 5 dogs, 4 cats, and 2 birds. How many pets are there altogether?",
+      "answer": 11,
+      "check": "5+4+2",
+      "hints": ["Add the numbers.", "5 + 4 + 2."],
+      "explanation": "5 + 4 + 2 = 11.",
+      "misconception": "Multiplying the numbers.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "read_pictograph",
+      "type": "short_answer",
+      "difficulty": 1,
+      "stem": "A pictograph uses 1 star to represent 1 pupil. If there are 7 stars in the 'Football' row, how many pupils like football?",
+      "answer": ["7"],
+      "hints": ["Count the stars.", "1 star = 1 pupil."],
+      "explanation": "7 pupils.",
+      "misconception": "Saying 1.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "interpret_bar_graph",
+      "type": "short_answer",
+      "difficulty": 1,
+      "stem": "A bar graph shows 8 boys and 6 girls in a class. How many more boys than girls are there?",
+      "answer": ["2"],
+      "hints": ["Subtract the smaller from the larger.", "8 - 6."],
+      "explanation": "8 - 6 = 2.",
+      "misconception": "Adding 8 + 6.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "answer_questions_from_graph",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "A pictograph shows: Monday = 4 cups, Tuesday = 6 cups, Wednesday = 5 cups. How many cups in total?",
+      "answer": 15,
+      "check": "4+6+5",
+      "hints": ["Add all values.", "4 + 6 + 5."],
+      "explanation": "15 cups.",
+      "misconception": "Subtracting.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "interpret_bar_graph",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "A bar graph shows the number of books read: Kojo = 4, Ama = 7, Yaw = 2. Who read the most books?",
+      "options": ["Kojo", "Ama", "Yaw", "All are equal"],
+      "answer": 1,
+      "hints": ["Look for the tallest bar.", "7 is the largest number."],
+      "explanation": "Ama read the most.",
+      "misconception": "Choosing Kojo because he is listed first.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "answer_questions_from_graph",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "A graph shows 10 learners like Fanta, 6 like Coke, and 4 like Sprite. How many more learners like Fanta than Sprite?",
+      "answer": 6,
+      "check": "10-4",
+      "hints": ["Subtract Sprite from Fanta.", "10 - 4."],
+      "explanation": "10 - 4 = 6.",
+      "misconception": "Adding 10 + 4.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "read_pictograph",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "A pictograph has a key: 1 book symbol = 1 book. If there are 5 book symbols, how many books are there?",
+      "options": ["1", "5", "6", "50"],
+      "answer": 1,
+      "hints": ["The key says 1 symbol = 1 book.", "Count the symbols."],
+      "explanation": "5 books.",
+      "misconception": "Multiplying by 10.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "answer_questions_from_graph",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "A bar graph shows the number of cars washed: Mon=5, Tue=8, Wed=3. On which day were the fewest cars washed?",
+      "answer": ["wednesday", "wed"],
+      "hints": ["Look for the shortest bar.", "Which number is the smallest?"],
+      "explanation": "Wednesday (3).",
+      "misconception": "Saying Monday.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "interpret_bar_graph",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "A bar graph shows 12 pupils like rice, 8 like banku, and 5 like fufu. What is the total number of pupils?",
+      "answer": 25,
+      "check": "12+8+5",
+      "hints": ["Add all three values.", "12 + 8 + 5."],
+      "explanation": "25 pupils.",
+      "misconception": "Subtracting.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "interpret_bar_graph",
+      "type": "written",
+      "difficulty": 2,
+      "stem": "A graph shows: Football = 10, Netball = 6, Athletics = 4. Explain how you would find the total number of pupils surveyed.",
+      "hints": ["Add the number of pupils for each sport."],
+      "explanation": "You add the number of pupils who chose each sport: 10 + 6 + 4 = 20 pupils.",
+      "rubric": {
+        "criteria": [
+          {"description": "States to add the values.", "marks": 1},
+          {"description": "Calculates the total (20).", "marks": 1}
+        ]
+      },
+      "misconception": "Finding the difference.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "read_pictograph",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "A pictograph shows 3 red cars, 4 blue cars, and 2 yellow cars. How many cars are there?",
+      "answer": ["9"],
+      "hints": ["Add the cars.", "3 + 4 + 2."],
+      "explanation": "9 cars.",
+      "misconception": "Saying 4.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "answer_questions_from_graph",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "A graph shows: 5 boys like Maths, 7 girls like Maths. How many pupils like Maths altogether?",
+      "options": ["2", "5", "7", "12"],
+      "answer": 3,
+      "hints": ["Add boys and girls.", "5 + 7."],
+      "explanation": "5 + 7 = 12.",
+      "misconception": "Subtracting 7 - 5 = 2.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "interpret_bar_graph",
+      "type": "numeric",
+      "difficulty": 3,
+      "stem": "A bar graph shows the number of trees planted: 2020 = 50, 2021 = 70, 2022 = 40. How many trees were planted in total?",
+      "answer": 160,
+      "check": "50+70+40",
+      "hints": ["50 + 70 + 40."],
+      "explanation": "160 trees.",
+      "misconception": "Subtracting.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "answer_questions_from_graph",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "A graph shows 15 pupils like reading, 10 like drawing, 5 like singing. How many more pupils like reading than singing?",
+      "hints": ["Subtract the singing value from the reading value.", "15 - 5."],
+      "explanation": "15 - 5 = 10 pupils.",
+      "rubric": {
+        "criteria": [
+          {"description": "Identifies the values (15 and 5).", "marks": 1},
+          {"description": "Calculates the difference (10).", "marks": 1}
+        ]
+      },
+      "misconception": "Adding 15 + 5.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "read_pictograph",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "A pictograph shows a row of 8 symbols for 'bananas'. If the key is 1 symbol = 1 banana, how many symbols are needed for 5 bananas?",
+      "options": ["1", "5", "8", "50"],
+      "answer": 1,
+      "hints": ["1 symbol = 1 banana.", "Number of symbols equals number of bananas."],
+      "explanation": "5 symbols.",
+      "misconception": "Saying 8 because 8 symbols are already there.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "answer_questions_from_graph",
+      "type": "numeric",
+      "difficulty": 4,
+      "stem": "A graph shows 20 pupils travel by bus, 15 by car, and 5 by bike. How many pupils are in the class?",
+      "answer": 40,
+      "check": "20+15+5",
+      "hints": ["Add all transport methods.", "20 + 15 + 5."],
+      "explanation": "40 pupils.",
+      "misconception": "Saying 35 because they missed the 5.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "interpret_bar_graph",
+      "type": "written",
+      "difficulty": 4,
+      "stem": "A graph shows that 12 boys and 16 girls like football. Explain how to find the total number of pupils who like football and how many more girls than boys like it.",
+      "hints": ["Total = add boys and girls.", "Difference = subtract boys from girls."],
+      "explanation": "Total = 12 + 16 = 28. Difference = 16 - 12 = 4.",
+      "rubric": {
+        "criteria": [
+          {"description": "Calculates the total (28).", "marks": 1},
+          {"description": "Calculates the difference (4).", "marks": 1}
+        ]
+      },
+      "misconception": "Only calculating the total.",
+      "uncertain": []
+    }
+  ]
+}

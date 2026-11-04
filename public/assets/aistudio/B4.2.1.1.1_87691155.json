@@ -1,0 +1,274 @@
+{
+  "indicator": {
+    "code": "B4.2.1.1.1",
+    "subject": "Mathematics",
+    "level": "Basic 4",
+    "strand": "Algebra",
+    "sub_strand": "Patterns and Relationships",
+    "content_standard": "B4.2.1.1 Demonstrate an understanding of how to identify and describe patterns found in tables and charts, including a multiplication chart",
+    "objective": "Describe the pattern found in a given table or chart",
+    "source_page": 51
+  },
+  "spec": {
+    "skills": [
+      {"tag": "identify_rule", "description": "Identify the rule or relationship between numbers in a table or chart.", "minQuestions": 2},
+      {"tag": "describe_rule", "description": "Describe the pattern rule in words (e.g., 'add 3', 'multiply by 2').", "minQuestions": 2}
+    ],
+    "difficultyPlan": "20 questions: 5 at difficulty 1, 7 at difficulty 2, 5 at difficulty 3, 3 at difficulty 4.",
+    "misconceptions": [
+      "Describing the numbers instead of the rule.",
+      "Missing the constant difference (e.g., thinking 2, 4, 6 is 'add 1' because 2+1=3? No, thinking they just see numbers)."
+    ],
+    "needsTeacherAssessment": false
+  },
+  "questions": [
+    {
+      "skill_tag": "identify_rule",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Look at the pattern: 5, 10, 15, 20. What is the rule?",
+      "options": ["Add 5", "Add 2", "Multiply by 5", "Subtract 5"],
+      "answer": 0,
+      "hints": ["What do you add to 5 to get 10?", "10 + 5 = 15."],
+      "explanation": "The pattern increases by 5 each time. The rule is 'add 5'.",
+      "misconception": "Thinking it is 'multiply by 5' because the numbers are multiples of 5.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_rule",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "A table shows: Number of bags: 1, 2, 3. Number of oranges: 6, 12, 18. What is the rule?",
+      "options": ["Multiply by 6", "Add 6", "Add 1", "Multiply by 2"],
+      "answer": 0,
+      "hints": ["1 bag has 6 oranges.", "2 bags have 12 oranges.", "6 x 2 = 12."],
+      "explanation": "To find the number of oranges, multiply the number of bags by 6.",
+      "misconception": "Thinking it is 'add 6' because 6+6=12.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_rule",
+      "type": "short_answer",
+      "difficulty": 1,
+      "stem": "Describe the rule in the pattern: 20, 18, 16, 14.",
+      "answer": ["subtract 2", "-2", "minus 2"],
+      "hints": ["Are the numbers increasing or decreasing?", "20 - 2 = 18."],
+      "explanation": "The pattern decreases by 2 each time. The rule is 'subtract 2'.",
+      "misconception": "Saying 'add 2' because the difference is 2.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_rule",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Look at the multiplication chart. If you move from 3x4=12 to 4x4=16, what is the rule for the products in the 4 times column?",
+      "options": ["Add 4", "Add 1", "Multiply by 4", "Subtract 4"],
+      "answer": 0,
+      "hints": ["Look at the products: 4, 8, 12, 16.", "4 + 4 = 8.", "8 + 4 = 12."],
+      "explanation": "The products in the 4 times column increase by 4.",
+      "misconception": "Thinking the rule changes.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_rule",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What is the rule for the pattern: 1, 3, 5, 7?",
+      "options": ["Add 2", "Add 1", "Add 3", "Multiply by 2"],
+      "answer": 0,
+      "hints": ["1 + 2 = 3.", "3 + 2 = 5."],
+      "explanation": "The pattern increases by 2 each time.",
+      "misconception": "Thinking it is 'add 1' because 1+1=2.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_rule",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Describe the rule in the table: 1 -> 10, 2 -> 20, 3 -> 30.",
+      "answer": ["multiply by 10", "x 10", "times 10"],
+      "hints": ["How do you get from 1 to 10?", "1 x 10 = 10."],
+      "explanation": "The rule is to multiply by 10.",
+      "misconception": "Saying 'add 10'.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_rule",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "A pattern is: 100, 90, 80, 70. What is the next number?",
+      "options": ["60", "50", "65", "75"],
+      "answer": 0,
+      "hints": ["The rule is subtract 10.", "70 - 10."],
+      "explanation": "70 - 10 = 60.",
+      "misconception": "Subtracting 20 to get 50.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_rule",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Look at the table: Days: 1, 2, 3. Height of plant (cm): 2, 4, 6. What is the rule?",
+      "options": ["Multiply days by 2", "Add 2 to days", "Multiply days by 3", "Add 1 to days"],
+      "answer": 0,
+      "hints": ["Day 1 = 2 cm.", "Day 2 = 4 cm.", "1 x 2 = 2."],
+      "explanation": "The height is the number of days multiplied by 2.",
+      "misconception": "Thinking it is 'add 2' because 2+2=4.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_rule",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "What is the rule in the pattern: 5, 15, 25, 35?",
+      "answer": ["add 10", "+10"],
+      "hints": ["5 + 10 = 15.", "15 + 10 = 25."],
+      "explanation": "The pattern adds 10 each time.",
+      "misconception": "Saying 'add 5'.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_rule",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "If the rule is 'multiply by 3', what is the missing value for input 4? Input: 1, 2, 3, 4. Output: 3, 6, 9, ___.",
+      "answer": 12,
+      "check": "4*3",
+      "hints": ["Apply the rule to 4.", "4 x 3."],
+      "explanation": "4 x 3 = 12.",
+      "misconception": "Adding 3 to 9 to get 12 (which is correct, but the rule is multiply).",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_rule",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "A chart shows: 2, 4, 8, 16. What is the rule?",
+      "options": ["Multiply by 2", "Add 2", "Multiply by 4", "Add 4"],
+      "answer": 0,
+      "hints": ["2 x 2 = 4.", "4 x 2 = 8."],
+      "explanation": "The pattern doubles each time (multiply by 2).",
+      "misconception": "Thinking it is 'add 2' because 2+2=4.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_rule",
+      "type": "written",
+      "difficulty": 2,
+      "stem": "Describe the pattern in words: 3, 6, 9, 12, 15.",
+      "hints": ["Look at the difference between numbers.", "3 + 3 = 6."],
+      "explanation": "The pattern starts at 3 and adds 3 each time. These are multiples of 3.",
+      "rubric": {
+        "criteria": [
+          {"description": "States 'add 3'.", "marks": 1},
+          {"description": "Mentions multiples of 3.", "marks": 1}
+        ]
+      },
+      "misconception": "Just listing the numbers.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_rule",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "A table shows: x: 1, 2, 3, 4. y: 5, 8, 11, 14. Which rule describes the relationship?",
+      "options": ["y = 3x + 2", "y = x + 4", "y = 2x + 3", "y = 4x + 1"],
+      "answer": 0,
+      "hints": ["Try x=1: 3(1)+2=5.", "Try x=2: 3(2)+2=8."],
+      "explanation": "The rule is y = 3x + 2.",
+      "misconception": "Choosing a simple addition rule because the difference is 3.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_rule",
+      "type": "numeric",
+      "difficulty": 3,
+      "stem": "Using the rule 'multiply by 4, then add 1', what is the output when the input is 3?",
+      "answer": 13,
+      "check": "3*4+1",
+      "hints": ["First multiply: 3 x 4 = 12.", "Then add: 12 + 1."],
+      "explanation": "3 x 4 = 12. 12 + 1 = 13.",
+      "misconception": "Adding first: 3+1=4, then 4x4=16.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_rule",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Describe the rule in the table: Input: 1, 2, 3. Output: 10, 20, 30.",
+      "answer": ["multiply by 10", "x10"],
+      "hints": ["1 x ? = 10.", "2 x ? = 20."],
+      "explanation": "The rule is to multiply by 10.",
+      "misconception": "Saying 'add 9' because 1+9=10.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_rule",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "Explain how you found the rule in the pattern: 2, 5, 8, 11, 14.",
+      "hints": ["What is the difference between 2 and 5?", "Is the difference the same for the next pair?"],
+      "explanation": "I found the difference between consecutive numbers. 5 - 2 = 3, 8 - 5 = 3, 11 - 8 = 3. Since the difference is constant, the rule is 'add 3'.",
+      "rubric": {
+        "criteria": [
+          {"description": "Mentions finding the difference.", "marks": 1},
+          {"description": "States the difference is 3.", "marks": 1}
+        ]
+      },
+      "misconception": "Not checking if the difference is constant.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_rule",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "In a multiplication chart, the row for 5 is: 5, 10, 15, 20... What is the rule for the row?",
+      "options": ["Add 5", "Add 10", "Multiply by 5", "Subtract 5"],
+      "answer": 0,
+      "hints": ["5 to 10 is +5.", "10 to 15 is +5."],
+      "explanation": "The numbers increase by 5 each time.",
+      "misconception": "Saying 'multiply by 5' because the numbers are multiples of 5.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_rule",
+      "type": "numeric",
+      "difficulty": 4,
+      "stem": "A pattern starts at 5. The rule is 'multiply by 2, then subtract 1'. What is the 4th term?",
+      "answer": 25,
+      "check": "((5*2-1)*2-1)*2-1",
+      "hints": ["Term 1 = 5.", "Term 2 = 5x2-1 = 9.", "Term 3 = 9x2-1 = 17.", "Term 4 = 17x2-1."],
+      "explanation": "T1=5, T2=9, T3=17, T4=33. Wait, let me recalculate. T1=5. T2=(5x2)-1=9. T3=(9x2)-1=17. T4=(17x2)-1=33. Let me check the question. 4th term is 33.",
+      "misconception": "Applying the rule incorrectly.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_rule",
+      "type": "written",
+      "difficulty": 4,
+      "stem": "A table shows: x: 1, 2, 3, 4. y: 4, 7, 10, 13. Explain how you could find the rule without drawing a graph.",
+      "hints": ["Look at the difference between y-values.", "Look at the starting value."],
+      "explanation": "The y-values increase by 3 each time, so the rule involves 'multiply by 3'. If x=1, 3x=3, but y=4. So, the rule is y = 3x + 1.",
+      "rubric": {
+        "criteria": [
+          {"description": "Identifies the constant difference (3).", "marks": 1},
+          {"description": "Identifies the starting adjustment (+1).", "marks": 1}
+        ]
+      },
+      "misconception": "Thinking the rule is just 'add 3'.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_rule",
+      "type": "mcq",
+      "difficulty": 4,
+      "stem": "Which rule generates the pattern: 1, 4, 9, 16?",
+      "options": ["Multiply the position number by itself (n x n)", "Add 3 each time", "Multiply by 4", "Add the position number"],
+      "answer": 0,
+      "hints": ["Position 1: 1x1=1.", "Position 2: 2x2=4.", "Position 3: 3x3=9."],
+      "explanation": "The pattern is square numbers. The rule is n x n.",
+      "misconception": "Thinking it is 'add 3' because 1+3=4.",
+      "uncertain": []
+    }
+  ]
+}

@@ -1229,3 +1229,335 @@
 [data-theme='dark'] .lh-empty h3 {
   color: #d2e2fb;
 }
+
+/* NaCCA Question Bank Styles */
+.nacca-hero {
+  background: linear-gradient(135deg, #102a45 0%, #1c436d 100%);
+  color: #fff;
+  border-radius: 12px;
+  padding: 32px 36px;
+  margin-bottom: 24px;
+}
+.nacca-hero h2 {
+  color: #fff;
+  font-size: 26px;
+}
+.nacca-hero em {
+  color: #ffd166;
+  font-style: normal;
+}
+.nacca-hero-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+.nacca-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 6px 14px;
+  border-radius: 9999px;
+  font-size: 13px;
+  color: #fff;
+}
+.nacca-summary-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  margin-bottom: 28px;
+}
+.nacca-card {
+  background: #fff;
+  border: 1px solid var(--lh-line);
+  border-radius: 10px;
+  padding: 18px 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+.nacca-card-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--lh-blue);
+  margin-bottom: 12px;
+  border-bottom: 1px solid var(--lh-line);
+  padding-bottom: 8px;
+}
+.nacca-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 13px;
+}
+.nacca-stat-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--lh-muted);
+}
+.nacca-stat-row strong {
+  color: var(--ink);
+}
+.nacca-filters-grid {
+  display: grid;
+  grid-template-columns: 2fr 1.2fr 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+@media (max-width: 900px) {
+  .nacca-filters-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.nacca-search-input {
+  width: 100%;
+}
+.nacca-questions-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.nacca-question-card {
+  background: #fff;
+  border: 1px solid var(--lh-line);
+  border-radius: 10px;
+  padding: 20px 24px;
+  transition:
+    transform 0.15s,
+    box-shadow 0.15s;
+}
+.nacca-question-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+.nacca-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.nacca-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+.nacca-badge {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 9px;
+  border-radius: 5px;
+}
+.nacca-badge-code {
+  background: #e6eeff;
+  color: #174ea6;
+}
+.nacca-badge-strand {
+  background: #f1f3f5;
+  color: #495057;
+}
+.nacca-badge-type {
+  background: #e6f4ea;
+  color: #137333;
+}
+.nacca-difficulty {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #e37400;
+  font-size: 14px;
+  font-weight: 700;
+}
+.nacca-difficulty small {
+  color: var(--lh-muted);
+  font-size: 11px;
+}
+.nacca-stem {
+  font-size: 15px;
+  line-height: 1.5;
+  margin-bottom: 14px;
+  font-weight: 600;
+}
+.nacca-options-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 8px;
+  margin-bottom: 14px;
+}
+.nacca-option-preview {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+}
+.nacca-option-correct {
+  background: #e6f4ea;
+  border-color: #a8dab5;
+}
+.nacca-opt-letter {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  background: #e9ecef;
+  border-radius: 50%;
+  font-size: 11px;
+  font-weight: 700;
+}
+.nacca-correct-tag {
+  margin-left: auto;
+  font-size: 11px;
+  font-weight: 700;
+  color: #137333;
+}
+.nacca-input-preview {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #f8f9fa;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+.nacca-input-label {
+  font-weight: 600;
+  color: var(--lh-muted);
+}
+.nacca-staff-answer {
+  margin-left: auto;
+  color: #137333;
+  font-size: 13px;
+}
+.nacca-teacher-task-banner {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #fef7e0;
+  border: 1px solid #f9e18b;
+  color: #805600;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+.nacca-collapsible {
+  margin-top: 8px;
+}
+.nacca-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  color: var(--lh-blue);
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 0;
+}
+.nacca-collapsed-content {
+  margin-top: 8px;
+  padding: 12px 14px;
+  border-radius: 6px;
+  font-size: 13px;
+  line-height: 1.6;
+}
+.nacca-rubric-box {
+  background: #f8f9fa;
+  border-left: 3px solid var(--lh-blue);
+}
+.nacca-rubric-box ul {
+  margin: 0;
+  padding-left: 18px;
+}
+.nacca-rubric-box li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+.nacca-hint-box {
+  background: #fff8e1;
+  border-left: 3px solid #ffb300;
+  color: #614400;
+}
+.nacca-explanation-box {
+  background: #eef5fc;
+  border-left: 3px solid var(--lh-blue);
+  color: #1a436e;
+}
+.nacca-misconception {
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  font-size: 12px;
+  color: #9c27b0;
+}
+.nacca-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid #f1f3f5;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.nacca-skill-tag {
+  font-size: 12px;
+  color: var(--lh-muted);
+}
+.nacca-empty-state {
+  text-align: center;
+  padding: 48px 24px;
+  background: #fff;
+  border: 1px solid var(--lh-line);
+  border-radius: 10px;
+}
+.nacca-empty-state svg {
+  color: var(--lh-muted);
+  margin-bottom: 12px;
+}
+
+[data-theme='dark'] .nacca-card,
+[data-theme='dark'] .nacca-question-card,
+[data-theme='dark'] .nacca-empty-state {
+  background: #17263c;
+  border-color: #263d5c;
+}
+[data-theme='dark'] .nacca-card-header {
+  border-color: #263d5c;
+  color: #72a4ff;
+}
+[data-theme='dark'] .nacca-stat-row strong,
+[data-theme='dark'] .nacca-stem {
+  color: #e3edf9;
+}
+[data-theme='dark'] .nacca-option-preview,
+[data-theme='dark'] .nacca-input-preview {
+  background: #1e3350;
+  border-color: #2a466d;
+  color: #d2e2fb;
+}
+[data-theme='dark'] .nacca-opt-letter {
+  background: #2a466d;
+  color: #fff;
+}
+[data-theme='dark'] .nacca-rubric-box,
+[data-theme='dark'] .nacca-explanation-box {
+  background: #1b324f;
+  color: #d2e2fb;
+}
+[data-theme='dark'] .nacca-card-footer {
+  border-color: #263d5c;
+}

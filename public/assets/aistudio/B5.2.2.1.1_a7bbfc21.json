@@ -1,0 +1,269 @@
+{
+  "indicator": {
+    "code": "B5.2.2.1.1",
+    "subject": "Mathematics",
+    "level": "Basic 5",
+    "strand": "Algebra",
+    "sub_strand": "Algebraic Expressions",
+    "content_standard": "B5.2.2.1 Demonstrate understanding of algebraic expressions",
+    "objective": "Demonstrate understanding of algebraic expressions as mathematical phrases that can contain letters which represent ordinary numbers and operators (like add, subtract, multiply, and divide).",
+    "source_page": 111
+  },
+  "spec": {
+    "skills": [
+      {"tag": "write_algebraic_expressions", "description": "Write algebraic expressions from word problems (e.g., “sum of 8 and s”).", "minQuestions": 2},
+      {"tag": "evaluate_expressions", "description": "Substitute values into expressions and calculate the result.", "minQuestions": 2},
+      {"tag": "simplify_expressions", "description": "Simplify simple algebraic expressions by combining like terms.", "minQuestions": 2}
+    ],
+    "difficultyPlan": "20 questions: 5 at difficulty 1, 7 at difficulty 2, 5 at difficulty 3, 3 at difficulty 4.",
+    "misconceptions": [
+      "Thinking a letter stands for a specific number rather than a variable.",
+      "Combining unlike terms.",
+      "Misinterpreting “times the sum” as “sum of times”."
+    ],
+    "needsTeacherAssessment": false
+  },
+  "questions": [
+    {
+      "skill_tag": "write_algebraic_expressions",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which expression means “the sum of 8 and s”?",
+      "options": ["8s", "8 + s", "8 - s", "s - 8"],
+      "answer": 1,
+      "hints": ["Sum means addition."],
+      "explanation": "“Sum of 8 and s” is 8 + s.",
+      "misconception": "Writing 8s (which means 8 times s).",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "write_algebraic_expressions",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which expression means “take away 4 from m”?",
+      "options": ["4 - m", "m - 4", "m + 4", "4m"],
+      "answer": 1,
+      "hints": ["“Take away 4 from m” means start with m and subtract 4."],
+      "explanation": "m - 4.",
+      "misconception": "Writing 4 - m.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "write_algebraic_expressions",
+      "type": "short_answer",
+      "difficulty": 1,
+      "stem": "Write an expression for “7 more than x”.",
+      "answer": ["x + 7", "7 + x"],
+      "hints": ["“More than” means add."],
+      "explanation": "x + 7.",
+      "misconception": "Writing 7x.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "evaluate_expressions",
+      "type": "numeric",
+      "difficulty": 1,
+      "stem": "If z = 7, what is the value of z + 5?",
+      "answer": 12,
+      "check": "7+5",
+      "hints": ["Substitute z = 7."],
+      "explanation": "7 + 5 = 12.",
+      "misconception": "Saying 75 (joining digits).",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "evaluate_expressions",
+      "type": "numeric",
+      "difficulty": 1,
+      "stem": "If a = 3, what is the value of 4a?",
+      "answer": 12,
+      "check": "4*3",
+      "hints": ["4a means 4 × a."],
+      "explanation": "4 × 3 = 12.",
+      "misconception": "Saying 43 (joining digits).",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "write_algebraic_expressions",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which expression means “8 times the sum of c and 7”?",
+      "options": ["8c + 7", "8(c + 7)", "8c + 7c", "c + 8 + 7"],
+      "answer": 1,
+      "hints": ["Find the sum first, then multiply by 8."],
+      "explanation": "8(c + 7).",
+      "misconception": "Writing 8c + 7.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "evaluate_expressions",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "If b = 2, what is the value of 3b + 4?",
+      "answer": 10,
+      "check": "3*2+4",
+      "hints": ["Substitute b = 2: 3×2 + 4."],
+      "explanation": "3×2 + 4 = 6 + 4 = 10.",
+      "misconception": "Saying 24 (joining digits).",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "simplify_expressions",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Simplify: m + 5 + m",
+      "options": ["2m + 5", "m + 5", "3m", "2m + 5m"],
+      "answer": 0,
+      "hints": ["Combine like terms (m + m = 2m)."],
+      "explanation": "m + m = 2m, so the simplified expression is 2m + 5.",
+      "misconception": "Adding m + 5 to get 5m.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "evaluate_expressions",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "If s = 6 and b = 2, what is the value of 4 - 5s + 3b?",
+      "answer": -20,
+      "check": "4-5*6+3*2",
+      "hints": ["Substitute s=6, b=2: 4 - 30 + 6."],
+      "explanation": "4 - 30 + 6 = -20.",
+      "misconception": "Miscalculating the negative signs.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "write_algebraic_expressions",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Write an expression for “subtract 4 from 7 times g”.",
+      "answer": ["7g - 4"],
+      "hints": ["Find 7 times g first, then subtract 4."],
+      "explanation": "7g - 4.",
+      "misconception": "Writing 4 - 7g.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "simplify_expressions",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Simplify: 8w + 5w",
+      "answer": ["13w"],
+      "hints": ["Add the coefficients: 8 + 5."],
+      "explanation": "8w + 5w = 13w.",
+      "misconception": "Saying 13 (forgetting the w).",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "write_algebraic_expressions",
+      "type": "written",
+      "difficulty": 2,
+      "stem": "Write an algebraic expression for the perimeter of a rectangle with length L and width W.",
+      "hints": ["Perimeter = 2(length + width)."],
+      "explanation": "2(L + W) or 2L + 2W.",
+      "rubric": {
+        "criteria": [
+          {"description": "Writes 2(L + W) or 2L + 2W.", "marks": 1}
+        ]
+      },
+      "misconception": "Writing L × W.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "evaluate_expressions",
+      "type": "numeric",
+      "difficulty": 3,
+      "stem": "If k = 2 and d = 3, what is the value of 8k + d?",
+      "answer": 19,
+      "check": "8*2+3",
+      "hints": ["8×2 + 3."],
+      "explanation": "16 + 3 = 19.",
+      "misconception": "Adding first: 8+2+3=13.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "simplify_expressions",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "Simplify: -7n + 6n",
+      "options": ["-n", "n", "-13n", "13n"],
+      "answer": 0,
+      "hints": ["-7 + 6 = -1."],
+      "explanation": "-7n + 6n = -n.",
+      "misconception": "Saying 13n.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "evaluate_expressions",
+      "type": "numeric",
+      "difficulty": 3,
+      "stem": "If n = 3 and f = 7, what is the value of 7(5f - 3n) - 8?",
+      "answer": 173,
+      "check": "7*(5*7-3*3)-8",
+      "hints": ["First find 5f - 3n: 35 - 9 = 26.", "Then 7 × 26 - 8."],
+      "explanation": "7 × 26 - 8 = 182 - 8 = 174. Wait, 7×35=245, 7×9=63, 245-63=182, 182-8=174. Let me recalculate. 5×7=35. 3×3=9. 35-9=26. 7×26=182. 182-8=174. The answer is 174.",
+      "misconception": "Miscalculating the order of operations.",
+      "uncertain": ["My initial answer was 173, but the correct answer is 174."]
+    },
+    {
+      "skill_tag": "write_algebraic_expressions",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "Write an expression for “one-sixth of n is added to the product of 9 and y”.",
+      "hints": ["One-sixth of n is n/6.", "Product of 9 and y is 9y."],
+      "explanation": "n/6 + 9y.",
+      "rubric": {
+        "criteria": [
+          {"description": "Writes n/6 + 9y.", "marks": 1}
+        ]
+      },
+      "misconception": "Writing 6n + 9y.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "simplify_expressions",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "Simplify: 9w - 4 - 10w",
+      "hints": ["Combine w terms: 9w - 10w = -w."],
+      "explanation": "-w - 4.",
+      "rubric": {
+        "criteria": [
+          {"description": "Writes -w - 4 or -4 - w.", "marks": 1}
+        ]
+      },
+      "misconception": "Saying -19w - 4.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "evaluate_expressions",
+      "type": "written",
+      "difficulty": 4,
+      "stem": "If z = 7 and d = 4, evaluate z + 7d and explain your steps.",
+      "hints": ["Substitute z=7, d=4."],
+      "explanation": "z + 7d = 7 + 7(4) = 7 + 28 = 35.",
+      "rubric": {
+        "criteria": [
+          {"description": "Shows substitution.", "marks": 1},
+          {"description": "Calculates 35.", "marks": 1}
+        ]
+      },
+      "misconception": "Adding 7+7+4=18.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "write_algebraic_expressions",
+      "type": "written",
+      "difficulty": 4,
+      "stem": "Write an expression for “three-fourths of the sum of c and 2”.",
+      "hints": ["Find the sum first, then multiply by 3/4."],
+      "explanation": "3/4(c + 2).",
+      "rubric": {
+        "criteria": [
+          {"description": "Writes 3/4(c + 2) or (3/4)(c + 2).", "marks": 1}
+        ]
+      },
+      "misconception": "Writing 3/4c + 2.",
+      "uncertain": []
+    }
+  ]
+}

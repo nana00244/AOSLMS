@@ -1,0 +1,266 @@
+{
+  "indicator": {
+    "code": "B4.1.1.4.1",
+    "subject": "Mathematics",
+    "level": "Basic 4",
+    "strand": "Number",
+    "sub_strand": "Counting, Representation & Cardinality",
+    "content_standard": "B4.1.1.4 Interpretative and positive numbers in context",
+    "objective": "Describe real life situations using positive and negative values",
+    "source_page": 34
+  },
+  "spec": {
+    "skills": [
+      {"tag": "identify_positive_negative_situations", "description": "Identify real-life situations involving positive/negative numbers.", "minQuestions": 2},
+      {"tag": "describe_movement_on_number_line", "description": "Describe movement to the right as positive and left as negative.", "minQuestions": 2}
+    ],
+    "difficultyPlan": "20 questions: 5 at difficulty 1, 7 at difficulty 2, 5 at difficulty 3, 3 at difficulty 4.",
+    "misconceptions": [
+      "Thinking you can only have positive savings.",
+      "Not recognizing zero as a neutral point.",
+      "Confusing left/right movement with up/down."
+    ],
+    "needsTeacherAssessment": false
+  },
+  "questions": [
+    {
+      "skill_tag": "identify_positive_negative_situations",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which situation represents a negative value?",
+      "options": ["Having 50 cedis in a savings account", "Owing a shopkeeper 20 cedis", "Finding 10 cedis on the ground", "Earning 100 cedis"],
+      "answer": 1,
+      "hints": ["Negative means you are below zero.", "Debt is a negative situation."],
+      "explanation": "Owing money is a debt, which is represented by a negative value.",
+      "misconception": "Thinking any money situation is positive.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_positive_negative_situations",
+      "type": "short_answer",
+      "difficulty": 1,
+      "stem": "If gaining 10 points in a game is +10, what number represents losing 5 points?",
+      "answer": ["-5", "minus 5", "negative 5"],
+      "hints": ["Losing is the opposite of gaining.", "Use a minus sign."],
+      "explanation": "Losing 5 points is represented by -5.",
+      "misconception": "Writing +5 for a loss.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_movement_on_number_line",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "On a number line, moving to the right represents which direction?",
+      "options": ["Positive", "Negative", "Zero", "Down"],
+      "answer": 0,
+      "hints": ["Right is where numbers get larger.", "Positive numbers are to the right of zero."],
+      "explanation": "Moving to the right on a number line represents positive movement.",
+      "misconception": "Thinking right is negative.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_movement_on_number_line",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "On a number line, moving to the left represents which direction?",
+      "options": ["Positive", "Negative", "Up", "Zero"],
+      "answer": 1,
+      "hints": ["Left is where numbers get smaller.", "Negative numbers are to the left of zero."],
+      "explanation": "Moving to the left represents negative movement.",
+      "misconception": "Thinking left is positive.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_positive_negative_situations",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which of these temperatures is the coldest?",
+      "options": ["+5°C", "0°C", "-5°C", "+10°C"],
+      "answer": 2,
+      "hints": ["Negative numbers are below zero.", "The further left on the number line, the colder."],
+      "explanation": "-5°C is below zero and is the coldest temperature listed.",
+      "misconception": "Thinking +10°C is the coldest because 10 is the largest number.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_positive_negative_situations",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "A fisherman is 20 metres below sea level. Write his depth as a number relative to sea level.",
+      "answer": -20,
+      "check": "0-20",
+      "hints": ["Below sea level is negative.", "Use the minus sign."],
+      "explanation": "20 metres below sea level is written as -20.",
+      "misconception": "Writing +20.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_movement_on_number_line",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "If you start at 0 and move 4 steps to the left, what number do you reach?",
+      "answer": -4,
+      "check": "0-4",
+      "hints": ["Left means subtract.", "0 minus 4."],
+      "explanation": "Moving left 4 steps from 0 gives -4.",
+      "misconception": "Reaching +4.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_movement_on_number_line",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "If you start at -2 and move 5 steps to the right, what number do you reach?",
+      "answer": 3,
+      "check": "-2+5",
+      "hints": ["Right means add.", "Start at -2 and count: -1, 0, 1, 2, 3."],
+      "explanation": "-2 + 5 = 3.",
+      "misconception": "Reaching -7.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_positive_negative_situations",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "A bank account shows a balance of -50 cedis. What does this mean?",
+      "answer": ["owe the bank 50 cedis", "debt of 50 cedis", "overdrawn by 50 cedis"],
+      "hints": ["A negative balance means you have less than zero.", "You owe the bank."],
+      "explanation": "A balance of -50 cedis means you owe the bank 50 cedis.",
+      "misconception": "Thinking you have 50 cedis saved.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_positive_negative_situations",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "A plane is flying at 10,000 feet above sea level. A submarine is at 500 feet below sea level. Which integer represents the submarine's position?",
+      "options": ["+500", "-500", "10,000", "9,500"],
+      "answer": 1,
+      "hints": ["Below sea level is negative.", "Use the minus sign."],
+      "explanation": "500 feet below sea level is represented by -500.",
+      "misconception": "Writing +500.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_movement_on_number_line",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "If a pupil starts at -3 and moves 3 steps left, where do they land?",
+      "options": ["0", "-6", "+6", "-3"],
+      "answer": 1,
+      "hints": ["Left means subtracting.", "Start at -3 and count down 3."],
+      "explanation": "-3 - 3 = -6.",
+      "misconception": "Landing on 0.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_movement_on_number_line",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "If you start at +5 and move 8 steps left, what number do you reach?",
+      "answer": -3,
+      "check": "5-8",
+      "hints": ["Moving left subtracts.", "5 - 8."],
+      "explanation": "5 - 8 = -3.",
+      "misconception": "Reaching +13.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_positive_negative_situations",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "Explain why a loss of 20 cedis can be represented as -20, while a profit of 20 cedis is +20.",
+      "hints": ["Loss means you have less money.", "Profit means you have more money."],
+      "explanation": "Profit is an increase (positive, +20). Loss is a decrease (negative, -20).",
+      "rubric": {
+        "criteria": [
+          {"description": "Explains profit as positive (+20).", "marks": 1},
+          {"description": "Explains loss as negative (-20).", "marks": 1}
+        ]
+      },
+      "misconception": "Thinking both should be positive because they are money.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_movement_on_number_line",
+      "type": "numeric",
+      "difficulty": 3,
+      "stem": "A pupil hops from -4 to +2 on a number line. How many steps did they take?",
+      "answer": 6,
+      "check": "2-(-4)",
+      "hints": ["Count from -4 to 0 (4 steps).", "Then from 0 to 2 (2 steps).", "4 + 2."],
+      "explanation": "From -4 to 0 is 4 steps, and 0 to 2 is 2 steps. Total = 6 steps.",
+      "misconception": "Subtracting 4 from 2 to get 2.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_movement_on_number_line",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "Start at -5. Move 3 steps right, then 4 steps left. Where do you land?",
+      "options": ["-6", "-2", "-4", "+2"],
+      "answer": 0,
+      "hints": ["-5 + 3 = -2.", "Then -2 - 4."],
+      "explanation": "-5 + 3 = -2. Then -2 - 4 = -6.",
+      "misconception": "Adding all moves to get -5 + 3 + 4 = +2.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_positive_negative_situations",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "Describe a real-life situation that could be represented by the number -10.",
+      "hints": ["Think about temperature, money, or elevation.", "It must be below a reference point (zero)."],
+      "explanation": "A possible answer is: The temperature dropped 10 degrees below zero (-10°C). Or, a boy owes his friend 10 cedis.",
+      "rubric": {
+        "criteria": [
+          {"description": "Gives a valid real-life situation.", "marks": 1},
+          {"description": "Explains why it is negative.", "marks": 1}
+        ]
+      },
+      "misconception": "Describing a situation that is positive.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_positive_negative_situations",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "Which of the following is true about the number zero on a number line?",
+      "options": ["It is a positive number.", "It is a negative number.", "It is neither positive nor negative.", "It is both positive and negative."],
+      "answer": 2,
+      "hints": ["Zero is the starting point.", "It separates positives and negatives."],
+      "explanation": "Zero is neutral; it is neither positive nor negative.",
+      "misconception": "Thinking 0 is positive.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_movement_on_number_line",
+      "type": "numeric",
+      "difficulty": 4,
+      "stem": "A bird is flying at +15 m. It dives 20 m. What is its new height relative to sea level?",
+      "answer": -5,
+      "check": "15-20",
+      "hints": ["Start at +15.", "Moving down is negative.", "15 - 20."],
+      "explanation": "15 - 20 = -5. The bird is now 5 metres below sea level.",
+      "misconception": "Thinking the bird is at +5.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_movement_on_number_line",
+      "type": "written",
+      "difficulty": 4,
+      "stem": "Explain why moving 5 steps left from -2 gives a different answer than moving 5 steps right from -2.",
+      "hints": ["Left means subtract, right means add.", "-2 - 5 = ?", "-2 + 5 = ?"],
+      "explanation": "Moving 5 steps left from -2 gives -7 (-2 - 5 = -7). Moving 5 steps right gives +3 (-2 + 5 = 3). The directions are opposites, so the results are different.",
+      "rubric": {
+        "criteria": [
+          {"description": "Calculates -7 for moving left.", "marks": 1},
+          {"description": "Calculates +3 for moving right.", "marks": 1},
+          {"description": "Explains that left and right are opposite directions.", "marks": 1}
+        ]
+      },
+      "misconception": "Thinking both moves give the same result.",
+      "uncertain": []
+    }
+  ]
+}

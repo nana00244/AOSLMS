@@ -1,0 +1,275 @@
+{
+  "indicator": {
+    "code": "B5.3.2.1.1",
+    "subject": "Science",
+    "level": "Basic 5",
+    "strand": "SYSTEMS",
+    "sub_strand": "The Solar System",
+    "content_standard": "B5.3.2.1 Show understanding of the orderliness of the sun, planets and satellites in the solar system, as well as the important role of the sun in the existence of the solar system",
+    "objective": "Identify the components of the solar system (sun, earth, moon, other planets, satellite)",
+    "source_page": 45
+  },
+  "spec": {
+    "skills": [
+      {"tag": "identify_components", "description": "Name the main components of the solar system: sun, planets (including earth), moon, satellites.", "minQuestions": 4},
+      {"tag": "sun_centre", "description": "Recognise that the sun is at the centre of the solar system and is the largest body.", "minQuestions": 3},
+      {"tag": "planets_orbit", "description": "Recognise that planets move around the sun.", "minQuestions": 3},
+      {"tag": "earth_as_planet", "description": "Recognise that the earth is one of the planets that moves around the sun.", "minQuestions": 3},
+      {"tag": "moon_as_satellite", "description": "Recognise that the moon is a satellite of the earth.", "minQuestions": 4},
+      {"tag": "order_of_planets", "description": "Recognise the order of planets from the sun (at least the first four: Mercury, Venus, Earth, Mars).", "minQuestions": 3}
+    ],
+    "difficultyPlan": "20 questions total — Difficulty 1: 5; Difficulty 2: 7; Difficulty 3: 5; Difficulty 4: 3.",
+    "misconceptions": [
+      "The earth is at the centre of the solar system.",
+      "The moon is a planet.",
+      "The sun is a planet.",
+      "Satellites are only man-made.",
+      "The earth does not move.",
+      "All planets are the same size."
+    ],
+    "needsTeacherAssessment": true
+  },
+  "questions": [
+    {
+      "skill_tag": "identify_components",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which of these is NOT a component of the solar system?",
+      "options": ["The sun", "The earth", "The moon", "A car"],
+      "answer": 3,
+      "hints": ["Which one is made by humans and does not orbit the sun?", "A car stays on the ground."],
+      "explanation": "A car is not a component of the solar system. The sun, earth and moon are all parts of the solar system.",
+      "misconception": "Anything in the sky is part of the solar system.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_components",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which of these is a planet?",
+      "options": ["The sun", "The moon", "Mars", "A star"],
+      "answer": 2,
+      "hints": ["Planets move around the sun.", "Mars is one of the planets."],
+      "explanation": "Mars is a planet. The sun is a star, and the moon is a satellite of the earth.",
+      "misconception": "The moon is a planet.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_components",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Name two components of the solar system.",
+      "answer": ["sun and earth", "sun and moon", "earth and moon", "planets and satellites"],
+      "hints": ["Think of the biggest object and the one we live on.", "Think of what moves around the earth."],
+      "explanation": "The solar system includes the sun, planets (like earth), and satellites (like the moon).",
+      "misconception": "Only the sun is in the solar system.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_components",
+      "type": "drawing",
+      "difficulty": 3,
+      "stem": "Draw a simple diagram of the solar system. Show the sun at the centre, the earth, the moon, and at least two other planets. Label the sun, earth, moon and one other planet.",
+      "rubric": {
+        "criteria": [
+          {"description": "Drew the sun at the centre", "marks": 1},
+          {"description": "Drew the earth and the moon", "marks": 1},
+          {"description": "Drew at least two other planets", "marks": 1},
+          {"description": "Labeled the sun, earth, moon and one other planet", "marks": 2}
+        ]
+      },
+      "answer": "",
+      "hints": ["Put the sun in the middle.", "The earth moves around the sun.", "The moon moves around the earth."],
+      "explanation": "This is a drawing task. Your teacher will mark it using the rubric.",
+      "misconception": "The earth is at the centre of the solar system.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "sun_centre",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What is at the centre of the solar system?",
+      "options": ["The earth", "The moon", "The sun", "Mars"],
+      "answer": 2,
+      "hints": ["It is the biggest and brightest object.", "All planets move around it."],
+      "explanation": "The sun is at the centre of the solar system. All planets move around the sun.",
+      "misconception": "The earth is at the centre of the solar system.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "sun_centre",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which is the largest body in the solar system?",
+      "options": ["The earth", "The moon", "The sun", "Jupiter"],
+      "answer": 2,
+      "hints": ["It is at the centre.", "It gives light and heat to all the planets."],
+      "explanation": "The sun is the largest body in the solar system.",
+      "misconception": "The earth is the largest body.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "sun_centre",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Why is the sun important in the solar system?",
+      "answer": ["it provides light and heat to the planets", "it gives light and warmth to the solar system", "it is the source of energy for the solar system"],
+      "hints": ["What does the sun give to the planets?", "Think about light and heat."],
+      "explanation": "The sun is important because it provides light and heat energy to the planets in the solar system.",
+      "misconception": "The sun is not important.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "planets_orbit",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What do planets do in the solar system?",
+      "options": ["They stay still", "They move around the sun", "They move around the moon", "They move around each other"],
+      "answer": 1,
+      "hints": ["The sun is at the centre.", "Planets travel in paths around the sun."],
+      "explanation": "Planets move around the sun in the solar system.",
+      "misconception": "Planets do not move.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "planets_orbit",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which of these is a planet that moves around the sun?",
+      "options": ["The moon", "The sun", "Earth", "A star"],
+      "answer": 2,
+      "hints": ["We live on it.", "It is one of the planets."],
+      "explanation": "Earth is a planet that moves around the sun.",
+      "misconception": "The moon is a planet.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "planets_orbit",
+      "type": "short_answer",
+      "difficulty": 4,
+      "stem": "Explain how planets move in the solar system.",
+      "answer": ["planets move in paths around the sun", "they orbit the sun", "planets travel around the sun in circular paths"],
+      "hints": ["The sun is at the centre.", "Planets do not move in straight lines away from the sun."],
+      "explanation": "Planets move in curved paths (orbits) around the sun, which is at the centre of the solar system.",
+      "misconception": "Planets move randomly.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "earth_as_planet",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Is the earth a planet?",
+      "options": ["Yes", "No, it is a star", "No, it is a satellite", "No, it is the sun"],
+      "answer": 0,
+      "hints": ["We live on it.", "It moves around the sun."],
+      "explanation": "Yes, the earth is a planet. It moves around the sun.",
+      "misconception": "The earth is not a planet.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "earth_as_planet",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which planet do we live on?",
+      "options": ["Mars", "Venus", "Earth", "Jupiter"],
+      "answer": 2,
+      "hints": ["It is our home.", "It has water and air."],
+      "explanation": "We live on earth, which is one of the planets in the solar system.",
+      "misconception": "We live on the sun.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "earth_as_planet",
+      "type": "short_answer",
+      "difficulty": 4,
+      "stem": "Explain why earth is called a planet.",
+      "answer": ["because it moves around the sun", "it orbits the sun like the other planets", "it is a body that travels around the sun"],
+      "hints": ["What does earth do around the sun?", "It is not a star or a satellite."],
+      "explanation": "Earth is called a planet because it moves around the sun in an orbit, just like the other planets.",
+      "misconception": "Earth is a star.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "moon_as_satellite",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What is the moon?",
+      "options": ["A planet", "A star", "A satellite of the earth", "The sun"],
+      "answer": 2,
+      "hints": ["It moves around the earth.", "It shines at night."],
+      "explanation": "The moon is a satellite of the earth. It moves around the earth.",
+      "misconception": "The moon is a planet.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "moon_as_satellite",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "What does the moon move around?",
+      "options": ["The sun", "The earth", "Mars", "The stars"],
+      "answer": 1,
+      "hints": ["It is our nearest neighbour in space.", "It orbits the earth."],
+      "explanation": "The moon moves around the earth. It is a satellite of the earth.",
+      "misconception": "The moon moves around the sun.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "moon_as_satellite",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "What is a satellite?",
+      "answer": ["a body that moves around a planet", "an object that orbits a planet", "a smaller body that moves around a larger one like a planet"],
+      "hints": ["The moon is one.", "It moves around a planet."],
+      "explanation": "A satellite is a body that moves around a planet. The moon is a natural satellite of the earth.",
+      "misconception": "Satellites are only man-made.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "moon_as_satellite",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "Which of these is a natural satellite of the earth?",
+      "options": ["The sun", "The moon", "Mars", "A space station"],
+      "answer": 1,
+      "hints": ["It is not made by humans.", "It shines at night."],
+      "explanation": "The moon is a natural satellite of the earth. It was not made by humans.",
+      "misconception": "Only man-made objects are satellites.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "order_of_planets",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which planet is closest to the sun?",
+      "options": ["Earth", "Venus", "Mercury", "Mars"],
+      "answer": 2,
+      "hints": ["It is the first planet from the sun.", "It is smaller than earth."],
+      "explanation": "Mercury is the closest planet to the sun.",
+      "misconception": "Earth is the closest planet to the sun.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "order_of_planets",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "List the first four planets from the sun in order.",
+      "answer": ["mercury, venus, earth, mars", "mercury venus earth mars"],
+      "hints": ["Start with the closest planet.", "The third planet is earth."],
+      "explanation": "The first four planets from the sun are Mercury, Venus, Earth and Mars.",
+      "misconception": "Earth is the first planet.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "order_of_planets",
+      "type": "mcq",
+      "difficulty": 4,
+      "stem": "Which sequence correctly shows the order of the first four planets from the sun?",
+      "options": ["Venus, Mercury, Earth, Mars", "Mercury, Venus, Earth, Mars", "Earth, Mars, Venus, Mercury", "Mars, Earth, Venus, Mercury"],
+      "answer": 1,
+      "hints": ["Mercury is closest to the sun.", "Earth is the third planet."],
+      "explanation": "The correct order from the sun is Mercury, Venus, Earth, Mars.",
+      "misconception": "Venus is closer to the sun than Mercury.",
+      "uncertain": []
+    }
+  ]
+}

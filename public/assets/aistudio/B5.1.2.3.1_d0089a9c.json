@@ -1,0 +1,276 @@
+{
+  "indicator": {
+    "code": "B5.1.2.3.1",
+    "subject": "Science",
+    "level": "Basic 5",
+    "strand": "DIVERSITY OF MATTER",
+    "sub_strand": "Materials",
+    "content_standard": "B5.1.2.3 Understand mixtures, the types, formation, uses and ways of separating them into their components",
+    "objective": "Demonstrate formation and separation of mixtures (solid-liquid and liquid-liquid mixtures)",
+    "source_page": 41
+  },
+  "spec": {
+    "skills": [
+      {"tag": "identify_mixture_type", "description": "Recognise whether a mixture is solid-liquid or liquid-liquid.", "minQuestions": 3},
+      {"tag": "form_mixtures", "description": "Describe how to form a mixture by adding a solid to a liquid (e.g. salt in water) or mixing two liquids.", "minQuestions": 4},
+      {"tag": "solution_vs_mixture", "description": "Recognise that a solution is a mixture where the solid dissolves completely (e.g. salt in water) versus one where it does not (e.g. sand in water).", "minQuestions": 4},
+      {"tag": "separation_methods", "description": "Identify methods of separating mixtures: filtration, evaporation, sieving, separating funnel.", "minQuestions": 4},
+      {"tag": "match_method_to_mixture", "description": "Match a separation method to the correct mixture (e.g. sand + water → filtration; salt + water → evaporation; oil + water → separating funnel).", "minQuestions": 3},
+      {"tag": "recover_substance", "description": "Explain simply how to recover a substance from a mixture (e.g. salt from salt solution by evaporation).", "minQuestions": 2}
+    ],
+    "difficultyPlan": "20 questions total — Difficulty 1: 5; Difficulty 2: 7; Difficulty 3: 5; Difficulty 4: 3.",
+    "misconceptions": [
+      "Salt in water disappears forever.",
+      "Filtering separates salt from water.",
+      "Evaporation separates sand from water.",
+      "All mixtures look the same.",
+      "Oil and water form one uniform mixture.",
+      "Sieves can separate salt from water."
+    ],
+    "needsTeacherAssessment": true
+  },
+  "questions": [
+    {
+      "skill_tag": "identify_mixture_type",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What type of mixture is formed when salt is added to water?",
+      "options": ["Solid-liquid mixture", "Liquid-liquid mixture", "Gas mixture", "Solid-solid mixture"],
+      "answer": 0,
+      "hints": ["Salt is a solid and water is a liquid.", "So the mixture is solid and liquid."],
+      "explanation": "Salt and water form a solid-liquid mixture because salt is a solid and water is a liquid.",
+      "misconception": "Salt in water disappears.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_mixture_type",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What type of mixture is formed when cooking oil is mixed with water?",
+      "options": ["Solid-liquid mixture", "Liquid-liquid mixture", "Solid-solid mixture", "Gas-liquid mixture"],
+      "answer": 1,
+      "hints": ["Both oil and water are liquids.", "They are two liquids."],
+      "explanation": "Cooking oil and water form a liquid-liquid mixture because both are liquids.",
+      "misconception": "Oil and water form a solid-liquid mixture.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "form_mixtures",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "How do you form a mixture of sand and water?",
+      "options": ["Heat the sand, then add water", "Add sand to water and stir", "Freeze the water first", "Burn the sand"],
+      "answer": 1,
+      "hints": ["Just put them together.", "Stir them to mix."],
+      "explanation": "To form a mixture of sand and water, simply add sand to water and stir.",
+      "misconception": "You need heat to form a mixture.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "solution_vs_mixture",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "In which mixture does the solid dissolve completely?",
+      "options": ["Sand and water", "Salt and water", "Oil and water", "Stone and water"],
+      "answer": 1,
+      "hints": ["Which solid disappears when stirred?", "Salt dissolves."],
+      "explanation": "Salt dissolves completely in water to form a solution. Sand and stones do not dissolve.",
+      "misconception": "Sand dissolves in water.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "separation_methods",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which method is used to separate sand from water?",
+      "options": ["Evaporation", "Filtration", "Sieving", "Separating funnel"],
+      "answer": 1,
+      "hints": ["Sand is solid and does not dissolve.", "You can pour the mixture through a filter."],
+      "explanation": "Filtration is used to separate sand from water. The filter traps the sand while the water passes through.",
+      "misconception": "Evaporation separates sand from water.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "solution_vs_mixture",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "A pupil adds salt to water and stirs. The salt disappears. What has happened?",
+      "options": ["The salt has vanished forever", "The salt has dissolved in the water to form a solution", "The salt has turned into water", "The salt has sunk to the bottom"],
+      "answer": 1,
+      "hints": ["The salt is still there but you cannot see it.", "It has dissolved."],
+      "explanation": "The salt has dissolved in the water to form a solution. It is still there, just mixed evenly.",
+      "misconception": "Salt in water disappears forever.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "separation_methods",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which method is best for separating a mixture of salt and water?",
+      "options": ["Filtration", "Evaporation", "Sieving", "Separating funnel"],
+      "answer": 1,
+      "hints": ["Salt is dissolved in the water.", "If you boil the water away, the salt is left behind."],
+      "explanation": "Evaporation is used to separate salt from water. When the water evaporates, the salt is left behind.",
+      "misconception": "Filtering separates salt from water.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "form_mixtures",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which of these pairs forms a mixture where the solid does NOT dissolve?",
+      "options": ["Sugar and water", "Salt and water", "Sand and water", "Soft drink powder and water"],
+      "answer": 2,
+      "hints": ["Which solid stays visible in the water?", "Sand does not dissolve."],
+      "explanation": "Sand does not dissolve in water. It forms a mixture where the solid can be seen.",
+      "misconception": "All solids dissolve in water.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "match_method_to_mixture",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which method is used to separate a mixture of cooking oil and water?",
+      "options": ["Evaporation", "Filtration", "Separating funnel", "Sieving"],
+      "answer": 2,
+      "hints": ["Oil and water form layers.", "A separating funnel lets you drain one layer at a time."],
+      "explanation": "A separating funnel is used to separate cooking oil and water because they are immiscible and form layers.",
+      "misconception": "Filtration separates oil and water.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_mixture_type",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "What type of mixture is formed when sugar is added to water?",
+      "answer": ["solid-liquid mixture", "a solid-liquid mixture", "solid liquid"],
+      "hints": ["Sugar is a solid.", "Water is a liquid."],
+      "explanation": "Sugar and water form a solid-liquid mixture.",
+      "misconception": "Sugar and water form a liquid-liquid mixture.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "form_mixtures",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "How do you form a mixture of sugar and water?",
+      "answer": ["add sugar to water and stir", "put sugar into water and mix", "stir sugar into water"],
+      "hints": ["Put the solid into the liquid.", "Stir to mix."],
+      "explanation": "To form a sugar-water mixture, add sugar to water and stir until it dissolves.",
+      "misconception": "You need heat to form a sugar-water mixture.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "separation_methods",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which method would you use to separate stones from sand?",
+      "options": ["Evaporation", "Filtration", "Sieving", "Separating funnel"],
+      "answer": 2,
+      "hints": ["Stones are bigger than sand.", "A sieve can catch the big stones."],
+      "explanation": "Sieving is used to separate stones from sand. The sieve catches the stones while the sand passes through.",
+      "misconception": "Filtration separates stones from sand.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "match_method_to_mixture",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "Match the mixture to the best separation method: sand and water, salt and water, oil and water.",
+      "options": ["Sand + water → evaporation; Salt + water → filtration; Oil + water → sieving", "Sand + water → filtration; Salt + water → evaporation; Oil + water → separating funnel", "Sand + water → separating funnel; Salt + water → sieving; Oil + water → filtration", "Sand + water → sieving; Salt + water → separating funnel; Oil + water → evaporation"],
+      "answer": 1,
+      "hints": ["Sand is solid and does not dissolve.", "Salt dissolves in water.", "Oil and water form layers."],
+      "explanation": "Sand + water is separated by filtration. Salt + water is separated by evaporation. Oil + water is separated by a separating funnel.",
+      "misconception": "Any method works for any mixture.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "solution_vs_mixture",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Explain the difference between a mixture of sand and water and a mixture of salt and water.",
+      "answer": ["salt dissolves in water to form a solution, but sand does not dissolve and can be seen in the water", "in salt and water the salt dissolves, but in sand and water the sand does not dissolve", "salt dissolves but sand does not"],
+      "hints": ["Which solid dissolves?", "Which solid can still be seen?"],
+      "explanation": "Salt dissolves completely in water to form a solution. Sand does not dissolve and can still be seen in the water.",
+      "misconception": "All solids dissolve in water.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "recover_substance",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "How can you recover salt from a salt solution?",
+      "options": ["By filtering the solution", "By boiling or evaporating the water", "By sieving the solution", "By using a separating funnel"],
+      "answer": 1,
+      "hints": ["The salt is dissolved.", "What happens if you remove the water?"],
+      "explanation": "You can recover salt from a salt solution by evaporating the water. The salt is left behind.",
+      "misconception": "Filtering recovers salt from a solution.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_mixture_type",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "What type of mixture is formed when kerosene is mixed with water?",
+      "answer": ["liquid-liquid mixture", "a liquid-liquid mixture"],
+      "hints": ["Kerosene and water are both liquids.", "They do not mix."],
+      "explanation": "Kerosene and water form a liquid-liquid mixture because both are liquids.",
+      "misconception": "Kerosene and water form a solid-liquid mixture.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "recover_substance",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Explain how you would recover sand from a mixture of sand and water.",
+      "answer": ["pour the mixture through a filter so the sand is trapped and the water passes through", "use filtration to trap the sand in the filter paper", "filter the mixture to separate the sand"],
+      "hints": ["Sand is solid and does not dissolve.", "Use a filter."],
+      "explanation": "Pour the mixture through a filter. The sand is trapped by the filter, while the water passes through.",
+      "misconception": "You can recover sand by evaporation.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "match_method_to_mixture",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Which separation method would you use to separate a mixture of cooking oil and water?",
+      "answer": ["separating funnel", "a separating funnel"],
+      "hints": ["The two liquids form layers.", "Use a funnel that lets one layer out at a time."],
+      "explanation": "A separating funnel is used to separate cooking oil and water because they form separate layers.",
+      "misconception": "Filtration separates oil and water.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "solution_vs_mixture",
+      "type": "practical",
+      "difficulty": 4,
+      "stem": "In groups, you are given a mixture of sand and water. Plan and carry out an experiment to separate the sand from the water using a filter (or improvised filter). Describe what you did and what you observed.",
+      "rubric": {
+        "criteria": [
+          {"description": "Planned a simple filtration setup", "marks": 1},
+          {"description": "Carried out the filtration correctly", "marks": 2},
+          {"description": "Correctly observed that sand was trapped in the filter", "marks": 1},
+          {"description": "Correctly observed that clear water passed through", "marks": 1},
+          {"description": "Explained why the method worked", "marks": 1}
+        ]
+      },
+      "answer": "",
+      "hints": ["Use a filter paper or cloth in a funnel.", "Pour the mixture slowly.", "Look at what remains on the filter and what passes through."],
+      "explanation": "This is a practical task. Your teacher will mark it using the rubric.",
+      "misconception": "Filtering separates salt from water.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "form_mixtures",
+      "type": "mcq",
+      "difficulty": 4,
+      "stem": "A pupil wants to make a mixture where the solid can be easily separated by filtration. Which mixture should the pupil make?",
+      "options": ["Salt and water", "Sugar and water", "Sand and water", "Soft drink powder and water"],
+      "answer": 2,
+      "hints": ["The solid must not dissolve.", "Which solid stays visible?"],
+      "explanation": "Sand and water make a mixture where the solid does not dissolve and can be separated by filtration. Salt, sugar and soft drink powder dissolve in water.",
+      "misconception": "Filtration separates dissolved solids.",
+      "uncertain": []
+    }
+  ]
+}

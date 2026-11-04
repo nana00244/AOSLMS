@@ -1,0 +1,50 @@
+{
+  "indicator": {
+    "code": "B1.4.2.2.1",
+    "subject": "Science",
+    "level": "Basic 1",
+    "strand": "FORCES AND ENERGY",
+    "sub_strand": "Electricity and Electronics",
+    "content_standard": "B1.4.2.2: (Document prints '4.2.2' — missing 'B1.' prefix. Full code should be B1.4.2.2.)",
+    "objective": "Know examples of common electronic devices and their uses",
+    "source_page": 31
+  },
+  "spec": {
+    "skills": [
+      {"tag": "ELEC2-IDENT", "description": "Identify common electronic devices", "minQuestions": 3},
+      {"tag": "ELEC2-USE", "description": "State the use of a given electronic device", "minQuestions": 3},
+      {"tag": "ELEC2-MATCH", "description": "Match a device to its use or to a picture", "minQuestions": 2},
+      {"tag": "ELEC2-DIFF", "description": "Recognise simple differences between two electronic devices", "minQuestions": 2}
+    ],
+    "difficultyPlan": "5x D1, 7x D2, 5x D3, 3x D4",
+    "misconceptions": [
+      "All electronic devices do the same thing.",
+      "A torch is not electronic.",
+      "A wrist watch is not electronic.",
+      "A phone is only for calling."
+    ],
+    "needsTeacherAssessment": false
+  },
+  "questions": [
+    {"skill_tag": "ELEC2-IDENT", "type": "mcq", "difficulty": 1, "stem": "Which of these is an electronic device?", "options": ["Mobile phone", "Cup", "Stone", "Broom"], "answer": 0, "hints": ["You use it to call people.", "It has a screen and buttons."], "explanation": "A mobile phone is an electronic device.", "misconception": "Pupils may think any object is an electronic device.", "uncertain": []},
+    {"skill_tag": "ELEC2-USE", "type": "mcq", "difficulty": 1, "stem": "What do we use a camera for?", "options": ["To take pictures", "To cook", "To sweep", "To wash"], "answer": 0, "hints": ["You say 'cheese' when using it.", "It captures images."], "explanation": "A camera is used to take pictures.", "misconception": "Pupils may confuse the camera with a phone.", "uncertain": []},
+    {"skill_tag": "ELEC2-USE", "type": "mcq", "difficulty": 1, "stem": "Which device do we use to call someone far away?", "options": ["Phone", "Torch", "Camera", "Watch"], "answer": 0, "hints": ["You dial a number.", "You put it to your ear."], "explanation": "We use a phone to call someone far away.", "misconception": "Pupils may think a torch is used for calling.", "uncertain": []},
+    {"skill_tag": "ELEC2-IDENT", "type": "mcq", "difficulty": 1, "stem": "Which of these is a small electronic device you wear on your wrist?", "options": ["Watch", "Shoe", "Hat", "Bag"], "answer": 0, "hints": ["It tells the time.", "It has a strap."], "explanation": "A wrist watch is an electronic device worn on the wrist to tell the time.", "misconception": "Pupils may not consider a watch electronic.", "uncertain": []},
+    {"skill_tag": "ELEC2-IDENT", "type": "mcq", "difficulty": 1, "stem": "Which of these devices gives light?", "options": ["Torch", "Phone", "Radio", "Camera"], "answer": 0, "hints": ["It uses a battery.", "You use it in the dark."], "explanation": "A torch is an electronic device that gives light.", "misconception": "Pupils may think a radio gives light.", "uncertain": []},
+    {"skill_tag": "ELEC2-MATCH", "type": "mcq", "difficulty": 2, "stem": "Match the device to its use: What is a torch used for?", "options": ["To give light", "To take pictures", "To call", "To listen to music"], "answer": 0, "hints": ["Think about the dark.", "It shines a beam."], "explanation": "A torch is used to give light.", "misconception": "Pupils may match the torch with calling.", "uncertain": []},
+    {"skill_tag": "ELEC2-USE", "type": "mcq", "difficulty": 2, "stem": "Which device is used to take pictures?", "options": ["Camera", "Torch", "Radio", "Calculator"], "answer": 0, "hints": ["It has a lens.", "You look through it."], "explanation": "A camera is used to take pictures.", "misconception": "Pupils may confuse a camera with a torch.", "uncertain": []},
+    {"skill_tag": "ELEC2-USE", "type": "mcq", "difficulty": 2, "stem": "What is the main use of a radio?", "options": ["To listen to news and music", "To take pictures", "To give light", "To call"], "answer": 0, "hints": ["You listen to it.", "It has speakers."], "explanation": "A radio is used to listen to news and music.", "misconception": "Pupils may think a radio is for watching videos.", "uncertain": []},
+    {"skill_tag": "ELEC2-IDENT", "type": "mcq", "difficulty": 2, "stem": "Which of these is an electronic device?", "options": ["Wrist watch", "Wooden spoon", "Tree", "Chair"], "answer": 0, "hints": ["It tells time.", "It might have a battery."], "explanation": "A wrist watch is an electronic device.", "misconception": "Pupils may think natural or simple wooden objects are electronic.", "uncertain": []},
+    {"skill_tag": "ELEC2-DIFF", "type": "mcq", "difficulty": 2, "stem": "How is a phone different from a camera?", "options": ["A phone can call and take pictures, a camera only takes pictures", "A camera can call and take pictures, a phone only takes pictures", "They are exactly the same", "A phone cannot take pictures"], "answer": 0, "hints": ["Can you make a call with a camera?", "What can a phone do besides taking pictures?"], "explanation": "A phone can make calls and take pictures, while a camera is mainly for taking pictures.", "misconception": "Pupils may think a phone is only for calling.", "uncertain": []},
+    {"skill_tag": "ELEC2-USE", "type": "mcq", "difficulty": 2, "stem": "Which device would you use to calculate numbers?", "options": ["Calculator", "Torch", "Camera", "Radio"], "answer": 0, "hints": ["It has numbers and a screen.", "You use it in maths."], "explanation": "A calculator is an electronic device used for calculating numbers.", "misconception": "Pupils may think a radio can calculate.", "uncertain": []},
+    {"skill_tag": "ELEC2-MATCH", "type": "mcq", "difficulty": 2, "stem": "Match the device to its use: Which device is used for listening to music?", "options": ["Radio", "Torch", "Camera", "Calculator"], "answer": 0, "hints": ["You hear sound from it.", "It has an antenna."], "explanation": "A radio is used for listening to music and news.", "misconception": "Pupils may match the camera with music.", "uncertain": []},
+    {"skill_tag": "ELEC2-DIFF", "type": "mcq", "difficulty": 3, "stem": "Why is a mobile phone called an electronic device?", "options": ["Because it uses electricity and chips to work", "Because it is made of wood", "Because it is large", "Because it cannot be used"], "answer": 0, "hints": ["It needs charging.", "It has a screen and circuits inside."], "explanation": "A mobile phone is an electronic device because it uses electricity and electronic components (chips) to work.", "misconception": "Pupils may think phones work by magic.", "uncertain": []},
+    {"skill_tag": "ELEC2-USE", "type": "mcq", "difficulty": 3, "stem": "Ama wants to take a picture of her family. Which device should she use?", "options": ["Camera", "Torch", "Radio", "Calculator"], "answer": 0, "hints": ["You say 'cheese'.", "It captures images."], "explanation": "Ama should use a camera to take a picture of her family.", "misconception": "Pupils may think a torch can take pictures.", "uncertain": []},
+    {"skill_tag": "ELEC2-IDENT", "type": "mcq", "difficulty": 3, "stem": "Which of these devices can be used to call and send messages?", "options": ["Mobile phone", "Camera", "Torch", "Radio"], "answer": 0, "hints": ["It has a keypad or touchscreen.", "You can type a text."], "explanation": "A mobile phone can be used to call and send messages.", "misconception": "Pupils may not realize phones do more than just call.", "uncertain": []},
+    {"skill_tag": "ELEC2-DIFF", "type": "mcq", "difficulty": 3, "stem": "Kwame says 'A torch is not an electronic device.' Is he right?", "options": ["No, it has a bulb and uses electricity", "Yes, it is only a light", "Yes, it uses no battery", "No, it is a piece of wood"], "answer": 0, "hints": ["What powers a torch?", "Does it have a bulb?"], "explanation": "Kwame is not right. A torch is an electronic device because it has a bulb and uses electricity from a battery.", "misconception": "Pupils may think torches are too simple to be electronic.", "uncertain": []},
+    {"skill_tag": "ELEC2-IDENT", "type": "mcq", "difficulty": 3, "stem": "Which device is used to watch cartoons?", "options": ["Television", "Torch", "Camera", "Radio"], "answer": 0, "hints": ["It has a screen.", "You sit in front of it."], "explanation": "A television is used to watch cartoons and other programmes.", "misconception": "Pupils may think a camera is used to watch cartoons.", "uncertain": []},
+    {"skill_tag": "ELEC2-USE", "type": "mcq", "difficulty": 4, "stem": "If you want to know the time, which device is best?", "options": ["Wrist watch", "Torch", "Radio", "Camera"], "answer": 0, "hints": ["You wear it on your arm.", "It tells time."], "explanation": "A wrist watch is the best device to tell the time.", "misconception": "Pupils may confuse the watch with a calculator.", "uncertain": []},
+    {"skill_tag": "ELEC2-DIFF", "type": "mcq", "difficulty": 4, "stem": "Why is a camera different from a radio?", "options": ["A camera takes pictures and a radio plays sound", "A camera plays sound and a radio takes pictures", "They are the same", "A radio takes pictures"], "answer": 0, "hints": ["What does a camera do?", "What does a radio do?"], "explanation": "A camera is for taking pictures, and a radio is for listening to sound (news/music).", "misconception": "Pupils may mix up the functions.", "uncertain": []},
+    {"skill_tag": "ELEC2-IDENT", "type": "mcq", "difficulty": 4, "stem": "Which of these is an electronic device that helps us see in the dark?", "options": ["Torch", "Camera", "Calculator", "Radio"], "answer": 0, "hints": ["It gives a beam of light.", "You use it during a power outage."], "explanation": "A torch is an electronic device that gives light to help us see in the dark.", "misconception": "Pupils may think a camera helps us see in the dark.", "uncertain": []}
+  ]
+}

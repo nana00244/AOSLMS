@@ -1,0 +1,277 @@
+{
+  "indicator": {
+    "code": "B4.3.3.3.3",
+    "subject": "Mathematics",
+    "level": "Basic 4",
+    "strand": "Geometry and Measurement",
+    "sub_strand": "Measurement (Time)",
+    "content_standard": "B4.3.3.3 Demonstrate understanding of time taken by events in minutes and hours",
+    "objective": "State dates of events and record calendar dates in a variety of formats",
+    "source_page": 65
+  },
+  "spec": {
+    "skills": [
+      {"tag": "write_dates_formats", "description": "Write dates in different formats (e.g., 28th August, 2018; 28-Aug-18; 28/08/2018).", "minQuestions": 2},
+      {"tag": "identify_event_dates", "description": "Identify dates of national events from a calendar.", "minQuestions": 2}
+    ],
+    "difficultyPlan": "20 questions: 5 at difficulty 1, 7 at difficulty 2, 5 at difficulty 3, 3 at difficulty 4.",
+    "misconceptions": [
+      "Mixing up month and day in slash format.",
+      "Not knowing national holidays.",
+      "Using the wrong month number."
+    ],
+    "needsTeacherAssessment": false
+  },
+  "questions": [
+    {
+      "skill_tag": "write_dates_formats",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which of these is a correct way to write the date 6th March 2023?",
+      "options": ["06/03/2023", "03/06/2023", "2023/03/06", "06-2023-03"],
+      "answer": 0,
+      "hints": ["Day/Month/Year format.", "6th is the day, 3rd month is March."],
+      "explanation": "06/03/2023 (Day/Month/Year).",
+      "misconception": "Writing 03/06/2023 (Month/Day/Year).",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_event_dates",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "On which date does Ghana celebrate Independence Day?",
+      "options": ["6th March", "1st July", "25th December", "1st January"],
+      "answer": 0,
+      "hints": ["Ghana's independence.", "1957."],
+      "explanation": "6th March.",
+      "misconception": "Saying 1st July (Republic Day).",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "write_dates_formats",
+      "type": "short_answer",
+      "difficulty": 1,
+      "stem": "Write '15th May 2021' in the format DD/MM/YYYY.",
+      "answer": ["15/05/2021"],
+      "hints": ["Day = 15.", "Month = 05.", "Year = 2021."],
+      "explanation": "15/05/2021.",
+      "misconception": "Writing 05/15/2021.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_event_dates",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which month is represented by the number 12 in a date?",
+      "options": ["January", "June", "December", "November"],
+      "answer": 2,
+      "hints": ["The last month of the year.", "Christmas is in this month."],
+      "explanation": "December.",
+      "misconception": "Saying November (11).",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "write_dates_formats",
+      "type": "short_answer",
+      "difficulty": 1,
+      "stem": "Write 01/01/2024 in words (e.g., 1st January 2024).",
+      "answer": ["1st january 2024", "1st january, 2024"],
+      "hints": ["01 = 1st.", "01 = January."],
+      "explanation": "1st January 2024.",
+      "misconception": "Writing 1st January 2024? That's correct. Let me rephrase to test month order. 'Write 03/04/2023 in words'.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "write_dates_formats",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which date format is written correctly?",
+      "options": ["28-Aug-18", "28/18/08", "18-28-08", "08-28-18"],
+      "answer": 0,
+      "hints": ["Look at the standard DD-MMM-YY format.", "Day-Month-Year."],
+      "explanation": "28-Aug-18 is a standard format.",
+      "misconception": "Mixing up month and day.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_event_dates",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Ghana's Republic Day is celebrated on which date?",
+      "options": ["6th March", "1st July", "4th June", "25th December"],
+      "answer": 1,
+      "hints": ["It marks the transition to a republic.", "It is in the middle of the year."],
+      "explanation": "1st July.",
+      "misconception": "Saying 6th March.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "write_dates_formats",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "In the date 14/02/2022, what is the month number?",
+      "answer": 2,
+      "check": "2",
+      "hints": ["02 is the month.", "February is the 2nd month."],
+      "explanation": "02 (February).",
+      "misconception": "Saying 14.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_event_dates",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Name the month with 28 or 29 days.",
+      "answer": ["february"],
+      "hints": ["The shortest month.", "Leap year adds a day."],
+      "explanation": "February.",
+      "misconception": "Saying April.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "write_dates_formats",
+      "type": "written",
+      "difficulty": 2,
+      "stem": "Convert the date 05/09/2024 to the format 'Day Month Year' (e.g., 5th September 2024).",
+      "hints": ["05 = 5th.", "09 = September."],
+      "explanation": "5th September 2024.",
+      "rubric": {
+        "criteria": [
+          {"description": "Writes 5th September 2024 correctly.", "marks": 1}
+        ]
+      },
+      "misconception": "Writing 9th May 2024.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_event_dates",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Farmers' Day in Ghana is celebrated on the first Friday of which month?",
+      "options": ["March", "December", "July", "January"],
+      "answer": 1,
+      "hints": ["It is at the end of the year.", "It honors agricultural workers."],
+      "explanation": "December.",
+      "misconception": "Saying July.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "write_dates_formats",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Write the date 31/12/1999 in the DD-MMM-YY format.",
+      "answer": ["31-dec-99", "31 dec 99"],
+      "hints": ["31 = day.", "Dec = December.", "99 = 1999."],
+      "explanation": "31-Dec-99.",
+      "misconception": "Writing 12-31-99.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "write_dates_formats",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "Explain the difference between DD/MM/YYYY and MM/DD/YYYY formats.",
+      "hints": ["Which comes first in each?", "Give an example."],
+      "explanation": "DD/MM/YYYY puts the day first, then the month. MM/DD/YYYY puts the month first, then the day. For example, 05/06/2023 is 5th June in DD/MM, but 6th May in MM/DD.",
+      "rubric": {
+        "criteria": [
+          {"description": "Explains day-first vs month-first.", "marks": 1},
+          {"description": "Gives an example to illustrate.", "marks": 1}
+        ]
+      },
+      "misconception": "Thinking they are the same.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_event_dates",
+      "type": "numeric",
+      "difficulty": 3,
+      "stem": "How many days are there in the month of June?",
+      "answer": 30,
+      "check": "30",
+      "hints": ["30 days has September, April, June, and November.", "June is one of them."],
+      "explanation": "June has 30 days.",
+      "misconception": "Saying 31 days.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_event_dates",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "A pupil's birthday is on 29/02/2024. Why is this date special?",
+      "options": ["It is New Year's Day.", "It is a leap year date.", "It is Independence Day.", "It is a Sunday."],
+      "answer": 1,
+      "hints": ["February 29th only happens every 4 years.", "This is called a leap year."],
+      "explanation": "29th February only exists in a leap year.",
+      "misconception": "Thinking it's a regular day.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "write_dates_formats",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "A document uses the format YYYY-MM-DD. Write the date 4th October 2023 in this format.",
+      "hints": ["Year first: 2023.", "Month: 10.", "Day: 04."],
+      "explanation": "2023-10-04.",
+      "rubric": {
+        "criteria": [
+          {"description": "Writes 2023-10-04 correctly.", "marks": 1}
+        ]
+      },
+      "misconception": "Writing 2023-04-10.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_event_dates",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "Which of these months has exactly 31 days?",
+      "options": ["April", "June", "August", "September"],
+      "answer": 2,
+      "hints": ["August is in the summer.", "30 days has September, April, June, and November."],
+      "explanation": "August has 31 days.",
+      "misconception": "Saying September.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_event_dates",
+      "type": "numeric",
+      "difficulty": 4,
+      "stem": "A pupil is 10 years old. If their birthday is on 1st January 2014, what is the current year? (Assume they just had their birthday)",
+      "answer": 2024,
+      "check": "2014+10",
+      "hints": ["Add their age to the birth year.", "2014 + 10."],
+      "explanation": "2024.",
+      "misconception": "Saying 2023.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "write_dates_formats",
+      "type": "written",
+      "difficulty": 4,
+      "stem": "A student writes a date as 11/12/2022 and another writes 12/11/2022. Could they be writing the same date? Explain.",
+      "hints": ["Consider DD/MM and MM/DD formats.", "11/12 could mean 11th December or 12th November."],
+      "explanation": "No, they represent different dates. 11/12 in DD/MM is 11th December, while 12/11 is 12th November. Unless they are using different formats and referring to the same day, the numbers swapped indicate different dates.",
+      "rubric": {
+        "criteria": [
+          {"description": "Explains the difference in formats.", "marks": 1},
+          {"description": "Concludes they are likely different dates.", "marks": 1}
+        ]
+      },
+      "misconception": "Thinking the numbers can be freely swapped.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_event_dates",
+      "type": "mcq",
+      "difficulty": 4,
+      "stem": "A festival is held on the last Friday of September. If September 1st is a Monday, what date is the festival?",
+      "options": ["26th September", "27th September", "25th September", "30th September"],
+      "answer": 0,
+      "hints": ["Sep 1 = Mon.", "Fridays: 5, 12, 19, 26."],
+      "explanation": "The Fridays are 5, 12, 19, 26. The last one is 26th September.",
+      "misconception": "Choosing 30th because it's the last day.",
+      "uncertain": []
+    }
+  ]
+}

@@ -1,0 +1,494 @@
+{
+  "indicator": {
+    "code": "B4.5.2.1.1",
+    "subject": "Science",
+    "level": "Basic 4",
+    "strand": "HUMANS AND THE ENVIRONMENT",
+    "sub_strand": "Diseases",
+    "content_standard": "Not visible in uploaded extraction (p.36). Not invented.",
+    "objective": "Identify causes, symptoms and prevention of measles",
+    "source_page": 36
+  },
+  "spec": {
+    "skills": [
+      {
+        "tag": "cause_measles",
+        "description": "Recognise that measles is caused by a germ that spreads from person to person.",
+        "minQuestions": 3
+      },
+      {
+        "tag": "symptoms_measles",
+        "description": "Identify common symptoms of measles (e.g. fever, rash, cough, red eyes).",
+        "minQuestions": 4
+      },
+      {
+        "tag": "spread_measles",
+        "description": "Describe simple ways measles spreads (e.g. coughing, sneezing, close contact).",
+        "minQuestions": 3
+      },
+      {
+        "tag": "prevention_measles",
+        "description": "Identify ways to prevent measles (e.g. vaccination, keeping away from infected persons, covering mouth when coughing).",
+        "minQuestions": 4
+      },
+      {
+        "tag": "action_if_exposed",
+        "description": "State what to do if someone is exposed to or shows signs of measles (tell an adult, see a health worker).",
+        "minQuestions": 3
+      },
+      {
+        "tag": "concept_map_poster",
+        "description": "Organise causes, symptoms and prevention of measles in a simple concept map or poster.",
+        "minQuestions": 3
+      }
+    ],
+    "difficultyPlan": "20 questions total — Difficulty 1: 5; Difficulty 2: 7; Difficulty 3: 5; Difficulty 4: 3.",
+    "misconceptions": [
+      "Measles is caused by dirty water.",
+      "Measles cannot spread from one person to another.",
+      "A rash is the only sign of measles.",
+      "Vaccination does not prevent measles.",
+      "Measles is the same as malaria.",
+      "You should hide a sick person from health workers."
+    ],
+    "needsTeacherAssessment": true
+  },
+  "questions": [
+    {
+      "skill_tag": "cause_measles",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What causes measles?",
+      "options": [
+        "A germ that spreads from person to person",
+        "Drinking dirty water",
+        "Eating too much food",
+        "Sleeping late at night"
+      ],
+      "answer": 0,
+      "hints": [
+        "Measles spreads between people.",
+        "It is caused by a tiny germ."
+      ],
+      "explanation": "Measles is caused by a germ that spreads from one person to another.",
+      "misconception": "Measles is caused by dirty water.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "symptoms_measles",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which of these is a common symptom of measles?",
+      "options": [
+        "Rash on the skin",
+        "Broken leg",
+        "Toothache",
+        "Hiccups"
+      ],
+      "answer": 0,
+      "hints": [
+        "Measles affects the skin.",
+        "A rash is a common sign."
+      ],
+      "explanation": "A rash on the skin is a common symptom of measles.",
+      "misconception": "A rash is the only sign of measles.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "spread_measles",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "How can measles spread from one person to another?",
+      "options": [
+        "Through coughing and sneezing",
+        "Through sharing a pencil",
+        "Through looking at someone",
+        "Through wearing the same colour"
+      ],
+      "answer": 0,
+      "hints": [
+        "Think about droplets from the mouth and nose.",
+        "Coughing and sneezing send germs into the air."
+      ],
+      "explanation": "Measles can spread through coughing and sneezing, which send germs into the air.",
+      "misconception": "Measles cannot spread from one person to another.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "prevention_measles",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which of these helps prevent measles?",
+      "options": [
+        "Vaccination",
+        "Eating sweets",
+        "Sleeping during the day",
+        "Playing in the sun"
+      ],
+      "answer": 0,
+      "hints": [
+        "A vaccine protects you from diseases.",
+        "Measles can be prevented by vaccination."
+      ],
+      "explanation": "Vaccination helps prevent measles by protecting the body against the germ.",
+      "misconception": "Vaccination does not prevent measles.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "action_if_exposed",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What should you do if you think someone has measles?",
+      "options": [
+        "Tell an adult and see a health worker",
+        "Hide the person",
+        "Ignore the person",
+        "Give the person sweets"
+      ],
+      "answer": 0,
+      "hints": [
+        "A health worker can help.",
+        "Tell an adult you trust."
+      ],
+      "explanation": "If someone shows signs of measles, tell an adult and see a health worker for help.",
+      "misconception": "You should hide a sick person from health workers.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "cause_measles",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Ama says, 'Measles is caused by dirty water.' What is the best correction?",
+      "options": [
+        "Yes, measles comes from dirty water",
+        "No, measles is caused by a germ that spreads from person to person",
+        "No, measles is caused by too much sun",
+        "No, measles is caused by eating too much"
+      ],
+      "answer": 1,
+      "hints": [
+        "Measles spreads between people.",
+        "It is not caused by water."
+      ],
+      "explanation": "Measles is caused by a germ that spreads from person to person, not by dirty water.",
+      "misconception": "Measles is caused by dirty water.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "symptoms_measles",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which set lists common symptoms of measles?",
+      "options": [
+        "Fever, rash, cough",
+        "Broken arm, headache, sneezing",
+        "Stomach pain, toothache, hiccups",
+        "Runny nose, earache, back pain"
+      ],
+      "answer": 0,
+      "hints": [
+        "Measles causes fever and rash.",
+        "A cough is also common."
+      ],
+      "explanation": "Common symptoms of measles include fever, rash and cough. Red eyes may also occur.",
+      "misconception": "A rash is the only sign of measles.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "spread_measles",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Why should a person with measles cover their mouth when coughing?",
+      "options": [
+        "To stop germs from spreading to others",
+        "To make their voice louder",
+        "To keep their mouth warm",
+        "To hide their face"
+      ],
+      "answer": 0,
+      "hints": [
+        "Coughing sends germs into the air.",
+        "Covering the mouth traps the germs."
+      ],
+      "explanation": "Covering the mouth when coughing helps stop the measles germs from spreading to other people.",
+      "misconception": "Measles cannot spread from one person to another.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "prevention_measles",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which of these is a way to prevent measles from spreading in a school?",
+      "options": [
+        "Keeping a sick learner away from others",
+        "Sharing water bottles",
+        "Playing close together",
+        "Sharing food"
+      ],
+      "answer": 0,
+      "hints": [
+        "Sick learners should rest at home.",
+        "Keeping away reduces spread."
+      ],
+      "explanation": "Keeping a sick learner away from others helps prevent measles from spreading in the school.",
+      "misconception": "Measles cannot spread in school.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "action_if_exposed",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Kofi sits near a learner who has measles. What should Kofi do?",
+      "options": [
+        "Tell the teacher and wash his hands",
+        "Share the learner's food",
+        "Ignore it and continue playing",
+        "Hide the sick learner"
+      ],
+      "answer": 0,
+      "hints": [
+        "Tell an adult.",
+        "Wash hands to stay clean."
+      ],
+      "explanation": "Kofi should tell the teacher and wash his hands. The teacher can then take the right steps to protect others.",
+      "misconception": "You should hide a sick person.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "symptoms_measles",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Name two symptoms of measles.",
+      "answer": [
+        "fever and rash",
+        "rash and cough",
+        "fever and red eyes",
+        "cough and red eyes"
+      ],
+      "hints": [
+        "Measles causes a skin rash.",
+        "Fever is also common."
+      ],
+      "explanation": "Common symptoms of measles include fever, rash, cough and red eyes.",
+      "misconception": "A rash is the only sign of measles.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "prevention_measles",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Give one way to prevent measles.",
+      "answer": [
+        "vaccination",
+        "get vaccinated",
+        "keep away from infected persons",
+        "cover mouth when coughing"
+      ],
+      "hints": [
+        "A vaccine protects you.",
+        "Avoid close contact with sick people."
+      ],
+      "explanation": "Measles can be prevented by vaccination, avoiding close contact with infected persons, and covering the mouth when coughing.",
+      "misconception": "Vaccination does not prevent measles.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "concept_map_poster",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "Draw a simple concept map showing the causes, symptoms and prevention of measles. Use three groups: 'Causes', 'Symptoms' and 'Prevention'. Write at least two points under each group.",
+      "rubric": {
+        "criteria": [
+          {
+            "description": "Wrote at least two correct causes of measles",
+            "marks": 2
+          },
+          {
+            "description": "Wrote at least two correct symptoms of measles",
+            "marks": 2
+          },
+          {
+            "description": "Wrote at least two correct ways to prevent measles",
+            "marks": 2
+          },
+          {
+            "description": "Organised the points clearly under the three headings",
+            "marks": 1
+          }
+        ]
+      },
+      "answer": "",
+      "hints": [
+        "Think about the germ that causes measles.",
+        "Think about fever and rash.",
+        "Think about vaccination and covering the mouth."
+      ],
+      "explanation": "This is a written task. Your teacher will mark it using the rubric.",
+      "misconception": "Measles cannot be prevented.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "cause_measles",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "What causes measles?",
+      "answer": [
+        "a germ that spreads from person to person",
+        "a germ",
+        "measles is caused by a germ"
+      ],
+      "hints": [
+        "It is a tiny living thing.",
+        "It spreads between people."
+      ],
+      "explanation": "Measles is caused by a germ that spreads from person to person.",
+      "misconception": "Measles is caused by dirty water.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "spread_measles",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Describe one way measles can spread from one person to another.",
+      "answer": [
+        "through coughing and sneezing",
+        "when an infected person coughs or sneezes near others",
+        "through droplets from the mouth or nose"
+      ],
+      "hints": [
+        "Think about droplets from the mouth.",
+        "Coughing and sneezing spread germs."
+      ],
+      "explanation": "Measles can spread through droplets from coughing and sneezing, or through close contact with an infected person.",
+      "misconception": "Measles cannot spread from one person to another.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "prevention_measles",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "A learner has measles. Which action will BEST help prevent other learners from getting it?",
+      "options": [
+        "The sick learner should stay at home and rest",
+        "The sick learner should share books with everyone",
+        "The sick learner should play close to others",
+        "The sick learner should continue to cough in class"
+      ],
+      "answer": 0,
+      "hints": [
+        "Sick learners need rest.",
+        "Staying away reduces spread."
+      ],
+      "explanation": "The sick learner should stay at home and rest. This reduces the chance of spreading measles to other learners.",
+      "misconception": "Measles cannot spread in school.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "action_if_exposed",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "What should you do if you think you have been exposed to measles?",
+      "answer": [
+        "tell an adult and see a health worker",
+        "tell a parent or teacher and visit a health centre",
+        "inform an adult and go to a health worker"
+      ],
+      "hints": [
+        "Tell someone you trust.",
+        "A health worker can help."
+      ],
+      "explanation": "If you think you have been exposed to measles, tell an adult and see a health worker for advice.",
+      "misconception": "You should hide from health workers.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "symptoms_measles",
+      "type": "mcq",
+      "difficulty": 4,
+      "stem": "A learner has a fever, a rash and red eyes. A friend says, 'It is only malaria.' Why might the friend be wrong?",
+      "options": [
+        "Because the learner has no cough",
+        "Because fever, rash and red eyes are common signs of measles",
+        "Because malaria does not cause fever",
+        "Because measles is caused by dirty water"
+      ],
+      "answer": 1,
+      "hints": [
+        "Measles causes fever, rash and red eyes.",
+        "These three signs together suggest measles."
+      ],
+      "explanation": "Fever, rash and red eyes are common signs of measles. The friend may be wrong to think it is only malaria.",
+      "misconception": "Measles is the same as malaria.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "concept_map_poster",
+      "type": "drawing",
+      "difficulty": 4,
+      "stem": "Design a simple poster to teach your class about measles. Your poster should show: (1) one cause of measles, (2) two symptoms, and (3) two ways to prevent it. Use drawings and short words.",
+      "rubric": {
+        "criteria": [
+          {
+            "description": "Showed one correct cause of measles",
+            "marks": 1
+          },
+          {
+            "description": "Showed two correct symptoms of measles",
+            "marks": 2
+          },
+          {
+            "description": "Showed two correct ways to prevent measles",
+            "marks": 2
+          },
+          {
+            "description": "Used drawings and short words clearly",
+            "marks": 1
+          }
+        ]
+      },
+      "answer": "",
+      "hints": [
+        "Use pictures of a germ, a rash, and a vaccine.",
+        "Write short words to label your drawings."
+      ],
+      "explanation": "This is a drawing task. Your teacher will mark it using the rubric.",
+      "misconception": "A rash is the only sign of measles.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "concept_map_poster",
+      "type": "written",
+      "difficulty": 4,
+      "stem": "Write a short message (3–4 sentences) for your school notice board about measles. Include what causes it, one symptom, and one way to prevent it.",
+      "rubric": {
+        "criteria": [
+          {
+            "description": "Stated one correct cause of measles",
+            "marks": 1
+          },
+          {
+            "description": "Stated one correct symptom of measles",
+            "marks": 1
+          },
+          {
+            "description": "Stated one correct way to prevent measles",
+            "marks": 1
+          },
+          {
+            "description": "Wrote in clear sentences suitable for a school notice board",
+            "marks": 1
+          }
+        ]
+      },
+      "answer": "",
+      "hints": [
+        "Start with 'Measles is caused by...'",
+        "Mention a symptom like fever or rash.",
+        "Mention vaccination or covering the mouth."
+      ],
+      "explanation": "This is a written task. Your teacher will mark it using the rubric.",
+      "misconception": "Vaccination does not prevent measles.",
+      "uncertain": []
+    }
+  ]
+}

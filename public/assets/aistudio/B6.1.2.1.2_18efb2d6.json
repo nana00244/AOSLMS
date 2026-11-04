@@ -1,0 +1,275 @@
+{
+  "indicator": {
+    "code": "B6.1.2.1.2",
+    "subject": "Science",
+    "level": "Basic 6",
+    "strand": "DIVERSITY OF MATTER",
+    "sub_strand": "Materials",
+    "content_standard": "B6.1.2.1 Recognise materials as important resources for providing human needs",
+    "objective": "Investigate the uses of metals in everyday life and link the uses to their properties",
+    "source_page": 57
+  },
+  "spec": {
+    "skills": [
+      {"tag": "identify_metal_objects", "description": "Identify everyday objects made from metals (e.g. farm tools, jewellery, cars, bridges, spoons).", "minQuestions": 3},
+      {"tag": "link_use_to_property", "description": "Explain why a metal is used for a particular purpose because of its property (e.g. copper for wires because it conducts electricity; aluminium for roofing sheets because it is malleable).", "minQuestions": 5},
+      {"tag": "property_use_match", "description": "Match a metal property to a correct everyday use.", "minQuestions": 4},
+      {"tag": "compare_metal_uses", "description": "Compare why different metals are used for different purposes.", "minQuestions": 3},
+      {"tag": "everyday_application", "description": "Give examples of metals used in the home, school and community and state their uses.", "minQuestions": 3},
+      {"tag": "importance_metals", "description": "Explain simply why metals are important in everyday life.", "minQuestions": 2}
+    ],
+    "difficultyPlan": "20 questions total — Difficulty 1: 5; Difficulty 2: 7; Difficulty 3: 5; Difficulty 4: 3.",
+    "misconceptions": [
+      "Any metal can be used for any purpose.",
+      "Metals are only used for jewellery.",
+      "Copper is used for wires because it is shiny.",
+      "Aluminium is used for roofing because it is heavy.",
+      "Metals have no link between their properties and uses.",
+      "Plastic is better than metal for all uses."
+    ],
+    "needsTeacherAssessment": true
+  },
+  "questions": [
+    {
+      "skill_tag": "identify_metal_objects",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which of these objects is made from metal?",
+      "options": ["A wooden spoon", "A metal nail", "A plastic cup", "A paper bag"],
+      "answer": 1,
+      "hints": ["Which one is shiny and hard?", "It is used in building."],
+      "explanation": "A metal nail is made from metal. It is shiny, hard and strong.",
+      "misconception": "Metals are only used for jewellery.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_metal_objects",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which of these farm tools is made from metal?",
+      "options": ["A wooden handle", "A cutlass blade", "A basket", "A raffia mat"],
+      "answer": 1,
+      "hints": ["Which part is hard and shiny?", "It is used for cutting."],
+      "explanation": "A cutlass blade is made from metal. It needs to be strong and sharp for cutting.",
+      "misconception": "Farm tools are only made of wood.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_metal_objects",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Name two objects in your home that are made from metal.",
+      "answer": ["spoon and pot", "cooking pot and knife", "door handle and spoon", "nails and cooking pot"],
+      "hints": ["Think about cooking utensils.", "Think about tools and hardware."],
+      "explanation": "Common metal objects at home include spoons, cooking pots, knives, door handles and nails.",
+      "misconception": "Metals are only used for jewellery.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "link_use_to_property",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Why is copper used to make electrical wires?",
+      "options": ["Because it is shiny", "Because it conducts electricity", "Because it is heavy", "Because it is cheap"],
+      "answer": 1,
+      "hints": ["Wires carry electricity.", "Which property allows this?"],
+      "explanation": "Copper is used for electrical wires because it conducts electricity.",
+      "misconception": "Copper is used for wires because it is shiny.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "link_use_to_property",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Why is aluminium used to make roofing sheets?",
+      "options": ["Because it is malleable and can be pressed into thin sheets", "Because it is ductile and can be drawn into wires", "Because it is shiny", "Because it is heavy"],
+      "answer": 0,
+      "hints": ["Roofing sheets are thin and flat.", "Aluminium can be pressed into sheets."],
+      "explanation": "Aluminium is malleable, so it can be pressed into thin sheets for roofing.",
+      "misconception": "Aluminium is used for roofing because it is heavy.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "link_use_to_property",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Why is copper used for electrical wires?",
+      "answer": ["because it conducts electricity", "it is a good conductor of electricity", "copper conducts electricity"],
+      "hints": ["Think about what wires do.", "Which property helps electricity flow?"],
+      "explanation": "Copper is used for electrical wires because it conducts electricity.",
+      "misconception": "Copper is used for wires because it is shiny.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "link_use_to_property",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "Why are cooking pots made from metals like aluminium?",
+      "options": ["Because metals conduct heat well", "Because metals are transparent", "Because metals are soft", "Because metals are cheap"],
+      "answer": 0,
+      "hints": ["Pots need to get hot on the fire.", "Heat passes through metals."],
+      "explanation": "Cooking pots are made from metals because metals conduct heat well, allowing food to cook evenly.",
+      "misconception": "Pots are made of metal because they are shiny.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "link_use_to_property",
+      "type": "short_answer",
+      "difficulty": 4,
+      "stem": "Why is aluminium used for making cooking pots?",
+      "answer": ["because it conducts heat well", "aluminium is a good conductor of heat", "it allows heat to pass through for cooking"],
+      "hints": ["Pots need to conduct heat.", "Aluminium is a good conductor."],
+      "explanation": "Aluminium is used for cooking pots because it is a good conductor of heat, allowing food to cook evenly.",
+      "misconception": "Pots are made of aluminium because it is shiny.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "property_use_match",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which pair correctly matches a metal property to its use?",
+      "options": ["Ductility → electrical wires", "Lustre → cooking pots", "Malleability → jewellery", "Conductivity → roofing sheets"],
+      "answer": 0,
+      "hints": ["Ductility means drawing into wires.", "Wires are made by drawing metal."],
+      "explanation": "Ductility allows metals to be drawn into wires, so it is linked to electrical wires.",
+      "misconception": "Lustre is used for cooking pots.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "property_use_match",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "Which property of metals makes them suitable for making jewellery?",
+      "options": ["Lustre", "Malleability", "Ductility", "Conductivity"],
+      "answer": 0,
+      "hints": ["Jewellery is shiny.", "It reflects light."],
+      "explanation": "Lustre (shininess) makes metals suitable for jewellery.",
+      "misconception": "Jewellery is made of metals because they are ductile.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "property_use_match",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Match the property to its use: ductility, malleability, conductivity.",
+      "answer": ["ductility - wires; malleability - sheets; conductivity - electrical wires or cooking pots", "ductility: wires, malleability: sheets, conductivity: electrical wires", "ductility for wires, malleability for sheets, conductivity for electrical wires and pots"],
+      "hints": ["Ductility = wires.", "Malleability = sheets.", "Conductivity = carrying heat or electricity."],
+      "explanation": "Ductility is used for wires, malleability for sheets, and conductivity for electrical wires and cooking pots.",
+      "misconception": "All metal properties have the same use.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "property_use_match",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "Which of these correctly links a metal property to an everyday object?",
+      "options": ["Lustre → jewellery", "Ductility → roofing sheets", "Malleability → electrical wires", "Conductivity → jewellery"],
+      "answer": 0,
+      "hints": ["Jewellery is shiny.", "Roofing sheets are flat.", "Wires are long and thin."],
+      "explanation": "Lustre (shininess) is linked to jewellery. Ductility is for wires, malleability is for sheets, and conductivity is for wires and pots.",
+      "misconception": "Ductility is for roofing sheets.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "compare_metal_uses",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "Why is copper used for electrical wires while aluminium is used for roofing sheets?",
+      "options": ["Copper conducts electricity; aluminium is malleable for sheets", "Copper is malleable; aluminium conducts electricity", "Both are used for the same reason", "Copper is shiny; aluminium is heavy"],
+      "answer": 0,
+      "hints": ["Each metal is used for a different property.", "Copper conducts electricity; aluminium can be pressed into sheets."],
+      "explanation": "Copper is used for wires because it conducts electricity. Aluminium is used for roofing sheets because it is malleable and can be pressed into thin sheets.",
+      "misconception": "All metals are used for the same reason.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "compare_metal_uses",
+      "type": "short_answer",
+      "difficulty": 4,
+      "stem": "Compare why copper is used for wires and aluminium is used for cooking pots.",
+      "answer": ["copper conducts electricity for wires, while aluminium conducts heat for cooking pots", "copper is used for wires because it conducts electricity; aluminium is used for pots because it conducts heat", "copper: electrical conductivity; aluminium: heat conductivity"],
+      "hints": ["Think about what wires and pots need to do.", "Both need conductivity, but of different types."],
+      "explanation": "Copper is used for wires because it conducts electricity. Aluminium is used for cooking pots because it conducts heat well.",
+      "misconception": "All metals are used for the same purpose.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "compare_metal_uses",
+      "type": "mcq",
+      "difficulty": 4,
+      "stem": "Two metals are available for making a cooking pot and an electrical wire. Metal A conducts heat well and is malleable. Metal B conducts electricity well and is ductile. Which metal is better for each use?",
+      "options": ["Metal A for pots, Metal B for wires", "Metal A for wires, Metal B for pots", "Both metals for both uses", "Neither metal is suitable"],
+      "answer": 0,
+      "hints": ["Pots need heat conduction.", "Wires need electrical conduction and ductility."],
+      "explanation": "Metal A is better for cooking pots because it conducts heat and is malleable. Metal B is better for wires because it conducts electricity and is ductile.",
+      "misconception": "Any metal is suitable for any purpose.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "everyday_application",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which metal object is used at school?",
+      "options": ["A metal scissors", "A plastic ruler", "A wooden desk", "A paper book"],
+      "answer": 0,
+      "hints": ["Which one is made of metal?", "It is used for cutting."],
+      "explanation": "A metal scissors is used at school for cutting paper.",
+      "misconception": "Metals are not used at school.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "everyday_application",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Give two examples of metals used in the community and state their uses.",
+      "answer": ["metal roofs for buildings, metal tools for farming", "aluminium for roofing, iron for tools", "copper for wires, iron for bridges"],
+      "hints": ["Think about buildings and tools.", "Think about bridges and wires."],
+      "explanation": "Metals are used in the community for roofs (aluminium), tools (iron), bridges (steel), and electrical wires (copper).",
+      "misconception": "Metals have no community uses.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "everyday_application",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "A bridge is built using steel. Which property makes steel suitable for this use?",
+      "options": ["It is strong and hard", "It is transparent", "It is soft", "It is lightweight"],
+      "answer": 0,
+      "hints": ["Bridges need to be strong.", "They carry heavy loads."],
+      "explanation": "Steel is used for bridges because it is strong and hard, allowing it to support heavy loads.",
+      "misconception": "Bridges are built with soft metals.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "importance_metals",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Why are metals important in everyday life?",
+      "options": ["They are used to make tools, utensils and buildings", "They are only used for decoration", "They are not useful", "They are only found in labs"],
+      "answer": 0,
+      "hints": ["Think about cooking utensils and tools.", "Metals are everywhere."],
+      "explanation": "Metals are important because they are used to make tools, utensils, buildings, wires and many other things we use daily.",
+      "misconception": "Metals are only for decoration.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "importance_metals",
+      "type": "written",
+      "difficulty": 4,
+      "stem": "Write a short paragraph (3–4 sentences) explaining why metals are important in everyday life. Include at least two examples and one property linked to a use.",
+      "rubric": {
+        "criteria": [
+          {"description": "Stated that metals are important for making tools/utensils/buildings", "marks": 1},
+          {"description": "Gave at least two correct examples of metal uses", "marks": 2},
+          {"description": "Linked one metal property to a specific use", "marks": 2},
+          {"description": "Wrote in clear sentences", "marks": 1}
+        ]
+      },
+      "answer": "",
+      "hints": ["Think about cooking pots, wires, or tools.", "Link a property like conductivity to wires."],
+      "explanation": "This is a written task. Your teacher will mark it using the rubric.",
+      "misconception": "Metals are not important.",
+      "uncertain": []
+    }
+  ]
+}

@@ -1,0 +1,268 @@
+{
+  "indicator": {
+    "code": "B6.2.1.1.1",
+    "subject": "Science",
+    "level": "Basic 6",
+    "strand": "CYCLES",
+    "sub_strand": "Earth Science",
+    "content_standard": "B6.2.1.1 Recognise the relationship between the earth and the sun",
+    "objective": "Describe the relative sizes of the earth and sun and their importance",
+    "source_page": 58
+  },
+  "spec": {
+    "skills": [
+      {"tag": "compare_sizes", "description": "Recognise that the sun is much larger than the earth.", "minQuestions": 4},
+      {"tag": "relative_size", "description": "Describe the sun as the larger body and the earth as the smaller body.", "minQuestions": 3},
+      {"tag": "importance_sun", "description": "State the importance of the sun to the earth (light, heat, energy, supports life).", "minQuestions": 4},
+      {"tag": "importance_earth", "description": "State why the earth is important (it is our home, has water and air, supports life).", "minQuestions": 3},
+      {"tag": "movement_relation", "description": "Recognise that the earth moves around the sun.", "minQuestions": 3},
+      {"tag": "predict_size_effect", "description": "Predict what would happen if the earth were bigger than the sun or if the sun were smaller.", "minQuestions": 3}
+    ],
+    "difficultyPlan": "20 questions total — Difficulty 1: 5; Difficulty 2: 7; Difficulty 3: 5; Difficulty 4: 3.",
+    "misconceptions": [
+      "The earth is bigger than the sun.",
+      "The sun and earth are the same size.",
+      "The sun is not important because it is far away.",
+      "The earth does not need the sun.",
+      "The sun moves around the earth.",
+      "Size does not affect importance."
+    ],
+    "needsTeacherAssessment": false
+  },
+  "questions": [
+    {
+      "skill_tag": "compare_sizes",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which is bigger: the sun or the earth?",
+      "options": ["The sun", "The earth", "They are the same size", "The moon"],
+      "answer": 0,
+      "hints": ["The sun is a star.", "The earth is a planet."],
+      "explanation": "The sun is much larger than the earth.",
+      "misconception": "The earth is bigger than the sun.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "compare_sizes",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which statement correctly compares the sizes of the earth and the sun?",
+      "options": ["The sun is much larger than the earth", "The earth is much larger than the sun", "They are about the same size", "The earth is larger than the moon but smaller than the sun"],
+      "answer": 0,
+      "hints": ["The sun is a star.", "Stars are usually larger than planets."],
+      "explanation": "The sun is much larger than the earth.",
+      "misconception": "The sun and earth are the same size.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "compare_sizes",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Which is larger, the earth or the sun?",
+      "answer": ["the sun", "sun"],
+      "hints": ["The sun is a star.", "It is at the centre of the solar system."],
+      "explanation": "The sun is larger than the earth.",
+      "misconception": "The earth is larger.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "compare_sizes",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "A learner says, 'The earth and the sun are the same size because they both look round.' What is the best correction?",
+      "options": ["Yes, they are the same size", "No, the sun is much larger than the earth", "No, the earth is much larger than the sun", "No, the moon is the largest"],
+      "answer": 1,
+      "hints": ["Looking round does not mean same size.", "The sun is a star, much bigger than a planet."],
+      "explanation": "The sun is much larger than the earth, even though both look round.",
+      "misconception": "The sun and earth are the same size.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "relative_size",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which body is the larger one in the earth-sun pair?",
+      "options": ["The earth", "The sun", "They are equal", "The moon"],
+      "answer": 1,
+      "hints": ["The sun is a star.", "The earth is a planet."],
+      "explanation": "The sun is the larger body; the earth is smaller.",
+      "misconception": "The earth is the larger body.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "relative_size",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Describe the relative sizes of the earth and the sun.",
+      "answer": ["the sun is much larger than the earth", "the sun is larger and the earth is smaller", "the earth is smaller than the sun"],
+      "hints": ["One is much bigger.", "The sun is the larger body."],
+      "explanation": "The sun is much larger than the earth.",
+      "misconception": "The earth is larger than the sun.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "relative_size",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "If you were to compare the earth to the sun, which statement is correct?",
+      "options": ["The earth is much smaller than the sun", "The earth is much larger than the sun", "They are the same size", "The earth is the largest body in the solar system"],
+      "answer": 0,
+      "hints": ["The sun is the largest body in the solar system.", "The earth is a planet."],
+      "explanation": "The earth is much smaller than the sun.",
+      "misconception": "The earth is the largest body.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "importance_sun",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What does the sun give to the earth?",
+      "options": ["Light and heat", "Water and soil", "Air and rocks", "Trees and animals"],
+      "answer": 0,
+      "hints": ["The sun makes you feel warm.", "It lights up the day."],
+      "explanation": "The sun gives light and heat to the earth.",
+      "misconception": "The sun is not important.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "importance_sun",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Why is the sun important to life on earth?",
+      "options": ["It provides light and heat energy", "It provides water", "It provides soil", "It provides rocks"],
+      "answer": 0,
+      "hints": ["Plants need sunlight.", "The sun gives energy."],
+      "explanation": "The sun is important because it provides light and heat energy needed for life on earth.",
+      "misconception": "The sun is not important because it is far away.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "importance_sun",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Give one reason why the sun is important to the earth.",
+      "answer": ["it provides light and heat", "it gives energy", "it helps plants grow", "it warms the earth"],
+      "hints": ["Think about light and warmth.", "Think about plants."],
+      "explanation": "The sun is important because it provides light, heat and energy for life on earth.",
+      "misconception": "The sun has no importance.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "importance_sun",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "How does the sun help plants?",
+      "options": ["It provides light for plants to make food", "It provides soil for plants", "It provides water for plants", "It provides air for plants"],
+      "answer": 0,
+      "hints": ["Plants make food using light.", "The sun gives light."],
+      "explanation": "The sun provides light, which plants use to make food.",
+      "misconception": "The sun is not important for plants.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "importance_earth",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Why is the earth important?",
+      "options": ["It is our home and supports life", "It is the largest planet", "It is the brightest object", "It is the hottest body"],
+      "answer": 0,
+      "hints": ["We live on it.", "It has water and air."],
+      "explanation": "The earth is important because it is our home and supports life.",
+      "misconception": "The earth is not important.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "importance_earth",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Why is the earth important to us?",
+      "answer": ["it is our home and supports life", "we live on it", "it has water and air for life"],
+      "hints": ["Where do we live?", "What does the earth have that supports life?"],
+      "explanation": "The earth is important because it is our home and has water and air that support life.",
+      "misconception": "The earth is not important.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "importance_earth",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "Which statement best explains why the earth is important in the earth-sun relationship?",
+      "options": ["The earth is the planet where life exists", "The earth is the largest body", "The earth produces its own light", "The earth is the centre of the solar system"],
+      "answer": 0,
+      "hints": ["Life exists on earth.", "It is our home."],
+      "explanation": "The earth is important because it is the planet where life exists.",
+      "misconception": "The earth is the centre of the solar system.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "movement_relation",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What does the earth do around the sun?",
+      "options": ["It moves around the sun", "It stays still", "It moves around the moon", "It moves around the stars"],
+      "answer": 0,
+      "hints": ["The sun is at the centre.", "The earth is a planet."],
+      "explanation": "The earth moves around the sun.",
+      "misconception": "The sun moves around the earth.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "movement_relation",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Which body moves around the other: the earth or the sun?",
+      "answer": ["the earth moves around the sun", "earth moves around the sun", "the earth orbits the sun"],
+      "hints": ["The sun is at the centre.", "The earth is a planet."],
+      "explanation": "The earth moves around the sun.",
+      "misconception": "The sun moves around the earth.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "movement_relation",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "A pupil says, 'The sun moves around the earth.' What is the best correction?",
+      "options": ["Yes, the sun moves around the earth", "No, the earth moves around the sun", "No, the moon moves around the sun", "No, both stay still"],
+      "answer": 1,
+      "hints": ["The sun is at the centre.", "The earth is a planet."],
+      "explanation": "The earth moves around the sun, not the other way round.",
+      "misconception": "The sun moves around the earth.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "predict_size_effect",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "What would happen if the earth were bigger than the sun?",
+      "options": ["The earth would not be able to move around the sun in the same way", "Nothing would change", "The sun would become bigger", "The moon would become a planet"],
+      "answer": 0,
+      "hints": ["The sun is at the centre because it is larger.", "Size affects the relationship."],
+      "explanation": "If the earth were bigger than the sun, the relationship between them would be different, and the earth would not move around the sun in the same way.",
+      "misconception": "Size does not affect importance.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "predict_size_effect",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Predict what would happen if the sun were much smaller than it is now.",
+      "answer": ["it would not be able to provide enough light and heat to the earth", "the earth would receive less light and heat", "it would not support life as it does now"],
+      "hints": ["The sun provides light and heat.", "A smaller sun would give less."],
+      "explanation": "If the sun were much smaller, it would not provide enough light and heat to support life on earth as it does now.",
+      "misconception": "Size does not matter for the sun's importance.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "predict_size_effect",
+      "type": "mcq",
+      "difficulty": 4,
+      "stem": "A learner says, 'The size of the sun does not matter because it is far away.' Is this correct?",
+      "options": ["Yes, size does not matter", "No, the sun's large size is what allows it to provide enough light and heat to the earth", "No, the sun is small", "No, the earth is larger"],
+      "answer": 1,
+      "hints": ["The sun provides light and heat.", "Its large size helps it produce and give out energy."],
+      "explanation": "The sun's large size is important because it allows it to provide enough light and heat to the earth.",
+      "misconception": "Size does not affect importance.",
+      "uncertain": []
+    }
+  ]
+}

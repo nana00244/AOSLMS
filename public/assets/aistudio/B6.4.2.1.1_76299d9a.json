@@ -1,0 +1,311 @@
+{
+  "indicator": {
+    "code": "B6.4.2.1.1",
+    "subject": "Science",
+    "level": "Basic 6",
+    "strand": "FORCES AND ENERGY",
+    "sub_strand": "Electricity and Electronics",
+    "content_standard": "B6.4.2.1 Demonstrate knowledge of generation of electricity, its transmission and transformation into other forms",
+    "objective": "Construct an electric circuit and know the functions of its components",
+    "source_page": 63
+  },
+  "spec": {
+    "skills": [
+      {"tag": "name_components", "description": "Name the basic components of an electric circuit: battery (dry cell), bulb, connecting wire, switch/key.", "minQuestions": 3},
+      {"tag": "function_components", "description": "State the function of each component (battery supplies energy, wire carries current, switch opens/closes circuit, bulb lights).", "minQuestions": 4},
+      {"tag": "construct_circuit", "description": "Connect components to build a working simple circuit (practical).", "minQuestions": 3},
+      {"tag": "draw_circuit", "description": "Draw a simple circuit diagram showing the components and their connections.", "minQuestions": 3},
+      {"tag": "recognise_complete_incomplete", "description": "Distinguish between a complete circuit and an incomplete circuit.", "minQuestions": 3},
+      {"tag": "importance_components", "description": "Explain why each component is needed for the circuit to work.", "minQuestions": 4}
+    ],
+    "difficultyPlan": "20 questions total — Difficulty 1: 5; Difficulty 2: 7; Difficulty 3: 5; Difficulty 4: 3.",
+    "misconceptions": [
+      "A bulb can light without a complete circuit.",
+      "The switch is not needed in a circuit.",
+      "The battery is not part of the circuit.",
+      "Any wire can be used in a circuit.",
+      "A circuit can work with only one wire.",
+      "The bulb lights even when the circuit is broken."
+    ],
+    "needsTeacherAssessment": true
+  },
+  "questions": [
+    {
+      "skill_tag": "name_components",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which of these is a basic component of an electric circuit?",
+      "options": ["A wooden spoon", "A battery", "A bottle of water", "A piece of cloth"],
+      "answer": 1,
+      "hints": ["Which one stores energy for the circuit?", "It has two ends, positive and negative."],
+      "explanation": "A battery is a basic component of an electric circuit. It supplies energy to make the circuit work.",
+      "misconception": "The battery is not part of the circuit.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "name_components",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which set lists only basic components of an electric circuit?",
+      "options": ["Battery, bulb, wire, switch", "Battery, spoon, wire, cup", "Bulb, paper, switch, chair", "Wire, cloth, battery, bottle"],
+      "answer": 0,
+      "hints": ["Which set has parts used in a real circuit?", "A switch, bulb, wire and battery all belong in a circuit."],
+      "explanation": "The basic components of an electric circuit are the battery, bulb, connecting wire and switch.",
+      "misconception": "Any object can be part of an electric circuit.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "name_components",
+      "type": "short_answer",
+      "difficulty": 1,
+      "stem": "Name two basic components of an electric circuit.",
+      "answer": ["battery and bulb", "bulb and switch", "wire and battery", "switch and connecting wire"],
+      "hints": ["One supplies energy.", "One lights up."],
+      "explanation": "Two basic components are the battery and the bulb. Other components include the switch and connecting wires.",
+      "misconception": "Only the bulb matters in a circuit.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "function_components",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What is the function of the battery in an electric circuit?",
+      "options": ["It lights up", "It supplies energy", "It opens and closes the circuit", "It holds the bulb"],
+      "answer": 1,
+      "hints": ["The battery stores power.", "It makes the circuit work."],
+      "explanation": "The battery supplies energy to the circuit. This energy makes the bulb light and the components work.",
+      "misconception": "The battery is not important.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "function_components",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "What is the function of the switch in an electric circuit?",
+      "options": ["It gives light", "It opens and closes the circuit", "It stores energy", "It makes the bulb hot"],
+      "answer": 1,
+      "hints": ["A switch can be on or off.", "It controls whether electricity flows."],
+      "explanation": "The switch opens and closes the circuit. When the switch is closed, electricity flows; when open, the circuit is broken.",
+      "misconception": "A switch is not needed in a circuit.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "function_components",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "What is the function of the connecting wire in an electric circuit?",
+      "answer": ["it carries electricity around the circuit", "it carries current", "it connects the components"],
+      "hints": ["Wires connect the parts.", "Electricity flows through them."],
+      "explanation": "The connecting wire carries electricity around the circuit, linking the battery, switch and bulb.",
+      "misconception": "Wires are not important in a circuit.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "function_components",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "Match the component to its function. Which pair is correct?",
+      "options": ["Bulb → supplies energy", "Switch → carries electricity", "Wire → opens and closes the circuit", "Battery → supplies energy"],
+      "answer": 3,
+      "hints": ["Which component stores power?", "Think about what each part does."],
+      "explanation": "The battery supplies energy. The bulb gives light, the switch opens/closes the circuit, and the wire carries electricity.",
+      "misconception": "The bulb supplies energy.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "recognise_complete_incomplete",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "When will a bulb in a simple circuit light up?",
+      "options": ["When the circuit is open", "When the circuit is broken", "When the circuit is complete", "When the switch is removed"],
+      "answer": 2,
+      "hints": ["Electricity needs a complete path.", "A complete circuit lets electricity flow."],
+      "explanation": "A bulb lights up only when the circuit is complete, allowing electricity to flow through it.",
+      "misconception": "A bulb lights even if the circuit is broken.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "recognise_complete_incomplete",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What happens if the connecting wire in a circuit is cut?",
+      "options": ["The bulb becomes brighter", "The bulb does not light", "The battery charges faster", "The switch works better"],
+      "answer": 1,
+      "hints": ["Electricity needs a path.", "A broken path stops electricity."],
+      "explanation": "If the wire is cut, the circuit is broken. Electricity cannot flow, so the bulb does not light.",
+      "misconception": "A bulb lights even with a broken wire.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "recognise_complete_incomplete",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "A pupil connects a battery, wire and bulb, but the bulb does not light. What is the most likely reason?",
+      "options": ["The bulb is too small", "The circuit is not complete", "The battery is too new", "The wire is too long"],
+      "answer": 1,
+      "hints": ["Electricity needs a complete path.", "Check all connections."],
+      "explanation": "The most likely reason is that the circuit is not complete. A loose connection or a gap in the circuit stops electricity from flowing.",
+      "misconception": "The bulb lights even if the circuit is broken.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "importance_components",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Why is the battery important in an electric circuit?",
+      "options": ["It supplies the energy needed to make the circuit work", "It makes the circuit look better", "It holds the bulb in place", "It opens and closes the circuit"],
+      "answer": 0,
+      "hints": ["Without energy, the circuit cannot work.", "The battery is the source of energy."],
+      "explanation": "The battery is important because it supplies the energy needed for the circuit to work.",
+      "misconception": "The battery is not needed.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "importance_components",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Why is the switch important in an electric circuit?",
+      "answer": ["it opens and closes the circuit to control the flow of electricity", "it controls whether electricity flows", "it turns the circuit on and off"],
+      "hints": ["Think about turning a light on and off.", "The switch controls the circuit."],
+      "explanation": "The switch is important because it opens and closes the circuit, controlling whether electricity flows.",
+      "misconception": "The switch is not needed.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "importance_components",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "A pupil builds a circuit with a battery, wire and bulb, but forgets the switch. What is the effect?",
+      "options": ["The bulb will not light at all", "The bulb will light but cannot be turned off easily", "The battery will explode", "The wire will melt"],
+      "answer": 1,
+      "hints": ["A switch controls the circuit.", "Without a switch, the circuit stays closed."],
+      "explanation": "Without a switch, the circuit stays closed and the bulb lights, but there is no easy way to turn it off. The switch is used to control the circuit.",
+      "misconception": "A switch is not needed in a circuit.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "importance_components",
+      "type": "short_answer",
+      "difficulty": 4,
+      "stem": "Explain why all four components (battery, wire, switch and bulb) are needed in a simple circuit.",
+      "answer": ["the battery supplies energy, the wire carries electricity, the switch controls the circuit, and the bulb shows the circuit is working by lighting up", "each part has a job: battery gives energy, wire carries current, switch controls flow, bulb lights", "all parts are needed for the circuit to work properly"],
+      "hints": ["Think about what each part does.", "Without one part, the circuit may not work."],
+      "explanation": "All four components are needed: the battery supplies energy, the wire carries electricity, the switch controls the flow, and the bulb shows that the circuit is working by lighting up.",
+      "misconception": "Some components can be left out.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "draw_circuit",
+      "type": "drawing",
+      "difficulty": 2,
+      "stem": "Draw a simple electric circuit with a battery, a bulb, and connecting wires.",
+      "rubric": {
+        "criteria": [
+          {"description": "Drew a battery in the circuit", "marks": 1},
+          {"description": "Drew a bulb in the circuit", "marks": 1},
+          {"description": "Drew connecting wires linking the components", "marks": 1},
+          {"description": "The drawing forms a complete loop (closed circuit)", "marks": 2}
+        ]
+      },
+      "answer": "",
+      "hints": ["Start with the battery.", "Connect the bulb to the battery with wires.", "The loop should be complete."],
+      "explanation": "This is a drawing task. Your teacher will mark it using the rubric.",
+      "misconception": "The circuit does not need to form a complete loop.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "draw_circuit",
+      "type": "drawing",
+      "difficulty": 3,
+      "stem": "Draw a simple circuit that includes a battery, a switch, a bulb and connecting wires. Label all four components.",
+      "rubric": {
+        "criteria": [
+          {"description": "Drew a battery and labeled it", "marks": 1},
+          {"description": "Drew a switch and labeled it", "marks": 1},
+          {"description": "Drew a bulb and labeled it", "marks": 1},
+          {"description": "Drew connecting wires and labeled them", "marks": 1},
+          {"description": "The components form a complete closed loop", "marks": 1}
+        ]
+      },
+      "answer": "",
+      "hints": ["Start with the battery.", "Add the switch and bulb.", "Connect everything in a loop."],
+      "explanation": "This is a drawing task. Your teacher will mark it using the rubric.",
+      "misconception": "Some components can be left out of the drawing.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "draw_circuit",
+      "type": "drawing",
+      "difficulty": 4,
+      "stem": "Draw a circuit diagram using symbols for a battery, a switch and a bulb. Show the switch in the open position and in the closed position.",
+      "rubric": {
+        "criteria": [
+          {"description": "Used correct symbols for battery, switch and bulb", "marks": 2},
+          {"description": "Drew the switch in the open position", "marks": 1},
+          {"description": "Drew the switch in the closed position", "marks": 1},
+          {"description": "Both diagrams form complete loops (except at the open switch)", "marks": 1}
+        ]
+      },
+      "answer": "",
+      "hints": ["Use simple symbols for each component.", "Open switch = gap in the circuit.", "Closed switch = complete circuit."],
+      "explanation": "This is a drawing task. Your teacher will mark it using the rubric.",
+      "misconception": "Open and closed switches look the same in a diagram.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "construct_circuit",
+      "type": "practical",
+      "difficulty": 2,
+      "stem": "In groups, use a battery, connecting wires and a bulb. Connect them to make the bulb light. Show your working circuit to your teacher.",
+      "rubric": {
+        "criteria": [
+          {"description": "Connected the battery, wires and bulb correctly", "marks": 2},
+          {"description": "Made the bulb light", "marks": 2},
+          {"description": "Worked safely and cooperatively in the group", "marks": 1}
+        ]
+      },
+      "answer": "",
+      "hints": ["Make sure all connections are tight.", "The circuit must be complete for the bulb to light."],
+      "explanation": "This is a practical task. Your teacher will mark it using the rubric.",
+      "misconception": "The bulb can light even if the circuit is not complete.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "construct_circuit",
+      "type": "practical",
+      "difficulty": 3,
+      "stem": "In groups, build a circuit with a battery, wire, switch and bulb. Show how the switch turns the bulb on and off.",
+      "rubric": {
+        "criteria": [
+          {"description": "Built a circuit with battery, wire, switch and bulb", "marks": 2},
+          {"description": "Showed the bulb lighting when the switch is closed", "marks": 2},
+          {"description": "Showed the bulb going off when the switch is open", "marks": 1}
+        ]
+      },
+      "answer": "",
+      "hints": ["The switch controls the circuit.", "Close the switch to let electricity flow."],
+      "explanation": "This is a practical task. Your teacher will mark it using the rubric.",
+      "misconception": "The switch is not needed in a circuit.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "construct_circuit",
+      "type": "practical",
+      "difficulty": 4,
+      "stem": "In groups, build a circuit with a battery, wire and bulb. Test different materials (e.g. a metal spoon, a plastic ruler, a piece of paper) by placing them in the circuit. Record which materials let the bulb light and which do not.",
+      "rubric": {
+        "criteria": [
+          {"description": "Built a working circuit with battery, wire and bulb", "marks": 1},
+          {"description": "Tested at least three different materials", "marks": 2},
+          {"description": "Correctly recorded which materials let the bulb light (conductors)", "marks": 2},
+          {"description": "Correctly recorded which materials did not let the bulb light (insulators)", "marks": 1}
+        ]
+      },
+      "answer": "",
+      "hints": ["Metals usually let electricity flow.", "Plastics and paper usually do not."],
+      "explanation": "This is a practical task. Your teacher will mark it using the rubric.",
+      "misconception": "All materials let electricity flow.",
+      "uncertain": []
+    }
+  ]
+}

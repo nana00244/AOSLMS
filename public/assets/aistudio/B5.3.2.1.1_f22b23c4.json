@@ -1,0 +1,296 @@
+{
+  "indicator": {
+    "code": "B5.3.2.1.1",
+    "subject": "Mathematics",
+    "level": "Basic 5",
+    "strand": "Geometry and Measurement",
+    "sub_strand": "Measurement",
+    "content_standard": "B5.3.2.1 Estimate and measure perimeter and surface area of 2-D shapes using centimetre and metre",
+    "objective": "Estimate perimeter using referents for centimetre and metre, and calculate the actual perimeter and compare.",
+    "source_page": 118
+  },
+  "spec": {
+    "skills": [
+      {"tag": "estimate_perimeter_referents", "description": "Estimate perimeter using cm/m referents (hand-span, stride).", "minQuestions": 2},
+      {"tag": "calculate_perimeter", "description": "Calculate actual perimeter using formulas or by adding sides.", "minQuestions": 2},
+      {"tag": "compare_estimate_actual", "description": "Compare estimate with actual and explain differences.", "minQuestions": 2}
+    ],
+    "difficultyPlan": "20 questions: 5 at difficulty 1, 7 at difficulty 2, 5 at difficulty 3, 3 at difficulty 4.",
+    "misconceptions": [
+      "Forgetting to measure all sides.",
+      "Confusing perimeter with area.",
+      "Using inconsistent units."
+    ],
+    "needsTeacherAssessment": true
+  },
+  "questions": [
+    {
+      "skill_tag": "estimate_perimeter_referents",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which referent is best for estimating the perimeter of a classroom?",
+      "options": ["A hand-span", "A metre rule", "A centimetre ruler", "A pencil"],
+      "answer": 1,
+      "hints": ["A classroom is several metres long."],
+      "explanation": "A metre rule is suitable for large lengths like a classroom.",
+      "misconception": "Choosing a centimetre ruler.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "estimate_perimeter_referents",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "A pupil estimates the length of a book using hand-spans. The book is 3 hand-spans long. If one hand-span is about 15 cm, what is the estimated length?",
+      "options": ["15 cm", "30 cm", "45 cm", "60 cm"],
+      "answer": 2,
+      "hints": ["3 × 15 = 45."],
+      "explanation": "3 hand-spans × 15 cm = 45 cm.",
+      "misconception": "Saying 15 cm (only one hand-span).",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "calculate_perimeter",
+      "type": "numeric",
+      "difficulty": 1,
+      "stem": "A square has sides of 6 cm. What is its perimeter?",
+      "answer": 24,
+      "check": "4*6",
+      "hints": ["Perimeter of a square = 4 × side."],
+      "explanation": "4 × 6 = 24 cm.",
+      "misconception": "Saying 12 cm (2 sides).",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "calculate_perimeter",
+      "type": "numeric",
+      "difficulty": 1,
+      "stem": "A rectangle has length 8 cm and width 5 cm. What is its perimeter?",
+      "answer": 26,
+      "check": "2*(8+5)",
+      "hints": ["Perimeter = 2(length + width)."],
+      "explanation": "2(8 + 5) = 2 × 13 = 26 cm.",
+      "misconception": "Adding only 8 + 5 = 13 cm.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "compare_estimate_actual",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "A pupil estimates the perimeter of a table as 20 hand-spans. They measure with a tape and find it is 200 cm. If one hand-span is about 10 cm, is the estimate reasonable?",
+      "options": ["Yes, because 20 × 10 = 200 cm.", "No, because 20 hand-spans is too small.", "No, because 20 hand-spans is too large."],
+      "answer": 0,
+      "hints": ["Convert the estimate to cm."],
+      "explanation": "20 × 10 = 200 cm, which matches the actual measurement.",
+      "misconception": "Thinking the estimate is not reasonable.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "estimate_perimeter_referents",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "A pupil estimates the perimeter of a door using strides. The door is 3 strides high and 2 strides wide. What is the estimated perimeter in strides?",
+      "answer": 10,
+      "check": "2*(3+2)",
+      "hints": ["Perimeter = 2(height + width)."],
+      "explanation": "2(3 + 2) = 10 strides.",
+      "misconception": "Saying 5 strides (only height+width).",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "calculate_perimeter",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "A triangle has sides of 5 cm, 7 cm, and 8 cm. What is its perimeter?",
+      "answer": 20,
+      "check": "5+7+8",
+      "hints": ["Add all three sides."],
+      "explanation": "5 + 7 + 8 = 20 cm.",
+      "misconception": "Multiplying the sides.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "calculate_perimeter",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "A square has a perimeter of 36 cm. What is the length of one side?",
+      "answer": 9,
+      "check": "36/4",
+      "hints": ["Perimeter = 4 × side, so side = perimeter ÷ 4."],
+      "explanation": "36 ÷ 4 = 9 cm.",
+      "misconception": "Saying 18 cm (dividing by 2).",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "compare_estimate_actual",
+      "type": "written",
+      "difficulty": 2,
+      "stem": "A pupil estimates the perimeter of a book as 10 hand-spans. The actual perimeter is 80 cm. If one hand-span is about 12 cm, is the estimate reasonable? Explain.",
+      "hints": ["10 × 12 = 120 cm, which is larger than 80 cm."],
+      "explanation": "The estimate is not reasonable because 10 hand-spans is about 120 cm, not 80 cm.",
+      "rubric": {
+        "criteria": [
+          {"description": "Calculates 10 × 12 = 120 cm.", "marks": 1},
+          {"description": "States it is not reasonable.", "marks": 1}
+        ]
+      },
+      "misconception": "Thinking it is reasonable because 10 is close to 8.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "estimate_perimeter_referents",
+      "type": "written",
+      "difficulty": 2,
+      "stem": "Explain how to use a metre rule to estimate the perimeter of a rectangular garden.",
+      "hints": ["Measure length and width with the metre rule."],
+      "explanation": "Use the metre rule to measure the length and width. Then calculate perimeter = 2(length + width).",
+      "rubric": {
+        "criteria": [
+          {"description": "States to measure length and width.", "marks": 1},
+          {"description": "States formula 2(length+width).", "marks": 1}
+        ]
+      },
+      "misconception": "Only measuring one side.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "calculate_perimeter",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "A rectangular field is 15 m long and 10 m wide. What is its perimeter?",
+      "answer": 50,
+      "check": "2*(15+10)",
+      "hints": ["2(15+10)."],
+      "explanation": "2(25) = 50 m.",
+      "misconception": "Saying 25 m.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "calculate_perimeter",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "A regular pentagon has sides of 7 cm. What is its perimeter?",
+      "answer": 35,
+      "check": "5*7",
+      "hints": ["A pentagon has 5 equal sides."],
+      "explanation": "5 × 7 = 35 cm.",
+      "misconception": "Saying 28 cm (4 sides).",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "compare_estimate_actual",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "A pupil estimates the perimeter of a classroom as 20 metres. The actual perimeter is 26 metres. Is the estimate reasonable? Explain.",
+      "hints": ["Compare 20 and 26."],
+      "explanation": "Yes, it is reasonably close (within 6 m). It is a good estimate.",
+      "rubric": {
+        "criteria": [
+          {"description": "States it is reasonable.", "marks": 1},
+          {"description": "Explains it is close to actual.", "marks": 1}
+        ]
+      },
+      "misconception": "Thinking it must be exact.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "calculate_perimeter",
+      "type": "numeric",
+      "difficulty": 3,
+      "stem": "A rectangle has a perimeter of 30 cm. If the length is 9 cm, what is the width?",
+      "answer": 6,
+      "check": "(30/2)-9",
+      "hints": ["30 = 2(9 + w).", "15 = 9 + w."],
+      "explanation": "Width = 15 - 9 = 6 cm.",
+      "misconception": "Saying 21 cm.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "calculate_perimeter",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "Explain how to calculate the perimeter of an irregular shape with sides 3 cm, 4 cm, 5 cm, and 6 cm.",
+      "hints": ["Add all side lengths."],
+      "explanation": "Add all four sides: 3 + 4 + 5 + 6 = 18 cm.",
+      "rubric": {
+        "criteria": [
+          {"description": "States to add all sides.", "marks": 1},
+          {"description": "Calculates 18 cm.", "marks": 1}
+        ]
+      },
+      "misconception": "Using a formula for a rectangle.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "estimate_perimeter_referents",
+      "type": "numeric",
+      "difficulty": 3,
+      "stem": "A pupil uses a 30 cm ruler to measure a table. The table is 5 rulers long. What is the estimated length?",
+      "answer": 150,
+      "check": "5*30",
+      "hints": ["5 × 30 cm."],
+      "explanation": "5 × 30 = 150 cm.",
+      "misconception": "Saying 30 cm.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "calculate_perimeter",
+      "type": "numeric",
+      "difficulty": 3,
+      "stem": "A square has a perimeter of 48 cm. What is its area?",
+      "answer": 144,
+      "check": "(48/4)^2",
+      "hints": ["Side = 48 ÷ 4 = 12 cm.", "Area = 12 × 12."],
+      "explanation": "Side = 12 cm, area = 144 cm².",
+      "misconception": "Confusing perimeter and area.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "compare_estimate_actual",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "Explain why estimating perimeter before measuring is useful.",
+      "hints": ["It gives an idea of the size."],
+      "explanation": "Estimating gives a rough idea of the size, helps check if the measured answer is reasonable, and can save time.",
+      "rubric": {
+        "criteria": [
+          {"description": "States it gives a rough idea.", "marks": 1},
+          {"description": "States it helps check reasonableness.", "marks": 1}
+        ]
+      },
+      "misconception": "Thinking estimation is unnecessary.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "calculate_perimeter",
+      "type": "written",
+      "difficulty": 4,
+      "stem": "A rectangular garden is 12 m by 8 m. A fence is to be built around it. If fencing costs 10 cedis per metre, what is the total cost?",
+      "hints": ["Find perimeter: 2(12+8)=40 m.", "Multiply by 10."],
+      "explanation": "Perimeter = 40 m. Cost = 40 × 10 = 400 cedis.",
+      "rubric": {
+        "criteria": [
+          {"description": "Calculates perimeter 40 m.", "marks": 1},
+          {"description": "Calculates cost 400 cedis.", "marks": 1}
+        ]
+      },
+      "misconception": "Using area instead of perimeter.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "compare_estimate_actual",
+      "type": "written",
+      "difficulty": 4,
+      "stem": "A pupil estimates the perimeter of a football field as 300 m using strides. The actual perimeter is 400 m. Explain why the estimate might be too low.",
+      "hints": ["Stride length may vary; they may have taken larger strides."],
+      "explanation": "If the pupil used longer strides, they would take fewer strides, giving a smaller estimate. Also, inconsistent stride length can cause errors.",
+      "rubric": {
+        "criteria": [
+          {"description": "Mentions stride length variation.", "marks": 1},
+          {"description": "Explains how this affects the estimate.", "marks": 1}
+        ]
+      },
+      "misconception": "Thinking the estimate is always accurate.",
+      "uncertain": []
+    }
+  ]
+}

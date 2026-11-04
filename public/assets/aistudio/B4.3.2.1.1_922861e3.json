@@ -1,0 +1,286 @@
+{
+  "indicator": {
+    "code": "B4.3.2.1.1",
+    "subject": "Science",
+    "level": "Basic 4",
+    "strand": "SYSTEMS",
+    "sub_strand": "The Solar System",
+    "content_standard": "B4.3.2.1 Show an understanding of the orderliness of the sun, planets and satellites in the solar system, as well as the important role of the sun in the existence of the solar system",
+    "objective": "Explain that the sun is at the centre of the solar system",
+    "source_page": 30
+  },
+  "spec": {
+    "skills": [
+      {"tag": "sun_position", "description": "State that the sun is at the centre of the solar system.", "minQuestions": 4},
+      {"tag": "planets_orbit_sun", "description": "Recognise that planets move around the sun.", "minQuestions": 4},
+      {"tag": "sun_importance", "description": "State simple benefits of the sun to the solar system (light, heat, energy for life).", "minQuestions": 4},
+      {"tag": "identify_solar_bodies", "description": "Identify the main bodies in the solar system: sun, planets, satellites.", "minQuestions": 4},
+      {"tag": "model_or_diagram", "description": "Interpret a simple diagram or model showing the sun at the centre with planets around it.", "minQuestions": 4}
+    ],
+    "difficultyPlan": "20 questions total — Difficulty 1: 5; Difficulty 2: 7; Difficulty 3: 5; Difficulty 4: 3.",
+    "misconceptions": [
+      "The earth is at the centre of the solar system.",
+      "The sun moves around the earth.",
+      "The moon is a planet.",
+      "The sun is a planet.",
+      "Satellites are only man-made objects.",
+      "The sun has no effect on life on earth."
+    ],
+    "needsTeacherAssessment": true
+  },
+  "questions": [
+    {
+      "skill_tag": "sun_position",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What is at the centre of the solar system?",
+      "options": ["The earth", "The moon", "The sun", "The stars"],
+      "answer": 2,
+      "hints": ["It is the biggest and brightest object in the solar system.", "Everything else moves around it."],
+      "explanation": "The sun is at the centre of the solar system. All the planets move around the sun.",
+      "misconception": "The earth is at the centre of the solar system.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_solar_bodies",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which of these is a planet?",
+      "options": ["The sun", "The moon", "Earth", "A star"],
+      "answer": 2,
+      "hints": ["Earth is where we live.", "Is the moon a planet? No, it moves around the earth."],
+      "explanation": "Earth is a planet. It moves around the sun. The sun is a star, and the moon is a satellite of the earth.",
+      "misconception": "The earth is at the centre of the solar system.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "sun_importance",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What does the sun give to the earth?",
+      "options": ["Light and heat", "Water and soil", "Air and rocks", "Trees and animals"],
+      "answer": 0,
+      "hints": ["The sun makes you feel warm.", "The sun lights up the day."],
+      "explanation": "The sun gives light and heat to the earth. These are important for life on earth.",
+      "misconception": "The sun has no effect on life on earth.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "planets_orbit_sun",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What do the planets do in the solar system?",
+      "options": ["They stay still.", "They move around the sun.", "They move around the moon.", "They move around the stars."],
+      "answer": 1,
+      "hints": ["The sun is at the centre.", "Planets travel in paths around the sun."],
+      "explanation": "Planets move around the sun. The sun is at the centre of the solar system.",
+      "misconception": "The sun moves around the earth.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_solar_bodies",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which of these is a satellite of the earth?",
+      "options": ["The sun", "The moon", "Mars", "A star"],
+      "answer": 1,
+      "hints": ["It shines at night.", "It moves around the earth."],
+      "explanation": "The moon is a satellite of the earth. It moves around the earth.",
+      "misconception": "The moon is a planet.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "sun_position",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "A learner says, 'The earth is at the centre of the solar system.' What is the best correction?",
+      "options": ["Yes, the earth is at the centre", "No, the sun is at the centre of the solar system", "No, the moon is at the centre", "No, the stars are at the centre"],
+      "answer": 1,
+      "hints": ["Which object is the biggest in the solar system?", "Everything else moves around the sun."],
+      "explanation": "The sun is at the centre of the solar system. The earth is one of the planets that move around the sun.",
+      "misconception": "The earth is at the centre of the solar system.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "planets_orbit_sun",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "What path does a planet follow?",
+      "options": ["It moves in a straight line away from the sun", "It stays in one place", "It moves in a curved path around the sun", "It moves towards the sun and stops"],
+      "answer": 2,
+      "hints": ["Planets do not move in straight lines.", "They go round and round the sun."],
+      "explanation": "Planets move in curved paths around the sun. This regular movement keeps them in the solar system.",
+      "misconception": "Planets move in straight lines.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "sun_importance",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Why is the sun important to plants on earth?",
+      "options": ["It gives them light to make food", "It gives them water", "It gives them soil", "It gives them air"],
+      "answer": 0,
+      "hints": ["Plants need sunlight to make food.", "The sun provides light."],
+      "explanation": "Plants need sunlight to make food. Without the sun, plants would not be able to grow.",
+      "misconception": "The sun has no effect on life on earth.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_solar_bodies",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which statement correctly identifies the bodies in the solar system?",
+      "options": ["The sun is a planet and the earth is a star", "The sun is a star and the earth is a planet", "The sun is a satellite and the moon is a star", "The earth is a satellite and the moon is a planet"],
+      "answer": 1,
+      "hints": ["The sun gives its own light — that makes it a star.", "The earth moves around the sun — that makes it a planet."],
+      "explanation": "The sun is a star because it produces its own light. The earth is a planet because it moves around the sun.",
+      "misconception": "The sun is a planet.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "planets_orbit_sun",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "What is at the centre of the solar system?",
+      "answer": ["the sun", "sun"],
+      "hints": ["It is the brightest object.", "All planets move around it."],
+      "explanation": "The sun is at the centre of the solar system.",
+      "misconception": "The earth is at the centre of the solar system.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "sun_position",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "In a model of the solar system, where should the sun be placed?",
+      "options": ["At the edge", "At the centre", "Behind the earth", "Next to the moon"],
+      "answer": 1,
+      "hints": ["The sun is the centre of the solar system.", "All planets go around it."],
+      "explanation": "In a model of the solar system, the sun should be placed at the centre, with the planets arranged around it.",
+      "misconception": "The earth should be at the centre of the model.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "sun_importance",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Give one reason why the sun is important to life on earth.",
+      "answer": ["it gives light and heat", "it provides light and warmth", "it gives energy for plants to make food", "it provides heat and light for living things"],
+      "hints": ["The sun makes you warm.", "The sun helps plants grow."],
+      "explanation": "The sun provides light and heat. It also helps plants make food, which supports life on earth.",
+      "misconception": "The sun has no effect on life on earth.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "model_or_diagram",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "A diagram shows a big yellow ball in the middle and smaller balls arranged in circles around it. What does the big yellow ball represent?",
+      "options": ["The earth", "The moon", "The sun", "A star that is not the sun"],
+      "answer": 2,
+      "hints": ["It is at the centre.", "It is the biggest object."],
+      "explanation": "The big yellow ball in the centre represents the sun. The smaller balls moving around it represent the planets.",
+      "misconception": "The earth is at the centre of the solar system.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "planets_orbit_sun",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "Why do planets stay in the solar system as they move?",
+      "options": ["Because they are tied to the sun with strings", "Because the sun's pull keeps them moving around it", "Because they are afraid to leave", "Because the moon pushes them"],
+      "answer": 1,
+      "hints": ["The sun is very big and heavy.", "It pulls objects towards it."],
+      "explanation": "The sun is very large and has a strong pull that keeps the planets moving around it. This is why they stay in the solar system.",
+      "misconception": "Planets move randomly.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_solar_bodies",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Name the three main types of bodies found in the solar system.",
+      "answer": ["sun, planets and satellites", "the sun, planets and satellites", "sun, planets, satellites"],
+      "hints": ["One is at the centre.", "One moves around the sun.", "One moves around a planet."],
+      "explanation": "The three main types of bodies in the solar system are the sun, planets and satellites.",
+      "misconception": "The moon is a planet.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "model_or_diagram",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "In a model of the solar system made with a football at the centre and small balls around it, what does the football represent?",
+      "options": ["The moon", "The earth", "The sun", "A satellite"],
+      "answer": 2,
+      "hints": ["It is at the centre.", "The small balls represent planets."],
+      "explanation": "The football at the centre represents the sun. The small balls around it represent the planets.",
+      "misconception": "The earth is at the centre of the solar system.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "sun_importance",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "What would happen to life on earth if the sun stopped giving light and heat?",
+      "options": ["Plants would grow faster", "There would be no light or warmth, and living things would struggle to survive", "The moon would take over the sun's job", "Nothing would change"],
+      "answer": 1,
+      "hints": ["Plants need sunlight.", "The sun gives heat and light."],
+      "explanation": "Without the sun's light and heat, plants could not make food, the earth would become cold and dark, and most living things would not survive.",
+      "misconception": "The sun has no effect on life on earth.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "sun_position",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "Which statement best explains why the sun is at the centre of the solar system?",
+      "options": ["Because it is the biggest object and its pull keeps the planets moving around it", "Because it is smaller than the planets", "Because it moves around the earth", "Because the moon pushes it there"],
+      "answer": 0,
+      "hints": ["The sun is the largest object in the solar system.", "Its strong pull keeps planets in their paths."],
+      "explanation": "The sun is at the centre because it is the largest object in the solar system, and its strong pull keeps the planets moving around it.",
+      "misconception": "The earth is at the centre of the solar system.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "model_or_diagram",
+      "type": "drawing",
+      "difficulty": 4,
+      "stem": "Draw a simple diagram of the solar system. Show the sun at the centre and at least four planets around it. Label the sun, one planet, and one satellite.",
+      "rubric": {
+        "criteria": [
+          {"description": "Drew the sun at the centre of the diagram", "marks": 2},
+          {"description": "Drew at least four planets around the sun", "marks": 2},
+          {"description": "Labeled the sun correctly", "marks": 1},
+          {"description": "Labeled one planet correctly", "marks": 1},
+          {"description": "Labeled one satellite (the moon) correctly", "marks": 1}
+        ]
+      },
+      "answer": "Teacher-assessed using the rubric. Expected diagram: a large circle in the centre labeled 'sun', smaller circles arranged around it labeled with planet names, and at least one smaller circle near a planet labeled 'moon' or 'satellite'.",
+      "hints": ["Put the sun in the middle.", "Planets move around the sun.", "The moon is a satellite of the earth."],
+      "explanation": "This is a drawing task. Your teacher will mark it using the rubric.",
+      "misconception": "The earth is at the centre of the solar system.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "model_or_diagram",
+      "type": "practical",
+      "difficulty": 4,
+      "stem": "In groups, use clay, blu tack, or balls of paper to build a simple model of the solar system. Place the sun at the centre and arrange the planets around it. Show where the moon (satellite) is.",
+      "rubric": {
+        "criteria": [
+          {"description": "Placed the sun at the centre of the model", "marks": 2},
+          {"description": "Arranged at least four planets around the sun", "marks": 2},
+          {"description": "Showed the moon as a satellite of the earth", "marks": 1},
+          {"description": "Worked cooperatively with group members", "marks": 1},
+          {"description": "Explained the model to the class", "marks": 1}
+        ]
+      },
+      "answer": "Teacher-assessed using the rubric. Expected model: a large central ball for the sun, smaller balls around it for planets, and a tiny ball near one planet for the moon.",
+      "hints": ["The sun is the biggest and should be in the middle.", "Planets are smaller and go around the sun.", "The moon is a satellite of the earth."],
+      "explanation": "This is a practical task. Your teacher will mark it using the rubric.",
+      "misconception": "The earth is at the centre of the solar system.",
+      "uncertain": []
+    }
+  ]
+}

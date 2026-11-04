@@ -1,0 +1,278 @@
+{
+  "indicator": {
+    "code": "B5.4.1.1.1",
+    "subject": "Science",
+    "level": "Basic 5",
+    "strand": "FORCES AND ENERGY",
+    "sub_strand": "Sources and Forms of Energy",
+    "content_standard": "B5.4.1.1 Demonstrate understanding of the concept of energy, its various forms and sources and the ways in which it can be transformed and conserved",
+    "objective": "Explain how energy is transformed from one form to another",
+    "source_page": 47
+  },
+  "spec": {
+    "skills": [
+      {"tag": "identify_energy_forms", "description": "Identify forms of energy: electrical, heat, light, sound, mechanical (movement).", "minQuestions": 4},
+      {"tag": "define_transformation", "description": "Explain that energy transformation means changing from one form to another.", "minQuestions": 3},
+      {"tag": "examples_transformation", "description": "Give examples of energy transformations in everyday devices (e.g. torch: electrical → light; radio: electrical → sound; bell: electrical → sound).", "minQuestions": 4},
+      {"tag": "trace_energy_chain", "description": "Trace a simple energy chain (e.g. sun → plant → food → human movement).", "minQuestions": 4},
+      {"tag": "school_examples", "description": "Identify energy transformations in the school (e.g. ringing bell, drumming, gong-gong).", "minQuestions": 3},
+      {"tag": "importance_transformation", "description": "Explain why energy transformation is important (it makes devices work).", "minQuestions": 2}
+    ],
+    "difficultyPlan": "20 questions total — Difficulty 1: 5; Difficulty 2: 7; Difficulty 3: 5; Difficulty 4: 3.",
+    "misconceptions": [
+      "Energy is used up and disappears completely.",
+      "Energy cannot change form.",
+      "Only electricity is energy.",
+      "A torch creates light without any energy source.",
+      "Sound is not a form of energy.",
+      "Energy transformation only happens in machines."
+    ],
+    "needsTeacherAssessment": false
+  },
+  "questions": [
+    {
+      "skill_tag": "identify_energy_forms",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which of these is a form of energy?",
+      "options": ["Light", "Sand", "Stone", "Water"],
+      "answer": 0,
+      "hints": ["Think about what the sun gives.", "It helps us see."],
+      "explanation": "Light is a form of energy. Other forms include heat, sound, electrical and mechanical energy.",
+      "misconception": "Only electricity is energy.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_energy_forms",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What form of energy does a radio produce?",
+      "options": ["Sound", "Light", "Heat", "Mechanical"],
+      "answer": 0,
+      "hints": ["You hear it.", "It plays music."],
+      "explanation": "A radio produces sound energy.",
+      "misconception": "Sound is not a form of energy.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_energy_forms",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What form of energy does a bulb give out?",
+      "options": ["Light", "Sound", "Mechanical", "Chemical"],
+      "answer": 0,
+      "hints": ["It helps you see in the dark.", "It shines."],
+      "explanation": "A bulb gives out light energy.",
+      "misconception": "Bulbs give out sound energy.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_energy_forms",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What form of energy does a moving car have?",
+      "options": ["Mechanical (movement) energy", "Sound energy only", "Light energy only", "Chemical energy only"],
+      "answer": 0,
+      "hints": ["The car is moving.", "Movement is a form of energy."],
+      "explanation": "A moving car has mechanical (movement) energy.",
+      "misconception": "Moving objects do not have energy.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "define_transformation",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What does energy transformation mean?",
+      "options": ["Energy changing from one form to another", "Energy disappearing completely", "Energy staying the same forever", "Energy being destroyed"],
+      "answer": 0,
+      "hints": ["Think about a torch: electrical to light.", "It changes form."],
+      "explanation": "Energy transformation means energy changing from one form to another.",
+      "misconception": "Energy cannot change form.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "define_transformation",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which statement best describes energy transformation?",
+      "options": ["Energy changes from one form to another", "Energy is destroyed", "Energy stays in the same form", "Energy disappears"],
+      "answer": 0,
+      "hints": ["Think about a radio.", "Electrical energy changes to sound."],
+      "explanation": "Energy transformation is the change of energy from one form to another.",
+      "misconception": "Energy disappears when used.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "define_transformation",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "What is energy transformation?",
+      "answer": ["energy changing from one form to another", "when energy changes form", "the change of energy from one form to another"],
+      "hints": ["Think about a torch.", "Electrical becomes light."],
+      "explanation": "Energy transformation is the change of energy from one form to another.",
+      "misconception": "Energy is destroyed when used.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "examples_transformation",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "A torch uses a battery. What energy transformation happens?",
+      "options": ["Electrical energy → light energy", "Light energy → electrical energy", "Sound energy → heat energy", "Heat energy → sound energy"],
+      "answer": 0,
+      "hints": ["The battery stores electrical energy.", "The bulb gives out light."],
+      "explanation": "In a torch, electrical energy from the battery is transformed into light energy.",
+      "misconception": "A torch creates light without energy.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "examples_transformation",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "What energy transformation happens when you ring an electric bell?",
+      "options": ["Electrical energy → sound energy", "Sound energy → electrical energy", "Light energy → heat energy", "Heat energy → mechanical energy"],
+      "answer": 0,
+      "hints": ["The bell makes a sound.", "Electricity powers it."],
+      "explanation": "An electric bell transforms electrical energy into sound energy.",
+      "misconception": "Sound is not a form of energy.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "examples_transformation",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "What energy transformation happens when you use an electric iron?",
+      "answer": ["electrical energy to heat energy", "electrical → heat", "electrical energy changes to heat"],
+      "hints": ["The iron gets hot.", "Electricity powers it."],
+      "explanation": "An electric iron transforms electrical energy into heat energy.",
+      "misconception": "Irons do not use electricity.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "examples_transformation",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "A radio is connected to a battery. Which energy transformation happens?",
+      "options": ["Electrical energy → sound energy", "Sound energy → electrical energy", "Mechanical energy → light energy", "Light energy → heat energy"],
+      "answer": 0,
+      "hints": ["The battery gives electrical energy.", "The radio produces sound."],
+      "explanation": "A radio transforms electrical energy into sound energy.",
+      "misconception": "Radios do not use electricity.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "examples_transformation",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "Which of these correctly shows an energy transformation?",
+      "options": ["A bulb: electrical → light", "A bulb: light → electrical", "A fan: sound → electrical", "A radio: light → electrical"],
+      "answer": 0,
+      "hints": ["A bulb gives light.", "Electricity powers it."],
+      "explanation": "A bulb changes electrical energy into light energy.",
+      "misconception": "Energy transformations are reversed for devices.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "trace_energy_chain",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which energy chain correctly shows how energy from the sun reaches a person walking?",
+      "options": ["Sun → plant → food → human movement", "Plant → sun → food → human movement", "Human movement → food → plant → sun", "Food → sun → plant → human movement"],
+      "answer": 0,
+      "hints": ["Start with the sun.", "Plants use sunlight to make food."],
+      "explanation": "Energy flows from the sun to plants, then to food, and then to human movement.",
+      "misconception": "Energy does not come from the sun.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "trace_energy_chain",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "A cow eats grass and then walks. Trace the energy flow.",
+      "options": ["Sun → grass → cow → movement", "Cow → grass → sun → movement", "Movement → cow → grass → sun", "Grass → movement → cow → sun"],
+      "answer": 0,
+      "hints": ["Start with the sun.", "The grass uses sunlight, and the cow eats the grass."],
+      "explanation": "The sun gives energy to grass, the cow eats the grass, and the cow uses the energy to move.",
+      "misconception": "Energy does not come from the sun.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "trace_energy_chain",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Trace a simple energy chain from the sun to a bird flying.",
+      "answer": ["sun → plant → insect → bird → movement", "sun to plant to insect to bird to movement", "sun gives energy to plants, insects eat plants, birds eat insects, birds fly"],
+      "hints": ["Start with the sun.", "Birds eat insects that eat plants."],
+      "explanation": "The sun gives energy to plants, insects eat plants, birds eat insects, and the birds use the energy to fly.",
+      "misconception": "Energy does not flow through food chains.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "trace_energy_chain",
+      "type": "drawing",
+      "difficulty": 4,
+      "stem": "Draw a simple flow chart to show how energy from the sun can be transformed into movement in a person. Use arrows to show the energy flow.",
+      "rubric": {
+        "criteria": [
+          {"description": "Started the flow chart with the sun", "marks": 1},
+          {"description": "Included a plant or food in the chain", "marks": 1},
+          {"description": "Included a person in the chain", "marks": 1},
+          {"description": "Ended with movement in the person", "marks": 1},
+          {"description": "Used arrows to show the energy flow", "marks": 1}
+        ]
+      },
+      "answer": "",
+      "hints": ["Start with the sun.", "Plants make food.", "People eat food and move."],
+      "explanation": "This is a drawing task. Your teacher will mark it using the rubric.",
+      "misconception": "Energy does not come from the sun.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "school_examples",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which energy transformation happens when a gong-gong is beaten at school?",
+      "options": ["Mechanical energy → sound energy", "Sound energy → mechanical energy", "Light energy → electrical energy", "Heat energy → sound energy"],
+      "answer": 0,
+      "hints": ["You use your hand to hit it.", "It makes a sound."],
+      "explanation": "Beating a gong-gong transforms mechanical energy (from your hand) into sound energy.",
+      "misconception": "Sound is not a form of energy.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "school_examples",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "Which of these is an example of energy transformation at school?",
+      "options": ["Ringing an electric bell: electrical → sound", "A pupil sleeping: sound → light", "Sweeping the floor: light → electrical", "Reading a book: heat → sound"],
+      "answer": 0,
+      "hints": ["The bell needs electricity.", "It makes a sound."],
+      "explanation": "An electric bell transforms electrical energy into sound energy.",
+      "misconception": "Energy transformation only happens in machines.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "school_examples",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Describe one energy transformation that happens at school.",
+      "answer": ["ringing an electric bell: electrical to sound", "drumming: mechanical to sound", "switching on a bulb: electrical to light"],
+      "hints": ["Think about a bell or a bulb.", "What energy goes in and what comes out?"],
+      "explanation": "At school, an electric bell transforms electrical energy into sound energy.",
+      "misconception": "Energy does not change form at school.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "importance_transformation",
+      "type": "mcq",
+      "difficulty": 4,
+      "stem": "Why is energy transformation important for devices like torches and radios?",
+      "options": ["It makes devices work by changing energy into the form they need", "It makes devices heavier", "It makes devices stop working", "It has no effect on devices"],
+      "answer": 0,
+      "hints": ["A torch needs light energy.", "The battery gives electrical energy."],
+      "explanation": "Energy transformation is important because it changes energy into the form needed to make devices work, like a torch producing light.",
+      "misconception": "Energy transformation is not important.",
+      "uncertain": []
+    }
+  ]
+}

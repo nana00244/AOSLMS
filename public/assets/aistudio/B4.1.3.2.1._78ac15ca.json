@@ -1,0 +1,280 @@
+{
+  "indicator": {
+    "code": "B4.1.3.1.1",
+    "subject": "Mathematics",
+    "level": "Basic 4",
+    "strand": "Number",
+    "sub_strand": "Fractions",
+    "content_standard": "B4.1.3.1 Develop an understanding of equivalent and improper fractions 12 × 12",
+    "objective": "Generate unit fractions and locate a unit fraction, e.g. one-eighth, on a number line by defining the interval from 0 to 1 as the whole and partitioning it into 8 equal parts and that each part has size 1/8.",
+    "source_page": 40
+  },
+  "spec": {
+    "skills": [
+      {"tag": "identify_unit_fraction", "description": "Identify unit fractions (e.g., 1/2, 1/3, 1/5, 1/8) from pictures or shapes.", "minQuestions": 2},
+      {"tag": "locate_on_number_line", "description": "Locate a unit fraction on a number line divided into equal parts.", "minQuestions": 2}
+    ],
+    "difficultyPlan": "20 questions: 5 at difficulty 1, 7 at difficulty 2, 5 at difficulty 3, 3 at difficulty 4.",
+    "misconceptions": [
+      "Counting intervals incorrectly (e.g., counting the 0 mark as 1).",
+      "Confusing denominator and numerator (thinking a bigger denominator means a bigger fraction)."
+    ],
+    "needsTeacherAssessment": true
+  },
+  "questions": [
+    {
+      "skill_tag": "identify_unit_fraction",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "A circle is divided into 4 equal parts. One part is shaded. What unit fraction is shaded?",
+      "options": ["1/4", "4/1", "1/2", "1/3"],
+      "answer": 0,
+      "hints": ["The top number (numerator) is the shaded part.", "The bottom number (denominator) is the total parts."],
+      "explanation": "1 part out of 4 equal parts is 1/4.",
+      "misconception": "Writing 4/1.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "locate_on_number_line",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "On a number line from 0 to 1, the space is divided into 2 equal parts. What fraction is exactly in the middle?",
+      "options": ["1/3", "1/2", "2/2", "1/4"],
+      "answer": 1,
+      "hints": ["The line is divided into 2 parts.", "The first mark is 1/2."],
+      "explanation": "The middle of 0 and 1 is 1/2.",
+      "misconception": "Writing 2/1.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_unit_fraction",
+      "type": "short_answer",
+      "difficulty": 1,
+      "stem": "What fraction of the rectangle is shaded if it is divided into 5 equal parts and 1 is shaded?",
+      "answer": ["1/5"],
+      "hints": ["1 out of 5.", "Write the numerator first."],
+      "explanation": "1 part out of 5 is 1/5.",
+      "misconception": "Writing 5/1.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "locate_on_number_line",
+      "type": "numeric",
+      "difficulty": 1,
+      "stem": "A number line from 0 to 1 is divided into 10 equal parts. What is the denominator of the fraction at the first mark?",
+      "answer": 10,
+      "check": "10",
+      "hints": ["The denominator is the total number of parts.", "Count all the spaces."],
+      "explanation": "The denominator is 10 because the whole is divided into 10 parts.",
+      "misconception": "Saying 1 because it's the first mark.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_unit_fraction",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which unit fraction represents the shaded part of a shape divided into 8 equal pieces with 1 piece shaded?",
+      "options": ["1/8", "8/1", "1/4", "1/16"],
+      "answer": 0,
+      "hints": ["1 piece shaded.", "8 total pieces."],
+      "explanation": "1 part out of 8 is 1/8.",
+      "misconception": "Thinking 8/1 is correct.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "locate_on_number_line",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "A number line from 0 to 1 is divided into 8 equal parts. Which fraction is at the 3rd mark from 0?",
+      "options": ["3/8", "1/3", "8/3", "1/8"],
+      "answer": 0,
+      "hints": ["The mark is the 3rd space.", "The denominator is 8."],
+      "explanation": "The 3rd mark is 3/8.",
+      "misconception": "Writing 3/1.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_unit_fraction",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "If a whole is divided into 12 equal parts, what is the size of one part?",
+      "answer": 1,
+      "check": "1",
+      "hints": ["The numerator is always 1 for a unit fraction.", "The fraction is 1/12."],
+      "explanation": "One part is 1/12. The numerator is 1.",
+      "misconception": "Saying 12.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "locate_on_number_line",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "On a number line from 0 to 1, divided into 6 equal parts, what fraction is at the 5th mark?",
+      "answer": ["5/6"],
+      "hints": ["Count 5 spaces from 0.", "The denominator is 6."],
+      "explanation": "The 5th mark is 5/6.",
+      "misconception": "Writing 1/5.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_unit_fraction",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which of these is NOT a unit fraction?",
+      "options": ["1/2", "1/9", "3/4", "1/10"],
+      "answer": 2,
+      "hints": ["A unit fraction always has a numerator of 1.", "Look at the top number."],
+      "explanation": "3/4 is not a unit fraction because the numerator is 3, not 1.",
+      "misconception": "Thinking 3/4 is a unit fraction because it's a simple fraction.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "locate_on_number_line",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "A number line from 0 to 1 is divided into 4 equal parts. What is the denominator at the second mark?",
+      "answer": 4,
+      "check": "4",
+      "hints": ["The denominator is the total number of parts.", "Count the spaces between 0 and 1."],
+      "explanation": "The denominator is 4. The mark is 2/4.",
+      "misconception": "Saying 2.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "locate_on_number_line",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "A pupil draws a number line from 0 to 1 and divides it into 3 equal parts. They label the first mark as 1/3. What is the next mark?",
+      "options": ["1/4", "2/3", "1/2", "3/3"],
+      "answer": 1,
+      "hints": ["The parts are thirds.", "Count the marks: 1/3, then 2/3."],
+      "explanation": "The next mark is 2/3.",
+      "misconception": "Labeling it as 1/4.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_unit_fraction",
+      "type": "written",
+      "difficulty": 2,
+      "stem": "Explain why a shape must be divided into EQUAL parts to represent a unit fraction correctly.",
+      "hints": ["What does 'unit fraction' mean?", "Does 1/4 mean any 4 parts or 4 equal parts?"],
+      "explanation": "A fraction like 1/4 means 1 part out of 4 equal parts. If the parts are not equal, the size of each part is different, so they are not true quarters.",
+      "rubric": {
+        "criteria": [
+          {"description": "States that parts must be equal.", "marks": 1},
+          {"description": "Explains that unequal parts would have different sizes.", "marks": 1}
+        ]
+      },
+      "misconception": "Thinking any 4 parts make quarters.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "locate_on_number_line",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "A number line is divided into 8 equal parts. If you are at 4/8, how many parts away are you from 1?",
+      "answer": 4,
+      "check": "8-4",
+      "hints": ["You are at the 4th mark.", "How many marks until the 8th mark?"],
+      "explanation": "You are at 4/8. There are 4 more parts to reach 8/8 (which is 1).",
+      "misconception": "Thinking you are 8 parts away.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "locate_on_number_line",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "Draw a number line from 0 to 1. Divide it into 5 equal parts. Label the unit fraction.",
+      "hints": ["Draw a straight line.", "Mark 0 and 1.", "Make 5 equal jumps."],
+      "explanation": "The learner should draw a line with 5 equal intervals and label the first mark as 1/5.",
+      "rubric": {
+        "criteria": [
+          {"description": "Draws 5 equal parts between 0 and 1.", "marks": 1},
+          {"description": "Labels the first mark as 1/5.", "marks": 1}
+        ]
+      },
+      "misconception": "Drawing unequal parts.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_unit_fraction",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "A pupil says that 1/8 is larger than 1/2 because 8 is larger than 2. What is the correct statement?",
+      "options": ["1/8 is larger.", "1/2 is larger.", "They are equal.", "It depends on the shape."],
+      "answer": 1,
+      "hints": ["Draw a shape cut into 2. Draw a shape cut into 8.", "Which piece is bigger?"],
+      "explanation": "1/2 is larger because the whole is divided into fewer parts, making each part bigger.",
+      "misconception": "Thinking a larger denominator means a larger fraction.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "locate_on_number_line",
+      "type": "numeric",
+      "difficulty": 3,
+      "stem": "On a number line from 0 to 1 divided into 10 equal parts, what fraction is at the 7th mark? Write as a fraction in its simplest form (or state the numerator if asked for a mixed number? No, write the fraction).",
+      "answer": 7,
+      "check": "7",
+      "hints": ["The denominator is 10.", "The numerator is the mark number."],
+      "explanation": "The fraction is 7/10. The numerator is 7.",
+      "misconception": "Writing 10/7.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_unit_fraction",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "A class shares a pie. The pie is cut into 6 equal slices. One person takes 1 slice. What fraction of the pie did they take? Explain.",
+      "hints": ["How many slices in total?", "How many slices did the person take?"],
+      "explanation": "They took 1 slice out of 6 equal slices, so they took 1/6 of the pie.",
+      "rubric": {
+        "criteria": [
+          {"description": "States 1/6.", "marks": 1},
+          {"description": "Explains that 1 part out of 6 is 1/6.", "marks": 1}
+        ]
+      },
+      "misconception": "Saying they took 6/1.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "locate_on_number_line",
+      "type": "written",
+      "difficulty": 4,
+      "stem": "Explain how you would locate 1/4 on a number line from 0 to 1.",
+      "hints": ["How many equal parts do you need?", "Where is the first mark?"],
+      "explanation": "You divide the space between 0 and 1 into 4 equal parts. The first mark from 0 represents 1/4.",
+      "rubric": {
+        "criteria": [
+          {"description": "States dividing the whole into 4 equal parts.", "marks": 1},
+          {"description": "States that the first mark is 1/4.", "marks": 1}
+        ]
+      },
+      "misconception": "Marking 1/4 at the fourth mark.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_unit_fraction",
+      "type": "numeric",
+      "difficulty": 4,
+      "stem": "A unit fraction is written as 1/n. If the shape is divided into 15 equal parts, what is the value of n?",
+      "answer": 15,
+      "check": "15",
+      "hints": ["n is the denominator.", "The number of equal parts."],
+      "explanation": "n = 15 because the whole is divided into 15 parts.",
+      "misconception": "Saying n=1.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "locate_on_number_line",
+      "type": "mcq",
+      "difficulty": 4,
+      "stem": "A number line has marks at 0, 1/8, 2/8, 3/8... up to 8/8. What fraction is exactly halfway between 0 and 1?",
+      "options": ["3/8", "4/8", "5/8", "1/2"],
+      "answer": 1,
+      "hints": ["The halfway mark is at the 4th mark.", "4 out of 8 parts."],
+      "explanation": "Halfway between 0 and 1 is 4/8 (which is equal to 1/2).",
+      "misconception": "Thinking halfway is 3/8.",
+      "uncertain": []
+    }
+  ]
+}

@@ -1,0 +1,267 @@
+{
+  "indicator": {
+    "code": "B5.2.1.1.5",
+    "subject": "Mathematics",
+    "level": "Basic 5",
+    "strand": "Algebra",
+    "sub_strand": "Patterns and Relationships",
+    "content_standard": "B5.2.1.1 Determine the pattern rule to make predictions about subsequent elements",
+    "objective": "Solve a given problem by using a pattern rule to determine subsequent elements",
+    "source_page": 109
+  },
+  "spec": {
+    "skills": [
+      {"tag": "apply_pattern_rule", "description": "Apply a pattern rule to find a specific term (e.g., the 10th term).", "minQuestions": 2},
+      {"tag": "solve_pattern_word_problems", "description": "Solve word problems by identifying and extending a pattern.", "minQuestions": 2}
+    ],
+    "difficultyPlan": "20 questions: 5 at difficulty 1, 7 at difficulty 2, 5 at difficulty 3, 3 at difficulty 4.",
+    "misconceptions": [
+      "Using the wrong rule.",
+      "Stopping too early.",
+      "Not checking the rule against the given terms."
+    ],
+    "needsTeacherAssessment": false
+  },
+  "questions": [
+    {
+      "skill_tag": "apply_pattern_rule",
+      "type": "numeric",
+      "difficulty": 1,
+      "stem": "A pattern starts at 3 and adds 4 each time: 3, 7, 11, 15, ... What is the 5th term?",
+      "answer": 19,
+      "check": "15+4",
+      "hints": ["Add 4 to the 4th term (15).", "15 + 4."],
+      "explanation": "The 5th term is 15 + 4 = 19.",
+      "misconception": "Saying 18 (adding 3).",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "apply_pattern_rule",
+      "type": "numeric",
+      "difficulty": 1,
+      "stem": "A pattern starts at 10 and subtracts 3 each time: 10, 7, 4, 1, ... What is the 5th term?",
+      "answer": -2,
+      "check": "1-3",
+      "hints": ["Subtract 3 from 1."],
+      "explanation": "The 5th term is 1 - 3 = -2.",
+      "misconception": "Saying 0 (stopping at 1).",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "solve_pattern_word_problems",
+      "type": "numeric",
+      "difficulty": 1,
+      "stem": "Ama saves 5 cedis each week. She starts with 10 cedis. How much will she have after 4 weeks? (Week 1: 15, Week 2: 20, ...)",
+      "answer": 30,
+      "check": "10+4*5",
+      "hints": ["She adds 5 each week.", "10 + 5 + 5 + 5 + 5."],
+      "explanation": "After 4 weeks she has 10 + 4×5 = 30 cedis.",
+      "misconception": "Saying 20 (only 2 weeks).",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "apply_pattern_rule",
+      "type": "numeric",
+      "difficulty": 1,
+      "stem": "The pattern is 2, 4, 6, 8, ... What is the 10th term?",
+      "answer": 20,
+      "check": "2*10",
+      "hints": ["The rule is multiply the term number by 2.", "10 × 2."],
+      "explanation": "The 10th term is 10 × 2 = 20.",
+      "misconception": "Saying 12 (adding 2 to 10).",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "solve_pattern_word_problems",
+      "type": "numeric",
+      "difficulty": 1,
+      "stem": "A pattern of tiles: 3 tiles in the first row, 5 tiles in the second, 7 in the third. How many tiles in the 5th row?",
+      "answer": 11,
+      "check": "3+2*4",
+      "hints": ["The pattern adds 2 each row.", "Row 1:3, Row 2:5, Row 3:7, Row 4:9, Row 5:11."],
+      "explanation": "The 5th row has 11 tiles.",
+      "misconception": "Saying 9 (4th row).",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "apply_pattern_rule",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "A pattern starts at 1 and doubles each time: 1, 2, 4, 8, ... What is the 6th term?",
+      "answer": 32,
+      "check": "2^5",
+      "hints": ["1, 2, 4, 8, 16, 32."],
+      "explanation": "The 6th term is 32.",
+      "misconception": "Saying 12 (adding 4).",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "apply_pattern_rule",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "The pattern is 100, 90, 80, 70, ... What is the 8th term?",
+      "answer": 30,
+      "check": "100-10*7",
+      "hints": ["Subtract 10 each time. The 8th term is 100 - 10×7."],
+      "explanation": "The 8th term is 30.",
+      "misconception": "Saying 40 (7th term).",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "solve_pattern_word_problems",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "A pupil reads 15 pages on day 1, 20 pages on day 2, 25 pages on day 3. If the pattern continues, how many pages on day 5?",
+      "answer": 35,
+      "check": "15+5*4",
+      "hints": ["Add 5 each day.", "Day 1:15, Day 2:20, Day 3:25, Day 4:30, Day 5:35."],
+      "explanation": "Day 5: 35 pages.",
+      "misconception": "Saying 30 (day 4).",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "apply_pattern_rule",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "The pattern is 5, 8, 11, 14, ... What is the 7th term?",
+      "answer": 23,
+      "check": "5+3*6",
+      "hints": ["Add 3 each time.", "5, 8, 11, 14, 17, 20, 23."],
+      "explanation": "The 7th term is 23.",
+      "misconception": "Saying 20 (6th term).",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "solve_pattern_word_problems",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "A farmer plants 2 seeds in row 1, 4 in row 2, 6 in row 3. How many seeds in row 6?",
+      "answer": 12,
+      "check": "2*6",
+      "hints": ["Multiply the row number by 2."],
+      "explanation": "Row 6 has 12 seeds.",
+      "misconception": "Saying 10.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "apply_pattern_rule",
+      "type": "written",
+      "difficulty": 2,
+      "stem": "Explain how to find the 10th term of the pattern 4, 7, 10, 13, ...",
+      "hints": ["Find the rule, then apply it 10 times or use the formula."],
+      "explanation": "The rule is add 3. The 1st term is 4, so the 10th term is 4 + 9×3 = 4 + 27 = 31.",
+      "rubric": {
+        "criteria": [
+          {"description": "States the rule is add 3.", "marks": 1},
+          {"description": "Calculates 31.", "marks": 1}
+        ]
+      },
+      "misconception": "Adding 3 only 9 times to get 31? That's correct. Wrong: adding 3 ten times to get 34.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "apply_pattern_rule",
+      "type": "numeric",
+      "difficulty": 3,
+      "stem": "The pattern is 1, 4, 9, 16, ... What is the 8th term?",
+      "answer": 64,
+      "check": "8*8",
+      "hints": ["These are square numbers: n × n."],
+      "explanation": "The 8th term is 8 × 8 = 64.",
+      "misconception": "Saying 49 (7th term).",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "apply_pattern_rule",
+      "type": "numeric",
+      "difficulty": 3,
+      "stem": "A pattern starts at 2 and multiplies by 3 each time: 2, 6, 18, ... What is the 5th term?",
+      "answer": 162,
+      "check": "2*3^4",
+      "hints": ["2, 6, 18, 54, 162."],
+      "explanation": "The 5th term is 162.",
+      "misconception": "Saying 54 (4th term).",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "solve_pattern_word_problems",
+      "type": "numeric",
+      "difficulty": 3,
+      "stem": "A market woman sells 10 oranges on day 1, 15 on day 2, 20 on day 3. If the pattern continues, how many oranges will she sell on day 10?",
+      "answer": 55,
+      "check": "10+5*9",
+      "hints": ["Add 5 each day. Day 10 = 10 + 9×5."],
+      "explanation": "Day 10: 10 + 45 = 55 oranges.",
+      "misconception": "Saying 50.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "apply_pattern_rule",
+      "type": "numeric",
+      "difficulty": 3,
+      "stem": "A pattern starts at 100 and subtracts 7 each time: 100, 93, 86, ... What is the 6th term?",
+      "answer": 65,
+      "check": "100-7*5",
+      "hints": ["100, 93, 86, 79, 72, 65."],
+      "explanation": "The 6th term is 65.",
+      "misconception": "Saying 72 (5th term).",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "solve_pattern_word_problems",
+      "type": "numeric",
+      "difficulty": 3,
+      "stem": "A pupil builds a tower with blocks: 3 blocks in the first layer, 6 in the second, 9 in the third. How many blocks in the 8th layer?",
+      "answer": 24,
+      "check": "3*8",
+      "hints": ["Multiply the layer number by 3."],
+      "explanation": "The 8th layer has 3 × 8 = 24 blocks.",
+      "misconception": "Saying 21 (7th layer).",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "apply_pattern_rule",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "The pattern is 2, 5, 10, 17, 26, ... Explain how to find the next term.",
+      "hints": ["Look at the differences: +3, +5, +7, +9."],
+      "explanation": "The differences increase by 2 each time. The next difference is +11, so the next term is 26 + 11 = 37.",
+      "rubric": {
+        "criteria": [
+          {"description": "Identifies increasing differences.", "marks": 1},
+          {"description": "Calculates 37.", "marks": 1}
+        ]
+      },
+      "misconception": "Adding 9 again to get 35.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "solve_pattern_word_problems",
+      "type": "written",
+      "difficulty": 4,
+      "stem": "A pattern of dots: 1 dot in the first triangle, 3 dots in the second, 6 dots in the third, 10 dots in the fourth. How many dots in the 7th triangle? Explain.",
+      "hints": ["These are triangular numbers.", "Differences: +2, +3, +4, +5, +6, +7."],
+      "explanation": "The sequence is 1, 3, 6, 10, 15, 21, 28. The 7th triangle has 28 dots.",
+      "rubric": {
+        "criteria": [
+          {"description": "Extends the pattern correctly.", "marks": 1},
+          {"description": "Calculates 28.", "marks": 1}
+        ]
+      },
+      "misconception": "Saying 21 (6th triangle).",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "apply_pattern_rule",
+      "type": "numeric",
+      "difficulty": 4,
+      "stem": "The pattern is 3, 6, 12, 24, ... What is the 7th term?",
+      "answer": 192,
+      "check": "3*2^6",
+      "hints": ["Double each time.", "3, 6, 12, 24, 48, 96, 192."],
+      "explanation": "The 7th term is 192.",
+      "misconception": "Saying 96 (6th term).",
+      "uncertain": []
+    }
+  ]
+}

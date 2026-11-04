@@ -1,0 +1,285 @@
+{
+  "indicator": {
+    "code": "B4.1.3.2.3",
+    "subject": "Mathematics",
+    "level": "Basic 4",
+    "strand": "Number",
+    "sub_strand": "Fractions",
+    "content_standard": "B4.1.3.2 Demonstrate an understanding of strategies for comparing, adding and subtracting fractions (same denominator, or one being a multiple of the others)",
+    "objective": "Provide examples of where fractions are used",
+    "source_page": 45
+  },
+  "spec": {
+    "skills": [
+      {"tag": "identify_real_life_fractions", "description": "Identify fractions used in real-life contexts like cooking, sharing, and measuring.", "minQuestions": 2},
+      {"tag": "read_time_fractions", "description": "Read time on a clock using fractions (half past, quarter past, quarter to).", "minQuestions": 2},
+      {"tag": "interpret_circle_graphs", "description": "Interpret circle graphs showing fractions of a whole.", "minQuestions": 2}
+    ],
+    "difficultyPlan": "20 questions: 5 at difficulty 1, 7 at difficulty 2, 5 at difficulty 3, 3 at difficulty 4.",
+    "misconceptions": [
+      "Not recognizing fractions in daily life.",
+      "Misinterpreting pie charts or circle graphs."
+    ],
+    "needsTeacherAssessment": true
+  },
+  "questions": [
+    {
+      "skill_tag": "identify_real_life_fractions",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "A recipe calls for half a cup of milk. Which fraction represents this amount?",
+      "options": ["1/4", "1/3", "1/2", "2/1"],
+      "answer": 2,
+      "hints": ["Half is written as 1 over 2.", "1/2."],
+      "explanation": "Half a cup is 1/2.",
+      "misconception": "Writing 2/1.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_real_life_fractions",
+      "type": "short_answer",
+      "difficulty": 1,
+      "stem": "If you share a loaf of bread equally among 4 friends, what fraction of the bread does each person get?",
+      "answer": ["1/4"],
+      "hints": ["One out of four equal parts.", "Divide 1 by 4."],
+      "explanation": "Each person gets 1/4.",
+      "misconception": "Writing 4/1.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "read_time_fractions",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "When the minute hand is on the 6, what fraction of an hour has passed?",
+      "options": ["1/4", "1/2", "3/4", "1"],
+      "answer": 1,
+      "hints": ["The 6 represents 30 minutes.", "30 minutes is half an hour."],
+      "explanation": "30 minutes is 1/2 of an hour.",
+      "misconception": "Thinking it is 1/4.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "read_time_fractions",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "A quarter past 3 is the same as what fraction of the hour?",
+      "options": ["1/4", "1/2", "3/4", "1/3"],
+      "answer": 0,
+      "hints": ["Quarter means 1/4.", "15 minutes is 1/4 of 60."],
+      "explanation": "A quarter past is 1/4 of an hour.",
+      "misconception": "Thinking quarter is 4.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "interpret_circle_graphs",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "A circle graph shows 1/2 of the pupils like football. What fraction do not like football?",
+      "options": ["1/4", "1/2", "1/3", "3/4"],
+      "answer": 1,
+      "hints": ["The whole circle is 1 (or 2/2).", "Subtract 1/2 from 1."],
+      "explanation": "1 - 1/2 = 1/2.",
+      "misconception": "Thinking the rest is 1/4.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_real_life_fractions",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "A seamstress needs 1/3 of a metre of cloth for a dress. What fraction of a metre is left if she starts with 1 metre?",
+      "answer": ["2/3"],
+      "hints": ["1 whole is 3/3.", "3/3 - 1/3 = ?"],
+      "explanation": "3/3 - 1/3 = 2/3.",
+      "misconception": "Subtracting 1 from 3 to get 2.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "read_time_fractions",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "A quarter to 5 is the same as how many minutes before 5 o'clock?",
+      "options": ["15", "30", "45", "60"],
+      "answer": 0,
+      "hints": ["A quarter hour is 15 minutes.", "Quarter to means 15 minutes to the hour."],
+      "explanation": "A quarter to 5 means 15 minutes before 5.",
+      "misconception": "Thinking it means 45 minutes.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "interpret_circle_graphs",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "A circle graph shows 10 pupils like apples out of 40 pupils. What fraction of the pupils like apples?",
+      "answer": 0.25,
+      "check": "10/40",
+      "hints": ["The fraction is 10/40.", "Simplify it."],
+      "explanation": "10/40 = 1/4.",
+      "misconception": "Writing 10/40 and not simplifying.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "interpret_circle_graphs",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "A pie is cut into 8 slices. If 3 slices are eaten, what fraction is left?",
+      "options": ["3/8", "5/8", "1/2", "7/8"],
+      "answer": 1,
+      "hints": ["Total slices = 8/8.", "Slices eaten = 3/8.", "8/8 - 3/8 = ?"],
+      "explanation": "8/8 - 3/8 = 5/8.",
+      "misconception": "Thinking 3/8 is left.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_real_life_fractions",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "If you buy half a crate of eggs, what fraction of the crate do you NOT have?",
+      "options": ["1/4", "1/2", "3/4", "1"],
+      "answer": 1,
+      "hints": ["The whole crate is 1 (or 2/2).", "You have 1/2."],
+      "explanation": "You do not have the other 1/2.",
+      "misconception": "Thinking you do not have 1/4.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_real_life_fractions",
+      "type": "written",
+      "difficulty": 2,
+      "stem": "Give an example of where you might use fractions when sharing food with your family.",
+      "hints": ["Think about sharing a pizza or a cake.", "What fraction did you get?"],
+      "explanation": "For example, if a family shares a pie cut into 6 slices, each person might get 1/6.",
+      "rubric": {
+        "criteria": [
+          {"description": "Gives a clear example of sharing food.", "marks": 1},
+          {"description": "Uses a correct fraction.", "marks": 1}
+        ]
+      },
+      "misconception": "Using fractions incorrectly in the example.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "read_time_fractions",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "If it is half past 2, how many minutes past 2 o'clock is it?",
+      "answer": 30,
+      "check": "30",
+      "hints": ["Half an hour is 30 minutes.", "1/2 x 60 = 30."],
+      "explanation": "Half past 2 means 30 minutes past 2.",
+      "misconception": "Saying 15.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "interpret_circle_graphs",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "Draw a circle graph where 1/4 of the circle is red, and 1/2 is blue. What fraction is left?",
+      "hints": ["Convert all to quarters.", "1/2 = 2/4.", "1/4 + 2/4 = 3/4."],
+      "explanation": "The remaining fraction is 1/4.",
+      "rubric": {
+        "criteria": [
+          {"description": "Draws a circle divided into 4 parts.", "marks": 1},
+          {"description": "Shades 1 part red and 2 parts blue.", "marks": 1},
+          {"description": "States the remaining fraction is 1/4.", "marks": 1}
+        ]
+      },
+      "misconception": "Thinking the remaining fraction is 1/2.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_real_life_fractions",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "If a bottle holds 1 litre of water, and you drink 3/4 of it, how much is left?",
+      "answer": ["1/4", "1/4 litre"],
+      "hints": ["1 litre = 4/4.", "4/4 - 3/4 = ?"],
+      "explanation": "1/4 litre is left.",
+      "misconception": "Thinking 3/4 is left.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "read_time_fractions",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "A pupil says 'I will be there in three-quarters of an hour'. How many minutes is that?",
+      "options": ["15", "30", "45", "60"],
+      "answer": 2,
+      "hints": ["1 hour = 60 minutes.", "1/4 of 60 = 15.", "3/4 of 60 = 3 x 15."],
+      "explanation": "3/4 of 60 is 45 minutes.",
+      "misconception": "Saying 30 minutes.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "interpret_circle_graphs",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "In a circle graph, the sector for 'Maths' is 1/3 of the circle, and 'English' is 1/4. What fraction represents the rest of the subjects?",
+      "options": ["5/12", "7/12", "1/12", "1/2"],
+      "answer": 0,
+      "hints": ["LCD of 3 and 4 is 12.", "1/3 = 4/12.", "1/4 = 3/12.", "4/12 + 3/12 = 7/12.", "12/12 - 7/12."],
+      "explanation": "The rest is 5/12.",
+      "misconception": "Adding the numerators and denominators directly (2/7).",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_real_life_fractions",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "Explain how you use fractions when measuring ingredients for a recipe.",
+      "hints": ["Think about cups and spoons.", "Have you ever used 1/2 a cup?"],
+      "explanation": "When cooking, you often measure things like half a cup of sugar or a quarter teaspoon of salt. These are common fractions used in recipes.",
+      "rubric": {
+        "criteria": [
+          {"description": "Mentions measuring ingredients.", "marks": 1},
+          {"description": "Gives examples of fractions like 1/2 or 1/4.", "marks": 1}
+        ]
+      },
+      "misconception": "Thinking fractions are only used in math class.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "interpret_circle_graphs",
+      "type": "numeric",
+      "difficulty": 4,
+      "stem": "A class has 40 pupils. A circle graph shows that 1/4 like Science, 1/2 like Maths, and the rest like English. How many pupils like English?",
+      "answer": 10,
+      "check": "40*(1-1/4-1/2)",
+      "hints": ["Fraction for English = 1 - (1/4 + 1/2).", "1/2 = 2/4.", "1/4 + 2/4 = 3/4.", "English = 1/4.", "1/4 of 40."],
+      "explanation": "1/4 of 40 = 10 pupils.",
+      "misconception": "Assuming English is 1/2.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "read_time_fractions",
+      "type": "written",
+      "difficulty": 4,
+      "stem": "Explain the difference between 'quarter past' and 'quarter to' the hour.",
+      "hints": ["Quarter past is 15 minutes after.", "Quarter to is 15 minutes before."],
+      "explanation": "Quarter past is 15 minutes after the hour, while quarter to is 15 minutes before the next hour.",
+      "rubric": {
+        "criteria": [
+          {"description": "Explains quarter past is 15 minutes after.", "marks": 1},
+          {"description": "Explains quarter to is 15 minutes before.", "marks": 1}
+        ]
+      },
+      "misconception": "Thinking they mean the same thing.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_real_life_fractions",
+      "type": "written",
+      "difficulty": 4,
+      "stem": "A carpenter has a piece of wood that is 2 metres long. He cuts off 1/2 a metre. How much wood is left? Express your answer as a fraction.",
+      "hints": ["2 metres = 4/2 metres.", "4/2 - 1/2 = ?"],
+      "explanation": "4/2 - 1/2 = 3/2 metres, which is 1 1/2 metres.",
+      "rubric": {
+        "criteria": [
+          {"description": "Converts 2 to 4/2.", "marks": 1},
+          {"description": "Subtracts 1/2 to get 3/2 or 1 1/2.", "marks": 1}
+        ]
+      },
+      "misconception": "Subtracting 1 from 2 to get 1 metre.",
+      "uncertain": []
+    }
+  ]
+}

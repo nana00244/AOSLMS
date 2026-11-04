@@ -1,0 +1,283 @@
+{
+  "indicator": {
+    "code": "B6.5.4.1.1",
+    "subject": "Science",
+    "level": "Basic 6",
+    "strand": "HUMANS AND THE ENVIRONMENT",
+    "sub_strand": "Climate Change",
+    "content_standard": "B6.5.4.1 Know that climate change is one of the most important environmental issues facing the world today",
+    "objective": "Know the effects of climate change on humans",
+    "source_page": 68
+  },
+  "spec": {
+    "skills": [
+      {"tag": "define_climate_change", "description": "Define climate change as long-term changes in weather patterns.", "minQuestions": 3},
+      {"tag": "effects_on_weather", "description": "Identify effects of climate change on weather (e.g. drought, flooding, increased temperature).", "minQuestions": 4},
+      {"tag": "effects_on_humans", "description": "State effects of climate change on humans (e.g. food shortage, disease, displacement, heat stress).", "minQuestions": 4},
+      {"tag": "causes_climate_change", "description": "Identify human activities that contribute to climate change (e.g. burning fossil fuels, deforestation).", "minQuestions": 3},
+      {"tag": "control_measures", "description": "Suggest ways to control the causes of climate change (e.g. planting trees, reducing burning).", "minQuestions": 3},
+      {"tag": "concept_map_climate", "description": "Design a concept map on climate change showing causes, effects and prevention.", "minQuestions": 3}
+    ],
+    "difficultyPlan": "20 questions total — Difficulty 1: 5; Difficulty 2: 7; Difficulty 3: 5; Difficulty 4: 3.",
+    "misconceptions": [
+      "Climate change only affects animals, not humans.",
+      "Drought and flooding are not related to climate change.",
+      "Planting trees does not help climate change.",
+      "Climate change is caused only by natural events.",
+      "Climate change means the weather changes from day to day.",
+      "Human activities have no effect on climate."
+    ],
+    "needsTeacherAssessment": true
+  },
+  "questions": [
+    {
+      "skill_tag": "define_climate_change",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What does climate change mean?",
+      "options": ["Long-term changes in weather patterns", "The weather changing from morning to evening", "A change in the colour of the sky", "A change in the time of day"],
+      "answer": 0,
+      "hints": ["Think about changes over many years.", "It is not about daily weather."],
+      "explanation": "Climate change means long-term changes in weather patterns over many years.",
+      "misconception": "Climate change means the weather changes from day to day.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "effects_on_weather",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which of these is an effect of climate change on weather?",
+      "options": ["More droughts and floods", "More stable weather", "Colder days only", "No change in weather"],
+      "answer": 0,
+      "hints": ["Think about extreme weather.", "Droughts and floods are becoming more common."],
+      "explanation": "Climate change can cause more droughts and floods due to changes in weather patterns.",
+      "misconception": "Drought and flooding are not related to climate change.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "effects_on_humans",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "How can climate change affect humans?",
+      "options": ["It can cause food shortage and disease", "It makes people taller", "It makes people run faster", "It makes people hungry for sweets"],
+      "answer": 0,
+      "hints": ["Think about crops failing.", "Think about floods spreading disease."],
+      "explanation": "Climate change can affect humans by causing food shortages (when crops fail) and spreading diseases (e.g. through floods).",
+      "misconception": "Climate change only affects animals, not humans.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "causes_climate_change",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which human activity contributes to climate change?",
+      "options": ["Burning fossil fuels", "Planting trees", "Sweeping the floor", "Washing clothes"],
+      "answer": 0,
+      "hints": ["Think about smoke from cars and factories.", "Burning fuels releases gases."],
+      "explanation": "Burning fossil fuels (like petrol and diesel) releases gases that contribute to climate change.",
+      "misconception": "Human activities have no effect on climate.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "control_measures",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which of these helps control climate change?",
+      "options": ["Planting trees", "Burning more fossil fuels", "Cutting down forests", "Burning waste"],
+      "answer": 0,
+      "hints": ["Trees absorb carbon dioxide.", "Planting trees helps the environment."],
+      "explanation": "Planting trees helps control climate change because trees absorb carbon dioxide from the air.",
+      "misconception": "Planting trees does not help climate change.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "effects_on_weather",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which of these is a weather effect of climate change?",
+      "options": ["Increased temperature", "Decreased temperature everywhere", "No change in rainfall", "More stable seasons"],
+      "answer": 0,
+      "hints": ["Think about hotter days.", "Global temperatures are rising."],
+      "explanation": "Climate change causes increased temperatures, leading to hotter days and heat waves.",
+      "misconception": "Climate change does not affect temperature.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "effects_on_humans",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Why can climate change lead to food shortage?",
+      "options": ["Because droughts and floods destroy crops", "Because people eat more food", "Because there are too many shops", "Because food becomes cheaper"],
+      "answer": 0,
+      "hints": ["Think about crops needing water and good weather.", "Droughts dry up crops; floods wash them away."],
+      "explanation": "Climate change can lead to food shortage because droughts and floods destroy crops, reducing the food available.",
+      "misconception": "Climate change does not affect food supply.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "causes_climate_change",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which of these human activities contributes to climate change?",
+      "options": ["Deforestation", "Planting trees", "Using solar energy", "Riding a bicycle"],
+      "answer": 0,
+      "hints": ["Cutting down trees reduces carbon dioxide absorption.", "Trees help absorb carbon dioxide."],
+      "explanation": "Deforestation contributes to climate change because fewer trees are available to absorb carbon dioxide.",
+      "misconception": "Deforestation does not affect climate.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "control_measures",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which of these is a way to control climate change?",
+      "options": ["Reducing the burning of fossil fuels", "Burning more forests", "Using more petrol", "Cutting down more trees"],
+      "answer": 0,
+      "hints": ["Burning fossil fuels releases harmful gases.", "Reducing burning helps the climate."],
+      "explanation": "Reducing the burning of fossil fuels helps control climate change by lowering the release of harmful gases.",
+      "misconception": "Reducing fossil fuel use does not help.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "define_climate_change",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "What is climate change?",
+      "answer": ["long-term changes in weather patterns", "changes in the weather over many years", "long-term changes in the earth's weather"],
+      "hints": ["Think about changes over many years.", "It affects weather patterns."],
+      "explanation": "Climate change is long-term change in weather patterns, like hotter days or changes in rainfall.",
+      "misconception": "Climate change means daily weather changes.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "effects_on_weather",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Give one effect of climate change on weather.",
+      "answer": ["drought", "flooding", "increased temperature", "more extreme weather"],
+      "hints": ["Think about dry periods or heavy rain.", "Climate change causes extreme weather."],
+      "explanation": "Effects of climate change on weather include droughts, floods and increased temperatures.",
+      "misconception": "Drought and flooding are not related to climate change.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "effects_on_humans",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "State one effect of climate change on humans.",
+      "answer": ["food shortage", "disease", "displacement", "heat stress"],
+      "hints": ["Think about crops failing.", "Think about floods displacing people."],
+      "explanation": "Effects of climate change on humans include food shortage, disease, displacement and heat stress.",
+      "misconception": "Climate change only affects animals.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "effects_on_weather",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "How does climate change contribute to flooding?",
+      "options": ["It causes heavier rainfall and rising sea levels", "It makes rivers flow faster", "It stops rain from falling", "It makes the ground absorb more water"],
+      "answer": 0,
+      "hints": ["Think about heavy rain.", "Rising sea levels also cause flooding."],
+      "explanation": "Climate change can cause heavier rainfall and rising sea levels, both of which contribute to flooding.",
+      "misconception": "Climate change reduces flooding.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "causes_climate_change",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "A pupil says, 'Climate change is caused only by natural events.' What is the best correction?",
+      "options": ["Yes, only natural events cause climate change", "No, human activities like burning fossil fuels and deforestation also cause climate change", "No, climate change is not real", "No, only animals cause climate change"],
+      "answer": 1,
+      "hints": ["Human activities release gases.", "Burning fuels and cutting trees contribute."],
+      "explanation": "Climate change is not caused only by natural events. Human activities such as burning fossil fuels and deforestation also contribute.",
+      "misconception": "Climate change is caused only by natural events.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "control_measures",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Suggest one way to control the causes of climate change.",
+      "answer": ["plant trees", "reduce burning of fossil fuels", "avoid deforestation", "use renewable energy"],
+      "hints": ["Think about trees.", "Think about reducing burning."],
+      "explanation": "Ways to control climate change include planting trees, reducing the burning of fossil fuels, avoiding deforestation and using renewable energy.",
+      "misconception": "Climate change cannot be controlled.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "effects_on_humans",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "Why can climate change lead to the spread of diseases?",
+      "options": ["Floods and heat create conditions for germs to spread", "People become weaker", "There are more hospitals", "Vaccines stop working"],
+      "answer": 0,
+      "hints": ["Floods create dirty water.", "Heat can help germs grow."],
+      "explanation": "Climate change can lead to the spread of diseases because floods create dirty water and heat creates conditions for germs to multiply.",
+      "misconception": "Climate change does not affect disease spread.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "effects_on_humans",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Explain how climate change can lead to food shortage.",
+      "answer": ["droughts and floods destroy crops, reducing food supply", "crops fail because of drought or floods", "extreme weather destroys farms"],
+      "hints": ["Think about crops needing water.", "Floods and droughts damage farms."],
+      "explanation": "Climate change can lead to food shortage because droughts and floods destroy crops, reducing the amount of food available.",
+      "misconception": "Climate change does not affect food.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "define_climate_change",
+      "type": "mcq",
+      "difficulty": 4,
+      "stem": "Which statement best describes climate change?",
+      "options": ["It is a change in weather from day to night", "It is a change in the colour of the sky", "It is long-term change in weather patterns over many years", "It is a change in the time of sunrise each day"],
+      "answer": 2,
+      "hints": ["It happens over many years.", "It affects weather patterns."],
+      "explanation": "Climate change refers to long-term changes in weather patterns over many years.",
+      "misconception": "Climate change means daily weather changes.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "concept_map_climate",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "Draw a simple concept map on climate change with three branches: 'Causes', 'Effects on Humans' and 'Prevention'. Write at least one correct point under each branch.",
+      "rubric": {
+        "criteria": [
+          {"description": "Wrote one correct cause of climate change", "marks": 1},
+          {"description": "Wrote one correct effect of climate change on humans", "marks": 1},
+          {"description": "Wrote one correct way to prevent or control climate change", "marks": 1},
+          {"description": "Organised the points clearly under the three branches", "marks": 2}
+        ]
+      },
+      "answer": "",
+      "hints": ["Think about burning fuels and deforestation for causes.", "Think about food shortage and disease for effects.", "Think about planting trees for prevention."],
+      "explanation": "This is a written task. Your teacher will mark it using the rubric.",
+      "misconception": "Climate change has no clear causes or effects.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "concept_map_climate",
+      "type": "practical",
+      "difficulty": 4,
+      "stem": "In groups, plant a tree seedling in your school compound. After planting, explain to the class how the tree will help control climate change.",
+      "rubric": {
+        "criteria": [
+          {"description": "Planted a tree seedling correctly", "marks": 2},
+          {"description": "Explained that trees absorb carbon dioxide", "marks": 2},
+          {"description": "Explained that trees help cool the environment", "marks": 1},
+          {"description": "Worked cooperatively in the group", "marks": 1}
+        ]
+      },
+      "answer": "",
+      "hints": ["Dig a hole, plant the seedling, cover with soil and water.", "Trees absorb carbon dioxide from the air."],
+      "explanation": "This is a practical task. Your teacher will mark it using the rubric.",
+      "misconception": "Planting trees does not help climate change.",
+      "uncertain": []
+    }
+  ]
+}

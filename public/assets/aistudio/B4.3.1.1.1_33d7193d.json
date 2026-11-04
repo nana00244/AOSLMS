@@ -1,0 +1,299 @@
+{
+  "indicator": {
+    "code": "B4.3.1.1.1",
+    "subject": "Science",
+    "level": "Basic 4",
+    "strand": "SYSTEMS",
+    "sub_strand": "The Human Body Systems",
+    "content_standard": "B4.3.1.1 Recognize that different parts of the human body work independently to perform a specific function",
+    "objective": "Know the organs of the digestive system and their functions",
+    "source_page": 30
+  },
+  "spec": {
+    "skills": [
+      {"tag": "identify_organs", "description": "Name or recognise the main organs of the digestive system: mouth, oesophagus, stomach, small intestine, large intestine, anus.", "minQuestions": 4},
+      {"tag": "function_of_organs", "description": "State the simple function of each organ (e.g. mouth chews food, stomach breaks down food, small intestine absorbs nutrients, large intestine absorbs water).", "minQuestions": 4},
+      {"tag": "order_organs", "description": "Arrange the organs in the correct order that food passes through the digestive system.", "minQuestions": 3},
+      {"tag": "match_function_to_organ", "description": "Match a described function to the correct organ.", "minQuestions": 3},
+      {"tag": "importance_digestion", "description": "Explain simply why the digestive system is important (breaks down food, helps the body get nutrients).", "minQuestions": 3},
+      {"tag": "identify_from_position", "description": "Identify an organ from a simple description of its position in the body (e.g. “the tube that connects the mouth to the stomach”).", "minQuestions": 3}
+    ],
+    "difficultyPlan": "20 questions total — Difficulty 1: 5; Difficulty 2: 7; Difficulty 3: 5; Difficulty 4: 3.",
+    "misconceptions": [
+      "Food goes straight to the stomach after swallowing.",
+      "The large intestine comes before the small intestine.",
+      "The stomach is where most food is absorbed into the blood.",
+      "The mouth only chews food; it does not start breaking it down.",
+      "The oesophagus stores food.",
+      "The anus is part of the small intestine."
+    ],
+    "needsTeacherAssessment": true
+  },
+  "questions": [
+    {
+      "skill_tag": "identify_organs",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which organ is the first part of the digestive system that food enters?",
+      "options": ["Stomach", "Mouth", "Small intestine", "Oesophagus"],
+      "answer": 1,
+      "hints": ["Where does food go when you start eating?", "You chew food here."],
+      "explanation": "The mouth is the first part of the digestive system. Food enters the mouth and is chewed.",
+      "misconception": "Food goes straight to the stomach.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_organs",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which organ is a long tube that connects the mouth to the stomach?",
+      "options": ["Large intestine", "Small intestine", "Oesophagus", "Anus"],
+      "answer": 2,
+      "hints": ["It is a tube.", "Food travels down it to reach the stomach."],
+      "explanation": "The oesophagus is the tube that connects the mouth to the stomach. Food travels down it after swallowing.",
+      "misconception": "The oesophagus stores food.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_organs",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which organ is like a bag where food is mixed and broken down?",
+      "options": ["Mouth", "Stomach", "Oesophagus", "Large intestine"],
+      "answer": 1,
+      "hints": ["It is a stretchy bag.", "Food stays here for a while after leaving the oesophagus."],
+      "explanation": "The stomach is a bag-like organ where food is mixed and broken down further.",
+      "misconception": "The stomach absorbs most food into the blood.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_organs",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which of these is the last part of the digestive system where waste leaves the body?",
+      "options": ["Anus", "Stomach", "Mouth", "Oesophagus"],
+      "answer": 0,
+      "hints": ["It is at the end of the digestive system.", "Waste leaves the body through it."],
+      "explanation": "The anus is the last part of the digestive system. Waste leaves the body through it.",
+      "misconception": "The anus is part of the small intestine.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "importance_digestion",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Why is the digestive system important?",
+      "options": ["It helps us breathe.", "It breaks down food so the body can use it.", "It pumps blood around the body.", "It helps us see."],
+      "answer": 1,
+      "hints": ["What happens to food after you eat it?", "The body needs nutrients from food."],
+      "explanation": "The digestive system breaks down food into nutrients the body can use for energy and growth.",
+      "misconception": "The digestive system is not important.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "function_of_organs",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "What does the mouth do in the digestive system?",
+      "options": ["It absorbs water from food", "It chews food and mixes it with saliva", "It stores food for later", "It pushes waste out"],
+      "answer": 1,
+      "hints": ["Teeth are in the mouth.", "Saliva is in the mouth."],
+      "explanation": "The mouth chews food into smaller pieces and mixes it with saliva. This starts the digestion process.",
+      "misconception": "The mouth only chews food; it does not start breaking it down.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "function_of_organs",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "What is the job of the small intestine?",
+      "options": ["To chew food", "To absorb nutrients from food into the blood", "To store waste", "To carry food to the mouth"],
+      "answer": 1,
+      "hints": ["Most nutrients are absorbed here.", "It is a long, coiled tube."],
+      "explanation": "The small intestine absorbs nutrients from digested food into the blood. This is where most absorption happens.",
+      "misconception": "The stomach is where most food is absorbed into the blood.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "function_of_organs",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "What does the large intestine do?",
+      "options": ["It absorbs water from undigested food", "It chews food", "It stores fresh food", "It pumps blood"],
+      "answer": 0,
+      "hints": ["Water is removed from the waste here.", "The waste becomes more solid."],
+      "explanation": "The large intestine absorbs water from the undigested food, turning it into solid waste.",
+      "misconception": "The large intestine comes before the small intestine.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "order_organs",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which is the correct order that food passes through the digestive system?",
+      "options": ["Mouth → stomach → oesophagus → small intestine → large intestine", "Mouth → oesophagus → stomach → small intestine → large intestine", "Stomach → mouth → oesophagus → large intestine → small intestine", "Mouth → large intestine → stomach → small intestine → oesophagus"],
+      "answer": 1,
+      "hints": ["Food first enters the mouth.", "It goes down a tube before reaching the stomach."],
+      "explanation": "Food passes: mouth → oesophagus → stomach → small intestine → large intestine → anus.",
+      "misconception": "Food goes straight to the stomach after swallowing.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_from_position",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which organ is described as the tube that connects the mouth to the stomach?",
+      "options": ["Anus", "Large intestine", "Oesophagus", "Small intestine"],
+      "answer": 2,
+      "hints": ["It is a long tube.", "Food travels down it."],
+      "explanation": "The oesophagus connects the mouth to the stomach.",
+      "misconception": "The oesophagus stores food.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "function_of_organs",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which organ pushes waste out of the body?",
+      "options": ["Stomach", "Small intestine", "Mouth", "Anus"],
+      "answer": 3,
+      "hints": ["It is at the end of the digestive system.", "Waste leaves the body here."],
+      "explanation": "The anus is the opening at the end of the digestive system through which waste leaves the body.",
+      "misconception": "The anus is part of the small intestine.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "match_function_to_organ",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which organ matches this function: 'absorbs water from undigested food'?",
+      "options": ["Stomach", "Small intestine", "Large intestine", "Oesophagus"],
+      "answer": 2,
+      "hints": ["Water is removed from waste here.", "It is wider than the small intestine."],
+      "explanation": "The large intestine absorbs water from undigested food. This makes the waste solid.",
+      "misconception": "The small intestine absorbs water from undigested food.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "order_organs",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "List the organs of the digestive system in the correct order that food passes through them, starting from the mouth.",
+      "answer": ["mouth, oesophagus, stomach, small intestine, large intestine, anus", "mouth oesophagus stomach small intestine large intestine anus"],
+      "hints": ["Food starts in the mouth.", "It ends at the anus."],
+      "explanation": "The order is: mouth → oesophagus → stomach → small intestine → large intestine → anus.",
+      "misconception": "Food goes straight to the stomach after swallowing.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "importance_digestion",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "What would happen if the digestive system did not break down food?",
+      "options": ["The body would get more nutrients", "The body would not get the nutrients it needs from food", "The body would grow faster", "Food would stay in the mouth forever"],
+      "answer": 1,
+      "hints": ["The body needs nutrients from food.", "If food is not broken down, can the body use it?"],
+      "explanation": "If food is not broken down, the body cannot absorb the nutrients it needs for energy and growth.",
+      "misconception": "Digestion is not needed for the body to get nutrients.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "function_of_organs",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "Which TWO organs absorb substances from food into the blood?",
+      "options": ["Mouth and oesophagus", "Small intestine and large intestine", "Stomach and mouth", "Anus and oesophagus"],
+      "answer": 1,
+      "hints": ["One absorbs nutrients.", "The other absorbs water."],
+      "explanation": "The small intestine absorbs nutrients, and the large intestine absorbs water. Both absorb substances from food.",
+      "misconception": "The stomach is the only organ that absorbs substances.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_from_position",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "Which organ is a long, coiled tube found after the stomach?",
+      "options": ["Large intestine", "Oesophagus", "Small intestine", "Anus"],
+      "answer": 2,
+      "hints": ["It is long and coiled.", "Most nutrients are absorbed here."],
+      "explanation": "The small intestine is a long, coiled tube that comes after the stomach. It absorbs nutrients from food.",
+      "misconception": "The large intestine comes before the small intestine.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "importance_digestion",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Why does the body need the digestive system?",
+      "answer": ["to break down food so the body can get nutrients and energy", "to break down food into nutrients the body can use", "it breaks down food for the body to use"],
+      "hints": ["Food needs to be broken down.", "The body needs nutrients and energy."],
+      "explanation": "The body needs the digestive system to break down food into nutrients that can be absorbed and used for energy, growth and repair.",
+      "misconception": "The body can use food without breaking it down.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "match_function_to_organ",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Match the organ to its function: stomach, small intestine, large intestine. Write the correct function next to each.",
+      "answer": ["stomach breaks down food, small intestine absorbs nutrients, large intestine absorbs water", "stomach: breaks down food; small intestine: absorbs nutrients; large intestine: absorbs water"],
+      "hints": ["The stomach is a bag that mixes food.", "One intestine absorbs nutrients; the other absorbs water."],
+      "explanation": "Stomach: breaks down food. Small intestine: absorbs nutrients. Large intestine: absorbs water.",
+      "misconception": "The stomach absorbs most nutrients.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_organs",
+      "type": "drawing",
+      "difficulty": 3,
+      "stem": "Draw a simple diagram of the digestive system. Label the mouth, oesophagus, stomach, small intestine and large intestine.",
+      "rubric": {
+        "criteria": [
+          {"description": "Drew a simple diagram showing the digestive system organs", "marks": 1},
+          {"description": "Labeled the mouth correctly", "marks": 1},
+          {"description": "Labeled the oesophagus correctly", "marks": 1},
+          {"description": "Labeled the stomach correctly", "marks": 1},
+          {"description": "Labeled the small intestine correctly", "marks": 1},
+          {"description": "Labeled the large intestine correctly", "marks": 1}
+        ]
+      },
+      "answer": "Teacher-assessed using the rubric. Expected diagram: mouth at top, oesophagus as a tube, stomach as a bag, small intestine as a coiled tube, large intestine as a wider tube around the small intestine.",
+      "hints": ["Start at the top with the mouth.", "The small intestine is long and coiled; the large intestine is wider."],
+      "explanation": "This is a drawing task. Your teacher will mark it using the rubric.",
+      "misconception": "The large intestine comes before the small intestine.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "match_function_to_organ",
+      "type": "mcq",
+      "difficulty": 4,
+      "stem": "A pupil says, 'The stomach is where most food is absorbed into the blood.' What is the best correction?",
+      "options": ["The mouth absorbs most food", "The oesophagus absorbs most food", "The small intestine absorbs most nutrients into the blood", "The anus absorbs most food"],
+      "answer": 2,
+      "hints": ["The stomach breaks food down.", "Most absorption happens in a long, coiled tube."],
+      "explanation": "The stomach breaks down food, but most nutrients are absorbed into the blood in the small intestine.",
+      "misconception": "The stomach is where most food is absorbed into the blood.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "order_organs",
+      "type": "oral",
+      "difficulty": 4,
+      "stem": "In your group, role-play the organs of the digestive system. One learner acts as the mouth, another as the oesophagus, another as the stomach, another as the small intestine, and another as the large intestine. Each learner should say one sentence describing what their organ does as 'food' passes through.",
+      "rubric": {
+        "criteria": [
+          {"description": "Learner correctly acted as an organ of the digestive system", "marks": 1},
+          {"description": "Learner stated at least one correct function of their organ", "marks": 2},
+          {"description": "Learner participated in the correct sequence when 'food' passed through", "marks": 1},
+          {"description": "Learner spoke clearly and confidently", "marks": 1}
+        ]
+      },
+      "answer": "Teacher-assessed using the rubric. Expected responses: mouth — chews food; oesophagus — carries food to the stomach; stomach — breaks down food; small intestine — absorbs nutrients; large intestine — absorbs water.",
+      "hints": ["Think about what each organ does.", "Remember the order food passes through."],
+      "explanation": "This is a role-play task. Your teacher will mark it using the rubric.",
+      "misconception": "Food goes straight to the stomach after swallowing.",
+      "uncertain": []
+    }
+  ]
+}

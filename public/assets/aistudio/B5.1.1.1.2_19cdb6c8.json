@@ -1,0 +1,283 @@
+{
+  "indicator": {
+    "code": "B5.1.1.1.2",
+    "subject": "Mathematics",
+    "level": "Basic 5",
+    "strand": "Number",
+    "sub_strand": "Counting, Representation & Cardinality",
+    "content_standard": "B5.1.1.1 Demonstrate an understanding of quantities and place value for multi-digit numerals up to 1000,000",
+    "objective": "Read and write numbers in figures and in words up to 1000,000",
+    "source_page": 77
+  },
+  "spec": {
+    "skills": [
+      {"tag": "read_figures_to_words_large", "description": "Convert numbers in figures to words up to 1,000,000.", "minQuestions": 2},
+      {"tag": "write_words_to_figures_large", "description": "Convert number words to figures up to 1,000,000.", "minQuestions": 2},
+      {"tag": "match_word_cards_large", "description": "Match number word cards to their corresponding figures.", "minQuestions": 2}
+    ],
+    "difficultyPlan": "20 questions: 5 at difficulty 1, 7 at difficulty 2, 5 at difficulty 3, 3 at difficulty 4.",
+    "misconceptions": [
+      "Forgetting the hyphen in compound tens (e.g., twenty-four).",
+      "Missing the 'and' before tens/ones.",
+      "Misplacing zeros when converting words to figures (e.g., writing 100,000 as 10,000)."
+    ],
+    "needsTeacherAssessment": false
+  },
+  "questions": [
+    {
+      "skill_tag": "read_figures_to_words_large",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "How do you read the number 40,000?",
+      "options": ["Four thousand", "Forty thousand", "Four hundred thousand", "Forty hundred"],
+      "answer": 1,
+      "hints": ["It has a 4 followed by four zeros.", "The place value is ten-thousands."],
+      "explanation": "40,000 is read as forty thousand.",
+      "misconception": "Saying four thousand.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "read_figures_to_words_large",
+      "type": "short_answer",
+      "difficulty": 1,
+      "stem": "Write the number 7,500 in words.",
+      "answer": ["seven thousand five hundred", "seven thousand, five hundred"],
+      "hints": ["How many thousands?", "How many hundreds?"],
+      "explanation": "7,500 is seven thousand, five hundred.",
+      "misconception": "Writing 'seventy-five hundred'.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "write_words_to_figures_large",
+      "type": "numeric",
+      "difficulty": 1,
+      "stem": "Write 'two hundred thousand' in figures.",
+      "answer": 200000,
+      "check": "200000",
+      "hints": ["Two hundred thousand has a 2 followed by five zeros."],
+      "explanation": "'Two hundred thousand' is 200,000.",
+      "misconception": "Writing 20,000.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "write_words_to_figures_large",
+      "type": "short_answer",
+      "difficulty": 1,
+      "stem": "Write 'five thousand and six' in figures.",
+      "answer": ["5006"],
+      "hints": ["There are no hundreds or tens."],
+      "explanation": "'Five thousand and six' is 5,006.",
+      "misconception": "Writing 56 or 5,060.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "match_word_cards_large",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which number matches the word card 'eighteen thousand'?",
+      "options": ["18,000", "1,800", "180,000", "18"],
+      "answer": 0,
+      "hints": ["18 followed by three zeros."],
+      "explanation": "Eighteen thousand is 18,000.",
+      "misconception": "Writing 1,800.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "read_figures_to_words_large",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which is the correct way to read 235,000?",
+      "options": ["Two hundred and thirty-five thousand", "Two hundred thirty-five thousand", "Two hundred and thirty-five hundreds", "Twenty-three thousand five hundred"],
+      "answer": 1,
+      "hints": ["Group the digits as 235 thousand."],
+      "explanation": "235,000 is two hundred thirty-five thousand.",
+      "misconception": "Adding an 'and' after hundred when not needed (though acceptable in some conventions, the simplest form is without).",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "write_words_to_figures_large",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "Write 'seventy-five thousand' in figures.",
+      "answer": 75000,
+      "check": "75*1000",
+      "hints": ["75 followed by three zeros."],
+      "explanation": "75,000.",
+      "misconception": "Writing 7,500.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "read_figures_to_words_large",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Write the number 24,305 in words.",
+      "answer": ["twenty-four thousand, three hundred and five", "twenty-four thousand three hundred and five"],
+      "hints": ["Say the thousands part first.", "Include 'and' before the ones."],
+      "explanation": "24,305 is twenty-four thousand, three hundred and five.",
+      "misconception": "Omitting the 'and' or writing 'twenty four' without hyphen.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "write_words_to_figures_large",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Write 'sixty-two thousand, three hundred and nine' in figures.",
+      "answer": ["62309"],
+      "hints": ["62 thousands, 3 hundreds, 9 ones."],
+      "explanation": "62,309.",
+      "misconception": "Writing 60,239.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "match_word_cards_large",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which word card matches the number 500,000?",
+      "options": ["Five thousand", "Fifty thousand", "Five hundred thousand", "Five million"],
+      "answer": 2,
+      "hints": ["It has a 5 followed by five zeros."],
+      "explanation": "500,000 is five hundred thousand.",
+      "misconception": "Choosing fifty thousand.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "read_figures_to_words_large",
+      "type": "written",
+      "difficulty": 2,
+      "stem": "Write the number 100,000 in words.",
+      "hints": ["It has a 1 followed by five zeros."],
+      "explanation": "100,000 is one hundred thousand.",
+      "rubric": {
+        "criteria": [
+          {"description": "Writes 'one hundred thousand'.", "marks": 1}
+        ]
+      },
+      "misconception": "Writing 'ten thousand' or 'one thousand hundred'.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "write_words_to_figures_large",
+      "type": "written",
+      "difficulty": 2,
+      "stem": "Explain how you know how many zeros to put when writing 'ninety thousand' in figures.",
+      "hints": ["Think about the place value chart.", "Thousands have three zeros."],
+      "explanation": "Ninety thousand has a 9 in the ten-thousands place and a 0 in the thousands place, plus zeros in the hundreds, tens, and ones, making 90,000.",
+      "rubric": {
+        "criteria": [
+          {"description": "Explains that there are three zeros for the thousands group.", "marks": 1},
+          {"description": "Explains the zero in the thousands place.", "marks": 1}
+        ]
+      },
+      "misconception": "Thinking you only add one zero for the word thousand.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "read_figures_to_words_large",
+      "type": "numeric",
+      "difficulty": 3,
+      "stem": "Write the numeral for 'six hundred and forty-two thousand, one hundred and eight'.",
+      "answer": 642108,
+      "check": "642108",
+      "hints": ["642 thousands, 108 ones."],
+      "explanation": "642,108.",
+      "misconception": "Writing 642,18 or 640,208.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "write_words_to_figures_large",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Write 'seven hundred thousand and fifty' in figures.",
+      "answer": ["700050"],
+      "hints": ["700 thousands, 0 hundreds, 5 tens, 0 ones."],
+      "explanation": "700,050.",
+      "misconception": "Writing 700,500 or 700,005.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "match_word_cards_large",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "Match the word card 'nine hundred and ninety-nine thousand, nine hundred and ninety-nine' to the correct figures.",
+      "hints": ["999 thousands, 999 ones."],
+      "explanation": "999,999.",
+      "rubric": {
+        "criteria": [
+          {"description": "Writes 999,999.", "marks": 1}
+        ]
+      },
+      "misconception": "Writing 999,99 or 990,999.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "read_figures_to_words_large",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "Write 1,000,000 in words.",
+      "hints": ["It is 1 followed by six zeros."],
+      "explanation": "One million.",
+      "rubric": {
+        "criteria": [
+          {"description": "Writes 'one million'.", "marks": 1}
+        ]
+      },
+      "misconception": "Writing 'ten hundred thousand'.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "write_words_to_figures_large",
+      "type": "numeric",
+      "difficulty": 3,
+      "stem": "Write 'four hundred and five thousand, two hundred and sixty' in figures.",
+      "answer": 405260,
+      "check": "405260",
+      "hints": ["405 thousands, 260 ones."],
+      "explanation": "405,260.",
+      "misconception": "Writing 450,260.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "match_word_cards_large",
+      "type": "mcq",
+      "difficulty": 4,
+      "stem": "Which number is 'three hundred and twenty thousand, five hundred and seven'?",
+      "options": ["320,507", "320,570", "302,507", "325,007"],
+      "answer": 0,
+      "hints": ["320 thousands, 507 ones."],
+      "explanation": "320,507.",
+      "misconception": "Writing 320,570.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "read_figures_to_words_large",
+      "type": "written",
+      "difficulty": 4,
+      "stem": "Write the number 909,909 in words.",
+      "hints": ["909 thousands, 909 ones."],
+      "explanation": "Nine hundred and nine thousand, nine hundred and nine.",
+      "rubric": {
+        "criteria": [
+          {"description": "Writes 'nine hundred and nine thousand'.", "marks": 1},
+          {"description": "Writes 'nine hundred and nine'.", "marks": 1}
+        ]
+      },
+      "misconception": "Missing the 'and' or misplacing zeros.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "write_words_to_figures_large",
+      "type": "written",
+      "difficulty": 4,
+      "stem": "Explain the difference between 'six hundred thousand' and 'six hundred and six thousand'.",
+      "hints": ["Look at the thousands digit."],
+      "explanation": "'Six hundred thousand' is 600,000. 'Six hundred and six thousand' is 606,000.",
+      "rubric": {
+        "criteria": [
+          {"description": "States 600,000 vs 606,000.", "marks": 1}
+        ]
+      },
+      "misconception": "Thinking they are the same.",
+      "uncertain": []
+    }
+  ]
+}

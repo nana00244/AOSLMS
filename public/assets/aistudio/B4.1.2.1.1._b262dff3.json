@@ -1,0 +1,282 @@
+{
+  "indicator": {
+    "code": "B4.1.1.3.6",
+    "subject": "Mathematics",
+    "level": "Basic 4",
+    "strand": "Number",
+    "sub_strand": "Counting, Representation & Cardinality",
+    "content_standard": "B4.1.1.3 Demonstrate an understanding of factors, multiples and squared numbers",
+    "objective": "Represent square numbers using factors",
+    "source_page": 33
+  },
+  "spec": {
+    "skills": [
+      {"tag": "represent_squares_area", "description": "Represent square numbers using the area of squares.", "minQuestions": 2},
+      {"tag": "use_exponent_notation", "description": "Write square numbers using exponent notation (e.g., 3 x 3 = 3^2).", "minQuestions": 2}
+    ],
+    "difficultyPlan": "20 questions: 5 at difficulty 1, 7 at difficulty 2, 5 at difficulty 3, 3 at difficulty 4.",
+    "misconceptions": [
+      "Thinking 3^2 means 3 x 2.",
+      "Confusing the base and the exponent.",
+      "Drawing a 3 x 3 square but counting the lines instead of the squares."
+    ],
+    "needsTeacherAssessment": true
+  },
+  "questions": [
+    {
+      "skill_tag": "represent_squares_area",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "A square has a side length of 2 cm. What is its area?",
+      "options": ["2 square cm", "4 square cm", "6 square cm", "8 square cm"],
+      "answer": 1,
+      "hints": ["Area of a square = side x side.", "2 x 2."],
+      "explanation": "The area is 2 x 2 = 4 square cm.",
+      "misconception": "Adding the sides (2 + 2 = 4? No, area is multiplying).",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "represent_squares_area",
+      "type": "numeric",
+      "difficulty": 1,
+      "stem": "If you draw a square with 3 squares along the length and 3 squares along the width on a grid, how many small squares are inside?",
+      "answer": 9,
+      "check": "3*3",
+      "hints": ["Count the rows and columns.", "3 rows of 3."],
+      "explanation": "3 rows of 3 squares gives 9 squares.",
+      "misconception": "Counting the perimeter (12).",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "use_exponent_notation",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "How do you write 4 x 4 using an exponent?",
+      "options": ["4^2", "2^4", "4^4", "2^2"],
+      "answer": 0,
+      "hints": ["The base is the number being multiplied.", "The exponent is how many times it is multiplied by itself."],
+      "explanation": "4 x 4 is written as 4^2.",
+      "misconception": "Writing 2^4.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "use_exponent_notation",
+      "type": "short_answer",
+      "difficulty": 1,
+      "stem": "What does 5^2 mean in expanded form?",
+      "answer": ["5 x 5", "5*5"],
+      "hints": ["The exponent tells you how many 5s to multiply.", "Write two 5s with a multiplication sign."],
+      "explanation": "5^2 means 5 x 5.",
+      "misconception": "Writing 5 x 2.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "represent_squares_area",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which shape represents the square number 16?",
+      "options": ["A rectangle of 4 by 4", "A rectangle of 4 by 5", "A rectangle of 8 by 2", "A rectangle of 3 by 6"],
+      "answer": 0,
+      "hints": ["A square number must form a perfect square.", "4 x 4 = 16."],
+      "explanation": "16 is represented by a 4 by 4 square.",
+      "misconception": "Choosing 8 by 2 because 8 x 2 = 16.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "represent_squares_area",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "What is the area of a square with a side length of 6 cm?",
+      "answer": 36,
+      "check": "6*6",
+      "hints": ["Area = side x side.", "6 x 6."],
+      "explanation": "6 x 6 = 36 square cm.",
+      "misconception": "Doing 6 + 6 = 12.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "represent_squares_area",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "A square has an area of 25 square units. What is the length of one side?",
+      "options": ["5 units", "10 units", "12.5 units", "25 units"],
+      "answer": 0,
+      "hints": ["What number multiplied by itself gives 25?", "5 x 5 = 25."],
+      "explanation": "The side length is 5 units.",
+      "misconception": "Dividing 25 by 2.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "use_exponent_notation",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "What is the value of 7^2?",
+      "answer": 49,
+      "check": "7*7",
+      "hints": ["Multiply 7 by itself.", "7 x 7."],
+      "explanation": "7^2 = 7 x 7 = 49.",
+      "misconception": "Doing 7 x 2 = 14.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "use_exponent_notation",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which of these is equal to 8^2?",
+      "options": ["16", "64", "82", "24"],
+      "answer": 1,
+      "hints": ["8^2 means 8 x 8.", "Calculate 8 x 8."],
+      "explanation": "8 x 8 = 64.",
+      "misconception": "Doing 8 x 2 = 16.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "use_exponent_notation",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Write 9 x 9 in exponent form.",
+      "answer": ["9^2"],
+      "hints": ["What is the base?", "What is the exponent?"],
+      "explanation": "9 x 9 is written as 9^2.",
+      "misconception": "Writing 2^9.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "represent_squares_area",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "How many squares are in a grid that is 10 squares wide and 10 squares long?",
+      "answer": 100,
+      "check": "10*10",
+      "hints": ["Area of a square = side x side.", "10 x 10."],
+      "explanation": "10 x 10 = 100 squares.",
+      "misconception": "Adding 10 + 10 = 20.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "use_exponent_notation",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "What is the difference between 3^2 and 3 x 2?",
+      "options": ["They are the same", "3^2 is 9, 3 x 2 is 6", "3^2 is 6, 3 x 2 is 9", "3^2 is 12, 3 x 2 is 6"],
+      "answer": 1,
+      "hints": ["3^2 means 3 x 3.", "3 x 2 means 3 + 3."],
+      "explanation": "3^2 = 9 (3 x 3), while 3 x 2 = 6 (3 + 3).",
+      "misconception": "Thinking 3^2 and 3 x 2 are equal.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "represent_squares_area",
+      "type": "numeric",
+      "difficulty": 3,
+      "stem": "A square has an area of 81 square cm. What is the length of its side?",
+      "answer": 9,
+      "check": "sqrt(81)",
+      "hints": ["What number times itself is 81?", "Try 9 x 9."],
+      "explanation": "9 x 9 = 81. The side length is 9 cm.",
+      "misconception": "Dividing 81 by 4.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "use_exponent_notation",
+      "type": "numeric",
+      "difficulty": 3,
+      "stem": "What is the value of 12^2?",
+      "answer": 144,
+      "check": "12*12",
+      "hints": ["10 x 12 = 120.", "2 x 12 = 24.", "120 + 24."],
+      "explanation": "12 x 12 = 144.",
+      "misconception": "Doing 12 x 2 = 24.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "use_exponent_notation",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "If a number is squared and the result is 100, what was the original number?",
+      "options": ["10", "20", "50", "25"],
+      "answer": 0,
+      "hints": ["What number multiplied by itself gives 100?", "10 x 10 = 100."],
+      "explanation": "10 x 10 = 100, so the number is 10.",
+      "misconception": "Dividing 100 by 2 to get 50.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "represent_squares_area",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "Explain why a 5 by 5 square has an area of 25, but a 5 by 6 rectangle does not represent a square number.",
+      "hints": ["What is the difference between a square and a rectangle?", "Are the sides of a 5 by 6 rectangle equal?"],
+      "explanation": "A 5 by 5 square has equal sides, so its area is 5 x 5 = 25 (a square number). A 5 by 6 rectangle has unequal sides, so its area is 30, which cannot be formed by multiplying a number by itself.",
+      "rubric": {
+        "criteria": [
+          {"description": "Explains that a square must have equal sides.", "marks": 1},
+          {"description": "Calculates the area of the 5x6 rectangle correctly (30).", "marks": 1}
+        ]
+      },
+      "misconception": "Thinking any rectangle has a square number area.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "use_exponent_notation",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Calculate 15^2.",
+      "answer": ["225"],
+      "hints": ["10 x 15 = 150.", "5 x 15 = 75.", "150 + 75."],
+      "explanation": "15 x 15 = 225.",
+      "misconception": "Doing 15 x 2 = 30.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "represent_squares_area",
+      "type": "drawing",
+      "difficulty": 3,
+      "stem": "On a grid paper, draw a square with a side length of 7 units. State its area.",
+      "hints": ["Draw 7 squares across and 7 squares down.", "Area = 7 x 7."],
+      "explanation": "The learner should draw a 7x7 square and state the area is 49 square units.",
+      "rubric": {
+        "criteria": [
+          {"description": "Draws a 7x7 square.", "marks": 1},
+          {"description": "States the area as 49.", "marks": 1}
+        ]
+      },
+      "misconception": "Drawing a 7x7 square but stating the area as 28 (perimeter).",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "represent_squares_area",
+      "type": "written",
+      "difficulty": 4,
+      "stem": "Explain the difference between the perimeter and the area of a 4x4 square.",
+      "hints": ["Perimeter is the distance around.", "Area is the space inside."],
+      "explanation": "The perimeter of a 4x4 square is 16 units (4 + 4 + 4 + 4), while the area is 16 square units (4 x 4).",
+      "rubric": {
+        "criteria": [
+          {"description": "Calculates the perimeter as 16 units.", "marks": 1},
+          {"description": "Calculates the area as 16 square units.", "marks": 1},
+          {"description": "Explains that perimeter is linear and area is squared.", "marks": 1}
+        ]
+      },
+      "misconception": "Thinking perimeter and area are the same thing.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "use_exponent_notation",
+      "type": "written",
+      "difficulty": 4,
+      "stem": "Why is 6^2 equal to 36, while 2^6 is equal to 64?",
+      "hints": ["6^2 means 6 x 6.", "2^6 means 2 x 2 x 2 x 2 x 2 x 2."],
+      "explanation": "In 6^2, the base is 6 and the exponent is 2 (6 x 6 = 36). In 2^6, the base is 2 and the exponent is 6 (2 x 2 x 2 x 2 x 2 x 2 = 64). The base and exponent swapped, giving different results.",
+      "rubric": {
+        "criteria": [
+          {"description": "Calculates 6^2 as 36.", "marks": 1},
+          {"description": "Calculates 2^6 as 64.", "marks": 1},
+          {"description": "Explains the difference in base and exponent.", "marks": 1}
+        ]
+      },
+      "misconception": "Thinking swapping base and exponent doesn't change the answer.",
+      "uncertain": []
+    }
+  ]
+}

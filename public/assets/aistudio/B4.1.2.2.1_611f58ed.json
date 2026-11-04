@@ -1,0 +1,269 @@
+{
+  "indicator": {
+    "code": "B4.1.2.2.1",
+    "subject": "Science",
+    "level": "Basic 4",
+    "strand": "DIVERSITY OF MATTER",
+    "sub_strand": "Materials",
+    "content_standard": "B4.1.2.2 Understand mixtures, their types, formation, uses and ways of separating them into their components",
+    "objective": "Identify a liquid-liquid mixture and describe how to separate its components",
+    "source_page": 26
+  },
+  "spec": {
+    "skills": [
+      {"tag": "identify_liquid_mixture", "description": "Recognise that a liquid-liquid mixture is formed when two or more liquids are combined.", "minQuestions": 3},
+      {"tag": "miscible_immiscible", "description": "Distinguish between liquids that mix uniformly (miscible) and those that do not mix uniformly (immiscible).", "minQuestions": 4},
+      {"tag": "examples_miscible", "description": "Give or identify everyday examples of miscible liquid pairs (e.g. water and vinegar, water and soft drink).", "minQuestions": 3},
+      {"tag": "examples_immiscible", "description": "Give or identify everyday examples of immiscible liquid pairs (e.g. water and cooking oil, water and kerosene).", "minQuestions": 3},
+      {"tag": "separation_method", "description": "Describe how to separate immiscible liquids using a separating funnel or improvised version.", "minQuestions": 4},
+      {"tag": "why_separation_works", "description": "Explain simply why immiscible liquids can be separated by a separating funnel (they form layers).", "minQuestions": 3}
+    ],
+    "difficultyPlan": "20 questions total — Difficulty 1: 5; Difficulty 2: 7; Difficulty 3: 5; Difficulty 4: 3.",
+    "misconceptions": [
+      "All liquids mix together.",
+      "Oil and water form one uniform liquid when stirred.",
+      "You can separate oil and water by stirring them well.",
+      "A separating funnel works because it heats the liquids.",
+      "Miscible liquids can be separated with a separating funnel.",
+      "Kerosene and water are miscible because both are liquids."
+    ],
+    "needsTeacherAssessment": false
+  },
+  "questions": [
+    {
+      "skill_tag": "identify_liquid_mixture",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What is a liquid-liquid mixture?",
+      "options": ["When two solids are mixed together", "When two or more liquids are combined", "When a liquid is mixed with a gas", "When a liquid is heated"],
+      "answer": 1,
+      "hints": ["Think about what is being mixed — are they solids or liquids?", "A liquid-liquid mixture has two liquids."],
+      "explanation": "A liquid-liquid mixture is formed when two or more liquids are combined, such as water and vinegar.",
+      "misconception": "Some learners think any mixture is a liquid-liquid mixture.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_liquid_mixture",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "When you pour water and vinegar into the same cup and stir, what have you made?",
+      "options": ["A liquid-liquid mixture", "A solid-liquid mixture", "A gas", "A new solid"],
+      "answer": 0,
+      "hints": ["Are both water and vinegar liquids?", "You have combined two liquids."],
+      "explanation": "Water and vinegar are both liquids. Mixing them makes a liquid-liquid mixture.",
+      "misconception": "Some learners think mixing liquids creates a solid.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "miscible_immiscible",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What do we call liquids that mix uniformly without forming separate layers?",
+      "options": ["Immiscible liquids", "Miscible liquids", "Solid liquids", "Heavy liquids"],
+      "answer": 1,
+      "hints": ["Think of water and vinegar — they mix completely.", "The word starts with 'mis'."],
+      "explanation": "Miscible liquids mix uniformly and do not form separate layers.",
+      "misconception": "Some learners confuse miscible with immiscible.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "examples_miscible",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which of these is a miscible liquid pair?",
+      "options": ["Water and cooking oil", "Water and vinegar", "Water and kerosene", "Palm oil and water"],
+      "answer": 1,
+      "hints": ["Which pair mixes completely without layers?", "Vinegar and water mix uniformly."],
+      "explanation": "Water and vinegar mix uniformly. Cooking oil, kerosene and palm oil do not mix with water — they form layers.",
+      "misconception": "All liquids mix together.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "examples_immiscible",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which of these liquid pairs does NOT mix uniformly?",
+      "options": ["Water and soft drink", "Water and vinegar", "Water and cooking oil", "Water and sugar solution"],
+      "answer": 2,
+      "hints": ["Which pair forms separate layers?", "Cooking oil floats on water."],
+      "explanation": "Water and cooking oil do not mix uniformly — they form separate layers. The other pairs mix uniformly.",
+      "misconception": "All liquids mix together.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "miscible_immiscible",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "A learner mixes water and cooking oil in a bottle and shakes it well. After some time, what will the learner observe?",
+      "options": ["One uniform liquid with no layers", "Two separate layers with oil on top", "The oil will turn into a solid", "The water will disappear"],
+      "answer": 1,
+      "hints": ["Does oil mix with water?", "Oil is lighter than water."],
+      "explanation": "Water and cooking oil are immiscible. They do not mix uniformly, so they form two separate layers with oil on top.",
+      "misconception": "Oil and water form one uniform liquid when stirred.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "miscible_immiscible",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Why do water and palm oil form separate layers when mixed?",
+      "options": ["They are miscible liquids", "They mix uniformly when stirred", "They are immiscible liquids", "They form a new substance"],
+      "answer": 2,
+      "hints": ["Do they mix completely?", "They form layers instead of mixing."],
+      "explanation": "Water and palm oil are immiscible. They do not mix uniformly and form separate layers.",
+      "misconception": "Stirring makes immiscible liquids mix permanently.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "separation_method",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which tool is best used to separate a mixture of cooking oil and water?",
+      "options": ["A spoon", "A sieve", "A separating funnel", "A magnet"],
+      "answer": 2,
+      "hints": ["Oil and water form two layers.", "A separating funnel lets you drain one layer at a time."],
+      "explanation": "A separating funnel is used to separate immiscible liquids like oil and water because they form two layers.",
+      "misconception": "You can separate oil and water by stirring them well.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "examples_miscible",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Give one example of two liquids that mix uniformly (miscible liquids).",
+      "answer": ["water and vinegar", "water and soft drink", "water and sugar solution"],
+      "hints": ["Think of two liquids you can mix without them forming layers.", "Vinegar and water mix completely."],
+      "explanation": "Water and vinegar mix uniformly. They are miscible liquids.",
+      "misconception": "All liquids form layers when mixed.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "examples_immiscible",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which of these is an immiscible liquid pair?",
+      "options": ["Water and vinegar", "Water and soft drink", "Water and kerosene", "Water and sugar solution"],
+      "answer": 2,
+      "hints": ["Which pair does not mix and forms layers?", "Kerosene is like oil — it floats on water."],
+      "explanation": "Water and kerosene do not mix uniformly. They are immiscible and form separate layers.",
+      "misconception": "Kerosene and water are miscible because both are liquids.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "separation_method",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "When using a separating funnel to separate a mixture of oil and water, which liquid comes out first when the tap is opened?",
+      "options": ["The oil comes out first", "The water comes out first", "Both come out together", "Neither comes out"],
+      "answer": 1,
+      "hints": ["Which liquid is heavier — water or oil?", "The heavier liquid settles at the bottom."],
+      "explanation": "Water is denser than oil and settles at the bottom of the funnel, so it comes out first when the tap is opened.",
+      "misconception": "Oil comes out first because it is on top.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "why_separation_works",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Why can a separating funnel separate a mixture of oil and water?",
+      "options": ["Because oil and water are miscible liquids", "Because oil and water form two separate layers, with water at the bottom", "Because the separating funnel heats the liquids", "Because the separating funnel changes oil into water"],
+      "answer": 1,
+      "hints": ["Do oil and water form layers?", "Which liquid settles at the bottom?"],
+      "explanation": "Oil and water are immiscible, so they form two layers. Water is denser and settles at the bottom, allowing it to be drained out first.",
+      "misconception": "A separating funnel works because it heats the liquids.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "separation_method",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Describe how you would separate a mixture of kerosene and water using a separating funnel.",
+      "answer": ["pour the mixture into a separating funnel and let it settle into two layers, then open the tap to let the water out first", "pour it into a separating funnel, let it settle, then open the tap to drain the water"],
+      "hints": ["First let the mixture settle into two layers.", "Which liquid is denser — water or kerosene?"],
+      "explanation": "Pour the kerosene-water mixture into a separating funnel. Let it settle into two layers. Open the tap to let the denser water flow out first, then close the tap to keep the kerosene.",
+      "misconception": "You can separate kerosene and water by stirring.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "why_separation_works",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "A learner says, 'You can separate water and vinegar by using a separating funnel.' Is the learner correct?",
+      "options": ["Yes, because all liquid mixtures can be separated by a separating funnel", "No, because water and vinegar are miscible and do not form separate layers", "Yes, because vinegar is heavier than water", "No, because vinegar is a solid"],
+      "answer": 1,
+      "hints": ["Do water and vinegar form layers?", "A separating funnel works only when layers form."],
+      "explanation": "Water and vinegar are miscible — they mix uniformly and do not form layers. A separating funnel works only for immiscible liquids that form layers.",
+      "misconception": "Miscible liquids can be separated with a separating funnel.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_liquid_mixture",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "A learner mixes two liquids in a cup. After some time, they form two layers. What type of mixture is this?",
+      "options": ["A solid-liquid mixture", "A miscible liquid-liquid mixture", "An immiscible liquid-liquid mixture", "A gas mixture"],
+      "answer": 2,
+      "hints": ["Layers mean the liquids did not mix uniformly.", "What do we call liquids that do not mix uniformly?"],
+      "explanation": "When two liquids form separate layers, they are immiscible. The mixture is an immiscible liquid-liquid mixture.",
+      "misconception": "All liquid-liquid mixtures form layers.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "miscible_immiscible",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Explain the difference between miscible and immiscible liquids.",
+      "answer": ["miscible liquids mix uniformly while immiscible liquids do not mix uniformly and form layers", "miscible liquids mix completely, immiscible liquids form separate layers"],
+      "hints": ["Think about water and vinegar.", "Think about water and oil."],
+      "explanation": "Miscible liquids mix uniformly without forming layers (e.g. water and vinegar). Immiscible liquids do not mix uniformly and form separate layers (e.g. water and oil).",
+      "misconception": "All liquids are miscible.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "examples_immiscible",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Give two examples of immiscible liquid pairs.",
+      "answer": ["water and cooking oil, water and kerosene", "cooking oil and water, kerosene and water", "water and palm oil, water and kerosene"],
+      "hints": ["Think of two liquids that do not mix and form layers.", "Oil and water is one example."],
+      "explanation": "Water and cooking oil, and water and kerosene, are immiscible pairs. They do not mix uniformly and form separate layers.",
+      "misconception": "All liquids mix uniformly.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "why_separation_works",
+      "type": "short_answer",
+      "difficulty": 4,
+      "stem": "Why can you separate oil and water with a separating funnel but not water and vinegar?",
+      "answer": ["oil and water are immiscible and form two layers so the denser water can be drained out first, but water and vinegar are miscible and mix uniformly so they cannot be separated this way", "oil and water form layers but water and vinegar mix completely"],
+      "hints": ["Do oil and water form layers?", "Do water and vinegar form layers?"],
+      "explanation": "Oil and water are immiscible — they form two layers, and the denser water can be drained out first. Water and vinegar are miscible — they mix uniformly and do not form layers, so a separating funnel cannot separate them.",
+      "misconception": "Miscible liquids can be separated with a separating funnel.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "separation_method",
+      "type": "mcq",
+      "difficulty": 4,
+      "stem": "A pupil has a mixture of cooking oil and water. They want to separate the two liquids. Which method will work best?",
+      "options": ["Stirring the mixture very well", "Pouring the mixture through a sieve", "Heating the mixture until one liquid boils", "Pouring the mixture into a separating funnel and letting it settle"],
+      "answer": 3,
+      "hints": ["Stirring does not separate immiscible liquids.", "Oil and water form layers — how can you drain one layer off?"],
+      "explanation": "Pouring the mixture into a separating funnel allows the oil and water to settle into two layers. The water can then be drained out from the bottom.",
+      "misconception": "You can separate oil and water by stirring them well.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "examples_miscible",
+      "type": "mcq",
+      "difficulty": 4,
+      "stem": "A pupil wants to make a miscible liquid mixture for a class activity. Which pair of liquids should they choose?",
+      "options": ["Water and cooking oil", "Water and kerosene", "Water and vinegar", "Water and palm oil"],
+      "answer": 2,
+      "hints": ["Which pair mixes completely without forming layers?", "Cooking oil, kerosene and palm oil all float on water."],
+      "explanation": "Water and vinegar are miscible and mix uniformly. The other pairs are immiscible and form separate layers.",
+      "misconception": "All liquids mix uniformly.",
+      "uncertain": []
+    }
+  ]
+}

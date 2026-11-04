@@ -1,0 +1,275 @@
+{
+  "indicator": {
+    "code": "B5.1.2.1.1",
+    "subject": "Science",
+    "level": "Basic 5",
+    "strand": "DIVERSITY OF MATTER",
+    "sub_strand": "Materials",
+    "content_standard": "B5.1.2.1 Recognise materials as important resources for providing human needs",
+    "objective": "Classify everyday materials based on their properties (soft, hard, rough, smooth, opaque, transparent and bendable)",
+    "source_page": 40
+  },
+  "spec": {
+    "skills": [
+      {"tag": "name_properties", "description": "Name the properties of materials: soft, hard, rough, smooth, opaque, transparent, bendable.", "minQuestions": 3},
+      {"tag": "identify_texture", "description": "Identify materials as soft or hard, rough or smooth.", "minQuestions": 3},
+      {"tag": "identify_transparency", "description": "Identify materials as transparent (see-through) or opaque (not see-through).", "minQuestions": 3},
+      {"tag": "identify_bendability", "description": "Identify materials as bendable or not bendable.", "minQuestions": 3},
+      {"tag": "classify_by_property", "description": "Sort everyday materials (cotton wool, wood, plastic, glass, paper, raffia) based on a given property.", "minQuestions": 4},
+      {"tag": "link_property_to_use", "description": "Explain simply why a material is chosen for a particular use because of its property (e.g. clay for pots because it can be moulded; raffia for baskets because it bends easily).", "minQuestions": 4}
+    ],
+    "difficultyPlan": "20 questions total — Difficulty 1: 5; Difficulty 2: 7; Difficulty 3: 5; Difficulty 4: 3.",
+    "misconceptions": [
+      "All plastics are transparent.",
+      "Hard materials cannot be smooth.",
+      "Glass is bendable.",
+      "Soft materials are always weak.",
+      "Any material can be used for any purpose.",
+      "Rough means wet."
+    ],
+    "needsTeacherAssessment": true
+  },
+  "questions": [
+    {
+      "skill_tag": "name_properties",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which of these is a property of a material?",
+      "options": ["Bendable", "Hungry", "Happy", "Fast"],
+      "answer": 0,
+      "hints": ["Properties describe how a material feels or behaves.", "Can you bend it?"],
+      "explanation": "Bendable is a property of a material. It describes whether the material can be bent without breaking.",
+      "misconception": "Any word can describe a material.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_texture",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which material is soft?",
+      "options": ["Cotton wool", "Iron nail", "Stone", "Wood"],
+      "answer": 0,
+      "hints": ["Which one feels gentle to touch?", "You can squeeze it easily."],
+      "explanation": "Cotton wool is soft. Iron nails, stones and wood are hard.",
+      "misconception": "Soft materials are always weak.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_transparency",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which material is transparent?",
+      "options": ["Clear glass", "Wood", "Metal", "Cardboard"],
+      "answer": 0,
+      "hints": ["Which one can you see through?", "Windows are made of it."],
+      "explanation": "Clear glass is transparent because you can see through it. Wood, metal and cardboard are opaque.",
+      "misconception": "All plastics are transparent.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_bendability",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which material is bendable?",
+      "options": ["Rubber", "Glass", "Stone", "Iron"],
+      "answer": 0,
+      "hints": ["Which one can you bend without breaking?", "Think of a rubber band."],
+      "explanation": "Rubber is bendable. Glass, stone and iron are not easily bendable and may break if forced.",
+      "misconception": "Glass is bendable.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "name_properties",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What do we call a material that you cannot see through?",
+      "options": ["Transparent", "Opaque", "Bendable", "Soft"],
+      "answer": 1,
+      "hints": ["The opposite of transparent.", "Wood is an example."],
+      "explanation": "A material you cannot see through is called opaque.",
+      "misconception": "All materials are transparent.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "classify_by_property",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "A pupil is sorting materials into 'hard' and 'soft'. Which group is correct?",
+      "options": ["Hard: stone, iron; Soft: cotton wool, sponge", "Hard: sponge, cotton wool; Soft: stone, iron", "Hard: sponge, stone; Soft: iron, cotton wool", "Hard: cotton wool, iron; Soft: stone, sponge"],
+      "answer": 0,
+      "hints": ["Which materials cannot be easily squeezed?", "Stones and iron are hard."],
+      "explanation": "Stone and iron are hard materials. Cotton wool and sponge are soft materials.",
+      "misconception": "Soft materials are always weak.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_texture",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Ama touches a piece of sandpaper and a piece of glass. Which statement correctly describes their textures?",
+      "options": ["Sandpaper is smooth, glass is rough", "Sandpaper is rough, glass is smooth", "Both are rough", "Both are smooth"],
+      "answer": 1,
+      "hints": ["Sandpaper feels bumpy.", "Glass feels flat and even."],
+      "explanation": "Sandpaper is rough because it has a bumpy surface. Glass is smooth because it has an even surface.",
+      "misconception": "Rough means wet.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "classify_by_property",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which set contains only transparent materials?",
+      "options": ["Clear plastic, clear glass, clean water", "Wood, stone, iron", "Cardboard, cloth, rubber", "Clear glass, wood, stone"],
+      "answer": 0,
+      "hints": ["Which materials can you see through?", "Clear things are transparent."],
+      "explanation": "Clear plastic, clear glass and clean water are transparent materials. You can see through them.",
+      "misconception": "All plastics are transparent.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_bendability",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which of these materials is NOT bendable?",
+      "options": ["Piece of clay", "Rubber band", "Iron nail", "Raffia palm"],
+      "answer": 2,
+      "hints": ["Which one will snap if you try to bend it?", "It is a hard metal."],
+      "explanation": "An iron nail is not bendable. It is a hard metal. Clay, rubber bands and raffia can be bent or moulded.",
+      "misconception": "All materials can bend.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "link_property_to_use",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Why is clay used for making pots?",
+      "options": ["Because it is transparent", "Because it can be moulded when wet and becomes hard when baked", "Because it is bendable", "Because it is rough"],
+      "answer": 1,
+      "hints": ["Pots are shaped by hand.", "Clay can be shaped when wet."],
+      "explanation": "Clay is used for pots because it can be moulded into shape when wet and becomes hard when baked.",
+      "misconception": "Any material can be used for any purpose.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "classify_by_property",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which material is best for making a window pane?",
+      "options": ["Wood because it is hard", "Clear glass because it is transparent", "Metal because it is strong", "Cotton wool because it is soft"],
+      "answer": 1,
+      "hints": ["You need to see through a window.", "Transparent materials let light in."],
+      "explanation": "Clear glass is best for a window pane because it is transparent and lets light through.",
+      "misconception": "Any material can be used for any purpose.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "link_property_to_use",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Why is raffia palm used for making baskets?",
+      "answer": ["because it is bendable and can be woven easily", "it bends easily so it can be woven into baskets", "it is flexible and easy to weave"],
+      "hints": ["How are baskets made?", "The material needs to bend."],
+      "explanation": "Raffia palm is used for baskets because it is bendable and can be woven easily.",
+      "misconception": "Any material can be used for baskets.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "name_properties",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Name three properties of materials.",
+      "answer": ["soft, hard, rough", "hard, smooth, transparent", "bendable, opaque, soft", "rough, smooth, bendable"],
+      "hints": ["Think about how materials feel.", "Think about whether you can see through them or bend them."],
+      "explanation": "Properties of materials include soft, hard, rough, smooth, opaque, transparent and bendable.",
+      "misconception": "Materials only have one property.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_transparency",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "A pupil says, 'All plastics are transparent.' Is the pupil correct?",
+      "options": ["Yes, all plastics are transparent", "No, some plastics are opaque, like black plastic bowls", "No, all plastics are opaque", "Yes, plastics are always see-through"],
+      "answer": 1,
+      "hints": ["Think about a black plastic bucket.", "Can you see through it?"],
+      "explanation": "Not all plastics are transparent. Some plastics are opaque, like black plastic bowls or buckets.",
+      "misconception": "All plastics are transparent.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "link_property_to_use",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "Why are cooking pots usually made of metal rather than cloth?",
+      "options": ["Metal is soft and cloth is hard", "Metal is hard and can withstand heat, while cloth burns", "Cloth is bendable and metal is not", "Metal is transparent and cloth is opaque"],
+      "answer": 1,
+      "hints": ["Pots go on a fire.", "Which material can handle heat?"],
+      "explanation": "Metal is hard and can withstand the high heat of cooking. Cloth is soft and would burn on a fire.",
+      "misconception": "Any material can be used for any purpose.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "classify_by_property",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Sort these materials into 'transparent' and 'opaque': clear glass, wood, clear plastic, cardboard.",
+      "answer": ["transparent: clear glass and clear plastic; opaque: wood and cardboard", "transparent: clear glass, clear plastic; opaque: wood, cardboard", "clear glass and clear plastic are transparent; wood and cardboard are opaque"],
+      "hints": ["Which ones can you see through?", "Wood and cardboard are not see-through."],
+      "explanation": "Clear glass and clear plastic are transparent because you can see through them. Wood and cardboard are opaque because you cannot see through them.",
+      "misconception": "All materials are either completely transparent or completely opaque.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "link_property_to_use",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Why is cotton wool used for making pillows?",
+      "answer": ["because it is soft and comfortable to rest on", "it is soft and makes the pillow comfortable", "cotton wool is soft, so it is good for pillows"],
+      "hints": ["What makes a pillow comfortable?", "You rest your head on it."],
+      "explanation": "Cotton wool is used for pillows because it is soft and comfortable.",
+      "misconception": "Any material can be used for pillows.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_bendability",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Name one material that is bendable and one that is not bendable.",
+      "answer": ["bendable: rubber; not bendable: glass", "bendable: rubber band; not bendable: iron nail", "bendable: raffia; not bendable: stone"],
+      "hints": ["Think of something you can bend.", "Think of something that would break if you tried to bend it."],
+      "explanation": "Rubber and raffia are bendable. Glass, iron and stone are not bendable.",
+      "misconception": "All materials can bend.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "link_property_to_use",
+      "type": "drawing",
+      "difficulty": 4,
+      "stem": "Design a simple raincoat for a farmer in Ghana. Choose a material that is suitable. Draw your design and write one sentence explaining why you chose that material.",
+      "rubric": {
+        "criteria": [
+          {"description": "Drew a simple design of a raincoat", "marks": 1},
+          {"description": "Chose a suitable material (e.g. plastic, waterproof fabric)", "marks": 2},
+          {"description": "Explained that the material is waterproof/does not let water through", "marks": 2}
+        ]
+      },
+      "answer": "",
+      "hints": ["What happens when rain falls on the farmer?", "The material should keep water out."],
+      "explanation": "This is a drawing task. Your teacher will mark it using the rubric.",
+      "misconception": "Any material can be used for a raincoat.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "link_property_to_use",
+      "type": "mcq",
+      "difficulty": 4,
+      "stem": "A learner needs a material to make a transparent container to store water. Which material is best and why?",
+      "options": ["Wood, because it is hard and strong", "Clear plastic, because it is transparent and does not let water through", "Cotton wool, because it is soft", "Rough stone, because it is heavy"],
+      "answer": 1,
+      "hints": ["The container needs to be see-through.", "It must hold water without leaking."],
+      "explanation": "Clear plastic is best because it is transparent (you can see through it) and it does not let water pass through.",
+      "misconception": "Any material can be used for any purpose.",
+      "uncertain": []
+    }
+  ]
+}

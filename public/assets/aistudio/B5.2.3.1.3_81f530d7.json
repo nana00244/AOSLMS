@@ -1,0 +1,298 @@
+{
+  "indicator": {
+    "code": "B5.2.3.1.3",
+    "subject": "Mathematics",
+    "level": "Basic 5",
+    "strand": "Algebra",
+    "sub_strand": "Equations",
+    "content_standard": "Not clearly printed in extract",
+    "objective": "Create a problem for a given equation",
+    "source_page": 114
+  },
+  "spec": {
+    "skills": [
+      {"tag": "create_word_problem_equation", "description": "Create a word problem that matches a given equation (e.g., 5 + k = 9).", "minQuestions": 2},
+      {"tag": "describe_equation_stories", "description": "Describe two different stories for the same equation.", "minQuestions": 2}
+    ],
+    "difficultyPlan": "20 questions: 5 at difficulty 1, 7 at difficulty 2, 5 at difficulty 3, 3 at difficulty 4.",
+    "misconceptions": [
+      "Writing a story that does not match the operation.",
+      "Using numbers outside the equation.",
+      "Forgetting the question."
+    ],
+    "needsTeacherAssessment": true
+  },
+  "questions": [
+    {
+      "skill_tag": "create_word_problem_equation",
+      "type": "written",
+      "difficulty": 1,
+      "stem": "Write a short word problem for the equation 5 + k = 9.",
+      "hints": ["Start with 5 items.", "Add some more to get 9."],
+      "explanation": "For example: Ama has 5 oranges. She buys some more and now has 9. How many did she buy?",
+      "rubric": {
+        "criteria": [
+          {"description": "Story starts with 5 items.", "marks": 1},
+          {"description": "Story involves adding an unknown amount to reach 9.", "marks": 1}
+        ]
+      },
+      "misconception": "Writing a subtraction story.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "create_word_problem_equation",
+      "type": "written",
+      "difficulty": 1,
+      "stem": "Create a story problem for 10 - p = 3.",
+      "hints": ["Start with 10 items.", "Some are taken away leaving 3."],
+      "explanation": "For example: Kojo has 10 pencils. He gives some to a friend and has 3 left. How many did he give away?",
+      "rubric": {
+        "criteria": [
+          {"description": "Starts with 10 items.", "marks": 1},
+          {"description": "Involves taking away to leave 3.", "marks": 1}
+        ]
+      },
+      "misconception": "Writing an addition story.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_equation_stories",
+      "type": "written",
+      "difficulty": 1,
+      "stem": "Describe two different stories that the equation 4 + x = 10 could represent.",
+      "hints": ["One story with apples, one with pencils."],
+      "explanation": "Story 1: Ama has 4 sweets and gets x more to have 10. Story 2: Kojo has 4 books and gets x more to have 10.",
+      "rubric": {
+        "criteria": [
+          {"description": "Gives two distinct stories.", "marks": 1},
+          {"description": "Both stories match the equation.", "marks": 1}
+        ]
+      },
+      "misconception": "Giving the same story twice.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "create_word_problem_equation",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which story matches the equation 7 - m = 2?",
+      "options": ["Ama has 7 sweets and eats m, leaving 2.", "Ama has 2 sweets and gets m more to have 7.", "Ama has 7 sweets and gets m more to have 2."],
+      "answer": 0,
+      "hints": ["Subtraction means taking away."],
+      "explanation": "7 - m = 2 means starting with 7 and taking away m to leave 2.",
+      "misconception": "Choosing an addition story.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "create_word_problem_equation",
+      "type": "written",
+      "difficulty": 1,
+      "stem": "Write a word problem for 8 + n = 15.",
+      "hints": ["Start with 8, add n to get 15."],
+      "explanation": "For example: A basket has 8 mangoes. Some more are added, and there are 15. How many were added?",
+      "rubric": {
+        "criteria": [
+          {"description": "Story involves 8 and an unknown added to get 15.", "marks": 1}
+        ]
+      },
+      "misconception": "Using 15 as the starting amount.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_equation_stories",
+      "type": "written",
+      "difficulty": 2,
+      "stem": "Describe two different stories for 3x = 12.",
+      "hints": ["Groups of items.", "Multiplication."],
+      "explanation": "Story 1: 3 bags each have x oranges and the total is 12. Story 2: 3 rows of x chairs have 12 chairs.",
+      "rubric": {
+        "criteria": [
+          {"description": "Gives two distinct stories for 3x = 12.", "marks": 1},
+          {"description": "Both involve 3 equal groups totaling 12.", "marks": 1}
+        ]
+      },
+      "misconception": "Writing addition stories.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "create_word_problem_equation",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which story matches 2y + 3 = 11?",
+      "options": ["Two bags of y items plus 3 more items equal 11.", "Two bags of 3 items plus y items equal 11.", "Two bags of 11 items minus 3 equal y."],
+      "answer": 0,
+      "hints": ["2y means 2 groups of y."],
+      "explanation": "2y + 3 = 11 means 2 groups of y plus 3 more equals 11.",
+      "misconception": "Misplacing the 3 and 11.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "create_word_problem_equation",
+      "type": "written",
+      "difficulty": 2,
+      "stem": "Write a word problem for 5m - 2 = 18.",
+      "hints": ["Start with 5 times m, then subtract 2 to get 18."],
+      "explanation": "For example: A trader has 5 equal boxes of m oranges. She removes 2 oranges and has 18 left. How many oranges were in each box?",
+      "rubric": {
+        "criteria": [
+          {"description": "Story involves 5 groups of m.", "marks": 1},
+          {"description": "Story includes subtracting 2 to get 18.", "marks": 1}
+        ]
+      },
+      "misconception": "Adding 2 instead of subtracting.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_equation_stories",
+      "type": "written",
+      "difficulty": 2,
+      "stem": "Describe two different stories for n/2 = 4.",
+      "hints": ["Division into 2 equal parts."],
+      "explanation": "Story 1: A ribbon of length n is cut into 2 equal pieces, each 4 cm. Story 2: n sweets are shared equally among 2 friends, each gets 4.",
+      "rubric": {
+        "criteria": [
+          {"description": "Gives two distinct stories.", "marks": 1},
+          {"description": "Both match n/2 = 4.", "marks": 1}
+        ]
+      },
+      "misconception": "Writing multiplication stories.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "create_word_problem_equation",
+      "type": "written",
+      "difficulty": 2,
+      "stem": "Write a word problem for 6 + 2x = 14.",
+      "hints": ["Start with 6, then add 2 groups of x to get 14."],
+      "explanation": "For example: Ama has 6 pencils. She buys 2 identical packets of x pencils and now has 14 pencils. How many pencils in each packet?",
+      "rubric": {
+        "criteria": [
+          {"description": "Story includes 6 plus 2 groups of x.", "marks": 1},
+          {"description": "Story equals 14.", "marks": 1}
+        ]
+      },
+      "misconception": "Only adding 2 instead of 2x.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "create_word_problem_equation",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which story represents 4x - 5 = 15?",
+      "options": ["Four boxes of x items minus 5 items equals 15.", "Four boxes of 5 items minus x items equals 15.", "Four boxes of 15 items minus 5 items equals x."],
+      "answer": 0,
+      "hints": ["4x means 4 groups of x."],
+      "explanation": "4x - 5 = 15 means 4 groups of x, minus 5, equals 15.",
+      "misconception": "Swapping x and 5.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "create_word_problem_equation",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "Write a word problem for 2(x + 3) = 16.",
+      "hints": ["First add 3 to x, then multiply by 2."],
+      "explanation": "For example: A rectangle has length x + 3 and width 2. Its perimeter is 16. Find x.",
+      "rubric": {
+        "criteria": [
+          {"description": "Story involves x + 3.", "marks": 1},
+          {"description": "Multiplies the sum by 2 to get 16.", "marks": 1}
+        ]
+      },
+      "misconception": "Writing 2x + 3 = 16.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_equation_stories",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "Describe two different stories for 3y - 4 = 20.",
+      "hints": ["Three groups of y, take away 4."],
+      "explanation": "Story 1: Three baskets of y oranges, 4 are eaten, leaving 20. Story 2: Three boxes of y pencils, 4 are lost, leaving 20.",
+      "rubric": {
+        "criteria": [
+          {"description": "Gives two distinct stories.", "marks": 1},
+          {"description": "Both match 3y - 4 = 20.", "marks": 1}
+        ]
+      },
+      "misconception": "Writing addition stories.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "create_word_problem_equation",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "Create a story problem for x/3 + 2 = 7.",
+      "hints": ["Divide x by 3 first, then add 2 to get 7."],
+      "explanation": "For example: A number x is divided into 3 equal parts. 2 is added to one part to get 7. What is x?",
+      "rubric": {
+        "criteria": [
+          {"description": "Story involves dividing x by 3.", "marks": 1},
+          {"description": "Adds 2 to get 7.", "marks": 1}
+        ]
+      },
+      "misconception": "Writing x/3 = 7 + 2.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "create_word_problem_equation",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "Which story represents 5 + 2k = 17?",
+      "options": ["5 items plus 2 groups of k items equal 17.", "2 items plus 5 groups of k items equal 17.", "5 items minus 2 groups of k items equal 17."],
+      "answer": 0,
+      "hints": ["2k means 2 groups of k."],
+      "explanation": "5 + 2k = 17.",
+      "misconception": "Swapping 5 and 2k.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "create_word_problem_equation",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "Write a word problem for 4(x - 2) = 12.",
+      "hints": ["Subtract 2 from x first, then multiply by 4."],
+      "explanation": "For example: A rectangle has length x - 2 and width 4. Its area is 12. Find x.",
+      "rubric": {
+        "criteria": [
+          {"description": "Story involves x - 2.", "marks": 1},
+          {"description": "Multiplies by 4 to get 12.", "marks": 1}
+        ]
+      },
+      "misconception": "Writing 4x - 2 = 12.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_equation_stories",
+      "type": "written",
+      "difficulty": 4,
+      "stem": "Describe two different stories for the equation 2x + 5 = 3x - 2.",
+      "hints": ["Both sides represent the same quantity."],
+      "explanation": "Story 1: Two boxes of x plus 5 equals three boxes of x minus 2. Story 2: A length of 2x + 5 is equal to 3x - 2.",
+      "rubric": {
+        "criteria": [
+          {"description": "Gives two distinct stories.", "marks": 1},
+          {"description": "Both match the equation.", "marks": 1}
+        ]
+      },
+      "misconception": "Writing stories for only one side.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "create_word_problem_equation",
+      "type": "written",
+      "difficulty": 4,
+      "stem": "Create a real-world problem for the equation 3w + 4 = 25.",
+      "hints": ["3 groups of w plus 4 equals 25."],
+      "explanation": "For example: A pupil buys 3 identical pens and a ruler for 4 cedis. The total cost is 25 cedis. How much does each pen cost?",
+      "rubric": {
+        "criteria": [
+          {"description": "Story involves 3 groups of w.", "marks": 1},
+          {"description": "Story includes adding 4 to equal 25.", "marks": 1}
+        ]
+      },
+      "misconception": "Creating a story that doesn't match the equation.",
+      "uncertain": []
+    }
+  ]
+}

@@ -1,0 +1,283 @@
+{
+  "indicator": {
+    "code": "B4.1.2.6.1",
+    "subject": "Mathematics",
+    "level": "Basic 4",
+    "strand": "Number",
+    "sub_strand": "Number Operations",
+    "content_standard": "B4.1.2.6 Translate and solve word problems involving the four basic operations on whole numbers",
+    "objective": "Solve multi-step word problems involving the four basic operations",
+    "source_page": 39
+  },
+  "spec": {
+    "skills": [
+      {"tag": "identify_operations", "description": "Identify the operations needed to solve a multi-step word problem.", "minQuestions": 2},
+      {"tag": "solve_add_mult", "description": "Solve problems involving addition and multiplication.", "minQuestions": 2},
+      {"tag": "solve_sub_div", "description": "Solve problems involving subtraction and division.", "minQuestions": 2}
+    ],
+    "difficultyPlan": "20 questions: 5 at difficulty 1, 7 at difficulty 2, 5 at difficulty 3, 3 at difficulty 4.",
+    "misconceptions": [
+      "Performing only one step and stopping.",
+      "Using the wrong operation for the second step."
+    ],
+    "needsTeacherAssessment": false
+  },
+  "questions": [
+    {
+      "skill_tag": "identify_operations",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Ama buys 3 bags of oranges. Each bag has 5 oranges. She gives 2 oranges to Kofi. Which operations are needed to find how many oranges she has left?",
+      "options": ["Addition and Subtraction", "Multiplication and Subtraction", "Division and Addition", "Multiplication and Addition"],
+      "answer": 1,
+      "hints": ["First, find the total number of oranges (multiply).", "Then find how many are left (subtract)."],
+      "explanation": "You multiply (3 x 5) to find the total, then subtract 2.",
+      "misconception": "Choosing only addition.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "solve_add_mult",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "A teacher has 2 boxes of pencils. Each box has 10 pencils. She buys 5 more pencils. How many pencils does she have now?",
+      "options": ["15", "20", "25", "30"],
+      "answer": 2,
+      "hints": ["2 boxes of 10 = 20.", "20 + 5 = ?"],
+      "explanation": "2 x 10 = 20. 20 + 5 = 25.",
+      "misconception": "Only doing 2 x 10 = 20.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "solve_sub_div",
+      "type": "numeric",
+      "difficulty": 1,
+      "stem": "A pupil has 20 pencils. They share them equally among 4 friends. How many pencils does each friend get?",
+      "answer": 5,
+      "check": "20/4",
+      "hints": ["Share equally means divide.", "20 ÷ 4."],
+      "explanation": "20 ÷ 4 = 5.",
+      "misconception": "Multiplying 20 x 4.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_operations",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Kojo shared 12 sweets among 3 friends. Later, he bought 5 more sweets for himself. Which operations are needed to find out how many sweets he has now?",
+      "options": ["Division and Addition", "Multiplication and Subtraction", "Addition and Subtraction", "Division and Multiplication"],
+      "answer": 0,
+      "hints": ["First, find how many sweets he had initially (divide).", "Then find the new total (add)."],
+      "explanation": "He divided 12 by 3, then added 5.",
+      "misconception": "Thinking he multiplied.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "solve_add_mult",
+      "type": "numeric",
+      "difficulty": 1,
+      "stem": "There are 3 rows of chairs. Each row has 6 chairs. How many chairs are there altogether?",
+      "answer": 18,
+      "check": "3*6",
+      "hints": ["3 groups of 6.", "3 x 6."],
+      "explanation": "3 x 6 = 18.",
+      "misconception": "Adding 3 + 6 = 9.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "solve_sub_div",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "A basket has 30 mangoes. Ama eats 2. She then shares the rest equally among 7 friends. How many mangoes does each friend get?",
+      "options": ["3", "4", "5", "7"],
+      "answer": 1,
+      "hints": ["30 - 2 = 28.", "28 ÷ 7 = ?"],
+      "explanation": "30 - 2 = 28. 28 ÷ 7 = 4.",
+      "misconception": "Sharing 30 among 7.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "solve_add_mult",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "A market woman sells 4 rows of tomatoes. Each row has 8 tomatoes. She also has 5 tomatoes in a basket. How many tomatoes does she have in total?",
+      "answer": 37,
+      "check": "4*8+5",
+      "hints": ["4 rows of 8 = 32.", "32 + 5 = ?"],
+      "explanation": "4 x 8 = 32. 32 + 5 = 37.",
+      "misconception": "Adding all numbers (4+8+5=17).",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "solve_sub_div",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "A class has 45 pupils. They are divided equally into 3 buses. How many pupils are in each bus?",
+      "answer": 15,
+      "check": "45/3",
+      "hints": ["Share equally means divide.", "45 ÷ 3."],
+      "explanation": "45 ÷ 3 = 15.",
+      "misconception": "Multiplying 45 x 3.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_operations",
+      "type": "written",
+      "difficulty": 2,
+      "stem": "A trotro carries 20 passengers. At the first stop, 4 get off and 6 get on. Explain what operations you would use to find the number of passengers now.",
+      "hints": ["When people get off, do you add or subtract?", "When they get on, do you add or subtract?"],
+      "explanation": "You subtract 4 (20 - 4 = 16), then add 6 (16 + 6 = 22). You use subtraction and addition.",
+      "rubric": {
+        "criteria": [
+          {"description": "Identifies subtraction for those getting off.", "marks": 1},
+          {"description": "Identifies addition for those getting on.", "marks": 1}
+        ]
+      },
+      "misconception": "Thinking you only add.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "solve_add_mult",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "There are 5 baskets. Each basket holds 10 oranges. If 5 oranges are removed from one basket, how many oranges are left in that basket?",
+      "answer": 5,
+      "check": "10-5",
+      "hints": ["Start with 10 in one basket.", "10 - 5."],
+      "explanation": "10 - 5 = 5.",
+      "misconception": "Doing 5 x 10 = 50.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "solve_sub_div",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "A shopkeeper has 50 cedis. He buys 2 tins of milk at 15 cedis each. How much money does he have left?",
+      "options": ["10 cedis", "15 cedis", "20 cedis", "25 cedis"],
+      "answer": 2,
+      "hints": ["Cost of 2 tins = 2 x 15 = 30.", "50 - 30 = ?"],
+      "explanation": "2 x 15 = 30. 50 - 30 = 20 cedis.",
+      "misconception": "Subtracting 15 from 50 only.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_operations",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "A baker bakes 40 loaves of bread. He sells 15 in the morning and 10 in the afternoon. Which operations will give the number of loaves left?",
+      "options": ["Addition only", "Subtraction only (or repeated subtraction)", "Multiplication only", "Division only"],
+      "answer": 1,
+      "hints": ["He is taking away from the total.", "40 - 15 - 10."],
+      "explanation": "You subtract the sold loaves from the total.",
+      "misconception": "Thinking you need to multiply.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "solve_add_mult",
+      "type": "numeric",
+      "difficulty": 3,
+      "stem": "A school has 12 classrooms. Each classroom has 6 windows. If 2 windows are broken, how many windows are not broken?",
+      "answer": 70,
+      "check": "12*6-2",
+      "hints": ["Total windows = 12 x 6 = 72.", "72 - 2."],
+      "explanation": "12 x 6 = 72. 72 - 2 = 70.",
+      "misconception": "Doing 12 + 6 - 2 = 16.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "solve_sub_div",
+      "type": "numeric",
+      "difficulty": 3,
+      "stem": "A farmer has 60 eggs. He packs them into 4 trays equally. How many eggs are in each tray?",
+      "answer": 15,
+      "check": "60/4",
+      "hints": ["Share equally means divide.", "60 ÷ 4."],
+      "explanation": "60 ÷ 4 = 15.",
+      "misconception": "Multiplying 60 x 4 = 240.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "solve_add_mult",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "A trotro makes 5 trips a day. It carries 12 passengers on each trip. How many passengers does it carry in a day? If 10 passengers travel for free, how many paid?",
+      "hints": ["Total passengers = 5 x 12.", "Paid passengers = total - 10."],
+      "explanation": "5 x 12 = 60 total passengers. 60 - 10 = 50 paid passengers.",
+      "rubric": {
+        "criteria": [
+          {"description": "Calculates 5 x 12 = 60.", "marks": 1},
+          {"description": "Calculates 60 - 10 = 50.", "marks": 1}
+        ]
+      },
+      "misconception": "Only calculating 5 x 12.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "solve_sub_div",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "There are 72 pencils. They are shared equally among 8 pupils. How many pencils does each pupil get?",
+      "options": ["8", "9", "10", "12"],
+      "answer": 1,
+      "hints": ["72 ÷ 8.", "Think about the 8 times table."],
+      "explanation": "72 ÷ 8 = 9.",
+      "misconception": "Saying 8.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_operations",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "A woman buys 3 crates of eggs. Each crate has 30 eggs. She sells 50 eggs. Describe the steps to find out how many eggs remain.",
+      "hints": ["First step: find total eggs.", "Second step: subtract sold eggs."],
+      "explanation": "Step 1: Multiply 3 x 30 = 90. Step 2: Subtract 50 from 90 (90 - 50 = 40).",
+      "rubric": {
+        "criteria": [
+          {"description": "Identifies multiplication for total.", "marks": 1},
+          {"description": "Identifies subtraction for remaining.", "marks": 1}
+        ]
+      },
+      "misconception": "Thinking division is needed.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "solve_add_mult",
+      "type": "numeric",
+      "difficulty": 4,
+      "stem": "A family buys 4 adult tickets at 10 cedis each and 3 child tickets at 5 cedis each. How much did they spend in total?",
+      "answer": 55,
+      "check": "4*10+3*5",
+      "hints": ["Adults: 4 x 10 = 40.", "Children: 3 x 5 = 15.", "40 + 15."],
+      "explanation": "4x10 = 40, 3x5 = 15. Total = 55.",
+      "misconception": "Adding all numbers (4+10+3+5=22).",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "solve_sub_div",
+      "type": "mcq",
+      "difficulty": 4,
+      "stem": "A farmer has 84 mangoes. He puts them in bags of 7. He then sells 3 bags. How many bags does he have left?",
+      "options": ["9", "10", "11", "12"],
+      "answer": 0,
+      "hints": ["First, divide 84 by 7.", "Then subtract 3."],
+      "explanation": "84 ÷ 7 = 12 bags. 12 - 3 = 9 bags.",
+      "misconception": "Subtracting 3 from 84 first.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "solve_add_mult",
+      "type": "written",
+      "difficulty": 4,
+      "stem": "A trader buys 5 bags of rice. Each bag weighs 12 kg. He sells 20 kg. How many kilograms does he have left?",
+      "hints": ["Total kg = 5 x 12.", "Leftover = total - 20."],
+      "explanation": "5 x 12 = 60 kg. 60 - 20 = 40 kg.",
+      "rubric": {
+        "criteria": [
+          {"description": "Calculates total weight (60).", "marks": 1},
+          {"description": "Calculates remaining weight (40).", "marks": 1}
+        ]
+      },
+      "misconception": "Adding the weights.",
+      "uncertain": []
+    }
+  ]
+}

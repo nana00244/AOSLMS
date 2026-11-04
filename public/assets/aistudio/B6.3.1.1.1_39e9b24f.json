@@ -1,0 +1,268 @@
+{
+  "indicator": {
+    "code": "B6.3.1.1.1",
+    "subject": "Science",
+    "level": "Basic 6",
+    "strand": "SYSTEMS",
+    "sub_strand": "The Human Body Systems",
+    "content_standard": "B6.3.1.1 Recognise that different parts of the human body work interdependently to perform a specific function",
+    "objective": "Explain the functions of organs in the excretory system of humans",
+    "source_page": 60
+  },
+  "spec": {
+    "skills": [
+      {"tag": "identify_organs", "description": "Name the main organs of the excretory system: kidneys, lungs, skin, liver.", "minQuestions": 4},
+      {"tag": "function_kidneys", "description": "State the function of the kidneys (remove urea and excess water as urine).", "minQuestions": 4},
+      {"tag": "function_lungs", "description": "State the function of the lungs in excretion (remove carbon dioxide and water vapour).", "minQuestions": 3},
+      {"tag": "function_skin", "description": "State the function of the skin in excretion (remove sweat, salt and water).", "minQuestions": 3},
+      {"tag": "match_organ_product", "description": "Match an excretory organ to its excretory product.", "minQuestions": 3},
+      {"tag": "importance_excretion", "description": "Explain why excretion is important for the body.", "minQuestions": 3}
+    ],
+    "difficultyPlan": "20 questions total — Difficulty 1: 5; Difficulty 2: 7; Difficulty 3: 5; Difficulty 4: 3.",
+    "misconceptions": [
+      "The kidneys are part of the digestive system.",
+      "The skin does not excrete waste.",
+      "The lungs only take in oxygen; they do not remove waste.",
+      "The liver produces urine.",
+      "Excretion is the same as digestion.",
+      "Only the kidneys excrete waste."
+    ],
+    "needsTeacherAssessment": true
+  },
+  "questions": [
+    {
+      "skill_tag": "identify_organs",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which organ is part of the excretory system?",
+      "options": ["Kidneys", "Stomach", "Heart", "Brain"],
+      "answer": 0,
+      "hints": ["They filter blood to make urine.", "They are bean-shaped."],
+      "explanation": "The kidneys are part of the excretory system.",
+      "misconception": "The kidneys are part of the digestive system.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_organs",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which set lists organs of the excretory system?",
+      "options": ["Kidneys, lungs, skin, liver", "Kidneys, stomach, heart, brain", "Lungs, stomach, intestines, liver", "Skin, heart, brain, kidneys"],
+      "answer": 0,
+      "hints": ["Excretion removes waste.", "Think about organs that remove waste products."],
+      "explanation": "The main organs of the excretory system are the kidneys, lungs, skin and liver.",
+      "misconception": "The stomach is part of the excretory system.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_organs",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Name two organs of the excretory system.",
+      "answer": ["kidneys and lungs", "kidneys and skin", "lungs and skin", "kidneys and liver"],
+      "hints": ["One filters blood.", "One removes carbon dioxide."],
+      "explanation": "The excretory system includes the kidneys, lungs, skin and liver.",
+      "misconception": "Only the kidneys excrete waste.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_organs",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "Which organ is NOT part of the excretory system?",
+      "options": ["Stomach", "Kidneys", "Lungs", "Skin"],
+      "answer": 0,
+      "hints": ["The stomach is part of digestion.", "It does not remove waste from the body."],
+      "explanation": "The stomach is part of the digestive system, not the excretory system.",
+      "misconception": "The stomach is part of the excretory system.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "function_kidneys",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What is the main function of the kidneys?",
+      "options": ["To remove urea and excess water as urine", "To digest food", "To pump blood", "To take in oxygen"],
+      "answer": 0,
+      "hints": ["They make urine.", "They filter the blood."],
+      "explanation": "The kidneys remove urea and excess water from the blood and form urine.",
+      "misconception": "The kidneys digest food.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "function_kidneys",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "The kidneys produce which excretory product?",
+      "options": ["Urine", "Sweat", "Carbon dioxide", "Bile"],
+      "answer": 0,
+      "hints": ["It is a yellowish liquid.", "It is passed out of the body."],
+      "explanation": "The kidneys produce urine, which contains urea and excess water.",
+      "misconception": "The kidneys produce sweat.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "function_kidneys",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "What do the kidneys remove from the blood?",
+      "answer": ["urea and excess water", "urea", "waste products and excess water"],
+      "hints": ["They make urine.", "Urine contains waste."],
+      "explanation": "The kidneys remove urea and excess water from the blood, forming urine.",
+      "misconception": "The kidneys remove food.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "function_kidneys",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "A person's kidneys are not working well. What is likely to happen?",
+      "options": ["Waste products build up in the blood", "The person will digest food faster", "The person will breathe faster", "The person will sweat more"],
+      "answer": 0,
+      "hints": ["Kidneys remove waste.", "If they fail, waste stays in the blood."],
+      "explanation": "If the kidneys are not working well, waste products like urea build up in the blood, which is dangerous.",
+      "misconception": "Kidney failure has no effect on the body.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "function_lungs",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "What waste product do the lungs remove from the body?",
+      "options": ["Carbon dioxide and water vapour", "Urine", "Sweat", "Bile"],
+      "answer": 0,
+      "hints": ["You breathe it out.", "It is a gas."],
+      "explanation": "The lungs remove carbon dioxide and water vapour from the body when we breathe out.",
+      "misconception": "The lungs only take in oxygen.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "function_lungs",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "How do the lungs help in excretion?",
+      "answer": ["they remove carbon dioxide and water vapour when we breathe out", "they remove carbon dioxide from the body", "they get rid of carbon dioxide and water vapour"],
+      "hints": ["Think about breathing out.", "What gas is in exhaled air?"],
+      "explanation": "The lungs remove carbon dioxide and water vapour from the body during exhalation.",
+      "misconception": "The lungs do not remove waste.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "function_lungs",
+      "type": "mcq",
+      "difficulty": 4,
+      "stem": "A pupil says, 'The lungs are not part of the excretory system because they help us breathe.' What is the best correction?",
+      "options": ["Yes, the lungs are not part of excretion", "No, the lungs are excretory organs because they remove carbon dioxide and water vapour", "No, the lungs only take in oxygen", "No, the lungs are part of digestion"],
+      "answer": 1,
+      "hints": ["Excretion is removal of waste.", "The lungs remove carbon dioxide."],
+      "explanation": "The lungs are excretory organs because they remove waste products (carbon dioxide and water vapour) from the body.",
+      "misconception": "The lungs are not excretory organs.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "function_skin",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "What waste products does the skin remove?",
+      "options": ["Sweat, salt and water", "Urine", "Carbon dioxide", "Bile"],
+      "answer": 0,
+      "hints": ["You sweat when you are hot.", "Sweat contains salt and water."],
+      "explanation": "The skin removes sweat, which contains salt and water, through the sweat glands.",
+      "misconception": "The skin does not excrete waste.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "function_skin",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "How does the skin help in excretion?",
+      "answer": ["it removes sweat, salt and water through the sweat glands", "it excretes sweat", "it gets rid of sweat and salt"],
+      "hints": ["Think about sweating.", "Sweat contains waste."],
+      "explanation": "The skin helps in excretion by removing sweat, which contains salt and water, through the sweat glands.",
+      "misconception": "The skin does not help in excretion.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "function_skin",
+      "type": "mcq",
+      "difficulty": 4,
+      "stem": "Why is sweating considered an excretory process?",
+      "options": ["Because sweat contains waste products like salt and water", "Because sweat is just water", "Because sweat cools the body only", "Because sweat makes the skin dirty"],
+      "answer": 0,
+      "hints": ["Sweat contains salt and other waste.", "Excretion removes waste."],
+      "explanation": "Sweating is an excretory process because sweat contains waste products such as salt and water that the body needs to remove.",
+      "misconception": "Sweating is not excretion.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "match_organ_product",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which organ matches the excretory product 'urine'?",
+      "options": ["Kidneys", "Lungs", "Skin", "Liver"],
+      "answer": 0,
+      "hints": ["Urine is made by filtering blood.", "The kidneys do this."],
+      "explanation": "The kidneys produce urine.",
+      "misconception": "The skin produces urine.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "match_organ_product",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Match the organ to its excretory product: kidneys, lungs, skin.",
+      "answer": ["kidneys - urine; lungs - carbon dioxide; skin - sweat", "kidneys: urine, lungs: carbon dioxide, skin: sweat", "kidneys produce urine, lungs remove carbon dioxide, skin removes sweat"],
+      "hints": ["Think about what each organ removes.", "Kidneys make urine; lungs remove gas; skin sweats."],
+      "explanation": "Kidneys produce urine, lungs remove carbon dioxide and water vapour, and skin removes sweat.",
+      "misconception": "All organs produce the same product.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "match_organ_product",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "Which pair correctly matches an excretory organ to its product?",
+      "options": ["Lungs → carbon dioxide", "Kidneys → sweat", "Skin → urine", "Liver → carbon dioxide"],
+      "answer": 0,
+      "hints": ["Lungs remove carbon dioxide.", "Skin produces sweat; kidneys produce urine."],
+      "explanation": "The lungs remove carbon dioxide and water vapour. Kidneys produce urine, and skin produces sweat.",
+      "misconception": "Lungs produce urine.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "importance_excretion",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Why is excretion important for the body?",
+      "options": ["It removes waste products that can harm the body", "It helps the body grow taller", "It provides energy", "It helps the body digest food"],
+      "answer": 0,
+      "hints": ["Waste products can be poisonous.", "The body needs to get rid of them."],
+      "explanation": "Excretion is important because it removes waste products that could harm the body if they build up.",
+      "misconception": "Excretion is not important.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "importance_excretion",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Explain why excretion is important for the body.",
+      "answer": ["it removes waste products that can harm the body", "it gets rid of harmful waste products", "waste products must be removed to keep the body healthy"],
+      "hints": ["Think about what happens if waste stays in the body.", "Waste can be harmful."],
+      "explanation": "Excretion is important because it removes harmful waste products from the body, keeping it healthy.",
+      "misconception": "Excretion is the same as digestion.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "importance_excretion",
+      "type": "mcq",
+      "difficulty": 4,
+      "stem": "A pupil says, 'Excretion is the same as digestion.' What is the best correction?",
+      "options": ["Yes, they are the same", "No, digestion breaks down food, while excretion removes waste products", "No, excretion breaks down food, while digestion removes waste", "No, both are the same process in the body"],
+      "answer": 1,
+      "hints": ["Digestion breaks down food.", "Excretion removes waste."],
+      "explanation": "Excretion is different from digestion. Digestion breaks down food into nutrients, while excretion removes waste products from the body.",
+      "misconception": "Excretion is the same as digestion.",
+      "uncertain": []
+    }
+  ]
+}

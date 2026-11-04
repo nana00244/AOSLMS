@@ -1,0 +1,1992 @@
+[
+  {
+    "file_name": "B3.3.1.1.3.json",
+    "indicator": {
+      "code": "B3.3.1.1.3",
+      "subject": "Mathematics",
+      "level": "Basic 3",
+      "strand": "Geometry and Measurement",
+      "sub_strand": "2D & 3D Shapes",
+      "content_standard": "B3.3.1.1 Analyse the relationships among and between 2-D shapes and 3-D objects according to a variety of attributes, including measurement",
+      "objective": "Use cut-out paper as a square corner to determine angles which are right angles and angles which are not right angles",
+      "source_page": 86
+    },
+    "spec": {
+      "skills": [
+        {"tag": "identify_right_angles", "description": "Identify right angles using a square corner.", "minQuestions": 2},
+        {"tag": "sort_right_angles", "description": "Sort angles into right angles and not right angles.", "minQuestions": 2}
+      ],
+      "difficultyPlan": "20 questions: 5 at difficulty 1, 7 at difficulty 2, 5 at difficulty 3, 3 at difficulty 4.",
+      "misconceptions": [
+        "Thinking a rotated right angle is not a right angle.",
+        "Relying on visual estimation instead of the square corner."
+      ],
+      "needsTeacherAssessment": true
+    },
+    "questions": [
+      {
+        "skill_tag": "identify_right_angles",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "What is a right angle?",
+        "options": ["An angle that looks like a corner of a book.", "An angle smaller than a square corner.", "A round angle.", "An angle greater than a square corner."],
+        "answer": 0,
+        "hints": ["Think of the letter L.", "It is exactly a quarter turn."],
+        "explanation": "A right angle is exactly a quarter turn (90 degrees), like the corner of a square.",
+        "misconception": "Thinking any acute angle is right.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "identify_right_angles",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "Does a square have right angles?",
+        "options": ["Yes, all 4 angles are right angles.", "No, it has acute angles.", "Only some of its angles are right angles."],
+        "answer": 0,
+        "hints": ["A square has 4 equal corners."],
+        "explanation": "Yes, all 4 angles are right angles.",
+        "misconception": "Saying no.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "sort_right_angles",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "Which shape has NO right angles?",
+        "options": ["Square", "Rectangle", "Circle", "Right triangle"],
+        "answer": 2,
+        "hints": ["A circle has no straight corners."],
+        "explanation": "A circle has no angles.",
+        "misconception": "Saying right triangle.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "identify_right_angles",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "How do you test for a right angle?",
+        "options": ["Use a ruler.", "Use a cut-out square corner.", "Use a protractor only."],
+        "answer": 1,
+        "hints": ["A square has right angles.", "You can place a paper square on the angle."],
+        "explanation": "Use a cut-out square corner to see if it fits perfectly.",
+        "misconception": "Thinking you need a calculator.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "identify_right_angles",
+        "type": "numeric",
+        "difficulty": 1,
+        "stem": "How many right angles are in a square?",
+        "answer": 4,
+        "check": "4",
+        "hints": ["Count the corners."],
+        "explanation": "4 right angles.",
+        "misconception": "Saying 1.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "identify_right_angles",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "Does a rectangle have right angles?",
+        "options": ["Yes, all 4 angles are right angles.", "No, they are all acute.", "Only two are right angles."],
+        "answer": 0,
+        "hints": ["Opposite sides are equal, corners are square."],
+        "explanation": "Yes, all 4 angles are right angles.",
+        "misconception": "Saying only two.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "identify_right_angles",
+        "type": "numeric",
+        "difficulty": 2,
+        "stem": "How many right angles are in a rectangle?",
+        "answer": 4,
+        "check": "4",
+        "hints": ["Count the corners."],
+        "explanation": "4 right angles.",
+        "misconception": "Saying 2.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "identify_right_angles",
+        "type": "drawing",
+        "difficulty": 2,
+        "stem": "Use a square corner to test if a door frame forms a right angle. (Teacher assessed).",
+        "hints": ["Hold the paper square to the corner."],
+        "explanation": "The learner should be able to physically test and state if the angle is right.",
+        "rubric": {
+          "criteria": [
+            {"description": "Correctly uses the square corner.", "marks": 1},
+            {"description": "States correctly if it is a right angle.", "marks": 1}
+          ]
+        },
+        "misconception": "Just guessing.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "identify_right_angles",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "A right triangle has how many right angles?",
+        "options": ["0", "1", "2", "3"],
+        "answer": 1,
+        "hints": ["Think of a triangle with a square corner."],
+        "explanation": "1 right angle.",
+        "misconception": "Saying 2.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "identify_right_angles",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "What is the symbol for a right angle?",
+        "options": ["A small square in the corner", "A small circle in the corner", "A small triangle in the corner"],
+        "answer": 0,
+        "hints": ["A square corner."],
+        "explanation": "A small square indicates a right angle.",
+        "misconception": "Choosing a circle.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "sort_right_angles",
+        "type": "written",
+        "difficulty": 2,
+        "stem": "Look around your classroom. Find one object with right angles and one without. Explain.",
+        "hints": ["Door, book vs a circular clock."],
+        "explanation": "Example: A book has right angles; a clock has no right angles.",
+        "rubric": {
+          "criteria": [
+            {"description": "Identifies one object with a right angle.", "marks": 1},
+            {"description": "Identifies one object without a right angle.", "marks": 1}
+          ]
+        },
+        "misconception": "Saying a ball has right angles.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "identify_right_angles",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "A pupil rotates a right angle so it looks like a V. Is it still a right angle?",
+        "options": ["Yes, the size doesn't change when rotated.", "No, it is now acute."],
+        "answer": 0,
+        "hints": ["A right angle stays a right angle regardless of orientation."],
+        "explanation": "Yes, rotating a shape does not change its angles.",
+        "misconception": "Thinking orientation matters.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "sort_right_angles",
+        "type": "mcq",
+        "difficulty": 3,
+        "stem": "A rhombus is a 4-sided shape. Does it always have right angles?",
+        "options": ["Yes, always.", "No, only if it is a square.", "Yes, if it is a rectangle."],
+        "answer": 1,
+        "hints": ["Think of a tilted diamond shape."],
+        "explanation": "No, only a square (which is a special rhombus) has all right angles.",
+        "misconception": "Saying yes because it has 4 sides.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "identify_right_angles",
+        "type": "written",
+        "difficulty": 3,
+        "stem": "Explain how to use a piece of paper to test if an angle is a right angle.",
+        "hints": ["Fold the paper to make a square corner."],
+        "explanation": "Fold the paper so that the two edges meet perfectly. The corner of the folded paper is a right angle. Place it on the angle to test.",
+        "rubric": {
+          "criteria": [
+            {"description": "Explains folding to create a square corner.", "marks": 1},
+            {"description": "Explains placing it on the angle.", "marks": 1}
+          ]
+        },
+        "misconception": "Just looking at the angle.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "identify_right_angles",
+        "type": "numeric",
+        "difficulty": 3,
+        "stem": "How many right angles does a regular pentagon have?",
+        "answer": 0,
+        "check": "0",
+        "hints": ["A regular pentagon has angles of 108 degrees."],
+        "explanation": "0 right angles.",
+        "misconception": "Saying 5.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "sort_right_angles",
+        "type": "drawing",
+        "difficulty": 3,
+        "stem": "Draw a shape with exactly 2 right angles.",
+        "hints": ["Try a trapezoid or a right-angled quadrilateral."],
+        "explanation": "Any shape with exactly two right angles.",
+        "rubric": {
+          "criteria": [
+            {"description": "Draws a shape with exactly 2 right angles.", "marks": 1}
+          ]
+        },
+        "misconception": "Drawing a square (4 right angles).",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "identify_right_angles",
+        "type": "written",
+        "difficulty": 4,
+        "stem": "Explain why a parallelogram might NOT have right angles.",
+        "hints": ["Think of a slanted rectangle."],
+        "explanation": "A parallelogram can be slanted, meaning its angles are not 90 degrees (not right angles).",
+        "rubric": {
+          "criteria": [
+            {"description": "Explains that it can be slanted.", "marks": 1}
+          ]
+        },
+        "misconception": "Thinking all parallelograms have right angles.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "identify_right_angles",
+        "type": "numeric",
+        "difficulty": 4,
+        "stem": "A square has 4 right angles. If you cut it in half diagonally, how many right angles are in each triangle?",
+        "answer": 1,
+        "check": "1",
+        "hints": ["The cut goes from corner to corner, so the corner angle is split."],
+        "explanation": "Each triangle has 1 right angle (from the original square).",
+        "misconception": "Saying 2.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "sort_right_angles",
+        "type": "drawing",
+        "difficulty": 4,
+        "stem": "Design a simple house using shapes. Count and label all the right angles.",
+        "hints": ["Use a square for the body and a triangle for the roof."],
+        "explanation": "A square body has 4 right angles; the triangle roof may or may not have right angles.",
+        "rubric": {
+          "criteria": [
+            {"description": "Draws a house shape.", "marks": 1},
+            {"description": "Correctly identifies and labels the right angles.", "marks": 1}
+          ]
+        },
+        "misconception": "Missing the right angles.",
+        "uncertain": []
+      }
+    ]
+  },
+  {
+    "file_name": "B3.3.1.1.2.json",
+    "indicator": {
+      "code": "B3.3.1.1.2",
+      "subject": "Mathematics",
+      "level": "Basic 3",
+      "strand": "Geometry and Measurement",
+      "sub_strand": "2D & 3D Shapes",
+      "content_standard": "B3.3.1.1 Analyse the relationships among and between 2-D shapes and 3-D objects according to a variety of attributes, including measurement",
+      "objective": "Draw and identify angles",
+      "source_page": 85
+    },
+    "spec": {
+      "skills": [
+        {"tag": "identify_angles_in_shapes", "description": "Identify angles in 2D shapes.", "minQuestions": 2},
+        {"tag": "draw_angles", "description": "Draw examples of shapes that belong to a given category.", "minQuestions": 2}
+      ],
+      "difficultyPlan": "20 questions: 5 at difficulty 1, 7 at difficulty 2, 5 at difficulty 3, 3 at difficulty 4.",
+      "misconceptions": [
+        "Thinking only sharp corners are angles.",
+        "Confusing a shape's corner with an angle's size."
+      ],
+      "needsTeacherAssessment": true
+    },
+    "questions": [
+      {
+        "skill_tag": "identify_angles_in_shapes",
+        "type": "numeric",
+        "difficulty": 1,
+        "stem": "How many angles does a triangle have?",
+        "answer": 3,
+        "check": "3",
+        "hints": ["Count the corners."],
+        "explanation": "3 angles.",
+        "misconception": "Saying 4.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "draw_angles",
+        "type": "drawing",
+        "difficulty": 1,
+        "stem": "Draw a shape with 4 sides.",
+        "hints": ["A square or rectangle."],
+        "explanation": "Any 4-sided shape.",
+        "rubric": {
+          "criteria": [
+            {"description": "Draws a shape with exactly 4 sides.", "marks": 1}
+          ]
+        },
+        "misconception": "Drawing a triangle.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "identify_angles_in_shapes",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "How many angles are in a square?",
+        "options": ["3", "4", "5", "6"],
+        "answer": 1,
+        "hints": ["Count the corners."],
+        "explanation": "4 angles.",
+        "misconception": "Saying 5.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "draw_angles",
+        "type": "drawing",
+        "difficulty": 1,
+        "stem": "Draw a triangle.",
+        "hints": ["3 sides, 3 corners."],
+        "explanation": "A shape with 3 sides.",
+        "rubric": {
+          "criteria": [
+            {"description": "Draws a triangle.", "marks": 1}
+          ]
+        },
+        "misconception": "Drawing a square.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "identify_angles_in_shapes",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "Which shape has no angles?",
+        "options": ["Triangle", "Square", "Circle", "Pentagon"],
+        "answer": 2,
+        "hints": ["No corners."],
+        "explanation": "A circle has no corners or angles.",
+        "misconception": "Saying triangle.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "identify_angles_in_shapes",
+        "type": "numeric",
+        "difficulty": 2,
+        "stem": "How many angles does a rectangle have?",
+        "answer": 4,
+        "check": "4",
+        "hints": ["Count the corners."],
+        "explanation": "4 angles.",
+        "misconception": "Saying 3.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "identify_angles_in_shapes",
+        "type": "numeric",
+        "difficulty": 2,
+        "stem": "How many angles does a pentagon have?",
+        "answer": 5,
+        "check": "5",
+        "hints": ["Penta means 5."],
+        "explanation": "5 angles.",
+        "misconception": "Saying 6.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "draw_angles",
+        "type": "drawing",
+        "difficulty": 2,
+        "stem": "Draw a shape with 5 sides.",
+        "hints": ["Pentagon."],
+        "explanation": "Any shape with 5 sides.",
+        "rubric": {
+          "criteria": [
+            {"description": "Draws a shape with 5 sides.", "marks": 1}
+          ]
+        },
+        "misconception": "Drawing a hexagon.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "identify_angles_in_shapes",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "Which of these shapes has exactly 4 angles?",
+        "options": ["Triangle", "Square", "Pentagon", "Hexagon"],
+        "answer": 1,
+        "hints": ["Count corners."],
+        "explanation": "Square has 4 angles.",
+        "misconception": "Saying pentagon.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "identify_angles_in_shapes",
+        "type": "numeric",
+        "difficulty": 2,
+        "stem": "How many angles does a hexagon have?",
+        "answer": 6,
+        "check": "6",
+        "hints": ["Hexa means 6."],
+        "explanation": "6 angles.",
+        "misconception": "Saying 5.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "identify_angles_in_shapes",
+        "type": "written",
+        "difficulty": 2,
+        "stem": "Find and describe an angle in your classroom.",
+        "hints": ["Look at the corner of a table or book."],
+        "explanation": "Example: The corner of the classroom door forms a right angle.",
+        "rubric": {
+          "criteria": [
+            {"description": "Identifies a real angle.", "marks": 1}
+          ]
+        },
+        "misconception": "Not recognizing angles in real life.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "draw_angles",
+        "type": "drawing",
+        "difficulty": 2,
+        "stem": "Draw a shape with 6 sides.",
+        "hints": ["Hexagon."],
+        "explanation": "Any shape with 6 sides.",
+        "rubric": {
+          "criteria": [
+            {"description": "Draws a shape with 6 sides.", "marks": 1}
+          ]
+        },
+        "misconception": "Drawing 5 sides.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "identify_angles_in_shapes",
+        "type": "numeric",
+        "difficulty": 3,
+        "stem": "How many angles does an octagon have?",
+        "answer": 8,
+        "check": "8",
+        "hints": ["Octa means 8."],
+        "explanation": "8 angles.",
+        "misconception": "Saying 6.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "draw_angles",
+        "type": "drawing",
+        "difficulty": 3,
+        "stem": "Draw a shape with exactly 3 angles.",
+        "hints": ["Triangle."],
+        "explanation": "A triangle.",
+        "rubric": {
+          "criteria": [
+            {"description": "Draws a shape with exactly 3 angles (triangle).", "marks": 1}
+          ]
+        },
+        "misconception": "Drawing a square.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "identify_angles_in_shapes",
+        "type": "mcq",
+        "difficulty": 3,
+        "stem": "A pupil says a circle has 1 angle. Is this correct?",
+        "options": ["Yes, it has 1 round angle.", "No, a circle has 0 angles.", "Yes, it has infinite angles."],
+        "answer": 1,
+        "hints": ["A circle has no straight sides or corners."],
+        "explanation": "No, a circle has 0 angles.",
+        "misconception": "Thinking the curve is an angle.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "identify_angles_in_shapes",
+        "type": "written",
+        "difficulty": 3,
+        "stem": "Draw a shape with 3 angles that are all equal.",
+        "hints": ["Equilateral triangle."],
+        "explanation": "An equilateral triangle.",
+        "rubric": {
+          "criteria": [
+            {"description": "Draws a triangle with equal sides.", "marks": 1}
+          ]
+        },
+        "misconception": "Drawing a right triangle.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "identify_angles_in_shapes",
+        "type": "mcq",
+        "difficulty": 3,
+        "stem": "How many angles are inside a quadrilateral?",
+        "options": ["3", "4", "5", "6"],
+        "answer": 1,
+        "hints": ["Quad means 4."],
+        "explanation": "4 angles.",
+        "misconception": "Saying 5.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "draw_angles",
+        "type": "drawing",
+        "difficulty": 4,
+        "stem": "Draw a complex shape (like a house) and count the total number of angles.",
+        "hints": ["A house has a square body and triangle roof."],
+        "explanation": "A house shape has 5 angles (4 from the square and 1 at the top of the roof).",
+        "rubric": {
+          "criteria": [
+            {"description": "Draws a complex shape.", "marks": 1},
+            {"description": "Counts all angles correctly.", "marks": 1}
+          ]
+        },
+        "misconception": "Missing the angle inside the shape.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "identify_angles_in_shapes",
+        "type": "written",
+        "difficulty": 4,
+        "stem": "Explain the difference between a side and an angle in a shape.",
+        "hints": ["Side is a line segment.", "Angle is a corner where two sides meet."],
+        "explanation": "A side is one of the line segments that makes up the shape. An angle is the corner formed where two sides meet.",
+        "rubric": {
+          "criteria": [
+            {"description": "Defines a side.", "marks": 1},
+            {"description": "Defines an angle.", "marks": 1}
+          ]
+        },
+        "misconception": "Using the terms interchangeably.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "identify_angles_in_shapes",
+        "type": "written",
+        "difficulty": 4,
+        "stem": "Look at a 3D cube. How many angles meet at one corner?",
+        "hints": ["Think of the corner of a box."],
+        "explanation": "3 angles meet at each corner of a cube.",
+        "rubric": {
+          "criteria": [
+            {"description": "States 3 angles.", "marks": 1}
+          ]
+        },
+        "misconception": "Saying 1.",
+        "uncertain": []
+      }
+    ]
+  },
+  {
+    "file_name": "B3.3.1.1.1.json",
+    "indicator": {
+      "code": "B3.3.1.1.1",
+      "subject": "Mathematics",
+      "level": "Basic 3",
+      "strand": "Geometry and Measurement",
+      "sub_strand": "2D & 3D Shapes",
+      "content_standard": "B3.3.1.1 Analyse the relationships among and between 2-D shapes and 3-D objects according to a variety of attributes, including measurement",
+      "objective": "Describe 3D objects according to the shape of the faces, the number of edges and vertices. Sort regular and irregular polygons including triangles, quadrilaterals, pentagons, heptagons according to the number of sides",
+      "source_page": 85
+    },
+    "spec": {
+      "skills": [
+        {"tag": "identify_3d_features", "description": "Identify faces, edges, and vertices of 3D shapes.", "minQuestions": 2},
+        {"tag": "describe_3d_faces", "description": "Describe the shape of the faces of 3D objects.", "minQuestions": 2},
+        {"tag": "sort_3d_objects", "description": "Sort 3D objects by faces, edges, or vertices.", "minQuestions": 2},
+        {"tag": "sort_polygons", "description": "Sort regular and irregular polygons by number of sides.", "minQuestions": 2}
+      ],
+      "difficultyPlan": "20 questions: 5 at difficulty 1, 7 at difficulty 2, 5 at difficulty 3, 3 at difficulty 4.",
+      "misconceptions": [
+        "Confusing edges and vertices.",
+        "Thinking a cylinder has no edges.",
+        "Miscounting sides on irregular shapes."
+      ],
+      "needsTeacherAssessment": true
+    },
+    "questions": [
+      {
+        "skill_tag": "identify_3d_features",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "Which 3D shape has 6 square faces?",
+        "options": ["Cube", "Sphere", "Cylinder", "Cone"],
+        "answer": 0,
+        "hints": ["Think of a dice.", "All faces are equal squares."],
+        "explanation": "A cube has 6 square faces.",
+        "misconception": "Saying cylinder.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "identify_3d_features",
+        "type": "numeric",
+        "difficulty": 1,
+        "stem": "How many faces does a cube have?",
+        "answer": 6,
+        "check": "6",
+        "hints": ["Top, bottom, and 4 sides."],
+        "explanation": "6 faces.",
+        "misconception": "Saying 4.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "sort_polygons",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "A polygon with 5 sides is called a...",
+        "options": ["Pentagon", "Hexagon", "Triangle", "Quadrilateral"],
+        "answer": 0,
+        "hints": ["Penta means five."],
+        "explanation": "Pentagon.",
+        "misconception": "Saying hexagon.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "identify_3d_features",
+        "type": "numeric",
+        "difficulty": 1,
+        "stem": "How many edges does a cube have?",
+        "answer": 12,
+        "check": "12",
+        "hints": ["Count the edges on a dice."],
+        "explanation": "12 edges.",
+        "misconception": "Saying 6.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "sort_polygons",
+        "type": "numeric",
+        "difficulty": 1,
+        "stem": "How many sides does a hexagon have?",
+        "answer": 6,
+        "check": "6",
+        "hints": ["Hexa means six."],
+        "explanation": "6 sides.",
+        "misconception": "Saying 5.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "identify_3d_features",
+        "type": "numeric",
+        "difficulty": 2,
+        "stem": "How many vertices does a square pyramid have?",
+        "answer": 5,
+        "check": "5",
+        "hints": ["4 at the base and 1 at the top."],
+        "explanation": "5 vertices.",
+        "misconception": "Saying 4.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "describe_3d_faces",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "What shape are the faces of a rectangular prism?",
+        "options": ["Rectangles", "Circles", "Triangles", "Pentagons"],
+        "answer": 0,
+        "hints": ["Think of a box."],
+        "explanation": "Rectangles.",
+        "misconception": "Saying squares (only if it's a cube).",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "sort_3d_objects",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "Which 3D shape has a curved surface and no straight edges?",
+        "options": ["Sphere", "Cube", "Cuboid", "Pyramid"],
+        "answer": 0,
+        "hints": ["Think of a ball."],
+        "explanation": "Sphere.",
+        "misconception": "Saying cylinder (it has some edges).",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "identify_3d_features",
+        "type": "numeric",
+        "difficulty": 2,
+        "stem": "How many vertices does a triangular prism have?",
+        "answer": 6,
+        "check": "6",
+        "hints": ["3 on each triangular face."],
+        "explanation": "6 vertices.",
+        "misconception": "Saying 5.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "sort_polygons",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "Which of these is a regular polygon?",
+        "options": ["A square", "A rectangle", "A scalene triangle", "An irregular pentagon"],
+        "answer": 0,
+        "hints": ["Regular means all sides and angles are equal."],
+        "explanation": "A square is regular.",
+        "misconception": "Saying a rectangle (sides are not all equal).",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "describe_3d_faces",
+        "type": "written",
+        "difficulty": 2,
+        "stem": "Describe the faces, edges, and vertices of a cylinder.",
+        "hints": ["It has 2 circular faces.", "It has a curved surface.", "No vertices."],
+        "explanation": "A cylinder has 2 circular faces, 1 curved surface, 2 edges, and 0 vertices.",
+        "rubric": {
+          "criteria": [
+            {"description": "Mentions 2 circular faces.", "marks": 1},
+            {"description": "Mentions 0 vertices.", "marks": 1}
+          ]
+        },
+        "misconception": "Saying it has 3 faces.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "sort_3d_objects",
+        "type": "written",
+        "difficulty": 2,
+        "stem": "Sort these objects into two groups based on their faces: sphere, cube, cylinder, pyramid.",
+        "hints": ["Group with flat faces vs curved faces."],
+        "explanation": "Group 1 (only flat faces): cube, pyramid. Group 2 (has curved faces): sphere, cylinder.",
+        "rubric": {
+          "criteria": [
+            {"description": "Groups correctly.", "marks": 1},
+            {"description": "Explains the sorting rule.", "marks": 1}
+          ]
+        },
+        "misconception": "Putting cylinder with flat-faced objects.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "identify_3d_features",
+        "type": "numeric",
+        "difficulty": 3,
+        "stem": "How many edges does a square pyramid have?",
+        "answer": 8,
+        "check": "8",
+        "hints": ["4 at the base + 4 going up to the top."],
+        "explanation": "8 edges.",
+        "misconception": "Saying 5.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "sort_polygons",
+        "type": "mcq",
+        "difficulty": 3,
+        "stem": "Which polygon has 7 sides?",
+        "options": ["Heptagon", "Hexagon", "Pentagon", "Octagon"],
+        "answer": 0,
+        "hints": ["Hepta means seven."],
+        "explanation": "Heptagon.",
+        "misconception": "Saying hexagon.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "describe_3d_faces",
+        "type": "mcq",
+        "difficulty": 3,
+        "stem": "A cube and a rectangular prism both have 6 faces. How are their faces different?",
+        "options": ["Cube has all square faces, prism has rectangular faces.", "Cube has rectangular faces, prism has square faces.", "They are exactly the same.", "Prism has curved faces."],
+        "answer": 0,
+        "hints": ["Cube is a special prism with equal sides."],
+        "explanation": "Cube faces are all squares; prism faces are rectangles (some might be squares).",
+        "misconception": "Thinking they are the same.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "identify_3d_features",
+        "type": "written",
+        "difficulty": 3,
+        "stem": "A pupil says a cylinder has 3 faces. Is this correct? Explain.",
+        "hints": ["Does the curved surface count as a face?"],
+        "explanation": "Yes, it can be considered to have 3 faces: 2 flat circular faces and 1 curved face.",
+        "rubric": {
+          "criteria": [
+            {"description": "States yes.", "marks": 1},
+            {"description": "Explains 2 flat + 1 curved.", "marks": 1}
+          ]
+        },
+        "misconception": "Saying no because it has no flat faces on the side.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "sort_polygons",
+        "type": "written",
+        "difficulty": 3,
+        "stem": "Draw a regular pentagon and an irregular pentagon.",
+        "hints": ["Regular: all sides equal.", "Irregular: sides not equal."],
+        "explanation": "A regular pentagon has 5 equal sides; an irregular one does not.",
+        "rubric": {
+          "criteria": [
+            {"description": "Draws a regular pentagon.", "marks": 1},
+            {"description": "Draws an irregular pentagon.", "marks": 1}
+          ]
+        },
+        "misconception": "Drawing a hexagon.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "identify_3d_features",
+        "type": "numeric",
+        "difficulty": 4,
+        "stem": "A cube has 6 faces and 8 vertices. How many edges does it have? Use the formula F + V - E = 2.",
+        "answer": 12,
+        "check": "6+8-2",
+        "hints": ["6 + 8 - E = 2.", "14 - E = 2."],
+        "explanation": "E = 12.",
+        "misconception": "Saying 10.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "describe_3d_faces",
+        "type": "drawing",
+        "difficulty": 4,
+        "stem": "Draw a net of a cube.",
+        "hints": ["A cross shape with 6 squares."],
+        "explanation": "A net of a cube is 6 squares arranged so they fold into a cube.",
+        "rubric": {
+          "criteria": [
+            {"description": "Contains 6 squares.", "marks": 1},
+            {"description": "Squares are arranged so they can fold into a cube.", "marks": 1}
+          ]
+        },
+        "misconception": "Drawing 4 squares.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "sort_polygons",
+        "type": "written",
+        "difficulty": 4,
+        "stem": "Explain the difference between a regular and an irregular polygon.",
+        "hints": ["What about the sides and angles?"],
+        "explanation": "A regular polygon has all sides equal and all angles equal. An irregular polygon does not.",
+        "rubric": {
+          "criteria": [
+            {"description": "Explains regular = equal sides/angles.", "marks": 1},
+            {"description": "Explains irregular = not equal.", "marks": 1}
+          ]
+        },
+        "misconception": "Thinking 'regular' just means 'common'.",
+        "uncertain": []
+      }
+    ]
+  },
+  {
+    "file_name": "B3.2.1.1.1.json",
+    "indicator": {
+      "code": "B3.2.1.1.1",
+      "subject": "Mathematics",
+      "level": "Basic 3",
+      "strand": "Algebra",
+      "sub_strand": "Patterns and Relationships",
+      "content_standard": "B3.2.1.1 Recognise, create, extend, describe, and use patterns and rules to solve mathematical tasks",
+      "objective": "Demonstrate an understanding of increasing and decreasing patterns by extending the next two or three terms and identifying errors or missing elements",
+      "source_page": 84
+    },
+    "spec": {
+      "skills": [
+        {"tag": "identify_rule", "description": "Identify the rule in a pattern (e.g., add 3, subtract 3).", "minQuestions": 2},
+        {"tag": "extend_pattern", "description": "Extend a pattern by the next 2 or 3 terms.", "minQuestions": 2},
+        {"tag": "create_pattern", "description": "Create a pattern for a given rule.", "minQuestions": 2},
+        {"tag": "find_pattern_errors", "description": "Identify errors or missing elements in a pattern and justify.", "minQuestions": 2},
+        {"tag": "patterns_in_100_chart", "description": "Locate and describe patterns in a 100s chart.", "minQuestions": 2}
+      ],
+      "difficultyPlan": "20 questions: 5 at difficulty 1, 7 at difficulty 2, 5 at difficulty 3, 3 at difficulty 4.",
+      "misconceptions": [
+        "Assuming all patterns increase.",
+        "Not checking the rule against all terms.",
+        "Confusing horizontal and vertical patterns on a 100 chart."
+      ],
+      "needsTeacherAssessment": true
+    },
+    "questions": [
+      {
+        "skill_tag": "extend_pattern",
+        "type": "numeric",
+        "difficulty": 1,
+        "stem": "What is the next number in the pattern: 3, 6, 9, ___?",
+        "answer": 12,
+        "check": "9+3",
+        "hints": ["The pattern adds 3 each time.", "9 + 3."],
+        "explanation": "The pattern adds 3. 9 + 3 = 12.",
+        "misconception": "Saying 10.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "identify_rule",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "What is the rule for the pattern: 5, 10, 15, 20?",
+        "options": ["Add 5", "Add 10", "Subtract 5", "Multiply by 2"],
+        "answer": 0,
+        "hints": ["5 + 5 = 10.", "10 + 5 = 15."],
+        "explanation": "The rule is 'add 5'.",
+        "misconception": "Saying 'add 10' because 10 is in the pattern.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "find_pattern_errors",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "Which number is the error in this pattern: 2, 4, 6, 9, 10?",
+        "options": ["2", "4", "9", "10"],
+        "answer": 2,
+        "hints": ["The pattern adds 2.", "6 + 2 = 8, not 9."],
+        "explanation": "9 is the error. It should be 8.",
+        "misconception": "Saying 10 is the error.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "extend_pattern",
+        "type": "short_answer",
+        "difficulty": 1,
+        "stem": "What is the next number in the pattern: 20, 15, 10, ___?",
+        "answer": ["5"],
+        "hints": ["The pattern subtracts 5.", "10 - 5."],
+        "explanation": "10 - 5 = 5.",
+        "misconception": "Saying 15 (increasing).",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "identify_rule",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "What is the rule for the pattern: 2, 4, 8, 16?",
+        "options": ["Add 2", "Multiply by 2", "Add 4", "Multiply by 4"],
+        "answer": 1,
+        "hints": ["2 x 2 = 4.", "4 x 2 = 8."],
+        "explanation": "The rule is 'multiply by 2' or 'double'.",
+        "misconception": "Saying 'add 2' because 2+2=4.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "extend_pattern",
+        "type": "short_answer",
+        "difficulty": 2,
+        "stem": "Extend the pattern by two terms: 12, 16, 20, ___, ___.",
+        "answer": ["24, 28"],
+        "hints": ["The pattern adds 4.", "20 + 4 = 24.", "24 + 4 = 28."],
+        "explanation": "The next two terms are 24 and 28.",
+        "misconception": "Adding 3 instead of 4.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "find_pattern_errors",
+        "type": "numeric",
+        "difficulty": 2,
+        "stem": "Find the wrong number in this pattern: 45, 40, 35, 32, 25.",
+        "answer": 32,
+        "check": "32",
+        "hints": ["The pattern subtracts 5.", "35 - 5 = 30."],
+        "explanation": "32 is wrong. It should be 30.",
+        "misconception": "Saying 25 is wrong.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "patterns_in_100_chart",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "On a 100 chart, if you move from 24 to 34, what is the rule?",
+        "options": ["Add 10", "Add 1", "Add 11", "Subtract 10"],
+        "answer": 0,
+        "hints": ["Moving down one row adds 10."],
+        "explanation": "Moving down a row adds 10.",
+        "misconception": "Saying add 1.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "extend_pattern",
+        "type": "numeric",
+        "difficulty": 2,
+        "stem": "What is the next number in the pattern: 50, 45, 40, ___?",
+        "answer": 35,
+        "check": "40-5",
+        "hints": ["Subtract 5 each time."],
+        "explanation": "35.",
+        "misconception": "Saying 30.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "identify_rule",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "What is the rule for the pattern: 10, 20, 30, 40?",
+        "options": ["Add 10", "Add 20", "Multiply by 2", "Subtract 10"],
+        "answer": 0,
+        "hints": ["10 + 10 = 20."],
+        "explanation": "Add 10.",
+        "misconception": "Saying multiply by 2.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "create_pattern",
+        "type": "written",
+        "difficulty": 2,
+        "stem": "Create a number pattern that adds 6. Write the first four terms.",
+        "hints": ["Start with any number.", "Keep adding 6."],
+        "explanation": "For example: 6, 12, 18, 24.",
+        "rubric": {
+          "criteria": [
+            {"description": "Creates a pattern with a constant difference of 6.", "marks": 1},
+            {"description": "Shows at least four correct terms.", "marks": 1}
+          ]
+        },
+        "misconception": "Creating a pattern that adds a different number.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "find_pattern_errors",
+        "type": "short_answer",
+        "difficulty": 2,
+        "stem": "Find the error in the pattern: 3, 6, 9, 12, 14.",
+        "answer": ["14"],
+        "hints": ["The pattern adds 3.", "12 + 3 = 15."],
+        "explanation": "14 is the error. It should be 15.",
+        "misconception": "Saying 12 is wrong.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "extend_pattern",
+        "type": "numeric",
+        "difficulty": 3,
+        "stem": "What is the next number in the pattern: 35, 45, 55, ___?",
+        "answer": 65,
+        "check": "55+10",
+        "hints": ["Add 10 each time."],
+        "explanation": "65.",
+        "misconception": "Saying 60.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "find_pattern_errors",
+        "type": "written",
+        "difficulty": 3,
+        "stem": "Find the error and explain: 100, 90, 80, 75, 60.",
+        "hints": ["The pattern subtracts 10.", "80 - 10 = 70."],
+        "explanation": "75 is the error. It should be 70. The pattern subtracts 10 each time.",
+        "rubric": {
+          "criteria": [
+            {"description": "Identifies 75 as the error.", "marks": 1},
+            {"description": "Explains the rule is subtract 10.", "marks": 1}
+          ]
+        },
+        "misconception": "Thinking 60 is wrong.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "create_pattern",
+        "type": "written",
+        "difficulty": 3,
+        "stem": "Create a decreasing pattern that subtracts 4. Start at 20.",
+        "hints": ["20, then 16, 12, 8..."],
+        "explanation": "20, 16, 12, 8, 4.",
+        "rubric": {
+          "criteria": [
+            {"description": "Starts at 20.", "marks": 1},
+            {"description": "Subtracts 4 each time.", "marks": 1}
+          ]
+        },
+        "misconception": "Adding instead of subtracting.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "patterns_in_100_chart",
+        "type": "numeric",
+        "difficulty": 3,
+        "stem": "On a 100 chart, moving diagonally down and right adds 11. If you start at 12, what is the next number?",
+        "answer": 23,
+        "check": "12+11",
+        "hints": ["Add 11 to 12."],
+        "explanation": "12 + 11 = 23.",
+        "misconception": "Saying 13.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "identify_rule",
+        "type": "mcq",
+        "difficulty": 3,
+        "stem": "What is the rule for the pattern: 1, 3, 5, 7?",
+        "options": ["Add 2", "Add 1", "Add 3", "Multiply by 2"],
+        "answer": 0,
+        "hints": ["1 + 2 = 3.", "3 + 2 = 5."],
+        "explanation": "Add 2 (odd numbers).",
+        "misconception": "Saying add 1.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "extend_pattern",
+        "type": "numeric",
+        "difficulty": 4,
+        "stem": "What is the next number in the pattern: 1, 4, 9, 16, ___?",
+        "answer": 25,
+        "check": "5*5",
+        "hints": ["These are square numbers.", "1x1, 2x2, 3x3, 4x4, 5x5."],
+        "explanation": "25.",
+        "misconception": "Saying 20 (adding 4).",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "find_pattern_errors",
+        "type": "numeric",
+        "difficulty": 4,
+        "stem": "Find the wrong number in this pattern: 2, 5, 10, 18, 26.",
+        "answer": 18,
+        "check": "18",
+        "hints": ["The differences are 3, 5, 7, 9.", "2 + 3 = 5, 5 + 5 = 10, 10 + 7 = 17."],
+        "explanation": "18 is wrong. It should be 17.",
+        "misconception": "Saying 26 is wrong.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "extend_pattern",
+        "type": "written",
+        "difficulty": 4,
+        "stem": "Explain the rule in the pattern: 1, 1, 2, 3, 5, 8.",
+        "hints": ["Look at the last two numbers.", "1 + 1 = 2, 1 + 2 = 3."],
+        "explanation": "Each number is the sum of the two previous numbers. 1+1=2, 1+2=3, 2+3=5, 3+5=8.",
+        "rubric": {
+          "criteria": [
+            {"description": "Explains adding the two previous numbers.", "marks": 1}
+          ]
+        },
+        "misconception": "Thinking it's adding 1.",
+        "uncertain": []
+      }
+    ]
+  },
+  {
+    "file_name": "Next B31.1.4.1.1.json",
+    "indicator": {
+      "code": "1.1.4.1.1",
+      "subject": "Mathematics",
+      "level": "Basic 3",
+      "strand": "Number",
+      "sub_strand": "Money",
+      "content_standard": "B3.1.4.1. Determine the value of coins and note in order to solve monetary transactions",
+      "objective": "Use different denominations of money (1,2, 5, 10, 20, 50 cedis notes an",
+      "source_page": 82
+    },
+    "spec": {
+      "skills": [
+        {"tag": "solve_money_word_problems", "description": "Solve word problems involving money and giving change.", "minQuestions": 2},
+        {"tag": "make_amounts", "description": "Find different ways to make a given amount using notes.", "minQuestions": 2}
+      ],
+      "difficultyPlan": "20 questions: 5 at difficulty 1, 7 at difficulty 2, 5 at difficulty 3, 3 at difficulty 4.",
+      "misconceptions": [
+        "Forgetting to subtract the cost from the money given to find change.",
+        "Using a note value larger than the target amount."
+      ],
+      "needsTeacherAssessment": false
+    },
+    "questions": [
+      {
+        "skill_tag": "solve_money_word_problems",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "A pencil costs 2 cedis. You pay with a 5 cedi note. How much change do you get?",
+        "options": ["2 cedis", "3 cedis", "5 cedis", "7 cedis"],
+        "answer": 1,
+        "hints": ["Change = money paid - cost.", "5 - 2."],
+        "explanation": "5 - 2 = 3 cedis.",
+        "misconception": "Adding 5 + 2 = 7.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "make_amounts",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "Which combination makes 10 cedis?",
+        "options": ["One 10 cedi note", "Two 5 cedi notes", "Five 2 cedi notes", "All of the above"],
+        "answer": 3,
+        "hints": ["Check each option."],
+        "explanation": "All combinations equal 10 cedis.",
+        "misconception": "Thinking only one way is correct.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "solve_money_word_problems",
+        "type": "numeric",
+        "difficulty": 1,
+        "stem": "A book costs 15 cedis. You have a 20 cedi note. How much change?",
+        "answer": 5,
+        "check": "20-15",
+        "hints": ["20 - 15."],
+        "explanation": "5 cedis.",
+        "misconception": "Saying 35.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "make_amounts",
+        "type": "short_answer",
+        "difficulty": 1,
+        "stem": "How many 2 cedi notes make 10 cedis?",
+        "answer": ["5"],
+        "hints": ["10 ÷ 2."],
+        "explanation": "5 notes.",
+        "misconception": "Saying 2.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "solve_money_word_problems",
+        "type": "numeric",
+        "difficulty": 1,
+        "stem": "Ama buys a pen for 3 cedis and a book for 7 cedis. How much does she spend?",
+        "answer": 10,
+        "check": "3+7",
+        "hints": ["3 + 7."],
+        "explanation": "10 cedis.",
+        "misconception": "Subtracting 7 - 3 = 4.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "solve_money_word_problems",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "Kojo buys a shirt for 25 cedis. He pays with a 50 cedi note. How much change?",
+        "options": ["15 cedis", "25 cedis", "50 cedis", "75 cedis"],
+        "answer": 1,
+        "hints": ["50 - 25."],
+        "explanation": "25 cedis.",
+        "misconception": "Saying 75.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "make_amounts",
+        "type": "numeric",
+        "difficulty": 2,
+        "stem": "What is the smallest number of notes needed to make 30 cedis using 20, 10, 5 cedi notes?",
+        "answer": 2,
+        "check": "1*20+1*10",
+        "hints": ["Use a 20 and a 10."],
+        "explanation": "2 notes (one 20, one 10).",
+        "misconception": "Saying 3 (e.g., three 10s).",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "solve_money_word_problems",
+        "type": "numeric",
+        "difficulty": 2,
+        "stem": "A trader has 100 cedis. He buys goods worth 45 cedis. How much does he have left?",
+        "answer": 55,
+        "check": "100-45",
+        "hints": ["100 - 45."],
+        "explanation": "55 cedis.",
+        "misconception": "Saying 65.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "make_amounts",
+        "type": "written",
+        "difficulty": 2,
+        "stem": "List two different ways to make 20 cedis using 10, 5, and 2 cedi notes.",
+        "hints": ["E.g., two 10s; or one 10 + two 5s."],
+        "explanation": "For example: two 10 cedi notes; or one 10 + two 5s.",
+        "rubric": {
+          "criteria": [
+            {"description": "Gives two distinct combinations.", "marks": 1},
+            {"description": "Each combination sums to 20.", "marks": 1}
+          ]
+        },
+        "misconception": "Giving invalid combinations.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "solve_money_word_problems",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "Ama has 10 cedis. She buys a pen for 3 cedis and a book for 5 cedis. How much does she have left?",
+        "options": ["2 cedis", "3 cedis", "8 cedis", "10 cedis"],
+        "answer": 0,
+        "hints": ["Total spent = 3 + 5 = 8.", "10 - 8."],
+        "explanation": "10 - 8 = 2 cedis.",
+        "misconception": "Saying 8.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "make_amounts",
+        "type": "short_answer",
+        "difficulty": 2,
+        "stem": "How many 5 cedi notes make 50 cedis?",
+        "answer": ["10"],
+        "hints": ["50 ÷ 5."],
+        "explanation": "10 notes.",
+        "misconception": "Saying 5.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "solve_money_word_problems",
+        "type": "written",
+        "difficulty": 2,
+        "stem": "A pupil buys 3 items at 4 cedis each and pays with a 20 cedi note. How much change does he get?",
+        "hints": ["Total cost = 3 × 4 = 12.", "20 - 12."],
+        "explanation": "3 × 4 = 12. 20 - 12 = 8 cedis change.",
+        "rubric": {
+          "criteria": [
+            {"description": "Calculates total cost as 12.", "marks": 1},
+            {"description": "Calculates change as 8.", "marks": 1}
+          ]
+        },
+        "misconception": "Forgetting to multiply.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "solve_money_word_problems",
+        "type": "numeric",
+        "difficulty": 3,
+        "stem": "You buy 2 books at 12 cedis each. You pay with a 50 cedi note. How much change?",
+        "answer": 26,
+        "check": "50-2*12",
+        "hints": ["Cost = 2 x 12 = 24.", "50 - 24."],
+        "explanation": "26 cedis.",
+        "misconception": "Saying 38 (50-12).",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "make_amounts",
+        "type": "numeric",
+        "difficulty": 3,
+        "stem": "What is the largest amount you can make using exactly three notes of 10, 20, or 50 cedis?",
+        "answer": 150,
+        "check": "3*50",
+        "hints": ["Use the largest note."],
+        "explanation": "3 x 50 = 150 cedis.",
+        "misconception": "Saying 100.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "solve_money_word_problems",
+        "type": "written",
+        "difficulty": 3,
+        "stem": "A family has 100 cedis. They spend 45 cedis on food and 25 cedis on transport. How much is left? Explain.",
+        "hints": ["Total spent = 45 + 25 = 70.", "100 - 70."],
+        "explanation": "45 + 25 = 70. 100 - 70 = 30 cedis left.",
+        "rubric": {
+          "criteria": [
+            {"description": "Calculates total spent as 70.", "marks": 1},
+            {"description": "Calculates remaining as 30.", "marks": 1}
+          ]
+        },
+        "misconception": "Subtracting separately and getting the wrong answer.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "solve_money_word_problems",
+        "type": "numeric",
+        "difficulty": 3,
+        "stem": "A trader sells 5 bags at 10 cedis each. He also sells a basket for 25 cedis. How much does he receive?",
+        "answer": 75,
+        "check": "5*10+25",
+        "hints": ["5 x 10 = 50.", "50 + 25."],
+        "explanation": "75 cedis.",
+        "misconception": "Saying 50.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "make_amounts",
+        "type": "written",
+        "difficulty": 4,
+        "stem": "Find three different ways to make 50 cedis using 50, 20, 10, and 5 cedi notes.",
+        "hints": ["One 50; or two 20s + one 10; or one 20 + three 10s."],
+        "explanation": "Examples: one 50; two 20s + one 10; one 20 + three 10s; five 10s, etc.",
+        "rubric": {
+          "criteria": [
+            {"description": "Gives three distinct valid combinations.", "marks": 1},
+            {"description": "All sum to 50.", "marks": 1}
+          ]
+        },
+        "misconception": "Giving invalid combinations.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "solve_money_word_problems",
+        "type": "written",
+        "difficulty": 4,
+        "stem": "A pupil wants to buy a toy for 35 cedis. He has saved 10 cedis, 5 cedis, and 2 cedis notes. How many 2 cedi notes does he need to add to reach 35?",
+        "hints": ["Current savings = 10 + 5 = 15.", "Needed = 35 - 15 = 20.", "20 ÷ 2."],
+        "explanation": "He needs 10 two-cedi notes.",
+        "rubric": {
+          "criteria": [
+            {"description": "Calculates needed amount (20).", "marks": 1},
+            {"description": "Divides by 2 to get 10 notes.", "marks": 1}
+          ]
+        },
+        "misconception": "Saying 15.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "solve_money_word_problems",
+        "type": "numeric",
+        "difficulty": 4,
+        "stem": "You have two 20 cedi notes and three 5 cedi notes. You buy an item for 35 cedis. How much is left?",
+        "answer": 20,
+        "check": "(2*20+3*5)-35",
+        "hints": ["Total = 40 + 15 = 55.", "55 - 35."],
+        "explanation": "20 cedis.",
+        "misconception": "Saying 5.",
+        "uncertain": []
+      }
+    ]
+  },
+  {
+    "file_name": "B3.1.3.1.3.json",
+    "indicator": {
+      "code": "B3.1.3.1.3",
+      "subject": "Mathematics",
+      "level": "Basic 3",
+      "strand": "Number",
+      "sub_strand": "Fractions",
+      "content_standard": "B3.1.3.1 Develop an understanding of fractions using concrete and pictorial representations and write fractions in words and symbols",
+      "objective": "Compare and order unit fractions and fractions with like denominators by using concrete models, pictorial representations and number line.",
+      "source_page": 81
+    },
+    "spec": {
+      "skills": [
+        {"tag": "compare_unit_fractions", "description": "Compare unit fractions (e.g., which is larger, 1/3 or 1/5?).", "minQuestions": 2},
+        {"tag": "compare_like_denominators", "description": "Compare fractions with the same denominator.", "minQuestions": 2},
+        {"tag": "order_fractions", "description": "Order fractions from smallest to largest.", "minQuestions": 2}
+      ],
+      "difficultyPlan": "20 questions: 5 at difficulty 1, 7 at difficulty 2, 5 at difficulty 3, 3 at difficulty 4.",
+      "misconceptions": [
+        "Thinking 1/5 is larger than 1/3 because 5 > 3.",
+        "Comparing numerators instead of denominators for unit fractions."
+      ],
+      "needsTeacherAssessment": true
+    },
+    "questions": [
+      {
+        "skill_tag": "compare_unit_fractions",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "Which is larger: 1/2 or 1/4?",
+        "options": ["1/2", "1/4", "They are equal", "Cannot tell"],
+        "answer": 0,
+        "hints": ["Draw a shape cut into 2, and one cut into 4.", "Which piece is bigger?"],
+        "explanation": "1/2 is larger because the whole is divided into fewer parts.",
+        "misconception": "Saying 1/4 because 4 > 2.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "compare_like_denominators",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "Which is larger: 3/5 or 2/5?",
+        "options": ["3/5", "2/5", "They are equal"],
+        "answer": 0,
+        "hints": ["Same denominator.", "Compare numerators: 3 > 2."],
+        "explanation": "3/5 is larger.",
+        "misconception": "Saying 2/5 because 2 is smaller.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "compare_unit_fractions",
+        "type": "short_answer",
+        "difficulty": 1,
+        "stem": "Which is larger: 1/3 or 1/6?",
+        "answer": ["1/3"],
+        "hints": ["Fewer parts mean larger parts."],
+        "explanation": "1/3 is larger.",
+        "misconception": "Saying 1/6.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "order_fractions",
+        "type": "numeric",
+        "difficulty": 1,
+        "stem": "Order from smallest to largest: 1/4, 1/2, 1/8. What is the smallest?",
+        "answer": 8,
+        "check": "8",
+        "hints": ["Largest denominator gives smallest fraction."],
+        "explanation": "1/8 is the smallest.",
+        "misconception": "Saying 1/4.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "compare_like_denominators",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "Which is smaller: 1/6 or 4/6?",
+        "options": ["1/6", "4/6", "They are equal"],
+        "answer": 0,
+        "hints": ["Same denominator.", "1 < 4."],
+        "explanation": "1/6 is smaller.",
+        "misconception": "Saying 4/6.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "order_fractions",
+        "type": "short_answer",
+        "difficulty": 2,
+        "stem": "Order from smallest to largest: 2/8, 5/8, 3/8.",
+        "answer": ["2/8, 3/8, 5/8"],
+        "hints": ["Same denominator.", "Order by numerators."],
+        "explanation": "2/8, 3/8, 5/8.",
+        "misconception": "Ordering by denominator.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "compare_unit_fractions",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "Which is larger: 1/5 or 1/10?",
+        "options": ["1/5", "1/10", "They are equal"],
+        "answer": 0,
+        "hints": ["Dividing by 5 gives bigger pieces than dividing by 10."],
+        "explanation": "1/5 is larger.",
+        "misconception": "Saying 1/10 because 10 > 5.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "compare_like_denominators",
+        "type": "numeric",
+        "difficulty": 2,
+        "stem": "Which is larger: 7/9 or 4/9? Write the numerator of the larger fraction.",
+        "answer": 7,
+        "check": "7",
+        "hints": ["Same denominator, compare numerators."],
+        "explanation": "7/9 is larger. The numerator is 7.",
+        "misconception": "Saying 4.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "order_fractions",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "Order from largest to smallest: 1/2, 1/4, 1/3.",
+        "options": ["1/2, 1/3, 1/4", "1/4, 1/3, 1/2", "1/3, 1/2, 1/4"],
+        "answer": 0,
+        "hints": ["Smallest denominator is largest fraction."],
+        "explanation": "1/2 > 1/3 > 1/4.",
+        "misconception": "Starting with 1/4.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "order_fractions",
+        "type": "short_answer",
+        "difficulty": 2,
+        "stem": "Order from smallest to largest: 4/10, 1/10, 7/10.",
+        "answer": ["1/10, 4/10, 7/10"],
+        "hints": ["Same denominator."],
+        "explanation": "1/10, 4/10, 7/10.",
+        "misconception": "Starting with 7/10.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "compare_like_denominators",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "Which is smaller: 2/3 or 2/5?",
+        "options": ["2/3", "2/5", "They are equal"],
+        "answer": 1,
+        "hints": ["Same numerator, different denominators.", "Larger denominator gives smaller fraction."],
+        "explanation": "2/5 is smaller.",
+        "misconception": "Saying 2/3 because 3 < 5.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "compare_unit_fractions",
+        "type": "written",
+        "difficulty": 2,
+        "stem": "Explain why 1/8 is smaller than 1/3.",
+        "hints": ["Draw a whole cut into 3 and another into 8."],
+        "explanation": "When a whole is divided into 8 parts, each part is smaller than when it is divided into 3 parts.",
+        "rubric": {
+          "criteria": [
+            {"description": "States 1/8 is smaller.", "marks": 1},
+            {"description": "Explains that more parts mean smaller pieces.", "marks": 1}
+          ]
+        },
+        "misconception": "Thinking 1/8 is larger because 8 > 3.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "order_fractions",
+        "type": "written",
+        "difficulty": 3,
+        "stem": "Order 5/6, 2/6, 4/6 from smallest to largest and explain your reasoning.",
+        "hints": ["Same denominator.", "Look at numerators."],
+        "explanation": "2/6 < 4/6 < 5/6 because the numerators are in order 2, 4, 5.",
+        "rubric": {
+          "criteria": [
+            {"description": "Correct order: 2/6, 4/6, 5/6.", "marks": 1},
+            {"description": "Explains comparing numerators.", "marks": 1}
+          ]
+        },
+        "misconception": "Ordering incorrectly.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "compare_like_denominators",
+        "type": "numeric",
+        "difficulty": 3,
+        "stem": "Compare 6/8 and 6/10. Which is larger? Write the denominator of the larger fraction.",
+        "answer": 8,
+        "check": "8",
+        "hints": ["Same numerator.", "Smaller denominator gives larger fraction."],
+        "explanation": "6/8 is larger. Denominator is 8.",
+        "misconception": "Saying 10.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "compare_unit_fractions",
+        "type": "written",
+        "difficulty": 3,
+        "stem": "A pupil says 1/5 > 1/2 because 5 > 2. Explain the mistake.",
+        "hints": ["Which piece is bigger when cut into 2 vs 5?"],
+        "explanation": "The pupil is confusing larger denominators with larger fractions. 1/2 is larger because dividing into fewer parts makes bigger pieces.",
+        "rubric": {
+          "criteria": [
+            {"description": "States 1/2 is larger.", "marks": 1},
+            {"description": "Explains fewer parts means larger pieces.", "marks": 1}
+          ]
+        },
+        "misconception": "Agreeing with the pupil.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "order_fractions",
+        "type": "mcq",
+        "difficulty": 3,
+        "stem": "Which list is ordered from largest to smallest?",
+        "options": ["1/3, 1/5, 1/8", "1/8, 1/5, 1/3", "1/5, 1/3, 1/8", "1/8, 1/3, 1/5"],
+        "answer": 0,
+        "hints": ["Smallest denominator is largest."],
+        "explanation": "1/3 > 1/5 > 1/8.",
+        "misconception": "Ordering smallest to largest.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "order_fractions",
+        "type": "written",
+        "difficulty": 4,
+        "stem": "Order 3/4, 3/8, 3/2 from smallest to largest. Explain your steps.",
+        "hints": ["Same numerator 3.", "Compare denominators: larger denominator = smaller fraction.", "2 is smallest denominator, so 3/2 is largest."],
+        "explanation": "3/8 < 3/4 < 3/2 because 8 > 4 > 2, and larger denominators mean smaller fractions.",
+        "rubric": {
+          "criteria": [
+            {"description": "Correct order: 3/8, 3/4, 3/2.", "marks": 1},
+            {"description": "Explains using denominators.", "marks": 1}
+          ]
+        },
+        "misconception": "Saying 3/2 is smallest.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "compare_unit_fractions",
+        "type": "written",
+        "difficulty": 4,
+        "stem": "Find a unit fraction that is smaller than 1/4 but larger than 1/10.",
+        "hints": ["Denominator between 4 and 10.", "Try 5, 6, 7, 8, 9."],
+        "explanation": "Possible answers: 1/5, 1/6, 1/7, 1/8, 1/9.",
+        "rubric": {
+          "criteria": [
+            {"description": "Gives a valid fraction.", "marks": 1},
+            {"description": "Verifies it fits the conditions.", "marks": 1}
+          ]
+        },
+        "misconception": "Choosing 1/2 or 1/12.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "compare_like_denominators",
+        "type": "numeric",
+        "difficulty": 4,
+        "stem": "Which is larger: 9/10 or 9/12? Write the denominator of the smaller fraction.",
+        "answer": 12,
+        "check": "12",
+        "hints": ["Same numerator, larger denominator = smaller fraction.", "9/10 is larger, 9/12 is smaller."],
+        "explanation": "9/12 is smaller. Denominator is 12.",
+        "misconception": "Saying 10.",
+        "uncertain": []
+      }
+    ]
+  },
+  {
+    "file_name": "B3.1.3.1.2.json",
+    "indicator": {
+      "code": "B3.1.3.1.2",
+      "subject": "Mathematics",
+      "level": "Basic 3",
+      "strand": "Number",
+      "sub_strand": "Fractions",
+      "content_standard": "B3.1.3.1 Develop an understanding of fractions using concrete and pictorial representations and write fractions in words and symbols",
+      "objective": "Understand, explain and demonstrate that fractions can be used to represent parts of a group of objects, point on a line, or distances on a number line [Read and write fractions using words and symbols. (E.g. one-half, two halves, thirds, fifths etc.)]",
+      "source_page": 79
+    },
+    "spec": {
+      "skills": [
+        {"tag": "fraction_of_group", "description": "Identify a fraction of a group of objects (e.g., half of 6 apples).", "minQuestions": 2},
+        {"tag": "fraction_on_number_line", "description": "Locate a fraction on a number line (e.g., 3/4).", "minQuestions": 2},
+        {"tag": "write_fraction_words", "description": "Write fractions in words (e.g., one-half, three-quarters).", "minQuestions": 2},
+        {"tag": "cut_fraction_from_length", "description": "Cut a given fraction from a length (e.g., 1/2 of a 12cm stick).", "minQuestions": 2}
+      ],
+      "difficultyPlan": "20 questions: 5 at difficulty 1, 7 at difficulty 2, 5 at difficulty 3, 3 at difficulty 4.",
+      "misconceptions": [
+        "Counting the objects instead of dividing them.",
+        "Placing fractions incorrectly on a number line (e.g., 1/4 at the 4 mark).",
+        "Writing “three quarter” instead of “three quarters”."
+      ],
+      "needsTeacherAssessment": true
+    },
+    "questions": [
+      {
+        "skill_tag": "fraction_of_group",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "What is 1/2 of 6 apples?",
+        "options": ["2", "3", "4", "6"],
+        "answer": 1,
+        "hints": ["Divide 6 into 2 equal groups.", "6 ÷ 2."],
+        "explanation": "6 ÷ 2 = 3 apples.",
+        "misconception": "Saying 2 because the denominator is 2.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "fraction_on_number_line",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "On a number line from 0 to 1 divided into 4 equal parts, which fraction is at the first mark?",
+        "options": ["1/4", "1/2", "3/4", "1"],
+        "answer": 0,
+        "hints": ["The first mark is 1 part out of 4."],
+        "explanation": "The first mark is 1/4.",
+        "misconception": "Saying 1/2.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "write_fraction_words",
+        "type": "short_answer",
+        "difficulty": 1,
+        "stem": "Write 1/2 in words.",
+        "answer": ["one-half", "one half"],
+        "hints": ["Numerator is one, denominator is half."],
+        "explanation": "One-half.",
+        "misconception": "Writing 'one two'.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "cut_fraction_from_length",
+        "type": "numeric",
+        "difficulty": 1,
+        "stem": "A stick is 12 cm long. You cut off 1/2 of it. How many cm did you cut?",
+        "answer": 6,
+        "check": "12/2",
+        "hints": ["1/2 of 12.", "12 ÷ 2."],
+        "explanation": "12 ÷ 2 = 6 cm.",
+        "misconception": "Saying 2 cm.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "fraction_of_group",
+        "type": "numeric",
+        "difficulty": 1,
+        "stem": "What is 1/3 of 9 pencils?",
+        "answer": 3,
+        "check": "9/3",
+        "hints": ["9 ÷ 3."],
+        "explanation": "9 ÷ 3 = 3 pencils.",
+        "misconception": "Saying 9.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "fraction_on_number_line",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "A number line from 0 to 1 is divided into 5 equal parts. Where is 3/5 located?",
+        "options": ["At the 3rd mark", "At the 5th mark", "At the 2nd mark", "At the 4th mark"],
+        "answer": 0,
+        "hints": ["Numerator 3 means 3rd mark."],
+        "explanation": "3/5 is at the 3rd mark.",
+        "misconception": "Saying 5th mark.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "write_fraction_words",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "Which of these correctly writes 3/4 in words?",
+        "options": ["Three-quarters", "Three quarter", "Three-four", "Third-four"],
+        "answer": 0,
+        "hints": ["Use plural 'quarters'."],
+        "explanation": "Three-quarters.",
+        "misconception": "Writing 'three quarter'.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "fraction_of_group",
+        "type": "numeric",
+        "difficulty": 2,
+        "stem": "A basket has 10 oranges. What is 1/5 of the oranges?",
+        "answer": 2,
+        "check": "10/5",
+        "hints": ["10 ÷ 5."],
+        "explanation": "2 oranges.",
+        "misconception": "Saying 5.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "fraction_on_number_line",
+        "type": "numeric",
+        "difficulty": 2,
+        "stem": "On a number line from 0 to 1 divided into 8 equal parts, what is the denominator of the fraction at the 5th mark?",
+        "answer": 8,
+        "check": "8",
+        "hints": ["Denominator is total parts."],
+        "explanation": "8.",
+        "misconception": "Saying 5.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "cut_fraction_from_length",
+        "type": "numeric",
+        "difficulty": 2,
+        "stem": "A ribbon is 20 cm long. You cut 1/4 of it. How many cm is that?",
+        "answer": 5,
+        "check": "20/4",
+        "hints": ["20 ÷ 4."],
+        "explanation": "5 cm.",
+        "misconception": "Saying 4.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "fraction_of_group",
+        "type": "written",
+        "difficulty": 2,
+        "stem": "Explain how to find 1/2 of 8 sweets.",
+        "hints": ["Divide into 2 equal groups."],
+        "explanation": "Divide 8 sweets into 2 equal groups. 8 ÷ 2 = 4. So 1/2 of 8 is 4.",
+        "rubric": {
+          "criteria": [
+            {"description": "States to divide into 2 groups.", "marks": 1},
+            {"description": "Calculates 4.", "marks": 1}
+          ]
+        },
+        "misconception": "Counting one by one without dividing.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "fraction_on_number_line",
+        "type": "short_answer",
+        "difficulty": 2,
+        "stem": "A number line from 0 to 1 is divided into 6 equal parts. What fraction is at the 4th mark?",
+        "answer": ["4/6"],
+        "hints": ["Numerator is 4, denominator is 6."],
+        "explanation": "4/6.",
+        "misconception": "Writing 1/4.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "write_fraction_words",
+        "type": "written",
+        "difficulty": 3,
+        "stem": "Write 5/8 in words.",
+        "hints": ["Use 'fifths' or 'eighths' appropriately."],
+        "explanation": "Five-eighths.",
+        "rubric": {
+          "criteria": [
+            {"description": "Writes 'five-eighths'.", "marks": 1}
+          ]
+        },
+        "misconception": "Writing 'five eight'.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "fraction_of_group",
+        "type": "numeric",
+        "difficulty": 3,
+        "stem": "There are 15 pupils in a class. 1/3 of them are girls. How many girls are there?",
+        "answer": 5,
+        "check": "15/3",
+        "hints": ["15 ÷ 3."],
+        "explanation": "5 girls.",
+        "misconception": "Saying 3.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "cut_fraction_from_length",
+        "type": "written",
+        "difficulty": 3,
+        "stem": "A rope is 24 m long. You cut 3/4 of it. How many metres did you cut? Explain your steps.",
+        "hints": ["First find 1/4 of 24.", "24 ÷ 4 = 6.", "Then multiply by 3."],
+        "explanation": "1/4 of 24 is 6. 3/4 is 3 × 6 = 18 m.",
+        "rubric": {
+          "criteria": [
+            {"description": "Finds 1/4 as 6.", "marks": 1},
+            {"description": "Multiplies by 3 to get 18.", "marks": 1}
+          ]
+        },
+        "misconception": "Saying 3.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "fraction_on_number_line",
+        "type": "written",
+        "difficulty": 3,
+        "stem": "Explain how to locate 2/3 on a number line from 0 to 1.",
+        "hints": ["Divide into 3 equal parts.", "Count 2 marks."],
+        "explanation": "Divide the space between 0 and 1 into 3 equal parts. The second mark is 2/3.",
+        "rubric": {
+          "criteria": [
+            {"description": "Mentions dividing into 3 equal parts.", "marks": 1},
+            {"description": "States to mark the 2nd part.", "marks": 1}
+          ]
+        },
+        "misconception": "Marking at 2 instead of 2/3.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "write_fraction_words",
+        "type": "numeric",
+        "difficulty": 3,
+        "stem": "Write 'four-fifths' in symbols.",
+        "answer": 0.8,
+        "check": "4/5",
+        "hints": ["Numerator 4, denominator 5."],
+        "explanation": "4/5.",
+        "misconception": "Writing 5/4.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "fraction_of_group",
+        "type": "written",
+        "difficulty": 4,
+        "stem": "A farmer has 20 goats. He sells 2/5 of them. How many goats did he sell? Explain your reasoning.",
+        "hints": ["Find 1/5 of 20.", "20 ÷ 5 = 4.", "Then multiply by 2."],
+        "explanation": "1/5 of 20 = 4. 2/5 = 2 × 4 = 8 goats.",
+        "rubric": {
+          "criteria": [
+            {"description": "Finds 1/5 as 4.", "marks": 1},
+            {"description": "Calculates 2/5 as 8.", "marks": 1}
+          ]
+        },
+        "misconception": "Saying 2 goats.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "fraction_on_number_line",
+        "type": "written",
+        "difficulty": 4,
+        "stem": "Draw a number line from 0 to 2. Mark the point 3/2. Explain where you placed it.",
+        "hints": ["3/2 is 1 whole and 1/2.", "Place it between 1 and 2."],
+        "explanation": "3/2 is 1 and a half. It should be halfway between 1 and 2.",
+        "rubric": {
+          "criteria": [
+            {"description": "Draws a number line from 0 to 2.", "marks": 1},
+            {"description": "Places 3/2 exactly halfway between 1 and 2.", "marks": 1}
+          ]
+        },
+        "misconception": "Placing it at 3.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "cut_fraction_from_length",
+        "type": "numeric",
+        "difficulty": 4,
+        "stem": "A stick is 30 cm long. You cut 2/3 of it. How many cm is the piece left?",
+        "answer": 10,
+        "check": "30-(30*2/3)",
+        "hints": ["Find 2/3 of 30 = 20 cm cut.", "Left = 30 - 20 = 10 cm."],
+        "explanation": "10 cm.",
+        "misconception": "Saying 20 cm.",
+        "uncertain": []
+      }
+    ]
+  }
+]

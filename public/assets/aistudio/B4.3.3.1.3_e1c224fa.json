@@ -1,0 +1,265 @@
+{
+  "indicator": {
+    "code": "B4.3.3.1.3",
+    "subject": "Mathematics",
+    "level": "Basic 4",
+    "strand": "Geometry and Measurement",
+    "sub_strand": "Measurement (Perimeter and Area)",
+    "content_standard": "B4.3.3.1 Demonstrate understanding of perimeter of regular and irregular shapes",
+    "objective": "Develop and apply a formula for determining perimeter of square and rectangle",
+    "source_page": 61
+  },
+  "spec": {
+    "skills": [
+      {"tag": "perimeter_of_square", "description": "Calculate the perimeter of a square using the formula P = 4s.", "minQuestions": 2},
+      {"tag": "perimeter_of_rectangle", "description": "Calculate the perimeter of a rectangle using the formula P = 2(l + w).", "minQuestions": 2},
+      {"tag": "solve_perimeter_word_problems", "description": "Solve real-world problems involving the perimeter of squares and rectangles.", "minQuestions": 2}
+    ],
+    "difficultyPlan": "20 questions: 5 at difficulty 1, 7 at difficulty 2, 5 at difficulty 3, 3 at difficulty 4.",
+    "misconceptions": [
+      "Adding only length and width (missing two sides).",
+      "Confusing area and perimeter.",
+      "Using the area formula (l x w) instead of the perimeter formula."
+    ],
+    "needsTeacherAssessment": false
+  },
+  "questions": [
+    {
+      "skill_tag": "perimeter_of_square",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What is the formula for the perimeter of a square?",
+      "options": ["P = s x s", "P = 4s", "P = 2s", "P = s + 2"],
+      "answer": 1,
+      "hints": ["A square has 4 equal sides.", "Add the 4 sides together."],
+      "explanation": "The perimeter of a square is 4 times the side length (P = 4s).",
+      "misconception": "Confusing with the area formula (s x s).",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "perimeter_of_square",
+      "type": "numeric",
+      "difficulty": 1,
+      "stem": "A square has a side length of 6 cm. What is its perimeter?",
+      "answer": 24,
+      "check": "4*6",
+      "hints": ["Use P = 4s.", "4 x 6."],
+      "explanation": "P = 4 x 6 = 24 cm.",
+      "misconception": "Doing 6 x 6 = 36.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "perimeter_of_rectangle",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What is the formula for the perimeter of a rectangle?",
+      "options": ["P = l + w", "P = l x w", "P = 2(l + w)", "P = 4l"],
+      "answer": 2,
+      "hints": ["A rectangle has 2 lengths and 2 widths.", "Add them all together."],
+      "explanation": "The perimeter of a rectangle is 2(length + width).",
+      "misconception": "Confusing with the area formula (l x w).",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "perimeter_of_rectangle",
+      "type": "numeric",
+      "difficulty": 1,
+      "stem": "A rectangle has a length of 8 cm and a width of 3 cm. What is its perimeter?",
+      "answer": 22,
+      "check": "2*(8+3)",
+      "hints": ["Use P = 2(l + w).", "2(8 + 3) = 2(11)."],
+      "explanation": "P = 2(8 + 3) = 2(11) = 22 cm.",
+      "misconception": "Doing 8 + 3 = 11 cm.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "perimeter_of_square",
+      "type": "short_answer",
+      "difficulty": 1,
+      "stem": "A square has a perimeter of 20 cm. What is the length of one side?",
+      "answer": ["5", "5 cm"],
+      "hints": ["P = 4s.", "20 / 4."],
+      "explanation": "s = 20 / 4 = 5 cm.",
+      "misconception": "Dividing by 2 to get 10.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "perimeter_of_rectangle",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "A rectangle has a length of 12 m and a width of 5 m. What is the perimeter?",
+      "answer": 34,
+      "check": "2*(12+5)",
+      "hints": ["2(12 + 5).", "2(17)."],
+      "explanation": "P = 2(17) = 34 m.",
+      "misconception": "Doing 12 x 5 = 60.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "perimeter_of_square",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "What is the perimeter of a square with sides of 9 cm?",
+      "answer": 36,
+      "check": "4*9",
+      "hints": ["P = 4s.", "4 x 9."],
+      "explanation": "P = 4 x 9 = 36 cm.",
+      "misconception": "Doing 9 + 4 = 13.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "solve_perimeter_word_problems",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "A farmer wants to build a fence around a rectangular garden that is 10 m long and 4 m wide. How many metres of fencing does he need?",
+      "options": ["14 m", "40 m", "28 m", "20 m"],
+      "answer": 2,
+      "hints": ["Find the perimeter.", "2(10 + 4)."],
+      "explanation": "2(10 + 4) = 2(14) = 28 m.",
+      "misconception": "Doing 10 x 4 = 40 m.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "perimeter_of_rectangle",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "A rectangular table has a perimeter of 24 cm. Its length is 8 cm. What is its width?",
+      "answer": ["4", "4 cm"],
+      "hints": ["24 = 2(8 + w).", "12 = 8 + w."],
+      "explanation": "24 / 2 = 12. 12 - 8 = 4 cm.",
+      "misconception": "Saying width is 16 cm.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "perimeter_of_square",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "A square has a perimeter of 32 cm. What is the side length?",
+      "answer": 8,
+      "check": "32/4",
+      "hints": ["P = 4s.", "32 / 4."],
+      "explanation": "s = 32 / 4 = 8 cm.",
+      "misconception": "Dividing by 2.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "solve_perimeter_word_problems",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "A picture frame is a square with a side length of 15 cm. What is the perimeter of the frame?",
+      "options": ["30 cm", "45 cm", "60 cm", "225 cm"],
+      "answer": 2,
+      "hints": ["P = 4s.", "4 x 15."],
+      "explanation": "4 x 15 = 60 cm.",
+      "misconception": "Doing 15 x 15 = 225.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "perimeter_of_rectangle",
+      "type": "written",
+      "difficulty": 2,
+      "stem": "Explain the difference between the area and the perimeter of a rectangle.",
+      "hints": ["Perimeter is distance around.", "Area is space inside."],
+      "explanation": "Perimeter is the total distance around the outside of the rectangle, while area is the amount of space inside it.",
+      "rubric": {
+        "criteria": [
+          {"description": "Defines perimeter as distance around.", "marks": 1},
+          {"description": "Defines area as space inside.", "marks": 1}
+        ]
+      },
+      "misconception": "Thinking they are the same thing.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "solve_perimeter_word_problems",
+      "type": "numeric",
+      "difficulty": 3,
+      "stem": "A rectangular football pitch is 100 m long and 60 m wide. A player runs around the perimeter once. How far does the player run?",
+      "answer": 320,
+      "check": "2*(100+60)",
+      "hints": ["Find the perimeter.", "2(100 + 60) = 2(160)."],
+      "explanation": "2(160) = 320 m.",
+      "misconception": "Doing 100 x 60 = 6000.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "perimeter_of_square",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "A square and a rectangle have the same perimeter. The square has sides of 6 cm. The rectangle has a length of 7 cm. What is the width of the rectangle?",
+      "options": ["3 cm", "4 cm", "5 cm", "6 cm"],
+      "answer": 2,
+      "hints": ["Perimeter of square = 4 x 6 = 24.", "24 = 2(7 + w).", "12 = 7 + w."],
+      "explanation": "P = 24. 24 = 2(7 + w). 12 = 7 + w. w = 5 cm.",
+      "misconception": "Assuming the widths are the same.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "solve_perimeter_word_problems",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "A rectangular garden is 15 m by 8 m. A fence is built around it. If fencing costs 10 cedis per metre, what is the total cost?",
+      "answer": ["460", "460 cedis"],
+      "hints": ["Find perimeter: 2(15+8) = 46.", "Multiply by 10."],
+      "explanation": "Perimeter = 2(23) = 46 m. Cost = 46 x 10 = 460 cedis.",
+      "misconception": "Multiplying area (120) by 10.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "perimeter_of_rectangle",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "A pupil calculates the perimeter of a 5 cm by 3 cm rectangle as 5 + 3 = 8 cm. What mistake did they make?",
+      "hints": ["Did they include all four sides?", "How many 5s and 3s are there?"],
+      "explanation": "The pupil only added one length and one width. They need to add all four sides: 5 + 3 + 5 + 3 = 16 cm.",
+      "rubric": {
+        "criteria": [
+          {"description": "Identifies that all 4 sides were not added.", "marks": 1},
+          {"description": "Provides the correct answer (16 cm).", "marks": 1}
+        ]
+      },
+      "misconception": "Thinking only two sides make a perimeter.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "solve_perimeter_word_problems",
+      "type": "numeric",
+      "difficulty": 3,
+      "stem": "A piece of wire is 48 cm long. It is bent to form a square. What is the length of one side of the square?",
+      "answer": 12,
+      "check": "48/4",
+      "hints": ["The wire is the perimeter.", "48 / 4."],
+      "explanation": "48 / 4 = 12 cm.",
+      "misconception": "Bending the wire to form a rectangle with different dimensions.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "solve_perimeter_word_problems",
+      "type": "written",
+      "difficulty": 4,
+      "stem": "A rectangular room is 6 m long and 4 m wide. A border is to be placed along the edge of the ceiling. If the border costs 5 cedis per metre, how much will it cost?",
+      "hints": ["Find perimeter: 2(6+4) = 20.", "Multiply by 5."],
+      "explanation": "Perimeter = 20 m. Cost = 20 x 5 = 100 cedis.",
+      "rubric": {
+        "criteria": [
+          {"description": "Calculates perimeter (20).", "marks": 1},
+          {"description": "Calculates total cost (100).", "marks": 1}
+        ]
+      },
+      "misconception": "Using area (24) instead of perimeter.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "solve_perimeter_word_problems",
+      "type": "mcq",
+      "difficulty": 4,
+      "stem": "A farmer has 36 m of fencing. He wants to enclose a square plot. What is the length of one side?",
+      "options": ["6 m", "9 m", "12 m", "18 m"],
+      "answer": 1,
+      "hints": ["P = 4s.", "36 / 4."],
+      "explanation": "36 / 4 = 9 m.",
+      "misconception": "Dividing by 2 to get 18.",
+      "uncertain": []
+    }
+  ]
+}

@@ -1,0 +1,285 @@
+{
+  "indicator": {
+    "code": "B5.4.1.2.2",
+    "subject": "Mathematics",
+    "level": "Basic 5",
+    "strand": "Data",
+    "sub_strand": "Data Collection, Organisation, Presentation, Interpretation and Analysis",
+    "content_standard": "B5.4.1.2 Construct and interpret double bar graphs to draw conclusions",
+    "objective": "Identify examples of double bar graphs used in a variety of print and electronic media, such as newspapers, magazines, and the internet.",
+    "source_page": 132
+  },
+  "spec": {
+    "skills": [
+      {"tag": "identify_media_double_bar", "description": "Identify double bar graphs in media.", "minQuestions": 2},
+      {"tag": "interpret_media_double_bar", "description": "Interpret double bar graphs from media sources.", "minQuestions": 2}
+    ],
+    "difficultyPlan": "20 questions: 5 at difficulty 1, 7 at difficulty 2, 5 at difficulty 3, 3 at difficulty 4.",
+    "misconceptions": [
+      "Not recognizing the key.",
+      "Misreading the scale.",
+      "Confusing which bar belongs to which category."
+    ],
+    "needsTeacherAssessment": false
+  },
+  "questions": [
+    {
+      "skill_tag": "identify_media_double_bar",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Where might you find a double bar graph in everyday life?",
+      "options": ["In a newspaper", "In a storybook", "In a dictionary", "In a cookbook"],
+      "answer": 0,
+      "hints": ["Newspapers often show data comparisons."],
+      "explanation": "Newspapers frequently use double bar graphs to compare two sets of data.",
+      "misconception": "Thinking graphs are only in textbooks.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_media_double_bar",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which of these is a common use of double bar graphs in the media?",
+      "options": ["Comparing rainfall in two towns", "Telling a story", "Listing ingredients", "Showing a map"],
+      "answer": 0,
+      "hints": ["Double bar graphs compare two categories."],
+      "explanation": "They are often used to compare rainfall, sales, or scores between two groups.",
+      "misconception": "Choosing a storybook feature.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "interpret_media_double_bar",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "A double bar graph in a newspaper shows: Kumasi rainfall in May is 50 mm and in June is 45 mm. Oda rainfall in May is 40 mm and in June is 50 mm. Which town had more rain in May?",
+      "options": ["Kumasi", "Oda", "They had the same"],
+      "answer": 0,
+      "hints": ["Compare May bars: Kumasi 50, Oda 40."],
+      "explanation": "Kumasi had 50 mm in May, more than Oda's 40 mm.",
+      "misconception": "Using June data.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "interpret_media_double_bar",
+      "type": "numeric",
+      "difficulty": 1,
+      "stem": "A double bar graph in a magazine shows: School A has 30 boys and 25 girls; School B has 20 boys and 35 girls. How many girls are in School B?",
+      "answer": 35,
+      "check": "35",
+      "hints": ["Read the girls' bar for School B."],
+      "explanation": "35 girls.",
+      "misconception": "Reading boys' data.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_media_double_bar",
+      "type": "short_answer",
+      "difficulty": 1,
+      "stem": "Name one place you might see a double bar graph outside of school.",
+      "answer": ["newspaper", "magazine", "internet", "television"],
+      "hints": ["Think of media sources."],
+      "explanation": "Newspapers, magazines, the internet, or television.",
+      "misconception": "Saying only in textbooks.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "interpret_media_double_bar",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "A double bar graph on a website shows the number of goals scored by two teams over three matches. Team A: 3, 5, 2. Team B: 4, 2, 4. Which team scored more goals in total?",
+      "options": ["Team A", "Team B", "They scored the same"],
+      "answer": 2,
+      "hints": ["Sum Team A: 3+5+2=10.", "Sum Team B: 4+2+4=10."],
+      "explanation": "Both teams scored 10 goals in total.",
+      "misconception": "Only looking at one match.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_media_double_bar",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "In a double bar graph, what does the key tell you?",
+      "options": ["The title", "What each bar colour represents", "The scale", "The data source"],
+      "answer": 1,
+      "hints": ["The key explains the bars."],
+      "explanation": "The key explains what each bar colour or pattern represents.",
+      "misconception": "Thinking the key is the title.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "interpret_media_double_bar",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "A double bar graph shows: in 2020, 120 boys and 100 girls were enrolled; in 2021, 150 boys and 130 girls. How many more boys than girls were enrolled in 2021?",
+      "answer": 20,
+      "check": "150-130",
+      "hints": ["150 - 130."],
+      "explanation": "20 more boys.",
+      "misconception": "Using 2020 data.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "interpret_media_double_bar",
+      "type": "written",
+      "difficulty": 2,
+      "stem": "Explain how to read a double bar graph from a newspaper.",
+      "hints": ["Look at title, key, axes."],
+      "explanation": "Read the title to know what the graph is about. Use the key to identify which bar is which. Then read the height of each bar against the scale.",
+      "rubric": {
+        "criteria": [
+          {"description": "Mentions using the key.", "marks": 1},
+          {"description": "Mentions reading bar heights against the scale.", "marks": 1}
+        ]
+      },
+      "misconception": "Ignoring the key.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_media_double_bar",
+      "type": "written",
+      "difficulty": 2,
+      "stem": "Find an example of a double bar graph in a newspaper or on the internet. Describe what it shows.",
+      "hints": ["Look for two sets of bars side by side."],
+      "explanation": "The learner's answer will vary. They should describe the data being compared.",
+      "rubric": {
+        "criteria": [
+          {"description": "Describes the graph's topic.", "marks": 1},
+          {"description": "Identifies the two categories compared.", "marks": 1}
+        ]
+      },
+      "misconception": "Not identifying the categories.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "interpret_media_double_bar",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "A double bar graph shows: Boys like Maths (10) and English (8); Girls like Maths (12) and English (14). Which subject is liked by more girls?",
+      "options": ["Maths", "English", "They are equal", "Cannot tell"],
+      "answer": 1,
+      "hints": ["Compare girls' bars: Maths 12, English 14."],
+      "explanation": "More girls like English (14) than Maths (12).",
+      "misconception": "Confusing boys' bars with girls'.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "interpret_media_double_bar",
+      "type": "written",
+      "difficulty": 2,
+      "stem": "Explain why a double bar graph is useful in a newspaper article.",
+      "hints": ["It compares two sets of data."],
+      "explanation": "It allows readers to easily compare two sets of data side by side, such as boys vs girls, or two towns.",
+      "rubric": {
+        "criteria": [
+          {"description": "States it compares two sets of data.", "marks": 1}
+        ]
+      },
+      "misconception": "Thinking it's just decoration.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "interpret_media_double_bar",
+      "type": "numeric",
+      "difficulty": 3,
+      "stem": "A double bar graph shows: School A has 40 boys and 50 girls; School B has 60 boys and 45 girls. How many more girls are in School A than School B?",
+      "answer": 5,
+      "check": "50-45",
+      "hints": ["50 - 45."],
+      "explanation": "5 more girls.",
+      "misconception": "Subtracting boys.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "interpret_media_double_bar",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "A double bar graph shows the number of pupils who like two sports: Football: boys 25, girls 10; Netball: boys 5, girls 20. Which sport is liked by more pupils overall? Explain.",
+      "hints": ["Total football = 25+10=35.", "Total netball = 5+20=25."],
+      "explanation": "Football (35) is liked by more pupils than netball (25).",
+      "rubric": {
+        "criteria": [
+          {"description": "Calculates both totals.", "marks": 1},
+          {"description": "Concludes football is more popular.", "marks": 1}
+        ]
+      },
+      "misconception": "Only looking at one gender.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_media_double_bar",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "Which of these is NOT a place you would typically find a double bar graph?",
+      "options": ["A newspaper article about rainfall", "A magazine comparing car sales", "A school textbook chapter on data", "A dictionary definition"],
+      "answer": 3,
+      "hints": ["Dictionaries define words, not graphs."],
+      "explanation": "A dictionary definition is not a place for double bar graphs.",
+      "misconception": "Choosing a magazine.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "interpret_media_double_bar",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "A double bar graph in a newspaper shows that in a class, 15 boys and 10 girls like Fanta, and 5 boys and 12 girls like Coke. A pupil says 'More pupils like Fanta than Coke.' Is the pupil correct? Explain.",
+      "hints": ["Total Fanta = 15+10=25.", "Total Coke = 5+12=17."],
+      "explanation": "Yes, the pupil is correct. 25 pupils like Fanta, while 17 like Coke.",
+      "rubric": {
+        "criteria": [
+          {"description": "Calculates both totals.", "marks": 1},
+          {"description": "Concludes pupil is correct.", "marks": 1}
+        ]
+      },
+      "misconception": "Only comparing boys' numbers.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_media_double_bar",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "Explain how to identify a double bar graph in a newspaper.",
+      "hints": ["Look for two bars side by side for each category."],
+      "explanation": "Look for a graph with pairs of bars next to each other for each category, often with a key showing two colours.",
+      "rubric": {
+        "criteria": [
+          {"description": "Mentions pairs of bars side by side.", "marks": 1},
+          {"description": "Mentions a key with two colours.", "marks": 1}
+        ]
+      },
+      "misconception": "Thinking any bar graph is double.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "interpret_media_double_bar",
+      "type": "written",
+      "difficulty": 4,
+      "stem": "A double bar graph shows the number of goals scored by two teams over three matches. Team A: 3, 5, 2. Team B: 4, 2, 4. Which team scored more goals in total? Explain.",
+      "hints": ["Sum Team A: 3+5+2=10.", "Sum Team B: 4+2+4=10."],
+      "explanation": "Both teams scored 10 goals in total.",
+      "rubric": {
+        "criteria": [
+          {"description": "Calculates both totals as 10.", "marks": 1},
+          {"description": "Concludes they are equal.", "marks": 1}
+        ]
+      },
+      "misconception": "Only looking at one match.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_media_double_bar",
+      "type": "written",
+      "difficulty": 4,
+      "stem": "Design a double bar graph that could appear in a newspaper comparing two schools' enrolment over two years. Describe the data and key.",
+      "hints": ["Choose two schools and two years."],
+      "explanation": "Example: School A in 2020: 100 boys, 90 girls; 2021: 120 boys, 100 girls. School B: 80 boys, 70 girls; 90 boys, 80 girls. Key: blue=boys, red=girls.",
+      "rubric": {
+        "criteria": [
+          {"description": "Provides data for two schools and two years.", "marks": 1},
+          {"description": "Specifies a key.", "marks": 1}
+        ]
+      },
+      "misconception": "Not providing a key.",
+      "uncertain": []
+    }
+  ]
+}

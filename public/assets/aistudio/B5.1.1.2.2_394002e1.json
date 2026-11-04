@@ -1,0 +1,272 @@
+{
+  "indicator": {
+    "code": "B5.1.1.2.2",
+    "subject": "Mathematics",
+    "level": "Basic 5",
+    "strand": "Number",
+    "sub_strand": "Counting, Representation & Cardinality",
+    "content_standard": "B5.1.1.2 Demonstrate understanding of Roman Numerals up to C (i.e. 100)",
+    "objective": "Count and convert Hindu Arabic numbers to Roman numerals up to 100 (C) and vice versa",
+    "source_page": 80
+  },
+  "spec": {
+    "skills": [
+      {"tag": "convert_hindu_to_roman", "description": "Convert Hindu-Arabic numbers up to 100 to Roman numerals.", "minQuestions": 2},
+      {"tag": "convert_roman_to_hindu", "description": "Convert Roman numerals up to C to Hindu-Arabic numbers.", "minQuestions": 2},
+      {"tag": "count_roman_numerals", "description": "Count forwards and backwards using Roman numerals.", "minQuestions": 2}
+    ],
+    "difficultyPlan": "20 questions: 5 at difficulty 1, 7 at difficulty 2, 5 at difficulty 3, 3 at difficulty 4.",
+    "misconceptions": [
+      "Using more than three identical symbols in a row (e.g., IIII instead of IV).",
+      "Confusing the order of subtractive pairs (e.g., writing IC for 99 instead of XCIX).",
+      "Misreading L (50) and C (100)."
+    ],
+    "needsTeacherAssessment": false
+  },
+  "questions": [
+    {
+      "skill_tag": "convert_hindu_to_roman",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What is the Roman numeral for 4?",
+      "options": ["IIII", "IV", "VI", "IX"],
+      "answer": 1,
+      "hints": ["Use subtractive notation: 1 before 5."],
+      "explanation": "4 = IV.",
+      "misconception": "Writing IIII.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "convert_hindu_to_roman",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What is the Roman numeral for 9?",
+      "options": ["VIIII", "IX", "XI", "IV"],
+      "answer": 1,
+      "hints": ["1 before 10."],
+      "explanation": "9 = IX.",
+      "misconception": "Writing VIIII.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "convert_roman_to_hindu",
+      "type": "numeric",
+      "difficulty": 1,
+      "stem": "What number does VI represent?",
+      "answer": 6,
+      "check": "5+1",
+      "hints": ["V=5, I=1."],
+      "explanation": "VI = 6.",
+      "misconception": "Saying 4 (subtracting).",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "convert_roman_to_hindu",
+      "type": "numeric",
+      "difficulty": 1,
+      "stem": "What number does XI represent?",
+      "answer": 11,
+      "check": "10+1",
+      "hints": ["X=10, I=1."],
+      "explanation": "XI = 11.",
+      "misconception": "Saying 9 (subtracting).",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "convert_hindu_to_roman",
+      "type": "short_answer",
+      "difficulty": 1,
+      "stem": "Write the Roman numeral for 7.",
+      "answer": ["VII"],
+      "hints": ["5 + 2."],
+      "explanation": "7 = VII.",
+      "misconception": "Writing IIX.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "convert_hindu_to_roman",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Write the Roman numeral for 14.",
+      "answer": ["XIV"],
+      "hints": ["10 + 4."],
+      "explanation": "14 = XIV.",
+      "misconception": "Writing XIIII.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "convert_hindu_to_roman",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Write the Roman numeral for 40.",
+      "answer": ["XL"],
+      "hints": ["10 before 50."],
+      "explanation": "40 = XL.",
+      "misconception": "Writing XXXX.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "convert_roman_to_hindu",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "What number does XL represent?",
+      "answer": 40,
+      "check": "50-10",
+      "hints": ["X before L means subtract 10 from 50."],
+      "explanation": "XL = 40.",
+      "misconception": "Saying 60 (adding).",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "convert_roman_to_hindu",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "What number does LXXX represent?",
+      "answer": 80,
+      "check": "50+10+10+10",
+      "hints": ["L=50, XXX=30."],
+      "explanation": "LXXX = 80.",
+      "misconception": "Saying 30.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "convert_hindu_to_roman",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Write the Roman numeral for 55.",
+      "answer": ["LV"],
+      "hints": ["50 + 5."],
+      "explanation": "55 = LV.",
+      "misconception": "Writing VX.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "convert_roman_to_hindu",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "What number does XC represent?",
+      "answer": 90,
+      "check": "100-10",
+      "hints": ["X before C means subtract 10 from 100."],
+      "explanation": "XC = 90.",
+      "misconception": "Saying 110 (adding).",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "convert_roman_to_hindu",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "What number does LXXV represent?",
+      "answer": 75,
+      "check": "50+10+10+5",
+      "hints": ["L=50, XX=20, V=5."],
+      "explanation": "LXXV = 75.",
+      "misconception": "Saying 65.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "count_roman_numerals",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "What comes after XIV when counting in Roman numerals?",
+      "options": ["XIII", "XV", "XVI", "XX"],
+      "answer": 1,
+      "hints": ["XIV is 14. Next is 15."],
+      "explanation": "XIV = 14, so the next is XV (15).",
+      "misconception": "Saying XVI (skipping).",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "convert_hindu_to_roman",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Write the Roman numeral for 49.",
+      "answer": ["XLIX"],
+      "hints": ["40 + 9."],
+      "explanation": "49 = XLIX.",
+      "misconception": "Writing IL.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "convert_roman_to_hindu",
+      "type": "numeric",
+      "difficulty": 3,
+      "stem": "What number does XCIX represent?",
+      "answer": 99,
+      "check": "100-10+10-1",
+      "hints": ["XC=90, IX=9."],
+      "explanation": "XCIX = 99.",
+      "misconception": "Saying 101.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "convert_hindu_to_roman",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Write the Roman numeral for 84.",
+      "answer": ["LXXXIV"],
+      "hints": ["50 + 30 + 4."],
+      "explanation": "84 = LXXXIV.",
+      "misconception": "Writing LXXXIIII.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "convert_roman_to_hindu",
+      "type": "numeric",
+      "difficulty": 3,
+      "stem": "What number does C represent?",
+      "answer": 100,
+      "check": "100",
+      "hints": ["C is the Roman numeral for 100."],
+      "explanation": "C = 100.",
+      "misconception": "Saying 1000.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "count_roman_numerals",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "Count from 1 to 10 in Roman numerals.",
+      "hints": ["I, II, III, IV, V, VI, VII, VIII, IX, X."],
+      "explanation": "I, II, III, IV, V, VI, VII, VIII, IX, X.",
+      "rubric": {
+        "criteria": [
+          {"description": "Writes all 10 correctly.", "marks": 1}
+        ]
+      },
+      "misconception": "Using IIII for 4.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "count_roman_numerals",
+      "type": "written",
+      "difficulty": 4,
+      "stem": "Count backwards from 20 to 15 in Roman numerals.",
+      "hints": ["XX=20, XIX=19, XVIII=18, XVII=17, XVI=16, XV=15."],
+      "explanation": "XX, XIX, XVIII, XVII, XVI, XV.",
+      "rubric": {
+        "criteria": [
+          {"description": "Lists the numbers in correct order.", "marks": 1}
+        ]
+      },
+      "misconception": "Mixing up the order.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "convert_hindu_to_roman",
+      "type": "written",
+      "difficulty": 4,
+      "stem": "A pupil writes the Roman numeral for 95 as VC. Explain why this is incorrect and write the correct numeral.",
+      "hints": ["Subtractive notation uses XC for 90, not VC."],
+      "explanation": "VC is incorrect because you cannot subtract V from C. The correct way is XCV (100 - 10 + 5).",
+      "rubric": {
+        "criteria": [
+          {"description": "States VC is incorrect.", "marks": 1},
+          {"description": "Gives correct answer XCV.", "marks": 1}
+        ]
+      },
+      "misconception": "Thinking VC is valid.",
+      "uncertain": []
+    }
+  ]
+}

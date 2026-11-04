@@ -332,3 +332,57 @@ test('Learning Hub recommends practice from latest results and targets the selec
   await page.setViewportSize({ width: 1440, height: 1000 });
   await page.screenshot({ path: 'test-results/learning-hub-populated-progress.png' });
 });
+
+// Regression: lesson standards are not indicator IDs, and codes repeat across subjects.
+import { readFileSync } from 'node:fs';
+import { sortIndicators, sortQuestions } from '../src/nacca/sortOrder';
+const bank = JSON.parse(
+  readFileSync(new URL('../src/nacca/importedBank.json', import.meta.url), 'utf8'),
+);
+const naccaIndicators = sortIndicators(bank.indicators);
+const naccaQuestions = sortQuestions(bank.questions, naccaIndicators);
+import { createAdaptiveSession, getNextAdaptiveQuestion } from '../src/nacca/adaptiveEngine';
+
+for (const subject of ['Mathematics', 'Science']) {
+  for (const level of ['Basic 1', 'Basic 4', 'Basic 6']) {
+    test(`indicator practice opens ${subject} ${level} from its lesson`, async ({ page }) => {
+      await setup(page, 'Teacher');
+      const indicator = naccaIndicators.find((i) => i.subject === subject && i.level === level)!;
+      const target = {
+        id: `nacca-${subject.toLowerCase()}-${indicator.code.toLowerCase().replace(/[^a-z0-9]/g, '-')}`,
+      };
+      const question = getNextAdaptiveQuestion(
+        naccaQuestions.filter((q) => q.subject === subject && q.level === level),
+        createAdaptiveSession(indicator.code),
+      )!;
+      await page.goto(`/#/learning-hub?tab=Courses&lesson=${encodeURIComponent(target.id)}`);
+      await page.getByRole('button', { name: 'Start practice', exact: true }).click();
+      await expect(page.locator('.khan-question-view')).toContainText(question.stem);
+      await expect(page.locator('.khan-app-container')).toContainText(`${level} ${subject}`);
+      await expect(page).toHaveURL(new RegExp(`practice=${indicator.code.replaceAll('.', '\\.')}`));
+      await page.reload();
+      await expect(page.locator('.khan-question-view')).toContainText(question.stem);
+      await page.goBack();
+      await expect(page.getByRole('button', { name: 'Start practice', exact: true })).toBeVisible();
+      await page.getByRole('button', { name: 'Practice', exact: true }).click();
+      await expect(page.locator('.khan-question-view')).toContainText(question.stem);
+    });
+  }
+}
+
+test('question bank practice preserves Science when Mathematics shares the code', async ({
+  page,
+}) => {
+  await setup(page, 'Teacher');
+  await page.getByRole('button', { name: 'NaCCA Question Bank', exact: true }).click();
+  await page.getByLabel('Filter by subject', { exact: true }).selectOption('Science');
+  const card = page.locator('.nacca-question-card').first();
+  const code = await card.locator('.nacca-badge-code').innerText();
+  const q = getNextAdaptiveQuestion(
+    naccaQuestions.filter((q) => q.subject === 'Science'),
+    createAdaptiveSession(code),
+  )!;
+  await card.getByRole('button', { name: /Practise Indicator/ }).click();
+  await expect(page.locator('.khan-question-view')).toContainText(q.stem);
+  await expect(page).toHaveURL(/subject=Science/);
+});

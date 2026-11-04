@@ -1,0 +1,280 @@
+{
+  "indicator": {
+    "code": "B4.1.2.5.1",
+    "subject": "Mathematics",
+    "level": "Basic 4",
+    "strand": "Number",
+    "sub_strand": "Number Operations",
+    "content_standard": "B4.1.2.5 Demonstrate an understanding of division (2- or 3-digit by one digit number)",
+    "objective": "Divide 2-digit numbers by 1-digit number efficiently",
+    "source_page": 38
+  },
+  "spec": {
+    "skills": [
+      {"tag": "repeated_subtraction", "description": "Divide using repeated subtraction (long division method).", "minQuestions": 2},
+      {"tag": "estimation_multiples", "description": "Divide using estimation of multiples of 10 and 100 of the divisor (Big 7 strategy).", "minQuestions": 2}
+    ],
+    "difficultyPlan": "20 questions: 5 at difficulty 1, 7 at difficulty 2, 5 at difficulty 3, 3 at difficulty 4.",
+    "misconceptions": [
+      "Forgetting to add the estimation parts together.",
+      "Losing track of the remainder.",
+      "Subtracting incorrectly during repeated subtraction."
+    ],
+    "needsTeacherAssessment": false
+  },
+  "questions": [
+    {
+      "skill_tag": "repeated_subtraction",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "If you repeatedly subtract 3 from 15, how many times can you subtract before reaching 0?",
+      "options": ["3", "4", "5", "6"],
+      "answer": 2,
+      "hints": ["15 - 3 = 12", "12 - 3 = 9", "Keep going until you reach 0."],
+      "explanation": "15 - 3 = 12, 12 - 3 = 9, 9 - 3 = 6, 6 - 3 = 3, 3 - 3 = 0. That is 5 times.",
+      "misconception": "Stopping at 3.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "estimation_multiples",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "To solve 48 ÷ 4 using the estimation strategy, what is a good first estimate?",
+      "options": ["10", "20", "30", "40"],
+      "answer": 0,
+      "hints": ["4 x 10 = 40.", "48 is close to 40."],
+      "explanation": "4 x 10 = 40. So, 10 is a good first estimate.",
+      "misconception": "Estimating too high (e.g., 20).",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "repeated_subtraction",
+      "type": "numeric",
+      "difficulty": 1,
+      "stem": "How many times can you subtract 6 from 24?",
+      "answer": 4,
+      "check": "24/6",
+      "hints": ["Count: 24, 18, 12, 6, 0.", "How many jumps?"],
+      "explanation": "24 / 6 = 4.",
+      "misconception": "Saying 6 times.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "estimation_multiples",
+      "type": "numeric",
+      "difficulty": 1,
+      "stem": "What is 84 ÷ 4?",
+      "answer": 21,
+      "check": "84/4",
+      "hints": ["4 x 20 = 80.", "84 - 80 = 4.", "4 x 1 = 4.", "20 + 1."],
+      "explanation": "20 + 1 = 21.",
+      "misconception": "Estimating 10, then getting 42.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "repeated_subtraction",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What is 36 ÷ 6?",
+      "options": ["5", "6", "7", "8"],
+      "answer": 1,
+      "hints": ["How many 6s make 36?", "6 x 6 = 36."],
+      "explanation": "36 / 6 = 6.",
+      "misconception": "Thinking it's 5 because 5 x 6 = 30.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "estimation_multiples",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "Use estimation to solve 72 ÷ 3. What is the answer?",
+      "answer": 24,
+      "check": "72/3",
+      "hints": ["3 x 20 = 60.", "72 - 60 = 12.", "3 x 4 = 12.", "20 + 4."],
+      "explanation": "20 + 4 = 24.",
+      "misconception": "Thinking 72 - 60 = 2, getting 22.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "repeated_subtraction",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "How many times can you subtract 7 from 49?",
+      "answer": 7,
+      "check": "49/7",
+      "hints": ["Count down by 7s.", "7, 14, 21, 28, 35, 42, 49."],
+      "explanation": "49 / 7 = 7.",
+      "misconception": "Losing count halfway.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "estimation_multiples",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "To solve 95 ÷ 5, a pupil estimates 10 and gets a remainder of 45. What should they estimate next?",
+      "options": ["5", "10", "9", "8"],
+      "answer": 2,
+      "hints": ["5 x 9 = 45.", "The remainder is 45."],
+      "explanation": "Since 5 x 9 = 45, the next estimate is 9.",
+      "misconception": "Estimating 10 again.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "repeated_subtraction",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "Divide 64 by 8 using repeated subtraction. What is the answer?",
+      "answer": 8,
+      "check": "64/8",
+      "hints": ["64, 56, 48, 40, 32, 24, 16, 8, 0.", "How many subtractions?"],
+      "explanation": "64 / 8 = 8.",
+      "misconception": "Saying 7.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "estimation_multiples",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "What is 78 ÷ 6?",
+      "answer": 13,
+      "check": "78/6",
+      "hints": ["6 x 10 = 60.", "78 - 60 = 18.", "6 x 3 = 18.", "10 + 3."],
+      "explanation": "10 + 3 = 13.",
+      "misconception": "Only estimating 10, leaving 18.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "estimation_multiples",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "What is 81 ÷ 9?",
+      "options": ["7", "8", "9", "10"],
+      "answer": 2,
+      "hints": ["9 x 9 = 81.", "Use the 9s table."],
+      "explanation": "81 / 9 = 9.",
+      "misconception": "Saying 8.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "repeated_subtraction",
+      "type": "written",
+      "difficulty": 2,
+      "stem": "Show how to solve 30 ÷ 5 using repeated subtraction.",
+      "hints": ["Start with 30.", "Subtract 5 each time."],
+      "explanation": "30 - 5 = 25, 25 - 5 = 20, 20 - 5 = 15, 15 - 5 = 10, 10 - 5 = 5, 5 - 5 = 0. You subtracted 6 times, so 30 ÷ 5 = 6.",
+      "rubric": {
+        "criteria": [
+          {"description": "Shows a sequence of subtractions.", "marks": 1},
+          {"description": "Arrives at the correct answer (6).", "marks": 1}
+        ]
+      },
+      "misconception": "Not counting the final subtraction to 0.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "estimation_multiples",
+      "type": "numeric",
+      "difficulty": 3,
+      "stem": "Solve 92 ÷ 4 using the estimation strategy.",
+      "answer": 23,
+      "check": "92/4",
+      "hints": ["4 x 20 = 80.", "92 - 80 = 12.", "4 x 3 = 12.", "20 + 3."],
+      "explanation": "20 + 3 = 23.",
+      "misconception": "Stopping at 20 and ignoring the 12.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "repeated_subtraction",
+      "type": "numeric",
+      "difficulty": 3,
+      "stem": "How many times can you subtract 4 from 76?",
+      "answer": 19,
+      "check": "76/4",
+      "hints": ["This is the same as 76 ÷ 4.", "4 x 10 = 40, 4 x 9 = 36, 10+9."],
+      "explanation": "76 / 4 = 19.",
+      "misconception": "Saying 18 or 20.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "estimation_multiples",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "A pupil is solving 87 ÷ 7. They estimate 10 (7x10=70). The remainder is 17. What is the next best estimate?",
+      "options": ["2", "3", "1", "4"],
+      "answer": 0,
+      "hints": ["7 x 2 = 14.", "17 is close to 14."],
+      "explanation": "7 x 2 = 14. The next estimate is 2, with a remainder of 3.",
+      "misconception": "Estimating 5 (which is too high).",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "repeated_subtraction",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "A pupil solves 45 ÷ 5 by repeatedly subtracting. They write: 45-5=40, 40-5=35, 35-5=30. How many more times do they need to subtract?",
+      "hints": ["How far is 30 from 0?", "Count: 30, 25, 20, 15, 10, 5, 0."],
+      "explanation": "They need to subtract 6 more times to reach 0.",
+      "rubric": {
+        "criteria": [
+          {"description": "States 6 more times.", "marks": 1},
+          {"description": "Explains the counting process.", "marks": 1}
+        ]
+      },
+      "misconception": "Saying 5 times.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "estimation_multiples",
+      "type": "numeric",
+      "difficulty": 3,
+      "stem": "Solve 98 ÷ 7.",
+      "answer": 14,
+      "check": "98/7",
+      "hints": ["7 x 10 = 70.", "98 - 70 = 28.", "7 x 4 = 28.", "10 + 4."],
+      "explanation": "10 + 4 = 14.",
+      "misconception": "Estimating 20 (too high).",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "estimation_multiples",
+      "type": "written",
+      "difficulty": 4,
+      "stem": "A market woman has 96 oranges. She packs them into bags of 6. How many bags does she fill? Use the estimation strategy to solve.",
+      "hints": ["96 ÷ 6.", "6 x 10 = 60.", "96 - 60 = 36.", "6 x 6 = 36."],
+      "explanation": "96 ÷ 6 = 16 bags. (10 + 6 = 16).",
+      "rubric": {
+        "criteria": [
+          {"description": "Sets up the division (96 ÷ 6).", "marks": 1},
+          {"description": "Uses estimation (e.g., 6x10=60).", "marks": 1},
+          {"description": "Arrives at the correct answer (16).", "marks": 1}
+        ]
+      },
+      "misconception": "Adding the estimates incorrectly.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "repeated_subtraction",
+      "type": "numeric",
+      "difficulty": 4,
+      "stem": "A number divided by 6 is 13. What is the number?",
+      "answer": 78,
+      "check": "13*6",
+      "hints": ["? ÷ 6 = 13.", "Multiply 13 by 6."],
+      "explanation": "13 x 6 = 78.",
+      "misconception": "Adding 13 + 6 = 19.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "estimation_multiples",
+      "type": "mcq",
+      "difficulty": 4,
+      "stem": "Which estimation sequence correctly solves 84 ÷ 6 using the 'Big 7' method?",
+      "options": ["10 (60), 4 (24)", "10 (60), 3 (18), 1 (6)", "20 (120)", "5 (30), 5 (30), 4 (24)"],
+      "answer": 0,
+      "hints": ["6 x 10 = 60.", "84 - 60 = 24.", "6 x 4 = 24."],
+      "explanation": "10 + 4 = 14. The sequence 10, then 4 is the most efficient.",
+      "misconception": "Choosing unnecessarily long sequences.",
+      "uncertain": []
+    }
+  ]
+}

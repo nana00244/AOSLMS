@@ -1,0 +1,272 @@
+{
+  "indicator": {
+    "code": "B4.1.1.1.3",
+    "subject": "Mathematics",
+    "level": "Basic 4",
+    "strand": "Number",
+    "sub_strand": "Counting, Representation & Cardinality",
+    "content_standard": "B4.1.1.1 Demonstrate an understanding of quantities and place value for multi-digit whole numerals up to 100,000.",
+    "objective": "Identify numbers in different positions around a given number in a number chart",
+    "source_page": 25
+  },
+  "spec": {
+    "skills": [
+      {"tag": "navigate_number_chart", "description": "Identify numbers above, below, left, right, or diagonal to a given number on a 100,000 chart.", "minQuestions": 2},
+      {"tag": "apply_chart_patterns", "description": "Apply chart patterns (e.g., moving right adds 500, moving down adds 3,000).", "minQuestions": 2}
+    ],
+    "difficultyPlan": "20 questions: 5 at difficulty 1, 7 at difficulty 2, 5 at difficulty 3, 3 at difficulty 4.",
+    "misconceptions": [
+      "Assuming chart rows always add 10 regardless of the chart's scale (e.g., a chart counting by 500s).",
+      "Confusing up/down with left/right."
+    ],
+    "needsTeacherAssessment": false
+  },
+  "questions": [
+    {
+      "skill_tag": "navigate_number_chart",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "On a number chart where each row increases by 100, what number is directly below 1,200?",
+      "options": ["1,100", "1,300", "1,210", "2,200"],
+      "answer": 1,
+      "hints": ["Moving down adds a full row.", "1,200 plus 100."],
+      "explanation": "Moving down one row on a chart counting by 100s adds 100. 1,200 + 100 = 1,300.",
+      "misconception": "Adding 10 instead of 100.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "navigate_number_chart",
+      "type": "numeric",
+      "difficulty": 1,
+      "stem": "On a chart counting by 500s, what number is to the right of 10,000?",
+      "answer": 10500,
+      "check": "10000+500",
+      "hints": ["Moving right adds one step.", "10,000 plus 500."],
+      "explanation": "Moving right adds 500. 10,000 + 500 = 10,500.",
+      "misconception": "Adding 1 instead of 500.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "apply_chart_patterns",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "On a number chart, if moving right adds 1,000, what does moving left do?",
+      "options": ["Adds 100", "Subtracts 1,000", "Subtracts 10", "Adds 1,000"],
+      "answer": 1,
+      "hints": ["Left is the opposite of right.", "If right adds, left subtracts."],
+      "explanation": "Moving left is the opposite of moving right, so it subtracts 1,000.",
+      "misconception": "Thinking moving left also adds.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "apply_chart_patterns",
+      "type": "numeric",
+      "difficulty": 1,
+      "stem": "On a chart where moving down adds 200, what is the number 2 rows below 3,000?",
+      "answer": 3400,
+      "check": "3000+200+200",
+      "hints": ["1 row down is 3,200.", "2 rows down adds 400."],
+      "explanation": "2 rows down means adding 200 twice. 3,000 + 200 + 200 = 3,400.",
+      "misconception": "Only adding 200 once.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "navigate_number_chart",
+      "type": "short_answer",
+      "difficulty": 1,
+      "stem": "On a chart counting by 1,000s, what number is directly above 5,000?",
+      "answer": ["4000", "4,000"],
+      "hints": ["Moving up subtracts a row.", "5,000 minus 1,000."],
+      "explanation": "Moving up subtracts 1,000. 5,000 - 1,000 = 4,000.",
+      "misconception": "Adding 1,000 instead of subtracting.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "navigate_number_chart",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "On a chart where rows increase by 500, what number is 3 spaces to the right of 12,500?",
+      "answer": 14000,
+      "check": "12500+500*3",
+      "hints": ["Each space right adds 500.", "3 spaces add 1,500."],
+      "explanation": "3 spaces right means adding 500 three times. 12,500 + 1,500 = 14,000.",
+      "misconception": "Adding 300 instead of 1,500.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "navigate_number_chart",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Start at 4,000 on a chart where rows increase by 100. Move 2 spaces left and 1 space down. Where do you land?",
+      "options": ["4,100", "3,900", "4,200", "3,800"],
+      "answer": 1,
+      "hints": ["Left 2 subtracts 200.", "Down 1 adds 100."],
+      "explanation": "4,000 - 200 + 100 = 3,900.",
+      "misconception": "Adding the row change to the total without applying the left movement.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "navigate_number_chart",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "On a number chart, moving right adds 50. If you start at 2,000 and move 4 spaces right, what number do you reach?",
+      "answer": 2200,
+      "check": "2000+50*4",
+      "hints": ["4 spaces * 50.", "2,000 plus 200."],
+      "explanation": "4 * 50 = 200. 2,000 + 200 = 2,200.",
+      "misconception": "Adding 450 instead of 200.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "apply_chart_patterns",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "On a chart counting by 500s, what is the difference between a number and the number directly below it?",
+      "options": ["1", "10", "500", "1,000"],
+      "answer": 2,
+      "hints": ["Moving down adds one step.", "The chart counts by 500s."],
+      "explanation": "Moving down one row adds one step, which is 500.",
+      "misconception": "Thinking the difference is 1 or 10.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "apply_chart_patterns",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "On a chart where moving down adds 100, what number is 5 rows below 2,500?",
+      "answer": ["3000", "3,000"],
+      "hints": ["5 rows * 100.", "2,500 plus 500."],
+      "explanation": "5 rows down adds 500. 2,500 + 500 = 3,000.",
+      "misconception": "Adding 50 instead of 500.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "apply_chart_patterns",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "On a chart where rows increase by 200, what number is 2 rows below 8,600?",
+      "answer": 9000,
+      "check": "8600+200+200",
+      "hints": ["2 rows down adds 400.", "8,600 plus 400."],
+      "explanation": "8,600 + 400 = 9,000.",
+      "misconception": "Adding 200 only once.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "apply_chart_patterns",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "Start at 15,000. Move 1 space left and 2 spaces up. If left subtracts 1,000 and up subtracts 500, where are you?",
+      "answer": 13000,
+      "check": "15000-1000-500*2",
+      "hints": ["Left 1 subtracts 1,000.", "Up 2 subtracts 1,000."],
+      "explanation": "15,000 - 1,000 - 1,000 = 13,000.",
+      "misconception": "Adding 500 instead of subtracting for 'up'.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "navigate_number_chart",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "On a chart where rows increase by 500, what number is exactly between 10,000 and the number 2 rows below it?",
+      "options": ["10,500", "11,000", "11,500", "10,250"],
+      "answer": 0,
+      "hints": ["2 rows below 10,000 is 11,000.", "The middle of 10,000 and 11,000."],
+      "explanation": "The number 2 rows below is 11,000. The number between 10,000 and 11,000 is 10,500.",
+      "misconception": "Thinking the middle is 11,000.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "navigate_number_chart",
+      "type": "numeric",
+      "difficulty": 3,
+      "stem": "Start at 2,300 on a chart where moving right adds 100. Move 2 spaces left, then 3 spaces right. Where do you land?",
+      "answer": 2400,
+      "check": "2300-200+300",
+      "hints": ["2 left = -200.", "3 right = +300."],
+      "explanation": "2,300 - 200 + 300 = 2,400.",
+      "misconception": "Adding 5 spaces right (500) without subtracting the left.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "navigate_number_chart",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "On a chart counting by 1,000s, moving down adds 1,000. If you start at 6,500 and move 1 space down, what number are you on?",
+      "answer": ["7500", "7,500"],
+      "hints": ["The chart counts by 1,000s.", "Start at 6,500 and add 1,000."],
+      "explanation": "6,500 + 1,000 = 7,500.",
+      "misconception": "Starting at 6,000 instead of 6,500.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "apply_chart_patterns",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "On a chart where moving down adds 50, what is the rule for moving up?",
+      "options": ["Add 50", "Subtract 50", "Add 500", "Subtract 5"],
+      "answer": 1,
+      "hints": ["Up is the opposite of down.", "If down adds 50, up subtracts 50."],
+      "explanation": "Moving up reverses moving down, so it subtracts 50.",
+      "misconception": "Thinking moving up adds.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "apply_chart_patterns",
+      "type": "numeric",
+      "difficulty": 3,
+      "stem": "A chart counts by 250s. If you are on 12,500, what number is 3 rows above?",
+      "answer": 11750,
+      "check": "12500-250*3",
+      "hints": ["Up subtracts 250 per row.", "3 rows subtract 750."],
+      "explanation": "12,500 - 750 = 11,750.",
+      "misconception": "Adding 750 instead of subtracting.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "apply_chart_patterns",
+      "type": "written",
+      "difficulty": 4,
+      "stem": "Explain how you would find the number directly below 8,000 on a chart that counts by 500s, and why it is not 8,010.",
+      "hints": ["What is the step size of the chart?", "Does moving down change the hundreds or the thousands?"],
+      "explanation": "You add 500, so the number is 8,500. It is not 8,010 because the chart rows do not add 10; they add 500.",
+      "rubric": {
+        "criteria": [
+          {"description": "States the correct number (8,500).", "marks": 1},
+          {"description": "Explains that the chart adds 500, not 10.", "marks": 1},
+          {"description": "Uses clear Basic 4 language.", "marks": 1}
+        ]
+      },
+      "misconception": "Assuming the chart adds 10 like a standard 100 chart.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "navigate_number_chart",
+      "type": "mcq",
+      "difficulty": 4,
+      "stem": "On a chart where rows add 100, start at 4,550. Move 2 left, 1 down, and 2 right. Where do you land?",
+      "options": ["4,650", "4,750", "4,550", "4,350"],
+      "answer": 0,
+      "hints": ["Left 2 and right 2 cancel out.", "Only the down move remains."],
+      "explanation": "Moving left 2 (-200) and right 2 (+200) cancel each other. Moving down 1 adds 100. 4,550 + 100 = 4,650.",
+      "misconception": "Adding all the movements together incorrectly.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "apply_chart_patterns",
+      "type": "written",
+      "difficulty": 4,
+      "stem": "A number chart is made with multiples of 500 from 10,000 to 50,000. Describe the position of 21,500 relative to 20,000.",
+      "hints": ["How many steps of 500 are in 1,500?", "Is it on the same row?"],
+      "explanation": "21,500 is 3 spaces to the right of 20,000 on the same row, because 1,500 / 500 = 3.",
+      "rubric": {
+        "criteria": [
+          {"description": "States it is 3 spaces to the right.", "marks": 1},
+          {"description": "Explains the calculation (1,500 / 500 = 3).", "marks": 1}
+        ]
+      },
+      "misconception": "Counting the number of digits to determine position.",
+      "uncertain": []
+    }
+  ]
+}

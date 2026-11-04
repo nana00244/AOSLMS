@@ -1,0 +1,282 @@
+{
+  "indicator": {
+    "code": "B4.1.1.1.5",
+    "subject": "Mathematics",
+    "level": "Basic 4",
+    "strand": "Number",
+    "sub_strand": "Counting, Representation & Cardinality",
+    "content_standard": "B4.1.1.1 Demonstrate an understanding of quantities and place value for multi-digit whole numerals up to 100,000.",
+    "objective": "Round (off, up, down) whole numbers up to 10000 to the nearest, thousands, hundreds and tens",
+    "source_page": 27
+  },
+  "spec": {
+    "skills": [
+      {"tag": "round_nearest_ten_hundred", "description": "Round numbers to the nearest ten or hundred.", "minQuestions": 2},
+      {"tag": "round_nearest_thousand_10k", "description": "Round numbers to the nearest thousand or ten thousand.", "minQuestions": 2},
+      {"tag": "round_up_down", "description": "Distinguish between rounding up (larger approximation) and rounding down (smaller approximation).", "minQuestions": 2},
+      {"tag": "estimate_sums_diffs", "description": "Estimate sums and differences using rounded numbers.", "minQuestions": 2}
+    ],
+    "difficultyPlan": "20 questions: 5 at difficulty 1, 7 at difficulty 2, 5 at difficulty 3, 3 at difficulty 4.",
+    "misconceptions": [
+      "Rounding down when the next digit is 5 or more.",
+      "Confusing 'round up' with 'round off'.",
+      "Losing place value zeros when rounding (e.g., 9500 rounded to nearest 1000 written as 9)."
+    ],
+    "needsTeacherAssessment": false
+  },
+  "questions": [
+    {
+      "skill_tag": "round_nearest_ten_hundred",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What is 42 rounded to the nearest ten?",
+      "options": ["40", "50", "45", "30"],
+      "answer": 0,
+      "hints": ["Look at the ones digit.", "2 is less than 5, so round down."],
+      "explanation": "The ones digit is 2. Since 2 is less than 5, we keep the tens digit the same and replace the ones with 0. The answer is 40.",
+      "misconception": "Rounding up to 50 because 42 is closer to 40? No, 42 is closer to 40.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "round_nearest_ten_hundred",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What is 420 rounded to the nearest hundred?",
+      "options": ["400", "500", "410", "450"],
+      "answer": 0,
+      "hints": ["Look at the tens digit.", "2 is less than 5, so round down."],
+      "explanation": "The tens digit is 2. Since 2 is less than 5, we round down to 400.",
+      "misconception": "Rounding up to 500.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "round_nearest_thousand_10k",
+      "type": "numeric",
+      "difficulty": 1,
+      "stem": "What is 8,000 rounded to the nearest thousand?",
+      "answer": 8000,
+      "check": "8000",
+      "hints": ["It is already a multiple of 1,000.", "It stays the same."],
+      "explanation": "8,000 is already rounded to the nearest thousand.",
+      "misconception": "Changing it to 8 or 10,000.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "round_up_down",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "If you round 15 UP to the nearest ten, what is the answer?",
+      "options": ["10", "20", "15", "25"],
+      "answer": 1,
+      "hints": ["Rounding up means choosing the larger ten.", "The next ten after 15 is 20."],
+      "explanation": "Rounding up means moving to the next higher ten. The next ten after 15 is 20.",
+      "misconception": "Rounding down to 10.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "round_up_down",
+      "type": "numeric",
+      "difficulty": 1,
+      "stem": "If you round 12 DOWN to the nearest ten, what is the answer?",
+      "answer": 10,
+      "check": "10",
+      "hints": ["Rounding down means choosing the smaller ten.", "The ten before 12 is 10."],
+      "explanation": "Rounding down means moving to the previous lower ten. The ten before 12 is 10.",
+      "misconception": "Rounding up to 20.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "round_nearest_ten_hundred",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "Round 347 to the nearest ten.",
+      "answer": 350,
+      "check": "350",
+      "hints": ["Look at the ones digit.", "7 is 5 or more, so round up."],
+      "explanation": "The ones digit is 7. Since 7 is 5 or more, we add 1 to the tens digit (4 becomes 5) and replace the ones with 0. The answer is 350.",
+      "misconception": "Rounding down to 340.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "round_nearest_ten_hundred",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "A trader in Techiman has 1,280 oranges. What is this number rounded to the nearest hundred?",
+      "options": ["1,200", "1,300", "1,280", "1,000"],
+      "answer": 1,
+      "hints": ["Look at the tens digit.", "8 is 5 or more, so round up."],
+      "explanation": "The tens digit is 8. Since it is 5 or more, we add 1 to the hundreds digit (2 becomes 3). The answer is 1,300.",
+      "misconception": "Rounding down to 1,200.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "round_nearest_thousand_10k",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "Round 4,500 to the nearest thousand.",
+      "answer": 5000,
+      "check": "5000",
+      "hints": ["Look at the hundreds digit.", "5 means round up."],
+      "explanation": "The hundreds digit is 5. When the digit is 5 or more, we round up. 4,500 becomes 5,000.",
+      "misconception": "Rounding down to 4,000.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "round_nearest_thousand_10k",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "What is 7,945 rounded to the nearest thousand?",
+      "options": ["7,000", "8,000", "7,900", "8,900"],
+      "answer": 1,
+      "hints": ["Look at the hundreds digit.", "9 is 5 or more, so round up."],
+      "explanation": "The hundreds digit is 9. Since 9 is 5 or more, we round up to 8,000.",
+      "misconception": "Rounding down to 7,000 because the thousands digit is 7.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "round_nearest_ten_hundred",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Round 6,550 to the nearest hundred.",
+      "answer": ["6600", "6,600"],
+      "hints": ["Look at the tens digit.", "5 means round up."],
+      "explanation": "The tens digit is 5. Rounding up, 6,550 becomes 6,600.",
+      "misconception": "Leaving it as 6,500 because it ends in 50.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "estimate_sums_diffs",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Estimate 23 + 48 by rounding each number to the nearest ten.",
+      "options": ["60", "70", "80", "71"],
+      "answer": 1,
+      "hints": ["Round 23 to 20.", "Round 48 to 50.", "20 + 50."],
+      "explanation": "23 rounds to 20. 48 rounds to 50. 20 + 50 = 70.",
+      "misconception": "Calculating the exact answer (71) instead of estimating.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "estimate_sums_diffs",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "Estimate 380 - 120 by rounding each number to the nearest hundred.",
+      "answer": 300,
+      "check": "400-100",
+      "hints": ["Round 380 to 400.", "Round 120 to 100."],
+      "explanation": "380 rounds to 400. 120 rounds to 100. 400 - 100 = 300.",
+      "misconception": "Subtracting the original numbers (260).",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "round_nearest_thousand_10k",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "What is 8,499 rounded to the nearest thousand?",
+      "options": ["8,000", "8,500", "9,000", "9,500"],
+      "answer": 0,
+      "hints": ["Look at the hundreds digit.", "4 is less than 5, so round down."],
+      "explanation": "The hundreds digit is 4. Since 4 is less than 5, we keep the thousands digit (8) and replace the rest with zeros. The answer is 8,000.",
+      "misconception": "Rounding up to 9,000 because 499 is close to 500.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "round_up_down",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "Explain the difference between rounding 46 UP to the nearest ten and rounding 46 OFF to the nearest ten.",
+      "hints": ["What is the next ten after 46?", "Which ten is 46 closer to?"],
+      "explanation": "Rounding 46 up to the nearest ten gives 50. Rounding 46 off to the nearest ten gives 50 as well, because 46 is closer to 50 than 40. Rounding up forces the higher ten, while rounding off looks at the digit to decide.",
+      "rubric": {
+        "criteria": [
+          {"description": "Explains that rounding up gives 50.", "marks": 1},
+          {"description": "Explains that rounding off also gives 50 because 6 is 5 or more.", "marks": 1},
+          {"description": "Shows understanding of the difference in process.", "marks": 1}
+        ]
+      },
+      "misconception": "Thinking they always give different answers.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "round_nearest_thousand_10k",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "A pupil says that 9,500 rounded to the nearest thousand is 9. Explain the mistake and give the correct answer.",
+      "hints": ["What place value does the 9 in 9,500 represent?", "What should the final answer look like?"],
+      "explanation": "The pupil forgot to keep the place value zeros. 9,500 rounds up to 10,000, not 9.",
+      "rubric": {
+        "criteria": [
+          {"description": "Identifies the mistake as dropping the zeros.", "marks": 1},
+          {"description": "Gives the correct answer: 10,000.", "marks": 1}
+        ]
+      },
+      "misconception": "Dropping zeros when rounding.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "estimate_sums_diffs",
+      "type": "numeric",
+      "difficulty": 3,
+      "stem": "A market woman has 485 yams. She buys 312 more. Estimate the total number of yams by rounding to the nearest hundred.",
+      "answer": 800,
+      "check": "500+300",
+      "hints": ["Round 485 to 500.", "Round 312 to 300."],
+      "explanation": "485 rounds to 500. 312 rounds to 300. 500 + 300 = 800.",
+      "misconception": "Rounding 485 down to 400.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "round_nearest_ten_hundred",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "What is 7,949 rounded to the nearest hundred?",
+      "options": ["7,900", "8,000", "7,950", "7,940"],
+      "answer": 1,
+      "hints": ["Look at the tens digit.", "4 is less than 5, so round down."],
+      "explanation": "The tens digit is 4. Since 4 is less than 5, we keep the hundreds digit (9) and replace the tens and ones with zeros. The answer is 7,900.",
+      "misconception": "Rounding up to 8,000 because 49 is close to 50.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "estimate_sums_diffs",
+      "type": "numeric",
+      "difficulty": 4,
+      "stem": "Estimate the difference: 8,450 - 2,980 by rounding each number to the nearest thousand.",
+      "answer": 5000,
+      "check": "8000-3000",
+      "hints": ["Round 8,450 to 8,000.", "Round 2,980 to 3,000."],
+      "explanation": "8,450 rounds to 8,000. 2,980 rounds to 3,000. 8,000 - 3,000 = 5,000.",
+      "misconception": "Rounding 2,980 to 2,000.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "round_nearest_ten_hundred",
+      "type": "mcq",
+      "difficulty": 4,
+      "stem": "What is the smallest whole number that rounds to 500 when rounded to the nearest hundred?",
+      "options": ["450", "499", "451", "400"],
+      "answer": 0,
+      "hints": ["Numbers from 450 up to 549 round to 500.", "What is the very first number?"],
+      "explanation": "The smallest number that rounds to 500 is 450, because the tens digit is 5.",
+      "misconception": "Thinking 499 is the smallest.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "estimate_sums_diffs",
+      "type": "written",
+      "difficulty": 4,
+      "stem": "A trotro travels 2,450 km in January and 1,890 km in February. Estimate the total distance by rounding to the nearest thousand. Explain your steps.",
+      "hints": ["Round 2,450 to the nearest thousand.", "Round 1,890 to the nearest thousand."],
+      "explanation": "2,450 rounds to 2,000. 1,890 rounds to 2,000. The estimated total is 4,000 km.",
+      "rubric": {
+        "criteria": [
+          {"description": "Rounds 2,450 to 2,000.", "marks": 1},
+          {"description": "Rounds 1,890 to 2,000.", "marks": 1},
+          {"description": "Adds them to get 4,000.", "marks": 1}
+        ]
+      },
+      "misconception": "Rounding 2,450 down to 2,000 but 1,890 down to 1,000.",
+      "uncertain": []
+    }
+  ]
+}

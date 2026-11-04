@@ -1,0 +1,262 @@
+{
+  "indicator": {
+    "code": "B5.2.1.1.1",
+    "subject": "Science",
+    "level": "Basic 5",
+    "strand": "CYCLES",
+    "sub_strand": "Earth Science",
+    "content_standard": "B5.2.1.1 Recognise that some events in our environment occur recurrently",
+    "objective": "Know how day and night are formed",
+    "source_page": 42
+  },
+  "spec": {
+    "skills": [
+      {"tag": "rotation_axis", "description": "Recognise that the earth spins on its axis.", "minQuestions": 3},
+      {"tag": "day_night_cause", "description": "Explain that day and night are caused by the earth's rotation.", "minQuestions": 4},
+      {"tag": "sun_facing_side", "description": "Recognise that the side of the earth facing the sun has day, and the side facing away has night.", "minQuestions": 4},
+      {"tag": "24_hour_rotation", "description": "State that the earth completes one rotation in about 24 hours.", "minQuestions": 3},
+      {"tag": "model_day_night", "description": "Interpret a simple model or diagram showing the earth, sun, and the formation of day and night.", "minQuestions": 3},
+      {"tag": "apply_to_life", "description": "Relate day and night to everyday experiences (e.g. sleeping at night, going to school in the day).", "minQuestions": 3}
+    ],
+    "difficultyPlan": "20 questions total — Difficulty 1: 5; Difficulty 2: 7; Difficulty 3: 5; Difficulty 4: 3.",
+    "misconceptions": [
+      "The sun moves around the earth.",
+      "Day and night happen because the sun goes behind a hill.",
+      "The earth does not move.",
+      "Day and night happen at the same time everywhere on earth.",
+      "The moon causes day and night.",
+      "The earth rotates once a year."
+    ],
+    "needsTeacherAssessment": true
+  },
+  "questions": [
+    {
+      "skill_tag": "rotation_axis",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What does the earth do that causes day and night?",
+      "options": ["It spins on its axis", "It moves around the moon", "It jumps up and down", "It stops moving"],
+      "answer": 0,
+      "hints": ["Think about the earth turning.", "It spins like a top."],
+      "explanation": "The earth spins on its axis. This spinning causes day and night.",
+      "misconception": "The earth does not move.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "day_night_cause",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What causes day and night?",
+      "options": ["The moon moving around the earth", "The earth rotating on its axis", "The sun going behind a hill", "The stars twinkling"],
+      "answer": 1,
+      "hints": ["The earth turns.", "One side faces the sun while the other is dark."],
+      "explanation": "Day and night are caused by the earth rotating on its axis.",
+      "misconception": "The sun moves around the earth.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "sun_facing_side",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which side of the earth has day?",
+      "options": ["The side facing the sun", "The side facing away from the sun", "The side facing the moon", "The side facing the stars"],
+      "answer": 0,
+      "hints": ["Day is when it is bright.", "The sun gives light."],
+      "explanation": "The side of the earth facing the sun has day.",
+      "misconception": "The side facing away from the sun has day.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "24_hour_rotation",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "How long does it take the earth to complete one rotation?",
+      "options": ["About 12 hours", "About 24 hours", "About 7 days", "About 365 days"],
+      "answer": 1,
+      "hints": ["A day and a night together.", "One full day."],
+      "explanation": "The earth takes about 24 hours to complete one rotation.",
+      "misconception": "The earth rotates once a year.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "apply_to_life",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "When is it usually dark outside?",
+      "options": ["During the day", "At night", "At noon", "In the morning"],
+      "answer": 1,
+      "hints": ["When do you sleep?", "When do you see the moon and stars?"],
+      "explanation": "It is usually dark at night because the side of the earth you are on is facing away from the sun.",
+      "misconception": "It is dark during the day.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "day_night_cause",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "A pupil says, 'Day and night happen because the sun goes behind a hill.' What is the best correction?",
+      "options": ["Yes, the sun goes behind a hill", "No, day and night are caused by the earth rotating on its axis", "No, the moon causes day and night", "No, day and night happen at the same time everywhere"],
+      "answer": 1,
+      "hints": ["The earth is spinning.", "The sun does not move around the earth."],
+      "explanation": "Day and night are caused by the earth rotating on its axis, not by the sun going behind a hill.",
+      "misconception": "Day and night happen because the sun goes behind a hill.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "sun_facing_side",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Why is it night on one side of the earth while it is day on the other side?",
+      "options": ["Because the sun shines on only one side at a time", "Because the moon blocks the sun", "Because the earth is flat", "Because the stars are brighter at night"],
+      "answer": 0,
+      "hints": ["The sun can only light the side facing it.", "The other side is in shadow."],
+      "explanation": "The sun shines on the side of the earth facing it, making it day there. The other side is in shadow, so it is night there.",
+      "misconception": "Day and night happen at the same time everywhere.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "model_day_night",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "In a model using a globe and a torch, what does the torch represent?",
+      "options": ["The moon", "The sun", "A star", "The earth"],
+      "answer": 1,
+      "hints": ["The torch gives light.", "What gives light to the earth?"],
+      "explanation": "In the model, the torch represents the sun because it gives light to the globe (earth).",
+      "misconception": "The torch represents the moon.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "rotation_axis",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "What is the imaginary line that the earth spins around called?",
+      "options": ["The equator", "The axis", "The orbit", "The pole"],
+      "answer": 1,
+      "hints": ["It goes through the North and South Poles.", "The earth spins on it."],
+      "explanation": "The earth spins on its axis, an imaginary line passing through the North and South Poles.",
+      "misconception": "The earth spins on its orbit.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "24_hour_rotation",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "How long does the earth take to complete one rotation?",
+      "answer": ["24 hours", "about 24 hours", "one day"],
+      "hints": ["Think about a full day.", "It is about 24 hours."],
+      "explanation": "The earth takes about 24 hours (one day) to complete one rotation.",
+      "misconception": "The earth rotates once a year.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "apply_to_life",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Give one thing you do during the day and one thing you do at night.",
+      "answer": ["day: go to school; night: sleep", "day: play; night: sleep", "day: eat lunch; night: sleep"],
+      "hints": ["When do you go to school?", "When do you sleep?"],
+      "explanation": "We usually go to school and play during the day, and sleep at night.",
+      "misconception": "Day and night have no effect on activities.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "day_night_cause",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Explain how day and night are formed.",
+      "answer": ["the earth rotates on its axis, so the side facing the sun has day and the side facing away has night", "the earth spins on its axis, causing day on the side facing the sun and night on the other side", "as the earth rotates, one side faces the sun (day) and the other side faces away (night)"],
+      "hints": ["The earth spins.", "One side faces the sun, the other does not."],
+      "explanation": "Day and night are formed because the earth rotates on its axis. The side facing the sun has day, and the side facing away has night.",
+      "misconception": "The sun moves around the earth.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "model_day_night",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "In a model, a lamp is placed in the middle of a dark room and a globe is placed near it. Half of the globe is bright and half is dark. What does the dark half represent?",
+      "options": ["Day", "Night", "The moon", "The sun"],
+      "answer": 1,
+      "hints": ["The dark half is facing away from the lamp.", "That side is in shadow."],
+      "explanation": "The dark half of the globe represents night because it faces away from the light source (the sun).",
+      "misconception": "The dark half represents day.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "sun_facing_side",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Why is it day on the side of the earth facing the sun?",
+      "answer": ["because the sun shines light on that side", "the side facing the sun receives sunlight", "that side is lit by the sun"],
+      "hints": ["What does the sun give?", "Light and heat."],
+      "explanation": "It is day on the side facing the sun because that side receives sunlight.",
+      "misconception": "The sun shines on all sides of the earth at once.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "rotation_axis",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "What is the earth's axis?",
+      "answer": ["the imaginary line the earth spins around", "an imaginary line through the earth that it rotates on", "the line through the North and South Poles that the earth spins on"],
+      "hints": ["It goes through the poles.", "The earth spins on it."],
+      "explanation": "The earth's axis is the imaginary line passing through the North and South Poles that the earth spins on.",
+      "misconception": "The axis is a real stick through the earth.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "model_day_night",
+      "type": "practical",
+      "difficulty": 3,
+      "stem": "In groups, use a globe (or a ball) and a torch to show how day and night are formed. One learner holds the torch (sun) and another slowly turns the globe (earth). Describe what you observe.",
+      "rubric": {
+        "criteria": [
+          {"description": "Held the torch to represent the sun", "marks": 1},
+          {"description": "Turned the globe slowly to represent the earth rotating", "marks": 1},
+          {"description": "Observed that the side facing the torch is bright (day) and the other side is dark (night)", "marks": 2},
+          {"description": "Explained how day and night are formed", "marks": 2}
+        ]
+      },
+      "answer": "",
+      "hints": ["The torch is the sun.", "Turn the globe slowly.", "Watch the light and dark areas."],
+      "explanation": "This is a practical task. Your teacher will mark it using the rubric.",
+      "misconception": "The sun moves around the earth.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "apply_to_life",
+      "type": "short_answer",
+      "difficulty": 4,
+      "stem": "Explain why we have day and night every 24 hours.",
+      "answer": ["because the earth rotates on its axis once every 24 hours, so each side faces the sun and then turns away", "the earth spins once every 24 hours, causing day and night to alternate", "the earth's rotation takes 24 hours, so day and night follow each other"],
+      "hints": ["How long is one rotation?", "What happens to the side facing the sun after some hours?"],
+      "explanation": "The earth rotates once every 24 hours. As it turns, the side facing the sun has day, and then turns away to have night, so day and night follow each other every 24 hours.",
+      "misconception": "Day and night happen at the same time everywhere.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "sun_facing_side",
+      "type": "mcq",
+      "difficulty": 4,
+      "stem": "A learner in Accra is experiencing daytime. What is happening on the opposite side of the earth?",
+      "options": ["It is also daytime", "It is nighttime", "The sun is directly overhead", "The moon is shining brightly"],
+      "answer": 1,
+      "hints": ["The earth is round.", "The sun cannot light the whole earth at once."],
+      "explanation": "If it is daytime in Accra, the opposite side of the earth is facing away from the sun, so it is nighttime there.",
+      "misconception": "Day and night happen at the same time everywhere.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "24_hour_rotation",
+      "type": "short_answer",
+      "difficulty": 4,
+      "stem": "Explain why the earth's rotation is important for life.",
+      "answer": ["it causes day and night, which gives living things light and darkness for activities and rest", "it gives us day and night, which helps plants and animals have a rhythm of activity and rest", "it creates day and night, allowing time for work and rest"],
+      "hints": ["Think about when plants grow and when animals sleep.", "Day and night affect our activities."],
+      "explanation": "The earth's rotation causes day and night. This gives living things a regular pattern of light and darkness for activities and rest.",
+      "misconception": "The earth's rotation has no effect on life.",
+      "uncertain": []
+    }
+  ]
+}

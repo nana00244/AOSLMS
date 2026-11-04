@@ -1,0 +1,303 @@
+{
+  "indicator": {
+    "code": "B4.3.1.1.1",
+    "subject": "Mathematics",
+    "level": "Basic 4",
+    "strand": "Geometry and Measurement",
+    "sub_strand": "2D and 3D Shapes",
+    "content_standard": "B4.3.1.1 Identify the lines of symmetry of regular and irregular 2D shapes",
+    "objective": "Complete drawings of shapes to make them symmetrical",
+    "source_page": 57
+  },
+  "spec": {
+    "skills": [
+      {"tag": "identify_line_symmetry", "description": "Identify lines of symmetry in 2D shapes.", "minQuestions": 2},
+      {"tag": "complete_symmetrical_drawing", "description": "Complete a drawing on a grid to make it symmetrical across a given line.", "minQuestions": 2}
+    ],
+    "difficultyPlan": "20 questions: 5 at difficulty 1, 7 at difficulty 2, 5 at difficulty 3, 3 at difficulty 4.",
+    "misconceptions": [
+      "Counting squares incorrectly from the line of symmetry.",
+      "Creating a translation instead of a reflection.",
+      "Thinking diagonal lines are always lines of symmetry in rectangles."
+    ],
+    "needsTeacherAssessment": true
+  },
+  "questions": [
+    {
+      "skill_tag": "identify_line_symmetry",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which of these shapes has a line of symmetry?",
+      "options": ["A square", "A scalene triangle", "A random blob shape", "The letter F"],
+      "answer": 0,
+      "hints": ["Can you fold the shape in half so both sides match exactly?", "A square can be folded perfectly in half."],
+      "explanation": "A square has multiple lines of symmetry because its sides and angles are equal.",
+      "misconception": "Thinking all triangles are symmetrical.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_line_symmetry",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "How many lines of symmetry does a rectangle have?",
+      "options": ["1", "2", "4", "0"],
+      "answer": 1,
+      "hints": ["Draw a rectangle.", "Fold it horizontally, then vertically."],
+      "explanation": "A rectangle has 2 lines of symmetry (one horizontal, one vertical).",
+      "misconception": "Thinking it has 4 like a square.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "complete_symmetrical_drawing",
+      "type": "drawing",
+      "difficulty": 1,
+      "stem": "A vertical line of symmetry is drawn on a grid. There are 2 shaded squares on the left side, exactly touching the line. Draw the matching squares on the right side.",
+      "hints": ["Count the same number of squares on the other side.", "They must mirror each other."],
+      "explanation": "The learner should shade 2 squares on the right side, directly opposite the left ones.",
+      "rubric": {
+        "criteria": [
+          {"description": "Shades 2 squares on the right side.", "marks": 1},
+          {"description": "Squares are a mirror image across the line.", "marks": 1}
+        ]
+      },
+      "misconception": "Shading squares further away from the line.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_line_symmetry",
+      "type": "short_answer",
+      "difficulty": 1,
+      "stem": "Does the letter 'A' have a line of symmetry? (Yes/No)",
+      "answer": ["yes"],
+      "hints": ["Can you draw a line down the middle of the A?", "Do both halves look the same?"],
+      "explanation": "Yes, the letter A has a vertical line of symmetry.",
+      "misconception": "Thinking letters cannot be symmetrical.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_line_symmetry",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which shape does NOT have a line of symmetry?",
+      "options": ["A circle", "An equilateral triangle", "A scalene triangle", "A square"],
+      "answer": 2,
+      "hints": ["Try to fold the scalene triangle.", "Do all its sides have different lengths?"],
+      "explanation": "A scalene triangle has sides of different lengths, so it cannot be folded to match exactly.",
+      "misconception": "Thinking all triangles have lines of symmetry.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "complete_symmetrical_drawing",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "A shape has a vertical line of symmetry. On the left, a square is 3 grid spaces away from the line. How many spaces away should the matching square be on the right?",
+      "options": ["1", "2", "3", "6"],
+      "answer": 2,
+      "hints": ["Symmetry means the distance is the same on both sides.", "If it's 3 on the left, it's 3 on the right."],
+      "explanation": "The distance from the line of symmetry must be equal on both sides.",
+      "misconception": "Thinking the total distance is 3.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_line_symmetry",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "How many lines of symmetry does a circle have?",
+      "answer": 0,
+      "check": "0",
+      "hints": ["How many ways can you fold a circle in half?", "Think about diameters."],
+      "explanation": "A circle has infinite lines of symmetry because any straight line through the center cuts it in half.",
+      "misconception": "Saying 1.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "complete_symmetrical_drawing",
+      "type": "drawing",
+      "difficulty": 2,
+      "stem": "A horizontal line of symmetry is drawn on a grid. A triangle is drawn above the line, 2 squares high. Draw the matching triangle below the line.",
+      "hints": ["Count 2 squares down from the line.", "Draw the same shape."],
+      "explanation": "The learner should draw a triangle that is a mirror image below the horizontal line.",
+      "rubric": {
+        "criteria": [
+          {"description": "Draws a triangle below the line.", "marks": 1},
+          {"description": "The triangle is 2 squares high and symmetrical.", "marks": 1}
+        ]
+      },
+      "misconception": "Drawing the triangle 1 square below.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_line_symmetry",
+      "type": "written",
+      "difficulty": 2,
+      "stem": "Explain how you can check if a shape drawn on a grid is symmetrical.",
+      "hints": ["What happens if you fold it?", "Are the squares on both sides the same?"],
+      "explanation": "You can check by counting the squares from the line of symmetry on both sides. If they match exactly, the shape is symmetrical.",
+      "rubric": {
+        "criteria": [
+          {"description": "Mentions counting squares from the line.", "marks": 1},
+          {"description": "Mentions both sides matching.", "marks": 1}
+        ]
+      },
+      "misconception": "Thinking symmetry only applies to circles.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "complete_symmetrical_drawing",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "A half-drawn butterfly has 3 squares on the left wing. If the line of symmetry is down the middle, how many squares should the right wing have?",
+      "options": ["2", "3", "6", "1"],
+      "answer": 1,
+      "hints": ["The wings must match.", "3 squares on the left = 3 squares on the right."],
+      "explanation": "Symmetry requires the same number of squares on both sides.",
+      "misconception": "Counting the total number of squares.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_line_symmetry",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Does the letter 'F' have a line of symmetry? (Yes/No)",
+      "answer": ["no"],
+      "hints": ["Try drawing a line down the middle.", "The top and bottom bars are on different sides."],
+      "explanation": "The letter F is not symmetrical because folding it in half does not make the sides match.",
+      "misconception": "Thinking all letters are symmetrical.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "complete_symmetrical_drawing",
+      "type": "drawing",
+      "difficulty": 2,
+      "stem": "Draw a shape on the grid that has exactly one vertical line of symmetry.",
+      "hints": ["Draw a house shape (a square with a triangle on top).", "Check if both sides are identical."],
+      "explanation": "A valid answer is a house shape, an isosceles triangle, or the letter A.",
+      "rubric": {
+        "criteria": [
+          {"description": "Draws a shape with a vertical line of symmetry.", "marks": 1},
+          {"description": "The shape has exactly one line of symmetry.", "marks": 1}
+        ]
+      },
+      "misconception": "Drawing a rectangle (it has more than one).",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_line_symmetry",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "Explain why a diagonal line of a rectangle is NOT a line of symmetry.",
+      "hints": ["Fold the rectangle along the diagonal.", "Do the corners match?"],
+      "explanation": "If you fold a rectangle along the diagonal, the corners do not overlap perfectly because the sides have different lengths. The shapes on either side are not identical.",
+      "rubric": {
+        "criteria": [
+          {"description": "States the corners do not match when folded.", "marks": 1},
+          {"description": "Explains that the sides are different lengths.", "marks": 1}
+        ]
+      },
+      "misconception": "Thinking any line drawn through the middle is a line of symmetry.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "complete_symmetrical_drawing",
+      "type": "numeric",
+      "difficulty": 3,
+      "stem": "A shape has a vertical line of symmetry. On the left, a square is at position (column 2, row 3) relative to the line. What is the column position on the right? (The line is at column 0).",
+      "answer": 2,
+      "check": "2",
+      "hints": ["The distance is 2 squares.", "The position on the right is the same distance from the line."],
+      "explanation": "The column position is 2 squares to the right of the line.",
+      "misconception": "Saying column 3.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "complete_symmetrical_drawing",
+      "type": "drawing",
+      "difficulty": 3,
+      "stem": "Complete the symmetrical pattern on the grid. The left side has a red square at the top and a blue square below it. The vertical line of symmetry is in the middle.",
+      "hints": ["Mirror the red square on the right.", "Mirror the blue square on the right."],
+      "explanation": "The learner should color the corresponding squares on the right to match the left.",
+      "rubric": {
+        "criteria": [
+          {"description": "Red square is mirrored correctly.", "marks": 1},
+          {"description": "Blue square is mirrored correctly.", "marks": 1}
+        ]
+      },
+      "misconception": "Putting the blue square on top.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_line_symmetry",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "A shape has a line of symmetry. If the left side has 5 squares, how many squares does the right side have?",
+      "options": ["4", "5", "10", "0"],
+      "answer": 1,
+      "hints": ["Symmetry means equal.", "Both sides must have the same amount."],
+      "explanation": "The right side must have 5 squares to match the left.",
+      "misconception": "Thinking the total is 5.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "complete_symmetrical_drawing",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "Describe how to complete a drawing of half a butterfly on a grid.",
+      "hints": ["Identify the line of symmetry.", "Count the squares from the line for each part of the wing."],
+      "explanation": "First, locate the line of symmetry down the middle. Then, for every square on the left wing, count the same number of squares away from the line on the right side and shade it.",
+      "rubric": {
+        "criteria": [
+          {"description": "Mentions locating the line of symmetry.", "marks": 1},
+          {"description": "Explains counting equal squares on the other side.", "marks": 1}
+        ]
+      },
+      "misconception": "Freehand drawing without counting squares.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_line_symmetry",
+      "type": "numeric",
+      "difficulty": 4,
+      "stem": "How many lines of symmetry does a square have?",
+      "answer": 4,
+      "check": "4",
+      "hints": ["Think about the horizontal and vertical lines.", "Think about the diagonals."],
+      "explanation": "A square has 4 lines of symmetry: horizontal, vertical, and two diagonals.",
+      "misconception": "Saying 2 (only horizontal and vertical).",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "complete_symmetrical_drawing",
+      "type": "drawing",
+      "difficulty": 4,
+      "stem": "Design a simple symmetrical Kente pattern on a 4x4 grid using two colors. The line of symmetry must be vertical.",
+      "hints": ["Draw a line down the middle.", "Design one half, then copy it on the other side."],
+      "explanation": "The learner should create a colorful pattern that is identical on both sides of the vertical line.",
+      "rubric": {
+        "criteria": [
+          {"description": "Uses a vertical line of symmetry.", "marks": 1},
+          {"description": "The pattern is perfectly mirrored on both sides.", "marks": 1},
+          {"description": "Uses two colors.", "marks": 1}
+        ]
+      },
+      "misconception": "Creating a random pattern that is not symmetrical.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_line_symmetry",
+      "type": "written",
+      "difficulty": 4,
+      "stem": "Explain why a regular hexagon has more lines of symmetry than a rectangle.",
+      "hints": ["How many lines of symmetry does a rectangle have?", "How many sides does a hexagon have?"],
+      "explanation": "A rectangle has 2 lines of symmetry. A regular hexagon has 6 sides and 6 lines of symmetry because all its sides and angles are equal, allowing it to be folded in more ways.",
+      "rubric": {
+        "criteria": [
+          {"description": "States rectangle has 2 lines.", "marks": 1},
+          {"description": "States hexagon has 6 lines.", "marks": 1},
+          {"description": "Explains that equal sides/angles create more symmetry.", "marks": 1}
+        ]
+      },
+      "misconception": "Thinking all shapes have the same number of lines of symmetry.",
+      "uncertain": []
+    }
+  ]
+}

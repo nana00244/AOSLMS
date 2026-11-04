@@ -1,0 +1,306 @@
+{
+  "indicator": {
+    "code": "B5.4.2.1.2",
+    "subject": "Mathematics",
+    "level": "Basic 5",
+    "strand": "Data",
+    "sub_strand": "Chance (Probability)",
+    "content_standard": "B5.4.2.1 Describe the likelihood of a single outcome occurring using words such as impossible, possible, and certain",
+    "objective": "Design and conduct an experiment in which the likelihood of a single outcome occurring is impossible, possible (likely or unlikely), certain.",
+    "source_page": 133
+  },
+  "spec": {
+    "skills": [
+      {"tag": "design_probability_experiment", "description": "Design an experiment with a specified likelihood (e.g., bag of red, green, pink bottle tops).", "minQuestions": 2},
+      {"tag": "conduct_probability_experiment", "description": "Conduct the experiment and record outcomes.", "minQuestions": 2}
+    ],
+    "difficultyPlan": "20 questions: 5 at difficulty 1, 7 at difficulty 2, 5 at difficulty 3, 3 at difficulty 4.",
+    "misconceptions": [
+      "Designing an experiment that does not match the intended likelihood.",
+      "Not recording outcomes systematically.",
+      "Confusing theoretical and experimental probability."
+    ],
+    "needsTeacherAssessment": true
+  },
+  "questions": [
+    {
+      "skill_tag": "design_probability_experiment",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which bag design makes picking a red ball impossible?",
+      "options": ["A bag with only blue balls", "A bag with red and blue balls", "A bag with only red balls", "A bag with red, blue, and green balls"],
+      "answer": 0,
+      "hints": ["Impossible means no red balls at all."],
+      "explanation": "A bag with only blue balls has no red balls, so picking red is impossible.",
+      "misconception": "Choosing a bag with some red balls.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "design_probability_experiment",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which bag design makes picking a red ball certain?",
+      "options": ["A bag with only red balls", "A bag with red and blue balls", "A bag with only blue balls", "A bag with red and green balls"],
+      "answer": 0,
+      "hints": ["Certain means every ball is red."],
+      "explanation": "A bag with only red balls makes picking red certain.",
+      "misconception": "Choosing a bag with mostly red.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "design_probability_experiment",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "To design an experiment where picking a blue bottle top is possible but unlikely, which bag should you use?",
+      "options": ["1 blue and 19 red", "10 blue and 10 red", "20 blue", "0 blue and 20 red"],
+      "answer": 0,
+      "hints": ["Unlikely means few blue compared to red."],
+      "explanation": "1 blue and 19 red makes blue possible but unlikely.",
+      "misconception": "Choosing equal numbers.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "conduct_probability_experiment",
+      "type": "practical",
+      "difficulty": 1,
+      "stem": "Conduct an experiment: Put 5 red counters and 5 blue counters in a bag. Pick one counter 10 times, replacing it each time. Record the colours.",
+      "hints": ["Replace the counter after each pick.", "Make a tally for red and blue."],
+      "explanation": "The learner should record outcomes in a tally chart.",
+      "rubric": {
+        "criteria": [
+          {"description": "Picks 10 times and replaces each time.", "marks": 1},
+          {"description": "Records each outcome using tallies.", "marks": 1}
+        ]
+      },
+      "misconception": "Not replacing the counter.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "design_probability_experiment",
+      "type": "written",
+      "difficulty": 1,
+      "stem": "Describe how to set up a bag so that picking a green ball is impossible.",
+      "hints": ["Use no green balls."],
+      "explanation": "Put only balls that are not green, for example only red and blue balls.",
+      "rubric": {
+        "criteria": [
+          {"description": "States no green balls in the bag.", "marks": 1}
+        ]
+      },
+      "misconception": "Including one green ball.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "design_probability_experiment",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which experiment has a certain outcome?",
+      "options": ["Picking a red ball from a bag of only red balls", "Picking a red ball from a bag of red and blue balls", "Rolling a 6 on a die", "Tossing a coin and getting tails"],
+      "answer": 0,
+      "hints": ["Certain means it must happen."],
+      "explanation": "Picking from a bag of only red balls is certain.",
+      "misconception": "Choosing rolling a 6 because it is one outcome.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "design_probability_experiment",
+      "type": "written",
+      "difficulty": 2,
+      "stem": "Design a simple experiment where the likelihood of picking a red bottle top is likely.",
+      "hints": ["Use more red than other colours."],
+      "explanation": "For example, put 8 red and 2 blue bottle tops in a bag. Picking red is likely.",
+      "rubric": {
+        "criteria": [
+          {"description": "Uses more red than other colours.", "marks": 1},
+          {"description": "States red is likely.", "marks": 1}
+        ]
+      },
+      "misconception": "Using equal numbers.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "conduct_probability_experiment",
+      "type": "practical",
+      "difficulty": 2,
+      "stem": "Conduct an experiment with a coin: Toss a coin 20 times and record heads and tails.",
+      "hints": ["Make a tally chart for heads and tails."],
+      "explanation": "The learner should record 20 tosses.",
+      "rubric": {
+        "criteria": [
+          {"description": "Tosses coin 20 times.", "marks": 1},
+          {"description": "Records heads and tails.", "marks": 1}
+        ]
+      },
+      "misconception": "Not recording all tosses.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "design_probability_experiment",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "A bag has 12 red and 2 green balls. Picking a green ball is:",
+      "options": ["Impossible", "Possible but unlikely", "Certain", "Likely"],
+      "answer": 1,
+      "hints": ["There are few green balls."],
+      "explanation": "Possible but unlikely.",
+      "misconception": "Saying impossible because few.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "conduct_probability_experiment",
+      "type": "written",
+      "difficulty": 2,
+      "stem": "Explain how to record outcomes in a probability experiment.",
+      "hints": ["Use tallies or a table."],
+      "explanation": "Make a table or tally chart for each possible outcome. Put a mark each time the outcome occurs.",
+      "rubric": {
+        "criteria": [
+          {"description": "Mentions using tallies or table.", "marks": 1},
+          {"description": "Mentions marking each outcome.", "marks": 1}
+        ]
+      },
+      "misconception": "Trying to remember outcomes without recording.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "design_probability_experiment",
+      "type": "written",
+      "difficulty": 2,
+      "stem": "Design an experiment where landing on blue is impossible using a spinner with 4 equal sectors.",
+      "hints": ["Do not use blue on the spinner."],
+      "explanation": "Use colours such as red, green, yellow, and orange, with no blue sector.",
+      "rubric": {
+        "criteria": [
+          {"description": "Spinner has no blue sector.", "marks": 1}
+        ]
+      },
+      "misconception": "Including a blue sector.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "conduct_probability_experiment",
+      "type": "practical",
+      "difficulty": 2,
+      "stem": "Conduct a spinner experiment: Spin a 4-sector spinner 16 times and record where it lands.",
+      "hints": ["Use a tally chart for each sector."],
+      "explanation": "The learner should record 16 spins.",
+      "rubric": {
+        "criteria": [
+          {"description": "Spins 16 times.", "marks": 1},
+          {"description": "Records outcomes for each sector.", "marks": 1}
+        ]
+      },
+      "misconception": "Not recording all spins.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "design_probability_experiment",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "A pupil wants an experiment where picking a red counter is possible but unlikely. Describe a bag they could use.",
+      "hints": ["Use few red counters compared to other colours."],
+      "explanation": "For example, 1 red and 15 blue counters.",
+      "rubric": {
+        "criteria": [
+          {"description": "Uses few red counters.", "marks": 1},
+          {"description": "Explains red is unlikely.", "marks": 1}
+        ]
+      },
+      "misconception": "Using many red counters.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "conduct_probability_experiment",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "Explain why it is important to replace the counter after each pick in a bag experiment.",
+      "hints": ["Replacing keeps the probabilities the same."],
+      "explanation": "Replacing keeps the number of each colour the same for every pick, so the likelihood does not change.",
+      "rubric": {
+        "criteria": [
+          {"description": "States it keeps probabilities the same.", "marks": 1}
+        ]
+      },
+      "misconception": "Thinking replacement does not matter.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "design_probability_experiment",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "Design an experiment where picking a green ball is certain.",
+      "hints": ["All balls must be green."],
+      "explanation": "Put only green balls in the bag.",
+      "rubric": {
+        "criteria": [
+          {"description": "States all balls are green.", "marks": 1}
+        ]
+      },
+      "misconception": "Including other colours.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "conduct_probability_experiment",
+      "type": "practical",
+      "difficulty": 3,
+      "stem": "Conduct an experiment: Roll a die 30 times. Record how many times each number appears.",
+      "hints": ["Use a tally chart for 1 to 6."],
+      "explanation": "The learner should record 30 rolls.",
+      "rubric": {
+        "criteria": [
+          {"description": "Rolls die 30 times.", "marks": 1},
+          {"description": "Records outcomes for each number.", "marks": 1}
+        ]
+      },
+      "misconception": "Not recording all rolls.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "design_probability_experiment",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "Explain why the same experiment can give different results when repeated.",
+      "hints": ["Random outcomes vary."],
+      "explanation": "Random outcomes can vary from trial to trial, so repeated experiments may not give exactly the same results.",
+      "rubric": {
+        "criteria": [
+          {"description": "Mentions randomness or variation.", "marks": 1}
+        ]
+      },
+      "misconception": "Thinking results must always match exactly.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "design_probability_experiment",
+      "type": "written",
+      "difficulty": 4,
+      "stem": "Design an experiment with a bag of counters to show an impossible, a possible, and a certain outcome. Describe the bag and the three outcomes.",
+      "hints": ["Use colours with different quantities."],
+      "explanation": "For example, a bag with 10 red and 1 blue: impossible = picking green; possible = picking blue; certain = picking red or blue.",
+      "rubric": {
+        "criteria": [
+          {"description": "Describes bag contents.", "marks": 1},
+          {"description": "Gives one outcome of each type.", "marks": 1}
+        ]
+      },
+      "misconception": "Not matching outcomes to bag contents.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "conduct_probability_experiment",
+      "type": "written",
+      "difficulty": 4,
+      "stem": "A pupil conducts 50 coin tosses and records 30 heads and 20 tails. Explain what these results show.",
+      "hints": ["Compare to expected 25 heads and 25 tails."],
+      "explanation": "The results are close to expected but not exactly equal. Random variation explains the difference.",
+      "rubric": {
+        "criteria": [
+          {"description": "Mentions expected half heads.", "marks": 1},
+          {"description": "Explains variation.", "marks": 1}
+        ]
+      },
+      "misconception": "Thinking the coin is unfair because not exactly 25.",
+      "uncertain": []
+    }
+  ]
+}

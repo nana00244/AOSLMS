@@ -1,0 +1,289 @@
+{
+  "indicator": {
+    "code": "B5.2.1.1.1",
+    "subject": "Mathematics",
+    "level": "Basic 5",
+    "strand": "Algebra",
+    "sub_strand": "Patterns and Relationships",
+    "content_standard": "B5.2.1.1 Determine the pattern rule to make predictions about subsequent elements",
+    "objective": "Extend a given pattern with and without concrete materials, and explain how each element differs from the preceding one",
+    "source_page": 105
+  },
+  "spec": {
+    "skills": [
+      {"tag": "extend_pattern_concrete", "description": "Use concrete materials to extend a pattern.", "minQuestions": 2},
+      {"tag": "extend_pattern_numerical", "description": "Extend a numerical pattern by finding the rule.", "minQuestions": 2},
+      {"tag": "explain_pattern_difference", "description": "Explain how each element differs from the preceding one.", "minQuestions": 2}
+    ],
+    "difficultyPlan": "20 questions: 5 at difficulty 1, 7 at difficulty 2, 5 at difficulty 3, 3 at difficulty 4.",
+    "misconceptions": [
+      "Assuming all patterns increase.",
+      "Not checking the rule against all terms.",
+      "Confusing the rule with the numbers themselves."
+    ],
+    "needsTeacherAssessment": true
+  },
+  "questions": [
+    {
+      "skill_tag": "extend_pattern_numerical",
+      "type": "numeric",
+      "difficulty": 1,
+      "stem": "What is the next number in the pattern: 2, 4, 6, 8, ___?",
+      "answer": 10,
+      "check": "8+2",
+      "hints": ["The pattern adds 2 each time.", "8 + 2."],
+      "explanation": "The rule is 'add 2', so 8 + 2 = 10.",
+      "misconception": "Saying 9.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "extend_pattern_numerical",
+      "type": "numeric",
+      "difficulty": 1,
+      "stem": "What is the next number in the pattern: 5, 10, 15, 20, ___?",
+      "answer": 25,
+      "check": "20+5",
+      "hints": ["The pattern adds 5 each time."],
+      "explanation": "20 + 5 = 25.",
+      "misconception": "Saying 30.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "explain_pattern_difference",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "In the pattern 3, 6, 9, 12, how does each number differ from the one before it?",
+      "options": ["It increases by 3", "It increases by 2", "It doubles", "It decreases by 3"],
+      "answer": 0,
+      "hints": ["6 - 3 = 3, 9 - 6 = 3."],
+      "explanation": "Each number is 3 more than the previous number.",
+      "misconception": "Saying it doubles because 3+3=6.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "extend_pattern_concrete",
+      "type": "numeric",
+      "difficulty": 1,
+      "stem": "A pupil uses counters to build a pattern: 1 counter, then 3 counters, then 5 counters. How many counters in the next group?",
+      "answer": 7,
+      "check": "5+2",
+      "hints": ["The number of counters increases by 2."],
+      "explanation": "1, 3, 5, 7. Next is 7.",
+      "misconception": "Saying 6.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "extend_pattern_concrete",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "A pattern uses shapes: square, triangle, square, triangle, square. What shape comes next?",
+      "options": ["Square", "Triangle", "Circle", "Rectangle"],
+      "answer": 1,
+      "hints": ["The pattern repeats square, triangle."],
+      "explanation": "After square comes triangle.",
+      "misconception": "Saying square because it appears more.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "extend_pattern_numerical",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "What is the next number in the pattern: 20, 18, 16, 14, ___?",
+      "answer": 12,
+      "check": "14-2",
+      "hints": ["The pattern subtracts 2 each time."],
+      "explanation": "14 - 2 = 12.",
+      "misconception": "Saying 16 (adding).",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "explain_pattern_difference",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "In the pattern 100, 90, 80, 70, how does each number differ from the one before it?",
+      "options": ["It decreases by 10", "It increases by 10", "It decreases by 20", "It doubles"],
+      "answer": 0,
+      "hints": ["90 - 100 = -10."],
+      "explanation": "Each number is 10 less than the previous number.",
+      "misconception": "Saying increases because the numbers are large.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "extend_pattern_numerical",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "What is the next number in the pattern: 1, 4, 9, 16, ___?",
+      "answer": 25,
+      "check": "5*5",
+      "hints": ["These are square numbers: 1×1, 2×2, 3×3, 4×4, 5×5."],
+      "explanation": "The next square number is 25.",
+      "misconception": "Saying 20 (adding 4).",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "extend_pattern_concrete",
+      "type": "written",
+      "difficulty": 2,
+      "stem": "Use counters to make a pattern that starts with 2 counters and adds 3 each time. Write the first four terms.",
+      "hints": ["Start with 2.", "2 + 3 = 5, 5 + 3 = 8..."],
+      "explanation": "2, 5, 8, 11.",
+      "rubric": {
+        "criteria": [
+          {"description": "Starts with 2 counters.", "marks": 1},
+          {"description": "Adds 3 each time to get 5, 8, 11.", "marks": 1}
+        ]
+      },
+      "misconception": "Adding 2 instead of 3.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "explain_pattern_difference",
+      "type": "written",
+      "difficulty": 2,
+      "stem": "Explain the rule for the pattern 2, 4, 8, 16.",
+      "hints": ["Each number is double the previous one."],
+      "explanation": "Each number is multiplied by 2 (doubled).",
+      "rubric": {
+        "criteria": [
+          {"description": "States the rule is multiply by 2 or double.", "marks": 1}
+        ]
+      },
+      "misconception": "Saying add 2 because 2+2=4.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "extend_pattern_numerical",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "What is the next number in the pattern: 3, 7, 11, 15, ___?",
+      "answer": 19,
+      "check": "15+4",
+      "hints": ["The pattern adds 4 each time."],
+      "explanation": "15 + 4 = 19.",
+      "misconception": "Saying 18.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "extend_pattern_numerical",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Extend the pattern by two terms: 10, 20, 30, ___, ___.",
+      "answer": ["40, 50"],
+      "hints": ["Add 10 each time."],
+      "explanation": "40, 50.",
+      "misconception": "Adding 20.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "explain_pattern_difference",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "Explain how each term in the pattern 100, 95, 90, 85 differs from the preceding one.",
+      "hints": ["Find the difference between consecutive terms."],
+      "explanation": "Each term is 5 less than the previous term.",
+      "rubric": {
+        "criteria": [
+          {"description": "States each term decreases by 5.", "marks": 1}
+        ]
+      },
+      "misconception": "Saying decreases by 10.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "extend_pattern_numerical",
+      "type": "numeric",
+      "difficulty": 3,
+      "stem": "What is the next number in the pattern: 2, 5, 10, 17, ___?",
+      "answer": 26,
+      "check": "17+9",
+      "hints": ["The differences are 3, 5, 7, 9...", "17 + 9."],
+      "explanation": "Differences increase by 2: +3, +5, +7, +9. 17 + 9 = 26.",
+      "misconception": "Saying 24 (adding 7 again).",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "extend_pattern_concrete",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "A pupil builds a pattern with matchsticks: 4 sticks for 1 square, 7 sticks for 2 squares, 10 sticks for 3 squares. How many sticks for 4 squares? Explain.",
+      "hints": ["Each new square adds 3 sticks."],
+      "explanation": "4, 7, 10, 13. The rule is add 3. So 4 squares need 13 sticks.",
+      "rubric": {
+        "criteria": [
+          {"description": "States the rule is add 3.", "marks": 1},
+          {"description": "Calculates 13.", "marks": 1}
+        ]
+      },
+      "misconception": "Adding 4 each time.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "explain_pattern_difference",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "In the pattern 1, 1, 2, 3, 5, 8, how is each term related to the two before it?",
+      "options": ["It is the sum of the two previous terms", "It is double the previous term", "It is the difference of the two previous terms", "It increases by 1 each time"],
+      "answer": 0,
+      "hints": ["1+1=2, 1+2=3, 2+3=5."],
+      "explanation": "Each term is the sum of the two previous terms.",
+      "misconception": "Saying it doubles.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "extend_pattern_numerical",
+      "type": "numeric",
+      "difficulty": 3,
+      "stem": "What is the 6th term in the pattern: 5, 8, 11, 14, ...?",
+      "answer": 20,
+      "check": "5+3*5",
+      "hints": ["The rule is add 3. The terms are 5,8,11,14,17,20."],
+      "explanation": "5, 8, 11, 14, 17, 20. The 6th term is 20.",
+      "misconception": "Saying 18.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "extend_pattern_numerical",
+      "type": "written",
+      "difficulty": 4,
+      "stem": "Find the missing terms: 2, 6, 18, ___, ___, 486.",
+      "hints": ["Each term is multiplied by 3."],
+      "explanation": "2×3=6, 6×3=18, 18×3=54, 54×3=162, 162×3=486. Missing terms: 54, 162.",
+      "rubric": {
+        "criteria": [
+          {"description": "States rule is multiply by 3.", "marks": 1},
+          {"description": "Fills in 54 and 162.", "marks": 1}
+        ]
+      },
+      "misconception": "Adding 4 instead of multiplying.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "explain_pattern_difference",
+      "type": "written",
+      "difficulty": 4,
+      "stem": "Explain why the pattern 1, 3, 6, 10, 15 is called triangular numbers.",
+      "hints": ["Think about arranging dots in triangles."],
+      "explanation": "Each term can be arranged as a triangle of dots. The differences increase by 1 each time (2,3,4,5).",
+      "rubric": {
+        "criteria": [
+          {"description": "Mentions triangular arrangement.", "marks": 1},
+          {"description": "Explains the increasing differences.", "marks": 1}
+        ]
+      },
+      "misconception": "Not connecting to triangular shapes.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "extend_pattern_numerical",
+      "type": "numeric",
+      "difficulty": 4,
+      "stem": "What is the next number in the pattern: 1, 4, 9, 16, 25, ___?",
+      "answer": 36,
+      "check": "6*6",
+      "hints": ["These are square numbers."],
+      "explanation": "The next square number is 6×6=36.",
+      "misconception": "Saying 30.",
+      "uncertain": []
+    }
+  ]
+}

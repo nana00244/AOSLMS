@@ -1,0 +1,272 @@
+{
+  "indicator": {
+    "code": "B5.1.1.1.1",
+    "subject": "Mathematics",
+    "level": "Basic 5",
+    "strand": "Number",
+    "sub_strand": "Counting, Representation & Cardinality",
+    "content_standard": "B5.1.1.1 Demonstrate an understanding of quantities and place value for multi-digit numerals up to 1000,000",
+    "objective": "Model number quantities up to 1,000,000 using graph sheets and multi-base block",
+    "source_page": 76
+  },
+  "spec": {
+    "skills": [
+      {"tag": "model_with_multibase_large", "description": "Model quantities up to 1,000,000 using multi-base materials (cube = 1,000; rod = 10,000; flat = 100,000; block = 1,000,000).", "minQuestions": 2},
+      {"tag": "model_with_graph_sheets_large", "description": "Model quantities using graph sheets where a square represents a given large value (e.g., 1 cm² = 1,000 units).", "minQuestions": 2},
+      {"tag": "explain_place_value_large", "description": "Explain the value of a digit in a 6- or 7-digit number.", "minQuestions": 2}
+    ],
+    "difficultyPlan": "20 questions: 5 at difficulty 1, 7 at difficulty 2, 5 at difficulty 3, 3 at difficulty 4.",
+    "misconceptions": [
+      "Confusing the values of the multi-base blocks at this scale (e.g., thinking a flat = 10,000 instead of 100,000).",
+      "Ignoring zero placeholders when building numbers.",
+      "Thinking 1,000,000 is the absolute limit of numbers."
+    ],
+    "needsTeacherAssessment": true
+  },
+  "questions": [
+    {
+      "skill_tag": "model_with_multibase_large",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "In multi-base materials for large numbers, a flat represents 100,000 and a rod represents 10,000. How many flats and rods are needed to model 320,000?",
+      "options": ["3 flats and 2 rods", "2 flats and 3 rods", "32 flats", "3 flats and 20 rods"],
+      "answer": 0,
+      "hints": ["The first digit tells you the number of 100,000s.", "The second digit tells you the number of 10,000s."],
+      "explanation": "320,000 has a 3 in the hundred-thousands place (3 flats) and a 2 in the ten-thousands place (2 rods).",
+      "misconception": "Reversing the number of flats and rods.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "model_with_multibase_large",
+      "type": "numeric",
+      "difficulty": 1,
+      "stem": "If one cube represents 1,000 units, how many cubes are needed to model 7,000?",
+      "answer": 7,
+      "check": "7000/1000",
+      "hints": ["Divide 7,000 by 1,000."],
+      "explanation": "7,000 ÷ 1,000 = 7 cubes.",
+      "misconception": "Saying 70 cubes.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "explain_place_value_large",
+      "type": "short_answer",
+      "difficulty": 1,
+      "stem": "What is the value of the digit 4 in the number 540,000?",
+      "answer": ["40000", "forty thousand"],
+      "hints": ["The 4 is in the ten-thousands place."],
+      "explanation": "The digit 4 is in the ten-thousands place, so its value is 40,000.",
+      "misconception": "Saying the value is 4,000.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "model_with_graph_sheets_large",
+      "type": "numeric",
+      "difficulty": 1,
+      "stem": "On a graph sheet, 1 square represents 10,000 units. How many squares are needed to model 60,000?",
+      "answer": 6,
+      "check": "60000/10000",
+      "hints": ["Divide 60,000 by 10,000."],
+      "explanation": "60,000 ÷ 10,000 = 6 squares.",
+      "misconception": "Saying 60 squares.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "explain_place_value_large",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "In the number 782,000, what does the digit 8 represent?",
+      "options": ["8 thousands", "8 ten-thousands", "8 hundred-thousands", "8 hundreds"],
+      "answer": 1,
+      "hints": ["Count the places from right to left."],
+      "explanation": "The 8 is in the ten-thousands place, so it represents 8 ten-thousands (80,000).",
+      "misconception": "Thinking it is 8 thousands.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "model_with_multibase_large",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "A learner builds 405,000 using multi-base materials. How many rods are needed if a rod = 10,000?",
+      "options": ["0", "4", "5", "40"],
+      "answer": 0,
+      "hints": ["Look at the ten-thousands digit."],
+      "explanation": "The ten-thousands digit is 0, so 0 rods are needed.",
+      "misconception": "Saying 4 rods because of the 4 in the hundred-thousands place.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "model_with_graph_sheets_large",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "A graph sheet uses 1 square to represent 100,000 units. How many squares are needed to model 700,000?",
+      "answer": 7,
+      "check": "700000/100000",
+      "hints": ["700,000 ÷ 100,000."],
+      "explanation": "700,000 ÷ 100,000 = 7 squares.",
+      "misconception": "Saying 70 squares.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "explain_place_value_large",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "What is the value of the digit 6 in the number 1,600,000?",
+      "answer": 600000,
+      "check": "6*100000",
+      "hints": ["The 6 is in the hundred-thousands place."],
+      "explanation": "The digit 6 is in the hundred-thousands place, so its value is 600,000.",
+      "misconception": "Saying 6,000.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "model_with_multibase_large",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "If a block represents 1,000,000 and a flat represents 100,000, what is the value of 2 blocks and 5 flats?",
+      "answer": ["2500000", "2,500,000"],
+      "hints": ["2 × 1,000,000 = 2,000,000.", "5 × 100,000 = 500,000."],
+      "explanation": "2,000,000 + 500,000 = 2,500,000.",
+      "misconception": "Saying 250,000.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "model_with_graph_sheets_large",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "On a graph sheet where 1 square = 10,000 units, how many squares represent 150,000?",
+      "options": ["15", "1.5", "150", "10"],
+      "answer": 0,
+      "hints": ["150,000 ÷ 10,000 = 15."],
+      "explanation": "15 squares.",
+      "misconception": "Saying 1.5 squares.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "explain_place_value_large",
+      "type": "written",
+      "difficulty": 2,
+      "stem": "Explain the difference between the 3 in 3,000,000 and the 3 in 300,000.",
+      "hints": ["Where is the 3 in each number?"],
+      "explanation": "In 3,000,000 the 3 is in the millions place, so it means 3,000,000. In 300,000 the 3 is in the hundred-thousands place, so it means 300,000.",
+      "rubric": {
+        "criteria": [
+          {"description": "Explains the value of 3 in 3,000,000 is 3,000,000.", "marks": 1},
+          {"description": "Explains the value of 3 in 300,000 is 300,000.", "marks": 1},
+          {"description": "Uses clear mathematical language.", "marks": 1}
+        ]
+      },
+      "misconception": "Thinking the digit 3 has the same value regardless of position.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "model_with_multibase_large",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "A pupil models 1,234,000 using blocks, flats, and rods (1 block = 1,000,000; 1 flat = 100,000; 1 rod = 10,000). How many flats are needed?",
+      "answer": 2,
+      "check": "2",
+      "hints": ["Look at the hundred-thousands digit: 2."],
+      "explanation": "The hundred-thousands digit is 2, so 2 flats are needed.",
+      "misconception": "Saying 3 flats because of the 3 in the ten-thousands place.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "model_with_graph_sheets_large",
+      "type": "numeric",
+      "difficulty": 3,
+      "stem": "A graph sheet uses 1 square for 50,000 units. How many squares are needed to model 475,000?",
+      "answer": 9.5,
+      "check": "475000/50000",
+      "hints": ["475,000 ÷ 50,000 = 9.5."],
+      "explanation": "9.5 squares (or 9 full squares and half a square).",
+      "misconception": "Saying 9 squares.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "explain_place_value_large",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "A pupil says the value of the digit 5 in 5,230,000 is 50,000. Is the pupil correct? Explain.",
+      "hints": ["Where is the 5? What place value is it?"],
+      "explanation": "The pupil is incorrect. The 5 is in the millions place, so its value is 5,000,000, not 50,000.",
+      "rubric": {
+        "criteria": [
+          {"description": "States the pupil is incorrect.", "marks": 1},
+          {"description": "Explains the 5 is in the millions place.", "marks": 1}
+        ]
+      },
+      "misconception": "Agreeing with the pupil.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "model_with_multibase_large",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "Describe how you would model 3,040,000 using blocks, flats, rods, and cubes (block=1,000,000; flat=100,000; rod=10,000; cube=1,000).",
+      "hints": ["Break the number into millions, hundred-thousands, ten-thousands, thousands."],
+      "explanation": "You need 3 blocks (3,000,000), 0 flats (0), 4 rods (40,000), and 0 cubes (0).",
+      "rubric": {
+        "criteria": [
+          {"description": "States 3 blocks.", "marks": 1},
+          {"description": "States 4 rods.", "marks": 1},
+          {"description": "States 0 flats and 0 cubes.", "marks": 1}
+        ]
+      },
+      "misconception": "Forgetting that zero placeholders mean no blocks of that type.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "model_with_graph_sheets_large",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "A graph sheet uses 1 square = 20,000 units. How many squares represent 180,000?",
+      "options": ["9", "18", "90", "1.8"],
+      "answer": 0,
+      "hints": ["180,000 ÷ 20,000 = 9."],
+      "explanation": "9 squares.",
+      "misconception": "Saying 18 squares.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "explain_place_value_large",
+      "type": "numeric",
+      "difficulty": 3,
+      "stem": "What is the value of the digit 9 in the number 9,876,543?",
+      "answer": 9000000,
+      "check": "9*1000000",
+      "hints": ["The 9 is in the millions place."],
+      "explanation": "The digit 9 is in the millions place, so its value is 9,000,000.",
+      "misconception": "Saying 900,000.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "model_with_graph_sheets_large",
+      "type": "written",
+      "difficulty": 4,
+      "stem": "Explain how to use a graph sheet to model 1,250,000 if 1 square represents 250,000 units.",
+      "hints": ["Divide 1,250,000 by 250,000."],
+      "explanation": "1,250,000 ÷ 250,000 = 5. You would shade 5 squares.",
+      "rubric": {
+        "criteria": [
+          {"description": "States to divide 1,250,000 by 250,000.", "marks": 1},
+          {"description": "Concludes 5 squares.", "marks": 1}
+        ]
+      },
+      "misconception": "Not dividing correctly.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "model_with_multibase_large",
+      "type": "numeric",
+      "difficulty": 4,
+      "stem": "A learner models 2,750,000 using 2 blocks, some flats, some rods, and some cubes. How many flats are needed? (block=1,000,000; flat=100,000; rod=10,000; cube=1,000)",
+      "answer": 7,
+      "check": "7",
+      "hints": ["Look at the hundred-thousands digit: 7."],
+      "explanation": "The hundred-thousands digit is 7, so 7 flats are needed.",
+      "misconception": "Saying 5 flats because of the 5 in the ten-thousands place.",
+      "uncertain": []
+    }
+  ]
+}

@@ -1,0 +1,264 @@
+{
+  "indicator": {
+    "code": "B4.5.4.1.1",
+    "subject": "Science",
+    "level": "Basic 4",
+    "strand": "HUMANS AND THE ENVIRONMENT",
+    "sub_strand": "Climate Change",
+    "content_standard": "B4.5.4.1 Know that climate change is one of the most important environmental issues facing the world today",
+    "objective": "Explain that burning is one of the causes of climate change",
+    "source_page": 37
+  },
+  "spec": {
+    "skills": [
+      {"tag": "define_climate_change", "description": "Recognise simply that climate change means long-term changes in weather patterns (e.g. hotter days, changed rainfall).", "minQuestions": 3},
+      {"tag": "burning_causes_climate_change", "description": "Explain that burning (bush burning, burning of waste, burning of fuel) is one of the causes of climate change.", "minQuestions": 4},
+      {"tag": "smoke_pollution", "description": "Recognise that burning produces smoke which dirties the air.", "minQuestions": 4},
+      {"tag": "effects_burning", "description": "State effects of burning on humans, plants, animals and property (e.g. harm to health, destruction of plants and animals, loss of property).", "minQuestions": 4},
+      {"tag": "continuous_burning_consequence", "description": "Predict what happens if burning of vegetation and waste continues (e.g. more smoke, dirty air, hotter environment).", "minQuestions": 3},
+      {"tag": "reduce_burning", "description": "Suggest simple ways to reduce burning (e.g. avoid bush burning, dispose of waste properly instead of burning).", "minQuestions": 2}
+    ],
+    "difficultyPlan": "20 questions total — Difficulty 1: 5; Difficulty 2: 7; Difficulty 3: 5; Difficulty 4: 3.",
+    "misconceptions": [
+      "Burning waste is always good because it removes rubbish.",
+      "Smoke from burning is harmless.",
+      "Climate change is caused only by factories, not by small fires.",
+      "Bush burning helps plants grow better.",
+      "Burning only affects the person who starts the fire.",
+      "Climate change means the weather changes from morning to evening."
+    ],
+    "needsTeacherAssessment": true
+  },
+  "questions": [
+    {
+      "skill_tag": "define_climate_change",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What does climate change mean?",
+      "options": ["The weather changing from morning to evening", "Long-term changes in weather patterns", "A change in the colour of the sky", "A change in the time of day"],
+      "answer": 1,
+      "hints": ["Think about changes over many years.", "It is not about daily weather."],
+      "explanation": "Climate change means long-term changes in weather patterns, such as hotter days or changes in rainfall.",
+      "misconception": "Climate change means the weather changes from morning to evening.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "burning_causes_climate_change",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which of these is a cause of climate change?",
+      "options": ["Planting trees", "Burning of waste and vegetation", "Sweeping the floor", "Washing clothes"],
+      "answer": 1,
+      "hints": ["Think about smoke.", "Burning produces smoke."],
+      "explanation": "Burning of waste and vegetation produces smoke that contributes to climate change.",
+      "misconception": "Climate change is caused only by factories.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "smoke_pollution",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What does burning produce that dirties the air?",
+      "options": ["Clean air", "Smoke", "Water", "Sand"],
+      "answer": 1,
+      "hints": ["You can see it rising from a fire.", "It makes the air dirty."],
+      "explanation": "Burning produces smoke, which dirties the air and can harm health.",
+      "misconception": "Smoke from burning is harmless.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "effects_burning",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What can bush burning do to plants and animals?",
+      "options": ["Help them grow", "Kill them and destroy their homes", "Make them stronger", "Give them food"],
+      "answer": 1,
+      "hints": ["Fire burns plants and animals.", "It destroys their homes."],
+      "explanation": "Bush burning kills plants and animals and destroys their homes.",
+      "misconception": "Bush burning helps plants grow better.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "reduce_burning",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which of these helps reduce burning?",
+      "options": ["Burning waste in the compound", "Disposing of waste properly in bins", "Setting fire to bushes", "Burning old tyres"],
+      "answer": 1,
+      "hints": ["Proper waste disposal avoids burning.", "Use bins instead of fire."],
+      "explanation": "Disposing of waste properly in bins helps reduce burning and its harmful effects.",
+      "misconception": "Burning waste is always good because it removes rubbish.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "burning_causes_climate_change",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Why is burning considered a cause of climate change?",
+      "options": ["It produces smoke and gases that trap heat", "It makes the air cleaner", "It cools the earth", "It produces water"],
+      "answer": 0,
+      "hints": ["Smoke and gases go into the air.", "They can trap heat."],
+      "explanation": "Burning produces smoke and gases that trap heat in the atmosphere, contributing to climate change.",
+      "misconception": "Burning does not affect the climate.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "smoke_pollution",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which statement about smoke from burning is correct?",
+      "options": ["It makes the air clean", "It is harmless to breathe", "It dirties the air and can harm health", "It helps plants grow faster"],
+      "answer": 2,
+      "hints": ["Smoke is not good to breathe.", "It makes the air dirty."],
+      "explanation": "Smoke from burning dirties the air and can harm the health of people and animals.",
+      "misconception": "Smoke from burning is harmless.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "effects_burning",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "A farmer sets fire to a bush. What effect can this have on the farmer's property?",
+      "options": ["It can destroy crops and buildings", "It makes crops grow better", "It brings rain", "It cleans the air"],
+      "answer": 0,
+      "hints": ["Fire can spread.", "It can burn houses and farms."],
+      "explanation": "Bush burning can spread and destroy crops, buildings, and other property.",
+      "misconception": "Burning only affects the person who starts the fire.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "continuous_burning_consequence",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "What will happen if people continue to burn waste and vegetation?",
+      "options": ["The air will become cleaner", "There will be more smoke and the environment will get hotter", "The weather will become cooler", "Plants will grow faster"],
+      "answer": 1,
+      "hints": ["More burning means more smoke.", "Smoke traps heat."],
+      "explanation": "Continuous burning will produce more smoke, dirty the air, and contribute to a hotter environment.",
+      "misconception": "Burning waste is harmless in the long run.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "define_climate_change",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "What is climate change?",
+      "answer": ["long-term changes in weather patterns", "changes in the weather over many years", "long-term changes in the earth's weather"],
+      "hints": ["Think about changes over a long time.", "It affects weather patterns."],
+      "explanation": "Climate change is long-term change in weather patterns, like hotter days or changes in rainfall.",
+      "misconception": "Climate change means daily weather changes.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "burning_causes_climate_change",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Give one reason why burning causes climate change.",
+      "answer": ["it produces smoke and gases that trap heat", "smoke and gases from burning trap heat", "it releases smoke that warms the earth"],
+      "hints": ["What does burning produce?", "Those gases trap heat."],
+      "explanation": "Burning produces smoke and gases that trap heat in the atmosphere, leading to climate change.",
+      "misconception": "Burning does not affect climate.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "smoke_pollution",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "What does burning produce that makes the air dirty?",
+      "answer": ["smoke", "smoke and gases"],
+      "hints": ["You can see it rising from a fire.", "It makes the air unclean."],
+      "explanation": "Burning produces smoke, which makes the air dirty.",
+      "misconception": "Smoke from burning is harmless.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "effects_burning",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "Which of these is an effect of bush burning on humans?",
+      "options": ["It can cause health problems from smoke", "It makes people taller", "It gives people more food", "It makes the air cleaner"],
+      "answer": 0,
+      "hints": ["Smoke is not good to breathe.", "It can cause coughing."],
+      "explanation": "Bush burning produces smoke that can cause breathing problems and other health issues.",
+      "misconception": "Smoke from burning is harmless.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "continuous_burning_consequence",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "A learner says, 'Burning waste is good because it removes rubbish.' What is the best correction?",
+      "options": ["Yes, burning is always good", "No, burning produces smoke that harms the environment", "No, burning makes the rubbish disappear completely", "No, burning brings rain"],
+      "answer": 1,
+      "hints": ["Smoke is harmful.", "There are better ways to manage waste."],
+      "explanation": "Burning waste is not good because it produces smoke that dirties the air and contributes to climate change.",
+      "misconception": "Burning waste is always good because it removes rubbish.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "reduce_burning",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Suggest one way to reduce burning in your community.",
+      "answer": ["avoid bush burning", "dispose of waste in bins instead of burning", "recycle waste instead of burning", "compost food waste instead of burning"],
+      "hints": ["Do not set fire to bushes.", "Use bins."],
+      "explanation": "Ways to reduce burning include avoiding bush burning, disposing of waste in bins, and recycling or composting instead of burning.",
+      "misconception": "Burning waste is the only way to manage it.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "effects_burning",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "Which of these shows an effect of burning on animals?",
+      "options": ["They get more food", "They lose their homes and can be killed", "They grow faster", "They become friendly"],
+      "answer": 1,
+      "hints": ["Fire destroys vegetation.", "Animals lose their habitat."],
+      "explanation": "Burning destroys vegetation and habitats, and can kill animals.",
+      "misconception": "Burning helps animals.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "define_climate_change",
+      "type": "mcq",
+      "difficulty": 4,
+      "stem": "Which statement best describes climate change?",
+      "options": ["It is a change in weather from day to night", "It is a change in the colour of the sky", "It is long-term change in weather patterns over many years", "It is a change in the time of sunrise each day"],
+      "answer": 2,
+      "hints": ["It happens over many years.", "It affects weather patterns."],
+      "explanation": "Climate change refers to long-term changes in weather patterns over many years.",
+      "misconception": "Climate change means daily weather changes.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "effects_burning",
+      "type": "short_answer",
+      "difficulty": 4,
+      "stem": "Explain how burning can affect humans, plants, and animals.",
+      "answer": ["burning produces smoke that harms human health, kills plants, and destroys animal homes", "smoke from burning harms humans, fire kills plants, and destroys animals' habitats", "burning harms humans through smoke, kills plants, and destroys animal habitats"],
+      "hints": ["Think about smoke and health.", "Fire burns plants and animals."],
+      "explanation": "Burning harms humans through smoke (breathing problems), kills plants, and destroys the homes of animals.",
+      "misconception": "Burning only affects one thing.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "continuous_burning_consequence",
+      "type": "drawing",
+      "difficulty": 4,
+      "stem": "Design a poster that shows the effects of burning on climate change. Include at least two effects, such as smoke and dirty air, and write a short message encouraging people to stop burning waste.",
+      "rubric": {
+        "criteria": [
+          {"description": "Showed at least two effects of burning on climate change", "marks": 2},
+          {"description": "Used drawings to show smoke and dirty air", "marks": 2},
+          {"description": "Included a short message encouraging people not to burn waste", "marks": 1},
+          {"description": "Poster is clear and neat", "marks": 1}
+        ]
+      },
+      "answer": "",
+      "hints": ["Draw smoke and dirty air.", "Write 'Stop burning waste!'", "Include a picture of a clean environment."],
+      "explanation": "This is a drawing task. Your teacher will mark it using the rubric.",
+      "misconception": "Burning waste is always good.",
+      "uncertain": []
+    }
+  ]
+}

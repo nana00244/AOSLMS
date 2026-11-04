@@ -1,0 +1,276 @@
+{
+  "indicator": {
+    "code": "B4.5.1.1.2",
+    "subject": "Science",
+    "level": "Basic 4",
+    "strand": "HUMANS AND THE ENVIRONMENT",
+    "sub_strand": "Personal Hygiene and Sanitation",
+    "content_standard": "B4.5.1.1 Recognise the importance of personal hygiene",
+    "objective": "Describe ways of sustaining the environment through waste management",
+    "source_page": 35
+  },
+  "spec": {
+    "skills": [
+      {"tag": "identify_waste_types", "description": "Identify common types of waste produced at home and school (paper, plastic, bottles, food waste, rubber).", "minQuestions": 3},
+      {"tag": "define_waste_separation", "description": "Explain simply what separating waste means (putting different types of waste into different bins).", "minQuestions": 4},
+      {"tag": "describe_waste_separation", "description": "Describe how to separate waste into groups (e.g. plastics in one bin, paper in another).", "minQuestions": 4},
+      {"tag": "why_separate_waste", "description": "State why separating waste is important (easier recycling, cleaner environment, less pollution).", "minQuestions": 3},
+      {"tag": "consequences_unmanaged_waste", "description": "State what happens when waste is not managed well (litter, bad smell, sickness, blocked drains).", "minQuestions": 3},
+      {"tag": "sustainable_practices", "description": "Suggest ways to reduce waste (reuse, recycle, avoid littering).", "minQuestions": 3}
+    ],
+    "difficultyPlan": "20 questions total — Difficulty 1: 5; Difficulty 2: 7; Difficulty 3: 5; Difficulty 4: 3.",
+    "misconceptions": [
+      "All waste goes into one bin.",
+      "Burning all waste is the best way to manage it.",
+      "Plastic waste is harmless.",
+      "Only factories produce waste.",
+      "Littering is fine if nobody sees you.",
+      "Separating waste is only for adults."
+    ],
+    "needsTeacherAssessment": true
+  },
+  "questions": [
+    {
+      "skill_tag": "identify_waste_types",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which of these is a type of waste?",
+      "options": ["Plastic bottle", "Clean water", "Fresh air", "Sunlight"],
+      "answer": 0,
+      "hints": ["Which item is thrown away after use?", "It is made of plastic and is often littered."],
+      "explanation": "A plastic bottle is a type of waste. It is thrown away after use.",
+      "misconception": "Only factories produce waste.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "define_waste_separation",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What does separating waste mean?",
+      "options": ["Putting different types of waste in different bins", "Mixing all waste together", "Burning all waste", "Burying all waste"],
+      "answer": 0,
+      "hints": ["Think about different bins for different materials.", "Plastics, paper and food waste are kept apart."],
+      "explanation": "Separating waste means putting different types of waste into different bins, such as plastics in one bin and paper in another.",
+      "misconception": "All waste goes into one bin.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_waste_separation",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "How do you separate plastic waste from paper waste?",
+      "options": ["Put plastics in one bin and paper in another", "Put both in the same bin", "Throw both on the ground", "Burn both together"],
+      "answer": 0,
+      "hints": ["Different materials go into different bins.", "Plastics and paper are different."],
+      "explanation": "To separate plastic waste from paper waste, put plastics in one bin and paper in another. This makes recycling easier.",
+      "misconception": "All waste goes into one bin.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "consequences_unmanaged_waste",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What can happen if waste is not managed well?",
+      "options": ["The environment becomes dirty and smelly", "The environment becomes clean", "Plants grow faster", "Water becomes cleaner"],
+      "answer": 0,
+      "hints": ["Unmanaged waste piles up.", "It can cause bad smells."],
+      "explanation": "If waste is not managed well, the environment becomes dirty and smelly. This can attract insects and cause sickness.",
+      "misconception": "Unmanaged waste is harmless.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_waste_types",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which of these is food waste?",
+      "options": ["Banana peel", "Plastic bag", "Glass bottle", "Old newspaper"],
+      "answer": 0,
+      "hints": ["Which item comes from food?", "It is the skin of a fruit."],
+      "explanation": "A banana peel is food waste. It is the leftover part of a fruit.",
+      "misconception": "Food waste is not a type of waste.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "why_separate_waste",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Why is it important to separate waste?",
+      "options": ["It makes recycling easier and keeps the environment clean", "It makes the environment dirtier", "It wastes time", "It makes waste smell worse"],
+      "answer": 0,
+      "hints": ["Recycling needs sorted materials.", "Separated waste is easier to manage."],
+      "explanation": "Separating waste is important because it makes recycling easier and helps keep the environment clean.",
+      "misconception": "Separating waste is a waste of time.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_waste_separation",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which bin should you put an empty plastic bottle into?",
+      "options": ["Plastics bin", "Paper bin", "Food waste bin", "Metals bin"],
+      "answer": 0,
+      "hints": ["The bottle is made of plastic.", "It goes into the plastics bin."],
+      "explanation": "An empty plastic bottle should go into the plastics bin. This helps separate it for recycling.",
+      "misconception": "All waste goes into one bin.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "sustainable_practices",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which is a way to reduce waste?",
+      "options": ["Reuse plastic bags", "Throw everything away", "Burn all waste", "Litter the streets"],
+      "answer": 0,
+      "hints": ["Reusing means using again.", "It stops waste from piling up."],
+      "explanation": "Reusing plastic bags is a way to reduce waste. It means using them again instead of throwing them away.",
+      "misconception": "Burning all waste is the best way to manage it.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "consequences_unmanaged_waste",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "What happens when waste blocks drains?",
+      "options": ["Water cannot flow and may cause flooding", "Water flows faster", "Drains become cleaner", "Waste disappears"],
+      "answer": 0,
+      "hints": ["Blocked drains stop water.", "Water may overflow."],
+      "explanation": "When waste blocks drains, water cannot flow properly and may cause flooding. This can lead to health problems.",
+      "misconception": "Blocked drains are not a problem.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "define_waste_separation",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "A learner puts plastic bottles in one bin and paper in another. What is this practice called?",
+      "options": ["Waste separation", "Waste mixing", "Waste burning", "Waste burying"],
+      "answer": 0,
+      "hints": ["The learner is sorting waste.", "Different bins for different materials."],
+      "explanation": "This practice is called waste separation. It means putting different types of waste into different bins.",
+      "misconception": "All waste goes into one bin.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_waste_types",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which of these is NOT a type of waste?",
+      "options": ["Fresh drinking water", "Plastic bag", "Banana peel", "Old newspaper"],
+      "answer": 0,
+      "hints": ["Which item is useful and clean?", "It is not thrown away."],
+      "explanation": "Fresh drinking water is not a type of waste. It is a useful resource. Plastic bags, banana peels and old newspapers are waste.",
+      "misconception": "Only factories produce waste.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_waste_separation",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "How should food waste be separated from plastic waste?",
+      "options": ["Put food waste in one bin and plastics in another", "Put both in the same bin", "Throw both on the ground", "Burn both together"],
+      "answer": 0,
+      "hints": ["Food waste and plastics are different.", "They go into different bins."],
+      "explanation": "Food waste should be put in one bin and plastics in another. This is how we separate them.",
+      "misconception": "All waste goes into one bin.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "why_separate_waste",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Explain why separating waste helps the environment.",
+      "answer": ["it makes recycling easier and reduces pollution", "separating waste keeps the environment clean and makes recycling easier", "it reduces the amount of waste that pollutes the environment"],
+      "hints": ["Think about recycling.", "Separated waste is easier to recycle."],
+      "explanation": "Separating waste helps the environment because it makes recycling easier and reduces pollution, keeping the environment clean.",
+      "misconception": "Separating waste does not help the environment.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "sustainable_practices",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "What is one way to sustain the environment through waste management?",
+      "options": ["Reduce, reuse, and recycle waste", "Burn all waste", "Throw waste into rivers", "Bury waste in the school garden"],
+      "answer": 0,
+      "hints": ["Think of the three Rs.", "Reduce, reuse, recycle are good practices."],
+      "explanation": "Reducing, reusing and recycling waste helps sustain the environment by reducing the amount of waste that pollutes it.",
+      "misconception": "Burning all waste is the best way to manage it.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "consequences_unmanaged_waste",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "What is a health risk of unmanaged waste?",
+      "options": ["It can attract insects and rats that spread diseases", "It makes the environment beautiful", "It cleans the air", "It provides food for everyone"],
+      "answer": 0,
+      "hints": ["Insects and rats are attracted to waste.", "They can carry germs."],
+      "explanation": "Unmanaged waste attracts insects and rats that can spread diseases. This is a health risk.",
+      "misconception": "Unmanaged waste is harmless.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_waste_separation",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Describe how to separate waste at home.",
+      "answer": ["put plastics, paper, and food waste in different bins", "use separate bins for plastics, paper and food waste", "separate waste into different types using different bins"],
+      "hints": ["Use different bins for different materials.", "Plastics, paper and food waste are common types."],
+      "explanation": "To separate waste at home, use different bins for plastics, paper and food waste. This keeps waste organised and makes recycling easier.",
+      "misconception": "All waste goes into one bin.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "define_waste_separation",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "Which of these is an example of waste separation?",
+      "options": ["Putting plastics in one bin and paper in another", "Throwing all waste in one bin", "Burning waste", "Littering"],
+      "answer": 0,
+      "hints": ["Separation means keeping different types apart.", "Different bins for different materials."],
+      "explanation": "Putting plastics in one bin and paper in another is an example of waste separation.",
+      "misconception": "All waste goes into one bin.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "define_waste_separation",
+      "type": "practical",
+      "difficulty": 4,
+      "stem": "Design and make a litterbin for your classroom using suitable materials. Label it clearly to show which type of waste it should hold (e.g. 'Plastics Only'). Explain how your litterbin will help separate waste.",
+      "rubric": {
+        "criteria": [
+          {"description": "Designed and made a litterbin using suitable materials", "marks": 2},
+          {"description": "Labeled the litterbin with the type of waste it should hold", "marks": 2},
+          {"description": "Explained how the litterbin helps separate waste", "marks": 2}
+        ]
+      },
+      "answer": "Teacher-assessed using the rubric. Expected outcome: a functional litterbin with a clear label and a simple explanation of how it helps separate waste.",
+      "hints": ["Think about what type of waste your bin will hold.", "Make a clear label.", "Explain how separating waste helps the environment."],
+      "explanation": "This is a practical task. Your teacher will mark it using the rubric.",
+      "misconception": "All waste goes into one bin.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "why_separate_waste",
+      "type": "short_answer",
+      "difficulty": 4,
+      "stem": "Why is waste separation important for the community?",
+      "answer": ["it keeps the community clean and reduces diseases", "separating waste reduces pollution and keeps the community healthy", "it helps manage waste properly and prevents sickness"],
+      "hints": ["Think about cleanliness.", "Waste separation reduces germs and pollution."],
+      "explanation": "Waste separation is important for the community because it keeps the environment clean, reduces pollution and helps prevent diseases.",
+      "misconception": "Separating waste is only for adults.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "sustainable_practices",
+      "type": "short_answer",
+      "difficulty": 4,
+      "stem": "Suggest two ways to reduce waste in your school.",
+      "answer": ["reuse paper and use reusable water bottles", "avoid single-use plastics and recycle paper", "use both sides of paper and compost food waste"],
+      "hints": ["Think about what you throw away at school.", "Reusing and recycling reduce waste."],
+      "explanation": "Two ways to reduce waste in school are reusing paper and using reusable water bottles, or avoiding single-use plastics and recycling paper.",
+      "misconception": "Burning all waste is the best way to manage it.",
+      "uncertain": []
+    }
+  ]
+}

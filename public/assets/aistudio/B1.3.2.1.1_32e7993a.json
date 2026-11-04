@@ -1,0 +1,51 @@
+{
+  "indicator": {
+    "code": "B1.3.2.1.1",
+    "subject": "Science",
+    "level": "Basic 1",
+    "strand": "SYSTEMS",
+    "sub_strand": "Ecosystem",
+    "content_standard": "B1.3.2.1: Show understanding and appreciation of the interactions and interdependencies of organisms in an ecosystem",
+    "objective": "Know the places where living things live (land, air, and water)",
+    "source_page": 28
+  },
+  "spec": {
+    "skills": [
+      {"tag": "ECO1-HABITAT", "description": "Name the three main places where living things live", "minQuestions": 3},
+      {"tag": "ECO1-MATCH", "description": "Match a living thing to its habitat", "minQuestions": 3},
+      {"tag": "ECO1-EXAMPLES", "description": "Give examples of living things found in each habitat", "minQuestions": 2},
+      {"tag": "ECO1-REASON", "description": "Give a simple reason why a living thing is found in a particular place", "minQuestions": 2}
+    ],
+    "difficultyPlan": "5x D1, 7x D2, 5x D3, 3x D4",
+    "misconceptions": [
+      "All animals live on land.",
+      "Birds live only in the air and never on land.",
+      "Fish can live on land if they are wet.",
+      "Plants are not living things, so they do not have a habitat.",
+      "Air is not a habitat because we cannot see it."
+    ],
+    "needsTeacherAssessment": false
+  },
+  "questions": [
+    {"skill_tag": "ECO1-HABITAT", "type": "mcq", "difficulty": 1, "stem": "What are the three main places where living things live?", "options": ["Land, air, water", "Land, sand, stones", "Air, fire, water", "Trees, cars, houses"], "answer": 0, "hints": ["One is where we walk.", "One is what we breathe.", "One is what we drink."], "explanation": "Living things live on land, in the air, and in water.", "misconception": "Pupils may list specific objects instead of the three main habitats.", "uncertain": []},
+    {"skill_tag": "ECO1-MATCH", "type": "mcq", "difficulty": 1, "stem": "Where does a fish live?", "options": ["On land", "In water", "In the air", "In a tree"], "answer": 1, "hints": ["It swims.", "It needs water to breathe."], "explanation": "A fish lives in water.", "misconception": "Pupils may think fish live on land.", "uncertain": []},
+    {"skill_tag": "ECO1-MATCH", "type": "mcq", "difficulty": 1, "stem": "Where does a bird fly?", "options": ["In water", "On land", "In the air", "Under the ground"], "answer": 2, "hints": ["It has wings.", "It flies high."], "explanation": "Birds fly in the air.", "misconception": "Pupils may think birds only live on land.", "uncertain": []},
+    {"skill_tag": "ECO1-HABITAT", "type": "mcq", "difficulty": 1, "stem": "A goat lives on...", "options": ["Water", "Air", "Land", "The moon"], "answer": 2, "hints": ["It walks with four legs.", "It eats grass."], "explanation": "A goat lives on land.", "misconception": "Pupils may think goats live in the air.", "uncertain": []},
+    {"skill_tag": "ECO1-EXAMPLES", "type": "mcq", "difficulty": 1, "stem": "Which of these living things lives in water?", "options": ["Fish", "Goat", "Bird", "Dog"], "answer": 0, "hints": ["It swims.", "It has gills."], "explanation": "A fish lives in water.", "misconception": "Pupils may think all animals live on land.", "uncertain": []},
+    {"skill_tag": "ECO1-MATCH", "type": "mcq", "difficulty": 2, "stem": "Match the animal to its home: A dog lives on...", "options": ["Water", "Land", "Air", "In a tree"], "answer": 1, "hints": ["It barks.", "It runs on the ground."], "explanation": "A dog lives on land.", "misconception": "Pupils may think dogs can live in water.", "uncertain": []},
+    {"skill_tag": "ECO1-HABITAT", "type": "mcq", "difficulty": 2, "stem": "Do plants grow on land or in the air?", "options": ["In the air", "On land", "In water", "Both land and water"], "answer": 3, "hints": ["Some plants grow in soil.", "Some plants grow in rivers."], "explanation": "Plants can grow on land (in soil) or in water.", "misconception": "Pupils may think all plants only grow on land.", "uncertain": []},
+    {"skill_tag": "ECO1-EXAMPLES", "type": "short_answer", "difficulty": 2, "stem": "Name one living thing that lives in the air.", "answer": ["bird", "insect", "butterfly", "fly", "bee", "eagle"], "hints": ["What flies in the sky?", "It has wings."], "explanation": "Birds and insects are living things that live in the air.", "misconception": "Pupils may name things that cannot fly, like a dog.", "uncertain": []},
+    {"skill_tag": "ECO1-MATCH", "type": "mcq", "difficulty": 2, "stem": "Ama sees a fish, a bird, and a cow. Which one lives in water?", "options": ["Fish", "Bird", "Cow", "None of them"], "answer": 0, "hints": ["Which one swims?", "It has fins."], "explanation": "The fish lives in water.", "misconception": "Pupils may think birds live in water because they drink it.", "uncertain": []},
+    {"skill_tag": "ECO1-HABITAT", "type": "mcq", "difficulty": 2, "stem": "Is air a place where living things live?", "options": ["No, air is nothing", "Yes, birds and insects live in the air", "No, only on land", "Yes, only fish live in the air"], "answer": 1, "hints": ["Can birds fly?", "Can insects fly?"], "explanation": "Yes, birds and insects are living things that live in the air.", "misconception": "Pupils may think air is not a habitat.", "uncertain": []},
+    {"skill_tag": "ECO1-EXAMPLES", "type": "mcq", "difficulty": 2, "stem": "Which of these lives on land?", "options": ["Fish", "Goat", "Shark", "Whale"], "answer": 1, "hints": ["It walks on four legs.", "It is a farm animal."], "explanation": "A goat lives on land.", "misconception": "Pupils may confuse land and water animals.", "uncertain": []},
+    {"skill_tag": "ECO1-MATCH", "type": "short_answer", "difficulty": 2, "stem": "Where does a whale live?", "answer": ["water", "in water", "the sea", "ocean"], "hints": ["It swims.", "It is a very large animal in the sea."], "explanation": "A whale lives in water (the sea or ocean).", "misconception": "Pupils may think whales live on land because they breathe air.", "uncertain": []},
+    {"skill_tag": "ECO1-REASON", "type": "mcq", "difficulty": 3, "stem": "Why does a fish live in water?", "options": ["It likes to be wet", "It needs water to swim and breathe", "It is afraid of land", "It cannot walk"], "answer": 1, "hints": ["How does it move?", "Where does it get air?"], "explanation": "A fish lives in water because it needs it to swim and breathe.", "misconception": "Pupils may think fish live in water just because they like it.", "uncertain": []},
+    {"skill_tag": "ECO1-REASON", "type": "mcq", "difficulty": 3, "stem": "Why do birds fly in the air?", "options": ["To hide from fish", "To move from place to place and find food", "Because they are afraid of land", "Because they cannot walk"], "answer": 1, "hints": ["How do they travel?", "Where do they find their food?"], "explanation": "Birds fly in the air to move around and find food.", "misconception": "Pupils may think birds only fly to hide.", "uncertain": []},
+    {"skill_tag": "ECO1-HABITAT", "type": "mcq", "difficulty": 3, "stem": "Kwame says 'All living things live on land.' Is he correct?", "options": ["Yes", "No, some live in water and air", "Yes, all animals walk", "No, all living things live in water"], "answer": 1, "hints": ["Where do fish live?", "Where do birds live?"], "explanation": "No, living things live on land, in water, and in the air.", "misconception": "Pupils may think land is the only habitat.", "uncertain": []},
+    {"skill_tag": "ECO1-REASON", "type": "mcq", "difficulty": 3, "stem": "A fish is taken out of water. Why will it die?", "options": ["Because it is cold", "Because it cannot breathe", "Because it is hungry", "Because it cannot walk"], "answer": 1, "hints": ["Where does a fish get air?", "It does not have lungs like us."], "explanation": "A fish needs water to breathe. Out of water, it cannot breathe and will die.", "misconception": "Pupils may think fish can breathe air on land.", "uncertain": []},
+    {"skill_tag": "ECO1-EXAMPLES", "type": "short_answer", "difficulty": 3, "stem": "Name two living things that live on land.", "answer": ["goat", "dog", "cat", "cow", "tree", "human", "person", "lion", "elephant"], "hints": ["Think of animals you see on the ground.", "Think of plants in the garden."], "explanation": "Many living things live on land, such as goats, dogs, trees, and people.", "misconception": "Pupils may name fish or birds.", "uncertain": []},
+    {"skill_tag": "ECO1-REASON", "type": "mcq", "difficulty": 4, "stem": "Why can't a fish live on land?", "options": ["It has no legs and needs water to breathe", "It is too big", "It does not like the sun", "It cannot see on land"], "answer": 0, "hints": ["Can it walk?", "Where does it get air?"], "explanation": "A fish cannot live on land because it has no legs to walk and needs water to breathe.", "misconception": "Pupils may not connect the body parts of the fish to its habitat.", "uncertain": []},
+    {"skill_tag": "ECO1-HABITAT", "type": "mcq", "difficulty": 4, "stem": "Which of these is NOT a place where living things live?", "options": ["Land", "Water", "Air", "Fire"], "answer": 3, "hints": ["Which one is dangerous and hot?", "Can living things survive in it?"], "explanation": "Living things do not live in fire. They live on land, in water, and in the air.", "misconception": "Pupils may think fire is a habitat because it exists in the environment.", "uncertain": []},
+    {"skill_tag": "ECO1-REASON", "type": "mcq", "difficulty": 4, "stem": "A bird has wings. How does this help it live in the air?", "options": ["It helps it to fly", "It helps it to swim", "It helps it to walk", "It helps it to dig"], "answer": 0, "hints": ["What do wings do?", "How does a bird move in the air?"], "explanation": "Wings help a bird to fly, which allows it to live in the air.", "misconception": "Pupils may think wings are for swimming.", "uncertain": []}
+  ]
+}

@@ -1,0 +1,276 @@
+{
+  "indicator": {
+    "code": "B5.1.1.2.1",
+    "subject": "Mathematics",
+    "level": "Basic 5",
+    "strand": "Number",
+    "sub_strand": "Counting, Representation & Cardinality",
+    "content_standard": "B5.1.1.2 Demonstrate understanding of Roman Numerals up to C (i.e. 100)",
+    "objective": "Recognize Roman Numerals system up to C (i.e. 100)",
+    "source_page": 80
+  },
+  "spec": {
+    "skills": [
+      {"tag": "name_roman_numerals", "description": "Name Roman numerals up to C (I, V, X, L, C).", "minQuestions": 2},
+      {"tag": "match_roman_to_hindu", "description": "Match Roman numerals to Hindu-Arabic numerals (e.g., I=1, V=5, IX=9, XV=15, XXX=30, XL=40, LVI=56, XCIX=99).", "minQuestions": 2}
+    ],
+    "difficultyPlan": "20 questions: 5 at difficulty 1, 7 at difficulty 2, 5 at difficulty 3, 3 at difficulty 4.",
+    "misconceptions": [
+      "Thinking V=10 or X=5.",
+      "Not recognizing subtractive notation (IV, IX, XL, XC).",
+      "Thinking C=1000."
+    ],
+    "needsTeacherAssessment": false
+  },
+  "questions": [
+    {
+      "skill_tag": "name_roman_numerals",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What does the Roman numeral V represent?",
+      "options": ["1", "5", "10", "50"],
+      "answer": 1,
+      "hints": ["It looks like a hand with five fingers."],
+      "explanation": "V represents 5.",
+      "misconception": "Thinking V=10.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "name_roman_numerals",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What does the Roman numeral X represent?",
+      "options": ["5", "10", "50", "100"],
+      "answer": 1,
+      "hints": ["It looks like two V's put together."],
+      "explanation": "X represents 10.",
+      "misconception": "Thinking X=5.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "name_roman_numerals",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What does the Roman numeral L represent?",
+      "options": ["5", "10", "50", "100"],
+      "answer": 2,
+      "hints": ["It is half of C (100)."],
+      "explanation": "L represents 50.",
+      "misconception": "Thinking L=100.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "name_roman_numerals",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What does the Roman numeral C represent?",
+      "options": ["10", "50", "100", "1000"],
+      "answer": 2,
+      "hints": ["C stands for centum, meaning hundred."],
+      "explanation": "C represents 100.",
+      "misconception": "Thinking C=1000.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "name_roman_numerals",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What does the Roman numeral I represent?",
+      "options": ["1", "5", "10", "50"],
+      "answer": 0,
+      "hints": ["It is a single line."],
+      "explanation": "I represents 1.",
+      "misconception": "Thinking I=5.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "match_roman_to_hindu",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "What number does the Roman numeral VIII represent?",
+      "answer": 8,
+      "check": "5+3",
+      "hints": ["V=5, III=3.", "5 + 3."],
+      "explanation": "VIII = 5 + 3 = 8.",
+      "misconception": "Adding incorrectly.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "match_roman_to_hindu",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "What number does the Roman numeral XIV represent?",
+      "answer": 14,
+      "check": "10+(5-1)",
+      "hints": ["X=10, IV=4.", "10 + 4."],
+      "explanation": "XIV = 10 + 4 = 14.",
+      "misconception": "Thinking IV is 6 (adding).",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "match_roman_to_hindu",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "What number does the Roman numeral IX represent?",
+      "answer": 9,
+      "check": "10-1",
+      "hints": ["I before X means 1 less than 10."],
+      "explanation": "IX = 10 - 1 = 9.",
+      "misconception": "Thinking IX is 11 (adding).",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "match_roman_to_hindu",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "What number does the Roman numeral XL represent?",
+      "answer": 40,
+      "check": "50-10",
+      "hints": ["X before L means 10 less than 50."],
+      "explanation": "XL = 50 - 10 = 40.",
+      "misconception": "Thinking XL is 60.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "match_roman_to_hindu",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Write the Roman numeral for the number 6.",
+      "answer": ["VI"],
+      "hints": ["5 + 1."],
+      "explanation": "6 = VI.",
+      "misconception": "Writing IV.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "match_roman_to_hindu",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Write the Roman numeral for the number 15.",
+      "answer": ["XV"],
+      "hints": ["10 + 5."],
+      "explanation": "15 = XV.",
+      "misconception": "Writing VX.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "match_roman_to_hindu",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "What number does the Roman numeral XX represent?",
+      "answer": 20,
+      "check": "10+10",
+      "hints": ["X=10, so XX=20."],
+      "explanation": "XX = 20.",
+      "misconception": "Saying 10.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "match_roman_to_hindu",
+      "type": "numeric",
+      "difficulty": 3,
+      "stem": "What number does the Roman numeral XCIX represent?",
+      "answer": 99,
+      "check": "100-10+10-1",
+      "hints": ["XC = 90, IX = 9."],
+      "explanation": "XCIX = 100 - 10 + 10 - 1 = 99.",
+      "misconception": "Thinking IC is 99 (incorrect).",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "match_roman_to_hindu",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Write the Roman numeral for 49.",
+      "answer": ["XLIX"],
+      "hints": ["XL = 40, IX = 9."],
+      "explanation": "49 = XLIX.",
+      "misconception": "Writing IL (incorrect).",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "match_roman_to_hindu",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Write the Roman numeral for 90.",
+      "answer": ["XC"],
+      "hints": ["10 less than 100."],
+      "explanation": "90 = XC.",
+      "misconception": "Writing LXXXX.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "match_roman_to_hindu",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "Explain why the Roman numeral for 4 is written as IV, not IIII.",
+      "hints": ["Subtractive notation means a smaller numeral before a larger one is subtracted."],
+      "explanation": "IV uses subtractive notation: I before V means 1 less than 5, so IV = 4. Writing IIII is non-standard because Roman numerals use subtraction to avoid four identical symbols in a row.",
+      "rubric": {
+        "criteria": [
+          {"description": "Explains subtractive notation.", "marks": 1},
+          {"description": "States IV = 4.", "marks": 1}
+        ]
+      },
+      "misconception": "Thinking IIII is correct.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "match_roman_to_hindu",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "Write the Roman numerals for 20, 30, 40, and 50.",
+      "hints": ["X=10, L=50."],
+      "explanation": "20=XX, 30=XXX, 40=XL, 50=L.",
+      "rubric": {
+        "criteria": [
+          {"description": "Writes XX for 20.", "marks": 1},
+          {"description": "Writes XXX for 30.", "marks": 1},
+          {"description": "Writes XL for 40.", "marks": 1},
+          {"description": "Writes L for 50.", "marks": 1}
+        ]
+      },
+      "misconception": "Writing XXXX for 40.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "match_roman_to_hindu",
+      "type": "numeric",
+      "difficulty": 4,
+      "stem": "What number does the Roman numeral LXXIV represent?",
+      "answer": 74,
+      "check": "50+10+10+(5-1)",
+      "hints": ["L=50, XX=20, IV=4."],
+      "explanation": "LXXIV = 50 + 20 + 4 = 74.",
+      "misconception": "Adding IV as 6 to get 76.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "match_roman_to_hindu",
+      "type": "short_answer",
+      "difficulty": 4,
+      "stem": "Write the Roman numeral for 89.",
+      "answer": ["LXXXIX"],
+      "hints": ["50 + 30 + 9."],
+      "explanation": "89 = LXXXIX.",
+      "misconception": "Writing LXXXVIIII.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "match_roman_to_hindu",
+      "type": "written",
+      "difficulty": 4,
+      "stem": "A pupil writes the Roman numeral for 99 as IC. Explain why this is incorrect and write the correct Roman numeral.",
+      "hints": ["Subtractive notation only uses specific pairs (IV, IX, XL, XC)."],
+      "explanation": "IC is incorrect because you cannot subtract I from C directly. The correct way is XCIX (100 - 10 + 10 - 1).",
+      "rubric": {
+        "criteria": [
+          {"description": "States IC is incorrect.", "marks": 1},
+          {"description": "Gives correct answer XCIX.", "marks": 1}
+        ]
+      },
+      "misconception": "Thinking IC is valid.",
+      "uncertain": []
+    }
+  ]
+}

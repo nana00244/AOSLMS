@@ -1,0 +1,433 @@
+{
+  "indicator": {
+    "code": "B6.5.3.1.1",
+    "subject": "Science",
+    "level": "Basic 6",
+    "strand": "HUMANS AND THE ENVIRONMENT",
+    "sub_strand": "Science and Industry",
+    "content_standard": "B6.5.3.1 Recognise the impact of science and technology on society",
+    "objective": "Identify the scientific concepts and principles underlying the operation of some industries",
+    "source_page": 67
+  },
+  "spec": {
+    "skills": [
+      {
+        "tag": "identify_industry_concepts",
+        "description": "Identify scientific concepts used in industries (e.g. evaporation, fermentation, salting-out, saponification).",
+        "minQuestions": 4
+      },
+      {
+        "tag": "match_concept_industry",
+        "description": "Match a scientific concept to the industry that uses it (e.g. fermentation → kenkey production; saponification → soap making).",
+        "minQuestions": 4
+      },
+      {
+        "tag": "describe_industry_process",
+        "description": "Describe simply how a scientific concept is applied in an industry (e.g. evaporation in salt production).",
+        "minQuestions": 4
+      },
+      {
+        "tag": "importance_science_industry",
+        "description": "Explain why science is important in industries.",
+        "minQuestions": 3
+      },
+      {
+        "tag": "examples_local",
+        "description": "Give examples of local industries and the science they use.",
+        "minQuestions": 3
+      },
+      {
+        "tag": "project_industry",
+        "description": "Plan a simple project to produce a local product (e.g. yoghurt, kenkey, soap) based on science principles.",
+        "minQuestions": 2
+      }
+    ],
+    "difficultyPlan": "20 questions total — Difficulty 1: 5; Difficulty 2: 7; Difficulty 3: 5; Difficulty 4: 3.",
+    "misconceptions": [
+      "Industries do not use science.",
+      "Fermentation is not a science process.",
+      "Salt production does not involve evaporation.",
+      "Soap making does not use science.",
+      "Only modern factories use science.",
+      "Local industries are not scientific."
+    ],
+    "needsTeacherAssessment": true
+  },
+  "questions": [
+    {
+      "skill_tag": "identify_industry_concepts",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which science process is used in making kenkey?",
+      "options": [
+        "Fermentation",
+        "Evaporation",
+        "Saponification",
+        "Filtration"
+      ],
+      "answer": 0,
+      "hints": [
+        "Kenkey dough is left to sour and rise.",
+        "This process uses germs to change the food."
+      ],
+      "explanation": "Kenkey production uses fermentation. The maize dough is left to ferment, which gives kenkey its taste.",
+      "misconception": "Fermentation is not a science process.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_industry_concepts",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which science process is used to get salt from sea water?",
+      "options": [
+        "Evaporation",
+        "Fermentation",
+        "Saponification",
+        "Filtration"
+      ],
+      "answer": 0,
+      "hints": [
+        "The sun dries the water.",
+        "Water changes to vapour."
+      ],
+      "explanation": "Salt is obtained from sea water by evaporation. The sun evaporates the water, leaving salt crystals behind.",
+      "misconception": "Salt production does not involve evaporation.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "match_concept_industry",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which industry uses the process of fermentation?",
+      "options": [
+        "Kenkey production",
+        "Salt production",
+        "Soap making",
+        "Pottery making"
+      ],
+      "answer": 0,
+      "hints": [
+        "Kenkey is a fermented food.",
+        "Fermentation makes dough rise."
+      ],
+      "explanation": "Kenkey production uses fermentation. The maize dough is fermented before cooking.",
+      "misconception": "Salt production uses fermentation.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "match_concept_industry",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which industry uses evaporation?",
+      "options": [
+        "Salt production",
+        "Kenkey production",
+        "Soap making",
+        "Gari production"
+      ],
+      "answer": 0,
+      "hints": [
+        "Salt is obtained from sea water.",
+        "The sun dries the water."
+      ],
+      "explanation": "Salt production uses evaporation to remove water from sea water, leaving salt behind.",
+      "misconception": "Salt production does not use evaporation.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_industry_process",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "How is evaporation used in salt production?",
+      "options": [
+        "Sea water is left in shallow ponds and the sun evaporates the water, leaving salt",
+        "Salt is boiled in water",
+        "Salt is fermented",
+        "Salt is filtered from sand"
+      ],
+      "answer": 0,
+      "hints": [
+        "The sun dries the water.",
+        "Salt crystals are left behind."
+      ],
+      "explanation": "In salt production, sea water is put in shallow ponds. The sun evaporates the water, leaving salt crystals behind.",
+      "misconception": "Salt production uses fermentation.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "importance_science_industry",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Why is science important in industries?",
+      "options": [
+        "It helps industries produce goods more efficiently and safely",
+        "It makes industries slower",
+        "It makes industries less productive",
+        "It has no use in industries"
+      ],
+      "answer": 0,
+      "hints": [
+        "Science helps improve processes.",
+        "It makes production better."
+      ],
+      "explanation": "Science is important in industries because it helps improve production processes, making them more efficient and safe.",
+      "misconception": "Industries do not use science.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "examples_local",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which local industry uses fermentation?",
+      "options": [
+        "Kenkey production",
+        "Salt production",
+        "Pottery making",
+        "Basketry"
+      ],
+      "answer": 0,
+      "hints": [
+        "Kenkey is a local food.",
+        "It is made from fermented maize."
+      ],
+      "explanation": "Kenkey production is a local industry that uses fermentation.",
+      "misconception": "Local industries are not scientific.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_industry_concepts",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Name one science process used in salt production.",
+      "answer": [
+        "evaporation",
+        "the sun evaporates water",
+        "evaporation of water"
+      ],
+      "hints": [
+        "The sun dries the water.",
+        "Water changes to vapour."
+      ],
+      "explanation": "Evaporation is used in salt production to remove water from sea water, leaving salt behind.",
+      "misconception": "Salt production does not involve science.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "match_concept_industry",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Match the science process to the industry: fermentation, evaporation.",
+      "answer": [
+        "fermentation - kenkey production; evaporation - salt production",
+        "fermentation: kenkey; evaporation: salt"
+      ],
+      "hints": [
+        "Which process makes dough rise?",
+        "Which process dries water to leave salt?"
+      ],
+      "explanation": "Fermentation is used in kenkey production, and evaporation is used in salt production.",
+      "misconception": "Fermentation is used in salt production.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_industry_process",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Describe how fermentation is used in kenkey production.",
+      "answer": [
+        "the maize dough is left to ferment, which gives kenkey its taste",
+        "maize is ground and left to ferment before cooking",
+        "the dough is fermented to make kenkey"
+      ],
+      "hints": [
+        "Fermentation changes the dough.",
+        "It gives kenkey its sour taste."
+      ],
+      "explanation": "In kenkey production, maize dough is left to ferment. This process changes the dough and gives kenkey its characteristic taste.",
+      "misconception": "Kenkey production does not use fermentation.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_industry_concepts",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "Which science process is used in soap making?",
+      "options": [
+        "Saponification",
+        "Fermentation",
+        "Evaporation",
+        "Filtration"
+      ],
+      "answer": 0,
+      "hints": [
+        "Soap is made from oils and alkalis.",
+        "This process is called saponification."
+      ],
+      "explanation": "Soap making uses saponification, a chemical reaction between fats or oils and an alkali.",
+      "misconception": "Soap making does not use science.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "importance_science_industry",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Explain why science is important in local industries.",
+      "answer": [
+        "it helps improve production and quality",
+        "science helps make processes more efficient",
+        "it helps industries produce better products"
+      ],
+      "hints": [
+        "Think about improving processes.",
+        "Science helps make things better."
+      ],
+      "explanation": "Science is important in local industries because it helps improve production processes, product quality and efficiency.",
+      "misconception": "Science is not important in local industries.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "examples_local",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Give one example of a local industry and the science it uses.",
+      "answer": [
+        "kenkey production uses fermentation",
+        "salt production uses evaporation",
+        "soap making uses saponification"
+      ],
+      "hints": [
+        "Think about local foods or products.",
+        "Match the process to the industry."
+      ],
+      "explanation": "Examples include kenkey production (fermentation), salt production (evaporation) and soap making (saponification).",
+      "misconception": "Local industries do not use science.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "match_concept_industry",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "Which pair correctly matches a science process to an industry?",
+      "options": [
+        "Saponification → soap making",
+        "Fermentation → salt production",
+        "Evaporation → kenkey production",
+        "Filtration → soap making"
+      ],
+      "answer": 0,
+      "hints": [
+        "Soap is made using saponification.",
+        "Kenkey uses fermentation."
+      ],
+      "explanation": "Saponification is used in soap making. Fermentation is for kenkey, and evaporation is for salt.",
+      "misconception": "Fermentation is used in salt production.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_industry_process",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "How is saponification used in soap making?",
+      "options": [
+        "Fats or oils react with an alkali to form soap",
+        "Fats are fermented to form soap",
+        "Water is evaporated to form soap",
+        "Salt is filtered to form soap"
+      ],
+      "answer": 0,
+      "hints": [
+        "Soap is made from oils and alkali.",
+        "A chemical reaction occurs."
+      ],
+      "explanation": "In soap making, saponification is the chemical reaction between fats or oils and an alkali to form soap.",
+      "misconception": "Soap making does not use science.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "importance_science_industry",
+      "type": "mcq",
+      "difficulty": 4,
+      "stem": "A local gari producer wants to improve production. How can science help?",
+      "options": [
+        "By improving the fermentation and drying processes",
+        "By making the process slower",
+        "By using more water",
+        "By ignoring hygiene"
+      ],
+      "answer": 0,
+      "hints": [
+        "Science can improve processes.",
+        "Better fermentation and drying lead to better gari."
+      ],
+      "explanation": "Science can help improve the fermentation and drying processes in gari production, leading to better quality and efficiency.",
+      "misconception": "Science cannot help local industries.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "project_industry",
+      "type": "practical",
+      "difficulty": 4,
+      "stem": "In groups, plan and carry out a simple project to produce a local product such as yoghurt, kenkey or soap. Describe the science process involved and present your product to the class.",
+      "rubric": {
+        "criteria": [
+          {
+            "description": "Planned a simple project to produce a local product",
+            "marks": 1
+          },
+          {
+            "description": "Identified the science process involved (e.g. fermentation, saponification)",
+            "marks": 2
+          },
+          {
+            "description": "Carried out the project safely and cooperatively",
+            "marks": 2
+          },
+          {
+            "description": "Presented the product and explained the science process clearly",
+            "marks": 1
+          }
+        ]
+      },
+      "answer": "",
+      "hints": [
+        "Choose a simple product you can make.",
+        "Think about the science process involved.",
+        "Work safely in your group."
+      ],
+      "explanation": "This is a practical task. Your teacher will mark it using the rubric.",
+      "misconception": "Local industries do not use science.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "project_industry",
+      "type": "written",
+      "difficulty": 4,
+      "stem": "Write a short plan (3–4 steps) for making soap in your school. Include the science process involved and one safety rule you will follow.",
+      "rubric": {
+        "criteria": [
+          {
+            "description": "Wrote 3–4 clear steps for making soap",
+            "marks": 2
+          },
+          {
+            "description": "Identified saponification as the science process",
+            "marks": 1
+          },
+          {
+            "description": "Included one safety rule",
+            "marks": 1
+          }
+        ]
+      },
+      "answer": "",
+      "hints": [
+        "Soap making uses saponification.",
+        "Think about safety with chemicals.",
+        "List the steps in order."
+      ],
+      "explanation": "This is a written task. Your teacher will mark it using the rubric.",
+      "misconception": "Soap making does not use science.",
+      "uncertain": []
+    }
+  ]
+}

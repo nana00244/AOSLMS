@@ -1,0 +1,296 @@
+{
+  "indicator": {
+    "code": "B4.2.1.3.1.1",
+    "subject": "Mathematics",
+    "level": "Basic 4",
+    "strand": "Algebra",
+    "sub_strand": "Patterns and Relationships",
+    "content_standard": "B4.2.1.3 Represent, describe and extend patterns and relationships, using charts and tables, to solve problems",
+    "objective": "Translate the information in a given problem into a table or char",
+    "source_page": 53
+  },
+  "spec": {
+    "skills": [
+      {"tag": "extract_data_to_table", "description": "Extract given data from a word problem and put it into a table.", "minQuestions": 2},
+      {"tag": "extend_pattern_table", "description": "Extend a pattern in a table based on a given rule or context.", "minQuestions": 2}
+    ],
+    "difficultyPlan": "20 questions: 5 at difficulty 1, 7 at difficulty 2, 5 at difficulty 3, 3 at difficulty 4.",
+    "misconceptions": [
+      "Misaligning data in the table.",
+      "Skipping the rule extension.",
+      "Confusing inputs and outputs."
+    ],
+    "needsTeacherAssessment": false
+  },
+  "questions": [
+    {
+      "skill_tag": "extract_data_to_table",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Ama has 3 bags. Each bag has 2 oranges. Which table correctly shows this?",
+      "options": [
+        "Bags: 1, 2, 3. Oranges: 2, 4, 6",
+        "Bags: 1, 2, 3. Oranges: 3, 6, 9",
+        "Bags: 2, 4, 6. Oranges: 1, 2, 3",
+        "Bags: 1, 2, 3. Oranges: 2, 3, 4"
+      ],
+      "answer": 0,
+      "hints": ["1 bag = 2 oranges.", "2 bags = 4 oranges."],
+      "explanation": "The table should show 1 bag -> 2 oranges, 2 bags -> 4 oranges, 3 bags -> 6 oranges.",
+      "misconception": "Adding 1 orange per bag.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "extend_pattern_table",
+      "type": "numeric",
+      "difficulty": 1,
+      "stem": "A table shows: Days: 1, 2, 3, 4. Height (cm): 2, 4, 6, __. What is the missing height?",
+      "answer": 8,
+      "check": "4*2",
+      "hints": ["The rule is multiply by 2.", "4 x 2."],
+      "explanation": "4 days x 2 cm = 8 cm.",
+      "misconception": "Saying 10.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "extract_data_to_table",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "A teacher has 1 box of pencils. Each box has 10 pencils. What is the input in a table showing 'boxes'?",
+      "options": ["1", "10", "Boxes", "Pencils"],
+      "answer": 0,
+      "hints": ["The input is the number of boxes.", "The output is the number of pencils."],
+      "explanation": "The input is the number of boxes (1).",
+      "misconception": "Thinking 10 is the input.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "extend_pattern_table",
+      "type": "numeric",
+      "difficulty": 1,
+      "stem": "Table: Number of cars: 1, 2, 3, 4. Number of wheels: 4, 8, 12, __. What is the missing number?",
+      "answer": 16,
+      "check": "4*4",
+      "hints": ["Each car has 4 wheels.", "4 x 4."],
+      "explanation": "4 cars x 4 wheels = 16 wheels.",
+      "misconception": "Saying 12.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "extract_data_to_table",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "A pupil buys 5 sweets for 1 cedi. Which table shows this?",
+      "options": [
+        "Cedis: 1, 2, 3. Sweets: 5, 10, 15",
+        "Cedis: 1, 2, 3. Sweets: 1, 2, 3",
+        "Sweets: 1, 2, 3. Cedis: 5, 10, 15",
+        "Cedis: 1, 2, 3. Sweets: 5, 6, 7"
+      ],
+      "answer": 0,
+      "hints": ["1 cedi = 5 sweets.", "2 cedis = 10 sweets."],
+      "explanation": "The table should show 5 sweets for each cedi.",
+      "misconception": "Adding 1 sweet per cedi.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "extend_pattern_table",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "A sequence adds 5. Table: Term 1: 2. Term 2: 7. Term 3: 12. Term 4: __.",
+      "answer": ["17"],
+      "hints": ["12 + 5 = ?", "Add 5 to the previous term."],
+      "explanation": "12 + 5 = 17.",
+      "misconception": "Saying 15.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "extract_data_to_table",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "A pupil reads 3 books a week. What is the correct table for 3 weeks?",
+      "options": [
+        "Weeks: 1, 2, 3. Books: 3, 6, 9",
+        "Weeks: 1, 2, 3. Books: 4, 5, 6",
+        "Weeks: 3, 6, 9. Books: 1, 2, 3",
+        "Weeks: 1, 2, 3. Books: 3, 4, 5"
+      ],
+      "answer": 0,
+      "hints": ["1 week = 3 books.", "2 weeks = 6 books."],
+      "explanation": "The table should show 3 books per week.",
+      "misconception": "Adding 1 book per week.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "extend_pattern_table",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "A table shows a pattern: 1 -> 5, 2 -> 10, 3 -> 15, 4 -> __. What is the missing value?",
+      "answer": 20,
+      "check": "4*5",
+      "hints": ["The rule is multiply by 5.", "4 x 5."],
+      "explanation": "4 x 5 = 20.",
+      "misconception": "Saying 25.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "extract_data_to_table",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "A bottle contains 2 litres of water. How many litres in 4 bottles?",
+      "answer": ["8"],
+      "hints": ["1 bottle = 2 litres.", "4 bottles = 4 x 2."],
+      "explanation": "4 x 2 = 8 litres.",
+      "misconception": "Saying 6 (adding 2+4).",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "extend_pattern_table",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "A table for a plant's growth is: Days: 2, 4, 6. Height: 4, 8, 12. What is the rule?",
+      "options": ["Height = Days x 2", "Height = Days + 2", "Height = Days x 4", "Height = Days + 4"],
+      "answer": 0,
+      "hints": ["2 days -> 4 cm.", "4 days -> 8 cm."],
+      "explanation": "The height is the number of days multiplied by 2.",
+      "misconception": "Thinking it is 'add 2' because 4+2=6.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "extract_data_to_table",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "A trotro takes 5 passengers per trip. How many passengers in 3 trips?",
+      "answer": 15,
+      "check": "5*3",
+      "hints": ["1 trip = 5 passengers.", "3 trips = 3 x 5."],
+      "explanation": "3 x 5 = 15 passengers.",
+      "misconception": "Saying 8 (adding 5+3).",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "extend_pattern_table",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Table: x: 1, 2, 3, 4. y: 10, 20, 30, __. What is the missing value?",
+      "answer": ["40"],
+      "hints": ["The rule is multiply by 10.", "4 x 10."],
+      "explanation": "4 x 10 = 40.",
+      "misconception": "Saying 50.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "extract_data_to_table",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "Create a table for the following: A pupil saves 5 cedis every week for 3 weeks.",
+      "hints": ["Use 'Weeks' as the input.", "Use 'Savings (cedis)' as the output.", "Fill in 1, 2, 3 for weeks."],
+      "explanation": "Week 1: 5 cedis, Week 2: 10 cedis, Week 3: 15 cedis.",
+      "rubric": {
+        "criteria": [
+          {"description": "Creates correct columns (Weeks, Savings).", "marks": 1},
+          {"description": "Fills in correct values (5, 10, 15).", "marks": 1}
+        ]
+      },
+      "misconception": "Listing the same value for each week.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "extend_pattern_table",
+      "type": "numeric",
+      "difficulty": 3,
+      "stem": "A pattern rule is 'multiply by 2, add 3'. Input 1 -> 5. Input 2 -> 7. Input 3 -> 9. What is the output for Input 5?",
+      "answer": 13,
+      "check": "5*2+3",
+      "hints": ["The rule is 2x + 3.", "For x=5: 5x2 + 3."],
+      "explanation": "5 x 2 = 10. 10 + 3 = 13.",
+      "misconception": "Adding 5 to the previous output.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "extend_pattern_table",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "A table follows the pattern: 1 -> 4, 2 -> 8, 3 -> 12. What is the rule?",
+      "options": ["Multiply by 4", "Add 4", "Multiply by 3", "Add 3"],
+      "answer": 0,
+      "hints": ["1 x 4 = 4.", "2 x 4 = 8."],
+      "explanation": "The rule is to multiply by 4.",
+      "misconception": "Thinking it's 'add 4' because 4+4=8.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "extract_data_to_table",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "A pupil has 20 pencils. He gives 2 pencils to each friend. Create a table showing the number of friends and the number of pencils given.",
+      "hints": ["1 friend gets 2 pencils.", "2 friends get 4 pencils.", "The rule is multiply by 2."],
+      "explanation": "Friends: 1, 2, 3, 4. Pencils: 2, 4, 6, 8.",
+      "rubric": {
+        "criteria": [
+          {"description": "Creates correct columns.", "marks": 1},
+          {"description": "Fills in correct values (2, 4, 6...).", "marks": 1}
+        ]
+      },
+      "misconception": "Listing friends in the output column.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "extend_pattern_table",
+      "type": "numeric",
+      "difficulty": 3,
+      "stem": "Table: Term 1: 10. Term 2: 15. Term 3: 20. Term 4: 25. Term 5: __.",
+      "answer": 30,
+      "check": "10+5*4",
+      "hints": ["The pattern adds 5.", "25 + 5."],
+      "explanation": "25 + 5 = 30.",
+      "misconception": "Saying 35.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "extract_data_to_table",
+      "type": "mcq",
+      "difficulty": 4,
+      "stem": "A table shows: 1 shirt -> 15 cedis, 2 shirts -> 30 cedis, 3 shirts -> 45 cedis. Which statement is true?",
+      "options": [
+        "The rule is multiply by 15.",
+        "The rule is add 15 to the number of shirts.",
+        "The rule is multiply by 10.",
+        "The rule is add 20."
+      ],
+      "answer": 0,
+      "hints": ["1 x 15 = 15.", "2 x 15 = 30."],
+      "explanation": "The rule is to multiply the number of shirts by 15.",
+      "misconception": "Thinking it's 'add 15' because 15+15=30.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "extend_pattern_table",
+      "type": "written",
+      "difficulty": 4,
+      "stem": "Create a table for the rule 'y = 3x + 2' for x values 1, 2, 3.",
+      "hints": ["For x=1, y = 3(1)+2 = 5.", "For x=2, y = 3(2)+2 = 8."],
+      "explanation": "x: 1, 2, 3. y: 5, 8, 11.",
+      "rubric": {
+        "criteria": [
+          {"description": "Calculates y values correctly.", "marks": 1},
+          {"description": "Presents data in a table format.", "marks": 1}
+        ]
+      },
+      "misconception": "Forgetting to add 2.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "extend_pattern_table",
+      "type": "numeric",
+      "difficulty": 4,
+      "stem": "A table has the pattern: 1 -> 2, 2 -> 6, 3 -> 12, 4 -> 20. What is the output for input 5?",
+      "answer": 30,
+      "check": "5*6",
+      "hints": ["The rule is x(x+1).", "For x=5: 5 x 6."],
+      "explanation": "The rule is x * (x+1). For 5, 5 * 6 = 30.",
+      "misconception": "Adding the previous output: 20 + 8 = 28.",
+      "uncertain": []
+    }
+  ]
+}

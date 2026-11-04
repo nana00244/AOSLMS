@@ -1,0 +1,283 @@
+{
+  "indicator": {
+    "code": "B5.3.1.1.1",
+    "subject": "Science",
+    "level": "Basic 5",
+    "strand": "SYSTEMS",
+    "sub_strand": "The Human Body Systems",
+    "content_standard": "B5.3.1.1 Recognise that different parts of the human body work interdependently to perform a specific function",
+    "objective": "Know the parts of the respiratory system in humans",
+    "source_page": 45
+  },
+  "spec": {
+    "skills": [
+      {"tag": "identify_parts", "description": "Name the main parts of the respiratory system: nose, windpipe (trachea), lungs, diaphragm.", "minQuestions": 4},
+      {"tag": "function_nose", "description": "State the function of the nose (breathing in air, filtering dust).", "minQuestions": 3},
+      {"tag": "function_windpipe", "description": "State the function of the windpipe (carries air to the lungs).", "minQuestions": 3},
+      {"tag": "function_lungs", "description": "State the function of the lungs (take oxygen into the body and remove carbon dioxide).", "minQuestions": 4},
+      {"tag": "function_diaphragm", "description": "State the function of the diaphragm (helps the lungs expand and contract during breathing).", "minQuestions": 3},
+      {"tag": "breathing_process", "description": "Describe simply how breathing happens (inhale air into lungs, exhale waste air out).", "minQuestions": 3}
+    ],
+    "difficultyPlan": "20 questions total — Difficulty 1: 5; Difficulty 2: 7; Difficulty 3: 5; Difficulty 4: 3.",
+    "misconceptions": [
+      "The lungs are in the stomach.",
+      "We breathe only to make noise.",
+      "The nose is not part of the respiratory system.",
+      "The diaphragm is a bone.",
+      "Breathing and respiration are the same thing.",
+      "Plants and humans breathe the same way."
+    ],
+    "needsTeacherAssessment": true
+  },
+  "questions": [
+    {
+      "skill_tag": "identify_parts",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which organ is the main part of the respiratory system where air goes in?",
+      "options": ["Nose", "Stomach", "Heart", "Liver"],
+      "answer": 0,
+      "hints": ["You breathe in through it.", "It is on your face."],
+      "explanation": "The nose is the main opening where air enters the respiratory system.",
+      "misconception": "The nose is not part of the respiratory system.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_parts",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which tube carries air from the nose to the lungs?",
+      "options": ["Oesophagus", "Windpipe", "Blood vessel", "Intestine"],
+      "answer": 1,
+      "hints": ["It is also called the trachea.", "Air travels down it."],
+      "explanation": "The windpipe (trachea) carries air from the nose to the lungs.",
+      "misconception": "The oesophagus carries air.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_parts",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which organs take oxygen from the air into the body?",
+      "options": ["Lungs", "Kidneys", "Stomach", "Brain"],
+      "answer": 0,
+      "hints": ["They are in the chest.", "They expand when you breathe in."],
+      "explanation": "The lungs take oxygen from the air into the body.",
+      "misconception": "The stomach takes in oxygen.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_parts",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which muscle helps the lungs expand and contract during breathing?",
+      "options": ["Diaphragm", "Biceps", "Heart", "Tongue"],
+      "answer": 0,
+      "hints": ["It is below the lungs.", "It moves up and down when you breathe."],
+      "explanation": "The diaphragm is the muscle below the lungs that helps them expand and contract.",
+      "misconception": "The diaphragm is a bone.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "function_lungs",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What do the lungs do?",
+      "options": ["Take oxygen into the body and remove carbon dioxide", "Digest food", "Pump blood", "Control the body"],
+      "answer": 0,
+      "hints": ["They help you breathe.", "They exchange gases."],
+      "explanation": "The lungs take oxygen into the body and remove carbon dioxide.",
+      "misconception": "The lungs digest food.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "function_nose",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "What is one function of the nose in breathing?",
+      "options": ["It filters dust from the air", "It pumps blood", "It digests food", "It stores air"],
+      "answer": 0,
+      "hints": ["Hairs in the nose trap dirt.", "It cleans the air before it goes to the lungs."],
+      "explanation": "The nose filters dust from the air before it enters the lungs.",
+      "misconception": "The nose only helps you smell.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "function_windpipe",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "What is the function of the windpipe?",
+      "options": ["It carries air to the lungs", "It carries food to the stomach", "It pumps blood", "It filters water"],
+      "answer": 0,
+      "hints": ["Air travels through it.", "It connects the nose to the lungs."],
+      "explanation": "The windpipe carries air from the nose to the lungs.",
+      "misconception": "The windpipe carries food.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "function_diaphragm",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "What does the diaphragm do during breathing?",
+      "options": ["It helps the lungs expand and contract", "It filters air", "It produces sound", "It carries air"],
+      "answer": 0,
+      "hints": ["It is a muscle.", "It moves to help you breathe in and out."],
+      "explanation": "The diaphragm helps the lungs expand and contract during breathing.",
+      "misconception": "The diaphragm is not involved in breathing.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "breathing_process",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "What happens when you breathe in?",
+      "options": ["Air enters the lungs", "Air leaves the lungs", "The lungs stop moving", "The diaphragm relaxes"],
+      "answer": 0,
+      "hints": ["You take air in.", "The lungs fill with air."],
+      "explanation": "When you breathe in, air enters the lungs.",
+      "misconception": "Breathing in means air leaves the lungs.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "function_lungs",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Why are the lungs important?",
+      "options": ["They help the body get oxygen and remove carbon dioxide", "They help digest food", "They pump blood", "They control the brain"],
+      "answer": 0,
+      "hints": ["Oxygen is needed for life.", "Carbon dioxide is a waste gas."],
+      "explanation": "The lungs are important because they help the body get oxygen and remove carbon dioxide.",
+      "misconception": "The lungs are not important.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_parts",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Name two parts of the respiratory system.",
+      "answer": ["nose and lungs", "windpipe and lungs", "nose and windpipe", "diaphragm and lungs"],
+      "hints": ["Think about where air enters.", "Think about where air goes."],
+      "explanation": "The main parts of the respiratory system include the nose, windpipe, lungs and diaphragm.",
+      "misconception": "Only the lungs are part of the respiratory system.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "breathing_process",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "What happens when you breathe out?",
+      "answer": ["air leaves the lungs", "air is pushed out of the lungs", "carbon dioxide is breathed out"],
+      "hints": ["You push air out.", "The lungs empty."],
+      "explanation": "When you breathe out, air (including carbon dioxide) leaves the lungs.",
+      "misconception": "Breathing out means air enters the lungs.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "function_nose",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Explain why we should breathe through the nose rather than the mouth.",
+      "answer": ["the nose filters dust and warms the air before it reaches the lungs", "the nose traps dust and dirt so the air is cleaner", "breathing through the nose cleans and warms the air"],
+      "hints": ["What do the hairs in the nose do?", "The nose cleans the air."],
+      "explanation": "Breathing through the nose is better because the nose filters dust and warms the air before it reaches the lungs.",
+      "misconception": "The nose does not filter air.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "function_windpipe",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "What is the function of the windpipe?",
+      "answer": ["it carries air from the nose to the lungs", "it is a tube that carries air to the lungs", "it transports air to the lungs"],
+      "hints": ["It is a tube.", "It connects the nose and lungs."],
+      "explanation": "The windpipe carries air from the nose to the lungs.",
+      "misconception": "The windpipe carries food.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "function_diaphragm",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "What is the function of the diaphragm?",
+      "answer": ["it helps the lungs expand and contract during breathing", "it is a muscle that helps you breathe", "it moves the lungs to help breathing"],
+      "hints": ["It is a muscle below the lungs.", "It helps you breathe in and out."],
+      "explanation": "The diaphragm is a muscle that helps the lungs expand and contract during breathing.",
+      "misconception": "The diaphragm is a bone.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "function_lungs",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "Which statement best describes the function of the lungs?",
+      "options": ["They take in oxygen and remove carbon dioxide", "They take in carbon dioxide and remove oxygen", "They digest food", "They pump blood around the body"],
+      "answer": 0,
+      "hints": ["Oxygen is needed by the body.", "Carbon dioxide is a waste gas."],
+      "explanation": "The lungs take in oxygen and remove carbon dioxide from the body.",
+      "misconception": "The lungs take in carbon dioxide.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "breathing_process",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "What happens to the diaphragm when you breathe in?",
+      "options": ["It moves down to help the lungs expand", "It moves up to squeeze the lungs", "It stops moving", "It turns into bone"],
+      "answer": 0,
+      "hints": ["The lungs need to fill with air.", "The diaphragm moves to make space."],
+      "explanation": "When you breathe in, the diaphragm moves down to help the lungs expand and fill with air.",
+      "misconception": "The diaphragm moves up when breathing in.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_parts",
+      "type": "drawing",
+      "difficulty": 3,
+      "stem": "Draw a simple diagram of the respiratory system. Label the nose, windpipe, lungs and diaphragm.",
+      "rubric": {
+        "criteria": [
+          {"description": "Drew a simple diagram showing the respiratory system", "marks": 1},
+          {"description": "Labeled the nose correctly", "marks": 1},
+          {"description": "Labeled the windpipe correctly", "marks": 1},
+          {"description": "Labeled the lungs correctly", "marks": 1},
+          {"description": "Labeled the diaphragm correctly", "marks": 1}
+        ]
+      },
+      "answer": "",
+      "hints": ["Start with the nose at the top.", "The windpipe goes down to the lungs.", "The diaphragm is below the lungs."],
+      "explanation": "This is a drawing task. Your teacher will mark it using the rubric.",
+      "misconception": "The lungs are in the stomach.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "breathing_process",
+      "type": "practical",
+      "difficulty": 4,
+      "stem": "In groups, make a simple model of breathing using a plastic bottle, balloons and rubber bands. Show how the balloon (lung) inflates when you pull the rubber sheet (diaphragm) down. Describe what happens.",
+      "rubric": {
+        "criteria": [
+          {"description": "Built a simple model of the respiratory system", "marks": 1},
+          {"description": "Showed the balloon inflating when the sheet was pulled down", "marks": 2},
+          {"description": "Explained that the diaphragm moving down helps the lungs fill with air", "marks": 2},
+          {"description": "Worked cooperatively in the group", "marks": 1}
+        ]
+      },
+      "answer": "",
+      "hints": ["The bottle is like the chest.", "The balloon is like the lung.", "The rubber sheet is like the diaphragm."],
+      "explanation": "This is a practical task. Your teacher will mark it using the rubric.",
+      "misconception": "The diaphragm is a bone.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "function_lungs",
+      "type": "short_answer",
+      "difficulty": 4,
+      "stem": "Explain why the lungs are important for life.",
+      "answer": ["they take oxygen from the air into the body and remove carbon dioxide, which is needed for life", "they help us breathe by taking in oxygen and removing carbon dioxide", "the lungs supply oxygen to the body and remove waste carbon dioxide"],
+      "hints": ["Oxygen is needed for energy.", "Carbon dioxide is a waste gas."],
+      "explanation": "The lungs are important because they supply oxygen to the body and remove carbon dioxide, which is necessary for life.",
+      "misconception": "The lungs are not important for life.",
+      "uncertain": []
+    }
+  ]
+}

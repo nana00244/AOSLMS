@@ -1,0 +1,280 @@
+{
+  "indicator": {
+    "code": "B6.2.1.4.1",
+    "subject": "Science",
+    "level": "Basic 6",
+    "strand": "CYCLES",
+    "sub_strand": "Earth Science",
+    "content_standard": "B6.2.1.4 Recognise water and air as important natural resources",
+    "objective": "Investigate ways of conserving water in the home, school and community",
+    "source_page": 59
+  },
+  "spec": {
+    "skills": [
+      {"tag": "define_conservation", "description": "Explain simply what conserving water means (using water wisely and avoiding waste).", "minQuestions": 3},
+      {"tag": "identify_home_uses", "description": "Identify activities at home that require water.", "minQuestions": 3},
+      {"tag": "identify_wasteful_actions", "description": "Recognise actions that waste water (e.g. leaving taps running, leaking pipes).", "minQuestions": 4},
+      {"tag": "conservation_methods", "description": "Identify ways to conserve water at home, school and community (e.g. turning off taps, fixing leaks, using buckets).", "minQuestions": 4},
+      {"tag": "importance_conservation", "description": "Explain why conserving water is important.", "minQuestions": 3},
+      {"tag": "design_flyer", "description": "Design a flyer or poster on water conservation.", "minQuestions": 3}
+    ],
+    "difficultyPlan": "20 questions total — Difficulty 1: 5; Difficulty 2: 7; Difficulty 3: 5; Difficulty 4: 3.",
+    "misconceptions": [
+      "Water is unlimited so there is no need to conserve it.",
+      "Leaving a tap running does not waste water.",
+      "Only adults can conserve water.",
+      "Conserving water means not using it at all.",
+      "Rainwater is not useful for conservation.",
+      "Fixing leaks is not important."
+    ],
+    "needsTeacherAssessment": true
+  },
+  "questions": [
+    {
+      "skill_tag": "define_conservation",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What does conserving water mean?",
+      "options": ["Using water wisely and avoiding waste", "Using as much water as you want", "Never using water", "Drinking all the water"],
+      "answer": 0,
+      "hints": ["Conserving means saving.", "You still use water, but you do not waste it."],
+      "explanation": "Conserving water means using it wisely and avoiding waste.",
+      "misconception": "Conserving water means not using it at all.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "define_conservation",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which statement best describes water conservation?",
+      "options": ["Using water carefully so it is not wasted", "Using water only once a week", "Using water only for drinking", "Using all the water in the house"],
+      "answer": 0,
+      "hints": ["Conservation is about avoiding waste.", "Think about turning off taps."],
+      "explanation": "Water conservation means using water carefully and not wasting it.",
+      "misconception": "Water conservation means not using water.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "define_conservation",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "What is water conservation?",
+      "answer": ["using water wisely and avoiding waste", "using water carefully without wasting it", "saving water"],
+      "hints": ["Think about turning off taps.", "It is about not wasting water."],
+      "explanation": "Water conservation is the wise use of water to avoid waste.",
+      "misconception": "Water conservation means not using water.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_home_uses",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which of these activities at home requires water?",
+      "options": ["Cooking", "Sleeping", "Reading a book", "Watching television"],
+      "answer": 0,
+      "hints": ["Cooking uses water.", "You need water to boil rice."],
+      "explanation": "Cooking requires water. Other activities like sleeping, reading and watching TV do not require water.",
+      "misconception": "Water is only used for drinking.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_home_uses",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which set lists activities at home that use water?",
+      "options": ["Bathing, cooking, washing clothes", "Sleeping, reading, writing", "Singing, dancing, running", "Watching TV, playing football, listening to radio"],
+      "answer": 0,
+      "hints": ["Which activities need water?", "Bathing and cooking both need water."],
+      "explanation": "Bathing, cooking and washing clothes are activities at home that require water.",
+      "misconception": "Water is only for drinking.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_home_uses",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Name two activities at home that require water.",
+      "answer": ["bathing and cooking", "cooking and washing clothes", "bathing and washing", "drinking and cooking"],
+      "hints": ["Think about what you do in the bathroom.", "Think about what you do in the kitchen."],
+      "explanation": "Activities at home that require water include bathing, cooking, washing clothes and drinking.",
+      "misconception": "Only drinking needs water.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_wasteful_actions",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which of these actions wastes water?",
+      "options": ["Leaving a tap running", "Turning off the tap after use", "Using a bucket to wash", "Fixing a leaking pipe"],
+      "answer": 0,
+      "hints": ["Which action lets water flow for no reason?", "Running taps waste water."],
+      "explanation": "Leaving a tap running wastes water. Turning off taps, using buckets and fixing leaks save water.",
+      "misconception": "Leaving a tap running does not waste water.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_wasteful_actions",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which of these is a water-wasting action?",
+      "options": ["Leaving a leaking pipe unfixed", "Using a bucket for bathing", "Turning off the tap while brushing", "Collecting rainwater"],
+      "answer": 0,
+      "hints": ["A leak lets water drip away.", "Fixing leaks saves water."],
+      "explanation": "Leaving a leaking pipe unfixed wastes water. The other actions help conserve water.",
+      "misconception": "Leaking pipes do not waste water.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_wasteful_actions",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Give one example of an action that wastes water.",
+      "answer": ["leaving a tap running", "leaving a leaking pipe", "taking very long showers", "using a hose to wash a car"],
+      "hints": ["Think about a tap left open.", "Think about leaks."],
+      "explanation": "Actions that waste water include leaving taps running, ignoring leaks and using excessive water.",
+      "misconception": "Water cannot be wasted.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_wasteful_actions",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "Ama leaves the tap running while she brushes her teeth. What is the best advice?",
+      "options": ["Turn off the tap while brushing", "Leave the tap running", "Open the tap wider", "Use more water"],
+      "answer": 0,
+      "hints": ["Turning off the tap saves water.", "You only need water to rinse."],
+      "explanation": "Ama should turn off the tap while brushing her teeth to conserve water.",
+      "misconception": "Leaving the tap running is fine.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "conservation_methods",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which of these is a way to conserve water at home?",
+      "options": ["Using a bucket instead of a hose to wash a car", "Leaving the tap running", "Ignoring leaking pipes", "Taking very long showers"],
+      "answer": 0,
+      "hints": ["A bucket uses less water than a hose.", "It is a way to save water."],
+      "explanation": "Using a bucket instead of a hose to wash a car conserves water.",
+      "misconception": "Water cannot be conserved.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "conservation_methods",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "Which method conserves water at school?",
+      "options": ["Turning off taps after use", "Leaving taps running", "Wasting water during break", "Opening all taps"],
+      "answer": 0,
+      "hints": ["Turn off taps when not in use.", "This saves water."],
+      "explanation": "Turning off taps after use conserves water at school.",
+      "misconception": "Only adults can conserve water.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "conservation_methods",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Give one way to conserve water at home.",
+      "answer": ["turn off taps after use", "fix leaking pipes", "use a bucket instead of a hose", "collect rainwater"],
+      "hints": ["Think about taps.", "Think about leaks."],
+      "explanation": "Ways to conserve water at home include turning off taps, fixing leaks, using buckets and collecting rainwater.",
+      "misconception": "Water cannot be conserved.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "conservation_methods",
+      "type": "mcq",
+      "difficulty": 4,
+      "stem": "A community wants to conserve water. Which plan is BEST?",
+      "options": ["Fix leaking pipes and educate people to turn off taps", "Leave taps running", "Use more water for cleaning", "Ignore leaks"],
+      "answer": 0,
+      "hints": ["Fixing leaks saves water.", "Education helps people conserve."],
+      "explanation": "The best plan is to fix leaking pipes and educate people to turn off taps. This saves water in the community.",
+      "misconception": "Leaks are not important.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "importance_conservation",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Why is conserving water important?",
+      "options": ["To ensure there is enough water for everyone", "To waste more water", "To make water dirty", "To increase water bills"],
+      "answer": 0,
+      "hints": ["Water is limited.", "Conserving helps everyone have water."],
+      "explanation": "Conserving water is important to ensure there is enough clean water for everyone now and in the future.",
+      "misconception": "Water is unlimited.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "importance_conservation",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Why should we conserve water?",
+      "answer": ["to ensure there is enough water for everyone", "water is limited and we need it for many things", "to avoid water shortage"],
+      "hints": ["Think about dry seasons.", "Water is needed for life."],
+      "explanation": "We should conserve water because it is limited and needed for drinking, cooking, washing and farming.",
+      "misconception": "Water is unlimited.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "importance_conservation",
+      "type": "mcq",
+      "difficulty": 4,
+      "stem": "A pupil says, 'Water is everywhere, so we don't need to conserve it.' What is the best correction?",
+      "options": ["Yes, water is everywhere", "No, clean water is limited and we must use it wisely", "No, water is only in rivers", "No, water is not important"],
+      "answer": 1,
+      "hints": ["Clean water is not always available.", "Conservation helps ensure supply."],
+      "explanation": "Clean water is limited, so we must conserve it to ensure there is enough for everyone.",
+      "misconception": "Water is unlimited.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "design_flyer",
+      "type": "drawing",
+      "difficulty": 3,
+      "stem": "Design a simple flyer or poster encouraging people to conserve water. Include at least two water-saving actions and a short message.",
+      "rubric": {
+        "criteria": [
+          {"description": "Included at least two correct water-saving actions", "marks": 2},
+          {"description": "Included a short encouraging message", "marks": 1},
+          {"description": "Used clear drawings or symbols", "marks": 2},
+          {"description": "Flyer is neat and easy to understand", "marks": 1}
+        ]
+      },
+      "answer": "",
+      "hints": ["Think about turning off taps and fixing leaks.", "Write a message like 'Save water!'"],
+      "explanation": "This is a drawing task. Your teacher will mark it using the rubric.",
+      "misconception": "Water conservation is not important.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "design_flyer",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Write a short message for a poster encouraging water conservation.",
+      "answer": ["save water, save life", "turn off the tap, save water", "every drop counts", "conserve water for the future"],
+      "hints": ["Use a short, catchy phrase.", "Encourage saving water."],
+      "explanation": "A short message like 'Save water, save life' encourages people to conserve water.",
+      "misconception": "Messages do not help.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "design_flyer",
+      "type": "written",
+      "difficulty": 4,
+      "stem": "List three rules you would put on a water-conservation poster for your school.",
+      "rubric": {
+        "criteria": [
+          {"description": "Listed three clear and correct rules for saving water", "marks": 3},
+          {"description": "Rules are easy to understand", "marks": 1}
+        ]
+      },
+      "answer": "",
+      "hints": ["Think about taps, leaks and using buckets.", "Write short rules."],
+      "explanation": "This is a written task. Your teacher will mark it using the rubric.",
+      "misconception": "Rules are not needed.",
+      "uncertain": []
+    }
+  ]
+}

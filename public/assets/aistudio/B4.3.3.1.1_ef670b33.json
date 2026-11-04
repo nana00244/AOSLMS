@@ -1,0 +1,286 @@
+{
+  "indicator": {
+    "code": "B4.3.3.1.1",
+    "subject": "Mathematics",
+    "level": "Basic 4",
+    "strand": "Geometry and Measurement",
+    "sub_strand": "Measurement (Perimeter and Area)",
+    "content_standard": "B4.3.3.1 Demonstrate understanding of perimeter of regular and irregular shapes",
+    "objective": "Estimate perimeter using referents for centimetre or metre",
+    "source_page": 60
+  },
+  "spec": {
+    "skills": [
+      {"tag": "estimate_perimeter", "description": "Estimate the perimeter of an object using a physical referent (like a hand-span or a pencil).", "minQuestions": 2},
+      {"tag": "measure_perimeter", "description": "Measure the actual perimeter of an object using a ruler or tape measure.", "minQuestions": 2}
+    ],
+    "difficultyPlan": "20 questions: 5 at difficulty 1, 7 at difficulty 2, 5 at difficulty 3, 3 at difficulty 4.",
+    "misconceptions": [
+      "Forgetting to count all sides.",
+      "Using the wrong referent."
+    ],
+    "needsTeacherAssessment": true
+  },
+  "questions": [
+    {
+      "skill_tag": "estimate_perimeter",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "To estimate the perimeter of your exercise book, which referent is best?",
+      "options": ["Your hand-span", "A metre rule", "A 5-metre tape measure", "Your foot"],
+      "answer": 0,
+      "hints": ["An exercise book is small.", "Which object is closest in size?"],
+      "explanation": "A hand-span is a good referent for small objects like an exercise book.",
+      "misconception": "Choosing a metre rule which is too large.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "measure_perimeter",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Perimeter is the distance around the outside of a shape. How do you find it?",
+      "options": ["Multiply the length and width.", "Add all the side lengths together.", "Subtract the length from the width.", "Divide the area by 2."],
+      "answer": 1,
+      "hints": ["Perimeter is a distance.", "You walk around the edge."],
+      "explanation": "You find the perimeter by adding all the side lengths together.",
+      "misconception": "Confusing perimeter with area.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "estimate_perimeter",
+      "type": "numeric",
+      "difficulty": 1,
+      "stem": "A pupil estimates that one side of a table is 3 hand-spans long. The opposite side is also 3 hand-spans. What is the estimated total perimeter in hand-spans if the table is a square?",
+      "answer": 12,
+      "check": "3*4",
+      "hints": ["A square has 4 equal sides.", "3 + 3 + 3 + 3."],
+      "explanation": "4 sides x 3 hand-spans = 12 hand-spans.",
+      "misconception": "Adding only 2 sides.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "measure_perimeter",
+      "type": "numeric",
+      "difficulty": 1,
+      "stem": "A square has sides of 5 cm. What is its perimeter?",
+      "answer": 20,
+      "check": "5*4",
+      "hints": ["A square has 4 equal sides.", "5 + 5 + 5 + 5."],
+      "explanation": "5 x 4 = 20 cm.",
+      "misconception": "Doing 5 x 5.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "measure_perimeter",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "A rectangle has a length of 6 cm and a width of 3 cm. What is its perimeter?",
+      "options": ["9 cm", "18 cm", "12 cm", "24 cm"],
+      "answer": 1,
+      "hints": ["Add all sides: 6 + 3 + 6 + 3.", "Or use 2(length + width)."],
+      "explanation": "6 + 3 + 6 + 3 = 18 cm.",
+      "misconception": "Adding only length and width (9 cm).",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "estimate_perimeter",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "A pupil estimates the perimeter of a door using their feet. The door is about 4 feet high and 2 feet wide. What is the estimated perimeter?",
+      "options": ["6 feet", "8 feet", "12 feet", "16 feet"],
+      "answer": 2,
+      "hints": ["Perimeter = 2(height + width).", "2(4 + 2) = 2(6)."],
+      "explanation": "2(4 + 2) = 12 feet.",
+      "misconception": "Adding 4 + 2 = 6.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "measure_perimeter",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "What is the perimeter of a triangle with sides 4 cm, 5 cm, and 6 cm?",
+      "answer": 15,
+      "check": "4+5+6",
+      "hints": ["Add all three sides.", "4 + 5 + 6."],
+      "explanation": "4 + 5 + 6 = 15 cm.",
+      "misconception": "Multiplying the sides.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "estimate_perimeter",
+      "type": "written",
+      "difficulty": 2,
+      "stem": "Explain how you would use a pencil to estimate the perimeter of a book.",
+      "hints": ["Place the pencil along the edge.", "Count how many pencils fit around."],
+      "explanation": "You place the pencil along one side of the book, mark where it ends, and keep moving it. Count the number of pencil lengths it takes to go all the way around the book.",
+      "rubric": {
+        "criteria": [
+          {"description": "Mentions placing the pencil end-to-end around the edge.", "marks": 1},
+          {"description": "Mentions counting the number of pencils.", "marks": 1}
+        ]
+      },
+      "misconception": "Thinking a pencil measures area.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "measure_perimeter",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "A rectangular garden is 10 m long and 5 m wide. What is the perimeter?",
+      "options": ["15 m", "30 m", "50 m", "20 m"],
+      "answer": 1,
+      "hints": ["10 + 5 + 10 + 5.", "2(10 + 5)."],
+      "explanation": "2(10 + 5) = 30 m.",
+      "misconception": "Doing 10 x 5 = 50.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "estimate_perimeter",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which referent would you use to estimate the perimeter of a classroom floor?",
+      "options": ["A ruler", "A hand-span", "A metre rule", "A matchstick"],
+      "answer": 2,
+      "hints": ["A classroom is large.", "A metre rule is 100 cm."],
+      "explanation": "A metre rule is appropriate for large distances like a classroom floor.",
+      "misconception": "Choosing a matchstick.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "measure_perimeter",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "An irregular shape has sides of 3 cm, 4 cm, 5 cm, and 6 cm. What is its perimeter?",
+      "answer": 18,
+      "check": "3+4+5+6",
+      "hints": ["Add all the side lengths.", "3 + 4 + 5 + 6."],
+      "explanation": "3 + 4 + 5 + 6 = 18 cm.",
+      "misconception": "Multiplying them.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "estimate_perimeter",
+      "type": "written",
+      "difficulty": 2,
+      "stem": "A pupil estimates the perimeter of a table is 10 hand-spans. They measure with a ruler and find it is 120 cm. Is their estimate reasonable? Explain.",
+      "hints": ["How long is one hand-span approximately?", "120 cm / 12 cm."],
+      "explanation": "Yes, it is reasonable. If one hand-span is about 12 cm, then 10 hand-spans is about 120 cm.",
+      "rubric": {
+        "criteria": [
+          {"description": "States the estimate is reasonable.", "marks": 1},
+          {"description": "Explains the connection between hand-spans and centimetres.", "marks": 1}
+        ]
+      },
+      "misconception": "Saying it is unreasonable because hand-spans and cm are different units.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "measure_perimeter",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "A square has a perimeter of 24 cm. What is the length of one side?",
+      "options": ["4 cm", "6 cm", "8 cm", "12 cm"],
+      "answer": 1,
+      "hints": ["4 equal sides.", "24 ÷ 4."],
+      "explanation": "24 / 4 = 6 cm.",
+      "misconception": "Dividing by 2.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "estimate_perimeter",
+      "type": "numeric",
+      "difficulty": 3,
+      "stem": "Using a ruler, a pupil finds the perimeter of a rectangle is 30 cm. If the length is 10 cm, what is the width?",
+      "answer": 5,
+      "check": "(30/2)-10",
+      "hints": ["Perimeter = 2(L+W).", "30 = 2(10 + W).", "15 = 10 + W."],
+      "explanation": "30 / 2 = 15. 15 - 10 = 5 cm.",
+      "misconception": "Saying the width is 20 cm.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "measure_perimeter",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "Explain how to measure the perimeter of an irregular shape like a leaf.",
+      "hints": ["Can you use a ruler easily on a curved edge?", "Think about using a string."],
+      "explanation": "You can place a string along the edge of the leaf, mark the end, then straighten the string and measure it with a ruler.",
+      "rubric": {
+        "criteria": [
+          {"description": "Suggests using a string.", "marks": 1},
+          {"description": "Explains measuring the straightened string with a ruler.", "marks": 1}
+        ]
+      },
+      "misconception": "Trying to measure curved edges with a straight ruler directly.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "estimate_perimeter",
+      "type": "numeric",
+      "difficulty": 3,
+      "stem": "A rectangular window is 1.5 m long and 1 m wide. What is its perimeter?",
+      "answer": 5,
+      "check": "2*(1.5+1)",
+      "hints": ["2(1.5 + 1).", "2(2.5)."],
+      "explanation": "2 * 2.5 = 5 m.",
+      "misconception": "Doing 1.5 + 1 = 2.5.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "estimate_perimeter",
+      "type": "written",
+      "difficulty": 4,
+      "stem": "Two rectangles have the same perimeter. One is 6 cm by 4 cm. The other has a length of 8 cm. What is its width? Explain.",
+      "hints": ["Find the perimeter of the first rectangle.", "Perimeter = 2(6+4) = 20.", "Solve 2(8+W) = 20."],
+      "explanation": "The perimeter is 20 cm. For the second rectangle, 2(8+W) = 20, so 8+W = 10, W = 2 cm.",
+      "rubric": {
+        "criteria": [
+          {"description": "Calculates the perimeter of the first rectangle (20).", "marks": 1},
+          {"description": "Solves for the width of the second rectangle (2).", "marks": 1}
+        ]
+      },
+      "misconception": "Assuming the widths are equal.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "measure_perimeter",
+      "type": "mcq",
+      "difficulty": 4,
+      "stem": "A square and a rectangle have the same perimeter of 36 cm. The rectangle has a length of 10 cm. Which shape has the longer side?",
+      "options": ["The square (9 cm)", "The rectangle (10 cm)", "They are the same", "Cannot tell"],
+      "answer": 1,
+      "hints": ["Square side: 36 / 4 = 9.", "Rectangle length = 10."],
+      "explanation": "The square has sides of 9 cm, the rectangle has a length of 10 cm. The rectangle's side is longer.",
+      "misconception": "Thinking the square is always larger.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "measure_perimeter",
+      "type": "numeric",
+      "difficulty": 4,
+      "stem": "What is the perimeter of a regular hexagon (6 sides) with a side length of 7 cm?",
+      "answer": 42,
+      "check": "6*7",
+      "hints": ["A regular hexagon has 6 equal sides.", "6 x 7."],
+      "explanation": "6 x 7 = 42 cm.",
+      "misconception": "Doing 4 x 7 = 28.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "estimate_perimeter",
+      "type": "written",
+      "difficulty": 4,
+      "stem": "Describe a situation where estimating the perimeter is more useful than measuring it exactly.",
+      "hints": ["Think about building a fence or putting a border around a board.", "When would you need a quick answer?"],
+      "explanation": "When building a fence, you might estimate the perimeter to buy enough materials before taking exact measurements. Or when a teacher wants a quick idea of the size of the classroom.",
+      "rubric": {
+        "criteria": [
+          {"description": "Gives a valid real-life situation.", "marks": 1},
+          {"description": "Explains why estimation is better in that context.", "marks": 1}
+        ]
+      },
+      "misconception": "Thinking estimation is always worse than exact measurement.",
+      "uncertain": []
+    }
+  ]
+}

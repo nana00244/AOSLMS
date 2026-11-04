@@ -1,0 +1,275 @@
+{
+  "indicator": {
+    "code": "B6.1.2.2.1",
+    "subject": "Science",
+    "level": "Basic 6",
+    "strand": "DIVERSITY OF MATTER",
+    "sub_strand": "Materials",
+    "content_standard": "B6.1.2.2 Understand mixtures, the types of formation, uses and ways of separating them into their components",
+    "objective": "Examine some uses of mixtures in everyday life",
+    "source_page": 57
+  },
+  "spec": {
+    "skills": [
+      {"tag": "identify_mixtures", "description": "Identify everyday examples of mixtures (e.g. salt solution, sugar solution, concrete, sand and water, gari and beans).", "minQuestions": 4},
+      {"tag": "name_components", "description": "Name the components of a given mixture.", "minQuestions": 3},
+      {"tag": "describe_uses", "description": "Describe the daily uses of mixtures (e.g. salt solution for cooking, concrete for building).", "minQuestions": 4},
+      {"tag": "why_mixtures_useful", "description": "Explain why mixtures are useful in everyday life.", "minQuestions": 3},
+      {"tag": "prepare_simple_mixture", "description": "Describe how to prepare a simple mixture (e.g. salt solution, concrete).", "minQuestions": 3},
+      {"tag": "classify_mixture_use", "description": "Classify a mixture according to its use (food, building, medicine, etc.).", "minQuestions": 3}
+    ],
+    "difficultyPlan": "20 questions total — Difficulty 1: 5; Difficulty 2: 7; Difficulty 3: 5; Difficulty 4: 3.",
+    "misconceptions": [
+      "Mixtures are only made in science labs.",
+      "Concrete is a single substance, not a mixture.",
+      "Salt solution is not a mixture.",
+      "Gari and beans is not a mixture.",
+      "Mixtures have no everyday uses.",
+      "All mixtures look the same."
+    ],
+    "needsTeacherAssessment": true
+  },
+  "questions": [
+    {
+      "skill_tag": "identify_mixtures",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which of these is an everyday example of a mixture?",
+      "options": ["Salt solution", "Pure water", "A single iron nail", "A piece of chalk"],
+      "answer": 0,
+      "hints": ["A mixture has two or more substances combined.", "Salt and water together."],
+      "explanation": "Salt solution is a mixture of salt and water.",
+      "misconception": "Salt solution is not a mixture.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_mixtures",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which of these is a mixture used for building?",
+      "options": ["Concrete", "Sugar solution", "Salt solution", "Gari and beans"],
+      "answer": 0,
+      "hints": ["It is used to build houses.", "It is made from cement, sand and water."],
+      "explanation": "Concrete is a mixture used for building.",
+      "misconception": "Concrete is a single substance.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_mixtures",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Name two everyday examples of mixtures.",
+      "answer": ["salt solution and concrete", "sugar solution and sand and water", "gari and beans, salt solution", "salt solution, concrete"],
+      "hints": ["Think about cooking and building.", "One is food, one is for building."],
+      "explanation": "Everyday mixtures include salt solution, sugar solution, concrete, sand and water, and gari and beans.",
+      "misconception": "Mixtures are only in labs.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_mixtures",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "A pupil mixes gari and beans in a bowl. What type of mixture is this?",
+      "options": ["A solid-solid mixture", "A liquid-liquid mixture", "A gas-liquid mixture", "A solid-liquid mixture"],
+      "answer": 0,
+      "hints": ["Both gari and beans are solids.", "Two solids mixed together."],
+      "explanation": "Gari and beans form a solid-solid mixture because both are solids.",
+      "misconception": "Gari and beans is not a mixture.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "name_components",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "What are the components of a salt solution?",
+      "options": ["Salt and water", "Sugar and water", "Sand and water", "Oil and water"],
+      "answer": 0,
+      "hints": ["What two things are mixed together?", "Salt and a liquid."],
+      "explanation": "A salt solution is made of salt and water.",
+      "misconception": "Salt solution has only salt.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "name_components",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Name the components of concrete.",
+      "answer": ["cement, sand and water", "cement, sand, gravel and water", "cement and sand"],
+      "hints": ["Concrete is used for building.", "It is made from cement and other materials."],
+      "explanation": "Concrete is made from cement, sand, gravel and water.",
+      "misconception": "Concrete is a single substance.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "name_components",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "What are the components of gari and beans?",
+      "options": ["Gari and beans", "Salt and water", "Cement and sand", "Sugar and water"],
+      "answer": 0,
+      "hints": ["The mixture is named after its components.", "Two solids are mixed."],
+      "explanation": "Gari and beans is a mixture of gari and beans.",
+      "misconception": "Gari and beans is a single substance.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_uses",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What is salt solution used for?",
+      "options": ["Cooking", "Building houses", "Making wires", "Washing clothes"],
+      "answer": 0,
+      "hints": ["Salt solution is used in food.", "It is used to add flavour."],
+      "explanation": "Salt solution is used for cooking and flavouring food.",
+      "misconception": "Salt solution is not used for anything.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_uses",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "What is concrete used for?",
+      "options": ["Building houses and bridges", "Cooking food", "Making wires", "Washing clothes"],
+      "answer": 0,
+      "hints": ["It is a building material.", "It is strong and hard."],
+      "explanation": "Concrete is used for building houses, bridges, and other structures.",
+      "misconception": "Concrete is only used in labs.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_uses",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "State one use of a mixture in everyday life.",
+      "answer": ["salt solution for cooking", "concrete for building", "sugar solution for drinks", "gari and beans for food"],
+      "hints": ["Think about cooking or building.", "Mixtures are used in food and construction."],
+      "explanation": "Mixtures are used for cooking (salt solution), building (concrete), and food (gari and beans).",
+      "misconception": "Mixtures have no uses.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_uses",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "Why is concrete useful in building?",
+      "options": ["It is strong and hard when it dries", "It is soft and sticky", "It is transparent", "It is light and fluffy"],
+      "answer": 0,
+      "hints": ["Buildings need strong materials.", "Concrete becomes hard."],
+      "explanation": "Concrete is useful in building because it is strong and hard when it dries.",
+      "misconception": "Concrete is soft and weak.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "why_mixtures_useful",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Why are mixtures useful in everyday life?",
+      "options": ["They combine useful properties of different substances", "They are always simple", "They are only used in labs", "They have no useful properties"],
+      "answer": 0,
+      "hints": ["Mixtures can have combined benefits.", "Think about concrete being strong."],
+      "explanation": "Mixtures are useful because they combine the properties of different substances to serve a purpose.",
+      "misconception": "Mixtures are not useful.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "why_mixtures_useful",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Explain why mixtures are useful in everyday life.",
+      "answer": ["they combine different substances to make something useful, like concrete for building", "mixtures combine useful properties of substances", "they are used in cooking, building and food"],
+      "hints": ["Think about concrete for building.", "Think about salt solution for cooking."],
+      "explanation": "Mixtures are useful because they combine different substances to make useful products like concrete for building and salt solution for cooking.",
+      "misconception": "Mixtures have no usefulness.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "why_mixtures_useful",
+      "type": "mcq",
+      "difficulty": 4,
+      "stem": "A pupil says, 'Mixtures are only made in science laboratories.' What is the best correction?",
+      "options": ["Yes, mixtures are only made in labs", "No, mixtures are common in everyday life, such as salt solution and concrete", "No, mixtures are only made in factories", "No, mixtures are not real"],
+      "answer": 1,
+      "hints": ["Think about salt solution at home.", "Mixtures are everywhere."],
+      "explanation": "Mixtures are common in everyday life, such as salt solution in cooking and concrete in building.",
+      "misconception": "Mixtures are only in labs.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "prepare_simple_mixture",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "How do you prepare a salt solution?",
+      "options": ["Add salt to water and stir", "Add sand to water and stir", "Add salt to oil and stir", "Add salt to cement and stir"],
+      "answer": 0,
+      "hints": ["Salt solution is salt and water.", "Stir to dissolve the salt."],
+      "explanation": "To prepare a salt solution, add salt to water and stir until it dissolves.",
+      "misconception": "Salt solution is made with sand.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "prepare_simple_mixture",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Describe how to prepare a sugar solution.",
+      "answer": ["add sugar to water and stir until it dissolves", "mix sugar with water and stir", "put sugar in water and stir"],
+      "hints": ["Sugar is a solid, water is a liquid.", "Stir to dissolve."],
+      "explanation": "To prepare a sugar solution, add sugar to water and stir until it dissolves.",
+      "misconception": "Sugar solution is made without water.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "prepare_simple_mixture",
+      "type": "practical",
+      "difficulty": 3,
+      "stem": "In groups, prepare a simple mixture (salt solution or sand and water). Describe the steps you took and state what type of mixture you made.",
+      "rubric": {
+        "criteria": [
+          {"description": "Prepared a simple mixture correctly", "marks": 2},
+          {"description": "Stated the type of mixture (solid-liquid or solid-solid)", "marks": 1},
+          {"description": "Named the components of the mixture", "marks": 1},
+          {"description": "Worked cooperatively in the group", "marks": 1}
+        ]
+      },
+      "answer": "",
+      "hints": ["Add a solid to a liquid.", "Stir to mix.", "Name what you mixed."],
+      "explanation": "This is a practical task. Your teacher will mark it using the rubric.",
+      "misconception": "Mixtures are only in labs.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "classify_mixture_use",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which mixture is used for food?",
+      "options": ["Salt solution", "Concrete", "Cement", "Sand and water"],
+      "answer": 0,
+      "hints": ["Which mixture is used in cooking?", "Salt and water."],
+      "explanation": "Salt solution is used in food for cooking and flavouring.",
+      "misconception": "Salt solution is not for food.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "classify_mixture_use",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "Classify concrete according to its use.",
+      "options": ["Building material", "Food", "Medicine", "Cleaning agent"],
+      "answer": 0,
+      "hints": ["Concrete is used to build houses.", "It is not eaten."],
+      "explanation": "Concrete is a building material used for construction.",
+      "misconception": "Concrete is used for food.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "classify_mixture_use",
+      "type": "short_answer",
+      "difficulty": 4,
+      "stem": "Classify salt solution, concrete, and gari and beans according to their uses.",
+      "answer": ["salt solution - food; concrete - building; gari and beans - food", "salt solution for food, concrete for building, gari and beans for food", "salt solution: food; concrete: building; gari and beans: food"],
+      "hints": ["One is for building.", "Two are foods."],
+      "explanation": "Salt solution and gari and beans are used for food, while concrete is used for building.",
+      "misconception": "All mixtures have the same use.",
+      "uncertain": []
+    }
+  ]
+}

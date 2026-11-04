@@ -10,4 +10,5 @@ import App from './App';
 import './styles.css';
 import './readability.css';
 import './score-grid.css';
+import './pages/khan-academy.css';
 createRoot(document.getElementById('root')!).render(<App />);

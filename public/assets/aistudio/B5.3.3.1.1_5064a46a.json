@@ -1,0 +1,283 @@
+{
+  "indicator": {
+    "code": "B5.3.3.1.1",
+    "subject": "Science",
+    "level": "Basic 5",
+    "strand": "SYSTEMS",
+    "sub_strand": "Ecosystems",
+    "content_standard": "B5.3.3.1 Show understanding of ecosystem, interdependency of organisms in an ecosystem and appreciate the interactions",
+    "objective": "Know how various organisms are adapted to survive in their habitat",
+    "source_page": 46
+  },
+  "spec": {
+    "skills": [
+      {"tag": "define_habitat", "description": "Define habitat as the natural home of a plant or animal.", "minQuestions": 3},
+      {"tag": "examples_habitats", "description": "Identify examples of habitats (e.g. water, land, trees, soil).", "minQuestions": 3},
+      {"tag": "adaptation_meaning", "description": "Explain simply that adaptation means features that help an organism survive in its habitat.", "minQuestions": 3},
+      {"tag": "animal_adaptations", "description": "Describe how specific animals are adapted to their habitat (e.g. fish have gills and fins for water; birds have wings for flying; camels have humps for dry areas).", "minQuestions": 4},
+      {"tag": "plant_adaptations", "description": "Describe how specific plants are adapted to their habitat (e.g. cacti have spines to reduce water loss; water lilies have flat leaves to float).", "minQuestions": 3},
+      {"tag": "why_adaptation_matters", "description": "Explain why adaptation is important for survival (e.g. finding food, escaping danger).", "minQuestions": 4}
+    ],
+    "difficultyPlan": "20 questions total — Difficulty 1: 5; Difficulty 2: 7; Difficulty 3: 5; Difficulty 4: 3.",
+    "misconceptions": [
+      "All animals can live in any habitat.",
+      "Fish can live on land.",
+      "Birds live in water.",
+      "Adaptation means the animal changes its body instantly.",
+      "Plants do not need to adapt.",
+      "A habitat is just any place."
+    ],
+    "needsTeacherAssessment": true
+  },
+  "questions": [
+    {
+      "skill_tag": "define_habitat",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What is a habitat?",
+      "options": ["The natural home of a plant or animal", "A type of food", "A kind of weather", "A tool for farming"],
+      "answer": 0,
+      "hints": ["Where does an animal live?", "It is its natural home."],
+      "explanation": "A habitat is the natural home of a plant or animal.",
+      "misconception": "A habitat is just any place.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "define_habitat",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which of these best describes a habitat?",
+      "options": ["A place where an organism lives naturally", "A place where people go to shop", "A type of school", "A kind of vehicle"],
+      "answer": 0,
+      "hints": ["It is about where living things live.", "It is their natural home."],
+      "explanation": "A habitat is the natural home where an organism lives.",
+      "misconception": "A habitat is any place.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "define_habitat",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "What is a habitat?",
+      "answer": ["the natural home of a plant or animal", "the home of a living thing", "where an organism lives naturally"],
+      "hints": ["Think about where fish live.", "It is a natural home."],
+      "explanation": "A habitat is the natural home of a plant or animal.",
+      "misconception": "A habitat is just any place.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "examples_habitats",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which of these is a habitat for fish?",
+      "options": ["Water", "Desert", "Tree top", "Underground burrow"],
+      "answer": 0,
+      "hints": ["Where do fish live?", "They swim."],
+      "explanation": "Water is the habitat for fish. They are adapted to live in water.",
+      "misconception": "Fish can live on land.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "examples_habitats",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which of these is a habitat for a bird?",
+      "options": ["Tree", "River bed", "Underground", "Inside a rock"],
+      "answer": 0,
+      "hints": ["Where do birds build nests?", "They fly to trees."],
+      "explanation": "Trees are a common habitat for many birds.",
+      "misconception": "Birds live in water.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "examples_habitats",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Name two examples of habitats.",
+      "answer": ["water and land", "land and trees", "water and trees", "soil and water"],
+      "hints": ["Think about where animals live.", "One is wet, one is dry."],
+      "explanation": "Examples of habitats include water, land, trees and soil.",
+      "misconception": "A habitat is only water.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "adaptation_meaning",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What does adaptation mean?",
+      "options": ["Features that help an organism survive in its habitat", "The colour of an animal", "The sound an animal makes", "The food an animal eats"],
+      "answer": 0,
+      "hints": ["It helps the organism live in its home.", "It is about survival features."],
+      "explanation": "Adaptation means the features that help an organism survive in its habitat.",
+      "misconception": "Adaptation means the animal changes its body instantly.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "adaptation_meaning",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which statement best explains adaptation?",
+      "options": ["Adaptation is a feature that helps a living thing survive in its habitat", "Adaptation is when an animal changes colour for fun", "Adaptation is the food an animal eats", "Adaptation is the sound an animal makes"],
+      "answer": 0,
+      "hints": ["It is about survival.", "It helps the organism live in its home."],
+      "explanation": "Adaptation is a feature that helps a living thing survive in its habitat.",
+      "misconception": "Adaptation is not related to survival.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "adaptation_meaning",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "What is adaptation?",
+      "answer": ["features that help an organism survive in its habitat", "special features that help living things survive", "characteristics that help organisms live in their environment"],
+      "hints": ["Think about fish and water.", "It helps survival."],
+      "explanation": "Adaptation refers to features that help an organism survive in its habitat.",
+      "misconception": "Adaptation means the animal changes instantly.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "animal_adaptations",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "How is a fish adapted to live in water?",
+      "options": ["It has gills to breathe in water and fins to swim", "It has wings to fly", "It has lungs to breathe air", "It has legs to walk"],
+      "answer": 0,
+      "hints": ["Fish breathe in water.", "They use fins to move."],
+      "explanation": "Fish are adapted to water with gills for breathing and fins for swimming.",
+      "misconception": "Fish have lungs for breathing air.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "animal_adaptations",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "How is a camel adapted to live in a dry desert?",
+      "options": ["It has a hump that stores fat for energy", "It has fins for swimming", "It has feathers for flying", "It has scales for crawling"],
+      "answer": 0,
+      "hints": ["Deserts are dry.", "The hump helps it survive without much food and water."],
+      "explanation": "A camel has a hump that stores fat, helping it survive in dry desert conditions.",
+      "misconception": "Camels have fins.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "animal_adaptations",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Describe one adaptation that helps a bird survive in its habitat.",
+      "answer": ["wings for flying to find food", "beak for eating", "feathers for warmth", "wings to escape danger"],
+      "hints": ["Birds have wings.", "They can fly."],
+      "explanation": "Birds have wings for flying, which helps them find food and escape danger.",
+      "misconception": "Birds live in water.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "animal_adaptations",
+      "type": "mcq",
+      "difficulty": 4,
+      "stem": "A fish is taken out of water and placed on land. It soon dies. Why?",
+      "options": ["It cannot get oxygen from the air using its gills", "It is afraid of land", "It does not like the colour of the ground", "It forgets how to swim"],
+      "answer": 0,
+      "hints": ["Fish use gills to breathe in water.", "Gills do not work well in air."],
+      "explanation": "Fish are adapted to breathe oxygen dissolved in water using gills. On land, their gills cannot get enough oxygen from the air, so they die.",
+      "misconception": "Fish can live on land.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "plant_adaptations",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "How is a cactus adapted to live in a dry area?",
+      "options": ["It has spines instead of leaves to reduce water loss", "It has large flat leaves to catch sunlight", "It has many roots that grow above the ground", "It grows underwater"],
+      "answer": 0,
+      "hints": ["Cacti live in dry places.", "Spines help them save water."],
+      "explanation": "A cactus has spines instead of leaves, which reduces water loss and helps it survive in dry areas.",
+      "misconception": "Cacti have large leaves.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "plant_adaptations",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Describe one adaptation that helps a water lily survive in water.",
+      "answer": ["it has flat leaves that float on water", "its leaves float on the water surface", "it has long stems that reach the surface"],
+      "hints": ["Water lilies grow in water.", "Their leaves float."],
+      "explanation": "Water lilies have flat leaves that float on the water surface, helping them get sunlight.",
+      "misconception": "Water lilies have spines.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "plant_adaptations",
+      "type": "drawing",
+      "difficulty": 4,
+      "stem": "Draw a simple diagram of a cactus and a water lily. Label one adaptation of each that helps it survive in its habitat. Write one sentence explaining each adaptation.",
+      "rubric": {
+        "criteria": [
+          {"description": "Drew a recognizable cactus and water lily", "marks": 1},
+          {"description": "Labeled one adaptation of the cactus (e.g. spines)", "marks": 1},
+          {"description": "Labeled one adaptation of the water lily (e.g. flat floating leaves)", "marks": 1},
+          {"description": "Explained how the cactus adaptation helps it survive", "marks": 1},
+          {"description": "Explained how the water lily adaptation helps it survive", "marks": 1}
+        ]
+      },
+      "answer": "",
+      "hints": ["Cacti have spines and thick stems.", "Water lilies have flat leaves that float."],
+      "explanation": "This is a drawing task. Your teacher will mark it using the rubric.",
+      "misconception": "Plants do not need to adapt.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "why_adaptation_matters",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Why is adaptation important for animals?",
+      "options": ["It helps them survive in their habitat", "It makes them look beautiful", "It helps them change colour", "It makes them sing"],
+      "answer": 0,
+      "hints": ["Think about finding food and escaping danger.", "Survival is the key."],
+      "explanation": "Adaptation is important because it helps animals survive in their habitat.",
+      "misconception": "Adaptation is only for beauty.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "why_adaptation_matters",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "A bird has a sharp beak for eating insects. Why is this adaptation important?",
+      "options": ["It helps the bird find and eat food", "It helps the bird swim", "It helps the bird sleep", "It helps the bird change colour"],
+      "answer": 0,
+      "hints": ["A sharp beak helps with food.", "Food is needed for survival."],
+      "explanation": "A sharp beak helps the bird catch and eat insects, which is important for its survival.",
+      "misconception": "Beaks are only for decoration.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "why_adaptation_matters",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Why do living things need adaptations?",
+      "answer": ["to survive in their habitat", "to find food and escape danger", "to live successfully in their environment"],
+      "hints": ["Think about survival.", "Adaptations help them live."],
+      "explanation": "Living things need adaptations to survive in their habitat, find food and escape danger.",
+      "misconception": "Adaptations are not important.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "why_adaptation_matters",
+      "type": "practical",
+      "difficulty": 4,
+      "stem": "In groups, design and make a simple model of a habitat for a named animal (e.g. fish in a pond, bird in a tree). Your model should show at least two features that help the animal survive in that habitat. Present your model to the class and explain the adaptations.",
+      "rubric": {
+        "criteria": [
+          {"description": "Designed a model of a habitat for a named animal", "marks": 2},
+          {"description": "Showed at least two features that help the animal survive", "marks": 2},
+          {"description": "Explained the adaptations clearly to the class", "marks": 2},
+          {"description": "Worked cooperatively in the group", "marks": 1}
+        ]
+      },
+      "answer": "",
+      "hints": ["Choose an animal and its habitat.", "Think about what helps it live there (e.g. gills, wings, roots).", "Use simple materials."],
+      "explanation": "This is a practical task. Your teacher will mark it using the rubric.",
+      "misconception": "All animals can live in any habitat.",
+      "uncertain": []
+    }
+  ]
+}

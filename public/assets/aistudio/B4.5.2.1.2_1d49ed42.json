@@ -1,0 +1,275 @@
+{
+  "indicator": {
+    "code": "B4.5.2.1.2",
+    "subject": "Science",
+    "level": "Basic 4",
+    "strand": "HUMANS AND THE ENVIRONMENT",
+    "sub_strand": "Diseases",
+    "content_standard": "Not visible in uploaded extraction (p.36). Not invented.",
+    "objective": "Demonstrate understanding of the causes, symptoms and prevention of food-borne diseases",
+    "source_page": 36
+  },
+  "spec": {
+    "skills": [
+      {"tag": "define_foodborne", "description": "Recognise that food-borne diseases are illnesses caused by eating or drinking contaminated food or water.", "minQuestions": 4},
+      {"tag": "causes_foodborne", "description": "Identify causes of food-borne diseases (e.g. germs, dirty food, uncovered food, contaminated water).", "minQuestions": 4},
+      {"tag": "symptoms_foodborne", "description": "Identify common symptoms (e.g. diarrhoea, vomiting, stomach pain, fever).", "minQuestions": 3},
+      {"tag": "examples_foodborne", "description": "Give examples of food-borne diseases named in the curriculum (cholera, diarrhoea, typhoid fever).", "minQuestions": 3},
+      {"tag": "prevention_foodborne", "description": "Identify ways to prevent food-borne diseases (washing hands, covering food, drinking safe water, washing fruits).", "minQuestions": 4},
+      {"tag": "action_foodborne", "description": "State what to do if someone contracts a food-borne disease (drink safe water, see a health worker, tell an adult).", "minQuestions": 2}
+    ],
+    "difficultyPlan": "20 questions total — Difficulty 1: 5; Difficulty 2: 7; Difficulty 3: 5; Difficulty 4: 3.",
+    "misconceptions": [
+      "Food that looks clean cannot cause sickness.",
+      "Food-borne diseases spread only through the air.",
+      "Washing hands is not important before eating.",
+      "Diarrhoea is normal and needs no attention.",
+      "Covered food cannot get contaminated.",
+      "Only adults can get food-borne diseases."
+    ],
+    "needsTeacherAssessment": true
+  },
+  "questions": [
+    {
+      "skill_tag": "define_foodborne",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What is a food-borne disease?",
+      "options": ["An illness caused by eating or drinking contaminated food or water", "An illness caused by playing in the sun", "An illness caused by sleeping late", "An illness caused by running fast"],
+      "answer": 0,
+      "hints": ["It comes from food or water.", "Contaminated means dirty with germs."],
+      "explanation": "A food-borne disease is an illness caused by eating or drinking food or water that contains germs.",
+      "misconception": "Food-borne diseases spread only through the air.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "causes_foodborne",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which of these can cause a food-borne disease?",
+      "options": ["Eating uncovered food with germs on it", "Eating with clean hands", "Drinking safe water", "Washing fruits before eating"],
+      "answer": 0,
+      "hints": ["Uncovered food can collect germs.", "Flies can land on it."],
+      "explanation": "Eating uncovered food that has germs on it can cause a food-borne disease.",
+      "misconception": "Food that looks clean cannot cause sickness.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "symptoms_foodborne",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which of these is a common symptom of a food-borne disease?",
+      "options": ["Diarrhoea", "Broken leg", "Toothache", "Hiccups"],
+      "answer": 0,
+      "hints": ["It affects the stomach and toilet habits.", "Diarrhoea is a common sign."],
+      "explanation": "Diarrhoea is a common symptom of food-borne diseases.",
+      "misconception": "Diarrhoea is normal and needs no attention.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "examples_foodborne",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which of these is an example of a food-borne disease?",
+      "options": ["Cholera", "Malaria", "Measles", "Asthma"],
+      "answer": 0,
+      "hints": ["It is spread through dirty food or water.", "It causes serious diarrhoea."],
+      "explanation": "Cholera is a food-borne disease. It is spread through contaminated food or water.",
+      "misconception": "Cholera is spread through the air.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "prevention_foodborne",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which of these helps prevent food-borne diseases?",
+      "options": ["Washing hands before eating", "Eating with dirty hands", "Drinking water from any source", "Leaving food uncovered"],
+      "answer": 0,
+      "hints": ["Clean hands have fewer germs.", "Wash hands before eating."],
+      "explanation": "Washing hands before eating helps prevent food-borne diseases by removing germs.",
+      "misconception": "Washing hands is not important before eating.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "define_foodborne",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Ama ate food that had been left uncovered near a refuse dump. She later became sick. What type of disease is this most likely to be?",
+      "options": ["A food-borne disease", "A broken bone", "A skin burn", "An eye disease"],
+      "answer": 0,
+      "hints": ["The sickness came after eating.", "The food was exposed to germs."],
+      "explanation": "The sickness is most likely a food-borne disease because it came from eating contaminated food.",
+      "misconception": "Food that looks clean cannot cause sickness.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "causes_foodborne",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which of these is a cause of food-borne diseases?",
+      "options": ["Drinking contaminated water", "Eating with clean hands", "Washing fruits before eating", "Covering food with a clean cloth"],
+      "answer": 0,
+      "hints": ["Contaminated water contains germs.", "Germs cause disease."],
+      "explanation": "Drinking contaminated water can cause food-borne diseases because the water contains germs.",
+      "misconception": "Food-borne diseases spread only through the air.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "symptoms_foodborne",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which set lists common symptoms of food-borne diseases?",
+      "options": ["Diarrhoea, vomiting, stomach pain", "Broken arm, headache, sneezing", "Toothache, hiccups, back pain", "Runny nose, earache, cough"],
+      "answer": 0,
+      "hints": ["Food-borne diseases affect the stomach.", "Diarrhoea and vomiting are common."],
+      "explanation": "Common symptoms of food-borne diseases include diarrhoea, vomiting, stomach pain and fever.",
+      "misconception": "Diarrhoea is normal and needs no attention.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "examples_foodborne",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which of these is a food-borne disease that causes serious diarrhoea?",
+      "options": ["Cholera", "Malaria", "Measles", "Asthma"],
+      "answer": 0,
+      "hints": ["It is linked to dirty water.", "It causes serious diarrhoea."],
+      "explanation": "Cholera is a food-borne disease that causes serious diarrhoea and vomiting.",
+      "misconception": "Cholera is spread through the air.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "prevention_foodborne",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Why should food be covered?",
+      "options": ["To keep germs and flies away", "To make it taste better", "To make it cold", "To make it heavy"],
+      "answer": 0,
+      "hints": ["Flies can carry germs.", "Covering keeps flies off food."],
+      "explanation": "Covering food keeps germs and flies away, helping to prevent food-borne diseases.",
+      "misconception": "Covered food cannot get contaminated.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "action_foodborne",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "A learner has diarrhoea after eating contaminated food. What should the learner do?",
+      "options": ["Drink safe water and tell an adult", "Eat more contaminated food", "Hide from adults", "Stop drinking water completely"],
+      "answer": 0,
+      "hints": ["Diarrhoea causes loss of water.", "Drinking safe water helps replace lost water."],
+      "explanation": "The learner should drink safe water to replace lost fluids and tell an adult, who can take them to a health worker.",
+      "misconception": "Diarrhoea is normal and needs no attention.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "define_foodborne",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "What is a food-borne disease?",
+      "answer": ["an illness caused by eating or drinking contaminated food or water", "a disease caused by eating dirty food or water", "illness from contaminated food or water"],
+      "hints": ["It comes from food or water.", "Contaminated means dirty with germs."],
+      "explanation": "A food-borne disease is an illness caused by eating or drinking contaminated food or water.",
+      "misconception": "Food-borne diseases spread only through the air.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "causes_foodborne",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "Which of these practices can cause food-borne diseases?",
+      "options": ["Eating food that has been left uncovered", "Washing hands before eating", "Covering food with a clean cloth", "Drinking safe water"],
+      "answer": 0,
+      "hints": ["Uncovered food can collect germs.", "Flies can land on uncovered food."],
+      "explanation": "Eating food that has been left uncovered can cause food-borne diseases because germs and flies can get onto the food.",
+      "misconception": "Food that looks clean cannot cause sickness.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "symptoms_foodborne",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Name two symptoms of a food-borne disease.",
+      "answer": ["diarrhoea and vomiting", "vomiting and stomach pain", "diarrhoea and stomach pain", "fever and diarrhoea"],
+      "hints": ["It affects the stomach.", "Vomiting is a common sign."],
+      "explanation": "Common symptoms of food-borne diseases include diarrhoea, vomiting, stomach pain and fever.",
+      "misconception": "Diarrhoea is normal and needs no attention.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "prevention_foodborne",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "A pupil is about to eat an orange bought from the market. What should the pupil do first to prevent a food-borne disease?",
+      "options": ["Wash the orange with clean water", "Eat it immediately without washing", "Rub it on the ground", "Share it with friends without washing"],
+      "answer": 0,
+      "hints": ["Fruits can have germs on the outside.", "Washing removes germs."],
+      "explanation": "The pupil should wash the orange with clean water before eating to remove germs on the outside.",
+      "misconception": "Fruits do not need washing.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "define_foodborne",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Explain why drinking contaminated water can cause disease.",
+      "answer": ["because the water contains germs that can make you sick", "contaminated water has germs which cause illness", "germs in the water can enter the body and cause sickness"],
+      "hints": ["Contaminated means dirty with germs.", "Germs can cause illness."],
+      "explanation": "Contaminated water contains germs. When you drink it, the germs enter your body and can make you sick.",
+      "misconception": "Water from any source is safe.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "causes_foodborne",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Name one cause of food-borne diseases.",
+      "answer": ["eating contaminated food", "drinking contaminated water", "eating uncovered food", "dirty hands"],
+      "hints": ["Think about dirty food or water.", "Germs can get into food."],
+      "explanation": "Food-borne diseases are caused by eating contaminated food or drinking contaminated water.",
+      "misconception": "Food-borne diseases are not caused by germs.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "examples_foodborne",
+      "type": "short_answer",
+      "difficulty": 4,
+      "stem": "Name two food-borne diseases.",
+      "answer": ["cholera and diarrhoea", "cholera and typhoid", "diarrhoea and typhoid fever", "cholera and typhoid fever"],
+      "hints": ["One causes serious diarrhoea.", "Another is typhoid."],
+      "explanation": "Examples of food-borne diseases include cholera, diarrhoea and typhoid fever.",
+      "misconception": "Only malaria is a food-borne disease.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "prevention_foodborne",
+      "type": "drawing",
+      "difficulty": 4,
+      "stem": "Design a simple poster for your school to teach learners how to prevent food-borne diseases. Show at least two actions, such as washing hands and covering food.",
+      "rubric": {
+        "criteria": [
+          {"description": "Showed at least two correct actions to prevent food-borne diseases", "marks": 2},
+          {"description": "Used clear drawings or symbols for each action", "marks": 2},
+          {"description": "Included short words or labels to explain the actions", "marks": 1},
+          {"description": "Message is clear and suitable for learners", "marks": 1}
+        ]
+      },
+      "answer": "",
+      "hints": ["Think about washing hands before eating.", "Cover food to keep flies away.", "Use drawings of hands, soap, and covered food."],
+      "explanation": "This is a drawing task. Your teacher will mark it using the rubric.",
+      "misconception": "Washing hands is not important before eating.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "action_foodborne",
+      "type": "short_answer",
+      "difficulty": 4,
+      "stem": "A classmate has been vomiting and has diarrhoea after eating food from a street vendor. What should you and your classmate do?",
+      "answer": ["tell the teacher and take the classmate to a health worker", "tell an adult and get help from a health worker", "inform the teacher and ensure the classmate drinks safe water and sees a health worker"],
+      "hints": ["Tell an adult.", "A health worker can help.", "Safe water helps replace lost fluids."],
+      "explanation": "Tell the teacher and take the classmate to a health worker. Make sure the classmate drinks safe water to replace lost fluids.",
+      "misconception": "Diarrhoea is normal and needs no attention.",
+      "uncertain": []
+    }
+  ]
+}

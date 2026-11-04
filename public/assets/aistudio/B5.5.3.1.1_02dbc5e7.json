@@ -1,0 +1,255 @@
+{
+  "indicator": {
+    "code": "B5.5.3.1.1",
+    "subject": "Science",
+    "level": "Basic 5",
+    "strand": "HUMANS AND THE ENVIRONMENT",
+    "sub_strand": "Science and Industry",
+    "content_standard": "B5.5.3.1 Recognise the impact of science and technology in society",
+    "objective": "Identify the raw materials used in some local industries (kenkey production, gari production, ceramic and pottery production)",
+    "source_page": 53
+  },
+  "spec": {
+    "skills": [
+      {"tag": "identify_raw_materials", "description": "Identify raw materials used in local industries (e.g. maize for kenkey, cassava for gari, clay for pottery).", "minQuestions": 4},
+      {"tag": "match_product_material", "description": "Match a local product to its raw material (kenkey → maize; gari → cassava; pot → clay).", "minQuestions": 4},
+      {"tag": "describe_process", "description": "Describe simply how a raw material is changed into a product (e.g. cassava is grated and fried to make gari).", "minQuestions": 4},
+      {"tag": "importance_industries", "description": "Explain why local industries are important (provide food, jobs, income).", "minQuestions": 3},
+      {"tag": "science_in_industry", "description": "Recognise that science is used in these industries (e.g. heating, drying, fermenting).", "minQuestions": 3},
+      {"tag": "examples_local", "description": "Give examples of local industries in the community.", "minQuestions": 2}
+    ],
+    "difficultyPlan": "20 questions total — Difficulty 1: 5; Difficulty 2: 7; Difficulty 3: 5; Difficulty 4: 3.",
+    "misconceptions": [
+      "Kenkey is made from rice.",
+      "Gari is made from maize.",
+      "Pottery does not use clay.",
+      "Local industries do not use science.",
+      "Raw materials are the same as finished products.",
+      "Only factories use science."
+    ],
+    "needsTeacherAssessment": true
+  },
+  "questions": [
+    {
+      "skill_tag": "identify_raw_materials",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which raw material is used to make kenkey?",
+      "options": ["Maize", "Cassava", "Clay", "Rice"],
+      "answer": 0,
+      "hints": ["Kenkey is a food made from a common cereal.", "It is not made from cassava."],
+      "explanation": "Kenkey is made from maize. The maize is ground and fermented to make the dough.",
+      "misconception": "Kenkey is made from rice.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_raw_materials",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which raw material is used to make gari?",
+      "options": ["Cassava", "Maize", "Clay", "Wheat"],
+      "answer": 0,
+      "hints": ["Gari is made from a root crop.", "It is not made from maize."],
+      "explanation": "Gari is made from cassava. The cassava is grated, pressed, and fried.",
+      "misconception": "Gari is made from maize.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_raw_materials",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which raw material is used in pottery production?",
+      "options": ["Clay", "Maize", "Cassava", "Wood"],
+      "answer": 0,
+      "hints": ["Pots are made from a material that can be moulded when wet.", "It is found in the ground."],
+      "explanation": "Clay is the raw material used in pottery. It can be moulded and then baked to make pots and bowls.",
+      "misconception": "Pottery does not use clay.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_raw_materials",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Name the raw material used to make kenkey.",
+      "answer": ["maize", "corn"],
+      "hints": ["It is a cereal crop.", "It is ground into flour."],
+      "explanation": "Maize is the raw material used to make kenkey.",
+      "misconception": "Kenkey is made from rice.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "match_product_material",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which pair correctly matches a product to its raw material?",
+      "options": ["Kenkey → maize", "Gari → maize", "Pot → cassava", "Kenkey → clay"],
+      "answer": 0,
+      "hints": ["Kenkey is made from maize.", "Gari is made from cassava."],
+      "explanation": "Kenkey is made from maize. Gari is made from cassava, and pots are made from clay.",
+      "misconception": "Gari is made from maize.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "match_product_material",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "A learner wants to make gari. Which raw material should they gather?",
+      "options": ["Cassava", "Maize", "Clay", "Rice"],
+      "answer": 0,
+      "hints": ["Gari is made from cassava.", "It is a root crop."],
+      "explanation": "To make gari, the learner needs cassava. Cassava is processed into gari.",
+      "misconception": "Gari is made from maize.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "match_product_material",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Match the product to its raw material: kenkey, gari, pot.",
+      "answer": ["kenkey - maize, gari - cassava, pot - clay", "kenkey: maize; gari: cassava; pot: clay"],
+      "hints": ["Kenkey is from maize.", "Gari is from cassava.", "Pots are from clay."],
+      "explanation": "Kenkey is made from maize, gari from cassava, and pots from clay.",
+      "misconception": "All products use the same raw material.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "match_product_material",
+      "type": "mcq",
+      "difficulty": 4,
+      "stem": "Which set correctly matches three local products to their raw materials?",
+      "options": ["Kenkey → maize; gari → cassava; pot → clay", "Kenkey → cassava; gari → maize; pot → wood", "Kenkey → clay; gari → maize; pot → cassava", "Kenkey → maize; gari → clay; pot → cassava"],
+      "answer": 0,
+      "hints": ["Think about the main ingredient for each product.", "Kenkey is maize-based, gari is cassava-based, and pots are clay-based."],
+      "explanation": "The correct matching is: kenkey → maize; gari → cassava; pot → clay.",
+      "misconception": "Kenkey is made from cassava.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_process",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "How is cassava changed into gari?",
+      "options": ["Grated, pressed, and fried", "Boiled and mashed", "Dried and ground into flour", "Fermented and baked"],
+      "answer": 0,
+      "hints": ["Gari is a dry, granular food.", "The cassava is grated and fried."],
+      "explanation": "Cassava is grated, pressed to remove water, and then fried to make gari.",
+      "misconception": "Gari is made by boiling cassava.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_process",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "How is clay changed into a pot?",
+      "options": ["Moulded and baked in a fire", "Boiled in water", "Fried in oil", "Grated and pressed"],
+      "answer": 0,
+      "hints": ["Clay is shaped by hand.", "It is then heated to make it hard."],
+      "explanation": "Clay is moulded into shape and then baked in a fire to make a pot.",
+      "misconception": "Clay is boiled to make a pot.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_process",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Describe one step in making gari from cassava.",
+      "answer": ["the cassava is grated", "cassava is peeled and grated", "the cassava is fried after grating"],
+      "hints": ["First the cassava is prepared.", "It is grated into small pieces."],
+      "explanation": "One step in making gari is grating the cassava. The grated cassava is then pressed and fried.",
+      "misconception": "Gari is made without processing cassava.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_process",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Describe how maize is changed into kenkey.",
+      "answer": ["the maize is ground into flour, mixed with water, fermented, and cooked", "maize is ground and fermented then cooked", "maize is milled and fermented"],
+      "hints": ["Kenkey is a fermented food.", "The maize is ground first."],
+      "explanation": "Maize is ground into flour, mixed with water, left to ferment, and then cooked to make kenkey.",
+      "misconception": "Kenkey is made from unprocessed maize.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "importance_industries",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Why are local industries like kenkey production important?",
+      "options": ["They provide food and jobs", "They make people sick", "They destroy the environment", "They have no use"],
+      "answer": 0,
+      "hints": ["Think about what they produce.", "They help people earn money."],
+      "explanation": "Local industries like kenkey production are important because they provide food and create jobs for people.",
+      "misconception": "Local industries are not important.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "importance_industries",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "How do local industries help the community?",
+      "options": ["They provide income for families", "They make the community dirtier", "They stop people from working", "They destroy local resources"],
+      "answer": 0,
+      "hints": ["People earn money from these industries.", "They help families live better."],
+      "explanation": "Local industries provide income for families and help the community grow.",
+      "misconception": "Local industries do not help the community.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "importance_industries",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Give one reason why local industries are important.",
+      "answer": ["they provide food", "they provide jobs", "they provide income", "they help the community"],
+      "hints": ["Think about what they make.", "Think about jobs and money."],
+      "explanation": "Local industries are important because they provide food, jobs and income for the community.",
+      "misconception": "Local industries have no importance.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "science_in_industry",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which science process is used when baking clay pots?",
+      "options": ["Heating", "Freezing", "Melting", "Condensation"],
+      "answer": 0,
+      "hints": ["Pots are baked in a fire.", "Heat makes the clay hard."],
+      "explanation": "Heating is used when baking clay pots. The heat makes the clay hard and strong.",
+      "misconception": "Local industries do not use science.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "science_in_industry",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "What science process is involved in making kenkey?",
+      "options": ["Fermentation", "Evaporation", "Condensation", "Filtration"],
+      "answer": 0,
+      "hints": ["Kenkey dough is left to rise and sour.", "This is a fermentation process."],
+      "explanation": "Fermentation is used in making kenkey. The maize dough is left to ferment, which gives kenkey its taste.",
+      "misconception": "Kenkey production does not use science.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "science_in_industry",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Name one science process used in local industries.",
+      "answer": ["fermentation", "heating", "drying", "grinding", "frying"],
+      "hints": ["Think about making kenkey or gari.", "Fermentation is one process."],
+      "explanation": "Science processes used in local industries include fermentation (kenkey), heating (pottery), and frying (gari).",
+      "misconception": "Local industries do not use science.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "examples_local",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Name two local industries in your community.",
+      "answer": ["kenkey production and gari production", "pottery and kenkey production", "gari and pottery"],
+      "hints": ["Think about local foods.", "Think about local crafts."],
+      "explanation": "Examples of local industries include kenkey production, gari production, and pottery.",
+      "misconception": "There are no local industries.",
+      "uncertain": []
+    }
+  ]
+}

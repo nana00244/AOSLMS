@@ -1,0 +1,274 @@
+{
+  "indicator": {
+    "code": "B4.2.2.1.1",
+    "subject": "Mathematics",
+    "level": "Basic 4",
+    "strand": "Algebra",
+    "sub_strand": "Unknowns, Expressions and Equations",
+    "content_standard": "B4.2.2.1 Express a given problem as an equation in which a symbol is used to represent an unknown number",
+    "objective": "Write a given problem as an equation in which a symbol is used to represent an unknown number",
+    "source_page": 54
+  },
+  "spec": {
+    "skills": [
+      {"tag": "identify_unknown", "description": "Identify the unknown quantity in a word problem.", "minQuestions": 2},
+      {"tag": "write_equation", "description": "Write an equation using a symbol (like a box or a letter) to represent the unknown.", "minQuestions": 2}
+    ],
+    "difficultyPlan": "20 questions: 5 at difficulty 1, 7 at difficulty 2, 5 at difficulty 3, 3 at difficulty 4.",
+    "misconceptions": [
+      "Using the wrong operation.",
+      "Placing the unknown incorrectly in the equation (e.g., writing the unknown as the result when it is an addend)."
+    ],
+    "needsTeacherAssessment": false
+  },
+  "questions": [
+    {
+      "skill_tag": "identify_unknown",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Ama has 5 oranges. She buys some more and now has 12 oranges. What is the unknown in this problem?",
+      "options": ["The number of oranges she started with", "The number of oranges she bought", "The total number of oranges", "The number of oranges she ate"],
+      "answer": 1,
+      "hints": ["What information is not given?", "She started with 5 and ended with 12. What is missing?"],
+      "explanation": "The number of oranges she bought is the unknown.",
+      "misconception": "Thinking the total (12) is the unknown.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "write_equation",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which equation represents the problem: 'Ama has 5 oranges and buys some more to get 12'?",
+      "options": ["5 + □ = 12", "12 + □ = 5", "5 - □ = 12", "□ - 5 = 12"],
+      "answer": 0,
+      "hints": ["Start with 5.", "Add an unknown number to get 12."],
+      "explanation": "5 + □ = 12.",
+      "misconception": "Writing 12 + □ = 5.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "write_equation",
+      "type": "short_answer",
+      "difficulty": 1,
+      "stem": "Write an equation for: 'A number plus 4 equals 10'. Use □ for the unknown number.",
+      "answer": ["□ + 4 = 10", "x + 4 = 10"],
+      "hints": ["Start with the unknown.", "Add 4 to get 10."],
+      "explanation": "□ + 4 = 10.",
+      "misconception": "Writing 4 + 10 = □.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_unknown",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Kojo had 15 pencils. He gave some to Ato and had 7 left. What is the unknown?",
+      "options": ["The number of pencils he gave away", "The number of pencils he had at first", "The number of pencils left", "The total number of pencils"],
+      "answer": 0,
+      "hints": ["What are we trying to find?", "We know he started with 15 and ended with 7."],
+      "explanation": "The number of pencils he gave away is the unknown.",
+      "misconception": "Thinking the 7 is the unknown.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "write_equation",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Write an equation for: 'A number minus 3 equals 8'.",
+      "options": ["□ - 3 = 8", "3 - □ = 8", "8 - □ = 3", "□ + 3 = 8"],
+      "answer": 0,
+      "hints": ["Start with the unknown number.", "Subtract 3."],
+      "explanation": "□ - 3 = 8.",
+      "misconception": "Writing 3 - □ = 8.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "write_equation",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "A number plus 6 equals 14. Write the equation (□ + 6 = 14). What is the unknown number?",
+      "answer": 8,
+      "check": "14-6",
+      "hints": ["What number added to 6 gives 14?", "14 - 6."],
+      "explanation": "□ + 6 = 14, so □ = 8.",
+      "misconception": "Adding 6 + 14 = 20.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_unknown",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "A basket has some mangoes. Kofi adds 4 more. Now there are 10 mangoes. What is the unknown?",
+      "options": ["The number of mangoes added", "The number of mangoes initially in the basket", "The total number of mangoes", "The number of baskets"],
+      "answer": 1,
+      "hints": ["We know 4 were added.", "We know the final total is 10. What don't we know?"],
+      "explanation": "The initial number of mangoes is the unknown.",
+      "misconception": "Thinking the 4 is the unknown.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "write_equation",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "A trotro had some passengers. At a stop, 5 got off. There are now 12 passengers. Which equation represents this?",
+      "options": ["□ - 5 = 12", "5 - □ = 12", "□ + 5 = 12", "12 - 5 = □"],
+      "answer": 0,
+      "hints": ["Start with the unknown number of passengers.", "Subtract the 5 who got off."],
+      "explanation": "□ - 5 = 12.",
+      "misconception": "Writing 12 - 5 = □.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "write_equation",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Write an equation for: 'I think of a number, multiply it by 3, and get 12'. Use □ for the unknown.",
+      "answer": ["3 * □ = 12", "3 x □ = 12", "□ * 3 = 12", "□ x 3 = 12"],
+      "hints": ["The unknown is multiplied by 3.", "The result is 12."],
+      "explanation": "3 x □ = 12.",
+      "misconception": "Writing □ + 3 = 12.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "write_equation",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "A number minus 7 equals 5. What is the number?",
+      "answer": 12,
+      "check": "5+7",
+      "hints": ["□ - 7 = 5.", "What number take away 7 leaves 5?"],
+      "explanation": "□ - 7 = 5, so □ = 12.",
+      "misconception": "Subtracting 7 - 5 = 2.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_unknown",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Mansa has three types of stickers. She has 25 stickers in total. 3 are Cocoa stickers and 18 are Cashew stickers. How many of the third type does she have? What is the unknown?",
+      "options": ["The total number of stickers", "The number of Cocoa stickers", "The number of Cashew stickers", "The number of the third type of sticker"],
+      "answer": 3,
+      "hints": ["We know the total (25), Cocoa (3), and Cashew (18).", "What are we trying to find?"],
+      "explanation": "The number of the third type of sticker is the unknown.",
+      "misconception": "Thinking the total 25 is the unknown.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "write_equation",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Kojo's age and his sister's age add up to 18. If Kojo is 12, which equation can find his sister's age (□)?",
+      "options": ["12 + □ = 18", "12 - □ = 18", "□ - 12 = 18", "18 + 12 = □"],
+      "answer": 0,
+      "hints": ["Kojo's age plus sister's age equals 18.", "12 + □ = 18."],
+      "explanation": "12 + □ = 18.",
+      "misconception": "Writing 18 + 12 = □.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "write_equation",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "A pupil has 20 pencils. He shares them equally among □ friends. Each friend gets 4 pencils. Write the equation.",
+      "answer": ["20 / □ = 4", "20 ÷ □ = 4"],
+      "hints": ["Total pencils divided by number of friends gives pencils per friend.", "20 ÷ □ = 4."],
+      "explanation": "20 ÷ □ = 4.",
+      "misconception": "Writing □ ÷ 20 = 4.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_unknown",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "Ama is 10 years old. Her mother is 3 times as old as Ama. How old is Ama's mother? Write an equation and identify the unknown.",
+      "hints": ["What are we trying to find?", "Ama's age multiplied by 3."],
+      "explanation": "The unknown is the mother's age (□). The equation is 3 x 10 = □ or 3 * 10 = □.",
+      "rubric": {
+        "criteria": [
+          {"description": "Identifies the unknown as the mother's age.", "marks": 1},
+          {"description": "Writes the correct equation (3 x 10 = □).", "marks": 1}
+        ]
+      },
+      "misconception": "Thinking the unknown is Ama's age.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "write_equation",
+      "type": "numeric",
+      "difficulty": 3,
+      "stem": "Write an equation for: 'A number multiplied by 4 equals 20'. What is the number?",
+      "answer": 5,
+      "check": "20/4",
+      "hints": ["4 x □ = 20.", "What number times 4 gives 20?"],
+      "explanation": "4 x □ = 20, so □ = 5.",
+      "misconception": "Adding 4 + 20 = 24.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "write_equation",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "A basket contains 15 mangoes. Ama adds some mangoes to the basket. There are now 30 mangoes. Write the equation to find how many she added (□).",
+      "answer": ["15 + □ = 30"],
+      "hints": ["Start with 15.", "Add the unknown to get 30."],
+      "explanation": "15 + □ = 30.",
+      "misconception": "Writing 30 + 15 = □.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "write_equation",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "A farmer has 50 eggs. He packs them into □ trays equally. Each tray holds 10 eggs. Write the equation and explain why you chose that operation.",
+      "hints": ["Total eggs divided by number of trays gives eggs per tray.", "50 ÷ □ = 10."],
+      "explanation": "The equation is 50 ÷ □ = 10. I used division because we are sharing a total equally into groups.",
+      "rubric": {
+        "criteria": [
+          {"description": "Writes 50 ÷ □ = 10.", "marks": 1},
+          {"description": "Explains that division is for sharing equally.", "marks": 1}
+        ]
+      },
+      "misconception": "Using multiplication.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_unknown",
+      "type": "mcq",
+      "difficulty": 4,
+      "stem": "A pen costs 5 cedis. A book costs 12 cedis. Kojo buys 2 pens and some books. He spends 39 cedis in total. How many books did he buy? What is the unknown?",
+      "options": ["Cost of 1 book", "Number of pens bought", "Number of books bought", "Total amount spent"],
+      "answer": 2,
+      "hints": ["We know the total cost (39).", "We know the cost of pens and books. What is missing?"],
+      "explanation": "The unknown is the number of books bought.",
+      "misconception": "Thinking the cost of a book is the unknown.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "write_equation",
+      "type": "numeric",
+      "difficulty": 4,
+      "stem": "A number is multiplied by 2, and 5 is added to the result. The answer is 15. Write the equation (2x + 5 = 15) and find the number (x).",
+      "answer": 5,
+      "check": "(15-5)/2",
+      "hints": ["2x + 5 = 15.", "Subtract 5 first: 2x = 10.", "Divide by 2."],
+      "explanation": "2x + 5 = 15, 2x = 10, x = 5.",
+      "misconception": "Dividing 15 by 2 first.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "write_equation",
+      "type": "written",
+      "difficulty": 4,
+      "stem": "A trotro charges 2 cedis for adults and 1 cedi for children. On one trip, there were 4 adults and some children. The total fare was 15 cedis. Write an equation to find the number of children (□).",
+      "hints": ["Adult fare: 4 x 2 = 8 cedis.", "Child fare: □ x 1 = □ cedis.", "Total: 8 + □ = 15."],
+      "explanation": "The equation is 8 + □ = 15.",
+      "rubric": {
+        "criteria": [
+          {"description": "Calculates adult fare (8 cedis).", "marks": 1},
+          {"description": "Writes the final equation (8 + □ = 15).", "marks": 1}
+        ]
+      },
+      "misconception": "Writing 4 + 2 + □ = 15.",
+      "uncertain": []
+    }
+  ]
+}

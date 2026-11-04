@@ -1,0 +1,266 @@
+{
+  "indicator": {
+    "code": "B4.1.1.1.1",
+    "subject": "Science",
+    "level": "Basic 4",
+    "strand": "DIVERSITY OF MATTER",
+    "sub_strand": "Living and Non-Living Things",
+    "content_standard": "B4.1.1.1 Understand the physical features and life processes of living things and use this understanding to classify them",
+    "objective": "Classify animals into insects, birds, mammals and reptiles",
+    "source_page": 24
+  },
+  "spec": {
+    "skills": [
+      {"tag": "group_features", "description": "Recognise the main observable features of insects, birds, mammals and reptiles (body covering, limbs, young ones, where they live).", "minQuestions": 3},
+      {"tag": "classify_named_animal", "description": "Place a named Ghanaian animal into the correct group: insect, bird, mammal or reptile.", "minQuestions": 5},
+      {"tag": "justify_classification", "description": "Give a simple reason for a classification using an observable feature, not just the animal's name.", "minQuestions": 4},
+      {"tag": "examples_non_examples", "description": "Identify whether an animal is an example or non-example of a named group.", "minQuestions": 3}
+    ],
+    "difficultyPlan": "20 questions total — Difficulty 1: 5; Difficulty 2: 7; Difficulty 3: 5; Difficulty 4: 3.",
+    "misconceptions": [
+      "All animals that fly are birds.",
+      "Bats are birds.",
+      "Spiders are insects.",
+      "All small crawling animals are insects.",
+      "Mammals are only large land animals.",
+      "Reptiles are insects because they crawl."
+    ],
+    "needsTeacherAssessment": false
+  },
+  "questions": [
+    {
+      "skill_tag": "group_features",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which of these is a feature of all insects?",
+      "options": ["They have feathers.", "They have six legs.", "They feed their young with milk.", "They have scales on their body."],
+      "answer": 1,
+      "hints": ["Think about how many legs a cockroach or housefly has.", "Count the legs on an ant."],
+      "explanation": "Insects have six legs. Feathers belong to birds, milk-feeding belongs to mammals, and scales belong to reptiles.",
+      "misconception": "Some learners think any small crawling animal is an insect.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "classify_named_animal",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "A dog is best classified as which of these?",
+      "options": ["Mammal", "Insect", "Bird", "Reptile"],
+      "answer": 0,
+      "hints": ["Think about how a dog's body is covered.", "Does a dog feed its puppies with milk?"],
+      "explanation": "A dog has hair, gives birth to live young, and feeds its puppies with milk. These are features of mammals.",
+      "misconception": "Some learners think only wild animals are mammals.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "classify_named_animal",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "A butterfly belongs to which group of animals?",
+      "options": ["Bird", "Insect", "Mammal", "Reptile"],
+      "answer": 1,
+      "hints": ["How many legs does a butterfly have?", "Look at the body of a butterfly — is it in three parts?"],
+      "explanation": "A butterfly has six legs and a body divided into three parts. These are features of insects.",
+      "misconception": "Some learners think butterflies are birds because they have wings.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "group_features",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which group of animals has feathers covering their bodies?",
+      "options": ["Insects", "Mammals", "Birds", "Reptiles"],
+      "answer": 2,
+      "hints": ["Think about the animals you see in a poultry farm.", "What covers the body of a hen?"],
+      "explanation": "Birds are the only group of animals among these that have feathers.",
+      "misconception": "Some learners think all flying animals have feathers.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "examples_non_examples",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which of these animals is a reptile?",
+      "options": ["Snake", "Butterfly", "Eagle", "Goat"],
+      "answer": 0,
+      "hints": ["Reptiles have dry skin covered with scales.", "Think of an animal that crawls on its belly."],
+      "explanation": "A snake has dry, scaly skin and crawls on its belly. It is a reptile.",
+      "misconception": "Some learners think all crawling animals are insects.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "classify_named_animal",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "A parrot is best classified as which of these?",
+      "options": ["Insect", "Bird", "Mammal", "Reptile"],
+      "answer": 1,
+      "hints": ["Think about what covers a parrot's body.", "Parrots have beaks and wings."],
+      "explanation": "A parrot has feathers, wings, and a beak. It is a bird.",
+      "misconception": "Some learners think parrots are mammals because they can talk.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "classify_named_animal",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "A snake belongs to which group of animals?",
+      "options": ["Insect", "Bird", "Mammal", "Reptile"],
+      "answer": 3,
+      "hints": ["What covers the body of a snake?", "Does a snake have legs?"],
+      "explanation": "A snake has dry, scaly skin and no legs. These features show it is a reptile.",
+      "misconception": "Some learners think snakes are insects because they crawl.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "justify_classification",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Why is a bat grouped as a mammal and not a bird, even though it flies?",
+      "options": ["It has feathers on its body.", "It has six legs and a three-part body.", "It has hair and feeds its young with milk.", "It has dry scales on its skin."],
+      "answer": 2,
+      "hints": ["Look at what covers a bat's body.", "Think about how a bat feeds its babies."],
+      "explanation": "A bat has hair on its body and feeds its young with milk. These are mammal features. Flying alone does not make an animal a bird.",
+      "misconception": "All animals that fly are birds.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "examples_non_examples",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which of these animals is NOT a mammal?",
+      "options": ["Cow", "Goat", "Crocodile", "Dog"],
+      "answer": 2,
+      "hints": ["Mammals have hair or fur and feed their young with milk.", "Which of these animals has scales?"],
+      "explanation": "A crocodile has scales and lays eggs. It is a reptile, not a mammal. The cow, goat and dog all have hair and feed their young with milk.",
+      "misconception": "Some learners think all four-legged animals are mammals.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "group_features",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which group of animals has dry skin covered with scales?",
+      "options": ["Insects", "Birds", "Mammals", "Reptiles"],
+      "answer": 3,
+      "hints": ["Think of the skin of a lizard.", "What covers a crocodile's body?"],
+      "explanation": "Reptiles such as lizards, snakes, and crocodiles have dry, scaly skin.",
+      "misconception": "Some learners think fish and reptiles are the same because both have scales.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "classify_named_animal",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "A grasscutter belongs to which group of animals?",
+      "answer": ["mammal"],
+      "hints": ["Does a grasscutter have hair or fur?", "Does it feed its young with milk?"],
+      "explanation": "A grasscutter has fur and feeds its young with milk. It is a mammal.",
+      "misconception": "Some learners think grasscutters are reptiles because they live in holes.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "justify_classification",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "A learner says a spider is an insect because it has many legs. What is the best correction?",
+      "options": ["A spider is not an insect because it has eight legs, not six.", "A spider is a mammal because it has hair.", "A spider is a reptile because it has scales.", "A spider is a bird because it can climb trees."],
+      "answer": 0,
+      "hints": ["Count the legs on a spider.", "How many legs do insects have?"],
+      "explanation": "Insects have six legs. A spider has eight legs, so it is not an insect.",
+      "misconception": "Spiders are insects.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "justify_classification",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Give one reason why a lizard is classified as a reptile.",
+      "answer": ["it has dry scaly skin", "it has scales", "it has dry skin covered with scales"],
+      "hints": ["Think about the skin of a lizard.", "Does a lizard have feathers or scales?"],
+      "explanation": "A lizard has dry skin covered with scales. This is a feature of reptiles.",
+      "misconception": "Some learners think lizards are insects because they crawl.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "justify_classification",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "Why is a whale classified as a mammal and not a fish?",
+      "options": ["It lives in water and has fins.", "It has scales and lays eggs.", "It has feathers and wings.", "It breathes air and feeds its young with milk."],
+      "answer": 3,
+      "hints": ["Think about how a whale breathes.", "Does a whale feed its baby with milk?"],
+      "explanation": "A whale breathes air and feeds its young with milk. These are mammal features, even though it lives in water.",
+      "misconception": "All animals that live in water are fish.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "examples_non_examples",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Name two mammals that live in water.",
+      "answer": ["whale and dolphin", "whale, dolphin", "dolphin and whale"],
+      "hints": ["Think of large animals in the sea that breathe air.", "They feed their babies with milk."],
+      "explanation": "Whales and dolphins are mammals that live in water. They breathe air and feed their young with milk.",
+      "misconception": "All animals in water are fish.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "justify_classification",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "A millipede has many legs. Is it an insect? Explain your answer.",
+      "answer": ["no, insects have six legs", "no, it has more than six legs", "no, it is not an insect because it has many legs, not six"],
+      "hints": ["How many legs does an insect have?", "Count the legs on a millipede — is it six?"],
+      "explanation": "A millipede is not an insect because it has many more than six legs. Insects have exactly six legs.",
+      "misconception": "All small crawling animals are insects.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "group_features",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "State one difference between birds and reptiles.",
+      "answer": ["birds have feathers but reptiles have scales", "birds have feathers, reptiles have scales", "birds have feathers and reptiles do not"],
+      "hints": ["What covers the body of a bird?", "What covers the body of a reptile?"],
+      "explanation": "Birds have feathers on their bodies, while reptiles have dry scales.",
+      "misconception": "Some learners think all animals with wings are birds.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "justify_classification",
+      "type": "mcq",
+      "difficulty": 4,
+      "stem": "A learner finds a small animal with six legs, wings, and a body in three parts. Which group does it belong to and why?",
+      "options": ["Bird, because it has wings.", "Mammal, because it is small.", "Insect, because it has six legs and a three-part body.", "Reptile, because it crawls."],
+      "answer": 2,
+      "hints": ["Count the legs.", "How many body parts does it have?"],
+      "explanation": "Six legs and a body in three parts are insect features. Wings alone are not enough to make it a bird because it has no feathers.",
+      "misconception": "All animals that fly are birds.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "examples_non_examples",
+      "type": "short_answer",
+      "difficulty": 4,
+      "stem": "A friend says, 'All animals that fly are birds.' Name two flying animals that are NOT birds and state their groups.",
+      "answer": ["bat - mammal, butterfly - insect", "bat (mammal) and butterfly (insect)", "butterfly is an insect and bat is a mammal", "bat is a mammal, butterfly is an insect"],
+      "hints": ["Think of an animal that flies at night and has fur.", "Think of an insect with colourful wings."],
+      "explanation": "A bat is a mammal that flies, and a butterfly is an insect that flies. Flying alone does not make an animal a bird.",
+      "misconception": "All animals that fly are birds.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "justify_classification",
+      "type": "mcq",
+      "difficulty": 4,
+      "stem": "Which statement correctly explains why a cow is a mammal?",
+      "options": ["It has four legs and lives on land.", "It eats grass and chews cud.", "It has a tail and horns.", "It has hair, gives birth to live young, and feeds its calf with milk."],
+      "answer": 3,
+      "hints": ["What covers a cow's body?", "How does a cow feed its calf?"],
+      "explanation": "A cow has hair, gives birth to live young, and feeds its calf with milk. These are the key features of mammals.",
+      "misconception": "All four-legged animals are mammals.",
+      "uncertain": []
+    }
+  ]
+}

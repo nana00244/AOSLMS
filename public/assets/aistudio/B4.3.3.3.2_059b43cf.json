@@ -1,0 +1,264 @@
+{
+  "indicator": {
+    "code": "B4.3.3.3.2",
+    "subject": "Mathematics",
+    "level": "Basic 4",
+    "strand": "Geometry and Measurement",
+    "sub_strand": "Measurement (Time)",
+    "content_standard": "B4.3.3.3 Demonstrate understanding of time taken by events in minutes and hours",
+    "objective": "Use clock to measure time to complete simple events in minutes and seconds",
+    "source_page": 65
+  },
+  "spec": {
+    "skills": [
+      {"tag": "calculate_duration_minutes", "description": "Calculate the duration of events in minutes.", "minQuestions": 2},
+      {"tag": "calculate_duration_seconds", "description": "Calculate the duration of events in seconds.", "minQuestions": 2}
+    ],
+    "difficultyPlan": "20 questions: 5 at difficulty 1, 7 at difficulty 2, 5 at difficulty 3, 3 at difficulty 4.",
+    "misconceptions": [
+      "Subtracting start time from end time incorrectly.",
+      "Regrouping 60 minutes wrongly (e.g., thinking 100 minutes = 1 hour)."
+    ],
+    "needsTeacherAssessment": true
+  },
+  "questions": [
+    {
+      "skill_tag": "calculate_duration_minutes",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "A pupil starts reading at 3:00 and stops at 3:30. How many minutes did they read?",
+      "options": ["15", "30", "45", "60"],
+      "answer": 1,
+      "hints": ["Count the minutes from 3:00 to 3:30.", "30 minutes."],
+      "explanation": "30 minutes.",
+      "misconception": "Saying 60 minutes.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "calculate_duration_seconds",
+      "type": "numeric",
+      "difficulty": 1,
+      "stem": "A pupil runs a race in 15 seconds. Another runs it in 20 seconds. What is the difference in time?",
+      "answer": 5,
+      "check": "20-15",
+      "hints": ["Subtract the smaller from the larger.", "20 - 15."],
+      "explanation": "20 - 15 = 5 seconds.",
+      "misconception": "Adding the times.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "calculate_duration_minutes",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "A cartoon starts at 4:15 PM and ends at 4:45 PM. How long is the cartoon?",
+      "options": ["15 mins", "30 mins", "45 mins", "1 hour"],
+      "answer": 1,
+      "hints": ["From 4:15 to 4:30 is 15 mins.", "From 4:30 to 4:45 is 15 mins."],
+      "explanation": "15 + 15 = 30 minutes.",
+      "misconception": "Saying 15 mins.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "calculate_duration_seconds",
+      "type": "short_answer",
+      "difficulty": 1,
+      "stem": "How many seconds are in 1 minute?",
+      "answer": ["60", "60 seconds"],
+      "hints": ["Standard time fact.", "60 seconds."],
+      "explanation": "1 minute = 60 seconds.",
+      "misconception": "Saying 100.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "calculate_duration_minutes",
+      "type": "numeric",
+      "difficulty": 1,
+      "stem": "A lesson starts at 9:00 and ends at 9:40. How many minutes is the lesson?",
+      "answer": 40,
+      "check": "40-0",
+      "hints": ["40 - 0.", "40 minutes."],
+      "explanation": "40 minutes.",
+      "misconception": "Saying 9 minutes.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "calculate_duration_seconds",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "A pupil takes 45 seconds to tie their shoelaces. How many seconds is that?",
+      "options": ["45", "60", "30", "90"],
+      "answer": 0,
+      "hints": ["The number is already in seconds.", "45 seconds."],
+      "explanation": "45 seconds.",
+      "misconception": "Converting to minutes.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "calculate_duration_minutes",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "A bus leaves at 10:20 and arrives at 11:05. How many minutes is the journey?",
+      "answer": 45,
+      "check": "60-20+5",
+      "hints": ["From 10:20 to 11:00 is 40 mins.", "From 11:00 to 11:05 is 5 mins."],
+      "explanation": "40 + 5 = 45 minutes.",
+      "misconception": "Subtracting 20 - 5 = 15.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "calculate_duration_seconds",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "A pupil counts 25 seconds, then another 15 seconds. How many seconds in total?",
+      "answer": 40,
+      "check": "25+15",
+      "hints": ["Add the times.", "25 + 15."],
+      "explanation": "25 + 15 = 40 seconds.",
+      "misconception": "Subtracting.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "calculate_duration_minutes",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "A meeting starts at 2:30 PM and ends at 3:15 PM. How long is the meeting?",
+      "options": ["30 mins", "45 mins", "1 hour", "1 hour 15 mins"],
+      "answer": 1,
+      "hints": ["2:30 to 3:00 is 30 mins.", "3:00 to 3:15 is 15 mins."],
+      "explanation": "30 + 15 = 45 minutes.",
+      "misconception": "Saying 1 hour.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "calculate_duration_seconds",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "A pupil takes 2 minutes to solve a puzzle. How many seconds is that?",
+      "answer": ["120", "120 seconds"],
+      "hints": ["1 minute = 60 seconds.", "2 x 60."],
+      "explanation": "2 x 60 = 120 seconds.",
+      "misconception": "Saying 200 seconds.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "calculate_duration_minutes",
+      "type": "written",
+      "difficulty": 2,
+      "stem": "A pupil says they studied from 4:45 to 5:30. How long did they study? Explain your reasoning.",
+      "hints": ["From 4:45 to 5:00 is 15 minutes.", "From 5:00 to 5:30 is 30 minutes."],
+      "explanation": "15 + 30 = 45 minutes. You can count up from 4:45 to 5:00, then add the 30 minutes.",
+      "rubric": {
+        "criteria": [
+          {"description": "Correctly calculates 45 minutes.", "marks": 1},
+          {"description": "Shows a valid method (counting up or subtracting).", "marks": 1}
+        ]
+      },
+      "misconception": "Subtracting 45 - 30 = 15.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "calculate_duration_minutes",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "A film starts at 7:15 PM and ends at 9:00 PM. How many minutes is the film?",
+      "answer": 105,
+      "check": "60-15+60",
+      "hints": ["From 7:15 to 8:00 is 45 mins.", "From 8:00 to 9:00 is 60 mins."],
+      "explanation": "45 + 60 = 105 minutes (1 hour 45 mins).",
+      "misconception": "Saying 1 hour 15 mins.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "calculate_duration_minutes",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "A pupil starts a game at 11:50 AM and plays for 25 minutes. What time does the game end?",
+      "options": ["12:15 PM", "11:75 AM", "12:05 PM", "12:25 PM"],
+      "answer": 0,
+      "hints": ["11:50 + 10 mins = 12:00.", "Then add 15 mins."],
+      "explanation": "12:15 PM.",
+      "misconception": "Saying 11:75.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "calculate_duration_minutes",
+      "type": "numeric",
+      "difficulty": 3,
+      "stem": "A pupil takes 15 minutes to walk to school and 20 minutes to return. How many minutes does the journey take in total?",
+      "answer": 35,
+      "check": "15+20",
+      "hints": ["Add the times.", "15 + 20."],
+      "explanation": "35 minutes.",
+      "misconception": "Subtracting.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "calculate_duration_seconds",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "A race starts at 10:00:00 and ends at 10:01:30. How many seconds did the race take?",
+      "options": ["30 seconds", "60 seconds", "90 seconds", "120 seconds"],
+      "answer": 2,
+      "hints": ["From 10:00:00 to 10:01:00 is 60 seconds.", "Add the 30 seconds."],
+      "explanation": "60 + 30 = 90 seconds.",
+      "misconception": "Saying 30 seconds.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "calculate_duration_seconds",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "A pupil takes 1 minute 15 seconds to complete a task. How many seconds is that?",
+      "hints": ["1 minute = 60 seconds.", "60 + 15."],
+      "explanation": "60 + 15 = 75 seconds.",
+      "rubric": {
+        "criteria": [
+          {"description": "Converts 1 minute to 60 seconds.", "marks": 1},
+          {"description": "Adds 15 seconds to get 75.", "marks": 1}
+        ]
+      },
+      "misconception": "Saying 115 seconds.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "calculate_duration_minutes",
+      "type": "numeric",
+      "difficulty": 3,
+      "stem": "A clock shows 9:45. A pupil says it is 15 minutes to 10. How many minutes until 10:15?",
+      "answer": 30,
+      "check": "15+15",
+      "hints": ["15 mins to 10:00.", "15 mins from 10:00 to 10:15."],
+      "explanation": "15 + 15 = 30 minutes.",
+      "misconception": "Saying 15 minutes.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "calculate_duration_seconds",
+      "type": "written",
+      "difficulty": 4,
+      "stem": "A pupil runs 3 laps. Each lap takes 40 seconds. How many minutes and seconds is the total run?",
+      "hints": ["3 x 40 = 120 seconds.", "120 seconds = 2 minutes."],
+      "explanation": "3 x 40 = 120 seconds. 120 seconds = 2 minutes.",
+      "rubric": {
+        "criteria": [
+          {"description": "Calculates 120 seconds.", "marks": 1},
+          {"description": "Converts to 2 minutes.", "marks": 1}
+        ]
+      },
+      "misconception": "Saying 1 minute 20 seconds.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "calculate_duration_minutes",
+      "type": "numeric",
+      "difficulty": 4,
+      "stem": "A pupil studies for 2 hours 30 minutes. They take a 15-minute break. How many minutes did they study in total (including break)?",
+      "answer": 165,
+      "check": "2*60+30+15",
+      "hints": ["2 hours 30 mins = 150 mins.", "Add 15 mins."],
+      "explanation": "150 + 15 = 165 minutes.",
+      "misconception": "Saying 2 hours 45 mins? Wait, 150+15=165. 165 minutes.",
+      "uncertain": []
+    }
+  ]
+}

@@ -1,0 +1,268 @@
+{
+  "indicator": {
+    "code": "B4.4.1.1.3",
+    "subject": "Mathematics",
+    "level": "Basic 4",
+    "strand": "Data",
+    "sub_strand": "Data Collection, Organization, Presentation, Interpretation and Analysis",
+    "content_standard": "B4.4.1.1 Demonstrate an understanding of many-to-one correspondence in displaying, and reading or interpreting, graphs",
+    "objective": "Compare graphs in which the same data has been displayed and explain how they are the same and different",
+    "source_page": 71
+  },
+  "spec": {
+    "skills": [
+      {"tag": "compare_graph_types", "description": "Compare two graphs (e.g., pictograph and bar graph) showing the same data.", "minQuestions": 2},
+      {"tag": "explain_visual_differences", "description": "Explain how graphs are the same and different (e.g., scale, visual representation).", "minQuestions": 2}
+    ],
+    "difficultyPlan": "20 questions: 5 at difficulty 1, 7 at difficulty 2, 5 at difficulty 3, 3 at difficulty 4.",
+    "misconceptions": [
+      "Thinking the data changed because the graph looks different.",
+      "Missing the scale difference (e.g., one graph uses 1-to-1, another uses 1-to-5)."
+    ],
+    "needsTeacherAssessment": false
+  },
+  "questions": [
+    {
+      "skill_tag": "compare_graph_types",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Graph A uses one picture to represent 1 pupil. Graph B uses one picture to represent 5 pupils. They show the same data. Which graph will have fewer pictures?",
+      "options": ["Graph A", "Graph B", "They will have the same number", "Cannot tell"],
+      "answer": 1,
+      "hints": ["If 1 picture stands for more pupils, you need fewer pictures.", "Graph B uses a larger scale."],
+      "explanation": "Graph B will have fewer pictures because each picture represents more pupils.",
+      "misconception": "Thinking both graphs use the same number of pictures.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "explain_visual_differences",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Two bar graphs show the same data, but one starts at 0 on the y-axis and the other starts at 10. How will they look different?",
+      "options": ["The bars will look taller in the graph starting at 10.", "The bars will look shorter in the graph starting at 10.", "They will look exactly the same.", "One graph will have no bars."],
+      "answer": 0,
+      "hints": ["Starting higher up makes small differences look bigger.", "The scale affects how tall the bars look."],
+      "explanation": "Starting the y-axis at 10 instead of 0 exaggerates the differences, making the bars look taller.",
+      "misconception": "Thinking the physical height of the bars doesn't change.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "compare_graph_types",
+      "type": "short_answer",
+      "difficulty": 1,
+      "stem": "Graph 1 uses a picture of a whole apple to represent 2 apples. Graph 2 uses a picture of a whole apple to represent 4 apples. Which graph will need more apples drawn?",
+      "answer": ["graph 1"],
+      "hints": ["If 1 apple means 2 actual apples, you need more symbols.", "Graph 1 uses a smaller scale."],
+      "explanation": "Graph 1 will need more symbols because each symbol represents fewer apples.",
+      "misconception": "Saying Graph 2 because 4 > 2.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "explain_visual_differences",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "A pictograph uses 1 star for 10 points. A bar graph represents the same data with bars. What is the same about the two graphs?",
+      "options": ["They both use stars.", "They show the same data values.", "They both have bars.", "They use the same scale."],
+      "answer": 1,
+      "hints": ["The data is the same, only the display changes.", "The representation is different."],
+      "explanation": "They both show the same data values, just using different visual formats.",
+      "misconception": "Thinking the data values change.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "compare_graph_types",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "If the same data is shown in a pictograph and a bar graph, which statement is true?",
+      "options": ["The pictograph is more accurate.", "The bar graph is more accurate.", "Both show the same total.", "The bar graph shows more data."],
+      "answer": 2,
+      "hints": ["Accuracy depends on the data, not the graph type.", "If the data is the same, the totals match."],
+      "explanation": "Both graphs represent the same data, so they show the same total.",
+      "misconception": "Thinking one graph type is inherently better.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "compare_graph_types",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "Graph A has 4 bars with heights 5, 3, 7, 2. Graph B shows the same data. What is the sum of the heights in Graph B?",
+      "answer": 17,
+      "check": "5+3+7+2",
+      "hints": ["If the data is the same, the sum is the same.", "5 + 3 + 7 + 2."],
+      "explanation": "The sum is 17 in both graphs.",
+      "misconception": "Thinking the sum changes.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "explain_visual_differences",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Two pictographs show the same data. Graph 1 uses whole circles. Graph 2 uses half circles (where a whole circle = 2). Which graph is more accurate for an odd number?",
+      "options": ["Graph 1", "Graph 2", "Both are equally accurate", "Neither is accurate"],
+      "answer": 1,
+      "hints": ["If a whole circle is 2, a half circle is 1.", "This allows you to represent odd numbers."],
+      "explanation": "Graph 2 is more accurate for odd numbers because it can use half circles.",
+      "misconception": "Thinking whole shapes are always more accurate.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "compare_graph_types",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Graph 1 shows 10 pupils using 5 symbols. Graph 2 shows 10 pupils using 10 symbols. What is the key for Graph 1?",
+      "answer": ["1 symbol = 2 pupils", "2 pupils"],
+      "hints": ["10 pupils / 5 symbols."],
+      "explanation": "10 / 5 = 2. So, 1 symbol = 2 pupils.",
+      "misconception": "Saying 1 symbol = 1 pupil.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "explain_visual_differences",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "A bar graph has a scale of 1 unit = 5 items. Another has a scale of 1 unit = 10 items. How will the bar for 20 items look different?",
+      "options": ["The first bar will be taller.", "The second bar will be taller.", "The bars will be the same height.", "The second bar will be shorter."],
+      "answer": 0,
+      "hints": ["First graph: 20/5 = 4 units.", "Second graph: 20/10 = 2 units.", "4 > 2."],
+      "explanation": "The first bar will be 4 units tall, while the second is 2 units tall. So, the first bar is taller.",
+      "misconception": "Thinking the bar height is independent of scale.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "explain_visual_differences",
+      "type": "written",
+      "difficulty": 2,
+      "stem": "Explain why two graphs showing the same data can look very different.",
+      "hints": ["Think about scales.", "Think about symbols versus bars."],
+      "explanation": "Graphs can look different because they may use different scales (e.g., 1 symbol = 1 item vs. 1 symbol = 5 items) or different types of representation (pictographs vs. bar graphs).",
+      "rubric": {
+        "criteria": [
+          {"description": "Mentions scale differences.", "marks": 1},
+          {"description": "Mentions type differences (pictograph vs bar).", "marks": 1}
+        ]
+      },
+      "misconception": "Thinking they cannot show the same data.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "compare_graph_types",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "Graph A has a bar of 8 units. If Graph B shows the same data with a scale of 1 unit = 2 items, what is the height of Graph B's bar?",
+      "answer": 4,
+      "check": "8/2",
+      "hints": ["Graph A's scale is not given, but if it's 1-to-1, the value is 8.", "Divide by the new scale (2).", "8 / 2."],
+      "explanation": "4 units.",
+      "misconception": "Saying 8.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "compare_graph_types",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "A pictograph uses 1 car icon = 5 cars. Another pictograph uses 1 car icon = 10 cars. The same data shows 40 cars. How many MORE icons does the first graph have?",
+      "options": ["2", "4", "8", "40"],
+      "answer": 1,
+      "hints": ["First graph: 40/5 = 8 icons.", "Second graph: 40/10 = 4 icons.", "8 - 4 = 4."],
+      "explanation": "4 more icons.",
+      "misconception": "Subtracting 10 - 5 = 5.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "explain_visual_differences",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "Two bar graphs show the same data. Graph A uses blue bars, Graph B uses red bars. What is the same about them?",
+      "options": ["The color", "The data values", "The scale", "The title"],
+      "answer": 1,
+      "hints": ["Color doesn't change data.", "They show the same numbers."],
+      "explanation": "The data values are the same.",
+      "misconception": "Thinking color affects the data.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "compare_graph_types",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "A pupil draws a bar graph with bars that are all very tall. Another pupil draws the same data with bars that are shorter but wider. What could cause this difference?",
+      "hints": ["Think about the scale on the y-axis.", "Think about the width of the bars."],
+      "explanation": "The difference could be due to the scale on the y-axis. A larger scale (e.g., 1 cm = 10 units) makes bars shorter, while a smaller scale (1 cm = 2 units) makes them taller. The width of the bars also affects appearance but not the data.",
+      "rubric": {
+        "criteria": [
+          {"description": "Mentions scale difference.", "marks": 1},
+          {"description": "Explains how scale affects bar height.", "marks": 1}
+        ]
+      },
+      "misconception": "Thinking the data has changed.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "compare_graph_types",
+      "type": "numeric",
+      "difficulty": 3,
+      "stem": "Graph A shows 15 items as 3 bars. Graph B shows the same data as 5 bars. What is the height of each bar in Graph B?",
+      "answer": 3,
+      "check": "15/5",
+      "hints": ["15 total items / 5 bars.", "15 / 5."],
+      "explanation": "3 items per bar.",
+      "misconception": "Saying 5.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "explain_visual_differences",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "Explain how a pictograph and a bar graph can show the same data but have different visual impacts.",
+      "hints": ["Pictographs use icons.", "Bar graphs use bars."],
+      "explanation": "A pictograph uses icons to show quantity, which can be visually appealing but harder to read for large numbers. A bar graph uses bars, which makes comparing quantities easier at a glance.",
+      "rubric": {
+        "criteria": [
+          {"description": "Mentions pictographs use icons.", "marks": 1},
+          {"description": "Mentions bar graphs use bars and are easier to compare.", "marks": 1}
+        ]
+      },
+      "misconception": "Thinking they show different data.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "compare_graph_types",
+      "type": "mcq",
+      "difficulty": 4,
+      "stem": "Graph A uses 1 icon = 5 items. Graph B uses 1 icon = 10 items. If the same data requires 6 icons in Graph A, how many icons are needed in Graph B?",
+      "options": ["2", "3", "4", "6"],
+      "answer": 1,
+      "hints": ["Graph A: 6 x 5 = 30 total items.", "Graph B: 30 / 10 = 3 icons."],
+      "explanation": "3 icons.",
+      "misconception": "Saying 6.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "explain_visual_differences",
+      "type": "mcq",
+      "difficulty": 4,
+      "stem": "A pupil says 'Graph A looks bigger than Graph B, so it must have more data.' What is wrong with this reasoning?",
+      "options": ["Graphs can be drawn at different physical sizes.", "The data could be the same but displayed with different scales.", "Both A and B are correct.", "Graphs always show the same data."],
+      "answer": 1,
+      "hints": ["Size of the drawing doesn't equal size of data.", "Scale matters."],
+      "explanation": "The physical size of the graph or bars doesn't determine the amount of data; the scale does.",
+      "misconception": "Thinking bigger drawings mean bigger data.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "compare_graph_types",
+      "type": "written",
+      "difficulty": 4,
+      "stem": "Design a simple experiment where you collect data and represent it in two different graphs. Describe the two graphs.",
+      "hints": ["Think of a simple survey (favorite fruit).", "Draw a pictograph and a bar graph."],
+      "explanation": "Survey 10 pupils on their favorite fruit. Create a pictograph using fruit icons. Create a bar graph showing the same data.",
+      "rubric": {
+        "criteria": [
+          {"description": "Describes a data collection method.", "marks": 1},
+          {"description": "Describes two different graph types.", "marks": 1}
+        ]
+      },
+      "misconception": "Thinking only one graph type can be used.",
+      "uncertain": []
+    }
+  ]
+}

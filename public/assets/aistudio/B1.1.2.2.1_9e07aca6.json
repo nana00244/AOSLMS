@@ -1,0 +1,51 @@
+{
+  "indicator": {
+    "code": "B1.1.2.2.1",
+    "subject": "Science",
+    "level": "Basic 1",
+    "strand": "DIVERSITY OF MATTER",
+    "sub_strand": "Materials",
+    "content_standard": "B1.1.2.2: Know that substances can exist in different physical state (Solid, Liquid, Gas). Many substances can be changed from one state to another by heating or cooling",
+    "objective": "Identify and classify materials as solid, liquid or gas",
+    "source_page": 25
+  },
+  "spec": {
+    "skills": [
+      {"tag": "MAT2-IDENT", "description": "Identify whether a named material is a solid, liquid or gas", "minQuestions": 4},
+      {"tag": "MAT2-CLASSIFY", "description": "Sort a small set of materials into solid, liquid and gas groups", "minQuestions": 3},
+      {"tag": "MAT2-EXAMPLE", "description": "Give an example of a solid, a liquid and a gas", "minQuestions": 2},
+      {"tag": "MAT2-REASON", "description": "Give a simple reason why a material belongs to a given state", "minQuestions": 3}
+    ],
+    "difficultyPlan": "5x D1, 7x D2, 5x D3, 3x D4",
+    "misconceptions": [
+      "Air is nothing, so it is not a gas.",
+      "Sand is a liquid because it pours.",
+      "All liquids are water.",
+      "Steam is not a gas because we can see it.",
+      "A solid cannot change shape at all."
+    ],
+    "needsTeacherAssessment": false
+  },
+  "questions": [
+    {"skill_tag": "MAT2-IDENT", "type": "mcq", "difficulty": 1, "stem": "Which of these is a solid?", "options": ["Water", "Stone", "Air", "Milk"], "answer": 1, "hints": ["It is hard.", "You can hold it in your hand."], "explanation": "A stone is a solid. It has a fixed shape.", "misconception": "Pupils may think any object is a solid, including liquids in a cup.", "uncertain": []},
+    {"skill_tag": "MAT2-IDENT", "type": "mcq", "difficulty": 1, "stem": "Which of these is a liquid?", "options": ["Wood", "Plastic", "Water", "Stone"], "answer": 2, "hints": ["It flows.", "You drink it."], "explanation": "Water is a liquid. It flows and takes the shape of its container.", "misconception": "Pupils may think water is the only liquid.", "uncertain": []},
+    {"skill_tag": "MAT2-IDENT", "type": "mcq", "difficulty": 1, "stem": "What state of matter is the air we breathe?", "options": ["Solid", "Liquid", "Gas", "Hard"], "answer": 2, "hints": ["You cannot see it.", "It fills the room."], "explanation": "Air is a gas. It fills the space around us.", "misconception": "Pupils may think air is nothing, not a gas.", "uncertain": []},
+    {"skill_tag": "MAT2-EXAMPLE", "type": "mcq", "difficulty": 1, "stem": "Which of these is a gas?", "options": ["Ice", "Steam", "Juice", "Sand"], "answer": 1, "hints": ["It comes from boiling water.", "It goes up."], "explanation": "Steam is a gas. It is water in its gaseous state.", "misconception": "Pupils may think steam is liquid water.", "uncertain": []},
+    {"skill_tag": "MAT2-REASON", "type": "mcq", "difficulty": 1, "stem": "Why is a table called a solid?", "options": ["It is wet", "It keeps its shape", "It flows", "It is invisible"], "answer": 1, "hints": ["Can you change its shape easily?", "It is hard."], "explanation": "A table is a solid because it has a fixed shape and does not flow.", "misconception": "Pupils may think solids must be heavy.", "uncertain": []},
+    {"skill_tag": "MAT2-CLASSIFY", "type": "mcq", "difficulty": 2, "stem": "Which group has only liquids?", "options": ["Water, milk, juice", "Stone, wood, water", "Air, milk, juice", "Water, stone, air"], "answer": 0, "hints": ["Which ones flow?", "Which ones are wet?"], "explanation": "Water, milk, and juice are all liquids.", "misconception": "Pupils may include stones in the liquids group if they think of pouring them.", "uncertain": []},
+    {"skill_tag": "MAT2-IDENT", "type": "mcq", "difficulty": 2, "stem": "Is a balloon filled with air a solid, liquid, or gas?", "options": ["Solid", "Liquid", "Gas", "All of them"], "answer": 2, "hints": ["What is inside the balloon?", "You cannot see it."], "explanation": "The air inside the balloon is a gas.", "misconception": "Pupils may think the balloon itself is the gas because it is round.", "uncertain": []},
+    {"skill_tag": "MAT2-REASON", "type": "mcq", "difficulty": 2, "stem": "Why is water called a liquid?", "options": ["It is hard", "It takes the shape of its container", "It is invisible", "It keeps its shape"], "answer": 1, "hints": ["Pour water into a cup.", "Does it take the shape of the cup?"], "explanation": "Water is a liquid because it flows and takes the shape of whatever container it is in.", "misconception": "Pupils may think water is liquid because it is wet, not because of its shape.", "uncertain": []},
+    {"skill_tag": "MAT2-CLASSIFY", "type": "mcq", "difficulty": 2, "stem": "Which of these is NOT a solid?", "options": ["A stone", "A chair", "Milk", "A book"], "answer": 2, "hints": ["Which one can you pour?", "Which one is wet?"], "explanation": "Milk is a liquid. You can pour it. The others are solids.", "misconception": "Pupils may think anything white is a solid (like chalk).", "uncertain": []},
+    {"skill_tag": "MAT2-EXAMPLE", "type": "mcq", "difficulty": 2, "stem": "Which of these is an example of a solid?", "options": ["Air", "Water", "Juice", "Wood"], "answer": 3, "hints": ["You can hold it.", "It does not flow."], "explanation": "Wood is a solid. It has a fixed shape.", "misconception": "Pupils may think only hard things are solids.", "uncertain": []},
+    {"skill_tag": "MAT2-IDENT", "type": "short_answer", "difficulty": 2, "stem": "What state of matter is ice?", "answer": ["solid", "a solid"], "hints": ["Is it hard?", "Can you hold it?"], "explanation": "Ice is a solid. It is frozen water.", "misconception": "Pupils may think ice is a liquid because it melts.", "uncertain": []},
+    {"skill_tag": "MAT2-EXAMPLE", "type": "short_answer", "difficulty": 2, "stem": "Give one example of a gas.", "answer": ["air", "steam", "smoke"], "hints": ["What do you breathe?", "What comes from a boiling pot?"], "explanation": "Air, steam, and smoke are examples of gases.", "misconception": "Pupils may think gas is only petrol.", "uncertain": []},
+    {"skill_tag": "MAT2-CLASSIFY", "type": "mcq", "difficulty": 3, "stem": "Ama has three items: a piece of chalk, a glass of water, and a balloon full of air. What are their states?", "options": ["Solid, liquid, gas", "Liquid, solid, gas", "Gas, liquid, solid", "Solid, gas, liquid"], "answer": 0, "hints": ["Chalk is hard.", "Water flows.", "Air is invisible."], "explanation": "Chalk is a solid, water is a liquid, and air is a gas.", "misconception": "Pupils may get confused by the balloon, thinking the balloon is the gas.", "uncertain": []},
+    {"skill_tag": "MAT2-REASON", "type": "mcq", "difficulty": 3, "stem": "Why does a gas not have a fixed shape?", "options": ["It is hard", "It fills any container it is in", "It is invisible", "It is heavy"], "answer": 1, "hints": ["Think about the air in a tyre.", "It spreads out."], "explanation": "A gas spreads out to fill any container it is put into, so it does not have a fixed shape.", "misconception": "Pupils may think gas has no shape because they cannot see it.", "uncertain": []},
+    {"skill_tag": "MAT2-CLASSIFY", "type": "mcq", "difficulty": 3, "stem": "Which statement is TRUE?", "options": ["Solids can flow easily", "Gases keep their shape", "Liquids take the shape of their container", "Solids do not take up space"], "answer": 2, "hints": ["Think about water in a cup.", "Solids are hard."], "explanation": "Liquids take the shape of their container. Solids keep their shape, and gases fill their container.", "misconception": "Pupils may think liquids keep their shape like solids.", "uncertain": []},
+    {"skill_tag": "MAT2-IDENT", "type": "mcq", "difficulty": 3, "stem": "Kwesi blows into a balloon. What state of matter fills the balloon?", "options": ["Solid", "Liquid", "Gas", "Sand"], "answer": 2, "hints": ["What comes out of his mouth?", "It is invisible."], "explanation": "The air Kwesi blows into the balloon is a gas.", "misconception": "Pupils may think the balloon is filled with liquid because it can burst.", "uncertain": []},
+    {"skill_tag": "MAT2-REASON", "type": "mcq", "difficulty": 3, "stem": "Why is a stone a solid?", "options": ["It flows", "It has a fixed shape", "It is transparent", "It fills the room"], "answer": 1, "hints": ["Can you pour a stone?", "Does it keep its shape?"], "explanation": "A stone is a solid because it has a fixed shape and does not flow.", "misconception": "Pupils may think stones are solids because they are heavy.", "uncertain": []},
+    {"skill_tag": "MAT2-REASON", "type": "written", "difficulty": 4, "stem": "Explain why a liquid is different from a solid.", "rubric": {"criteria": [{"description": "States that liquids flow", "marks": 1}, {"description": "States that liquids take the shape of their container (while solids keep their shape)", "marks": 1}]}, "hints": ["What happens when you pour water?", "Does it keep its shape?"], "explanation": "Liquids flow and take the shape of their container, while solids keep their own shape.", "uncertain": []},
+    {"skill_tag": "MAT2-CLASSIFY", "type": "mcq", "difficulty": 4, "stem": "Which of these is NOT true about gases?", "options": ["They fill the space they are in", "They can be compressed into a smaller space", "They have a fixed shape", "They are all around us"], "answer": 2, "hints": ["Think about the air in a tyre.", "It can be squeezed."], "explanation": "Gases do not have a fixed shape; they spread out to fill their container.", "misconception": "Pupils may think gases have a shape because they are inside objects.", "uncertain": []},
+    {"skill_tag": "MAT2-IDENT", "type": "written", "difficulty": 4, "stem": "Look around your classroom. Write down one solid and one liquid you can see.", "rubric": {"criteria": [{"description": "Names a correct solid from the classroom", "marks": 1}, {"description": "Names a correct liquid from the classroom (e.g., water in a bottle)", "marks": 1}]}, "hints": ["Look at the desks.", "Look at a water bottle."], "explanation": "Desks are solids, and water in a bottle is a liquid.", "uncertain": []}
+  ]
+}

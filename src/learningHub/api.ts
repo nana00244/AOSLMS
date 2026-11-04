@@ -8,8 +8,54 @@ import type {
   LearningLesson,
 } from './types';
 
-export const loadHub = (): Promise<HubSnapshot> =>
-  invokeBackend('learning-hub', { action: 'load' });
+import { hubLessons } from './catalog';
+import { naccaHubLessons } from './naccaBank';
+
+export const loadHub = async (): Promise<HubSnapshot> => {
+  let remote: HubSnapshot | null = null;
+  try {
+    remote = await invokeBackend('learning-hub', { action: 'load' });
+  } catch {
+    // Backend offline / local fallback
+  }
+
+  const naccaLessonsMapped: LearningLesson[] = naccaHubLessons.map((l) => ({
+    ...l,
+    questions: l.questions.map((q) => ({
+      id: q.id,
+      prompt: q.prompt,
+      options: q.options,
+    })),
+  }));
+
+  const baseLessons: LearningLesson[] = remote
+    ? remote.lessons
+    : hubLessons.map((l) => ({
+        ...l,
+        questions: l.questions.map((q) => ({
+          id: q.id,
+          prompt: q.prompt,
+          options: q.options,
+        })),
+      }));
+
+  // Ensure NaCCA curriculum lessons are always present alongside any remote lessons
+  const seen = new Set<string>();
+  const combinedLessons: LearningLesson[] = [];
+  for (const l of [...naccaLessonsMapped, ...baseLessons]) {
+    if (!seen.has(l.id)) {
+      seen.add(l.id);
+      combinedLessons.push(l);
+    }
+  }
+
+  return {
+    lessons: combinedLessons,
+    assignments: remote?.assignments || [],
+    attempts: remote?.attempts || [],
+    readings: remote?.readings || [],
+  };
+};
 export const createHubLesson = (lesson: Omit<HubLesson, 'id'>): Promise<LearningLesson> =>
   invokeBackend('learning-hub', { action: 'create-lesson', lesson });
 export const assignHubLesson = (assignment: {

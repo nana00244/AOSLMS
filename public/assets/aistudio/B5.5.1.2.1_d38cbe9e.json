@@ -1,0 +1,280 @@
+{
+  "indicator": {
+    "code": "B5.5.1.2.1",
+    "subject": "Science",
+    "level": "Basic 5",
+    "strand": "HUMANS AND THE ENVIRONMENT",
+    "sub_strand": "Personal Hygiene and Sanitation",
+    "content_standard": "B5.5.1.2 Identify, discuss and appreciate the natural and human features of the environment and the need to keep the environment clean",
+    "objective": "Know how to keep washrooms clean",
+    "source_page": 51
+  },
+  "spec": {
+    "skills": [
+      {"tag": "importance_clean_washroom", "description": "Explain why washrooms should be kept clean (prevents germs, bad smell, disease).", "minQuestions": 4},
+      {"tag": "ways_keep_clean", "description": "Identify ways to keep washrooms clean (flush after use, aim properly, dispose of tissue in bins, regular cleaning).", "minQuestions": 4},
+      {"tag": "consequences_dirty_washroom", "description": "State what can happen if washrooms are not kept clean (bad smell, flies, spread of disease).", "minQuestions": 3},
+      {"tag": "washroom_etiquette", "description": "Describe proper behaviour in a washroom (e.g. flushing, washing hands after use).", "minQuestions": 3},
+      {"tag": "poster_design", "description": "Design a poster to encourage clean washroom habits.", "minQuestions": 3},
+      {"tag": "school_role", "description": "Explain how learners can help keep school washrooms clean.", "minQuestions": 3}
+    ],
+    "difficultyPlan": "20 questions total — Difficulty 1: 5; Difficulty 2: 7; Difficulty 3: 5; Difficulty 4: 3.",
+    "misconceptions": [
+      "Washrooms are only for adults to keep clean.",
+      "Flushing is not important.",
+      "Throwing tissue on the floor is acceptable.",
+      "A dirty washroom only smells bad, but is not a health risk.",
+      "Washrooms do not need to be cleaned regularly.",
+      "Hand washing after using the washroom is not necessary."
+    ],
+    "needsTeacherAssessment": true
+  },
+  "questions": [
+    {
+      "skill_tag": "importance_clean_washroom",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Why should washrooms be kept clean?",
+      "options": ["To prevent germs and bad smell", "To make them look dark", "To make them smaller", "To make them hotter"],
+      "answer": 0,
+      "hints": ["Dirty washrooms can smell and have germs.", "Cleaning keeps them healthy."],
+      "explanation": "Washrooms should be kept clean to prevent germs, bad smell and the spread of disease.",
+      "misconception": "Washrooms do not need cleaning.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "importance_clean_washroom",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which of these is a reason for keeping washrooms clean?",
+      "options": ["To stop the spread of diseases", "To make the washroom darker", "To make the toilet smaller", "To make the water dirtier"],
+      "answer": 0,
+      "hints": ["Germs can spread in dirty washrooms.", "Cleaning prevents sickness."],
+      "explanation": "Keeping washrooms clean helps stop the spread of diseases.",
+      "misconception": "A dirty washroom is only a smell problem.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "importance_clean_washroom",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Give one reason why washrooms should be kept clean.",
+      "answer": ["to prevent germs and disease", "to stop bad smell", "to keep people healthy", "to prevent flies"],
+      "hints": ["Think about germs.", "Think about smell."],
+      "explanation": "Washrooms should be kept clean to prevent germs, bad smell and disease.",
+      "misconception": "Cleaning washrooms is not important.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "importance_clean_washroom",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "A dirty washroom can attract flies. Why is this a health risk?",
+      "options": ["Flies can carry germs from the washroom to food and people", "Flies make the washroom look pretty", "Flies clean the washroom", "Flies make the washroom smell better"],
+      "answer": 0,
+      "hints": ["Flies land on dirty things.", "They can carry germs to food."],
+      "explanation": "Flies attracted to dirty washrooms can carry germs to food and people, spreading disease.",
+      "misconception": "Flies in washrooms are harmless.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "ways_keep_clean",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What should you do immediately after using a toilet?",
+      "options": ["Flush it", "Leave it", "Cover it with paper", "Turn off the light"],
+      "answer": 0,
+      "hints": ["Flushing removes waste.", "It keeps the toilet clean."],
+      "explanation": "You should flush the toilet immediately after use to keep it clean and prevent bad smell.",
+      "misconception": "Flushing is not important.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "ways_keep_clean",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Where should used tissue paper be placed?",
+      "options": ["In a waste bin", "On the floor", "In the sink", "On the toilet seat"],
+      "answer": 0,
+      "hints": ["It should go into a bin.", "Not on the floor."],
+      "explanation": "Used tissue paper should be placed in a waste bin to keep the washroom clean.",
+      "misconception": "Throwing tissue on the floor is acceptable.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "ways_keep_clean",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "State one way to keep a washroom clean.",
+      "answer": ["flush after use", "put tissue in the bin", "clean the toilet regularly", "wash hands after use"],
+      "hints": ["Think about what you do after using the toilet.", "Think about waste disposal."],
+      "explanation": "Ways to keep washrooms clean include flushing after use, putting tissue in the bin, and cleaning regularly.",
+      "misconception": "Washrooms clean themselves.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "ways_keep_clean",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "Which of these is NOT a good way to keep a washroom clean?",
+      "options": ["Flushing after use", "Throwing tissue on the floor", "Cleaning the toilet regularly", "Washing hands after use"],
+      "answer": 1,
+      "hints": ["Which action makes the washroom dirty?", "Tissue on the floor is not clean."],
+      "explanation": "Throwing tissue on the floor makes the washroom dirty. The other actions help keep it clean.",
+      "misconception": "Throwing tissue on the floor is acceptable.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "consequences_dirty_washroom",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "What can happen if a washroom is not kept clean?",
+      "options": ["It can smell bad and spread diseases", "It will become cleaner", "It will attract birds", "It will become larger"],
+      "answer": 0,
+      "hints": ["Dirty washrooms smell.", "They can spread germs."],
+      "explanation": "A dirty washroom can smell bad and spread diseases.",
+      "misconception": "A dirty washroom is only a smell problem.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "consequences_dirty_washroom",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "State one consequence of not keeping a washroom clean.",
+      "answer": ["bad smell", "spread of disease", "flies", "germs"],
+      "hints": ["Think about smell.", "Think about germs."],
+      "explanation": "Not keeping a washroom clean can cause bad smell, flies and the spread of disease.",
+      "misconception": "Dirty washrooms are harmless.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "consequences_dirty_washroom",
+      "type": "mcq",
+      "difficulty": 4,
+      "stem": "A school washroom is not cleaned for many days. What is the most likely health effect on learners?",
+      "options": ["Learners may get sick from germs", "Learners will grow taller", "Learners will run faster", "Learners will become stronger"],
+      "answer": 0,
+      "hints": ["Germs build up in dirty places.", "Germs can cause sickness."],
+      "explanation": "If a washroom is not cleaned for many days, germs build up and learners may get sick.",
+      "misconception": "Dirty washrooms do not affect health.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "washroom_etiquette",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "What should you do after using a washroom?",
+      "options": ["Wash your hands with soap and water", "Wipe your hands on your clothes", "Eat your food", "Run outside"],
+      "answer": 0,
+      "hints": ["Hand hygiene is important.", "Use soap and water."],
+      "explanation": "After using a washroom, you should wash your hands with soap and water to remove germs.",
+      "misconception": "Hand washing after using the washroom is not necessary.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "washroom_etiquette",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "What should you do with the toilet after using it?",
+      "answer": ["flush it", "flush the toilet"],
+      "hints": ["Remove the waste.", "Use the flush."],
+      "explanation": "You should flush the toilet after using it to keep it clean.",
+      "misconception": "Flushing is optional.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "washroom_etiquette",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "Which of these is good washroom behaviour?",
+      "options": ["Flushing after use and washing hands", "Leaving the toilet unflushed", "Throwing tissue on the floor", "Writing on the walls"],
+      "answer": 0,
+      "hints": ["Good behaviour keeps the washroom clean.", "Flush and wash hands."],
+      "explanation": "Good washroom behaviour includes flushing after use and washing hands with soap and water.",
+      "misconception": "Washroom behaviour does not matter.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "poster_design",
+      "type": "drawing",
+      "difficulty": 3,
+      "stem": "Design a poster to encourage learners to keep the school washroom clean. Include at least two clear actions (e.g. 'Flush after use', 'Put tissue in the bin') and a short message.",
+      "rubric": {
+        "criteria": [
+          {"description": "Included at least two correct actions for keeping the washroom clean", "marks": 2},
+          {"description": "Included a short encouraging message", "marks": 1},
+          {"description": "Used clear drawings or symbols", "marks": 2},
+          {"description": "Poster is neat and easy to understand", "marks": 1}
+        ]
+      },
+      "answer": "",
+      "hints": ["Think about flushing and throwing tissue in the bin.", "Write a short message like 'Keep our washroom clean!'"],
+      "explanation": "This is a drawing task. Your teacher will mark it using the rubric.",
+      "misconception": "Washroom cleanliness is not important.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "poster_design",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Write a short message for a poster encouraging learners to keep the washroom clean.",
+      "answer": ["keep our washroom clean", "flush after use and wash your hands", "let us keep the washroom clean"],
+      "hints": ["Use simple words.", "Encourage good habits."],
+      "explanation": "A short message like 'Keep our washroom clean' encourages good habits.",
+      "misconception": "Posters do not help.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "poster_design",
+      "type": "written",
+      "difficulty": 4,
+      "stem": "List three rules you would put on a washroom poster to keep it clean.",
+      "rubric": {
+        "criteria": [
+          {"description": "Listed three clear and correct rules", "marks": 3},
+          {"description": "Rules are easy to understand", "marks": 1}
+        ]
+      },
+      "answer": "",
+      "hints": ["Think about flushing, tissue disposal, and hand washing.", "Write short rules."],
+      "explanation": "This is a written task. Your teacher will mark it using the rubric.",
+      "misconception": "Rules are not needed.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "school_role",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "How can learners help keep school washrooms clean?",
+      "options": ["By flushing after use and putting tissue in the bin", "By throwing tissue on the floor", "By leaving the tap running", "By writing on the walls"],
+      "answer": 0,
+      "hints": ["Good habits keep the washroom clean.", "Flush and use the bin."],
+      "explanation": "Learners can help by flushing after use, putting tissue in the bin, and washing their hands.",
+      "misconception": "Learners cannot help keep washrooms clean.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "school_role",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "State one way learners can help keep school washrooms clean.",
+      "answer": ["flush after use", "put tissue in the bin", "wash hands after use", "report dirty washrooms to the teacher"],
+      "hints": ["Think about your own actions.", "Flushing is one way."],
+      "explanation": "Learners can help by flushing after use, putting tissue in the bin, and reporting problems to the teacher.",
+      "misconception": "Only adults can keep washrooms clean.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "school_role",
+      "type": "mcq",
+      "difficulty": 4,
+      "stem": "A learner notices that the school washroom is very dirty. What is the best action to take?",
+      "options": ["Tell the teacher so it can be cleaned", "Ignore it and continue playing", "Make it dirtier", "Close the washroom and never use it"],
+      "answer": 0,
+      "hints": ["Tell an adult who can help.", "The teacher can arrange cleaning."],
+      "explanation": "The best action is to tell the teacher so the washroom can be cleaned and kept healthy for everyone.",
+      "misconception": "Learners should ignore dirty washrooms.",
+      "uncertain": []
+    }
+  ]
+}

@@ -1,0 +1,270 @@
+{
+  "indicator": {
+    "code": "B4.4.1.1.1",
+    "subject": "Science",
+    "level": "Basic 4",
+    "strand": "FORCES AND ENERGY",
+    "sub_strand": "Sources and Forms of Energy",
+    "content_standard": "B4.4.1.1 Demonstrate understanding of the concept of energy, its various forms, sources and how to transform and conserve it",
+    "objective": "Identify the effect of heat on the change of state of substances",
+    "source_page": 32
+  },
+  "spec": {
+    "skills": [
+      {"tag": "heat_changes_state", "description": "Recognise that heating can change a substance from one state to another (e.g. solid to liquid, liquid to gas).", "minQuestions": 4},
+      {"tag": "melting_examples", "description": "Identify everyday examples of melting caused by heat (e.g. candle wax, shea butter, ice).", "minQuestions": 3},
+      {"tag": "evaporation_boiling", "description": "Distinguish between evaporation (slow change of liquid to vapour) and boiling (fast change with bubbles when heated).", "minQuestions": 4},
+      {"tag": "cooling_condensation", "description": "Recognise that cooling can change a gas back to a liquid (condensation) — e.g. vapour from boiling water changes to water droplets when cooled.", "minQuestions": 3},
+      {"tag": "measure_change", "description": "Explain simply that the amount of water decreases after boiling because some water changes to vapour.", "minQuestions": 3},
+      {"tag": "predict_effect_heat", "description": "Predict what will happen when heat is applied to or removed from a substance (e.g. shea butter in the sun, water in a fridge).", "minQuestions": 3}
+    ],
+    "difficultyPlan": "20 questions total — Difficulty 1: 5; Difficulty 2: 7; Difficulty 3: 5; Difficulty 4: 3.",
+    "misconceptions": [
+      "Boiling destroys water; it disappears completely.",
+      "Melting and boiling are the same thing.",
+      "Cooling makes water hotter.",
+      "Evaporation only happens when water boils.",
+      "Condensation happens when water is heated.",
+      "When water boils, its amount stays exactly the same."
+    ],
+    "needsTeacherAssessment": false
+  },
+  "questions": [
+    {
+      "skill_tag": "heat_changes_state",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What happens to ice when it is left in the sun?",
+      "options": ["It melts into water", "It becomes harder", "It turns into stone", "It disappears completely"],
+      "answer": 0,
+      "hints": ["The sun gives heat.", "Ice is a solid. What happens to it when warmed?"],
+      "explanation": "Heat from the sun changes solid ice into liquid water. This is called melting.",
+      "misconception": "Ice disappears completely when it melts.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "heat_changes_state",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "When a solid is heated enough, it can change into which state?",
+      "options": ["A gas", "A liquid", "A solid", "A rock"],
+      "answer": 1,
+      "hints": ["Ice is a solid. What does it become when it melts?", "Solid → ? → Gas"],
+      "explanation": "When a solid is heated, it melts into a liquid. If heated further, it can change into a gas.",
+      "misconception": "Heating a solid makes it harder.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "melting_examples",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which of these is an example of melting?",
+      "options": ["Water freezing in a fridge", "Shea butter becoming liquid in the sun", "Steam rising from a pot", "Rain falling from clouds"],
+      "answer": 1,
+      "hints": ["Melting is solid → liquid.", "Shea butter starts as a solid."],
+      "explanation": "Shea butter is solid at room temperature. When left in the sun, heat melts it into a liquid.",
+      "misconception": "Shea butter becomes hard in the sun.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "evaporation_boiling",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What do we see when water is boiling?",
+      "options": ["Bubbles and steam", "Ice forming", "The water turning into stone", "The water freezing"],
+      "answer": 0,
+      "hints": ["Boiling water is very hot.", "Bubbles rise to the top."],
+      "explanation": "When water boils, bubbles form and steam (water vapour) rises. Boiling is a fast change from liquid to gas.",
+      "misconception": "Boiling makes water freeze.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "predict_effect_heat",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What will happen if you put a piece of shea butter in the hot sun?",
+      "options": ["It will freeze", "It will melt into liquid", "It will turn into stone", "It will become harder"],
+      "answer": 1,
+      "hints": ["Heat makes solids melt.", "Shea butter is a solid that melts easily."],
+      "explanation": "Shea butter is a solid fat. When placed in the hot sun, heat melts it into a liquid.",
+      "misconception": "Shea butter becomes harder in the sun.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "heat_changes_state",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "A pupil holds a candle near a flame. The candle wax changes from solid to liquid. What is this process called?",
+      "options": ["Condensation", "Freezing", "Melting", "Boiling"],
+      "answer": 2,
+      "hints": ["Solid → liquid when heated.", "The word starts with 'mel'."],
+      "explanation": "Melting is when heat changes a solid into a liquid. The candle wax melted because of the heat from the flame.",
+      "misconception": "Melting and boiling are the same thing.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "heat_changes_state",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "When water is heated and turns into steam, what change of state has happened?",
+      "options": ["Solid to liquid", "Liquid to gas", "Gas to liquid", "Liquid to solid"],
+      "answer": 1,
+      "hints": ["Water is a liquid.", "Steam is a gas."],
+      "explanation": "When water turns into steam, it changes from a liquid to a gas. This is evaporation or boiling, depending on how fast it happens.",
+      "misconception": "Boiling destroys water; it disappears completely.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "evaporation_boiling",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "What is the difference between evaporation and boiling?",
+      "options": ["Evaporation is fast; boiling is slow", "Boiling happens only at night", "Evaporation happens slowly; boiling happens fast with bubbles", "Evaporation and boiling are the same"],
+      "answer": 2,
+      "hints": ["Boiling water makes bubbles.", "Wet clothes dry slowly — is that evaporation or boiling?"],
+      "explanation": "Evaporation happens slowly (like wet clothes drying). Boiling happens fast with bubbles when water is very hot.",
+      "misconception": "Evaporation only happens when water boils.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "cooling_condensation",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Steam from a boiling pot touches a cold plate and forms water droplets. What is this process called?",
+      "options": ["Evaporation", "Melting", "Boiling", "Condensation"],
+      "answer": 3,
+      "hints": ["Gas → liquid when cooled.", "The droplets form on a cold surface."],
+      "explanation": "Condensation is the change from gas (vapour) to liquid (water droplets) when the gas is cooled.",
+      "misconception": "Condensation happens when water is heated.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "melting_examples",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Give one example of a solid that melts when heated.",
+      "answer": ["ice", "candle wax", "shea butter", "chocolate", "butter"],
+      "hints": ["Think of something you put in the sun that turns to liquid.", "Ice melts into water."],
+      "explanation": "Ice, candle wax, shea butter, chocolate and butter all melt when heated.",
+      "misconception": "Only ice can melt.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "predict_effect_heat",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Ama left a piece of ice on a plate in the sun. After some minutes, what will she see?",
+      "options": ["The ice will become harder", "The ice will turn into water", "The ice will turn into stone", "The ice will become bigger"],
+      "answer": 1,
+      "hints": ["Heat changes ice into what?", "Solid → liquid."],
+      "explanation": "The heat from the sun melts the ice into liquid water.",
+      "misconception": "Ice does not change in the sun.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "measure_change",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "A pupil boiled a cup of water for a long time. What will be left in the cup?",
+      "options": ["More water than before", "The same amount of water", "Less water than before", "No water at all"],
+      "answer": 2,
+      "hints": ["Some water changes to vapour.", "The vapour escapes into the air."],
+      "explanation": "When water boils, some of it changes to vapour and escapes into the air. So there is less water left in the cup.",
+      "misconception": "When water boils, its amount stays exactly the same.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "cooling_condensation",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Water droplets form on the inside of a cold bottle of water. What caused this?",
+      "options": ["Water leaked through the bottle", "Vapour from the air cooled and changed to water droplets", "The bottle is sweating", "The water inside the bottle melted"],
+      "answer": 1,
+      "hints": ["Vapour in the air touches a cold surface.", "Gas → liquid when cooled."],
+      "explanation": "Water vapour in the air cooled on contact with the cold bottle and changed into water droplets. This is condensation.",
+      "misconception": "Bottles sweat like people do.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "cooling_condensation",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "What happens to water vapour when it cools?",
+      "answer": ["it changes into liquid water droplets", "it condenses into water droplets", "it turns back into water"],
+      "hints": ["Vapour is a gas.", "Gas → liquid when cooled."],
+      "explanation": "When water vapour cools, it condenses and changes back into liquid water droplets.",
+      "misconception": "Vapour disappears when it cools.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "evaporation_boiling",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "Which statement correctly compares evaporation and boiling?",
+      "options": ["Evaporation happens only when water boils", "Evaporation happens at the surface and is slow; boiling happens throughout the liquid and is fast", "Boiling happens without heat", "Evaporation and boiling are the same process"],
+      "answer": 1,
+      "hints": ["Wet clothes dry slowly.", "Boiling water has bubbles throughout."],
+      "explanation": "Evaporation happens at the surface of a liquid and is slow. Boiling happens throughout the liquid, with bubbles, and is fast.",
+      "misconception": "Evaporation only happens when water boils.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "heat_changes_state",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "A pupil says, 'Melting and boiling are the same process.' What is the best correction?",
+      "options": ["They are the same", "Melting is solid to liquid; boiling is liquid to gas", "Melting is liquid to gas; boiling is solid to liquid", "Boiling only happens at night"],
+      "answer": 1,
+      "hints": ["What does ice become when heated?", "What does water become when boiled?"],
+      "explanation": "Melting changes a solid to a liquid. Boiling changes a liquid to a gas. They are different changes of state.",
+      "misconception": "Melting and boiling are the same thing.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "measure_change",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Why does the amount of water in a pot decrease after boiling for a long time?",
+      "answer": ["because some water changes into vapour and escapes into the air", "some water turns into vapour and goes into the air", "the water evaporates and escapes as vapour"],
+      "hints": ["What do you see rising from a boiling pot?", "Steam is water vapour."],
+      "explanation": "Some of the water changes into water vapour and escapes into the air, so the amount of water left in the pot decreases.",
+      "misconception": "Water disappears completely when boiled.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "predict_effect_heat",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "A learner puts a cup of water in a fridge. What will likely happen to the water if the fridge is very cold?",
+      "options": ["It will turn into ice", "It will boil", "It will become steam", "It will turn into shea butter"],
+      "answer": 0,
+      "hints": ["The fridge is cold.", "Very cold water changes into what solid?"],
+      "explanation": "If the fridge is cold enough, the water loses heat and changes into ice (freezes).",
+      "misconception": "Cooling makes water hotter.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "evaporation_boiling",
+      "type": "short_answer",
+      "difficulty": 4,
+      "stem": "Explain why wet clothes dry even when the sun is not very hot.",
+      "answer": ["because water evaporates slowly from the clothes into the air", "the water in the clothes evaporates into the air", "evaporation happens slowly without boiling"],
+      "hints": ["Does water need to boil to evaporate?", "Wet clothes dry at room temperature."],
+      "explanation": "Wet clothes dry because water evaporates slowly from the cloth into the air. Boiling is not needed for evaporation to happen.",
+      "misconception": "Evaporation only happens when water boils.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "measure_change",
+      "type": "numeric",
+      "difficulty": 4,
+      "stem": "A learner measured 200 ml of water and boiled it for a long time. After boiling, only 150 ml of water was left. How much water changed into vapour?",
+      "answer": 50,
+      "check": "200-150",
+      "hints": ["Subtract the water left from the water at the start.", "Start: 200 ml, Left: 150 ml."],
+      "explanation": "200 ml − 150 ml = 50 ml. So 50 ml of water changed into vapour and escaped into the air.",
+      "misconception": "Boiled water disappears completely.",
+      "uncertain": []
+    }
+  ]
+}

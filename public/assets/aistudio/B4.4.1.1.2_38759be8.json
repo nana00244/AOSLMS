@@ -1,0 +1,261 @@
+{
+  "indicator": {
+    "code": "B4.4.1.1.2",
+    "subject": "Mathematics",
+    "level": "Basic 4",
+    "strand": "Data",
+    "sub_strand": "Data Collection, Organization, Presentation, Interpretation and Analysis",
+    "content_standard": "B4.4.1.1 Demonstrate an understanding of many-to-one correspondence in displaying, and reading or interpreting, graphs",
+    "objective": "Use an understanding of many-to-one correspondence to display or construct graphs",
+    "source_page": 69
+  },
+  "spec": {
+    "skills": [
+      {"tag": "use_many_to_one_key", "description": "Interpret and use a key where one symbol represents multiple items (e.g., 1 symbol = 2 pupils).", "minQuestions": 2},
+      {"tag": "draw_many_to_one_graph", "description": "Construct a pictograph or bar graph using a many-to-one scale.", "minQuestions": 2}
+    ],
+    "difficultyPlan": "20 questions: 5 at difficulty 1, 7 at difficulty 2, 5 at difficulty 3, 3 at difficulty 4.",
+    "misconceptions": [
+      "Drawing one icon per unit instead of using the key.",
+      "Wrong scale (e.g., using 2 when the key says 5)."
+    ],
+    "needsTeacherAssessment": true
+  },
+  "questions": [
+    {
+      "skill_tag": "use_many_to_one_key",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "A pictograph has a key: 1 smiley face = 2 pupils. If there are 4 smiley faces for 'Maths', how many pupils like Maths?",
+      "options": ["2", "4", "6", "8"],
+      "answer": 3,
+      "hints": ["Multiply the number of faces by the key value.", "4 x 2."],
+      "explanation": "4 x 2 = 8 pupils.",
+      "misconception": "Saying 4 because they ignored the key.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "use_many_to_one_key",
+      "type": "short_answer",
+      "difficulty": 1,
+      "stem": "In a graph where 1 symbol = 5 oranges, how many oranges are represented by 3 symbols?",
+      "answer": ["15"],
+      "hints": ["Multiply 3 by 5.", "3 x 5."],
+      "explanation": "3 x 5 = 15 oranges.",
+      "misconception": "Saying 3.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "draw_many_to_one_graph",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "If 1 square represents 10 pupils, how many squares would you draw for 30 pupils?",
+      "options": ["1", "2", "3", "30"],
+      "answer": 2,
+      "hints": ["Divide 30 by 10.", "30 / 10."],
+      "explanation": "30 / 10 = 3 squares.",
+      "misconception": "Drawing 30 squares.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "use_many_to_one_key",
+      "type": "numeric",
+      "difficulty": 1,
+      "stem": "A graph shows 5 stars for 'reading'. If 1 star = 4 books, how many books were read?",
+      "answer": 20,
+      "check": "5*4",
+      "hints": ["5 x 4."],
+      "explanation": "20 books.",
+      "misconception": "Saying 5.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "use_many_to_one_key",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "A key says: 1 tree icon = 10 trees planted. If there are 6 icons, how many trees were planted?",
+      "options": ["6", "16", "60", "100"],
+      "answer": 2,
+      "hints": ["6 x 10."],
+      "explanation": "60 trees.",
+      "misconception": "Adding 6 + 10.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "use_many_to_one_key",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "A pictograph shows 3 cars for Monday. If 1 car icon = 5 cars, how many cars on Monday?",
+      "answer": 15,
+      "check": "3*5",
+      "hints": ["3 x 5."],
+      "explanation": "15 cars.",
+      "misconception": "Saying 3.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "draw_many_to_one_graph",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "If 1 circle represents 2 pupils, how many circles are needed for 10 pupils?",
+      "answer": ["5"],
+      "hints": ["Divide 10 by 2.", "10 / 2."],
+      "explanation": "5 circles.",
+      "misconception": "Saying 10.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "use_many_to_one_key",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "A graph has a key: 1 symbol = 4 pupils. If there are 2.5 symbols for a category, how many pupils is that?",
+      "options": ["2", "8", "10", "12"],
+      "answer": 2,
+      "hints": ["2.5 x 4.", "2 full symbols = 8. Half a symbol = 2."],
+      "explanation": "2.5 x 4 = 10 pupils.",
+      "misconception": "Saying 2.5.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "draw_many_to_one_graph",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "To draw a bar graph where 1 unit height = 5 pupils, what height would represent 35 pupils?",
+      "answer": 7,
+      "check": "35/5",
+      "hints": ["35 / 5."],
+      "explanation": "7 units.",
+      "misconception": "Saying 35.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "use_many_to_one_key",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "A pictograph uses 1 book symbol for 10 books. If a row has 4 and a half symbols, how many books is that?",
+      "answer": ["45"],
+      "hints": ["4 x 10 = 40.", "Half of 10 = 5.", "40 + 5."],
+      "explanation": "45 books.",
+      "misconception": "Saying 4.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "draw_many_to_one_graph",
+      "type": "written",
+      "difficulty": 2,
+      "stem": "A pupil needs to draw 3 symbols to represent 12 apples. What is the key?",
+      "hints": ["12 / 3."],
+      "explanation": "The key is 1 symbol = 4 apples.",
+      "rubric": {
+        "criteria": [
+          {"description": "States 1 symbol = 4 apples.", "marks": 1}
+        ]
+      },
+      "misconception": "Saying 1 symbol = 3 apples.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "draw_many_to_one_graph",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "If 1 smiley = 10 pupils, how many smileys would represent 40 pupils?",
+      "answer": 4,
+      "check": "40/10",
+      "hints": ["40 / 10."],
+      "explanation": "4 smileys.",
+      "misconception": "Saying 40.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "use_many_to_one_key",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "Explain why a key is important in a many-to-one pictograph.",
+      "hints": ["What happens if you don't know what one symbol stands for?", "Could 1 symbol mean 2 or 20?"],
+      "explanation": "The key tells you the value of each symbol. Without it, you wouldn't know if one symbol represents 2 pupils or 20 pupils.",
+      "rubric": {
+        "criteria": [
+          {"description": "States the key shows the value of the symbol.", "marks": 1},
+          {"description": "Explains that without it, the graph is unreadable.", "marks": 1}
+        ]
+      },
+      "misconception": "Thinking the key is not important.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "draw_many_to_one_graph",
+      "type": "numeric",
+      "difficulty": 3,
+      "stem": "A bar graph has a scale of 1 cm = 4 units. If a bar is 6 cm tall, what value does it represent?",
+      "answer": 24,
+      "check": "6*4",
+      "hints": ["6 x 4."],
+      "explanation": "24 units.",
+      "misconception": "Saying 6.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "use_many_to_one_key",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "A graph shows 5 symbols for 'Maths'. If 1 symbol = 4 pupils, how many pupils like Maths?",
+      "options": ["5", "9", "20", "24"],
+      "answer": 2,
+      "hints": ["5 x 4."],
+      "explanation": "20 pupils.",
+      "misconception": "Adding 5 + 4.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "use_many_to_one_key",
+      "type": "numeric",
+      "difficulty": 3,
+      "stem": "A key says 1 bus = 20 passengers. If 3 buses are shown, how many passengers in total?",
+      "answer": 60,
+      "check": "3*20",
+      "hints": ["3 x 20."],
+      "explanation": "60 passengers.",
+      "misconception": "Saying 3.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "draw_many_to_one_graph",
+      "type": "written",
+      "difficulty": 4,
+      "stem": "A pupil wants to draw a pictograph for 15 pupils where 1 symbol = 2 pupils. How many symbols will they draw? (Draw exactly half symbols if necessary).",
+      "hints": ["15 / 2 = 7.5."],
+      "explanation": "They will draw 7 and a half symbols.",
+      "rubric": {
+        "criteria": [
+          {"description": "States 7.5 or 7 and a half symbols.", "marks": 1}
+        ]
+      },
+      "misconception": "Saying 15.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "use_many_to_one_key",
+      "type": "numeric",
+      "difficulty": 4,
+      "stem": "A graph shows 2 smileys for 'Maths', 3 smileys for 'English'. If 1 smiley = 5 pupils, how many more pupils like English than Maths?",
+      "answer": 5,
+      "check": "(3-2)*5",
+      "hints": ["Difference in smileys = 1.", "1 x 5."],
+      "explanation": "5 pupils.",
+      "misconception": "Saying 1.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "draw_many_to_one_graph",
+      "type": "numeric",
+      "difficulty": 4,
+      "stem": "To draw a bar graph with a maximum value of 50 where 1 cm = 10 units, how tall should the tallest bar be?",
+      "answer": 5,
+      "check": "50/10",
+      "hints": ["50 / 10."],
+      "explanation": "5 cm.",
+      "misconception": "Saying 50.",
+      "uncertain": []
+    }
+  ]
+}

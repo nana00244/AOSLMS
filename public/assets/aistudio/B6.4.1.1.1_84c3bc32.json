@@ -1,0 +1,268 @@
+{
+  "indicator": {
+    "code": "B6.4.1.1.1",
+    "subject": "Science",
+    "level": "Basic 6",
+    "strand": "FORCES AND ENERGY",
+    "sub_strand": "Sources and Forms of Energy",
+    "content_standard": "B6.4.1.1 Demonstrate understanding of the concept of energy, its various forms and sources and the ways in which it can be transformed and conserved",
+    "objective": "Compare renewable and non-renewable sources of energy",
+    "source_page": 62
+  },
+  "spec": {
+    "skills": [
+      {"tag": "define_renewable", "description": "Explain that renewable energy sources are not depleted when used (e.g. solar, wind, hydro).", "minQuestions": 4},
+      {"tag": "define_nonrenewable", "description": "Explain that non-renewable energy sources are depleted after use (e.g. firewood, batteries, food, gasoline, diesel, kerosene).", "minQuestions": 4},
+      {"tag": "classify_sources", "description": "Sort given energy sources into renewable and non-renewable.", "minQuestions": 4},
+      {"tag": "compare_renewable_nonrenewable", "description": "Compare renewable and non-renewable sources (e.g. can be replaced vs. cannot be replaced quickly).", "minQuestions": 3},
+      {"tag": "examples_everyday", "description": "Give everyday examples of renewable and non-renewable energy sources used in Ghana.", "minQuestions": 3},
+      {"tag": "importance_conservation", "description": "Explain why it is important to use renewable energy sources.", "minQuestions": 2}
+    ],
+    "difficultyPlan": "20 questions total — Difficulty 1: 5; Difficulty 2: 7; Difficulty 3: 5; Difficulty 4: 3.",
+    "misconceptions": [
+      "Firewood is renewable because trees can grow again quickly.",
+      "All energy sources are renewable.",
+      "Solar energy is non-renewable.",
+      "Batteries are renewable.",
+      "Renewable sources are unlimited in the short term.",
+      "Non-renewable sources can be replaced easily."
+    ],
+    "needsTeacherAssessment": false
+  },
+  "questions": [
+    {
+      "skill_tag": "define_renewable",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What is a renewable energy source?",
+      "options": ["An energy source that can be replaced naturally over time", "An energy source that cannot be replaced", "An energy source that is always dirty", "An energy source that is only used once"],
+      "answer": 0,
+      "hints": ["Think about the sun and wind.", "They are always available."],
+      "explanation": "A renewable energy source can be replaced naturally over time, such as solar, wind and hydro energy.",
+      "misconception": "All energy sources are renewable.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "define_nonrenewable",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What is a non-renewable energy source?",
+      "options": ["An energy source that is used up faster than it can be replaced", "An energy source that can be replaced quickly", "An energy source that is always renewable", "An energy source that is never used up"],
+      "answer": 0,
+      "hints": ["Think about firewood and diesel.", "They can run out."],
+      "explanation": "A non-renewable energy source is used up faster than it can be replaced, such as firewood, diesel and kerosene.",
+      "misconception": "Non-renewable sources can be replaced easily.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "examples_everyday",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which of these is a renewable energy source?",
+      "options": ["Solar", "Firewood", "Diesel", "Kerosene"],
+      "answer": 0,
+      "hints": ["It comes from the sun.", "It is always available."],
+      "explanation": "Solar energy is renewable because it comes from the sun and is not used up.",
+      "misconception": "Solar energy is non-renewable.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "define_renewable",
+      "type": "short_answer",
+      "difficulty": 1,
+      "stem": "Name one renewable energy source.",
+      "answer": ["solar", "wind", "hydro", "water"],
+      "hints": ["Think about the sun or wind.", "It can be replaced naturally."],
+      "explanation": "Renewable energy sources include solar, wind and hydro energy.",
+      "misconception": "All energy sources are renewable.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "define_nonrenewable",
+      "type": "short_answer",
+      "difficulty": 1,
+      "stem": "Name one non-renewable energy source.",
+      "answer": ["firewood", "diesel", "kerosene", "batteries", "gasoline"],
+      "hints": ["Think about fuel for cars or cooking.", "It can run out."],
+      "explanation": "Non-renewable energy sources include firewood, diesel, kerosene, batteries and gasoline.",
+      "misconception": "Firewood is renewable because trees can grow again quickly.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "define_renewable",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which statement best describes a renewable energy source?",
+      "options": ["It can be replaced naturally over time", "It is always unlimited", "It is only used in Ghana", "It cannot be replaced"],
+      "answer": 0,
+      "hints": ["Think about solar and wind.", "They are replenished naturally."],
+      "explanation": "A renewable energy source can be replaced naturally over time.",
+      "misconception": "Renewable sources are unlimited in the short term.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "define_nonrenewable",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which statement best describes a non-renewable energy source?",
+      "options": ["It is used up faster than it can be replaced", "It can be replaced quickly", "It is always renewable", "It is unlimited"],
+      "answer": 0,
+      "hints": ["Think about firewood and diesel.", "They can run out."],
+      "explanation": "A non-renewable energy source is used up faster than it can be replaced.",
+      "misconception": "Non-renewable sources can be replaced easily.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "define_renewable",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "A pupil says, 'All energy sources are renewable.' What is the best correction?",
+      "options": ["Yes, all energy sources are renewable", "No, some energy sources are non-renewable, like firewood and diesel", "No, all energy sources are non-renewable", "No, only solar is renewable"],
+      "answer": 1,
+      "hints": ["Firewood and diesel can run out.", "Not all sources are replaced naturally."],
+      "explanation": "Not all energy sources are renewable. Some, like firewood and diesel, are non-renewable.",
+      "misconception": "All energy sources are renewable.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "classify_sources",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which of these is a non-renewable energy source?",
+      "options": ["Firewood", "Solar", "Wind", "Hydro"],
+      "answer": 0,
+      "hints": ["It is used for cooking but can run out.", "It is not replaced quickly."],
+      "explanation": "Firewood is a non-renewable energy source because it is used up faster than trees can grow.",
+      "misconception": "Firewood is renewable because trees can grow again quickly.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "examples_everyday",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Give one example of a renewable energy source used in Ghana.",
+      "answer": ["solar", "wind", "hydro", "water"],
+      "hints": ["Think about energy from the sun.", "Think about energy from water."],
+      "explanation": "Renewable energy sources used in Ghana include solar, wind and hydro energy.",
+      "misconception": "Ghana does not use renewable energy.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "examples_everyday",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Give one example of a non-renewable energy source used in Ghana.",
+      "answer": ["firewood", "diesel", "kerosene", "batteries"],
+      "hints": ["Think about fuel for cooking or cars.", "It can run out."],
+      "explanation": "Non-renewable energy sources used in Ghana include firewood, diesel, kerosene and batteries.",
+      "misconception": "All energy sources in Ghana are renewable.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "define_nonrenewable",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Why is firewood considered a non-renewable energy source?",
+      "options": ["It is used up faster than trees can grow again", "Trees cannot grow again", "It is always available", "It comes from the sun"],
+      "answer": 0,
+      "hints": ["Think about how long trees take to grow.", "Firewood is used quickly."],
+      "explanation": "Firewood is non-renewable because it is used up faster than trees can be replaced.",
+      "misconception": "Firewood is renewable because trees can grow again quickly.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "classify_sources",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "A learner lists: solar, wind, firewood, hydro. Which of these is the non-renewable source?",
+      "options": ["Firewood", "Solar", "Wind", "Hydro"],
+      "answer": 0,
+      "hints": ["Which one can run out?", "Solar, wind and hydro are renewable."],
+      "explanation": "Firewood is the non-renewable source in the list. Solar, wind and hydro are renewable.",
+      "misconception": "Firewood is renewable.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "classify_sources",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "Which set contains only renewable energy sources?",
+      "options": ["Solar, wind, hydro", "Solar, firewood, diesel", "Wind, kerosene, hydro", "Firewood, diesel, kerosene"],
+      "answer": 0,
+      "hints": ["Renewable sources are replaced naturally.", "Solar, wind and hydro are all renewable."],
+      "explanation": "Solar, wind and hydro are all renewable energy sources.",
+      "misconception": "Firewood is renewable.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "compare_renewable_nonrenewable",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Explain one way renewable and non-renewable energy sources are different.",
+      "answer": ["renewable sources can be replaced naturally while non-renewable sources cannot", "renewable sources are not used up while non-renewable sources are used up", "renewable sources can be replaced quickly, non-renewable cannot"],
+      "hints": ["Think about replacement.", "Renewable sources are replenished."],
+      "explanation": "Renewable energy sources can be replaced naturally, while non-renewable sources are used up faster than they can be replaced.",
+      "misconception": "Renewable and non-renewable sources are the same.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "compare_renewable_nonrenewable",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "A pupil says, 'Firewood is renewable because trees can grow again.' Is this correct?",
+      "options": ["No, firewood is non-renewable because it is used up faster than trees can grow", "Yes, firewood is renewable", "Yes, all wood is renewable", "No, firewood is a fossil fuel"],
+      "answer": 0,
+      "hints": ["How long does it take for a tree to grow?", "Firewood is used up quickly."],
+      "explanation": "Firewood is non-renewable because it is used up faster than trees can be replaced.",
+      "misconception": "Firewood is renewable because trees can grow again quickly.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "importance_conservation",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "Why is it important to use renewable energy sources?",
+      "options": ["They can be replaced naturally and are less harmful to the environment", "They are always cheap", "They are unlimited in the short term", "They are only for rich countries"],
+      "answer": 0,
+      "hints": ["Renewable sources are replaced naturally.", "They are better for the environment."],
+      "explanation": "Using renewable energy sources is important because they can be replaced naturally and are generally less harmful to the environment.",
+      "misconception": "Renewable energy is not important.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "importance_conservation",
+      "type": "short_answer",
+      "difficulty": 4,
+      "stem": "Explain why conserving non-renewable energy sources is important.",
+      "answer": ["because they cannot be replaced quickly and will run out", "they are used up faster than they can be replaced, so we need to save them", "they are limited and can run out"],
+      "hints": ["Think about what happens when they run out.", "They are not easily replaced."],
+      "explanation": "Conserving non-renewable energy sources is important because they cannot be replaced quickly and will eventually run out.",
+      "misconception": "Non-renewable sources can be replaced easily.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "compare_renewable_nonrenewable",
+      "type": "mcq",
+      "difficulty": 4,
+      "stem": "Which statement correctly compares renewable and non-renewable sources in terms of replacement?",
+      "options": ["Renewable sources are replaced naturally over a short time, while non-renewable sources take millions of years to form", "Renewable sources are replaced over millions of years, while non-renewable sources are replaced quickly", "Both are replaced quickly", "Neither is replaced"],
+      "answer": 0,
+      "hints": ["Think about solar and wind.", "Non-renewable sources like diesel take a long time to form."],
+      "explanation": "Renewable sources are replaced naturally over a short time, while non-renewable sources take millions of years to form.",
+      "misconception": "Non-renewable sources can be replaced easily.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "classify_sources",
+      "type": "mcq",
+      "difficulty": 4,
+      "stem": "A pupil has four energy sources: solar, wind, firewood, diesel. Which classification is correct?",
+      "options": ["Renewable: solar, wind; Non-renewable: firewood, diesel", "Renewable: solar, firewood; Non-renewable: wind, diesel", "Renewable: wind, diesel; Non-renewable: solar, firewood", "Renewable: solar, wind, firewood; Non-renewable: diesel"],
+      "answer": 0,
+      "hints": ["Solar and wind are renewable.", "Firewood and diesel are non-renewable."],
+      "explanation": "Solar and wind are renewable energy sources. Firewood and diesel are non-renewable energy sources.",
+      "misconception": "Firewood is renewable.",
+      "uncertain": []
+    }
+  ]
+}

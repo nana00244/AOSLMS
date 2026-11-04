@@ -1,0 +1,267 @@
+{
+  "indicator": {
+    "code": "B5.1.1.2.1",
+    "subject": "Science",
+    "level": "Basic 5",
+    "strand": "DIVERSITY OF MATTER",
+    "sub_strand": "Living and Non-Living Things",
+    "content_standard": "B5.1.1.2 Demonstrate understanding of the differences between living things, non-living things, and things which have never been alive",
+    "objective": "Compare the differences among things that are living, dead and things that have never been alive",
+    "source_page": 39
+  },
+  "spec": {
+    "skills": [
+      {"tag": "define_living", "description": "Recognise that living things carry out life processes (growth, respiration, sensitivity, excretion, reproduction, nutrition).", "minQuestions": 3},
+      {"tag": "define_dead", "description": "Recognise that dead things were once alive but no longer carry out life processes.", "minQuestions": 3},
+      {"tag": "define_never_alive", "description": "Recognise that things which have never been alive do not and never did carry out life processes.", "minQuestions": 3},
+      {"tag": "classify_examples", "description": "Classify examples as living, dead, or never alive (e.g. a growing plant, a dry stick, a rock).", "minQuestions": 4},
+      {"tag": "compare_living_dead", "description": "Compare differences between living things and dead things (e.g. a living plant grows; a dead plant does not).", "minQuestions": 4},
+      {"tag": "justify_classification", "description": "Give reasons for classifying something as living, dead, or never alive.", "minQuestions": 3}
+    ],
+    "difficultyPlan": "20 questions total — Difficulty 1: 5; Difficulty 2: 7; Difficulty 3: 5; Difficulty 4: 3.",
+    "misconceptions": [
+      "A fire is living because it moves and grows.",
+      "A dead tree is not living, so it was never alive.",
+      "Water is living because it moves.",
+      "A car is living because it moves.",
+      "Things that move are always living.",
+      "A dry leaf is never-alive."
+    ],
+    "needsTeacherAssessment": false
+  },
+  "questions": [
+    {
+      "skill_tag": "define_living",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What makes something a living thing?",
+      "options": ["It can move", "It carries out life processes like growth and respiration", "It is made of metal", "It is heavy"],
+      "answer": 1,
+      "hints": ["Think about the life processes.", "Living things grow and breathe."],
+      "explanation": "Living things carry out life processes such as growth, respiration, sensitivity and excretion.",
+      "misconception": "Things that move are always living.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "define_dead",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What does 'dead' mean?",
+      "options": ["Something that was never alive", "Something that is still alive", "Something that was once alive but no longer carries out life processes", "Something that moves"],
+      "answer": 2,
+      "hints": ["Think about a dry stick.", "It was part of a tree but is no longer alive."],
+      "explanation": "Dead things were once alive but no longer carry out life processes.",
+      "misconception": "A dead tree was never alive.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "define_never_alive",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What does 'never alive' mean?",
+      "options": ["Something that is dead", "Something that was never living and does not carry out life processes", "Something that is alive", "Something that moves"],
+      "answer": 1,
+      "hints": ["Think about a rock.", "It was never alive."],
+      "explanation": "Things that have never been alive do not carry out life processes and never did.",
+      "misconception": "A rock was once alive.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "classify_examples",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which of these is a living thing?",
+      "options": ["A rock", "A growing plant", "A dry stick", "A plastic bottle"],
+      "answer": 1,
+      "hints": ["Which one grows and carries out life processes?", "A plant is living."],
+      "explanation": "A growing plant is a living thing because it carries out life processes.",
+      "misconception": "Things that move are always living.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "compare_living_dead",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which statement compares a living plant and a dead plant correctly?",
+      "options": ["Both grow", "The living plant grows, but the dead plant does not", "The dead plant grows, but the living plant does not", "Neither grows"],
+      "answer": 1,
+      "hints": ["Living things grow.", "Dead things do not carry out life processes."],
+      "explanation": "A living plant grows, but a dead plant does not. This is one difference between living and dead things.",
+      "misconception": "A dead plant still grows.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "define_living",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "A pupil says a fire is living because it moves and grows. What is the best correction?",
+      "options": ["Yes, fire is living", "No, fire does not carry out life processes like respiration and excretion", "No, fire is dead", "No, fire is never alive"],
+      "answer": 1,
+      "hints": ["Does fire breathe?", "Does fire excrete waste?"],
+      "explanation": "Fire is not living because it does not carry out life processes such as respiration and excretion.",
+      "misconception": "A fire is living because it moves and grows.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "classify_examples",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "A pupil finds a dry leaf on the ground. How should the pupil classify it?",
+      "options": ["Living", "Dead", "Never alive", "A rock"],
+      "answer": 1,
+      "hints": ["It was once part of a living plant.", "It is no longer alive."],
+      "explanation": "The dry leaf was once part of a living plant but is no longer alive. It is dead.",
+      "misconception": "A dry leaf is never-alive.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "justify_classification",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Why is a rock classified as 'never alive'?",
+      "options": ["Because it is heavy", "Because it does not carry out life processes and never did", "Because it is old", "Because it is hard"],
+      "answer": 1,
+      "hints": ["Does a rock grow?", "Does a rock breathe?"],
+      "explanation": "A rock is never-alive because it does not carry out life processes and never did.",
+      "misconception": "A rock was once alive.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "compare_living_dead",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which of these is a difference between a living thing and a dead thing?",
+      "options": ["Living things move, but dead things do not", "Living things carry out life processes, but dead things do not", "Living things are always bigger than dead things", "Living things are always colourful"],
+      "answer": 1,
+      "hints": ["Think about growth and breathing.", "Living things carry out life processes."],
+      "explanation": "Living things carry out life processes, while dead things do not. This is a key difference.",
+      "misconception": "Dead things still carry out life processes.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "define_never_alive",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which of these was never alive?",
+      "options": ["A dry stick", "A rock", "A dead insect", "A fallen leaf"],
+      "answer": 1,
+      "hints": ["Was it ever part of a living thing?", "A rock was never alive."],
+      "explanation": "A rock was never alive. Dry sticks, dead insects and fallen leaves were once part of living things.",
+      "misconception": "A rock was once alive.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "define_living",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "What makes something a living thing?",
+      "answer": ["it carries out life processes like growth and respiration", "it grows and breathes", "it carries out life processes"],
+      "hints": ["Think about growth and breathing.", "Living things carry out life processes."],
+      "explanation": "A living thing carries out life processes such as growth, respiration, sensitivity and excretion.",
+      "misconception": "Moving makes something living.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "define_dead",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "What does it mean when something is dead?",
+      "answer": ["it was once alive but no longer carries out life processes", "it was once living but is no longer alive", "it was alive but is not now"],
+      "hints": ["Think about a dry stick.", "It was once alive."],
+      "explanation": "Dead things were once alive but no longer carry out life processes.",
+      "misconception": "A dead thing was never alive.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "justify_classification",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "A pupil classifies a car as 'never alive'. Which reason is correct?",
+      "options": ["It moves, so it is living", "It does not carry out life processes and was never alive", "It is made of metal, so it is dead", "It has wheels, so it is living"],
+      "answer": 1,
+      "hints": ["Does a car breathe?", "Does a car grow?"],
+      "explanation": "A car is never-alive because it does not carry out life processes and was never alive.",
+      "misconception": "A car is living because it moves.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "compare_living_dead",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "Which statement correctly compares living and dead things?",
+      "options": ["Living things grow and respire, but dead things do not", "Dead things grow, but living things do not", "Both living and dead things respire", "Neither living nor dead things grow"],
+      "answer": 0,
+      "hints": ["Living things carry out life processes.", "Dead things do not."],
+      "explanation": "Living things grow and respire, but dead things do not carry out life processes.",
+      "misconception": "Dead things still grow.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "classify_examples",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Classify a rock as living, dead, or never alive.",
+      "answer": ["never alive", "never alive because it was never living"],
+      "hints": ["Was it ever alive?", "It does not carry out life processes."],
+      "explanation": "A rock is never alive because it does not carry out life processes and never did.",
+      "misconception": "A rock is dead.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "justify_classification",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Give one reason why a dry stick is classified as dead.",
+      "answer": ["it was once part of a living tree but no longer carries out life processes", "it was once alive but is no longer alive", "it was part of a living plant but is now dead"],
+      "hints": ["Was it ever part of a living thing?", "Does it still grow?"],
+      "explanation": "A dry stick was once part of a living tree but no longer carries out life processes, so it is dead.",
+      "misconception": "A dry stick is never-alive.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "define_never_alive",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "What does 'never alive' mean?",
+      "answer": ["something that was never living and does not carry out life processes", "something that was never alive", "it was never living"],
+      "hints": ["Think about a rock.", "It was never alive."],
+      "explanation": "Never alive means something was never living and does not carry out life processes.",
+      "misconception": "A rock was once alive.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "classify_examples",
+      "type": "mcq",
+      "difficulty": 4,
+      "stem": "A pupil has four things: a growing bean plant, a dry leaf, a stone, and a dead insect. Which list correctly classifies them?",
+      "options": ["Living: growing bean plant; Dead: dry leaf and dead insect; Never alive: stone", "Living: growing bean plant and dry leaf; Dead: stone; Never alive: dead insect", "Living: stone; Dead: growing bean plant; Never alive: dry leaf and dead insect", "Living: dead insect; Dead: growing bean plant; Never alive: stone and dry leaf"],
+      "answer": 0,
+      "hints": ["Which one is actively growing?", "Which ones were once alive but are not now?", "Which one was never alive?"],
+      "explanation": "The growing bean plant is living. The dry leaf and dead insect were once alive but are now dead. The stone was never alive.",
+      "misconception": "A dry leaf is never-alive.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "compare_living_dead",
+      "type": "short_answer",
+      "difficulty": 4,
+      "stem": "Explain one difference between a living plant and a dead plant.",
+      "answer": ["a living plant grows and carries out life processes, but a dead plant does not", "the living plant grows, but the dead plant does not", "living plants respire, dead plants do not"],
+      "hints": ["Does a dead plant grow?", "Does a living plant grow?"],
+      "explanation": "A living plant grows and carries out life processes, while a dead plant does not.",
+      "misconception": "A dead plant still grows.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "define_living",
+      "type": "short_answer",
+      "difficulty": 4,
+      "stem": "Explain why a car is not a living thing, even though it moves.",
+      "answer": ["because it does not carry out life processes like growth and respiration", "it moves but it does not grow or breathe, so it is not living", "a car is never alive because it does not carry out life processes"],
+      "hints": ["Does a car grow?", "Does a car breathe?"],
+      "explanation": "A car is not living because it does not carry out life processes such as growth and respiration, even though it moves.",
+      "misconception": "Things that move are always living.",
+      "uncertain": []
+    }
+  ]
+}

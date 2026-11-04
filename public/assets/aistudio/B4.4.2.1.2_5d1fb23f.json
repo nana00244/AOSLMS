@@ -1,0 +1,267 @@
+{
+  "indicator": {
+    "code": "B4.4.2.1.2",
+    "subject": "Science",
+    "level": "Basic 4",
+    "strand": "FORCES AND ENERGY",
+    "sub_strand": "Electricity and Electronics",
+    "content_standard": "B4.4.2.1 Demonstrate knowledge of generation of electricity, its transmission and transformation into other forms",
+    "objective": "Describe ways of conserving electricity",
+    "source_page": 33
+  },
+  "spec": {
+    "skills": [
+      {"tag": "define_conservation", "description": "Explain simply what conserving electricity means (using less and avoiding waste).", "minQuestions": 3},
+      {"tag": "identify_conservation_methods", "description": "List ways to conserve electricity (switching off lights, using energy-efficient bulbs, unplugging appliances).", "minQuestions": 4},
+      {"tag": "identify_wasteful_actions", "description": "Recognise actions that waste electricity (leaving lights on, appliances on standby).", "minQuestions": 3},
+      {"tag": "importance_conservation", "description": "State why conserving electricity is important (saves money, reduces waste).", "minQuestions": 3},
+      {"tag": "apply_home_school", "description": "Suggest conservation actions for home and school.", "minQuestions": 3}
+    ],
+    "difficultyPlan": "20 questions total — Difficulty 1: 5; Difficulty 2: 7; Difficulty 3: 5; Difficulty 4: 3.",
+    "misconceptions": [
+      "Leaving appliances on standby does not waste electricity.",
+      "Turning off lights does not save electricity.",
+      "Only big appliances use electricity.",
+      "Conserving electricity means not using it at all.",
+      "Electricity is free, so there is no need to conserve it."
+    ],
+    "needsTeacherAssessment": false
+  },
+  "questions": [
+    {
+      "skill_tag": "define_conservation",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What does conserving electricity mean?",
+      "options": ["Using more electricity", "Using electricity wisely and avoiding waste", "Never using electricity", "Buying more appliances"],
+      "answer": 1,
+      "hints": ["Conserving means saving.", "You still use electricity, but you do not waste it."],
+      "explanation": "Conserving electricity means using it wisely and avoiding waste. It does not mean never using electricity.",
+      "misconception": "Conserving electricity means not using it at all.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_conservation_methods",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which of these helps to conserve electricity?",
+      "options": ["Leaving lights on all day", "Switching off lights when leaving a room", "Turning on all appliances at once", "Leaving the television on when nobody is watching"],
+      "answer": 1,
+      "hints": ["Which action saves electricity?", "Switching off unused lights saves power."],
+      "explanation": "Switching off lights when leaving a room conserves electricity. Leaving them on wastes electricity.",
+      "misconception": "Leaving lights on does not waste electricity.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_wasteful_actions",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which of these actions wastes electricity?",
+      "options": ["Switching off the fan when leaving the room", "Unplugging the phone charger after use", "Leaving the television on when nobody is watching", "Turning off the light during the day"],
+      "answer": 2,
+      "hints": ["Which action uses electricity for no reason?", "If nobody is watching, the TV is wasting power."],
+      "explanation": "Leaving the television on when nobody is watching wastes electricity. The other actions conserve electricity.",
+      "misconception": "Leaving appliances on does not waste electricity.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "importance_conservation",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Why should we conserve electricity?",
+      "options": ["To make the house darker", "To save money and reduce waste", "To make appliances break", "To use more power"],
+      "answer": 1,
+      "hints": ["Electricity costs money.", "Saving electricity saves money."],
+      "explanation": "Conserving electricity saves money on electricity bills and reduces waste of energy.",
+      "misconception": "Electricity is free, so there is no need to conserve it.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "apply_home_school",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What can pupils do at school to conserve electricity?",
+      "options": ["Leave classroom lights on after school", "Switch off lights when leaving the classroom", "Turn on all fans and leave them on", "Leave computers on all night"],
+      "answer": 1,
+      "hints": ["What should you do when you leave a room?", "Turning off lights saves electricity."],
+      "explanation": "Switching off classroom lights when leaving helps conserve electricity at school.",
+      "misconception": "Pupils cannot help conserve electricity.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_conservation_methods",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which of these is a good way to conserve electricity at home?",
+      "options": ["Leaving the iron on after use", "Using energy-efficient bulbs", "Keeping all lights on at night", "Leaving the fridge door open"],
+      "answer": 1,
+      "hints": ["Energy-efficient bulbs use less power.", "They save electricity compared to ordinary bulbs."],
+      "explanation": "Energy-efficient bulbs use less electricity than ordinary bulbs. They help conserve electricity.",
+      "misconception": "All bulbs use the same amount of electricity.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_wasteful_actions",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Ama leaves her phone charger plugged in even after her phone is fully charged. Is this a good practice?",
+      "options": ["Yes, it charges the phone faster", "Yes, it does not matter", "No, it wastes electricity", "No, it makes the phone cold"],
+      "answer": 2,
+      "hints": ["Does a charger use electricity when the phone is full?", "Unplugging saves electricity."],
+      "explanation": "Leaving a charger plugged in when the phone is fully charged wastes electricity. Unplugging it helps conserve electricity.",
+      "misconception": "Leaving appliances on standby does not waste electricity.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_conservation_methods",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "What should you do to conserve electricity when you are the last person to leave the classroom?",
+      "options": ["Close the windows", "Sweep the floor", "Switch off the lights and fans", "Open the door"],
+      "answer": 2,
+      "hints": ["What uses electricity in the classroom?", "Turn off what is not needed."],
+      "explanation": "Switching off the lights and fans when leaving the classroom conserves electricity.",
+      "misconception": "Lights and fans do not need to be switched off.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "apply_home_school",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which of these should a family do to conserve electricity at home?",
+      "options": ["Leave the television on all night", "Use natural light during the day instead of electric lights", "Keep all lights on in every room", "Leave the fridge door open"],
+      "answer": 1,
+      "hints": ["The sun gives light during the day.", "Why use electric lights when the sun is shining?"],
+      "explanation": "Using natural light from the sun during the day reduces the need for electric lights, conserving electricity.",
+      "misconception": "Electric lights should be on all day.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "define_conservation",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "What does it mean to conserve electricity?",
+      "answer": ["to use electricity wisely and avoid wasting it", "to use less electricity and not waste it", "using electricity carefully without wasting it"],
+      "hints": ["Conserving means saving.", "Do not waste electricity."],
+      "explanation": "Conserving electricity means using it wisely and avoiding waste. It does not mean never using electricity.",
+      "misconception": "Conserving electricity means not using it at all.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "importance_conservation",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which is a reason for conserving electricity?",
+      "options": ["To reduce electricity bills", "To make appliances stop working", "To make the house darker", "To use more energy"],
+      "answer": 0,
+      "hints": ["Electricity bills cost money.", "Using less electricity saves money."],
+      "explanation": "Conserving electricity reduces electricity bills because less power is used.",
+      "misconception": "Electricity is free, so there is no need to conserve it.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_wasteful_actions",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Give one example of an action that wastes electricity.",
+      "answer": ["leaving lights on when leaving a room", "leaving the television on when nobody is watching", "leaving the fan on when not in the room", "leaving the charger plugged in after the phone is charged"],
+      "hints": ["Think of something left on with no one using it.", "Leaving lights on is one example."],
+      "explanation": "Actions like leaving lights on, leaving the TV on when nobody is watching, or leaving appliances on standby all waste electricity.",
+      "misconception": "Leaving lights on does not waste electricity.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "importance_conservation",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "State two reasons why conserving electricity is important.",
+      "answer": ["it saves money and reduces waste", "it saves money and helps protect the environment", "it reduces electricity bills and prevents waste of energy"],
+      "hints": ["Electricity costs money.", "Wasting electricity wastes resources."],
+      "explanation": "Conserving electricity saves money on bills and reduces waste of energy resources, which is good for the environment.",
+      "misconception": "Conserving electricity is not important.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_conservation_methods",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "List two ways of conserving electricity at home.",
+      "answer": ["switch off lights when leaving a room and unplug appliances when not in use", "use energy-efficient bulbs and switch off unused appliances", "turn off lights during the day and unplug chargers after use"],
+      "hints": ["What should you do with lights when leaving a room?", "What should you do with appliances not in use?"],
+      "explanation": "Ways to conserve electricity include switching off lights when leaving a room, unplugging appliances when not in use, using energy-efficient bulbs, and using natural light during the day.",
+      "misconception": "There is no way to conserve electricity.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "apply_home_school",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Suggest one way pupils can help conserve electricity at school.",
+      "answer": ["switch off lights and fans when leaving the classroom", "turn off lights when not needed", "unplug appliances when not in use"],
+      "hints": ["What uses electricity in the classroom?", "Turn them off when not needed."],
+      "explanation": "Pupils can help conserve electricity by switching off lights and fans when leaving the classroom or when they are not needed.",
+      "misconception": "Pupils cannot help conserve electricity.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_conservation_methods",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "Which of these actions conserves electricity?",
+      "options": ["Leaving the TV on standby all night", "Using natural light during the day", "Keeping all lights on in the house", "Leaving the iron on after use"],
+      "answer": 1,
+      "hints": ["The sun gives light during the day.", "Using sunlight saves electricity."],
+      "explanation": "Using natural light during the day conserves electricity. The other actions waste electricity.",
+      "misconception": "Using natural light does not save electricity.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "define_conservation",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "A pupil says, 'Conserving electricity means never using electricity at all.' What is the best correction?",
+      "options": ["Yes, that is correct", "No, conserving means using electricity wisely without wasting it", "No, conserving means using more electricity", "No, conserving means buying more appliances"],
+      "answer": 1,
+      "hints": ["Can you live without electricity entirely?", "Conserving is about avoiding waste, not avoiding use."],
+      "explanation": "Conserving electricity means using it wisely and avoiding waste. It does not mean never using electricity.",
+      "misconception": "Conserving electricity means not using it at all.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_wasteful_actions",
+      "type": "mcq",
+      "difficulty": 4,
+      "stem": "A family leaves all their lights, fans, and television on even when they go out. What is the effect of this?",
+      "options": ["It saves electricity", "It wastes electricity and increases their bill", "It makes the house cooler", "It charges their appliances"],
+      "answer": 1,
+      "hints": ["If nobody is home, are the appliances needed?", "Leaving them on wastes power."],
+      "explanation": "Leaving appliances on when nobody is home wastes electricity and increases the electricity bill.",
+      "misconception": "Leaving appliances on does not waste electricity.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "apply_home_school",
+      "type": "mcq",
+      "difficulty": 4,
+      "stem": "A pupil wants to help their family conserve electricity. Which plan is BEST?",
+      "options": ["Leave all lights on at night", "Switch off unused lights and unplug appliances not in use", "Use more appliances every day", "Leave the fridge door open to keep the kitchen cool"],
+      "answer": 1,
+      "hints": ["Which plan avoids waste?", "Switching off and unplugging saves electricity."],
+      "explanation": "Switching off unused lights and unplugging appliances not in use is the best plan for conserving electricity at home.",
+      "misconception": "Leaving appliances on does not waste electricity.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "importance_conservation",
+      "type": "mcq",
+      "difficulty": 4,
+      "stem": "Why is conserving electricity important for the whole country, not just for one family?",
+      "options": ["It helps the country save energy resources and reduces the cost of electricity for everyone", "It makes the country darker", "It stops people from using electricity", "It makes appliances last longer"],
+      "answer": 0,
+      "hints": ["Electricity is generated using resources.", "If everyone conserves, less energy is wasted."],
+      "explanation": "Conserving electricity helps the whole country save energy resources and reduces the cost of generating and supplying electricity, which benefits everyone.",
+      "misconception": "Conserving electricity only benefits one person.",
+      "uncertain": []
+    }
+  ]
+}

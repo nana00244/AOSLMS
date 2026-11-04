@@ -1,0 +1,51 @@
+{
+  "indicator": {
+    "code": "B1.1.2.1.1",
+    "subject": "Science",
+    "level": "Basic 1",
+    "strand": "DIVERSITY OF MATTER",
+    "sub_strand": "Materials",
+    "content_standard": "B1.1.2.1: Recognise materials as important resources for providing human needs",
+    "objective": "Identify and name a variety of everyday materials in their immediate environment",
+    "source_page": 24
+  },
+  "spec": {
+    "skills": [
+      {"tag": "MAT1-NAME", "description": "Name everyday materials commonly found in the home, school and community", "minQuestions": 3},
+      {"tag": "MAT1-IDENT", "description": "Identify/recognise a named material from a picture or simple description", "minQuestions": 3},
+      {"tag": "MAT1-SOURCE", "description": "Say where a given material is commonly found in the immediate environment", "minQuestions": 2},
+      {"tag": "MAT1-USE", "description": "Link a simple everyday material to one common use", "minQuestions": 2}
+    ],
+    "difficultyPlan": "5x D1, 7x D2, 5x D3, 3x D4",
+    "misconceptions": [
+      "Metal and plastic are the same thing.",
+      "Glass is the same as plastic because both are shiny.",
+      "Soil and stone are not materials.",
+      "Cloth is only for clothes.",
+      "Confusing the name of an object with the name of the material."
+    ],
+    "needsTeacherAssessment": true
+  },
+  "questions": [
+    {"skill_tag": "MAT1-NAME", "type": "mcq", "difficulty": 1, "stem": "Which of these is a material?", "options": ["Wood", "Dog", "Car", "Teacher"], "answer": 0, "hints": ["A material is used to make things.", "Tables are made from it."], "explanation": "Wood is a material used to make tables, chairs, and doors.", "misconception": "Pupils may name objects or living things instead of materials.", "uncertain": []},
+    {"skill_tag": "MAT1-NAME", "type": "mcq", "difficulty": 1, "stem": "A bottle of water is usually made from which material?", "options": ["Plastic", "Wood", "Stone", "Leather"], "answer": 0, "hints": ["It is light and can be squeezed.", "Water bottles are made from this."], "explanation": "Plastic is a common material used to make water bottles.", "misconception": "Pupils may confuse plastic with glass.", "uncertain": []},
+    {"skill_tag": "MAT1-NAME", "type": "short_answer", "difficulty": 1, "stem": "Name one material you can find in your classroom.", "answer": ["wood", "plastic", "metal", "glass", "paper", "cloth"], "hints": ["Look at your desk.", "Look at the window."], "explanation": "There are many materials in the classroom, such as wood for desks and glass for windows.", "misconception": "Pupils may name objects like a desk instead of the material.", "uncertain": []},
+    {"skill_tag": "MAT1-IDENT", "type": "mcq", "difficulty": 1, "stem": "Which of these is a piece of cloth?", "options": ["A cup", "A uniform", "A spoon", "A desk"], "answer": 1, "hints": ["What do you wear to school?", "It is made of fabric."], "explanation": "A school uniform is made of cloth.", "misconception": "Pupils may confuse objects made of cloth with other objects.", "uncertain": []},
+    {"skill_tag": "MAT1-IDENT", "type": "mcq", "difficulty": 1, "stem": "Which material is hard and used to make nails?", "options": ["Water", "Metal", "Cloth", "Paper"], "answer": 1, "hints": ["It is shiny and strong.", "Nails are made from this."], "explanation": "Metal is a hard material used to make nails.", "misconception": "Pupils may think any hard material is metal.", "uncertain": []},
+    {"skill_tag": "MAT1-SOURCE", "type": "mcq", "difficulty": 2, "stem": "Where do we usually get wood from?", "options": ["Trees", "Water", "Stones", "Sand"], "answer": 0, "hints": ["It comes from plants.", "Look at a tree."], "explanation": "Wood comes from trees.", "misconception": "Pupils may think wood is dug from the ground.", "uncertain": []},
+    {"skill_tag": "MAT1-USE", "type": "mcq", "difficulty": 2, "stem": "What is plastic commonly used for?", "options": ["Making buckets", "Eating", "Drinking", "Flying"], "answer": 0, "hints": ["Look around your house.", "You can put water in it."], "explanation": "Plastic is used to make buckets, cups, and many other things.", "misconception": "Pupils may confuse what a material is with what you do with it.", "uncertain": []},
+    {"skill_tag": "MAT1-IDENT", "type": "mcq", "difficulty": 2, "stem": "Which of these is a glass object?", "options": ["A windowpane", "A towel", "A book", "A pencil"], "answer": 0, "hints": ["You can see through it.", "It is in the wall."], "explanation": "A windowpane is made of glass.", "misconception": "Pupils may confuse transparent plastic with glass.", "uncertain": []},
+    {"skill_tag": "MAT1-SOURCE", "type": "mcq", "difficulty": 2, "stem": "Where is soil usually found?", "options": ["On the ground", "In the sky", "On a table", "In a cup"], "answer": 0, "hints": ["Where do plants grow?", "It is the dirt on the ground."], "explanation": "Soil is found on the ground.", "misconception": "Pupils may think soil is only in farms.", "uncertain": []},
+    {"skill_tag": "MAT1-USE", "type": "mcq", "difficulty": 2, "stem": "What is cloth used for?", "options": ["Making clothes", "Cooking food", "Building walls", "Making fire"], "answer": 0, "hints": ["What do you wear?", "It comes from cotton."], "explanation": "Cloth is used to make clothes, bags, and curtains.", "misconception": "Pupils may think cloth is only for clothes.", "uncertain": []},
+    {"skill_tag": "MAT1-NAME", "type": "mcq", "difficulty": 2, "stem": "What material is a stone usually made of?", "options": ["Rock", "Wood", "Plastic", "Paper"], "answer": 0, "hints": ["It is hard and heavy.", "You find it on the ground."], "explanation": "A stone is a hard material found naturally.", "misconception": "Pupils may think stones are made by people.", "uncertain": []},
+    {"skill_tag": "MAT1-IDENT", "type": "short_answer", "difficulty": 2, "stem": "Look at a ruler. What material is it made of?", "answer": ["plastic", "wood", "metal"], "hints": ["Is it bendy or hard?", "What does it feel like?"], "explanation": "Rulers can be made of plastic, wood, or metal.", "misconception": "Pupils may think all rulers are plastic.", "uncertain": []},
+    {"skill_tag": "MAT1-USE", "type": "mcq", "difficulty": 3, "stem": "Why is glass used for windows?", "options": ["Because it lets light in", "Because it is soft", "Because it is cheap", "Because it is heavy"], "answer": 0, "hints": ["What can you see through?", "It is clear."], "explanation": "Glass is used for windows because it is transparent and lets light into a room.", "misconception": "Pupils may think glass is used because it is pretty.", "uncertain": []},
+    {"skill_tag": "MAT1-USE", "type": "mcq", "difficulty": 3, "stem": "Why is metal used to make cooking pots?", "options": ["It is hard and can withstand heat", "It is soft and bendable", "It is transparent", "It is made of wood"], "answer": 0, "hints": ["You put pots on a fire.", "Metal is strong."], "explanation": "Metal is hard and can handle high heat, making it good for cooking pots.", "misconception": "Pupils may think any material can be put on fire.", "uncertain": []},
+    {"skill_tag": "MAT1-NAME", "type": "mcq", "difficulty": 3, "stem": "Kofi has a chair, a bucket, and a shirt. What materials are they made from?", "options": ["Wood, plastic, cloth", "Wood, cloth, plastic", "Metal, water, glass", "Paper, stone, wood"], "answer": 0, "hints": ["Chairs are usually wood.", "Buckets are plastic.", "Shirts are cloth."], "explanation": "A chair is often wood, a bucket is plastic, and a shirt is cloth.", "misconception": "Pupils may mix up the materials for each object.", "uncertain": []},
+    {"skill_tag": "MAT1-SOURCE", "type": "written", "difficulty": 3, "stem": "Name one material found in your kitchen and say what it is used for.", "rubric": {"criteria": [{"description": "Names a correct material (e.g., metal, plastic, glass)", "marks": 1}, {"description": "States a correct use for it", "marks": 1}]}, "hints": ["What are pots made of?", "What are spoons made of?"], "explanation": "This tests identifying materials and linking them to uses.", "uncertain": []},
+    {"skill_tag": "MAT1-USE", "type": "mcq", "difficulty": 3, "stem": "Yaw needs to carry water. Which material is best for making a bucket?", "options": ["Glass", "Paper", "Cloth", "Plastic"], "answer": 3, "hints": ["It must not break easily.", "Paper gets wet and tears."], "explanation": "Plastic is strong and waterproof, making it best for a water bucket. Glass breaks, paper tears, and cloth leaks.", "misconception": "Pupils may choose glass because it holds water, but it breaks easily.", "uncertain": []},
+    {"skill_tag": "MAT1-NAME", "type": "practical", "difficulty": 4, "stem": "Go outside and collect three different materials (e.g., a leaf, a stone, a piece of plastic). Show them to your teacher and name them.", "rubric": {"criteria": [{"description": "Collects three items from the environment", "marks": 1}, {"description": "Correctly names the material of each item", "marks": 1}]}, "hints": ["Look on the ground.", "Look around the school."], "explanation": "This tests real-world observation and naming of materials.", "uncertain": []},
+    {"skill_tag": "MAT1-IDENT", "type": "mcq", "difficulty": 4, "stem": "Which statement about materials is TRUE?", "options": ["All materials are the same", "Materials can only be found in shops", "Different materials have different properties and uses", "Materials are only made by humans"], "answer": 2, "hints": ["Think about glass and wood.", "Are they the same?"], "explanation": "Materials have different properties (hard, soft, transparent) which makes them useful for different things.", "misconception": "Pupils may think all materials can be used for the same purposes.", "uncertain": []},
+    {"skill_tag": "MAT1-USE", "type": "written", "difficulty": 4, "stem": "Why would you NOT use paper to make a cup for drinking water?", "rubric": {"criteria": [{"description": "States that paper gets wet and tears", "marks": 1}, {"description": "States that water will leak out", "marks": 1}]}, "hints": ["What happens to paper when it touches water?", "Will it hold the water?"], "explanation": "Paper is not waterproof; it gets soft and tears when it gets wet, so water would leak out.", "uncertain": []}
+  ]
+}

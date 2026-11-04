@@ -1,0 +1,274 @@
+{
+  "indicator": {
+    "code": "B5.5.1.1.1",
+    "subject": "Science",
+    "level": "Basic 5",
+    "strand": "HUMANS AND THE ENVIRONMENT",
+    "sub_strand": "Personal Hygiene and Sanitation",
+    "content_standard": "B5.5.1.1 Recognise the importance of personal hygiene",
+    "objective": "Know why it is important to wash clothes regularly",
+    "source_page": 51
+  },
+  "spec": {
+    "skills": [
+      {"tag": "why_wash_clothes", "description": "Explain why clothes should be washed regularly (removes dirt, sweat, germs; prevents body odour and skin problems).", "minQuestions": 4},
+      {"tag": "materials_for_washing", "description": "Identify materials needed for washing clothes (soap, water, basin, brush).", "minQuestions": 3},
+      {"tag": "describe_washing", "description": "Describe how to wash clothes (soak, scrub with soap, rinse, dry in the sun).", "minQuestions": 4},
+      {"tag": "consequences_dirty_clothes", "description": "State what can happen if clothes are not washed regularly (body odour, skin infections, sickness).", "minQuestions": 3},
+      {"tag": "other_washing_methods", "description": "Identify other methods of washing clothes apart from hand washing (e.g. washing machine).", "minQuestions": 3},
+      {"tag": "design_roster", "description": "Design a simple personal roster for washing clothes (days and times).", "minQuestions": 3}
+    ],
+    "difficultyPlan": "20 questions total — Difficulty 1: 5; Difficulty 2: 7; Difficulty 3: 5; Difficulty 4: 3.",
+    "misconceptions": [
+      "Clothes only need washing when visibly dirty.",
+      "Washing clothes is not part of personal hygiene.",
+      "Washing clothes once a month is enough.",
+      "Dirty clothes do not cause health problems.",
+      "Only underwear needs washing regularly.",
+      "Soap is not needed to wash clothes."
+    ],
+    "needsTeacherAssessment": true
+  },
+  "questions": [
+    {
+      "skill_tag": "why_wash_clothes",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Why should we wash our clothes regularly?",
+      "options": ["To remove dirt and sweat", "To make them colourful", "To make them heavier", "To make them smaller"],
+      "answer": 0,
+      "hints": ["Think about what collects on clothes when you wear them.", "Dirt and sweat make clothes dirty."],
+      "explanation": "We wash clothes regularly to remove dirt and sweat, keeping them clean and healthy to wear.",
+      "misconception": "Clothes only need washing when visibly dirty.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "why_wash_clothes",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which of these is a reason for washing clothes regularly?",
+      "options": ["To remove germs that can cause sickness", "To make the clothes fade", "To make the clothes shrink", "To make the clothes rough"],
+      "answer": 0,
+      "hints": ["Germs can collect on dirty clothes.", "Washing removes germs."],
+      "explanation": "Washing clothes regularly removes germs that can cause skin problems and sickness.",
+      "misconception": "Dirty clothes do not cause health problems.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "why_wash_clothes",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Give one reason why it is important to wash clothes regularly.",
+      "answer": ["to remove dirt and germs", "to prevent body odour", "to keep clothes clean and healthy", "to remove sweat and dirt"],
+      "hints": ["Think about dirt and sweat.", "Think about germs and smell."],
+      "explanation": "Washing clothes regularly removes dirt, sweat and germs, and prevents body odour.",
+      "misconception": "Washing clothes is not important.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "why_wash_clothes",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Ama wears the same uniform for one week without washing it. What is likely to happen?",
+      "options": ["The uniform will smell and may cause skin irritation", "The uniform will become cleaner", "The uniform will change colour to white", "The uniform will become stronger"],
+      "answer": 0,
+      "hints": ["Sweat and dirt collect on worn clothes.", "Dirty clothes can smell and cause skin problems."],
+      "explanation": "Wearing unwashed clothes for a week allows sweat and dirt to collect, causing body odour and possible skin irritation.",
+      "misconception": "Clothes do not need regular washing.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "materials_for_washing",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which materials are needed to wash clothes?",
+      "options": ["Soap and water", "Oil and sand", "Sugar and salt", "Paper and pencil"],
+      "answer": 0,
+      "hints": ["What do you use in a washing basin?", "Soap removes dirt."],
+      "explanation": "Soap and water are needed to wash clothes. A basin and brush may also be used.",
+      "misconception": "Soap is not needed to wash clothes.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "materials_for_washing",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which of these is used to scrub clothes when washing by hand?",
+      "options": ["A brush", "A spoon", "A book", "A cup"],
+      "answer": 0,
+      "hints": ["It has bristles.", "It helps remove dirt from the cloth."],
+      "explanation": "A brush is used to scrub clothes and remove dirt when washing by hand.",
+      "misconception": "A spoon is used to scrub clothes.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "materials_for_washing",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Name two materials needed for washing clothes.",
+      "answer": ["soap and water", "water and soap", "soap and basin", "water and brush"],
+      "hints": ["Think about what makes the clothes clean.", "One is liquid, one is solid."],
+      "explanation": "Materials needed for washing clothes include soap, water, a basin and a brush.",
+      "misconception": "Only water is needed to wash clothes.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_washing",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "What is the correct order for washing clothes by hand?",
+      "options": ["Soak, scrub with soap, rinse, dry", "Dry, soak, scrub, rinse", "Rinse, dry, soak, scrub", "Scrub, dry, rinse, soak"],
+      "answer": 0,
+      "hints": ["First make the clothes wet.", "Then use soap and scrub.", "Then rinse and dry."],
+      "explanation": "The correct order is: soak the clothes, scrub with soap, rinse with clean water, then dry in the sun.",
+      "misconception": "You can dry clothes before rinsing.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_washing",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "Why should clothes be rinsed with clean water after scrubbing with soap?",
+      "options": ["To remove the soap and dirt", "To make the clothes soapy", "To make the clothes heavier", "To make the clothes colourful"],
+      "answer": 0,
+      "hints": ["Soap can remain on clothes if not rinsed.", "Rinsing removes soap and dirt."],
+      "explanation": "Clothes should be rinsed with clean water to remove soap and dirt, leaving them clean and safe to wear.",
+      "misconception": "Rinsing is not necessary.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_washing",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Describe the steps for washing clothes by hand.",
+      "answer": ["soak the clothes in water, scrub with soap, rinse with clean water, and dry in the sun", "soak, scrub with soap, rinse, and dry", "wet the clothes, add soap and scrub, rinse, then dry"],
+      "hints": ["Start by soaking.", "Then scrub with soap.", "Rinse and dry."],
+      "explanation": "To wash clothes by hand: soak them in water, scrub with soap, rinse with clean water, and dry in the sun.",
+      "misconception": "Washing clothes only requires scrubbing.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_washing",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "After washing, why should clothes be dried in the sun?",
+      "options": ["The sun helps kill germs and dries the clothes", "The sun makes the clothes wetter", "The sun makes the clothes heavier", "The sun changes the colour of the clothes"],
+      "answer": 0,
+      "hints": ["The sun gives heat and light.", "Sunlight can kill germs."],
+      "explanation": "Drying clothes in the sun helps kill germs and removes moisture, keeping the clothes clean and fresh.",
+      "misconception": "Sun drying is not important.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "consequences_dirty_clothes",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "What can happen if you wear dirty clothes for a long time?",
+      "options": ["You may get body odour and skin problems", "You will become taller", "Your clothes will become cleaner", "You will run faster"],
+      "answer": 0,
+      "hints": ["Dirty clothes collect sweat and germs.", "This can cause smell and skin irritation."],
+      "explanation": "Wearing dirty clothes for a long time can cause body odour and skin problems because of sweat and germs.",
+      "misconception": "Dirty clothes do not cause health problems.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "consequences_dirty_clothes",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "State one consequence of not washing clothes regularly.",
+      "answer": ["body odour", "skin infection", "sickness", "bad smell"],
+      "hints": ["Think about smell.", "Think about skin problems."],
+      "explanation": "Not washing clothes regularly can cause body odour, skin infections and sickness.",
+      "misconception": "Dirty clothes are harmless.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "consequences_dirty_clothes",
+      "type": "mcq",
+      "difficulty": 4,
+      "stem": "A learner wears dirty socks for several days and develops an itchy rash on the feet. What is the most likely cause?",
+      "options": ["Germs and sweat on the dirty socks", "The colour of the socks", "The size of the socks", "The price of the socks"],
+      "answer": 0,
+      "hints": ["Dirty socks collect sweat and germs.", "This can cause skin irritation."],
+      "explanation": "Germs and sweat on dirty socks can cause skin irritation and rashes on the feet.",
+      "misconception": "Dirty socks do not cause skin problems.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "other_washing_methods",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which of these is another method of washing clothes besides hand washing?",
+      "options": ["Using a washing machine", "Using a broom", "Using a spoon", "Using a book"],
+      "answer": 0,
+      "hints": ["It is a machine that washes clothes.", "It uses electricity."],
+      "explanation": "A washing machine is another method of washing clothes. It uses electricity to wash clothes automatically.",
+      "misconception": "Hand washing is the only way to wash clothes.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "other_washing_methods",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Name one method of washing clothes other than hand washing.",
+      "answer": ["washing machine", "using a washing machine"],
+      "hints": ["Think of a machine.", "It uses electricity."],
+      "explanation": "A washing machine is a method of washing clothes other than hand washing.",
+      "misconception": "Only hand washing exists.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "other_washing_methods",
+      "type": "mcq",
+      "difficulty": 4,
+      "stem": "A family wants to save time washing clothes. Which method would be fastest?",
+      "options": ["Washing by hand one by one", "Using a washing machine", "Rinsing clothes in a river", "Scrubbing clothes with a brush"],
+      "answer": 1,
+      "hints": ["Which method does most of the work automatically?", "A machine can wash many clothes quickly."],
+      "explanation": "Using a washing machine is the fastest method because it washes many clothes automatically in a short time.",
+      "misconception": "Hand washing is always faster.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "design_roster",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "Design a simple weekly roster for washing your clothes. Write the days of the week and what you will wash each day (e.g. Monday: school uniform; Wednesday: socks; Saturday: bedsheets).",
+      "rubric": {
+        "criteria": [
+          {"description": "Included at least three days of the week", "marks": 2},
+          {"description": "Assigned specific clothes to wash on each day", "marks": 2},
+          {"description": "Roster is clear and realistic", "marks": 1}
+        ]
+      },
+      "answer": "",
+      "hints": ["Think about when you have time to wash.", "Include different types of clothes."],
+      "explanation": "This is a written task. Your teacher will mark it using the rubric.",
+      "misconception": "A washing roster is not needed.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "design_roster",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Why is it helpful to have a roster for washing clothes?",
+      "answer": ["it helps you remember when to wash your clothes regularly", "it reminds you to wash clothes on specific days", "it keeps your washing organised"],
+      "hints": ["Think about not forgetting to wash.", "A roster is a plan."],
+      "explanation": "A roster helps you remember to wash your clothes regularly and keeps your washing organised.",
+      "misconception": "A roster is not useful.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "design_roster",
+      "type": "mcq",
+      "difficulty": 4,
+      "stem": "A learner washes only underwear every day but other clothes only once a month. What is the best advice?",
+      "options": ["Wash all clothes regularly, not just underwear", "Continue washing only underwear", "Stop washing underwear", "Wash clothes only when they smell"],
+      "answer": 0,
+      "hints": ["All clothes collect sweat and dirt.", "Regular washing keeps all clothes clean."],
+      "explanation": "All clothes should be washed regularly, not just underwear, to prevent dirt, sweat and germs from building up.",
+      "misconception": "Only underwear needs washing regularly.",
+      "uncertain": []
+    }
+  ]
+}

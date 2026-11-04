@@ -1,0 +1,264 @@
+{
+  "indicator": {
+    "code": "B6.2.2.1.1",
+    "subject": "Science",
+    "level": "Basic 6",
+    "strand": "CYCLES",
+    "sub_strand": "Life Cycles of Organisms",
+    "content_standard": "B6.2.2.1 Demonstrate understanding of the life cycle of a plant",
+    "objective": "Know the materials needed for the survival of plants in the environment (water, carbon dioxide, oxygen, sunlight)",
+    "source_page": 59
+  },
+  "spec": {
+    "skills": [
+      {"tag": "name_materials", "description": "Name the materials needed for plant survival: water, carbon dioxide, oxygen, sunlight.", "minQuestions": 3},
+      {"tag": "source_of_materials", "description": "Identify where each material comes from (water from soil/rain, carbon dioxide from air, oxygen from air, sunlight from sun).", "minQuestions": 4},
+      {"tag": "role_water", "description": "Explain the role of water in plant survival (helps make food, keeps plant upright, carries nutrients).", "minQuestions": 3},
+      {"tag": "role_carbon_dioxide", "description": "Explain that carbon dioxide is used by plants to make food.", "minQuestions": 3},
+      {"tag": "role_oxygen", "description": "Recognise that plants need oxygen for respiration.", "minQuestions": 3},
+      {"tag": "role_sunlight", "description": "Explain that sunlight provides energy for plants to make food.", "minQuestions": 4}
+    ],
+    "difficultyPlan": "20 questions total — Difficulty 1: 5; Difficulty 2: 7; Difficulty 3: 5; Difficulty 4: 3.",
+    "misconceptions": [
+      "Plants only need water and sunlight.",
+      "Plants do not need oxygen.",
+      "Plants get food directly from the soil.",
+      "Carbon dioxide is not needed by plants.",
+      "Sunlight is only for warmth, not for food.",
+      "Plants can survive without water."
+    ],
+    "needsTeacherAssessment": true
+  },
+  "questions": [
+    {
+      "skill_tag": "name_materials",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which of these is needed by plants for survival?",
+      "options": ["Water", "Plastic", "Metal", "Glass"],
+      "answer": 0,
+      "hints": ["Plants need water to grow.", "Without water, plants wilt."],
+      "explanation": "Water is needed by plants for survival.",
+      "misconception": "Plants only need sunlight.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "name_materials",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which set lists materials needed for plant survival?",
+      "options": ["Water, carbon dioxide, oxygen, sunlight", "Water, plastic, oxygen, sunlight", "Soil, rocks, sunlight, water", "Water, sugar, salt, sunlight"],
+      "answer": 0,
+      "hints": ["Plants need gases from the air.", "They need water and sunlight."],
+      "explanation": "Plants need water, carbon dioxide, oxygen and sunlight to survive.",
+      "misconception": "Plants only need water and sunlight.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "name_materials",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Name two materials needed for plant survival.",
+      "answer": ["water and sunlight", "carbon dioxide and water", "oxygen and sunlight", "water and carbon dioxide"],
+      "hints": ["One comes from the soil/rain.", "One comes from the sun."],
+      "explanation": "Plants need water, carbon dioxide, oxygen and sunlight.",
+      "misconception": "Plants do not need oxygen.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "source_of_materials",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Where do plants get carbon dioxide from?",
+      "options": ["From the air", "From the soil", "From the sun", "From water"],
+      "answer": 0,
+      "hints": ["Carbon dioxide is a gas.", "It is in the air around us."],
+      "explanation": "Plants get carbon dioxide from the air.",
+      "misconception": "Plants get carbon dioxide from the soil.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "source_of_materials",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Where do plants get water from?",
+      "options": ["From the soil through their roots", "From the air", "From the sun", "From rocks"],
+      "answer": 0,
+      "hints": ["Roots absorb water.", "Water is in the soil."],
+      "explanation": "Plants get water from the soil through their roots.",
+      "misconception": "Plants get water from the air only.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "source_of_materials",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Where does the sunlight that plants use come from?",
+      "answer": ["the sun", "from the sun"],
+      "hints": ["It is the brightest object in the sky.", "It gives light and heat."],
+      "explanation": "Plants get sunlight from the sun.",
+      "misconception": "Plants get sunlight from the moon.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "source_of_materials",
+      "type": "mcq",
+      "difficulty": 4,
+      "stem": "A pupil says, 'Plants get all their food from the soil.' What is the best correction?",
+      "options": ["Yes, plants get food from the soil", "No, plants make their own food using sunlight, carbon dioxide and water", "No, plants get food from the air only", "No, plants get food from rocks"],
+      "answer": 1,
+      "hints": ["Plants make food in their leaves.", "They need sunlight, carbon dioxide and water."],
+      "explanation": "Plants do not get food directly from the soil. They make their own food using sunlight, carbon dioxide and water.",
+      "misconception": "Plants get food directly from the soil.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "role_water",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What is one role of water in plants?",
+      "options": ["It helps plants make food", "It makes plants heavy", "It changes the colour of leaves", "It makes plants dry"],
+      "answer": 0,
+      "hints": ["Water is used in making food.", "Plants need water to stay alive."],
+      "explanation": "Water helps plants make food and keeps them healthy.",
+      "misconception": "Water is not needed for plant survival.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "role_water",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Why do plants need water?",
+      "answer": ["to make food and stay healthy", "to help make food and carry nutrients", "water is needed for photosynthesis"],
+      "hints": ["Think about making food.", "Water carries nutrients."],
+      "explanation": "Plants need water to make food, carry nutrients and stay upright.",
+      "misconception": "Plants can survive without water.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "role_water",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "A plant is not watered for many days. What will happen?",
+      "options": ["The plant will wilt and may die", "The plant will grow faster", "The plant will change colour to white", "The plant will produce more flowers"],
+      "answer": 0,
+      "hints": ["Plants need water to stay upright.", "Without water, plants lose their firmness."],
+      "explanation": "Without water, the plant will wilt because water helps keep plant cells firm and supports the plant.",
+      "misconception": "Plants do not need water.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "role_carbon_dioxide",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "What do plants use carbon dioxide for?",
+      "options": ["To make food", "To make water", "To grow roots", "To absorb sunlight"],
+      "answer": 0,
+      "hints": ["Plants make food in their leaves.", "Carbon dioxide is one of the materials used."],
+      "explanation": "Plants use carbon dioxide to make food during photosynthesis.",
+      "misconception": "Plants do not need carbon dioxide.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "role_carbon_dioxide",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Why do plants need carbon dioxide?",
+      "answer": ["to make food", "for photosynthesis", "it is used to make food in the leaves"],
+      "hints": ["Plants make their own food.", "Carbon dioxide is used in this process."],
+      "explanation": "Plants need carbon dioxide to make food through photosynthesis.",
+      "misconception": "Carbon dioxide is not needed by plants.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "role_carbon_dioxide",
+      "type": "mcq",
+      "difficulty": 4,
+      "stem": "A plant is kept in a sealed clear box with no carbon dioxide. What will happen?",
+      "options": ["The plant will not be able to make food and will eventually die", "The plant will grow faster", "The plant will produce more oxygen", "The plant will change colour"],
+      "answer": 0,
+      "hints": ["Carbon dioxide is needed for making food.", "Without it, photosynthesis stops."],
+      "explanation": "Without carbon dioxide, the plant cannot make food and will eventually die.",
+      "misconception": "Plants do not need carbon dioxide.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "role_oxygen",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Why do plants need oxygen?",
+      "options": ["For respiration to get energy", "To make food", "To absorb water", "To grow roots"],
+      "answer": 0,
+      "hints": ["Plants also respire.", "Respiration needs oxygen."],
+      "explanation": "Plants need oxygen for respiration, which releases energy for life processes.",
+      "misconception": "Plants do not need oxygen.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "role_oxygen",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Why is oxygen important for plants?",
+      "answer": ["it is used for respiration to get energy", "plants need oxygen for respiration", "oxygen helps plants release energy"],
+      "hints": ["Respiration is a life process.", "It needs oxygen."],
+      "explanation": "Oxygen is important for plants because they use it for respiration to release energy.",
+      "misconception": "Plants only produce oxygen; they do not need it.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "role_oxygen",
+      "type": "mcq",
+      "difficulty": 4,
+      "stem": "A pupil says, 'Plants only give out oxygen; they do not need it.' What is the best correction?",
+      "options": ["Yes, plants only give out oxygen", "No, plants need oxygen for respiration, just like animals", "No, plants only need carbon dioxide", "No, plants do not need any gases"],
+      "answer": 1,
+      "hints": ["Plants respire too.", "Respiration needs oxygen."],
+      "explanation": "Plants need oxygen for respiration, even though they also produce oxygen during photosynthesis.",
+      "misconception": "Plants do not need oxygen.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "role_sunlight",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Why do plants need sunlight?",
+      "options": ["To make food", "To make water", "To make soil", "To make rocks"],
+      "answer": 0,
+      "hints": ["Sunlight provides energy.", "Plants make food in their leaves."],
+      "explanation": "Plants need sunlight to make food through photosynthesis.",
+      "misconception": "Sunlight is only for warmth.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "role_sunlight",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Explain why sunlight is important for plants.",
+      "answer": ["it provides energy for plants to make food", "sunlight is needed for photosynthesis", "plants use sunlight to make their own food"],
+      "hints": ["Sunlight gives energy.", "Plants make food using this energy."],
+      "explanation": "Sunlight is important because it provides the energy plants need to make food.",
+      "misconception": "Sunlight is only for warmth.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "role_sunlight",
+      "type": "drawing",
+      "difficulty": 3,
+      "stem": "Draw a simple plant and label the materials it needs to survive. Show where each material comes from (e.g. water from soil, sunlight from sun, carbon dioxide from air).",
+      "rubric": {
+        "criteria": [
+          {"description": "Drew a plant with roots, stem and leaves", "marks": 1},
+          {"description": "Labeled water and showed it coming from soil", "marks": 1},
+          {"description": "Labeled sunlight and showed it coming from the sun", "marks": 1},
+          {"description": "Labeled carbon dioxide and showed it coming from the air", "marks": 1},
+          {"description": "Labeled oxygen as needed by the plant", "marks": 1}
+        ]
+      },
+      "answer": "",
+      "hints": ["Think about what plants need to grow.", "Show where each material comes from."],
+      "explanation": "This is a drawing task. Your teacher will mark it using the rubric.",
+      "misconception": "Plants only need water and sunlight.",
+      "uncertain": []
+    }
+  ]
+}

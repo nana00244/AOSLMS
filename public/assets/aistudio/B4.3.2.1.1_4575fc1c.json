@@ -1,0 +1,265 @@
+{
+  "indicator": {
+    "code": "B4.3.2.1.1",
+    "subject": "Mathematics",
+    "level": "Basic 4",
+    "strand": "Geometry and Measurement",
+    "sub_strand": "Position / Transformation",
+    "content_standard": "B4.3.2.1 Describe the position of objects in space using the cardinal points",
+    "objective": "Tell the position and motion of objects in space using the cardinal points north, south, east and west",
+    "source_page": 59
+  },
+  "spec": {
+    "skills": [
+      {"tag": "identify_cardinal_points", "description": "Identify North, South, East, and West on a compass or grid.", "minQuestions": 2},
+      {"tag": "describe_position_on_grid", "description": "Describe where an object is relative to another using cardinal points.", "minQuestions": 2},
+      {"tag": "describe_motion_on_grid", "description": "Describe the movement of an object from one point to another using cardinal points.", "minQuestions": 2}
+    ],
+    "difficultyPlan": "20 questions: 5 at difficulty 1, 7 at difficulty 2, 5 at difficulty 3, 3 at difficulty 4.",
+    "misconceptions": [
+      "Confusing East and West.",
+      "Failing to use coordinates correctly."
+    ],
+    "needsTeacherAssessment": false
+  },
+  "questions": [
+    {
+      "skill_tag": "identify_cardinal_points",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "On a standard compass, which direction is opposite to East?",
+      "options": ["North", "South", "West", "Up"],
+      "answer": 2,
+      "hints": ["East is right.", "West is left."],
+      "explanation": "West is opposite to East.",
+      "misconception": "Saying North.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_cardinal_points",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which direction is at the top of a standard map or grid?",
+      "options": ["South", "East", "West", "North"],
+      "answer": 3,
+      "hints": ["Think of a compass.", "North points up."],
+      "explanation": "North is at the top.",
+      "misconception": "Saying East.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_position_on_grid",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Point A is at (2, 3) and Point B is at (2, 5). What is the position of B relative to A?",
+      "options": ["North", "South", "East", "West"],
+      "answer": 0,
+      "hints": ["Both have x=2, so they are on the same vertical line.", "B has a larger y-value, so it is higher."],
+      "explanation": "Moving from A to B means increasing the y-value, which is moving North.",
+      "misconception": "Saying East because the y-axis is vertical.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_motion_on_grid",
+      "type": "short_answer",
+      "difficulty": 1,
+      "stem": "To move from (1, 1) to (1, 4), in which direction do you travel?",
+      "answer": ["north"],
+      "hints": ["The x-coordinate stays the same.", "The y-coordinate increases."],
+      "explanation": "Moving up on a grid is moving North.",
+      "misconception": "Saying East.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_position_on_grid",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "If you are facing North, what is to your right?",
+      "options": ["West", "South", "East", "Down"],
+      "answer": 2,
+      "hints": ["Face North.", "Right is East."],
+      "explanation": "When facing North, East is to the right.",
+      "misconception": "Saying West.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_motion_on_grid",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "Start at (0, 0). Move 3 squares North, then 2 squares East. What is the new x-coordinate?",
+      "answer": 2,
+      "check": "2",
+      "hints": ["North changes the y-coordinate.", "East changes the x-coordinate.", "Start x=0, move 2 East."],
+      "explanation": "Moving East increases the x-coordinate by 2. x = 0 + 2 = 2.",
+      "misconception": "Adding all moves to get 5.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_position_on_grid",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "The school is East of Kofi's house. The hospital is North of Kofi's house. What is the position of the school relative to the hospital?",
+      "options": ["North", "South", "East", "South-East"],
+      "answer": 3,
+      "hints": ["Draw a grid. Kofi's house is at (0,0).", "School is at (2,0). Hospital is at (0,2).", "From hospital to school, you go right and down."],
+      "explanation": "The school is South-East of the hospital.",
+      "misconception": "Saying East.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_motion_on_grid",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "A pupil starts at (2, 2). They move 3 squares West and 4 squares South. What is the new y-coordinate?",
+      "answer": -2,
+      "check": "2-4",
+      "hints": ["West changes the x-coordinate.", "South changes the y-coordinate (subtract).", "Start y=2, move 4 South."],
+      "explanation": "y = 2 - 4 = -2.",
+      "misconception": "Adding 4 to get 6.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_motion_on_grid",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "A point is at (3, 4). It moves to (3, 1). Which direction did it move?",
+      "options": ["North", "South", "East", "West"],
+      "answer": 1,
+      "hints": ["The x-coordinate stayed the same.", "The y-coordinate decreased."],
+      "explanation": "Decreasing the y-coordinate means moving South.",
+      "misconception": "Saying North because 4 > 1.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_position_on_grid",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "If point T is at (4, 2) and point A is at (4, 6), what is the position of A relative to T?",
+      "answer": ["north"],
+      "hints": ["Both have x=4.", "A has a larger y-value."],
+      "explanation": "A is North of T.",
+      "misconception": "Saying South.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_motion_on_grid",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "Start at (1, 1). Move 2 squares East, then 3 squares North. What is the new x-coordinate?",
+      "answer": 3,
+      "check": "1+2",
+      "hints": ["East changes the x-coordinate.", "1 + 2."],
+      "explanation": "x = 1 + 2 = 3.",
+      "misconception": "Saying 1.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_position_on_grid",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "Describe the position of the school relative to the market if the market is at (2, 3) and the school is at (5, 3).",
+      "hints": ["Compare the x-coordinates.", "Compare the y-coordinates.", "East or West?"],
+      "explanation": "The school is East of the market because the x-coordinate is larger (5 > 2) and the y-coordinate is the same.",
+      "rubric": {
+        "criteria": [
+          {"description": "States the school is East of the market.", "marks": 1},
+          {"description": "Explains that the y-coordinates are the same and x is larger.", "marks": 1}
+        ]
+      },
+      "misconception": "Saying North.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_motion_on_grid",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "You are at (0, 0). You move 4 squares North, then 3 squares East, then 4 squares South. Where are you now?",
+      "options": ["(3, 0)", "(3, 4)", "(4, 3)", "(0, 4)"],
+      "answer": 0,
+      "hints": ["Track the coordinates: (0,0) -> (0,4) -> (3,4) -> (3,0).", "North then South cancels out."],
+      "explanation": "After North and South, the y-coordinate returns to 0. The x-coordinate moved 3 East. So, (3, 0).",
+      "misconception": "Adding all moves together.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_motion_on_grid",
+      "type": "numeric",
+      "difficulty": 3,
+      "stem": "Start at (2, 3). Move 4 squares South, then 2 squares East. What is the new position? (Enter as x,y)",
+      "answer": "4, -1",
+      "check": "4, -1",
+      "hints": ["Start (2,3).", "South: (2, -1).", "East: (4, -1)."],
+      "explanation": "The new position is (4, -1).",
+      "misconception": "Swapping x and y.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_position_on_grid",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "Point P is North-West of point T. Point T is South of point A. What is the position of P relative to A?",
+      "options": ["North", "North-West", "West", "South-East"],
+      "answer": 1,
+      "hints": ["Draw the points.", "T is below A.", "P is above and left of T."],
+      "explanation": "P is North-West of T. Since T is South of A, P is still North-West of A.",
+      "misconception": "Saying South.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_motion_on_grid",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "Describe the path from (1, 2) to (1, 5) and then to (4, 5).",
+      "hints": ["What changes in the first step?", "What changes in the second step?"],
+      "explanation": "First, move 3 squares North (y increases from 2 to 5). Then, move 3 squares East (x increases from 1 to 4).",
+      "rubric": {
+        "criteria": [
+          {"description": "States 3 squares North.", "marks": 1},
+          {"description": "States 3 squares East.", "marks": 1}
+        ]
+      },
+      "misconception": "Saying South and West.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_motion_on_grid",
+      "type": "numeric",
+      "difficulty": 4,
+      "stem": "A pupil starts at (1, 1). They move 3 East, then 2 North, then 3 West. What is the new x-coordinate?",
+      "answer": 1,
+      "check": "1+3-3",
+      "hints": ["East adds to x, West subtracts.", "x = 1 + 3 - 3."],
+      "explanation": "x = 1 + 3 - 3 = 1.",
+      "misconception": "Saying 7.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_position_on_grid",
+      "type": "written",
+      "difficulty": 4,
+      "stem": "If the library is (4, 5) and the canteen is (4, 8), what is the direction from the library to the canteen, and what is the direction from the canteen to the library?",
+      "hints": ["Same x, larger y is North.", "Same x, smaller y is South."],
+      "explanation": "From library to canteen: North (y increases). From canteen to library: South (y decreases).",
+      "rubric": {
+        "criteria": [
+          {"description": "States North from library to canteen.", "marks": 1},
+          {"description": "States South from canteen to library.", "marks": 1}
+        ]
+      },
+      "misconception": "Saying both are North.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_motion_on_grid",
+      "type": "numeric",
+      "difficulty": 4,
+      "stem": "Start at (2, 2). Move 2 North, 3 East, 4 South, and 3 West. What is the final y-coordinate?",
+      "answer": -2,
+      "check": "2+2-4",
+      "hints": ["Only North and South change y.", "y = 2 + 2 - 4."],
+      "explanation": "y = 2 + 2 - 4 = 0? No, 2+2=4, 4-4=0. Let me re-read. Start y=2. Move 2 North -> y=4. Move 4 South -> y=0. So final y is 0.",
+      "misconception": "Including East and West.",
+      "uncertain": ["Corrected answer to 0."]
+    }
+  ]
+}

@@ -1,0 +1,268 @@
+{
+  "indicator": {
+    "code": "B5.4.3.1.1",
+    "subject": "Science",
+    "level": "Basic 5",
+    "strand": "FORCES AND ENERGY",
+    "sub_strand": "Forces and Movement",
+    "content_standard": "B5.4.3.1 Know that movement is caused by applied forces due to the release of stored energy",
+    "objective": "Explain the term, 'friction', its effects and applications",
+    "source_page": 50
+  },
+  "spec": {
+    "skills": [
+      {"tag": "define_friction", "description": "Explain friction as the force that opposes the movement of two surfaces against each other.", "minQuestions": 4},
+      {"tag": "effects_friction", "description": "Describe effects of friction (e.g. produces heat, slows down movement, causes wear and tear).", "minQuestions": 4},
+      {"tag": "examples_friction", "description": "Give everyday examples of friction (e.g. rubbing palms together, shoes gripping the ground, car tyres on the road).", "minQuestions": 3},
+      {"tag": "reduce_friction", "description": "Identify ways to reduce friction (e.g. using oil, water, smooth surfaces).", "minQuestions": 3},
+      {"tag": "increase_friction", "description": "Identify ways to increase friction (e.g. rough surfaces, treads on shoes and tyres).", "minQuestions": 3},
+      {"tag": "application_everyday", "description": "Explain how friction is useful or harmful in everyday life (e.g. walking without slipping; wear on machine parts).", "minQuestions": 3}
+    ],
+    "difficultyPlan": "20 questions total — Difficulty 1: 5; Difficulty 2: 7; Difficulty 3: 5; Difficulty 4: 3.",
+    "misconceptions": [
+      "Friction only happens when things move fast.",
+      "Friction is always helpful.",
+      "Friction does not produce heat.",
+      "Smooth surfaces have no friction at all.",
+      "Oil increases friction.",
+      "Friction only happens between solid surfaces."
+    ],
+    "needsTeacherAssessment": false
+  },
+  "questions": [
+    {
+      "skill_tag": "define_friction",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What is friction?",
+      "options": ["A force that helps objects move faster", "A force that opposes movement between two surfaces", "A type of energy", "A kind of machine"],
+      "answer": 1,
+      "hints": ["Think about rubbing your hands together.", "It slows things down."],
+      "explanation": "Friction is a force that opposes the movement of two surfaces against each other.",
+      "misconception": "Friction helps things move faster.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "define_friction",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which statement best describes friction?",
+      "options": ["A force that pulls objects towards the earth", "A force that opposes the movement of two surfaces against each other", "A force that makes objects float", "A force that creates light"],
+      "answer": 1,
+      "hints": ["It acts when surfaces rub together.", "It works against movement."],
+      "explanation": "Friction is the force that opposes the movement of two surfaces against each other.",
+      "misconception": "Friction is a pulling force like gravity.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "define_friction",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "What is friction?",
+      "answer": ["a force that opposes movement between two surfaces", "the force that opposes the movement of two surfaces against each other", "a force that slows down movement"],
+      "hints": ["Think about rubbing your hands.", "It acts against movement."],
+      "explanation": "Friction is the force that opposes the movement of two surfaces against each other.",
+      "misconception": "Friction is not a force.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "define_friction",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "A pupil says, 'Friction only happens when things move fast.' What is the best correction?",
+      "options": ["Yes, friction only happens at high speed", "No, friction happens whenever two surfaces rub together, even at low speed", "No, friction only happens in water", "No, friction only happens in machines"],
+      "answer": 1,
+      "hints": ["Think about slowly sliding a book on a table.", "Friction acts whenever surfaces touch and move."],
+      "explanation": "Friction happens whenever two surfaces rub together, even if the movement is slow.",
+      "misconception": "Friction only happens when things move fast.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "effects_friction",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What happens when you rub your palms together?",
+      "options": ["They become cold", "They become warm", "They become wet", "They become lighter"],
+      "answer": 1,
+      "hints": ["Think about the heat you feel.", "Friction produces heat."],
+      "explanation": "Rubbing your palms together produces heat due to friction, so they become warm.",
+      "misconception": "Friction does not produce heat.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "effects_friction",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which of these is an effect of friction?",
+      "options": ["It produces heat", "It makes objects lighter", "It makes objects disappear", "It makes objects float"],
+      "answer": 0,
+      "hints": ["Think about rubbing surfaces together.", "What do you feel?"],
+      "explanation": "Friction produces heat when surfaces rub together.",
+      "misconception": "Friction has no effects.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "effects_friction",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Why do the soles of shoes wear out over time?",
+      "options": ["Because of friction between the shoes and the ground", "Because of sunlight", "Because of water", "Because of air"],
+      "answer": 0,
+      "hints": ["Think about walking on rough surfaces.", "Friction causes wear and tear."],
+      "explanation": "Friction between the soles of shoes and the ground causes the soles to wear out over time.",
+      "misconception": "Shoes wear out because they get wet.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "effects_friction",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Describe one effect of friction.",
+      "answer": ["it produces heat", "it slows down movement", "it causes wear and tear"],
+      "hints": ["Think about rubbing hands.", "Think about shoes wearing out."],
+      "explanation": "Friction produces heat, slows down movement, and causes wear and tear.",
+      "misconception": "Friction has no effects.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "examples_friction",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which of these is an example of friction?",
+      "options": ["Rubbing your hands together", "Water boiling", "A bulb lighting", "A radio playing"],
+      "answer": 0,
+      "hints": ["Which action involves surfaces rubbing together?", "Your hands rub against each other."],
+      "explanation": "Rubbing your hands together is an example of friction.",
+      "misconception": "Friction only happens in machines.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "examples_friction",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "A car tyre grips the road as the car moves. What causes this grip?",
+      "options": ["Friction between the tyre and the road", "The colour of the tyre", "The air inside the tyre", "The car's radio"],
+      "answer": 0,
+      "hints": ["Think about the surfaces touching.", "Friction helps the tyre grip."],
+      "explanation": "Friction between the car tyre and the road helps the tyre grip and prevents slipping.",
+      "misconception": "Friction prevents tyres from gripping.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "examples_friction",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Give one everyday example of friction.",
+      "answer": ["rubbing hands together", "shoes gripping the ground", "a car tyre on the road", "sliding a book on a table"],
+      "hints": ["Think about walking.", "Think about rubbing surfaces."],
+      "explanation": "Examples of friction include rubbing hands together, shoes gripping the ground, and car tyres on the road.",
+      "misconception": "Friction is not common.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "reduce_friction",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which of these reduces friction?",
+      "options": ["Applying oil between two surfaces", "Making surfaces rougher", "Pressing surfaces harder together", "Increasing the weight on the surfaces"],
+      "answer": 0,
+      "hints": ["Oil makes surfaces slippery.", "It helps parts move smoothly."],
+      "explanation": "Applying oil between two surfaces reduces friction, making it easier for them to slide over each other.",
+      "misconception": "Oil increases friction.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "reduce_friction",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "Why is water sometimes used on a slide in a playground?",
+      "options": ["To increase friction", "To reduce friction so children can slide easily", "To make the slide heavier", "To make the slide warmer"],
+      "answer": 1,
+      "hints": ["Water makes the slide slippery.", "Less friction means easier sliding."],
+      "explanation": "Water reduces friction on the slide, allowing children to slide down more easily.",
+      "misconception": "Water increases friction.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "reduce_friction",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Name one way to reduce friction.",
+      "answer": ["use oil", "use water", "make surfaces smooth", "use a lubricant"],
+      "hints": ["Think about making things slippery.", "Oil is one example."],
+      "explanation": "Ways to reduce friction include using oil or water, or making surfaces smooth.",
+      "misconception": "Friction cannot be reduced.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "increase_friction",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which of these increases friction?",
+      "options": ["Using a rough surface", "Applying oil", "Using a smooth surface", "Adding water"],
+      "answer": 0,
+      "hints": ["Rough surfaces have more friction.", "Think about sandpaper."],
+      "explanation": "Using a rough surface increases friction between surfaces.",
+      "misconception": "Rough surfaces reduce friction.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "increase_friction",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "Why do shoes have treads (patterns) on the soles?",
+      "options": ["To increase friction and prevent slipping", "To reduce friction", "To make the shoes lighter", "To make the shoes colourful"],
+      "answer": 0,
+      "hints": ["Treads make the sole rougher.", "More friction means better grip."],
+      "explanation": "Treads on shoe soles increase friction between the shoe and the ground, helping to prevent slipping.",
+      "misconception": "Treads reduce friction.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "increase_friction",
+      "type": "short_answer",
+      "difficulty": 4,
+      "stem": "Explain why car tyres are made with rough patterns on them.",
+      "answer": ["to increase friction between the tyre and the road, helping the car grip and preventing slipping", "rough patterns increase friction so the tyres grip the road better", "they increase friction to stop the car from slipping"],
+      "hints": ["Think about driving on a wet road.", "More friction means better grip."],
+      "explanation": "Car tyres have rough patterns to increase friction between the tyre and the road. This helps the car grip the road and prevents slipping, especially on wet surfaces.",
+      "misconception": "Smooth tyres have more friction.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "application_everyday",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Why is friction useful when walking?",
+      "options": ["It helps our shoes grip the ground and prevents slipping", "It makes us walk faster", "It makes our shoes lighter", "It makes the ground softer"],
+      "answer": 0,
+      "hints": ["Think about slipping on a wet floor.", "Friction gives grip."],
+      "explanation": "Friction between our shoes and the ground helps us grip and prevents slipping when walking.",
+      "misconception": "Friction is not useful for walking.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "application_everyday",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "On a rainy day, why do people sometimes slip on a smooth floor?",
+      "options": ["Because friction is reduced by the water", "Because friction is increased by the water", "Because the floor becomes rougher", "Because their shoes become heavier"],
+      "answer": 0,
+      "hints": ["Water makes surfaces slippery.", "Less friction means less grip."],
+      "explanation": "Water reduces friction between shoes and the floor, so there is less grip and people can slip.",
+      "misconception": "Water increases friction.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "application_everyday",
+      "type": "short_answer",
+      "difficulty": 4,
+      "stem": "Explain how friction can be both useful and harmful in everyday life.",
+      "answer": ["friction is useful because it helps us walk without slipping and helps tyres grip the road; it is harmful because it causes wear and tear on shoes and machine parts", "friction helps with grip but also causes wear", "useful for grip; harmful because it causes wearing out"],
+      "hints": ["Think about walking and car tyres.", "Think about shoes wearing out."],
+      "explanation": "Friction is useful because it gives grip for walking and driving. It is harmful because it causes wear and tear on shoes, tyres, and machine parts, and produces unwanted heat.",
+      "misconception": "Friction is always helpful.",
+      "uncertain": []
+    }
+  ]
+}

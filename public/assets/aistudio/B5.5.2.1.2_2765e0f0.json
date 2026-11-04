@@ -1,0 +1,282 @@
+{
+  "indicator": {
+    "code": "B5.5.2.1.2",
+    "subject": "Science",
+    "level": "Basic 5",
+    "strand": "HUMANS AND THE ENVIRONMENT",
+    "sub_strand": "Diseases",
+    "content_standard": "B5.5.2.1 Know common diseases of humans; causes, symptoms, effects and prevention",
+    "objective": "Identify causes, symptoms and prevention of cholera",
+    "source_page": 53
+  },
+  "spec": {
+    "skills": [
+      {"tag": "cause_cholera", "description": "Recognise that cholera is caused by germs from contaminated food or water.", "minQuestions": 3},
+      {"tag": "symptoms_cholera", "description": "Identify common symptoms of cholera (e.g. serious diarrhoea, vomiting, dehydration).", "minQuestions": 4},
+      {"tag": "spread_cholera", "description": "Describe how cholera spreads (drinking contaminated water, eating contaminated food, poor sanitation).", "minQuestions": 3},
+      {"tag": "prevention_cholera", "description": "Identify ways to prevent cholera (drinking safe water, washing hands, proper waste disposal, covering food).", "minQuestions": 4},
+      {"tag": "action_cholera", "description": "State what to do if someone shows signs of cholera (give safe water, see a health worker immediately).", "minQuestions": 3},
+      {"tag": "concept_map", "description": "Organise causes, symptoms and prevention of cholera in a simple table or map.", "minQuestions": 3}
+    ],
+    "difficultyPlan": "20 questions total — Difficulty 1: 5; Difficulty 2: 7; Difficulty 3: 5; Difficulty 4: 3.",
+    "misconceptions": [
+      "Cholera is spread through the air.",
+      "Cholera is the same as malaria.",
+      "Cholera cannot be prevented.",
+      "Only adults can get cholera.",
+      "Drinking any water is safe.",
+      "Cholera is caused by eating too much food."
+    ],
+    "needsTeacherAssessment": true
+  },
+  "questions": [
+    {
+      "skill_tag": "cause_cholera",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What causes cholera?",
+      "options": ["Germs from contaminated food or water", "Eating too much food", "Sleeping late at night", "Playing in the sun"],
+      "answer": 0,
+      "hints": ["Cholera is linked to dirty water.", "It is caused by tiny germs."],
+      "explanation": "Cholera is caused by germs that come from contaminated food or water.",
+      "misconception": "Cholera is caused by eating too much food.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "cause_cholera",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "A learner says, 'Cholera is spread through the air like a cold.' What is the best correction?",
+      "options": ["Yes, cholera spreads through the air", "No, cholera spreads mainly through contaminated water and food", "No, cholera is caused by malaria", "No, cholera cannot spread at all"],
+      "answer": 1,
+      "hints": ["Think about dirty water and food.", "Cholera is not an airborne disease."],
+      "explanation": "Cholera spreads mainly through drinking contaminated water or eating contaminated food, not through the air.",
+      "misconception": "Cholera is spread through the air.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "cause_cholera",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "What causes cholera?",
+      "answer": ["germs from contaminated food or water", "germs in dirty water", "contaminated water and food"],
+      "hints": ["Think about dirty water.", "Germs cause it."],
+      "explanation": "Cholera is caused by germs found in contaminated food or water.",
+      "misconception": "Cholera is caused by bad air.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "symptoms_cholera",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which of these is a common symptom of cholera?",
+      "options": ["Serious diarrhoea", "Broken leg", "Toothache", "Hiccups"],
+      "answer": 0,
+      "hints": ["Cholera affects the stomach and toilet habits.", "It causes watery stool."],
+      "explanation": "Serious diarrhoea is a common symptom of cholera.",
+      "misconception": "Cholera causes toothache.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "symptoms_cholera",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which set lists common symptoms of cholera?",
+      "options": ["Diarrhoea, vomiting, dehydration", "Broken arm, headache, sneezing", "Toothache, hiccups, back pain", "Runny nose, earache, cough"],
+      "answer": 0,
+      "hints": ["Cholera causes watery stool and vomiting.", "The body loses a lot of water."],
+      "explanation": "Common symptoms of cholera include diarrhoea, vomiting and dehydration.",
+      "misconception": "Cholera only causes a rash.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "symptoms_cholera",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Name two symptoms of cholera.",
+      "answer": ["diarrhoea and vomiting", "vomiting and dehydration", "diarrhoea and dehydration"],
+      "hints": ["One is watery stool.", "Another is throwing up."],
+      "explanation": "Common symptoms of cholera are diarrhoea and vomiting. Dehydration also occurs.",
+      "misconception": "Cholera has no symptoms.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "symptoms_cholera",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "Why is dehydration dangerous for a person with cholera?",
+      "options": ["The body loses too much water and salts", "The body gains too much water", "The body becomes too cold", "The body produces too much blood"],
+      "answer": 0,
+      "hints": ["Diarrhoea and vomiting remove water from the body.", "The body needs water to function."],
+      "explanation": "Dehydration is dangerous because the body loses too much water and salts, which can lead to serious health problems.",
+      "misconception": "Dehydration is not serious.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "spread_cholera",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "How can cholera spread from one person to another?",
+      "options": ["By drinking contaminated water", "By sharing a pencil", "By looking at someone", "By wearing the same colour"],
+      "answer": 0,
+      "hints": ["Cholera germs are in dirty water.", "People get it from what they eat or drink."],
+      "explanation": "Cholera spreads when people drink contaminated water or eat contaminated food.",
+      "misconception": "Cholera spreads through the air.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "spread_cholera",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which of these can help cholera spread?",
+      "options": ["Drinking water from a dirty stream", "Washing hands with soap", "Covering food with a clean cloth", "Drinking boiled water"],
+      "answer": 0,
+      "hints": ["Dirty water contains germs.", "Which action brings germs into the body?"],
+      "explanation": "Drinking water from a dirty stream can spread cholera because the water contains germs.",
+      "misconception": "Cholera is not spread by water.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "spread_cholera",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Describe one way cholera can spread.",
+      "answer": ["drinking contaminated water", "eating contaminated food", "drinking water from a dirty source"],
+      "hints": ["Think about dirty water.", "Think about food that flies have touched."],
+      "explanation": "Cholera can spread through drinking contaminated water or eating contaminated food.",
+      "misconception": "Cholera spreads through the air.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "prevention_cholera",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which of these helps prevent cholera?",
+      "options": ["Drinking safe water", "Drinking water from any source", "Eating uncovered food", "Not washing hands"],
+      "answer": 0,
+      "hints": ["Safe water is free from germs.", "Boiling water makes it safe."],
+      "explanation": "Drinking safe water helps prevent cholera because it does not contain cholera germs.",
+      "misconception": "Any water is safe to drink.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "prevention_cholera",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which of these is a good way to prevent cholera?",
+      "options": ["Washing hands with soap before eating", "Eating food that has been left uncovered", "Drinking water from a stream", "Not using a toilet"],
+      "answer": 0,
+      "hints": ["Clean hands have fewer germs.", "Soap removes germs."],
+      "explanation": "Washing hands with soap before eating helps prevent cholera by removing germs.",
+      "misconception": "Hand washing is not important.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "prevention_cholera",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Give one way to prevent cholera.",
+      "answer": ["drink safe water", "wash hands with soap", "boil water before drinking", "cover food"],
+      "hints": ["Think about clean water.", "Think about hand washing."],
+      "explanation": "Ways to prevent cholera include drinking safe water, washing hands with soap, and covering food.",
+      "misconception": "Cholera cannot be prevented.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "prevention_cholera",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "A family collects water from a river. What should they do to make it safe to drink?",
+      "options": ["Boil the water before drinking", "Add sugar to the water", "Let the water settle and drink it", "Add oil to the water"],
+      "answer": 0,
+      "hints": ["Boiling kills germs.", "River water can contain cholera germs."],
+      "explanation": "Boiling river water kills cholera germs and makes it safe to drink.",
+      "misconception": "River water is always safe.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "action_cholera",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "A learner has serious diarrhoea and vomiting. What should you do?",
+      "options": ["Tell an adult and take the learner to a health worker", "Give the learner sweets", "Hide the learner", "Ignore the learner"],
+      "answer": 0,
+      "hints": ["Serious diarrhoea can be cholera.", "A health worker can help."],
+      "explanation": "You should tell an adult and take the learner to a health worker immediately.",
+      "misconception": "Cholera does not need medical help.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "action_cholera",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "What should you do if someone shows signs of cholera?",
+      "answer": ["give them safe water and take them to a health worker", "tell an adult and see a health worker", "give safe water and seek medical help"],
+      "hints": ["The person needs water.", "They need medical attention."],
+      "explanation": "Give the person safe water to drink and take them to a health worker immediately.",
+      "misconception": "You should wait for cholera to go away.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "action_cholera",
+      "type": "mcq",
+      "difficulty": 4,
+      "stem": "A cholera patient is very thirsty and weak. What is the most important first step?",
+      "options": ["Give them safe water to drink", "Give them solid food", "Make them run", "Let them sleep without water"],
+      "answer": 0,
+      "hints": ["Cholera causes dehydration.", "The body needs water."],
+      "explanation": "Giving safe water is the most important first step to replace lost fluids and prevent severe dehydration.",
+      "misconception": "Cholera patients should not drink water.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "concept_map",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "Draw a simple table with three columns: 'Causes', 'Symptoms' and 'Prevention'. Write at least one correct point under each column for cholera.",
+      "rubric": {
+        "criteria": [
+          {"description": "Wrote one correct cause of cholera", "marks": 1},
+          {"description": "Wrote one correct symptom of cholera", "marks": 1},
+          {"description": "Wrote one correct way to prevent cholera", "marks": 1},
+          {"description": "Organised the points clearly under the three headings", "marks": 1}
+        ]
+      },
+      "answer": "",
+      "hints": ["Think about dirty water for causes.", "Think about diarrhoea for symptoms.", "Think about boiling water for prevention."],
+      "explanation": "This is a written task. Your teacher will mark it using the rubric.",
+      "misconception": "Cholera has no clear causes or prevention.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "concept_map",
+      "type": "drawing",
+      "difficulty": 4,
+      "stem": "Design a simple poster to teach your class about cholera. Show one cause, one symptom and one way to prevent it. Use drawings and short words.",
+      "rubric": {
+        "criteria": [
+          {"description": "Showed one correct cause of cholera", "marks": 1},
+          {"description": "Showed one correct symptom of cholera", "marks": 1},
+          {"description": "Showed one correct way to prevent cholera", "marks": 2},
+          {"description": "Used drawings and short words clearly", "marks": 1}
+        ]
+      },
+      "answer": "",
+      "hints": ["Draw dirty water for a cause.", "Draw a sick person for a symptom.", "Draw soap and water for prevention."],
+      "explanation": "This is a drawing task. Your teacher will mark it using the rubric.",
+      "misconception": "Cholera cannot be prevented.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "concept_map",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Complete this sentence: Cholera is caused by ______ and can be prevented by ______.",
+      "answer": ["germs from contaminated water, drinking safe water", "germs in dirty water, washing hands", "contaminated food and water, boiling water"],
+      "hints": ["First blank: what causes it?", "Second blank: how to stop it?"],
+      "explanation": "Cholera is caused by germs from contaminated water or food and can be prevented by drinking safe water and washing hands.",
+      "misconception": "Cholera has no cause or prevention.",
+      "uncertain": []
+    }
+  ]
+}

@@ -1,0 +1,287 @@
+{
+  "indicator": {
+    "code": "B5.3.3.3.2",
+    "subject": "Mathematics",
+    "level": "Basic 5",
+    "strand": "Geometry and Measurement",
+    "sub_strand": "Measurement — Angles",
+    "content_standard": "B5.3.3.3 Demonstrate an understanding of angles",
+    "objective": "Measure given angles with a protractor and classify them according to their measured sizes – right, acute, obtuse and reflex",
+    "source_page": 125
+  },
+  "spec": {
+    "skills": [
+      {"tag": "measure_angles_protractor", "description": "Use a protractor to measure angles.", "minQuestions": 2},
+      {"tag": "classify_angles", "description": "Classify angles as right, acute, obtuse, or reflex.", "minQuestions": 2},
+      {"tag": "draw_angles", "description": "Draw angles of given sizes (e.g., 30°, 45°, 90°, 120°).", "minQuestions": 2}
+    ],
+    "difficultyPlan": "20 questions: 5 at difficulty 1, 7 at difficulty 2, 5 at difficulty 3, 3 at difficulty 4.",
+    "misconceptions": [
+      "Reading the wrong scale on the protractor.",
+      "Confusing acute and obtuse.",
+      "Not aligning the protractor correctly."
+    ],
+    "needsTeacherAssessment": true
+  },
+  "questions": [
+    {
+      "skill_tag": "measure_angles_protractor",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What type of angle is 90°?",
+      "options": ["Acute", "Right", "Obtuse", "Reflex"],
+      "answer": 1,
+      "hints": ["90° is a right angle."],
+      "explanation": "90° is a right angle.",
+      "misconception": "Saying acute.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "classify_angles",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "An angle of 45° is:",
+      "options": ["Acute", "Right", "Obtuse", "Reflex"],
+      "answer": 0,
+      "hints": ["45° is less than 90°."],
+      "explanation": "45° is acute.",
+      "misconception": "Saying right.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "classify_angles",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "An angle of 120° is:",
+      "options": ["Acute", "Right", "Obtuse", "Reflex"],
+      "answer": 2,
+      "hints": ["120° is between 90° and 180°."],
+      "explanation": "120° is obtuse.",
+      "misconception": "Saying acute.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "classify_angles",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "An angle of 200° is:",
+      "options": ["Acute", "Right", "Obtuse", "Reflex"],
+      "answer": 3,
+      "hints": ["Reflex angles are greater than 180°."],
+      "explanation": "200° is reflex.",
+      "misconception": "Saying obtuse.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "measure_angles_protractor",
+      "type": "numeric",
+      "difficulty": 1,
+      "stem": "An angle measures 90°. What is its size in degrees?",
+      "answer": 90,
+      "check": "90",
+      "hints": ["It is a right angle."],
+      "explanation": "90°.",
+      "misconception": "Saying 180°.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "measure_angles_protractor",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "When using a protractor, where should you place the centre hole?",
+      "options": ["At the vertex of the angle", "At the end of one arm", "Anywhere on the angle", "At the midpoint of the arc"],
+      "answer": 0,
+      "hints": ["The centre hole goes on the vertex."],
+      "explanation": "Place the centre hole at the vertex.",
+      "misconception": "Placing it at the end of an arm.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "measure_angles_protractor",
+      "type": "written",
+      "difficulty": 2,
+      "stem": "Explain how to measure an angle using a protractor.",
+      "hints": ["Align centre, align baseline, read scale."],
+      "explanation": "Place the centre hole on the vertex, align the baseline with one arm, and read the number where the other arm crosses the scale.",
+      "rubric": {
+        "criteria": [
+          {"description": "Mentions aligning centre and baseline.", "marks": 1},
+          {"description": "Mentions reading the correct scale.", "marks": 1}
+        ]
+      },
+      "misconception": "Reading the wrong scale.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "classify_angles",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "An angle of 180° is called a ___ angle.",
+      "answer": 180,
+      "check": "180",
+      "hints": ["It is a straight line."],
+      "explanation": "180° is a straight angle.",
+      "misconception": "Saying 90°.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "draw_angles",
+      "type": "drawing",
+      "difficulty": 2,
+      "stem": "Draw an angle of 60° using a protractor.",
+      "hints": ["Draw a baseline, place protractor, mark 60°, draw line."],
+      "explanation": "The learner should draw a 60° angle.",
+      "rubric": {
+        "criteria": [
+          {"description": "Draws baseline.", "marks": 1},
+          {"description": "Marks 60° correctly.", "marks": 1},
+          {"description": "Draws the second arm.", "marks": 1}
+        ]
+      },
+      "misconception": "Drawing 120° instead.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "draw_angles",
+      "type": "drawing",
+      "difficulty": 2,
+      "stem": "Draw an angle of 120°.",
+      "hints": ["Use a protractor."],
+      "explanation": "A 120° angle.",
+      "rubric": {
+        "criteria": [
+          {"description": "Draws a 120° angle.", "marks": 1}
+        ]
+      },
+      "misconception": "Drawing 60°.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "measure_angles_protractor",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "An angle is measured as 135°. What type of angle is it?",
+      "answer": 135,
+      "check": "135",
+      "hints": ["135° is greater than 90° but less than 180°."],
+      "explanation": "It is obtuse.",
+      "misconception": "Saying acute.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "classify_angles",
+      "type": "written",
+      "difficulty": 2,
+      "stem": "Explain the difference between an obtuse angle and a reflex angle.",
+      "hints": ["Compare to 180°."],
+      "explanation": "An obtuse angle is between 90° and 180°. A reflex angle is greater than 180°.",
+      "rubric": {
+        "criteria": [
+          {"description": "States obtuse < 180°.", "marks": 1},
+          {"description": "States reflex > 180°.", "marks": 1}
+        ]
+      },
+      "misconception": "Thinking they are the same.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "measure_angles_protractor",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "Which angle is acute?",
+      "options": ["90°", "180°", "75°", "120°"],
+      "answer": 2,
+      "hints": ["Acute is less than 90°."],
+      "explanation": "75° is acute.",
+      "misconception": "Choosing 90° because it is a common angle.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "measure_angles_protractor",
+      "type": "numeric",
+      "difficulty": 3,
+      "stem": "A reflex angle measures 270°. How many degrees more than a straight angle is it?",
+      "answer": 90,
+      "check": "270-180",
+      "hints": ["Straight angle = 180°."],
+      "explanation": "270 - 180 = 90°.",
+      "misconception": "Saying 180°.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "draw_angles",
+      "type": "drawing",
+      "difficulty": 3,
+      "stem": "Draw a reflex angle of 270°.",
+      "hints": ["Draw 180° straight line, then add 90°."],
+      "explanation": "A 270° reflex angle.",
+      "rubric": {
+        "criteria": [
+          {"description": "Draws 270° reflex angle.", "marks": 1}
+        ]
+      },
+      "misconception": "Drawing a 90° angle.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "measure_angles_protractor",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "A pupil measures an angle as 120° but reads the wrong scale and gets 60°. Explain the mistake.",
+      "hints": ["Two scales on protractor."],
+      "explanation": "The pupil read from the wrong side of the protractor. 120° and 60° are supplementary angles.",
+      "rubric": {
+        "criteria": [
+          {"description": "Identifies wrong scale.", "marks": 1},
+          {"description": "Explains 120° vs 60°.", "marks": 1}
+        ]
+      },
+      "misconception": "Not knowing there are two scales.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "classify_angles",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "List the four types of angles we learned and give an example measure for each.",
+      "hints": ["Acute, right, obtuse, reflex."],
+      "explanation": "Acute (e.g., 45°), right (90°), obtuse (e.g., 120°), reflex (e.g., 270°).",
+      "rubric": {
+        "criteria": [
+          {"description": "Lists all four types.", "marks": 1},
+          {"description": "Gives valid example measures.", "marks": 1}
+        ]
+      },
+      "misconception": "Forgetting reflex.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "measure_angles_protractor",
+      "type": "numeric",
+      "difficulty": 4,
+      "stem": "An angle is 2/3 of a right angle. What is its measure?",
+      "answer": 60,
+      "check": "(2/3)*90",
+      "hints": ["Right angle = 90°."],
+      "explanation": "2/3 × 90 = 60°.",
+      "misconception": "Saying 30°.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "draw_angles",
+      "type": "written",
+      "difficulty": 4,
+      "stem": "Explain how to draw a reflex angle of 210°.",
+      "hints": ["Start with a straight line (180°), then add 30°."],
+      "explanation": "Draw a straight line and then draw an additional angle of 30° from the endpoint. The total angle is 210°.",
+      "rubric": {
+        "criteria": [
+          {"description": "Mentions starting with 180°.", "marks": 1},
+          {"description": "Adds 30° to reach 210°.", "marks": 1}
+        ]
+      },
+      "misconception": "Drawing 150°.",
+      "uncertain": []
+    }
+  ]
+}

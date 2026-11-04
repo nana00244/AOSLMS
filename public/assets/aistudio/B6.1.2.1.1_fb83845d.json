@@ -1,0 +1,268 @@
+{
+  "indicator": {
+    "code": "B6.1.2.1.1",
+    "subject": "Science",
+    "level": "Basic 6",
+    "strand": "DIVERSITY OF MATTER",
+    "sub_strand": "Materials",
+    "content_standard": "B6.1.2.1 Recognise materials as important resources for providing human needs",
+    "objective": "Know the general properties of metals such as lustre, malleability, conductivity and ductility",
+    "source_page": 56
+  },
+  "spec": {
+    "skills": [
+      {"tag": "define_lustre", "description": "Explain lustre as the shiny appearance of metals.", "minQuestions": 3},
+      {"tag": "define_malleability", "description": "Explain malleability as the ability of metals to be hammered or pressed into thin sheets without breaking.", "minQuestions": 4},
+      {"tag": "define_conductivity", "description": "Explain conductivity as the ability of metals to carry heat or electricity.", "minQuestions": 4},
+      {"tag": "define_ductility", "description": "Explain ductility as the ability of metals to be drawn into thin wires.", "minQuestions": 3},
+      {"tag": "identify_property_examples", "description": "Identify which property is shown by a given example (e.g. copper wire → ductility; aluminium foil → malleability).", "minQuestions": 4},
+      {"tag": "classify_metal_nonmetal", "description": "Classify materials as metals or non-metals based on these properties.", "minQuestions": 2}
+    ],
+    "difficultyPlan": "20 questions total — Difficulty 1: 5; Difficulty 2: 7; Difficulty 3: 5; Difficulty 4: 3.",
+    "misconceptions": [
+      "All shiny things are metals.",
+      "Metals cannot be bent or shaped.",
+      "Only metals conduct electricity.",
+      "Ductility and malleability are the same thing.",
+      "Plastic is a metal because it can be shaped.",
+      "Lustre means a material is heavy."
+    ],
+    "needsTeacherAssessment": true
+  },
+  "questions": [
+    {
+      "skill_tag": "define_lustre",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What is lustre?",
+      "options": ["The shiny appearance of metals", "The weight of metals", "The sound metals make", "The smell of metals"],
+      "answer": 0,
+      "hints": ["Think about how shiny a new coin looks.", "It is about shine."],
+      "explanation": "Lustre is the shiny appearance of metals.",
+      "misconception": "Lustre means a material is heavy.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "define_lustre",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which of these best describes lustre?",
+      "options": ["The ability of a metal to be drawn into wires", "The shiny appearance of a metal", "The ability of a metal to conduct electricity", "The ability of a metal to be hammered into sheets"],
+      "answer": 1,
+      "hints": ["It is about how shiny the metal looks.", "New coins have it."],
+      "explanation": "Lustre is the shiny appearance of a metal.",
+      "misconception": "Lustre means ductility.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "define_lustre",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "What does lustre mean when describing a metal?",
+      "answer": ["shiny appearance", "it is shiny", "the metal is shiny"],
+      "hints": ["Think about a shiny surface.", "It reflects light."],
+      "explanation": "Lustre means the shiny appearance of a metal.",
+      "misconception": "Lustre means weight.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "define_malleability",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What is malleability?",
+      "options": ["The ability of a metal to be hammered into thin sheets", "The ability of a metal to be drawn into wires", "The shiny appearance of a metal", "The ability of a metal to conduct heat"],
+      "answer": 0,
+      "hints": ["Think about aluminium foil.", "It can be hammered flat."],
+      "explanation": "Malleability is the ability of a metal to be hammered or pressed into thin sheets without breaking.",
+      "misconception": "Malleability means ductility.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "define_malleability",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which property allows a metal to be hammered into a flat sheet?",
+      "options": ["Lustre", "Malleability", "Ductility", "Conductivity"],
+      "answer": 1,
+      "hints": ["Think about thin sheets.", "It is not about wires."],
+      "explanation": "Malleability is the property that allows a metal to be hammered or pressed into thin sheets.",
+      "misconception": "Ductility allows metals to be hammered into sheets.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "define_malleability",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "What is malleability?",
+      "answer": ["the ability of a metal to be hammered or pressed into thin sheets", "the ability of a metal to be shaped into thin sheets", "metals can be hammered into flat sheets"],
+      "hints": ["Think about aluminium foil.", "It can be made into sheets."],
+      "explanation": "Malleability is the ability of a metal to be hammered or pressed into thin sheets without breaking.",
+      "misconception": "Malleability and ductility are the same.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "define_malleability",
+      "type": "mcq",
+      "difficulty": 4,
+      "stem": "A metalsmith hammers a piece of gold into a very thin sheet. Which property of metals does this show?",
+      "options": ["Ductility", "Malleability", "Conductivity", "Lustre"],
+      "answer": 1,
+      "hints": ["The metal is being made into a sheet.", "It is not being drawn into a wire."],
+      "explanation": "Hammering gold into a thin sheet shows malleability.",
+      "misconception": "Hammering into sheets shows ductility.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "define_conductivity",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What is conductivity in metals?",
+      "options": ["The ability to carry heat or electricity", "The ability to be hammered into sheets", "The shiny appearance", "The ability to be drawn into wires"],
+      "answer": 0,
+      "hints": ["Think about how wires carry electricity.", "Metals can pass heat and electricity."],
+      "explanation": "Conductivity is the ability of metals to carry heat or electricity.",
+      "misconception": "Conductivity is about shininess.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "define_conductivity",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which property allows copper to be used for electrical wires?",
+      "options": ["Malleability", "Lustre", "Conductivity", "Ductility only"],
+      "answer": 2,
+      "hints": ["Wires carry electricity.", "Which property means carrying electricity?"],
+      "explanation": "Copper is used for electrical wires because of its conductivity — it can carry electricity.",
+      "misconception": "Copper is used for wires because it is shiny.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "define_conductivity",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "What is conductivity?",
+      "answer": ["the ability of a metal to carry heat or electricity", "the ability to conduct electricity or heat", "metals carry heat and electricity"],
+      "hints": ["Think about wires carrying electricity.", "Think about metal pots on fire."],
+      "explanation": "Conductivity is the ability of metals to carry heat or electricity.",
+      "misconception": "Conductivity means shininess.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "define_conductivity",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "Why are cooking pots made of metals?",
+      "options": ["Because metals have lustre", "Because metals conduct heat", "Because metals are ductile", "Because metals are malleable"],
+      "answer": 1,
+      "hints": ["Pots need to get hot on the fire.", "Heat passes through metals."],
+      "explanation": "Cooking pots are made of metals because metals conduct heat, allowing food to cook evenly.",
+      "misconception": "Pots are made of metals because they are shiny.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "define_ductility",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What is ductility?",
+      "options": ["The ability of a metal to be drawn into thin wires", "The ability of a metal to be hammered into sheets", "The shiny appearance of a metal", "The ability of a metal to carry heat"],
+      "answer": 0,
+      "hints": ["Think about copper wires.", "It is about making wires."],
+      "explanation": "Ductility is the ability of a metal to be drawn into thin wires.",
+      "misconception": "Ductility means being hammered into sheets.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "define_ductility",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which property allows copper to be drawn into thin wires?",
+      "options": ["Lustre", "Malleability", "Ductility", "Conductivity"],
+      "answer": 2,
+      "hints": ["Think about wires.", "It is not about sheets."],
+      "explanation": "Ductility is the property that allows copper to be drawn into thin wires.",
+      "misconception": "Malleability allows metals to be drawn into wires.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "define_ductility",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "What is ductility?",
+      "answer": ["the ability of a metal to be drawn into thin wires", "metals can be drawn into wires", "the ability to be made into wires"],
+      "hints": ["Think about copper wires.", "It is about making wires."],
+      "explanation": "Ductility is the ability of a metal to be drawn into thin wires.",
+      "misconception": "Ductility and malleability are the same.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_property_examples",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "A copper wire is used in a circuit. Which property of copper is being used?",
+      "options": ["Lustre", "Malleability", "Ductility", "Conductivity"],
+      "answer": 3,
+      "hints": ["The wire carries electricity.", "Which property allows electricity to flow?"],
+      "explanation": "The copper wire carries electricity, showing the conductivity of copper.",
+      "misconception": "Copper wire works because of lustre.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_property_examples",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Aluminium foil is used to wrap food. It can be pressed into a thin sheet. Which property does aluminium show?",
+      "options": ["Ductility", "Malleability", "Conductivity", "Lustre"],
+      "answer": 1,
+      "hints": ["The metal is pressed into a sheet.", "It is not a wire."],
+      "explanation": "Aluminium foil shows malleability because it is pressed into a thin sheet.",
+      "misconception": "Aluminium foil shows ductility.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_property_examples",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "A pupil observes that a metal spoon shines in the light. Which property of metals is this?",
+      "answer": ["lustre", "it has lustre", "shininess"],
+      "hints": ["It is about shine.", "New spoons reflect light."],
+      "explanation": "The shiny appearance of the metal spoon is lustre.",
+      "misconception": "Shininess is conductivity.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_property_examples",
+      "type": "mcq",
+      "difficulty": 4,
+      "stem": "A pupil stretches a piece of copper into a thin wire and hammers another piece into a flat sheet. Which two properties are shown?",
+      "options": ["Lustre and conductivity", "Ductility and malleability", "Conductivity and malleability", "Lustre and ductility"],
+      "answer": 1,
+      "hints": ["Wire = ductility.", "Sheet = malleability."],
+      "explanation": "Drawing copper into a wire shows ductility. Hammering copper into a sheet shows malleability.",
+      "misconception": "Ductility and malleability are the same.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "classify_metal_nonmetal",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "A pupil tests four materials by trying to hammer them into sheets. Which material is a metal?",
+      "options": ["A plastic ruler", "A copper coin", "A piece of chalk", "A rubber band"],
+      "answer": 1,
+      "hints": ["Which material can be shaped by hammering?", "Metals are malleable."],
+      "explanation": "A copper coin is a metal and is malleable. Plastic, chalk and rubber are not metals.",
+      "misconception": "Plastic is a metal.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "classify_metal_nonmetal",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "A pupil has a metal nail and a plastic spoon. Which one conducts electricity? Explain your answer.",
+      "answer": ["the metal nail conducts electricity because it is a metal", "the nail conducts electricity; plastic does not", "the metal nail, because metals are conductors"],
+      "hints": ["Metals conduct electricity.", "Plastics are insulators."],
+      "explanation": "The metal nail conducts electricity because metals have conductivity. The plastic spoon is an insulator and does not conduct.",
+      "misconception": "Plastic is a conductor.",
+      "uncertain": []
+    }
+  ]
+}

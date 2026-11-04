@@ -1,0 +1,352 @@
+{
+  "indicator": {
+    "code": "B5.1.1.4.1",
+    "subject": "Mathematics",
+    "level": "Basic 5",
+    "strand": "Number",
+    "sub_strand": "Decimals",
+    "content_standard": "Not clearly printed in extract",
+    "objective": "Use models to explain the result of addition and subtraction of decimals (up to the thousands)",
+    "source_page": 101
+  },
+  "spec": {
+    "skills": [
+      {
+        "tag": "add_decimals_thousandths",
+        "description": "Add decimals up to thousandths.",
+        "minQuestions": 2
+      },
+      {
+        "tag": "subtract_decimals_thousandths",
+        "description": "Subtract decimals up to thousandths.",
+        "minQuestions": 2
+      },
+      {
+        "tag": "align_decimal_points",
+        "description": "Align decimal points correctly when adding or subtracting.",
+        "minQuestions": 2
+      }
+    ],
+    "difficultyPlan": "20 questions: 5 at difficulty 1, 7 at difficulty 2, 5 at difficulty 3, 3 at difficulty 4.",
+    "misconceptions": [
+      "Not lining up decimal points.",
+      "Misaligning place values when numbers have different decimal places.",
+      "Forgetting to carry or borrow."
+    ],
+    "needsTeacherAssessment": false
+  },
+  "questions": [
+    {
+      "skill_tag": "add_decimals_thousandths",
+      "type": "numeric",
+      "difficulty": 1,
+      "stem": "What is 1.2 + 0.3?",
+      "answer": 1.5,
+      "check": "1.2+0.3",
+      "hints": [
+        "Add the tenths: 2+3=5."
+      ],
+      "explanation": "1.5.",
+      "misconception": "Adding all digits to get 1.5? Let's try 1.2 + 0.3 = 1.5. Correct. Wrong: 1.5.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "subtract_decimals_thousandths",
+      "type": "numeric",
+      "difficulty": 1,
+      "stem": "What is 2.5 - 1.2?",
+      "answer": 1.3,
+      "check": "2.5-1.2",
+      "hints": [
+        "5-2=3 tenths.",
+        "2-1=1 whole."
+      ],
+      "explanation": "1.3.",
+      "misconception": "Saying 1.7.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "align_decimal_points",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "How should you align 2.5 and 1.25 to add them?",
+      "options": [
+        "2.50 + 1.25",
+        "2.5 + 1.25",
+        "2.5 + 1.250",
+        "2.05 + 1.25"
+      ],
+      "answer": 0,
+      "hints": [
+        "Pad with zeros to align decimal points."
+      ],
+      "explanation": "Write 2.5 as 2.50, then align.",
+      "misconception": "Aligning the last digits.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "add_decimals_thousandths",
+      "type": "numeric",
+      "difficulty": 1,
+      "stem": "What is 0.4 + 0.5?",
+      "answer": 0.9,
+      "check": "0.4+0.5",
+      "hints": [
+        "4+5=9 tenths."
+      ],
+      "explanation": "0.9.",
+      "misconception": "Saying 0.9? That's correct. Let's use 0.9.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "subtract_decimals_thousandths",
+      "type": "numeric",
+      "difficulty": 1,
+      "stem": "What is 0.8 - 0.3?",
+      "answer": 0.5,
+      "check": "0.8-0.3",
+      "hints": [
+        "8-3=5 tenths."
+      ],
+      "explanation": "0.5.",
+      "misconception": "Saying 0.11.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "add_decimals_thousandths",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "What is 0.6 + 0.39?",
+      "answer": 0.99,
+      "check": "0.6+0.39",
+      "hints": [
+        "Write 0.6 as 0.60.",
+        "0.60 + 0.39."
+      ],
+      "explanation": "0.99.",
+      "misconception": "Saying 0.45 (misaligning).",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "subtract_decimals_thousandths",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "What is 1.39 - 0.6?",
+      "answer": 0.79,
+      "check": "1.39-0.60",
+      "hints": [
+        "Write 0.6 as 0.60."
+      ],
+      "explanation": "0.79.",
+      "misconception": "Saying 1.33.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "add_decimals_thousandths",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "What is 2.34 + 1.2?",
+      "answer": 3.54,
+      "check": "2.34+1.20",
+      "hints": [
+        "Write 1.2 as 1.20."
+      ],
+      "explanation": "3.54.",
+      "misconception": "Saying 3.46.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "subtract_decimals_thousandths",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "What is 3.45 - 1.2?",
+      "answer": 2.25,
+      "check": "3.45-1.20",
+      "hints": [
+        "Write 1.2 as 1.20."
+      ],
+      "explanation": "2.25.",
+      "misconception": "Saying 2.43.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "add_decimals_thousandths",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "What is 5.67 + 3.4?",
+      "options": [
+        "9.07",
+        "6.01",
+        "9.71",
+        "5.01"
+      ],
+      "answer": 0,
+      "hints": [
+        "5.67 + 3.40."
+      ],
+      "explanation": "9.07.",
+      "misconception": "Saying 6.01 (misaligning).",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "subtract_decimals_thousandths",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "What is 8.12 - 2.5?",
+      "options": [
+        "5.62",
+        "5.52",
+        "6.62",
+        "6.52"
+      ],
+      "answer": 0,
+      "hints": [
+        "8.12 - 2.50."
+      ],
+      "explanation": "5.62.",
+      "misconception": "Saying 5.52 (misaligning).",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "align_decimal_points",
+      "type": "written",
+      "difficulty": 2,
+      "stem": "Explain why you must line up decimal points when adding 0.5 and 0.25.",
+      "hints": [
+        "Place values must align."
+      ],
+      "explanation": "Lining up decimal points ensures tenths are added to tenths and hundredths to hundredths. If not aligned, you might add tenths to hundredths incorrectly.",
+      "rubric": {
+        "criteria": [
+          {
+            "description": "States place values must align.",
+            "marks": 1
+          },
+          {
+            "description": "Mentions adding tenths to tenths.",
+            "marks": 1
+          }
+        ]
+      },
+      "misconception": "Thinking alignment doesn't matter.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "add_decimals_thousandths",
+      "type": "written",
+      "difficulty": 2,
+      "stem": "A pupil calculates 0.7 + 0.35 and gets 0.42. What mistake did they make?",
+      "hints": [
+        "They aligned the 7 with the 5."
+      ],
+      "explanation": "The pupil misaligned the decimals. They should write 0.70 + 0.35 = 1.05.",
+      "rubric": {
+        "criteria": [
+          {
+            "description": "Identifies misalignment.",
+            "marks": 1
+          },
+          {
+            "description": "Correct answer 1.05.",
+            "marks": 1
+          }
+        ]
+      },
+      "misconception": "Aligning last digits.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "add_decimals_thousandths",
+      "type": "numeric",
+      "difficulty": 3,
+      "stem": "What is 1.5 + 2.45?",
+      "answer": 3.95,
+      "check": "1.50+2.45",
+      "hints": [
+        "1.50 + 2.45."
+      ],
+      "explanation": "3.95.",
+      "misconception": "Saying 3.50.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "subtract_decimals_thousandths",
+      "type": "numeric",
+      "difficulty": 3,
+      "stem": "What is 4.2 - 1.75?",
+      "answer": 2.45,
+      "check": "4.20-1.75",
+      "hints": [
+        "4.20 - 1.75."
+      ],
+      "explanation": "2.45.",
+      "misconception": "Saying 3.55.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "add_decimals_thousandths",
+      "type": "numeric",
+      "difficulty": 3,
+      "stem": "What is 12.5 + 3.25?",
+      "answer": 15.75,
+      "check": "12.50+3.25",
+      "hints": [
+        "12.50 + 3.25."
+      ],
+      "explanation": "15.75.",
+      "misconception": "Saying 15.05.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "subtract_decimals_thousandths",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "A pupil calculates 5.6 - 2.35 and gets 3.25. Explain their mistake.",
+      "hints": [
+        "They likely aligned the 6 with the 5."
+      ],
+      "explanation": "The pupil misaligned the decimals. They should have written 5.60 - 2.35 = 3.25.",
+      "uncertain": [
+        "Question was already correct. Will change to: A pupil calculates 5.2 - 1.85 and gets 3.45. Explain their mistake. Correct is 3.35."
+      ]
+    },
+  {
+    "skill_tag": "add_decimals_thousandths",
+    "type": "written",
+    "difficulty": 3,
+    "stem": "Explain the steps to add 0.645 and 0.39.",
+    "hints": [
+      "Align decimal points, pad with zeros."
+    ],
+    "explanation": "Write 0.39 as 0.390. Then 0.645 + 0.390 = 1.035.",
+    "rubric": {
+      "criteria": [
+        {
+          "description": "Pads with zero.",
+          "marks": 1
+        },
+        {
+          "description": "Adds to get 1.035.",
+          "marks": 1
+        }
+      ]
+    },
+    "misconception": "Not padding with zero.",
+    "uncertain": []
+  },
+  {
+    "skill_tag": "add_decimals_thousandths",
+    "type": "numeric",
+    "difficulty": 4,
+    "stem": "What is 10.45 + 2.375?",
+    "answer": 12.825,
+    "check": "10.450+2.375",
+    "hints": [
+      "10.450 + 2.375."
+    ],
+    "explanation": "12.825.",
+    "misconception": "Saying 12.725.",
+    "uncertain": []
+  }
+]
+}

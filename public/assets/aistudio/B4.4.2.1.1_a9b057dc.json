@@ -1,0 +1,256 @@
+{
+  "indicator": {
+    "code": "B4.4.2.1.1",
+    "subject": "Science",
+    "level": "Basic 4",
+    "strand": "FORCES AND ENERGY",
+    "sub_strand": "Electricity and Electronics",
+    "content_standard": "B4.4.2.1 Demonstrate knowledge of generation of electricity, its transmission and transformation into other forms",
+    "objective": "Identify the uses of electricity",
+    "source_page": 32
+  },
+  "spec": {
+    "skills": [
+      {"tag": "identify_electric_appliances", "description": "Recognise common appliances that use electricity (e.g. bulb, television, iron, fan, phone charger).", "minQuestions": 3},
+      {"tag": "state_uses_electricity", "description": "State simple uses of electricity: lighting, heating, cooling, entertainment, communication.", "minQuestions": 4},
+      {"tag": "match_appliance_use", "description": "Match an appliance to its main use (e.g. iron → pressing clothes; bulb → light).", "minQuestions": 3},
+      {"tag": "recognise_electricity_energy", "description": "Recognise electricity as a form of energy that makes appliances work.", "minQuestions": 3},
+      {"tag": "examples_home_school", "description": "Give examples of electricity use at home and at school.", "minQuestions": 3}
+    ],
+    "difficultyPlan": "20 questions total — Difficulty 1: 5; Difficulty 2: 7; Difficulty 3: 5; Difficulty 4: 3.",
+    "misconceptions": [
+      "Electricity is only for lighting.",
+      "A television works without electricity.",
+      "Electricity is not a form of energy.",
+      "Only bulbs use electricity.",
+      "Electricity is only used in cities."
+    ],
+    "needsTeacherAssessment": false
+  },
+  "questions": [
+    {
+      "skill_tag": "identify_electric_appliances",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which of these uses electricity to work?",
+      "options": ["Broom", "Television", "Bucket", "Chair"],
+      "answer": 1,
+      "hints": ["Which one has a plug or needs power?", "You watch pictures on it."],
+      "explanation": "A television uses electricity to work. Brooms, buckets and chairs do not need electricity.",
+      "misconception": "Only bulbs use electricity.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "state_uses_electricity",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which of these is a use of electricity?",
+      "options": ["Making light", "Growing trees", "Making rain", "Moving stones"],
+      "answer": 0,
+      "hints": ["What happens when you switch on a bulb?", "Electricity can produce light."],
+      "explanation": "Electricity is used to make light. Other uses include heating, cooling, entertainment and communication.",
+      "misconception": "Electricity is only for lighting.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "match_appliance_use",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What is an electric iron used for?",
+      "options": ["Cooking food", "Pressing clothes", "Washing plates", "Sweeping the floor"],
+      "answer": 1,
+      "hints": ["It makes clothes smooth.", "It uses heat."],
+      "explanation": "An electric iron is used for pressing clothes to make them smooth.",
+      "misconception": "Electric iron is used for cooking.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "recognise_electricity_energy",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Electricity is a form of what?",
+      "options": ["Water", "Energy", "Soil", "Air"],
+      "answer": 1,
+      "hints": ["It makes things work.", "It can be changed into light and heat."],
+      "explanation": "Electricity is a form of energy. It can be changed into light, heat, sound and movement.",
+      "misconception": "Electricity is not a form of energy.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "examples_home_school",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which of these uses electricity at school?",
+      "options": ["A chalkboard", "A classroom bulb", "A wooden desk", "A pupil's book"],
+      "answer": 1,
+      "hints": ["What gives light in the classroom?", "It has a switch."],
+      "explanation": "A classroom bulb uses electricity to give light. Chalkboards, desks and books do not use electricity.",
+      "misconception": "Electricity is only used at home.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_electric_appliances",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which of these appliances does NOT use electricity?",
+      "options": ["Electric fan", "Electric kettle", "Wooden spoon", "Phone charger"],
+      "answer": 2,
+      "hints": ["Which one is made of wood and has no plug?", "A wooden spoon is used for cooking."],
+      "explanation": "A wooden spoon does not use electricity. Fans, kettles and phone chargers need electricity.",
+      "misconception": "Only bulbs use electricity.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "state_uses_electricity",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Ama uses an electric fan in her room. What is the fan used for?",
+      "options": ["To make the room dark", "To cool the room", "To cook food", "To wash clothes"],
+      "answer": 1,
+      "hints": ["What does a fan do to the air?", "It makes you feel cool."],
+      "explanation": "An electric fan is used to cool the room by moving air around.",
+      "misconception": "Fans are used for cooking.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "match_appliance_use",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which appliance is used for communication?",
+      "options": ["Electric bulb", "Mobile phone", "Electric iron", "Electric fan"],
+      "answer": 1,
+      "hints": ["You can call and send messages with it.", "It uses electricity and has a screen."],
+      "explanation": "A mobile phone is used for communication. It uses electricity to work.",
+      "misconception": "Mobile phones do not use electricity.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "examples_home_school",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which of these is an example of electricity use at home?",
+      "options": ["Using a chalkboard", "Using an electric kettle to boil water", "Sweeping with a broom", "Writing with a pencil"],
+      "answer": 1,
+      "hints": ["Which activity needs a plug or power?", "Boiling water with electricity."],
+      "explanation": "Using an electric kettle to boil water is an example of electricity use at home.",
+      "misconception": "Electricity is only used at school.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "recognise_electricity_energy",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Why does a television stop working when there is no electricity?",
+      "options": ["Because it needs electricity to work", "Because it is broken", "Because it is old", "Because it does not like darkness"],
+      "answer": 0,
+      "hints": ["Televisions need power.", "Without electricity, appliances cannot work."],
+      "explanation": "A television needs electricity to work. When there is no electricity, it cannot function.",
+      "misconception": "A television can work without electricity.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_electric_appliances",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Name two appliances in your home that use electricity.",
+      "answer": ["television and fan", "bulb and iron", "phone charger and kettle", "fridge and radio"],
+      "hints": ["Think of things that need to be plugged in.", "One gives light; one keeps food cold."],
+      "explanation": "Common appliances that use electricity include televisions, fans, bulbs, irons, kettles, fridges and phone chargers.",
+      "misconception": "Only bulbs use electricity.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "state_uses_electricity",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "State two uses of electricity.",
+      "answer": ["lighting and heating", "cooking and cooling", "entertainment and communication", "lighting and cooling"],
+      "hints": ["What does a bulb do?", "What does a fan do?"],
+      "explanation": "Electricity is used for lighting, heating, cooling, entertainment, communication and many other purposes.",
+      "misconception": "Electricity is only for lighting.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "match_appliance_use",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "Match the appliance to its use: which pair is correct?",
+      "options": ["Bulb → pressing clothes", "Iron → giving light", "Fan → cooling the room", "Kettle → washing clothes"],
+      "answer": 2,
+      "hints": ["Which appliance moves air?", "A fan makes you feel cool."],
+      "explanation": "A fan is used for cooling the room by moving air. The other pairs are mismatched.",
+      "misconception": "Bulbs are used for pressing clothes.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "examples_home_school",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Give one example of how electricity is used at school and one example of how it is used at home.",
+      "answer": ["at school: lights in the classroom; at home: watching television", "at school: bulb; at home: iron", "at school: computer; at home: fan"],
+      "hints": ["Think of a light at school.", "Think of an appliance at home."],
+      "explanation": "At school, electricity is used for lighting classrooms, powering computers, etc. At home, it is used for lighting, cooking, ironing, entertainment, etc.",
+      "misconception": "Electricity is only used in one place.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "recognise_electricity_energy",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "Which statement best describes electricity?",
+      "options": ["It is a type of food", "It is a form of energy that makes appliances work", "It is a liquid", "It is a gas"],
+      "answer": 1,
+      "hints": ["What does electricity do to a bulb?", "It is a form of energy."],
+      "explanation": "Electricity is a form of energy. It makes appliances like bulbs, fans and televisions work.",
+      "misconception": "Electricity is not a form of energy.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "state_uses_electricity",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "Which of these is NOT a use of electricity?",
+      "options": ["Heating water", "Cooling a room", "Making a plant grow", "Giving light"],
+      "answer": 2,
+      "hints": ["Plants grow using sunlight, not electricity.", "Which one is a natural process?"],
+      "explanation": "Making a plant grow is not a use of electricity. Plants grow using sunlight and water. Electricity is used for heating, cooling and lighting.",
+      "misconception": "Electricity is used for everything.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_electric_appliances",
+      "type": "mcq",
+      "difficulty": 4,
+      "stem": "A pupil lists four items: a torch, a book, a radio, a pencil. Which two items use electricity?",
+      "options": ["Torch and book", "Radio and pencil", "Torch and radio", "Book and pencil"],
+      "answer": 2,
+      "hints": ["A torch uses a battery.", "A radio needs power."],
+      "explanation": "A torch and a radio use electricity. A book and a pencil do not.",
+      "misconception": "Only large appliances use electricity.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "examples_home_school",
+      "type": "mcq",
+      "difficulty": 4,
+      "stem": "A family wants to cook food faster using electricity. Which appliance should they use?",
+      "options": ["Electric fan", "Electric iron", "Electric kettle", "Electric cooker"],
+      "answer": 3,
+      "hints": ["Which appliance is made for cooking?", "A kettle boils water, but a cooker cooks food."],
+      "explanation": "An electric cooker is designed for cooking food using electricity. Fans cool, irons press clothes, and kettles boil water.",
+      "misconception": "Any electric appliance can cook food.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "recognise_electricity_energy",
+      "type": "short_answer",
+      "difficulty": 4,
+      "stem": "Explain why electricity is important in our homes.",
+      "answer": ["it is used for lighting, cooking, cooling and entertainment", "it powers appliances we use every day", "it helps us do many things like lighting, cooking and ironing"],
+      "hints": ["Think of what you use at home that needs electricity.", "What would happen if there was no electricity?"],
+      "explanation": "Electricity is important because it powers many appliances we use daily for lighting, cooking, cooling, entertainment, communication and more.",
+      "misconception": "Electricity is not important.",
+      "uncertain": []
+    }
+  ]
+}

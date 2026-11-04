@@ -1,0 +1,278 @@
+{
+  "indicator": {
+    "code": "B4.1.2.1.1",
+    "subject": "Mathematics",
+    "level": "Basic 4",
+    "strand": "Number",
+    "sub_strand": "Number Operations",
+    "content_standard": "B4.1.2.1 Recall basic multiplication fact up to 12 × 12",
+    "objective": "Determine basic multiplication facts up to 12 × 12",
+    "source_page": 35
+  },
+  "spec": {
+    "skills": [
+      {"tag": "recall_facts", "description": "Recall multiplication facts up to 12 x 12.", "minQuestions": 2},
+      {"tag": "model_arrays", "description": "Model multiplication sentences using arrays (intersections of lines).", "minQuestions": 2},
+      {"tag": "use_chart", "description": "Use a multiplication chart to find products.", "minQuestions": 2}
+    ],
+    "difficultyPlan": "20 questions: 5 at difficulty 1, 7 at difficulty 2, 5 at difficulty 3, 3 at difficulty 4.",
+    "misconceptions": [
+      "Confusing 7x8 and 8x7.",
+      "Forgetting the 12s facts.",
+      "Confusing array intersections with lines."
+    ],
+    "needsTeacherAssessment": false
+  },
+  "questions": [
+    {
+      "skill_tag": "recall_facts",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What is 5 x 6?",
+      "options": ["25", "30", "35", "11"],
+      "answer": 1,
+      "hints": ["Count by 5s six times.", "5, 10, 15, 20, 25, 30."],
+      "explanation": "5 x 6 = 30.",
+      "misconception": "Adding 5 + 6 to get 11.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "model_arrays",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Kofi arranges straws to form an array. He puts 3 straws vertically and 4 straws horizontally across them. How many intersections are there?",
+      "options": ["7", "12", "9", "16"],
+      "answer": 1,
+      "hints": ["Count the points where they cross.", "3 rows of 4 intersections."],
+      "explanation": "The intersections represent the product. 3 x 4 = 12.",
+      "misconception": "Adding 3 + 4 to get 7.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "recall_facts",
+      "type": "numeric",
+      "difficulty": 1,
+      "stem": "What is 9 x 4?",
+      "answer": 36,
+      "check": "9*4",
+      "hints": ["Think of 9 x 4 as 10 x 4 minus 4.", "40 - 4."],
+      "explanation": "9 x 4 = 36.",
+      "misconception": "Doing 9 + 4 = 13.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "use_chart",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "On a multiplication chart, how do you find the product of 6 x 8?",
+      "options": ["Find 6 in the top row and 8 in the left column; the answer is where they meet.", "Find 6 and 8 and add them.", "Find 6, multiply by 8, then add 2.", "Find 8, divide by 6."],
+      "answer": 0,
+      "hints": ["A chart uses rows and columns.", "Look at the intersection."],
+      "explanation": "You locate one factor on the horizontal axis and the other on the vertical axis. The cell where they intersect is the product.",
+      "misconception": "Adding the numbers together.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "model_arrays",
+      "type": "numeric",
+      "difficulty": 1,
+      "stem": "Draw an array with 2 vertical lines and 5 horizontal lines. How many intersections are there?",
+      "answer": 10,
+      "check": "2*5",
+      "hints": ["Multiply the number of vertical lines by the horizontal lines.", "2 x 5."],
+      "explanation": "2 x 5 = 10 intersections.",
+      "misconception": "Counting the total lines drawn (7).",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "recall_facts",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "What is 7 x 8?",
+      "answer": 56,
+      "check": "7*8",
+      "hints": ["Think about the 7 times table.", "7, 14, 21, 28, 35, 42, 49, 56."],
+      "explanation": "7 x 8 = 56.",
+      "misconception": "Confusing it with 6 x 9 = 54.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "recall_facts",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which of these is equal to 11 x 12?",
+      "options": ["121", "132", "144", "110"],
+      "answer": 1,
+      "hints": ["11 x 10 = 110.", "11 x 2 = 22.", "110 + 22."],
+      "explanation": "11 x 12 = 132.",
+      "misconception": "Calculating 11 x 11 = 121.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "model_arrays",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which multiplication sentence does an array of 4 rows and 6 columns represent?",
+      "options": ["4 + 6", "4 x 6", "6 - 4", "6 ÷ 4"],
+      "answer": 1,
+      "hints": ["Rows times columns equals total.", "4 groups of 6."],
+      "explanation": "A 4 by 6 array represents 4 x 6 = 24.",
+      "misconception": "Writing 4 + 6.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "use_chart",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "Using a multiplication chart, find the number that is in the 9th row and 6th column. What is it?",
+      "answer": 54,
+      "check": "9*6",
+      "hints": ["This is the same as 9 x 6.", "Think of 10 x 6 minus 6."],
+      "explanation": "The 9th row and 6th column intersect at 54.",
+      "misconception": "Reading the 9th column and 6th row incorrectly.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "use_chart",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "If you look at a multiplication chart and find the number 42, what are the two factors that meet there?",
+      "answer": 6,
+      "check": "42/7",
+      "hints": ["What times what equals 42?", "6 x 7 = 42."],
+      "explanation": "The number 42 is at the intersection of the 6 and 7 rows/columns.",
+      "misconception": "Thinking only 1 and 42 can make 42 on the chart.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "model_arrays",
+      "type": "written",
+      "difficulty": 2,
+      "stem": "Explain how you can use an array of straws to find the answer to 8 x 3.",
+      "hints": ["How many vertical straws?", "How many horizontal straws?", "What do you count?"],
+      "explanation": "You place 8 straws vertically and 3 straws horizontally across them. Then you count the number of intersections, which will be 24.",
+      "rubric": {
+        "criteria": [
+          {"description": "Mentions 8 vertical and 3 horizontal straws.", "marks": 1},
+          {"description": "Explains counting the intersections to get 24.", "marks": 1}
+        ]
+      },
+      "misconception": "Thinking the total number of straws is the answer (11).",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "recall_facts",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "What is 10 x 10?",
+      "answer": 100,
+      "check": "10*10",
+      "hints": ["10 groups of 10.", "Add a zero to 10."],
+      "explanation": "10 x 10 = 100.",
+      "misconception": "Writing 20.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "recall_facts",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Ama says 6 x 4 = 24. Is she correct?",
+      "answer": ["yes"],
+      "hints": ["Count by 6s four times.", "6, 12, 18, 24."],
+      "explanation": "Yes, 6 x 4 = 24.",
+      "misconception": "Thinking 6 x 4 = 20.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "model_arrays",
+      "type": "numeric",
+      "difficulty": 3,
+      "stem": "Kwame has 20 bottle tops. He arranges them into a rectangular array with 4 rows. How many tops are in each row?",
+      "answer": 5,
+      "check": "20/4",
+      "hints": ["4 x ? = 20.", "What number multiplies by 4 to make 20?"],
+      "explanation": "20 divided into 4 rows means 5 per row. 4 x 5 = 20.",
+      "misconception": "Adding 4 + 20 = 24.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "use_chart",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "Look at a multiplication chart. The products in the 9 times column (9, 18, 27, 36...) follow a pattern. What is the sum of the digits in each product?",
+      "options": ["9", "10", "18", "It changes"],
+      "answer": 0,
+      "hints": ["9 = 9", "1 + 8 = 9", "2 + 7 = 9", "3 + 6 = 9."],
+      "explanation": "The sum of the digits in any multiple of 9 is always 9.",
+      "misconception": "Thinking the sum changes randomly.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "recall_facts",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "What is the missing number? 7 x ___ = 63",
+      "options": ["8", "9", "7", "10"],
+      "answer": 1,
+      "hints": ["Think about the 7 times table.", "7 x 10 = 70, so 7 x 9 = 63."],
+      "explanation": "7 x 9 = 63. The missing number is 9.",
+      "misconception": "Subtracting 7 from 63 to get 56.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "use_chart",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "If you draw a diagonal line from the top-left to the bottom-right of a multiplication chart, what do you notice about the numbers on the line?",
+      "answer": ["they are square numbers", "they multiply the same number together"],
+      "hints": ["Look at the top-left corner (1x1).", "Then 2x2, 3x3, etc."],
+      "explanation": "The numbers on the diagonal are square numbers (1, 4, 9, 16, 25...) because you are multiplying a number by itself.",
+      "misconception": "Thinking the diagonal shows odd numbers only.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "model_arrays",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "Explain how an array of 12 counters can be arranged in more than one way.",
+      "hints": ["Can you make a 3x4 array?", "Can you make a 2x6 array?"],
+      "explanation": "You can arrange 12 counters into a 3x4 array, a 2x6 array, or a 1x12 array. Each arrangement shows a different pair of factors for 12.",
+      "rubric": {
+        "criteria": [
+          {"description": "Gives at least two correct arrangements (e.g., 3x4 and 2x6).", "marks": 1},
+          {"description": "Explains that each arrangement shows factors.", "marks": 1}
+        ]
+      },
+      "misconception": "Thinking there is only one way to arrange 12 counters.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "recall_facts",
+      "type": "numeric",
+      "difficulty": 4,
+      "stem": "What is 12 x 12?",
+      "answer": 144,
+      "check": "12*12",
+      "hints": ["12 x 10 = 120.", "12 x 2 = 24.", "120 + 24."],
+      "explanation": "12 x 12 = 144.",
+      "misconception": "Doing 12 x 2 = 24.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "use_chart",
+      "type": "written",
+      "difficulty": 4,
+      "stem": "Explain why the multiplication chart is symmetrical along its diagonal.",
+      "hints": ["Look at 4x5 and 5x4.", "Do they give the same answer?"],
+      "explanation": "The chart is symmetrical because multiplication is commutative. 4 x 5 is the same as 5 x 4, so the numbers mirror each other across the diagonal.",
+      "rubric": {
+        "criteria": [
+          {"description": "Mentions that multiplication can be done in any order.", "marks": 1},
+          {"description": "Uses the word commutative or gives a correct example.", "marks": 1}
+        ]
+      },
+      "misconception": "Thinking the chart is symmetrical by accident.",
+      "uncertain": []
+    }
+  ]
+}

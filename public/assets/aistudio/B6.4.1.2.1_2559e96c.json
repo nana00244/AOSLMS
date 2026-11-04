@@ -1,0 +1,274 @@
+{
+  "indicator": {
+    "code": "B6.4.1.2.1",
+    "subject": "Science",
+    "level": "Basic 6",
+    "strand": "FORCES AND ENERGY",
+    "sub_strand": "Sources and Forms of Energy",
+    "content_standard": "B6.4.1.2 Show understanding of the concept of heat energy in terms of its importance, effects, sources and transfer from one medium to another",
+    "objective": "Measure the temperature of a body using a thermometer",
+    "source_page": 62
+  },
+  "spec": {
+    "skills": [
+      {"tag": "identify_thermometer", "description": "Recognise the thermometer as the instrument for measuring temperature.", "minQuestions": 3},
+      {"tag": "types_thermometers", "description": "Identify clinical and laboratory thermometers and their uses.", "minQuestions": 3},
+      {"tag": "read_thermometer", "description": "Read a thermometer scale and state the temperature in °C.", "minQuestions": 4},
+      {"tag": "record_temperature", "description": "Record temperature readings correctly with units.", "minQuestions": 3},
+      {"tag": "use_thermometer", "description": "Describe how to use a thermometer safely (clean, place correctly, wait, read).", "minQuestions": 4},
+      {"tag": "importance_measurement", "description": "Explain why measuring temperature is important (e.g. to check for fever, to monitor health).", "minQuestions": 3}
+    ],
+    "difficultyPlan": "20 questions total — Difficulty 1: 5; Difficulty 2: 7; Difficulty 3: 5; Difficulty 4: 3.",
+    "misconceptions": [
+      "Thermometers measure heat directly, not temperature.",
+      "Normal body temperature is 100°C.",
+      "Clinical and laboratory thermometers can be used interchangeably.",
+      "Thermometers can be read immediately after placing.",
+      "Temperature is measured in kilograms.",
+      "Thermometers work without a scale."
+    ],
+    "needsTeacherAssessment": true
+  },
+  "questions": [
+    {
+      "skill_tag": "identify_thermometer",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which instrument is used to measure temperature?",
+      "options": ["Thermometer", "Ruler", "Weighing scale", "Clock"],
+      "answer": 0,
+      "hints": ["Doctors use it to check for fever.", "It measures how hot or cold something is."],
+      "explanation": "A thermometer is used to measure temperature.",
+      "misconception": "Temperature is measured with a ruler.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_thermometer",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Ama wants to check if her body is hot. Which instrument should she use?",
+      "options": ["A thermometer", "A ruler", "A mirror", "A cup"],
+      "answer": 0,
+      "hints": ["It measures body temperature.", "It has a scale with degrees."],
+      "explanation": "A thermometer is used to measure body temperature.",
+      "misconception": "A mirror can measure temperature.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_thermometer",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "What instrument is used to measure temperature?",
+      "answer": ["thermometer", "a thermometer"],
+      "hints": ["Doctors use it.", "It measures hotness and coldness."],
+      "explanation": "A thermometer is used to measure temperature.",
+      "misconception": "A scale measures temperature.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "types_thermometers",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which thermometer is used to measure human body temperature?",
+      "options": ["Clinical thermometer", "Laboratory thermometer", "Barometer", "Hygrometer"],
+      "answer": 0,
+      "hints": ["Doctors and nurses use it.", "It is placed under the tongue or armpit."],
+      "explanation": "A clinical thermometer is used to measure body temperature.",
+      "misconception": "Clinical thermometers measure the temperature of liquids in the lab.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "types_thermometers",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which thermometer is used in a science laboratory to measure the temperature of warm water?",
+      "options": ["Laboratory thermometer", "Clinical thermometer", "Barometer", "Hygrometer"],
+      "answer": 0,
+      "hints": ["It is used for experiments.", "It measures liquids like water."],
+      "explanation": "A laboratory thermometer is used to measure the temperature of liquids in a laboratory.",
+      "misconception": "Clinical thermometers are used for laboratory liquids.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "types_thermometers",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Name the type of thermometer used to measure body temperature.",
+      "answer": ["clinical thermometer", "a clinical thermometer"],
+      "hints": ["Doctors use it.", "It is for body temperature."],
+      "explanation": "A clinical thermometer is used to measure body temperature.",
+      "misconception": "A laboratory thermometer is used for body temperature.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "read_thermometer",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What is the normal body temperature of a healthy person?",
+      "options": ["37°C", "100°C", "0°C", "50°C"],
+      "answer": 0,
+      "hints": ["It is close to 37 degrees Celsius.", "It is not boiling."],
+      "explanation": "The normal body temperature of a healthy person is about 37°C.",
+      "misconception": "Normal body temperature is 100°C.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "read_thermometer",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "A clinical thermometer shows a reading of 39°C. What does this mean?",
+      "options": ["The person has a fever", "The person is healthy", "The person is very cold", "The person is sleeping"],
+      "answer": 0,
+      "hints": ["Normal body temperature is about 37°C.", "39°C is higher than normal."],
+      "explanation": "A reading of 39°C is higher than normal body temperature (37°C), showing a fever.",
+      "misconception": "39°C is a normal body temperature.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "read_thermometer",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "At what temperature does water boil?",
+      "options": ["100°C", "37°C", "0°C", "50°C"],
+      "answer": 0,
+      "hints": ["It is much higher than body temperature.", "Water boils at 100 degrees Celsius."],
+      "explanation": "Water boils at 100°C.",
+      "misconception": "Water boils at 37°C.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "read_thermometer",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "A thermometer shows a reading of 37°C. What does this temperature represent?",
+      "answer": ["normal body temperature", "the normal body temperature of a healthy person", "healthy body temperature"],
+      "hints": ["It is the temperature of a healthy person.", "Doctors check for this."],
+      "explanation": "37°C represents the normal body temperature of a healthy person.",
+      "misconception": "37°C means the person has a fever.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "record_temperature",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which is the correct way to record a temperature reading?",
+      "options": ["37°C", "37 kg", "37 cm", "37 litres"],
+      "answer": 0,
+      "hints": ["Temperature is measured in degrees Celsius.", "The unit is °C."],
+      "explanation": "Temperature is recorded in degrees Celsius (°C). So 37°C is correct.",
+      "misconception": "Temperature is measured in kilograms.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "record_temperature",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Write the temperature reading 'forty degrees Celsius' correctly with its unit.",
+      "answer": ["40°c", "40 °c", "40 degrees celsius", "40c"],
+      "hints": ["Use the number 40.", "Add the unit °C."],
+      "explanation": "Forty degrees Celsius is written as 40°C.",
+      "misconception": "Temperature has no unit.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "record_temperature",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "A learner measures the temperature of warm water and gets 45 degrees Celsius. Write this reading correctly with its unit.",
+      "answer": ["45°c", "45 °c", "45 degrees celsius", "45c"],
+      "hints": ["Use the number 45.", "Add the degree Celsius symbol."],
+      "explanation": "The reading is written as 45°C.",
+      "misconception": "Temperature is written without units.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "use_thermometer",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Before using a clinical thermometer, what should you do first?",
+      "options": ["Clean it", "Heat it in fire", "Put it in water", "Break it"],
+      "answer": 0,
+      "hints": ["It must be clean before use.", "Hygiene is important."],
+      "explanation": "A clinical thermometer should be cleaned before use to keep it safe and hygienic.",
+      "misconception": "Thermometers do not need cleaning.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "use_thermometer",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "How long should a clinical thermometer be left in place before reading the temperature?",
+      "options": ["A few minutes", "A few seconds", "One hour", "One day"],
+      "answer": 0,
+      "hints": ["It takes a short time for the reading to settle.", "Usually a few minutes."],
+      "explanation": "A clinical thermometer should be left in place for a few minutes before reading the temperature.",
+      "misconception": "Thermometers can be read immediately.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "use_thermometer",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Describe one safety step when using a clinical thermometer.",
+      "answer": ["clean it before and after use", "do not heat it in fire", "handle it carefully so it does not break", "wash it with disinfectant"],
+      "hints": ["Think about hygiene.", "Thermometers can break."],
+      "explanation": "One safety step is to clean the thermometer before and after use. It should also be handled carefully to avoid breaking.",
+      "misconception": "Thermometers can be heated in fire.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "use_thermometer",
+      "type": "practical",
+      "difficulty": 4,
+      "stem": "In groups, use a clinical thermometer (or a model) to measure body temperature and a laboratory thermometer to measure the temperature of warm water. Record your readings. Describe what you did and what you found.",
+      "rubric": {
+        "criteria": [
+          {"description": "Used the clinical thermometer correctly to measure body temperature", "marks": 2},
+          {"description": "Used the laboratory thermometer correctly to measure warm water", "marks": 2},
+          {"description": "Recorded both readings with correct units (°C)", "marks": 1},
+          {"description": "Followed safety steps (cleaning, careful handling)", "marks": 1}
+        ]
+      },
+      "answer": "",
+      "hints": ["Clean the thermometer first.", "Wait a few minutes before reading.", "Write the numbers with °C."],
+      "explanation": "This is a practical task. Your teacher will mark it using the rubric.",
+      "misconception": "Clinical and laboratory thermometers can be used interchangeably.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "importance_measurement",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Why is it important to measure body temperature when someone is sick?",
+      "options": ["To check for fever", "To check their height", "To check their weight", "To check their age"],
+      "answer": 0,
+      "hints": ["A high temperature can be a sign of sickness.", "Doctors check this first."],
+      "explanation": "Measuring body temperature helps check for fever, which can be a sign of illness.",
+      "misconception": "Body temperature is not important.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "importance_measurement",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Give one reason why measuring temperature is important.",
+      "answer": ["to check for fever", "to know if water is hot enough", "to know how hot or cold something is", "to monitor health"],
+      "hints": ["Think about sickness.", "Think about cooking."],
+      "explanation": "Measuring temperature is important to check for fever, to know if water is safe to boil, and to monitor health.",
+      "misconception": "Temperature measurement has no use.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "importance_measurement",
+      "type": "mcq",
+      "difficulty": 4,
+      "stem": "A nurse measures a patient's temperature and finds it is 40°C. What does this indicate?",
+      "options": ["The patient has a high fever and needs attention", "The patient is healthy", "The patient is very cold", "The patient is sleeping"],
+      "answer": 0,
+      "hints": ["Normal is 37°C.", "40°C is much higher."],
+      "explanation": "A temperature of 40°C is much higher than normal body temperature (37°C), indicating a high fever that needs medical attention.",
+      "misconception": "40°C is normal body temperature.",
+      "uncertain": []
+    }
+  ]
+}

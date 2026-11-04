@@ -1,0 +1,284 @@
+{
+  "indicator": {
+    "code": "B5.4.1.1.1",
+    "subject": "Mathematics",
+    "level": "Basic 5",
+    "strand": "Data",
+    "sub_strand": "Data Collection, Organisation, Presentation, Interpretation and Analysis",
+    "content_standard": "B5.4.1.1 Differentiate between first-hand and second-hand data",
+    "objective": "Explain the difference between first-hand and second-hand data.",
+    "source_page": 128
+  },
+  "spec": {
+    "skills": [
+      {"tag": "define_first_hand", "description": "Define first-hand data (collected by you).", "minQuestions": 2},
+      {"tag": "define_second_hand", "description": "Define second-hand data (collected by someone else).", "minQuestions": 2},
+      {"tag": "classify_data_types", "description": "Classify given examples as first-hand or second-hand.", "minQuestions": 2}
+    ],
+    "difficultyPlan": "20 questions: 5 at difficulty 1, 7 at difficulty 2, 5 at difficulty 3, 3 at difficulty 4.",
+    "misconceptions": [
+      "Thinking all data from the internet is first-hand.",
+      "Confusing “second-hand” with “not reliable”.",
+      "Not recognizing that the same data can be first-hand for one person and second-hand for another."
+    ],
+    "needsTeacherAssessment": false
+  },
+  "questions": [
+    {
+      "skill_tag": "define_first_hand",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What is first-hand data?",
+      "options": ["Data collected by someone else", "Data you collect yourself", "Data from a textbook", "Data from the internet"],
+      "answer": 1,
+      "hints": ["First-hand means you collected it."],
+      "explanation": "First-hand data is data you collect yourself.",
+      "misconception": "Thinking it comes from a book.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "define_second_hand",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What is second-hand data?",
+      "options": ["Data you collect yourself", "Data collected by someone else", "Data you made up", "Data from a calculator"],
+      "answer": 1,
+      "hints": ["Second-hand means someone else collected it."],
+      "explanation": "Second-hand data is collected by someone else.",
+      "misconception": "Thinking it's fake data.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "classify_data_types",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "A pupil counts the number of cars passing by the school. Is this first-hand or second-hand data?",
+      "options": ["First-hand", "Second-hand"],
+      "answer": 0,
+      "hints": ["The pupil collected it themselves."],
+      "explanation": "First-hand data.",
+      "misconception": "Saying second-hand.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "classify_data_types",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "A pupil reads rainfall data from a newspaper. Is this first-hand or second-hand data?",
+      "options": ["First-hand", "Second-hand"],
+      "answer": 1,
+      "hints": ["Someone else collected it."],
+      "explanation": "Second-hand data.",
+      "misconception": "Saying first-hand.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "define_first_hand",
+      "type": "short_answer",
+      "difficulty": 1,
+      "stem": "Explain in one sentence what first-hand data is.",
+      "answer": ["data you collect yourself", "data collected by you"],
+      "hints": ["Think of 'first' meaning you."],
+      "explanation": "First-hand data is data you collect yourself.",
+      "misconception": "Saying data from the internet.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "classify_data_types",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "A class measures the height of each pupil. For that class, is this first-hand or second-hand data?",
+      "options": ["First-hand", "Second-hand"],
+      "answer": 0,
+      "hints": ["They collected it themselves."],
+      "explanation": "First-hand data for that class.",
+      "misconception": "Saying second-hand.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "classify_data_types",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Another class looks at the height data collected by the first class. For the second class, is this first-hand or second-hand data?",
+      "options": ["First-hand", "Second-hand"],
+      "answer": 1,
+      "hints": ["They did not collect it themselves."],
+      "explanation": "Second-hand data for the second class.",
+      "misconception": "Saying first-hand.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "define_second_hand",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Explain in one sentence what second-hand data is.",
+      "answer": ["data collected by someone else", "data you did not collect yourself"],
+      "hints": ["Think of 'second' meaning someone else."],
+      "explanation": "Second-hand data is collected by someone else.",
+      "misconception": "Saying it's unreliable data.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "classify_data_types",
+      "type": "written",
+      "difficulty": 2,
+      "stem": "Give one example of first-hand data and one example of second-hand data.",
+      "hints": ["First-hand: you count something. Second-hand: from a book."],
+      "explanation": "First-hand: counting the number of pupils in class. Second-hand: reading the population of Ghana in a book.",
+      "rubric": {
+        "criteria": [
+          {"description": "Gives one first-hand example.", "marks": 1},
+          {"description": "Gives one second-hand example.", "marks": 1}
+        ]
+      },
+      "misconception": "Giving two first-hand examples.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "define_first_hand",
+      "type": "written",
+      "difficulty": 2,
+      "stem": "Explain why data you collect yourself is called first-hand.",
+      "hints": ["It comes directly from you."],
+      "explanation": "It is called first-hand because it comes directly from your own observation or measurement.",
+      "rubric": {
+        "criteria": [
+          {"description": "Mentions direct collection by you.", "marks": 1}
+        ]
+      },
+      "misconception": "Thinking it means it's the best data.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "classify_data_types",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which of these is second-hand data?",
+      "options": ["Counting the number of chairs in your classroom", "Reading the temperature from a thermometer you placed outside", "Looking up the price of a book on the internet", "Measuring your own height"],
+      "answer": 2,
+      "hints": ["Internet data is collected by someone else."],
+      "explanation": "The price on the internet is second-hand data.",
+      "misconception": "Choosing measuring your own height.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "define_second_hand",
+      "type": "written",
+      "difficulty": 2,
+      "stem": "Explain why data from a newspaper is called second-hand.",
+      "hints": ["Who collected it?"],
+      "explanation": "It is called second-hand because it was collected by the newspaper's reporters or sources, not by you.",
+      "rubric": {
+        "criteria": [
+          {"description": "States someone else collected it.", "marks": 1}
+        ]
+      },
+      "misconception": "Thinking it's because newspapers are old.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "classify_data_types",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "A pupil collects data on favourite colours in their class. Is this first-hand or second-hand data for the teacher? Explain.",
+      "hints": ["Who collected it?"],
+      "explanation": "For the teacher, it is second-hand data because the pupil collected it. For the pupil, it is first-hand.",
+      "rubric": {
+        "criteria": [
+          {"description": "States second-hand for the teacher.", "marks": 1},
+          {"description": "Explains the pupil collected it.", "marks": 1}
+        ]
+      },
+      "misconception": "Thinking it's first-hand for everyone.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "classify_data_types",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "Explain how the same set of data can be first-hand for one person and second-hand for another.",
+      "hints": ["Consider who collected it."],
+      "explanation": "The person who collected the data has first-hand data. Anyone else using that data has second-hand data.",
+      "rubric": {
+        "criteria": [
+          {"description": "Mentions collector has first-hand.", "marks": 1},
+          {"description": "Mentions others have second-hand.", "marks": 1}
+        ]
+      },
+      "misconception": "Thinking data has only one type.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "define_second_hand",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "Is second-hand data always unreliable?",
+      "options": ["Yes, it is always unreliable", "No, it can be reliable if collected properly", "Yes, because it is not first-hand"],
+      "answer": 1,
+      "hints": ["Think about reputable sources."],
+      "explanation": "Second-hand data can be reliable if collected and reported properly.",
+      "misconception": "Thinking second-hand means fake.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "classify_data_types",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "A pupil uses data from a government website about the population of Ghana. What type of data is this for the pupil?",
+      "options": ["First-hand", "Second-hand"],
+      "answer": 1,
+      "hints": ["The pupil did not collect it."],
+      "explanation": "Second-hand data.",
+      "misconception": "Saying first-hand.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "define_first_hand",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "Give two reasons why a researcher might prefer first-hand data.",
+      "hints": ["Control over quality, specific to their needs."],
+      "explanation": "They can control how it is collected, and it can be tailored to their specific questions.",
+      "rubric": {
+        "criteria": [
+          {"description": "Gives one valid reason.", "marks": 1},
+          {"description": "Gives a second valid reason.", "marks": 1}
+        ]
+      },
+      "misconception": "Thinking first-hand is always easier.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "classify_data_types",
+      "type": "written",
+      "difficulty": 4,
+      "stem": "A pupil is doing a project on rainfall in their town. They find a table of rainfall data in a textbook. Is this data first-hand or second-hand for the pupil? Explain how they could make it more like first-hand data.",
+      "hints": ["The pupil did not collect it.", "They could measure rainfall themselves."],
+      "explanation": "It is second-hand data because it was collected by someone else. The pupil could start collecting their own rainfall data using a rain gauge to make it first-hand.",
+      "rubric": {
+        "criteria": [
+          {"description": "States second-hand.", "marks": 1},
+          {"description": "Suggests collecting their own data.", "marks": 1}
+        ]
+      },
+      "misconception": "Thinking it becomes first-hand if they read it.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "define_second_hand",
+      "type": "written",
+      "difficulty": 4,
+      "stem": "Explain why second-hand data is useful even though it is not collected by you.",
+      "hints": ["Access to large data sets, historical data, expert collection."],
+      "explanation": "It can provide access to large amounts of data, historical information, or data collected by experts, which would be difficult or impossible for one person to collect.",
+      "rubric": {
+        "criteria": [
+          {"description": "Gives one valid reason.", "marks": 1},
+          {"description": "Gives another valid reason.", "marks": 1}
+        ]
+      },
+      "misconception": "Thinking second-hand data is useless.",
+      "uncertain": []
+    }
+  ]
+}

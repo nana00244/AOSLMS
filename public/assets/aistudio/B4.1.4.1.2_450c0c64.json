@@ -1,0 +1,271 @@
+{
+  "indicator": {
+    "code": "B4.1.4.1.2",
+    "subject": "Mathematics",
+    "level": "Basic 4",
+    "strand": "Number",
+    "sub_strand": "Decimals",
+    "content_standard": "B4.1.4.1 Develop an understanding of decimals (tenths and hundredths) using concrete and pictorial representations and write decimal fractions as base ten numbers with place value.",
+    "objective": "Round decimals to the nearest tenth",
+    "source_page": 47
+  },
+  "spec": {
+    "skills": [
+      {"tag": "round_nearest_tenth", "description": "Round decimals to the nearest tenth.", "minQuestions": 2},
+      {"tag": "round_nearest_hundredth", "description": "Round decimals to the nearest hundredth (as per exemplar text).", "minQuestions": 2}
+    ],
+    "difficultyPlan": "20 questions: 5 at difficulty 1, 7 at difficulty 2, 5 at difficulty 3, 3 at difficulty 4.",
+    "misconceptions": [
+      "Rounding down when the next digit is 5 or more.",
+      "Forgetting to drop the following digits after rounding."
+    ],
+    "needsTeacherAssessment": false
+  },
+  "questions": [
+    {
+      "skill_tag": "round_nearest_tenth",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What is 4.32 rounded to the nearest tenth?",
+      "options": ["4.3", "4.4", "4.0", "4.2"],
+      "answer": 0,
+      "hints": ["Look at the hundredths digit.", "2 is less than 5, so keep the tenths digit the same."],
+      "explanation": "The hundredths digit is 2. Since 2 < 5, we round down. 4.32 becomes 4.3.",
+      "misconception": "Rounding up to 4.4.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "round_nearest_tenth",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What is 2.68 rounded to the nearest tenth?",
+      "options": ["2.6", "2.7", "2.0", "3.0"],
+      "answer": 1,
+      "hints": ["Look at the hundredths digit.", "8 is 5 or more, so round up."],
+      "explanation": "The hundredths digit is 8. Since 8 >= 5, we add 1 to the tenths digit. 2.68 becomes 2.7.",
+      "misconception": "Rounding down to 2.6.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "round_nearest_tenth",
+      "type": "numeric",
+      "difficulty": 1,
+      "stem": "Round 5.41 to the nearest tenth.",
+      "answer": 5.4,
+      "check": "5.4",
+      "hints": ["The hundredths digit is 1.", "1 < 5, so the tenths digit stays the same."],
+      "explanation": "5.41 rounded to the nearest tenth is 5.4.",
+      "misconception": "Changing the tenths digit to 5.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "round_nearest_tenth",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What is 0.95 rounded to the nearest tenth?",
+      "options": ["0.9", "1.0", "0.10", "0.8"],
+      "answer": 1,
+      "hints": ["The hundredths digit is 5.", "5 or more means round up.", "0.9 + 0.1 = 1.0."],
+      "explanation": "0.95 rounds up to 1.0.",
+      "misconception": "Keeping it at 0.9.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "round_nearest_tenth",
+      "type": "short_answer",
+      "difficulty": 1,
+      "stem": "Round 3.24 to the nearest tenth.",
+      "answer": ["3.2"],
+      "hints": ["Look at the hundredths digit (4).", "4 < 5, so round down."],
+      "explanation": "3.24 rounded is 3.2.",
+      "misconception": "Rounding up to 3.3.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "round_nearest_tenth",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "What is 7.15 rounded to the nearest tenth?",
+      "options": ["7.1", "7.2", "7.0", "7.5"],
+      "answer": 1,
+      "hints": ["The hundredths digit is 5.", "5 means round up."],
+      "explanation": "7.15 rounds up to 7.2.",
+      "misconception": "Rounding down to 7.1.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "round_nearest_tenth",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "Round 12.87 to the nearest tenth.",
+      "answer": 12.9,
+      "check": "12.9",
+      "hints": ["The hundredths digit is 7.", "7 >= 5, so round up."],
+      "explanation": "12.87 rounded to the nearest tenth is 12.9.",
+      "misconception": "Keeping it as 12.8.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "round_nearest_tenth",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "A pupil rounds 6.55 to 6.5. What mistake did they make?",
+      "options": ["They rounded down when the digit was 5 or more.", "They rounded up when they shouldn't.", "They changed the whole number.", "They dropped a zero."],
+      "answer": 0,
+      "hints": ["Look at the hundredths digit (5).", "5 means you must round up."],
+      "explanation": "The pupil should have rounded up to 6.6 because the hundredths digit is 5.",
+      "misconception": "Thinking 5 means round down.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "round_nearest_tenth",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Round 0.36 to the nearest tenth.",
+      "answer": ["0.4"],
+      "hints": ["Look at the hundredths digit (6).", "6 >= 5, so round up."],
+      "explanation": "0.36 rounded is 0.4.",
+      "misconception": "Rounding down to 0.3.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "round_nearest_tenth",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "Round 9.99 to the nearest tenth.",
+      "answer": 10,
+      "check": "10.0",
+      "hints": ["The hundredths digit is 9.", "Round up the tenths (9 becomes 10).", "This carries over to the whole number."],
+      "explanation": "9.99 rounded to the nearest tenth is 10.0.",
+      "misconception": "Writing 9.9.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "round_nearest_tenth",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "What is 4.05 rounded to the nearest tenth?",
+      "options": ["4.0", "4.1", "4.5", "5.0"],
+      "answer": 1,
+      "hints": ["The hundredths digit is 5.", "Round up the tenths digit."],
+      "explanation": "4.05 rounded to the nearest tenth is 4.1.",
+      "misconception": "Keeping it at 4.0.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "round_nearest_tenth",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "What is 1.44 rounded to the nearest tenth?",
+      "options": ["1.4", "1.5", "1.0", "1.04"],
+      "answer": 0,
+      "hints": ["The hundredths digit is 4.", "4 < 5, so keep the tenths digit."],
+      "explanation": "1.44 rounded is 1.4.",
+      "misconception": "Rounding up to 1.5.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "round_nearest_tenth",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "A bag of rice weighs 5.46 kg. What is this weight to the nearest tenth?",
+      "options": ["5.4 kg", "5.5 kg", "5.0 kg", "6.0 kg"],
+      "answer": 1,
+      "hints": ["Look at the hundredths digit (6).", "6 >= 5, so round up."],
+      "explanation": "5.46 rounded to the nearest tenth is 5.5 kg.",
+      "misconception": "Rounding down to 5.4 kg.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "round_nearest_tenth",
+      "type": "numeric",
+      "difficulty": 3,
+      "stem": "Round 8.75 to the nearest tenth.",
+      "answer": 8.8,
+      "check": "8.8",
+      "hints": ["The hundredths digit is 5.", "Round up the tenths digit."],
+      "explanation": "8.75 rounded to the nearest tenth is 8.8.",
+      "misconception": "Leaving it at 8.7.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "round_nearest_tenth",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "Explain the rule for rounding 3.68 to the nearest tenth.",
+      "hints": ["Which digit do you look at?", "What do you do if it is 5 or more?"],
+      "explanation": "Look at the hundredths digit, which is 8. Since 8 is 5 or more, you round up the tenths digit from 6 to 7. The answer is 3.7.",
+      "rubric": {
+        "criteria": [
+          {"description": "Identifies the hundredths digit (8).", "marks": 1},
+          {"description": "Explains that 8 means round up.", "marks": 1}
+        ]
+      },
+      "misconception": "Looking at the wrong digit.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "round_nearest_tenth",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "What is 10.33 rounded to the nearest tenth?",
+      "options": ["10.3", "10.4", "10.0", "11.0"],
+      "answer": 0,
+      "hints": ["The hundredths digit is 3.", "3 < 5, so keep the tenths digit."],
+      "explanation": "10.33 rounded is 10.3.",
+      "misconception": "Rounding up to 10.4.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "round_nearest_tenth",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Round 2.96 to the nearest tenth.",
+      "answer": ["3.0"],
+      "hints": ["The hundredths digit is 6.", "Round up the tenths (9 becomes 10)."],
+      "explanation": "2.96 rounded to the nearest tenth is 3.0.",
+      "misconception": "Writing 2.9.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "round_nearest_tenth",
+      "type": "mcq",
+      "difficulty": 4,
+      "stem": "Which number rounds to 8.0 when rounded to the nearest tenth?",
+      "options": ["7.95", "7.94", "8.15", "8.14"],
+      "answer": 0,
+      "hints": ["Look for the number that rounds up to 8.0.", "7.95 has a 5 in the hundredths place."],
+      "explanation": "7.95 has a 5 in the hundredths place, so it rounds up to 8.0. (8.15 rounds to 8.2).",
+      "misconception": "Choosing 8.15 because it starts with 8.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "round_nearest_tenth",
+      "type": "written",
+      "difficulty": 4,
+      "stem": "Explain why 9.98 rounded to the nearest tenth is 10.0 and not 9.9.",
+      "hints": ["Look at the hundredths digit (8).", "Round up the tenths digit (9 becomes 10).", "What happens when you carry over?"],
+      "explanation": "The hundredths digit is 8, so you must round up the 9 tenths. 9 tenths + 1 tenth = 10 tenths, which equals 1 whole. So 9.98 becomes 10.0.",
+      "rubric": {
+        "criteria": [
+          {"description": "Explains rounding up because of the 8.", "marks": 1},
+          {"description": "Explains the carry over (9+1=10).", "marks": 1}
+        ]
+      },
+      "misconception": "Thinking 9.9 is close enough.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "round_nearest_tenth",
+      "type": "mcq",
+      "difficulty": 4,
+      "stem": "A pupil says 0.45 rounded to the nearest tenth is 0.4 because 4 is in the tenths place. Are they correct?",
+      "options": ["Yes.", "No, it should be 0.5.", "No, it should be 1.0.", "No, it should be 0.04."],
+      "answer": 1,
+      "hints": ["Look at the hundredths digit (5).", "5 means you must round up."],
+      "explanation": "The pupil ignored the hundredths digit. Since it is 5, the tenths digit rounds up from 4 to 5. The answer is 0.5.",
+      "misconception": "Only looking at the tenths digit.",
+      "uncertain": []
+    }
+  ]
+}

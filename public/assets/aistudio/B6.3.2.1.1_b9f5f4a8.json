@@ -1,0 +1,283 @@
+{
+  "indicator": {
+    "code": "B6.3.2.1.1",
+    "subject": "Science",
+    "level": "Basic 6",
+    "strand": "SYSTEMS",
+    "sub_strand": "The Solar System",
+    "content_standard": "B6.3.2.1 Show understanding of the motion of bodies in the solar system",
+    "objective": "Explain the difference between a star, a planet and a satellite",
+    "source_page": 60
+  },
+  "spec": {
+    "skills": [
+      {"tag": "define_star", "description": "Explain that a star is a heavenly body that produces its own light and is stationary (e.g. the sun).", "minQuestions": 4},
+      {"tag": "define_planet", "description": "Explain that a planet is a body that moves around a star (e.g. earth moves around the sun).", "minQuestions": 4},
+      {"tag": "define_satellite", "description": "Explain that a satellite is a smaller body that moves around a bigger one (e.g. the moon moves around the earth).", "minQuestions": 4},
+      {"tag": "compare_bodies", "description": "Compare star, planet and satellite by movement and light production.", "minQuestions": 3},
+      {"tag": "identify_examples", "description": "Identify examples of stars, planets and satellites.", "minQuestions": 3},
+      {"tag": "model_motion", "description": "Interpret a simple model or game showing the motion of stars, planets and satellites.", "minQuestions": 2}
+    ],
+    "difficultyPlan": "20 questions total — Difficulty 1: 5; Difficulty 2: 7; Difficulty 3: 5; Difficulty 4: 3.",
+    "misconceptions": [
+      "The sun is a planet.",
+      "The moon is a planet.",
+      "Stars move around planets.",
+      "Planets produce their own light.",
+      "Satellites are only man-made.",
+      "All heavenly bodies move in the same way."
+    ],
+    "needsTeacherAssessment": true
+  },
+  "questions": [
+    {
+      "skill_tag": "define_star",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What is a star?",
+      "options": ["A body that produces its own light and stays in one place", "A body that moves around a planet", "A body that moves around the sun", "A body that has no light"],
+      "answer": 0,
+      "hints": ["The sun is an example of a star.", "Stars make their own light."],
+      "explanation": "A star is a heavenly body that produces its own light and is stationary.",
+      "misconception": "The sun is a planet.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "define_planet",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What is a planet?",
+      "options": ["A body that moves around a star", "A body that produces its own light", "A body that moves around a satellite", "A body that stays still"],
+      "answer": 0,
+      "hints": ["Earth is a planet.", "Planets move around the sun."],
+      "explanation": "A planet is a body that moves around a star, such as the earth moving around the sun.",
+      "misconception": "Planets stay still in space.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "define_satellite",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What is a satellite?",
+      "options": ["A smaller body that moves around a bigger body", "A body that produces its own light", "A body that stays still", "A star at the centre of the solar system"],
+      "answer": 0,
+      "hints": ["The moon is a satellite.", "It moves around a bigger body."],
+      "explanation": "A satellite is a smaller body that moves around a bigger body, such as the moon moving around the earth.",
+      "misconception": "Satellites are only man-made.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_examples",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which of these is a star?",
+      "options": ["The sun", "The earth", "The moon", "Mars"],
+      "answer": 0,
+      "hints": ["It produces its own light.", "It is at the centre of the solar system."],
+      "explanation": "The sun is a star because it produces its own light and is stationary.",
+      "misconception": "The sun is a planet.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_examples",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which of these is a planet?",
+      "options": ["The earth", "The sun", "The moon", "A star"],
+      "answer": 0,
+      "hints": ["We live on it.", "It moves around the sun."],
+      "explanation": "The earth is a planet because it moves around the sun.",
+      "misconception": "The earth is a star.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "define_star",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which statement best describes a star?",
+      "options": ["It produces its own light and does not move around another body", "It moves around a planet", "It is a smaller body that moves around a planet", "It has no light of its own"],
+      "answer": 0,
+      "hints": ["Stars make their own light.", "They stay in one place."],
+      "explanation": "A star produces its own light and is stationary. It does not move around another body.",
+      "misconception": "Stars move around planets.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "define_planet",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which body moves around a star?",
+      "options": ["A planet", "A satellite", "Another star", "The moon"],
+      "answer": 0,
+      "hints": ["Earth is an example.", "It moves around the sun."],
+      "explanation": "A planet is a body that moves around a star.",
+      "misconception": "Satellites move around stars directly.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "define_satellite",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "What does a satellite move around?",
+      "options": ["A bigger body such as a planet", "A star only", "Another satellite", "It stays still"],
+      "answer": 0,
+      "hints": ["The moon moves around the earth.", "It moves around a bigger body."],
+      "explanation": "A satellite moves around a bigger body, such as a planet. The moon is a satellite of the earth.",
+      "misconception": "Satellites stay still in space.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "compare_bodies",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "What is one difference between a star and a planet?",
+      "options": ["A star produces its own light, but a planet does not", "A planet produces its own light, but a star does not", "Both produce their own light", "Neither produces light"],
+      "answer": 0,
+      "hints": ["The sun is a star; it shines.", "Earth is a planet; it does not make light."],
+      "explanation": "A star produces its own light, while a planet does not produce its own light.",
+      "misconception": "Planets produce their own light.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_examples",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Name one natural satellite of the earth.",
+      "answer": ["the moon", "moon"],
+      "hints": ["It shines at night.", "It moves around the earth."],
+      "explanation": "The moon is a natural satellite of the earth.",
+      "misconception": "The moon is a planet.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "define_star",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Explain what a star is.",
+      "answer": ["a heavenly body that produces its own light and is stationary", "a body that makes its own light and stays in one place", "a body like the sun that produces its own light"],
+      "hints": ["Think about the sun.", "Stars make their own light."],
+      "explanation": "A star is a heavenly body that produces its own light and is stationary.",
+      "misconception": "Stars move around planets.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "define_planet",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Explain what a planet is.",
+      "answer": ["a body that moves around a star", "a body that travels around the sun", "a heavenly body that orbits a star"],
+      "hints": ["Earth is a planet.", "It moves around the sun."],
+      "explanation": "A planet is a body that moves around a star, such as the earth moving around the sun.",
+      "misconception": "Planets stay still.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "define_star",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Why is the sun classified as a star?",
+      "answer": ["because it produces its own light and is stationary", "it makes its own light and stays in one place", "it produces its own light at the centre of the solar system"],
+      "hints": ["Think about what stars do.", "The sun makes its own light."],
+      "explanation": "The sun is a star because it produces its own light and is stationary at the centre of the solar system.",
+      "misconception": "The sun is a planet.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "define_planet",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Why is the earth classified as a planet?",
+      "answer": ["because it moves around the sun", "it moves around a star", "it orbits the sun"],
+      "hints": ["What does the earth move around?", "It is not a star or satellite."],
+      "explanation": "The earth is a planet because it moves around the sun.",
+      "misconception": "The earth is a star.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "define_satellite",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Explain what a satellite is.",
+      "answer": ["a smaller body that moves around a bigger body", "a body that moves around a planet", "a smaller body that orbits a larger body"],
+      "hints": ["Think about the moon.", "It moves around a bigger body."],
+      "explanation": "A satellite is a smaller body that moves around a bigger body, such as the moon moving around the earth.",
+      "misconception": "Satellites are only man-made.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "define_satellite",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "Which of these best describes a satellite?",
+      "options": ["A smaller body that moves around a bigger body", "A body that produces its own light", "A body that stays still", "A star at the centre of the solar system"],
+      "answer": 0,
+      "hints": ["Think about the moon.", "It moves around a bigger body."],
+      "explanation": "A satellite is a smaller body that moves around a bigger body. The moon is a satellite of the earth.",
+      "misconception": "Satellites are only man-made.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "compare_bodies",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "Which statement correctly compares a star, a planet and a satellite?",
+      "options": ["A star produces its own light and is stationary; a planet moves around a star; a satellite moves around a planet", "A star moves around a planet; a planet produces its own light; a satellite is stationary", "A star and a planet both produce light; a satellite is a star", "A star moves around a satellite; a planet stays still; a satellite produces light"],
+      "answer": 0,
+      "hints": ["Think about the sun, earth and moon.", "Each body has a different motion and light property."],
+      "explanation": "A star produces its own light and is stationary. A planet moves around a star. A satellite moves around a planet.",
+      "misconception": "All heavenly bodies move in the same way.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "compare_bodies",
+      "type": "mcq",
+      "difficulty": 4,
+      "stem": "A pupil says, 'The moon is a planet because it is round and moves in space.' What is the best correction?",
+      "options": ["The moon is a satellite because it moves around the earth, a planet", "The moon is a star because it gives light", "The moon is a planet because it is round", "The moon is a satellite because it produces its own light"],
+      "answer": 0,
+      "hints": ["What does the moon move around?", "A planet moves around a star, not a planet."],
+      "explanation": "The moon is a satellite, not a planet, because it moves around the earth, which is a planet.",
+      "misconception": "The moon is a planet.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "model_motion",
+      "type": "practical",
+      "difficulty": 4,
+      "stem": "In groups, act out the solar system. One learner stands still in the centre holding a torch to represent the sun (star). Other learners walk in circles around the centre learner to represent planets. One learner walks in a smaller circle around a 'planet' to represent a satellite. Present your model and explain what each learner represents.",
+      "rubric": {
+        "criteria": [
+          {"description": "Placed a learner standing still in the centre holding a torch as the star (sun)", "marks": 2},
+          {"description": "Had learners moving in circles around the centre as planets", "marks": 2},
+          {"description": "Had one learner moving around a planet as a satellite", "marks": 2},
+          {"description": "Explained clearly what each learner represented", "marks": 1}
+        ]
+      },
+      "answer": "",
+      "hints": ["The star stays still and gives light.", "Planets move around the star.", "The satellite moves around a planet."],
+      "explanation": "This is a practical/role-play task. Your teacher will mark it using the rubric.",
+      "misconception": "All heavenly bodies move in the same way.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "model_motion",
+      "type": "oral",
+      "difficulty": 4,
+      "stem": "Look at a diagram or model showing the sun, earth and moon. Explain to your group which body is the star, which is the planet, and which is the satellite. Describe how each one moves.",
+      "rubric": {
+        "criteria": [
+          {"description": "Correctly identified the sun as the star", "marks": 1},
+          {"description": "Correctly identified the earth as the planet", "marks": 1},
+          {"description": "Correctly identified the moon as the satellite", "marks": 1},
+          {"description": "Explained that the earth moves around the sun", "marks": 1},
+          {"description": "Explained that the moon moves around the earth", "marks": 1}
+        ]
+      },
+      "answer": "",
+      "hints": ["The sun gives its own light.", "The earth moves around the sun.", "The moon moves around the earth."],
+      "explanation": "This is an oral task. Your teacher will mark it using the rubric.",
+      "misconception": "The moon is a planet.",
+      "uncertain": []
+    }
+  ]
+}

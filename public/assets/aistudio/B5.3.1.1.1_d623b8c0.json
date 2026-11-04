@@ -1,0 +1,279 @@
+{
+  "indicator": {
+    "code": "B5.3.1.1.1",
+    "subject": "Mathematics",
+    "level": "Basic 5",
+    "strand": "Geometry and Measurement",
+    "sub_strand": "Lines and Shapes",
+    "content_standard": "B5.3.1.1 Identify and sort quadrilaterals, including rectangles, squares, trapezoids, parallelograms, and rhombuses, according to their attributes",
+    "objective": "Demonstrate an understanding of the properties (e.g. sides, angles, and diagonals) of squares and rectangles",
+    "source_page": 115
+  },
+  "spec": {
+    "skills": [
+      {"tag": "identify_properties_square", "description": "Identify properties of a square (4 equal sides, 4 right angles, equal diagonals bisecting at 90°).", "minQuestions": 2},
+      {"tag": "identify_properties_rectangle", "description": "Identify properties of a rectangle (opposite sides equal, 4 right angles, equal diagonals bisecting at non-90°).", "minQuestions": 2},
+      {"tag": "compare_square_rectangle", "description": "Compare squares and rectangles.", "minQuestions": 2}
+    ],
+    "difficultyPlan": "20 questions: 5 at difficulty 1, 7 at difficulty 2, 5 at difficulty 3, 3 at difficulty 4.",
+    "misconceptions": [
+      "Thinking a square is not a rectangle.",
+      "Thinking all rectangles have equal diagonals that bisect at right angles.",
+      "Confusing sides with diagonals."
+    ],
+    "needsTeacherAssessment": false
+  },
+  "questions": [
+    {
+      "skill_tag": "identify_properties_square",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "How many equal sides does a square have?",
+      "options": ["2", "3", "4", "5"],
+      "answer": 2,
+      "hints": ["All sides of a square are the same length."],
+      "explanation": "A square has 4 equal sides.",
+      "misconception": "Saying 2 (thinking of opposite sides only).",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_properties_square",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What type of angles does a square have?",
+      "options": ["Acute angles", "Right angles", "Obtuse angles", "Reflex angles"],
+      "answer": 1,
+      "hints": ["Each corner is a square corner."],
+      "explanation": "A square has 4 right angles.",
+      "misconception": "Saying acute angles because they look sharp.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_properties_rectangle",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "How many pairs of equal opposite sides does a rectangle have?",
+      "options": ["1", "2", "3", "4"],
+      "answer": 1,
+      "hints": ["Top and bottom are equal, left and right are equal."],
+      "explanation": "A rectangle has 2 pairs of equal opposite sides.",
+      "misconception": "Saying 4 pairs because it has 4 sides.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_properties_rectangle",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What type of angles does a rectangle have?",
+      "options": ["All right angles", "All acute angles", "Two acute and two obtuse", "All obtuse angles"],
+      "answer": 0,
+      "hints": ["Each corner is a square corner."],
+      "explanation": "A rectangle has 4 right angles.",
+      "misconception": "Saying some are obtuse.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "compare_square_rectangle",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which statement is true?",
+      "options": ["A square is a special type of rectangle.", "A rectangle is a special type of square.", "A square and a rectangle are not related."],
+      "answer": 0,
+      "hints": ["A square has all the properties of a rectangle."],
+      "explanation": "A square is a special rectangle with all sides equal.",
+      "misconception": "Thinking they are completely different.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_properties_square",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "A square has sides of 5 cm. What is the length of each diagonal? (Hint: Diagonal = side × √2, but for a square with side 5, use 5√2 ≈ 7.07 cm. Round to nearest whole number.)",
+      "answer": 7,
+      "check": "round(5*sqrt(2))",
+      "hints": ["Use Pythagoras: diagonal² = 5² + 5² = 50.", "√50 ≈ 7.07."],
+      "explanation": "Diagonal ≈ 7 cm.",
+      "misconception": "Saying 5 cm (same as side).",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_properties_rectangle",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "A rectangle has length 8 cm and width 6 cm. What is the length of its diagonal?",
+      "answer": 10,
+      "check": "sqrt(8^2+6^2)",
+      "hints": ["Use Pythagoras: diagonal² = 8² + 6² = 100.", "√100 = 10."],
+      "explanation": "Diagonal = 10 cm.",
+      "misconception": "Adding 8+6=14.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_properties_square",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which of these is NOT a property of a square?",
+      "options": ["All sides equal", "All angles right angles", "Diagonals equal", "Diagonals bisect at 60°"],
+      "answer": 3,
+      "hints": ["Diagonals of a square bisect at 90°."],
+      "explanation": "Diagonals of a square bisect at 90°, not 60°.",
+      "misconception": "Thinking diagonals bisect at any angle.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_properties_rectangle",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which of these is true about the diagonals of a rectangle?",
+      "options": ["They are equal in length", "They bisect at right angles", "They are perpendicular", "They are not equal"],
+      "answer": 0,
+      "hints": ["In a rectangle, diagonals are equal."],
+      "explanation": "The diagonals of a rectangle are equal in length.",
+      "misconception": "Thinking diagonals are unequal.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "compare_square_rectangle",
+      "type": "written",
+      "difficulty": 2,
+      "stem": "Explain why a square can be called a rectangle.",
+      "hints": ["Check the properties of a rectangle."],
+      "explanation": "A square has 4 right angles and opposite sides equal, which are the defining properties of a rectangle.",
+      "rubric": {
+        "criteria": [
+          {"description": "Mentions 4 right angles.", "marks": 1},
+          {"description": "Mentions opposite sides equal.", "marks": 1}
+        ]
+      },
+      "misconception": "Thinking squares and rectangles are mutually exclusive.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_properties_square",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "How many lines of symmetry does a square have?",
+      "answer": 4,
+      "check": "4",
+      "hints": ["Two diagonals, one vertical, one horizontal."],
+      "explanation": "A square has 4 lines of symmetry.",
+      "misconception": "Saying 2 (only vertical and horizontal).",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_properties_rectangle",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "How many lines of symmetry does a rectangle have?",
+      "answer": 2,
+      "check": "2",
+      "hints": ["One vertical, one horizontal."],
+      "explanation": "A rectangle has 2 lines of symmetry.",
+      "misconception": "Saying 4 (including diagonals).",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_properties_square",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "Explain how the diagonals of a square are related.",
+      "hints": ["They are equal, bisect each other, and meet at 90°."],
+      "explanation": "The diagonals of a square are equal in length, bisect each other, and intersect at right angles.",
+      "rubric": {
+        "criteria": [
+          {"description": "States diagonals are equal.", "marks": 1},
+          {"description": "States they bisect at right angles.", "marks": 1}
+        ]
+      },
+      "misconception": "Thinking diagonals are unequal.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_properties_rectangle",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "A rectangle has diagonals of length 13 cm. If the length is 12 cm, what is the width?",
+      "hints": ["Use Pythagoras: width² + 12² = 13²."],
+      "explanation": "width² = 169 - 144 = 25, so width = 5 cm.",
+      "rubric": {
+        "criteria": [
+          {"description": "Sets up Pythagoras.", "marks": 1},
+          {"description": "Calculates 5 cm.", "marks": 1}
+        ]
+      },
+      "misconception": "Adding 13+12=25.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "compare_square_rectangle",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "Which property is true for a square but NOT always true for a rectangle?",
+      "options": ["All sides equal", "All angles right angles", "Opposite sides parallel", "Diagonals equal"],
+      "answer": 0,
+      "hints": ["A rectangle may have unequal sides."],
+      "explanation": "A square has all sides equal, but a rectangle does not necessarily.",
+      "misconception": "Thinking all rectangles have equal sides.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "compare_square_rectangle",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "Explain the difference between the diagonals of a square and a rectangle in terms of how they intersect.",
+      "hints": ["Think about the angle at which they cross."],
+      "explanation": "The diagonals of a square intersect at 90° (perpendicular), while the diagonals of a rectangle do not necessarily intersect at 90°.",
+      "rubric": {
+        "criteria": [
+          {"description": "States square diagonals meet at 90°.", "marks": 1},
+          {"description": "States rectangle diagonals do not necessarily meet at 90°.", "marks": 1}
+        ]
+      },
+      "misconception": "Thinking all rectangles have perpendicular diagonals.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_properties_square",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "A square has side length s. What is the length of its diagonal?",
+      "options": ["s", "2s", "s√2", "s/2"],
+      "answer": 2,
+      "hints": ["Use Pythagoras: diagonal² = s² + s² = 2s²."],
+      "explanation": "Diagonal = s√2.",
+      "misconception": "Saying 2s.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_properties_rectangle",
+      "type": "written",
+      "difficulty": 4,
+      "stem": "A rectangle has length L and width W. Write an expression for the length of its diagonal.",
+      "hints": ["Use Pythagoras."],
+      "explanation": "Diagonal = √(L² + W²).",
+      "rubric": {
+        "criteria": [
+          {"description": "Writes √(L² + W²).", "marks": 1}
+        ]
+      },
+      "misconception": "Writing L + W.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "compare_square_rectangle",
+      "type": "written",
+      "difficulty": 4,
+      "stem": "A pupil says 'All squares are rectangles, but not all rectangles are squares.' Explain why this is true.",
+      "hints": ["Check the properties of rectangles."],
+      "explanation": "A square meets all the criteria for a rectangle (4 right angles, opposite sides equal). However, a rectangle may have unequal sides, so it may not be a square.",
+      "rubric": {
+        "criteria": [
+          {"description": "States square has rectangle properties.", "marks": 1},
+          {"description": "States rectangle may have unequal sides.", "marks": 1}
+        ]
+      },
+      "misconception": "Thinking the statement is false.",
+      "uncertain": []
+    }
+  ]
+}

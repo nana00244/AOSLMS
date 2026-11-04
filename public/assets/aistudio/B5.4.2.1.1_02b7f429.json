@@ -1,0 +1,275 @@
+{
+  "indicator": {
+    "code": "B5.4.2.1.1",
+    "subject": "Mathematics",
+    "level": "Basic 5",
+    "strand": "Data",
+    "sub_strand": "Chance (Probability)",
+    "content_standard": "B5.4.2.1 Describe the likelihood of a single outcome occurring using words such as impossible, possible, and certain",
+    "objective": "Classify the likelihood of a single outcome occurring in a probability experiment as impossible, possible, or certain",
+    "source_page": 133
+  },
+  "spec": {
+    "skills": [
+      {"tag": "classify_outcomes", "description": "Classify outcomes as impossible, possible (likely/unlikely), or certain.", "minQuestions": 2},
+      {"tag": "give_examples_likelihood", "description": "Give examples of impossible, possible, and certain events.", "minQuestions": 2}
+    ],
+    "difficultyPlan": "20 questions: 5 at difficulty 1, 7 at difficulty 2, 5 at difficulty 3, 3 at difficulty 4.",
+    "misconceptions": [
+      "Thinking possible means likely.",
+      "Confusing certain with probable.",
+      "Not recognising that an event can be possible but unlikely."
+    ],
+    "needsTeacherAssessment": false
+  },
+  "questions": [
+    {
+      "skill_tag": "classify_outcomes",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "A bag contains only red balls. If you pick one ball without looking, what is the likelihood of picking a red ball?",
+      "options": ["Impossible", "Possible", "Certain", "Always false"],
+      "answer": 2,
+      "hints": ["Every ball in the bag is red."],
+      "explanation": "It is certain because all the balls are red.",
+      "misconception": "Saying possible because you cannot see the ball.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "classify_outcomes",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "A bag contains only red balls. What is the likelihood of picking a blue ball?",
+      "options": ["Impossible", "Possible", "Certain", "Likely"],
+      "answer": 0,
+      "hints": ["There are no blue balls in the bag."],
+      "explanation": "It is impossible because there are no blue balls.",
+      "misconception": "Saying possible because blue is a colour.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "give_examples_likelihood",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which event is certain?",
+      "options": ["The sun will rise tomorrow", "It will rain today", "You will see a lion in Accra", "You will roll a 7 on a normal die"],
+      "answer": 0,
+      "hints": ["Certain means it will definitely happen."],
+      "explanation": "The sun rising tomorrow is certain.",
+      "misconception": "Choosing rain because it often rains.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "give_examples_likelihood",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which event is impossible?",
+      "options": ["Rolling a 6 on a normal die", "Rolling a 7 on a normal die", "Picking a red ball from a bag of red balls", "Tossing a coin and getting heads"],
+      "answer": 1,
+      "hints": ["A normal die has numbers 1 to 6."],
+      "explanation": "Rolling a 7 on a normal die is impossible.",
+      "misconception": "Choosing rolling a 6 because it is hard.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "classify_outcomes",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "A bag has 10 red balls and 1 green ball. Picking a red ball is:",
+      "options": ["Impossible", "Possible", "Certain", "Never going to happen"],
+      "answer": 1,
+      "hints": ["There are red balls and green balls."],
+      "explanation": "Picking a red ball is possible, and it is likely.",
+      "misconception": "Saying certain because there are many red balls.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "classify_outcomes",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "A spinner has 4 equal sectors: red, blue, green, yellow. Landing on red is:",
+      "options": ["Impossible", "Possible", "Certain", "Not an outcome"],
+      "answer": 1,
+      "hints": ["Red is one of the sectors."],
+      "explanation": "Landing on red is possible.",
+      "misconception": "Saying impossible because there are other colours.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "classify_outcomes",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "A bag contains 5 green balls and 5 yellow balls. Picking a green ball is:",
+      "options": ["Impossible", "Possible", "Certain", "Never"],
+      "answer": 1,
+      "hints": ["There are green balls in the bag."],
+      "explanation": "It is possible to pick a green ball.",
+      "misconception": "Saying certain because half are green.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "give_examples_likelihood",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Give one example of an impossible event in Ghana.",
+      "answer": ["snow falling in Accra", "a cow flying", "a human flying without help", "seeing a lion in the classroom"],
+      "hints": ["Think of something that cannot happen."],
+      "explanation": "For example, snow falling in Accra is impossible.",
+      "misconception": "Giving an unlikely but possible event.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "give_examples_likelihood",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Give one example of a certain event in your school day.",
+      "answer": ["the bell will ring", "the teacher will come to class", "school will start", "the sun will shine during the day"],
+      "hints": ["Certain means it will definitely happen."],
+      "explanation": "For example, the school bell ringing is certain.",
+      "misconception": "Giving an event that only sometimes happens.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "classify_outcomes",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "A bag has 3 red balls, 3 blue balls, and 3 green balls. Picking a yellow ball is:",
+      "options": ["Impossible", "Possible", "Certain", "Likely"],
+      "answer": 0,
+      "hints": ["There are no yellow balls."],
+      "explanation": "Picking a yellow ball is impossible.",
+      "misconception": "Saying possible because yellow is a colour.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "classify_outcomes",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "A coin is tossed. Landing on heads is:",
+      "options": ["Impossible", "Possible", "Certain", "Not an outcome"],
+      "answer": 1,
+      "hints": ["A coin has heads and tails."],
+      "explanation": "Landing on heads is possible.",
+      "misconception": "Saying certain because it is one of the sides.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "classify_outcomes",
+      "type": "written",
+      "difficulty": 2,
+      "stem": "Explain why picking a black ball from a bag containing only white balls is impossible.",
+      "hints": ["Look at the colours in the bag."],
+      "explanation": "It is impossible because there are no black balls in the bag.",
+      "rubric": {
+        "criteria": [
+          {"description": "States there are no black balls.", "marks": 1}
+        ]
+      },
+      "misconception": "Thinking black is possible because it is a colour.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "classify_outcomes",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "A bag has 20 red balls and 1 blue ball. Picking a blue ball is:",
+      "options": ["Impossible", "Possible but unlikely", "Certain", "Likely"],
+      "answer": 1,
+      "hints": ["There is only one blue ball."],
+      "explanation": "It is possible but unlikely.",
+      "misconception": "Saying impossible because there is only one.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "classify_outcomes",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "A bag has 20 red balls and 1 blue ball. Picking a red ball is:",
+      "options": ["Impossible", "Possible but unlikely", "Likely", "Certain"],
+      "answer": 2,
+      "hints": ["Most balls are red."],
+      "explanation": "Picking a red ball is likely, but not certain.",
+      "misconception": "Saying certain because most are red.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "give_examples_likelihood",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "Explain the difference between an impossible event and an unlikely event.",
+      "hints": ["Impossible cannot happen; unlikely can happen but rarely."],
+      "explanation": "An impossible event cannot happen at all. An unlikely event can happen, but it has a very small chance.",
+      "rubric": {
+        "criteria": [
+          {"description": "Explains impossible cannot happen.", "marks": 1},
+          {"description": "Explains unlikely can happen rarely.", "marks": 1}
+        ]
+      },
+      "misconception": "Thinking they are the same.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "give_examples_likelihood",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "A pupil says 'If an event is possible, it must be likely.' Is the pupil correct? Explain with an example.",
+      "hints": ["Possible includes unlikely events."],
+      "explanation": "No. An event can be possible but unlikely, such as picking the one blue ball from a bag of 20 red balls.",
+      "rubric": {
+        "criteria": [
+          {"description": "States pupil is incorrect.", "marks": 1},
+          {"description": "Gives a possible but unlikely example.", "marks": 1}
+        ]
+      },
+      "misconception": "Agreeing with the pupil.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "classify_outcomes",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "Describe an experiment where an outcome is certain.",
+      "hints": ["All possible outcomes must be the same."],
+      "explanation": "For example, a bag containing only red balls: picking a red ball is certain.",
+      "rubric": {
+        "criteria": [
+          {"description": "Describes an experiment with only one outcome type.", "marks": 1}
+        ]
+      },
+      "misconception": "Describing an experiment with mixed outcomes.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "classify_outcomes",
+      "type": "written",
+      "difficulty": 4,
+      "stem": "A bag has 2 red, 2 blue, and 2 green balls. A pupil says picking a red ball is certain because there are red balls. Explain the mistake.",
+      "hints": ["Certain means it must happen every time."],
+      "explanation": "The pupil is incorrect. Picking a red ball is possible, but not certain, because there are also blue and green balls.",
+      "rubric": {
+        "criteria": [
+          {"description": "Identifies the mistake.", "marks": 1},
+          {"description": "Explains red is possible but not certain.", "marks": 1}
+        ]
+      },
+      "misconception": "Thinking presence of red makes it certain.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "give_examples_likelihood",
+      "type": "written",
+      "difficulty": 4,
+      "stem": "Create one impossible event and one certain event related to a football match.",
+      "hints": ["Impossible: score without kicking? Certain: match has a start."],
+      "explanation": "Impossible: a player scores with no ball. Certain: the match will have a beginning.",
+      "rubric": {
+        "criteria": [
+          {"description": "Gives a valid impossible event.", "marks": 1},
+          {"description": "Gives a valid certain event.", "marks": 1}
+        ]
+      },
+      "misconception": "Giving two possible events.",
+      "uncertain": []
+    }
+  ]
+}

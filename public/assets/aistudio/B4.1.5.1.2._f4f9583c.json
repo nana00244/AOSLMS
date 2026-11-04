@@ -1,0 +1,273 @@
+{
+  "indicator": {
+    "code": "[No code printed, p.46]",
+    "subject": "Mathematics",
+    "level": "Basic 4",
+    "strand": "Number",
+    "sub_strand": "Decimals",
+    "content_standard": "1.1.4.1 Develop an understanding of decimals (tenths and hundredths) using concrete and pictorial representations and write decimal fractions as base ten numbers with place value.",
+    "objective": "Describe and represent decimals (tenths and hundredths) concretely, pictorially, olically",
+    "source_page": 46
+  },
+  "spec": {
+    "skills": [
+      {"tag": "identify_tenths_hundredths", "description": "Identify decimals representing tenths and hundredths from pictures or models.", "minQuestions": 2},
+      {"tag": "write_decimals", "description": "Write decimal fractions (tenths and hundredths) as decimals and vice versa.", "minQuestions": 2},
+      {"tag": "place_value_chart", "description": "Identify the value of digits in the tenths and hundredths places.", "minQuestions": 2}
+    ],
+    "difficultyPlan": "20 questions: 5 at difficulty 1, 7 at difficulty 2, 5 at difficulty 3, 3 at difficulty 4.",
+    "misconceptions": [
+      "Thinking 0.5 is smaller than 0.25 because 25 > 5.",
+      "Confusing the tenths and hundredths places."
+    ],
+    "needsTeacherAssessment": true
+  },
+  "questions": [
+    {
+      "skill_tag": "identify_tenths_hundredths",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which decimal represents 3 tenths?",
+      "options": ["0.3", "0.03", "3.0", "0.003"],
+      "answer": 0,
+      "hints": ["Tenths mean 1 out of 10 equal parts.", "The first place after the decimal point is tenths."],
+      "explanation": "3 tenths is written as 0.3.",
+      "misconception": "Writing 0.03 (that is 3 hundredths).",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "write_decimals",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "How do you write 7/10 as a decimal?",
+      "options": ["0.7", "0.07", "7.0", "0.007"],
+      "answer": 0,
+      "hints": ["The denominator is 10.", "There is one digit after the decimal point."],
+      "explanation": "7/10 is written as 0.7.",
+      "misconception": "Writing 0.07.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "place_value_chart",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "In the number 0.45, what digit is in the tenths place?",
+      "options": ["4", "5", "0", "45"],
+      "answer": 0,
+      "hints": ["The tenths place is the first digit after the decimal.", "Look at the digit right after the dot."],
+      "explanation": "The digit in the tenths place is 4.",
+      "misconception": "Choosing 5 (hundredths place).",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "write_decimals",
+      "type": "short_answer",
+      "difficulty": 1,
+      "stem": "Write 25 hundredths as a decimal.",
+      "answer": ["0.25"],
+      "hints": ["Hundredths have two digits after the decimal.", "Write 25 with a decimal point in front."],
+      "explanation": "25 hundredths is 0.25.",
+      "misconception": "Writing 0.025 or 2.5.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "write_decimals",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which fraction is equal to 0.9?",
+      "options": ["9/10", "9/100", "1/9", "9/1"],
+      "answer": 0,
+      "hints": ["0.9 means 9 tenths.", "The denominator is 10."],
+      "explanation": "0.9 is equal to 9/10.",
+      "misconception": "Writing 9/100.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "place_value_chart",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "What is the value of the digit 5 in the number 0.52?",
+      "answer": 0.5,
+      "check": "5/10",
+      "hints": ["The 5 is in the tenths place.", "Its value is 5 tenths."],
+      "explanation": "The 5 is in the tenths place, so its value is 5/10 or 0.5.",
+      "misconception": "Saying 0.05.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_tenths_hundredths",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "A 100-square grid has 23 squares shaded. What decimal represents the shaded part?",
+      "options": ["0.23", "0.023", "2.3", "23.0"],
+      "answer": 0,
+      "hints": ["1 square is 1 hundredth.", "23 squares is 23 hundredths."],
+      "explanation": "23 out of 100 squares is 0.23.",
+      "misconception": "Writing 2.3.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "write_decimals",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which decimal represents 8 hundredths?",
+      "options": ["0.8", "0.08", "8.0", "0.008"],
+      "answer": 1,
+      "hints": ["Hundredths require two decimal places.", "It is 8/100."],
+      "explanation": "8 hundredths is written as 0.08.",
+      "misconception": "Writing 0.8 (8 tenths).",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "place_value_chart",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "In the number 1.76, what is the value of the digit 6?",
+      "answer": 0.06,
+      "check": "6/100",
+      "hints": ["The 6 is in the hundredths place.", "Its value is 6/100."],
+      "explanation": "The 6 is in the hundredths place, so its value is 0.06.",
+      "misconception": "Saying 0.6.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "write_decimals",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Write 4/100 as a decimal.",
+      "answer": ["0.04"],
+      "hints": ["The denominator is 100.", "Write two decimal places."],
+      "explanation": "4/100 is 0.04.",
+      "misconception": "Writing 0.4.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_tenths_hundredths",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "A pupil shades 5 out of 10 equal parts of a rectangle. What decimal is shaded?",
+      "options": ["0.5", "0.05", "5.0", "0.55"],
+      "answer": 0,
+      "hints": ["5 out of 10 is 5 tenths.", "5/10 = ?"],
+      "explanation": "5/10 is written as 0.5.",
+      "misconception": "Writing 0.05.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "place_value_chart",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "In the number 2.34, what is the value of the digit 3? Write as a fraction.",
+      "answer": 0.3,
+      "check": "3/10",
+      "hints": ["The 3 is in the tenths place.", "Its value is 3/10."],
+      "explanation": "The value of 3 is 3/10 or 0.3.",
+      "misconception": "Saying 3/100.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_tenths_hundredths",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "Which decimal is larger: 0.7 or 0.65?",
+      "options": ["0.7", "0.65", "They are equal", "Cannot tell"],
+      "answer": 0,
+      "hints": ["0.7 is 7 tenths (or 70 hundredths).", "0.65 is 65 hundredths.", "Compare 70 and 65."],
+      "explanation": "0.7 (70 hundredths) is larger than 0.65.",
+      "misconception": "Thinking 0.65 is larger because it has more digits.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "write_decimals",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "How do you write '1 and 5 tenths' as a decimal?",
+      "options": ["1.5", "1.05", "1.50", "1.005"],
+      "answer": 0,
+      "hints": ["The whole number is 1.", "5 tenths is 0.5."],
+      "explanation": "'1 and 5 tenths' is written as 1.5.",
+      "misconception": "Writing 1.05 (5 hundredths).",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "write_decimals",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Write 12/100 as a decimal.",
+      "answer": ["0.12"],
+      "hints": ["12 out of 100.", "Two decimal places."],
+      "explanation": "12/100 is 0.12.",
+      "misconception": "Writing 0.012.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "place_value_chart",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "Explain how to use a place value chart to write 3/10 as a decimal.",
+      "hints": ["The denominator is 10.", "Which place value represents tenths?"],
+      "explanation": "Since the denominator is 10, the 3 goes in the tenths place, which is the first place after the decimal point. So, 3/10 = 0.3.",
+      "rubric": {
+        "criteria": [
+          {"description": "Mentions placing 3 in the tenths place.", "marks": 1},
+          {"description": "States the decimal is 0.3.", "marks": 1}
+        ]
+      },
+      "misconception": "Placing 3 in the hundredths place.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "place_value_chart",
+      "type": "numeric",
+      "difficulty": 3,
+      "stem": "In the number 12.34, what is the value of the digit 4?",
+      "answer": 0.04,
+      "check": "4/100",
+      "hints": ["The 4 is in the hundredths place.", "Its value is 4/100."],
+      "explanation": "The value is 0.04.",
+      "misconception": "Saying 0.4.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_tenths_hundredths",
+      "type": "mcq",
+      "difficulty": 4,
+      "stem": "A pupil says 0.25 is greater than 0.5 because 25 > 5. What is the correct comparison?",
+      "options": ["0.5 > 0.25", "0.25 > 0.5", "0.5 = 0.25", "Cannot compare"],
+      "answer": 0,
+      "hints": ["Think about the whole. 0.5 is half.", "0.25 is a quarter.", "Which is larger, a half or a quarter?"],
+      "explanation": "0.5 is equal to 1/2 (half), while 0.25 is 1/4 (a quarter). Half is larger than a quarter.",
+      "misconception": "Thinking a longer decimal is always larger.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "write_decimals",
+      "type": "written",
+      "difficulty": 4,
+      "stem": "Explain the difference between 0.5 and 0.05 using a place value chart.",
+      "hints": ["Where is the 5 in 0.5?", "Where is the 5 in 0.05?"],
+      "explanation": "In 0.5, the 5 is in the tenths place, meaning 5 out of 10. In 0.05, the 5 is in the hundredths place, meaning 5 out of 100. 0.5 is ten times larger than 0.05.",
+      "rubric": {
+        "criteria": [
+          {"description": "Explains 0.5 is 5 tenths.", "marks": 1},
+          {"description": "Explains 0.05 is 5 hundredths.", "marks": 1},
+          {"description": "States 0.5 is larger.", "marks": 1}
+        ]
+      },
+      "misconception": "Thinking they are the same value just written differently.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_tenths_hundredths",
+      "type": "mcq",
+      "difficulty": 4,
+      "stem": "Which decimal is equal to 3/100?",
+      "options": ["0.03", "0.3", "3.0", "0.003"],
+      "answer": 0,
+      "hints": ["100 in the denominator means two decimal places.", "Write 3 in the hundredths place."],
+      "explanation": "3/100 is 0.03.",
+      "misconception": "Writing 0.3.",
+      "uncertain": []
+    }
+  ]
+}

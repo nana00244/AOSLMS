@@ -1,0 +1,1681 @@
+[
+  {
+    "file_name": "B3.1.2.4.4.json",
+    "indicator": {
+      "code": "B3.1.2.4.4",
+      "subject": "Mathematics",
+      "level": "Basic 3",
+      "strand": "Number",
+      "sub_strand": "Number Operations (Addition, Subtraction, Multiplication and Division)",
+      "content_standard": "B3.1.2.4 Develop and apply personal and standard strategies for adding and subtracting within 1000",
+      "objective": "Show an understanding of the property of commutativity",
+      "source_page": 74
+    },
+    "spec": {
+      "skills": [
+        {"tag": "apply_commutativity", "description": "Interchange the position of addends and solve.", "minQuestions": 2},
+        {"tag": "explain_commutativity", "description": "Explain that changing the order of addends does not change the sum.", "minQuestions": 2}
+      ],
+      "difficultyPlan": "20 questions: 5 at difficulty 1, 7 at difficulty 2, 5 at difficulty 3, 3 at difficulty 4.",
+      "misconceptions": [
+        "Thinking 5 + 3 is different from 3 + 5.",
+        "Applying commutativity to subtraction."
+      ],
+      "needsTeacherAssessment": false
+    },
+    "questions": [
+      {
+        "skill_tag": "apply_commutativity",
+        "type": "numeric",
+        "difficulty": 1,
+        "stem": "What is 3 + 5?",
+        "answer": 8,
+        "check": "3+5",
+        "hints": ["Add the numbers.", "3 + 5 = 8."],
+        "explanation": "3 + 5 = 8.",
+        "misconception": "Saying 2 (subtracting).",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "apply_commutativity",
+        "type": "numeric",
+        "difficulty": 1,
+        "stem": "What is 5 + 3?",
+        "answer": 8,
+        "check": "5+3",
+        "hints": ["Add the numbers.", "5 + 3 = 8."],
+        "explanation": "5 + 3 = 8.",
+        "misconception": "Saying 2 (subtracting).",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "explain_commutativity",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "Which statement is true?",
+        "options": ["4 + 6 = 6 + 4", "4 + 6 is different from 6 + 4", "4 - 6 = 6 - 4", "4 + 6 = 6 - 4"],
+        "answer": 0,
+        "hints": ["4 + 6 = 10.", "6 + 4 = 10."],
+        "explanation": "4 + 6 = 10 and 6 + 4 = 10, so they are equal.",
+        "misconception": "Thinking they are different.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "apply_commutativity",
+        "type": "numeric",
+        "difficulty": 1,
+        "stem": "Calculate 236 + 453.",
+        "answer": 689,
+        "check": "236+453",
+        "hints": ["Add the hundreds, tens, ones.", "200+400=600, 30+50=80, 6+3=9."],
+        "explanation": "236 + 453 = 689.",
+        "misconception": "Misaligning the digits.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "apply_commutativity",
+        "type": "numeric",
+        "difficulty": 1,
+        "stem": "Calculate 453 + 236.",
+        "answer": 689,
+        "check": "453+236",
+        "hints": ["Add the hundreds, tens, ones."],
+        "explanation": "453 + 236 = 689.",
+        "misconception": "Thinking the answer will be different.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "explain_commutativity",
+        "type": "short_answer",
+        "difficulty": 2,
+        "stem": "If 12 + 8 = 20, what is 8 + 12?",
+        "answer": ["20"],
+        "hints": ["Use commutativity.", "The order doesn't change the sum."],
+        "explanation": "8 + 12 = 20.",
+        "misconception": "Saying 4 (subtracting).",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "apply_commutativity",
+        "type": "numeric",
+        "difficulty": 2,
+        "stem": "Solve: 145 + 278 = ___",
+        "answer": 423,
+        "check": "145+278",
+        "hints": ["100+200=300.", "40+70=110.", "5+8=13.", "300+110+13."],
+        "explanation": "145 + 278 = 423.",
+        "misconception": "Saying 313.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "apply_commutativity",
+        "type": "numeric",
+        "difficulty": 2,
+        "stem": "Solve: 278 + 145 = ___",
+        "answer": 423,
+        "check": "278+145",
+        "hints": ["Use the same numbers as the previous question."],
+        "explanation": "278 + 145 = 423.",
+        "misconception": "Getting a different answer.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "explain_commutativity",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "Which operation is commutative?",
+        "options": ["Addition", "Subtraction", "Both addition and subtraction", "Neither"],
+        "answer": 0,
+        "hints": ["3 + 5 = 5 + 3.", "But 5 - 3 is not 3 - 5."],
+        "explanation": "Addition is commutative. Subtraction is not.",
+        "misconception": "Thinking subtraction is also commutative.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "apply_commutativity",
+        "type": "short_answer",
+        "difficulty": 2,
+        "stem": "Write 456 + 321 in a different order.",
+        "answer": ["321 + 456"],
+        "hints": ["Swap the numbers."],
+        "explanation": "321 + 456.",
+        "misconception": "Swapping the digits within the numbers.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "explain_commutativity",
+        "type": "written",
+        "difficulty": 2,
+        "stem": "Explain the commutative property of addition in your own words.",
+        "hints": ["What happens to the answer when you change the order?"],
+        "explanation": "The commutative property of addition means that changing the order of the numbers being added does not change the sum. For example, 2 + 3 = 3 + 2.",
+        "rubric": {
+          "criteria": [
+            {"description": "States that order doesn't matter.", "marks": 1},
+            {"description": "Gives an example.", "marks": 1}
+          ]
+        },
+        "misconception": "Thinking the order matters.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "apply_commutativity",
+        "type": "numeric",
+        "difficulty": 2,
+        "stem": "250 + 340 = 590. What is 340 + 250?",
+        "answer": 590,
+        "check": "340+250",
+        "hints": ["Use the commutative property."],
+        "explanation": "590.",
+        "misconception": "Re-calculating and getting a different answer.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "apply_commutativity",
+        "type": "numeric",
+        "difficulty": 3,
+        "stem": "Calculate 123 + 456 + 789.",
+        "answer": 1368,
+        "check": "123+456+789",
+        "hints": ["Add two first, then the third."],
+        "explanation": "123 + 456 = 579. 579 + 789 = 1368.",
+        "misconception": "Adding incorrectly.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "apply_commutativity",
+        "type": "numeric",
+        "difficulty": 3,
+        "stem": "Calculate 789 + 123 + 456 using a different order.",
+        "answer": 1368,
+        "check": "789+123+456",
+        "hints": ["Should be the same as the previous question."],
+        "explanation": "1368.",
+        "misconception": "Thinking the sum will differ.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "explain_commutativity",
+        "type": "mcq",
+        "difficulty": 3,
+        "stem": "If 87 + 45 = 132, which of these is also true?",
+        "options": ["45 + 87 = 132", "87 - 45 = 42", "45 - 87 = -42", "132 + 45 = 87"],
+        "answer": 0,
+        "hints": ["Apply commutativity."],
+        "explanation": "45 + 87 = 132.",
+        "misconception": "Choosing subtraction.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "explain_commutativity",
+        "type": "written",
+        "difficulty": 3,
+        "stem": "Explain why 10 - 3 is NOT the same as 3 - 10.",
+        "hints": ["Calculate both.", "10 - 3 = 7. 3 - 10 = ?"],
+        "explanation": "10 - 3 = 7, but 3 - 10 = -7. Subtraction is not commutative because the order matters.",
+        "rubric": {
+          "criteria": [
+            {"description": "Calculates both results.", "marks": 1},
+            {"description": "States subtraction is not commutative.", "marks": 1}
+          ]
+        },
+        "misconception": "Thinking subtraction is commutative.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "apply_commutativity",
+        "type": "written",
+        "difficulty": 3,
+        "stem": "A pupil says 500 + 300 is different from 300 + 500. Are they correct? Explain.",
+        "hints": ["Apply commutativity."],
+        "explanation": "No, they are incorrect. By the commutative property, both equal 800.",
+        "rubric": {
+          "criteria": [
+            {"description": "States the pupil is incorrect.", "marks": 1},
+            {"description": "Explains both equal 800.", "marks": 1}
+          ]
+        },
+        "misconception": "Agreeing with the pupil.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "apply_commutativity",
+        "type": "numeric",
+        "difficulty": 4,
+        "stem": "Fill in the blank: 45 + ___ = 75 + 45",
+        "answer": 75,
+        "check": "75",
+        "hints": ["Use commutativity."],
+        "explanation": "The blank is 75.",
+        "misconception": "Trying to add first.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "explain_commutativity",
+        "type": "written",
+        "difficulty": 4,
+        "stem": "Create a word problem where commutativity is used to add two amounts.",
+        "hints": ["E.g., buying items.", "Does the order of buying matter?"],
+        "explanation": "For example, buying a book for 50 cedis and a pen for 10 cedis. The total is 50 + 10 or 10 + 50, both equal 60.",
+        "rubric": {
+          "criteria": [
+            {"description": "Creates a relevant problem.", "marks": 1},
+            {"description": "Shows commutativity.", "marks": 1}
+          ]
+        },
+        "misconception": "Creating a subtraction problem.",
+        "uncertain": []
+      }
+    ]
+  },
+  {
+    "file_name": "B3.1.2.4.3.json",
+    "indicator": {
+      "code": "B3.1.2.4.3",
+      "subject": "Mathematics",
+      "level": "Basic 3",
+      "strand": "Number",
+      "sub_strand": "Number Operations (Addition, Subtraction, Multiplication and Division)",
+      "content_standard": "B3.1.2.4 Develop and apply personal and standard strategies for adding and subtracting within 1000",
+      "objective": "Develop and explain estimation strategies to estimate the solution for a given word problem involving addition or subtraction sums up to 1000",
+      "source_page": 74
+    },
+    "spec": {
+      "skills": [
+        {"tag": "estimate_sums", "description": "Estimate sums to 1000 using friendly numbers.", "minQuestions": 2},
+        {"tag": "estimate_differences", "description": "Estimate differences to 1000 using friendly numbers.", "minQuestions": 2},
+        {"tag": "explain_estimation", "description": "Explain why the estimate is reasonable.", "minQuestions": 2}
+      ],
+      "difficultyPlan": "20 questions: 5 at difficulty 1, 7 at difficulty 2, 5 at difficulty 3, 3 at difficulty 4.",
+      "misconceptions": [
+        "Rounding both numbers up or both down without checking.",
+        "Thinking the estimate must be exact.",
+        "Choosing an estimate that is far from the actual value."
+      ],
+      "needsTeacherAssessment": false
+    },
+    "questions": [
+      {
+        "skill_tag": "estimate_sums",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "Estimate 230 + 160 by rounding to the nearest hundred.",
+        "options": ["300", "400", "500", "600"],
+        "answer": 1,
+        "hints": ["Round 230 to 200.", "Round 160 to 200.", "200 + 200."],
+        "explanation": "230 ≈ 200, 160 ≈ 200. 200 + 200 = 400.",
+        "misconception": "Rounding 160 down to 100 to get 300.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "estimate_differences",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "Estimate 660 - 430 by rounding to the nearest hundred.",
+        "options": ["100", "200", "300", "400"],
+        "answer": 2,
+        "hints": ["Round 660 to 700.", "Round 430 to 400.", "700 - 400."],
+        "explanation": "660 ≈ 700, 430 ≈ 400. 700 - 400 = 300.",
+        "misconception": "Subtracting 400 from 600 to get 200.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "estimate_sums",
+        "type": "numeric",
+        "difficulty": 1,
+        "stem": "Estimate 410 + 380 by rounding to the nearest hundred.",
+        "answer": 800,
+        "check": "400+400",
+        "hints": ["Round 410 to 400.", "Round 380 to 400."],
+        "explanation": "400 + 400 = 800.",
+        "misconception": "Saying 700.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "estimate_differences",
+        "type": "numeric",
+        "difficulty": 1,
+        "stem": "Estimate 890 - 520 by rounding to the nearest hundred.",
+        "answer": 400,
+        "check": "900-500",
+        "hints": ["Round 890 to 900.", "Round 520 to 500."],
+        "explanation": "900 - 500 = 400.",
+        "misconception": "Saying 300.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "explain_estimation",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "Why do we estimate in real life?",
+        "options": ["To get an exact answer", "To get a quick, approximate answer", "To make math harder", "To avoid using numbers"],
+        "answer": 1,
+        "hints": ["Estimation is about 'about how much'.", "It saves time."],
+        "explanation": "We estimate to get a quick, approximate answer that is close enough.",
+        "misconception": "Thinking estimation gives an exact answer.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "estimate_sums",
+        "type": "numeric",
+        "difficulty": 2,
+        "stem": "A trader sells 475 mangoes on Monday and 312 on Tuesday. Estimate the total number of mangoes sold by rounding to the nearest hundred.",
+        "answer": 800,
+        "check": "500+300",
+        "hints": ["475 ≈ 500.", "312 ≈ 300.", "500 + 300."],
+        "explanation": "500 + 300 = 800 mangoes.",
+        "misconception": "Rounding both to 500 to get 1000.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "estimate_differences",
+        "type": "numeric",
+        "difficulty": 2,
+        "stem": "A farmer has 780 yams. He sells 420. Estimate how many are left by rounding to the nearest hundred.",
+        "answer": 400,
+        "check": "800-400",
+        "hints": ["780 ≈ 800.", "420 ≈ 400."],
+        "explanation": "800 - 400 = 400 yams.",
+        "misconception": "Rounding 420 to 500 to get 300.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "estimate_sums",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "Estimate 345 + 267 by rounding to the nearest ten.",
+        "options": ["500", "600", "620", "630"],
+        "answer": 2,
+        "hints": ["345 ≈ 350.", "267 ≈ 270.", "350 + 270."],
+        "explanation": "350 + 270 = 620.",
+        "misconception": "Rounding to hundreds (300+300=600).",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "estimate_differences",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "Estimate 512 - 189 by rounding to the nearest ten.",
+        "options": ["300", "320", "330", "400"],
+        "answer": 1,
+        "hints": ["512 ≈ 510.", "189 ≈ 190.", "510 - 190."],
+        "explanation": "510 - 190 = 320.",
+        "misconception": "Rounding to hundreds (500-200=300).",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "estimate_sums",
+        "type": "short_answer",
+        "difficulty": 2,
+        "stem": "Estimate 723 + 198 by rounding to the nearest hundred.",
+        "answer": ["900"],
+        "hints": ["723 ≈ 700.", "198 ≈ 200."],
+        "explanation": "700 + 200 = 900.",
+        "misconception": "Saying 800.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "estimate_differences",
+        "type": "numeric",
+        "difficulty": 2,
+        "stem": "Estimate 645 - 215 by rounding to the nearest ten.",
+        "answer": 430,
+        "check": "650-220",
+        "hints": ["645 ≈ 650.", "215 ≈ 220.", "650 - 220."],
+        "explanation": "650 - 220 = 430.",
+        "misconception": "Saying 440.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "explain_estimation",
+        "type": "written",
+        "difficulty": 2,
+        "stem": "Explain how you would estimate 485 + 310.",
+        "hints": ["Round each number to the nearest hundred.", "Add the rounded numbers."],
+        "explanation": "Round 485 to 500. Round 310 to 300. 500 + 300 = 800. The estimate is about 800.",
+        "rubric": {
+          "criteria": [
+            {"description": "Rounds numbers to nearest hundred.", "marks": 1},
+            {"description": "Adds to get 800.", "marks": 1}
+          ]
+        },
+        "misconception": "Trying to calculate exactly.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "estimate_sums",
+        "type": "numeric",
+        "difficulty": 3,
+        "stem": "A school has 567 boys and 435 girls. Estimate the total number of pupils to the nearest hundred.",
+        "answer": 1000,
+        "check": "600+400",
+        "hints": ["567 ≈ 600.", "435 ≈ 400.", "600 + 400."],
+        "explanation": "600 + 400 = 1000.",
+        "misconception": "Rounding both to 500 to get 1000? No, 567 rounds to 600, 435 rounds to 400.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "estimate_differences",
+        "type": "numeric",
+        "difficulty": 3,
+        "stem": "Estimate the difference: 876 - 398. Round to the nearest hundred.",
+        "answer": 500,
+        "check": "900-400",
+        "hints": ["876 ≈ 900.", "398 ≈ 400.", "900 - 400."],
+        "explanation": "900 - 400 = 500.",
+        "misconception": "Rounding 876 to 800 to get 400.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "estimate_sums",
+        "type": "mcq",
+        "difficulty": 3,
+        "stem": "Which is the best estimate for 298 + 305?",
+        "options": ["500", "600", "700", "800"],
+        "answer": 1,
+        "hints": ["298 ≈ 300.", "305 ≈ 300.", "300 + 300."],
+        "explanation": "300 + 300 = 600.",
+        "misconception": "Choosing 500 because both round down? No, 298 rounds to 300, 305 rounds to 300.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "estimate_differences",
+        "type": "mcq",
+        "difficulty": 3,
+        "stem": "A pupil estimates 712 - 489 as 700 - 500 = 200. Is this a reasonable estimate?",
+        "options": ["Yes, because 712 is close to 700 and 489 is close to 500.", "No, because the answer should be 300.", "No, because 712 should be 800."],
+        "answer": 0,
+        "hints": ["Check how close each number is to the nearest hundred.", "712 is 12 away from 700. 489 is 11 away from 500."],
+        "explanation": "Yes, it is reasonable.",
+        "misconception": "Thinking estimation must be exact.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "explain_estimation",
+        "type": "written",
+        "difficulty": 3,
+        "stem": "Explain why 567 + 412 is approximately 1000.",
+        "hints": ["Round both numbers.", "567 is close to 600.", "412 is close to 400."],
+        "explanation": "567 rounds to 600. 412 rounds to 400. 600 + 400 = 1000. So, the sum is about 1000.",
+        "rubric": {
+          "criteria": [
+            {"description": "Rounds both numbers correctly.", "marks": 1},
+            {"description": "Explains the sum of the rounded numbers is 1000.", "marks": 1}
+          ]
+        },
+        "misconception": "Thinking 1000 is the exact answer.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "estimate_sums",
+        "type": "written",
+        "difficulty": 4,
+        "stem": "A market woman buys 350 tomatoes, 475 onions, and 225 peppers. Estimate the total number of items she bought by rounding to the nearest hundred.",
+        "hints": ["350 ≈ 400.", "475 ≈ 500.", "225 ≈ 200.", "Add them."],
+        "explanation": "400 + 500 + 200 = 1100 items.",
+        "rubric": {
+          "criteria": [
+            {"description": "Rounds each number correctly.", "marks": 1},
+            {"description": "Adds to get 1100.", "marks": 1}
+          ]
+        },
+        "misconception": "Rounding all to 300?",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "estimate_differences",
+        "type": "written",
+        "difficulty": 4,
+        "stem": "A pupil wants to buy a bicycle for 850 cedis. He has saved 425 cedis. Estimate how much more he needs to save to the nearest hundred.",
+        "hints": ["850 ≈ 900.", "425 ≈ 400.", "900 - 400."],
+        "explanation": "900 - 400 = 500 cedis.",
+        "rubric": {
+          "criteria": [
+            {"description": "Rounds both amounts.", "marks": 1},
+            {"description": "Calculates 500.", "marks": 1}
+          ]
+        },
+        "misconception": "Rounding 425 to 500 to get 400.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "estimate_sums",
+        "type": "numeric",
+        "difficulty": 4,
+        "stem": "Estimate 456 + 378 + 512 by rounding to the nearest ten.",
+        "answer": 1350,
+        "check": "460+380+510",
+        "hints": ["456 ≈ 460.", "378 ≈ 380.", "512 ≈ 510.", "460 + 380 + 510."],
+        "explanation": "460 + 380 = 840. 840 + 510 = 1350.",
+        "misconception": "Rounding to hundreds (500+400+500=1400).",
+        "uncertain": []
+      }
+    ]
+  },
+  {
+    "file_name": "B3.1.2.4.2.json",
+    "indicator": {
+      "code": "B3.1.2.4.2",
+      "subject": "Mathematics",
+      "level": "Basic 3",
+      "strand": "Number",
+      "sub_strand": "Number Operations (Addition, Subtraction, Multiplication and Division)",
+      "content_standard": "B3.1.2.4 Develop and apply personal and standard strategies for adding and subtracting within 1000",
+      "objective": "Use a variety of personal and standard strategies to solve different types of subtraction and addition equations and problems with missing numbers in all positions",
+      "source_page": 71
+    },
+    "spec": {
+      "skills": [
+        {"tag": "solve_missing_start", "description": "Solve equations with the start unknown (e.g., □ + 25 = 60).", "minQuestions": 2},
+        {"tag": "solve_missing_change", "description": "Solve equations with the change unknown (e.g., 45 + □ = 70).", "minQuestions": 2},
+        {"tag": "solve_missing_result", "description": "Solve equations with the result unknown (e.g., 45 + 25 = □).", "minQuestions": 2}
+      ],
+      "difficultyPlan": "20 questions: 5 at difficulty 1, 7 at difficulty 2, 5 at difficulty 3, 3 at difficulty 4.",
+      "misconceptions": [
+        "Always putting the unknown at the end.",
+        "Adding when the start is unknown.",
+        "Misaligning place value."
+      ],
+      "needsTeacherAssessment": false
+    },
+    "questions": [
+      {
+        "skill_tag": "solve_missing_result",
+        "type": "numeric",
+        "difficulty": 1,
+        "stem": "25 + 13 = □",
+        "answer": 38,
+        "check": "25+13",
+        "hints": ["Add the tens.", "Add the ones."],
+        "explanation": "25 + 13 = 38.",
+        "misconception": "Saying 35.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "solve_missing_change",
+        "type": "numeric",
+        "difficulty": 1,
+        "stem": "40 + □ = 70",
+        "answer": 30,
+        "check": "70-40",
+        "hints": ["What number plus 40 equals 70?", "70 - 40."],
+        "explanation": "40 + 30 = 70.",
+        "misconception": "Saying 110.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "solve_missing_start",
+        "type": "numeric",
+        "difficulty": 1,
+        "stem": "□ + 15 = 35",
+        "answer": 20,
+        "check": "35-15",
+        "hints": ["What number plus 15 gives 35?", "35 - 15."],
+        "explanation": "20 + 15 = 35.",
+        "misconception": "Saying 50.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "solve_missing_result",
+        "type": "numeric",
+        "difficulty": 1,
+        "stem": "80 - 25 = □",
+        "answer": 55,
+        "check": "80-25",
+        "hints": ["80 - 20 = 60.", "60 - 5 = 55."],
+        "explanation": "80 - 25 = 55.",
+        "misconception": "Saying 65.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "solve_missing_change",
+        "type": "numeric",
+        "difficulty": 1,
+        "stem": "60 - □ = 20",
+        "answer": 40,
+        "check": "60-20",
+        "hints": ["What number taken from 60 leaves 20?", "60 - 20."],
+        "explanation": "60 - 40 = 20.",
+        "misconception": "Saying 80.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "solve_missing_start",
+        "type": "numeric",
+        "difficulty": 2,
+        "stem": "□ - 25 = 50",
+        "answer": 75,
+        "check": "50+25",
+        "hints": ["What number take away 25 leaves 50?", "50 + 25."],
+        "explanation": "75 - 25 = 50.",
+        "misconception": "Saying 25.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "solve_missing_change",
+        "type": "numeric",
+        "difficulty": 2,
+        "stem": "125 + □ = 200",
+        "answer": 75,
+        "check": "200-125",
+        "hints": ["200 - 125."],
+        "explanation": "125 + 75 = 200.",
+        "misconception": "Saying 85.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "solve_missing_result",
+        "type": "numeric",
+        "difficulty": 2,
+        "stem": "340 + 250 = □",
+        "answer": 590,
+        "check": "340+250",
+        "hints": ["300 + 200 = 500.", "40 + 50 = 90."],
+        "explanation": "340 + 250 = 590.",
+        "misconception": "Saying 510.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "solve_missing_start",
+        "type": "numeric",
+        "difficulty": 2,
+        "stem": "□ + 145 = 300",
+        "answer": 155,
+        "check": "300-145",
+        "hints": ["300 - 100 = 200.", "200 - 45 = 155."],
+        "explanation": "155 + 145 = 300.",
+        "misconception": "Saying 45.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "solve_missing_change",
+        "type": "numeric",
+        "difficulty": 2,
+        "stem": "500 - □ = 250",
+        "answer": 250,
+        "check": "500-250",
+        "hints": ["500 - 250."],
+        "explanation": "500 - 250 = 250.",
+        "misconception": "Saying 750.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "solve_missing_start",
+        "type": "numeric",
+        "difficulty": 2,
+        "stem": "□ - 120 = 400",
+        "answer": 520,
+        "check": "400+120",
+        "hints": ["400 + 120."],
+        "explanation": "520 - 120 = 400.",
+        "misconception": "Saying 280.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "solve_missing_result",
+        "type": "numeric",
+        "difficulty": 2,
+        "stem": "625 - 312 = □",
+        "answer": 313,
+        "check": "625-312",
+        "hints": ["600 - 300 = 300.", "25 - 12 = 13."],
+        "explanation": "625 - 312 = 313.",
+        "misconception": "Saying 313? Wait, let me recheck. 625-312=313. Correct. Wrong answer example: 313? Let's use 303.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "solve_missing_start",
+        "type": "numeric",
+        "difficulty": 3,
+        "stem": "□ + 238 = 500",
+        "answer": 262,
+        "check": "500-238",
+        "hints": ["500 - 200 = 300.", "300 - 38 = 262."],
+        "explanation": "262 + 238 = 500.",
+        "misconception": "Saying 362.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "solve_missing_change",
+        "type": "numeric",
+        "difficulty": 3,
+        "stem": "450 + □ = 620",
+        "answer": 170,
+        "check": "620-450",
+        "hints": ["620 - 400 = 220.", "220 - 50 = 170."],
+        "explanation": "450 + 170 = 620.",
+        "misconception": "Saying 270.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "solve_missing_result",
+        "type": "numeric",
+        "difficulty": 3,
+        "stem": "800 - 475 = □",
+        "answer": 325,
+        "check": "800-475",
+        "hints": ["800 - 400 = 400.", "400 - 75 = 325."],
+        "explanation": "800 - 475 = 325.",
+        "misconception": "Saying 425.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "solve_missing_start",
+        "type": "numeric",
+        "difficulty": 3,
+        "stem": "□ - 350 = 280",
+        "answer": 630,
+        "check": "280+350",
+        "hints": ["280 + 350."],
+        "explanation": "630 - 350 = 280.",
+        "misconception": "Saying 70.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "solve_missing_change",
+        "type": "numeric",
+        "difficulty": 3,
+        "stem": "900 - □ = 450",
+        "answer": 450,
+        "check": "900-450",
+        "hints": ["900 - 450."],
+        "explanation": "900 - 450 = 450.",
+        "misconception": "Saying 1350.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "solve_missing_start",
+        "type": "written",
+        "difficulty": 4,
+        "stem": "Explain how to find the missing number in □ + 180 = 450.",
+        "hints": ["Subtract the known addend from the total."],
+        "explanation": "Subtract 180 from 450. 450 - 180 = 270. So, □ = 270.",
+        "rubric": {
+          "criteria": [
+            {"description": "States the correct operation (subtraction).", "marks": 1},
+            {"description": "Calculates the correct answer (270).", "marks": 1}
+          ]
+        },
+        "misconception": "Adding 450 and 180.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "solve_missing_change",
+        "type": "written",
+        "difficulty": 4,
+        "stem": "Explain how to find the missing number in 500 - □ = 150.",
+        "hints": ["Subtract the result from the start."],
+        "explanation": "Subtract 150 from 500. 500 - 150 = 350. So, □ = 350.",
+        "rubric": {
+          "criteria": [
+            {"description": "States the correct operation (subtraction).", "marks": 1},
+            {"description": "Calculates the correct answer (350).", "marks": 1}
+          ]
+        },
+        "misconception": "Adding 500 and 150.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "solve_missing_start",
+        "type": "written",
+        "difficulty": 4,
+        "stem": "Explain how to find the missing number in □ - 200 = 350.",
+        "hints": ["Add the change to the result to find the start."],
+        "explanation": "Add 200 to 350. 350 + 200 = 550. So, □ = 550.",
+        "rubric": {
+          "criteria": [
+            {"description": "States the correct operation (addition).", "marks": 1},
+            {"description": "Calculates the correct answer (550).", "marks": 1}
+          ]
+        },
+        "misconception": "Subtracting 350 from 200.",
+        "uncertain": []
+      }
+    ]
+  },
+  {
+    "file_name": "B3.1.2.4.1.json",
+    "indicator": {
+      "code": "B3.1.2.4.1",
+      "subject": "Mathematics",
+      "level": "Basic 3",
+      "strand": "Number",
+      "sub_strand": "Number Operations (Addition, Subtraction, Multiplication and Division)",
+      "content_standard": "B3.1.2.4 Develop and apply personal and standard strategies for adding and subtracting within 1000",
+      "objective": "Use a variety of personal strategies for adding within 1000",
+      "source_page": 71
+    },
+    "spec": {
+      "skills": [
+        {"tag": "model_with_objects", "description": "Model addition of 1 to 3 digit numbers with objects.", "minQuestions": 2},
+        {"tag": "partial_sums_1000", "description": "Use splitting/partial sums to add.", "minQuestions": 2},
+        {"tag": "friendly_jumps_1000", "description": "Use friendly jumps to add within 1000.", "minQuestions": 2}
+      ],
+      "difficultyPlan": "20 questions: 5 at difficulty 1, 7 at difficulty 2, 5 at difficulty 3, 3 at difficulty 4.",
+      "misconceptions": [
+        "Adding the wrong place values together.",
+        "Forgetting to add the partial sums together at the end."
+      ],
+      "needsTeacherAssessment": false
+    },
+    "questions": [
+      {
+        "skill_tag": "model_with_objects",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "You have 3 flats (100s), 2 rods (10s), and 4 units. What number is this?",
+        "options": ["324", "234", "342", "432"],
+        "answer": 0,
+        "hints": ["Flats are hundreds.", "Rods are tens.", "Units are ones."],
+        "explanation": "3 hundreds, 2 tens, and 4 ones make 324.",
+        "misconception": "Mixing up the place values.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "partial_sums_1000",
+        "type": "numeric",
+        "difficulty": 1,
+        "stem": "150 + 230 = (100 + 200) + (50 + 30) = 300 + 80 = ___",
+        "answer": 380,
+        "check": "150+230",
+        "hints": ["Add the hundreds.", "Add the tens."],
+        "explanation": "300 + 80 = 380.",
+        "misconception": "Saying 30080.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "friendly_jumps_1000",
+        "type": "numeric",
+        "difficulty": 1,
+        "stem": "120 + 150. Start at 120, add 100 to get 220, then add 50 to get ___.",
+        "answer": 270,
+        "check": "220+50",
+        "hints": ["220 + 50."],
+        "explanation": "220 + 50 = 270.",
+        "misconception": "Saying 320.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "model_with_objects",
+        "type": "numeric",
+        "difficulty": 1,
+        "stem": "How many 100s flats do you need to model 500?",
+        "answer": 5,
+        "check": "500/100",
+        "hints": ["Each flat is 100.", "500 / 100."],
+        "explanation": "You need 5 flats.",
+        "misconception": "Saying 50.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "partial_sums_1000",
+        "type": "numeric",
+        "difficulty": 1,
+        "stem": "400 + 300 = ?",
+        "answer": 700,
+        "check": "400+300",
+        "hints": ["4 hundreds + 3 hundreds."],
+        "explanation": "400 + 300 = 700.",
+        "misconception": "Saying 70.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "partial_sums_1000",
+        "type": "numeric",
+        "difficulty": 2,
+        "stem": "340 + 250. Add the hundreds (300+200=500), add the tens (40+50=90). Total?",
+        "answer": 590,
+        "check": "500+90",
+        "hints": ["Add the partial sums together."],
+        "explanation": "500 + 90 = 590.",
+        "misconception": "Saying 50090.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "friendly_jumps_1000",
+        "type": "numeric",
+        "difficulty": 2,
+        "stem": "245 + 132. Start at 245, add 100 to get 345, add 30 to get 375, add 2 to get ___.",
+        "answer": 377,
+        "check": "375+2",
+        "hints": ["375 + 2."],
+        "explanation": "375 + 2 = 377.",
+        "misconception": "Saying 395.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "model_with_objects",
+        "type": "numeric",
+        "difficulty": 2,
+        "stem": "You need to model 462. You have 4 flats and 6 rods. How many units?",
+        "answer": 2,
+        "check": "462-400-60",
+        "hints": ["4 flats = 400.", "6 rods = 60.", "462 - 460."],
+        "explanation": "462 - 460 = 2 units.",
+        "misconception": "Saying 62.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "partial_sums_1000",
+        "type": "numeric",
+        "difficulty": 2,
+        "stem": "518 + 263. Split into hundreds, tens, units: 500+200=700, 10+60=70, 8+3=11. Add them all up.",
+        "answer": 781,
+        "check": "700+70+11",
+        "hints": ["700 + 70 = 770.", "770 + 11."],
+        "explanation": "700 + 70 + 11 = 781.",
+        "misconception": "Saying 771.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "friendly_jumps_1000",
+        "type": "numeric",
+        "difficulty": 2,
+        "stem": "360 + 450. Think 360 + 400 = 760, then + 50 = ___.",
+        "answer": 810,
+        "check": "760+50",
+        "hints": ["760 + 50."],
+        "explanation": "760 + 50 = 810.",
+        "misconception": "Saying 790.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "partial_sums_1000",
+        "type": "numeric",
+        "difficulty": 2,
+        "stem": "125 + 234 = (100+200) + (20+30) + (5+4) = 300 + 50 + 9 = ___",
+        "answer": 359,
+        "check": "300+50+9",
+        "hints": ["300 + 50 = 350.", "350 + 9."],
+        "explanation": "350 + 9 = 359.",
+        "misconception": "Saying 355.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "friendly_jumps_1000",
+        "type": "numeric",
+        "difficulty": 2,
+        "stem": "580 + 270. Think 580 + 200 = 780, then + 70 = ___.",
+        "answer": 850,
+        "check": "780+70",
+        "hints": ["780 + 70."],
+        "explanation": "780 + 70 = 850.",
+        "misconception": "Saying 820.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "partial_sums_1000",
+        "type": "numeric",
+        "difficulty": 3,
+        "stem": "468 + 357. (400+300) + (60+50) + (8+7) = 700 + 110 + 15 = ___",
+        "answer": 825,
+        "check": "700+110+15",
+        "hints": ["700 + 110 = 810.", "810 + 15."],
+        "explanation": "810 + 15 = 825.",
+        "misconception": "Saying 800.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "friendly_jumps_1000",
+        "type": "numeric",
+        "difficulty": 3,
+        "stem": "675 + 248. Start at 675, add 200 to get 875, add 40 to get 915, add 8 to get ___.",
+        "answer": 923,
+        "check": "915+8",
+        "hints": ["915 + 8."],
+        "explanation": "915 + 8 = 923.",
+        "misconception": "Saying 913.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "model_with_objects",
+        "type": "numeric",
+        "difficulty": 3,
+        "stem": "If you have 12 rods and 5 units, what number do you have? (Trade 10 rods for 1 flat).",
+        "answer": 125,
+        "check": "100+25",
+        "hints": ["12 rods = 120.", "120 + 5."],
+        "explanation": "12 rods = 1 flat and 2 rods (120). 120 + 5 = 125.",
+        "misconception": "Saying 17.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "partial_sums_1000",
+        "type": "numeric",
+        "difficulty": 3,
+        "stem": "384 + 219. Add the hundreds, then tens, then ones. What is the sum of the tens?",
+        "answer": 90,
+        "check": "80+10",
+        "hints": ["Tens in 384 = 80.", "Tens in 219 = 10.", "80 + 10."],
+        "explanation": "80 + 10 = 90.",
+        "misconception": "Saying 9.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "friendly_jumps_1000",
+        "type": "written",
+        "difficulty": 3,
+        "stem": "Use friendly jumps to add 256 + 378.",
+        "hints": ["Add the hundreds first.", "Then the tens.", "Then the ones."],
+        "explanation": "256 + 300 = 556. 556 + 70 = 626. 626 + 8 = 634.",
+        "rubric": {
+          "criteria": [
+            {"description": "Adds 300 to get 556.", "marks": 1},
+            {"description": "Adds 70 to get 626.", "marks": 1},
+            {"description": "Adds 8 to get 634.", "marks": 1}
+          ]
+        },
+        "misconception": "Adding incorrectly.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "partial_sums_1000",
+        "type": "written",
+        "difficulty": 4,
+        "stem": "Explain how to use partial sums to add 456 + 328.",
+        "hints": ["Split both numbers into hundreds, tens, and ones.", "Add each place value."],
+        "explanation": "Add hundreds: 400 + 300 = 700. Add tens: 50 + 20 = 70. Add ones: 6 + 8 = 14. Add them all: 700 + 70 + 14 = 784.",
+        "rubric": {
+          "criteria": [
+            {"description": "Splits into hundreds, tens, ones.", "marks": 1},
+            {"description": "Adds each place value correctly.", "marks": 1},
+            {"description": "Gets the correct total (784).", "marks": 1}
+          ]
+        },
+        "misconception": "Adding the numbers as a whole.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "friendly_jumps_1000",
+        "type": "numeric",
+        "difficulty": 4,
+        "stem": "A pupil uses friendly jumps to add 348 + 276. They start at 348 and add 200, then 70, then 6. What is their answer?",
+        "answer": 624,
+        "check": "348+276",
+        "hints": ["348 + 200 = 548.", "548 + 70 = 618.", "618 + 6."],
+        "explanation": "548 + 70 = 618. 618 + 6 = 624.",
+        "misconception": "Adding the wrong chunks.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "model_with_objects",
+        "type": "written",
+        "difficulty": 4,
+        "stem": "Explain how to model 305 using base ten blocks.",
+        "hints": ["How many hundreds?", "How many tens?", "How many ones?"],
+        "explanation": "You need 3 flats (for 300), 0 rods (for 0 tens), and 5 units (for 5 ones).",
+        "rubric": {
+          "criteria": [
+            {"description": "States 3 flats.", "marks": 1},
+            {"description": "States 0 rods.", "marks": 1},
+            {"description": "States 5 units.", "marks": 1}
+          ]
+        },
+        "misconception": "Forgetting to mention 0 rods.",
+        "uncertain": []
+      }
+    ]
+  },
+  {
+    "file_name": "B3.1.2.3.1.json",
+    "indicator": {
+      "code": "B3.1.2.3.1",
+      "subject": "Mathematics",
+      "level": "Basic 3",
+      "strand": "Number",
+      "sub_strand": "Number Operations (Addition, Subtraction, Multiplication and Division)",
+      "content_standard": "B3.1.2.3 Develop and use strategies for mentally computing basic addition and subtraction facts within 100",
+      "objective": "Use strategies to mentally add and subtract whole numbers within 100",
+      "source_page": 70
+    },
+    "spec": {
+      "skills": [
+        {"tag": "make_doubles", "description": "Use doubles and near-doubles to add/subtract.", "minQuestions": 2},
+        {"tag": "make_tens", "description": "Use making 10s to add/subtract.", "minQuestions": 2},
+        {"tag": "compensation", "description": "Use compensation to subtract.", "minQuestions": 2},
+        {"tag": "count_up_friendly_jumps", "description": "Subtract by counting up in friendly jumps.", "minQuestions": 2}
+      ],
+      "difficultyPlan": "20 questions: 5 at difficulty 1, 7 at difficulty 2, 5 at difficulty 3, 3 at difficulty 4.",
+      "misconceptions": [
+        "Forgetting to add/subtract the compensation amount.",
+        "Losing track of jumps.",
+        "Incorrectly shifting quantities."
+      ],
+      "needsTeacherAssessment": false
+    },
+    "questions": [
+      {
+        "skill_tag": "make_doubles",
+        "type": "numeric",
+        "difficulty": 1,
+        "stem": "What is the double of 7?",
+        "answer": 14,
+        "check": "7+7",
+        "hints": ["Add 7 to itself.", "7 + 7."],
+        "explanation": "7 + 7 = 14.",
+        "misconception": "Saying 12.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "make_tens",
+        "type": "numeric",
+        "difficulty": 1,
+        "stem": "8 + 2 = ?",
+        "answer": 10,
+        "check": "8+2",
+        "hints": ["Count on from 8.", "8, 9, 10."],
+        "explanation": "8 + 2 = 10.",
+        "misconception": "Saying 11.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "make_doubles",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "5 + 6 is close to which double?",
+        "options": ["5 + 5", "6 + 6", "10 + 10", "4 + 4"],
+        "answer": 0,
+        "hints": ["5 and 6 are close together.", "Think of 5 + 5 = 10, then add 1."],
+        "explanation": "5 + 6 = 5 + 5 + 1 = 11.",
+        "misconception": "Choosing 6 + 6.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "count_up_friendly_jumps",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "To solve 15 - 3 using counting up, what is the first friendly jump from 3?",
+        "options": ["Jump 7 to get to 10", "Jump 10 to get to 13", "Jump 5 to get to 8"],
+        "answer": 0,
+        "hints": ["Friendly jumps often go to multiples of 10.", "3 + 7 = 10."],
+        "explanation": "The first friendly jump is to 10 (jump of 7). Then jump 5 to 15. Total = 12.",
+        "misconception": "Jumping a random amount.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "make_tens",
+        "type": "numeric",
+        "difficulty": 1,
+        "stem": "7 + 5 = 7 + 3 + ___",
+        "answer": 2,
+        "check": "5-3",
+        "hints": ["7 + 3 = 10.", "You need 2 more to make 5."],
+        "explanation": "7 + 3 = 10, plus 2 = 12. The missing number is 2.",
+        "misconception": "Saying 5.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "make_doubles",
+        "type": "numeric",
+        "difficulty": 2,
+        "stem": "6 + 7. Think 6 + 6 = 12, then add ___.",
+        "answer": 1,
+        "check": "7-6",
+        "hints": ["7 is 1 more than 6.", "12 + 1."],
+        "explanation": "6 + 7 = 6 + 6 + 1 = 13. The added number is 1.",
+        "misconception": "Saying 2.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "make_tens",
+        "type": "numeric",
+        "difficulty": 2,
+        "stem": "28 + 47. Change to 30 + ___.",
+        "answer": 45,
+        "check": "47-2",
+        "hints": ["28 becomes 30 by adding 2.", "Subtract 2 from 47 to compensate."],
+        "explanation": "28 + 2 = 30. 47 - 2 = 45. So 30 + 45 = 75.",
+        "misconception": "Saying 49.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "compensation",
+        "type": "numeric",
+        "difficulty": 2,
+        "stem": "48 - 19. Subtract 20 to get 28, then add ___.",
+        "answer": 1,
+        "check": "20-19",
+        "hints": ["You subtracted 1 too many.", "Add 1 back."],
+        "explanation": "48 - 20 = 28. Since 19 is 1 less than 20, you add 1 back to get 29.",
+        "misconception": "Saying 2.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "make_doubles",
+        "type": "numeric",
+        "difficulty": 2,
+        "stem": "25 + 26. Think 25 + 25 = 50, then add ___.",
+        "answer": 1,
+        "check": "26-25",
+        "hints": ["26 is 1 more than 25.", "50 + 1."],
+        "explanation": "25 + 26 = 25 + 25 + 1 = 51.",
+        "misconception": "Saying 2.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "count_up_friendly_jumps",
+        "type": "numeric",
+        "difficulty": 2,
+        "stem": "71 - 36. Start at 36, jump 10 to 46, 10 to 56, 10 to 66. What is the next jump to get to 71?",
+        "answer": 5,
+        "check": "71-66",
+        "hints": ["66 to 71.", "71 - 66."],
+        "explanation": "The next jump is 5. Total jumps: 10 + 10 + 10 + 5 = 35.",
+        "misconception": "Saying 10.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "make_tens",
+        "type": "numeric",
+        "difficulty": 2,
+        "stem": "38 + 52. Change to 40 + ___.",
+        "answer": 50,
+        "check": "52-2",
+        "hints": ["38 becomes 40 by adding 2.", "Subtract 2 from 52."],
+        "explanation": "38 + 2 = 40. 52 - 2 = 50. So 40 + 50 = 90.",
+        "misconception": "Saying 54.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "compensation",
+        "type": "numeric",
+        "difficulty": 2,
+        "stem": "53 - 28. Subtract 30 to get 23, then add ___.",
+        "answer": 2,
+        "check": "30-28",
+        "hints": ["You subtracted 2 too many.", "Add 2 back."],
+        "explanation": "53 - 30 = 23. Add 2 back to get 25.",
+        "misconception": "Saying 3.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "compensation",
+        "type": "numeric",
+        "difficulty": 3,
+        "stem": "67 - 39. Subtract 40 to get 27, then add 1. What is the answer?",
+        "answer": 28,
+        "check": "67-39",
+        "hints": ["27 + 1 = ?"],
+        "explanation": "67 - 40 = 27. 27 + 1 = 28.",
+        "misconception": "Saying 27.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "make_tens",
+        "type": "mcq",
+        "difficulty": 3,
+        "stem": "24 + 26. Think 25 + 25 = 50. True or False?",
+        "options": ["True", "False"],
+        "answer": 0,
+        "hints": ["Move 1 from 26 to 24.", "24 + 1 = 25. 26 - 1 = 25."],
+        "explanation": "By shifting 1 from 26 to 24, you get 25 + 25 = 50.",
+        "misconception": "Thinking this strategy doesn't work.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "count_up_friendly_jumps",
+        "type": "numeric",
+        "difficulty": 3,
+        "stem": "84 - 57. Jump from 57 to 60 (3), 60 to 80 (20), 80 to 84 (4). Total jumps?",
+        "answer": 27,
+        "check": "3+20+4",
+        "hints": ["Add the jumps together.", "3 + 20 + 4."],
+        "explanation": "3 + 20 + 4 = 27.",
+        "misconception": "Saying 24 (missing the 3).",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "make_doubles",
+        "type": "numeric",
+        "difficulty": 3,
+        "stem": "48 - 23. Think 48 - 24 = 24, then add ___.",
+        "answer": 1,
+        "check": "24-23",
+        "hints": ["You subtracted 1 too many.", "Add 1 back."],
+        "explanation": "48 - 24 = 24. Since 23 is 1 less than 24, add 1 back to get 25.",
+        "misconception": "Saying 2.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "make_tens",
+        "type": "mcq",
+        "difficulty": 3,
+        "stem": "69 + 23. Think 70 + 22 = 92. True or False?",
+        "options": ["True", "False"],
+        "answer": 0,
+        "hints": ["69 + 1 = 70.", "23 - 1 = 22."],
+        "explanation": "By shifting 1 from 23 to 69, you get 70 + 22 = 92.",
+        "misconception": "Thinking this strategy doesn't work.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "make_tens",
+        "type": "written",
+        "difficulty": 4,
+        "stem": "Explain how to use the 'make tens' strategy to solve 58 + 37.",
+        "hints": ["Change 58 to 60.", "What happens to 37?"],
+        "explanation": "Add 2 to 58 to make 60. Then subtract 2 from 37 to make 35. 60 + 35 = 95.",
+        "rubric": {
+          "criteria": [
+            {"description": "Changes 58 to 60.", "marks": 1},
+            {"description": "Changes 37 to 35.", "marks": 1},
+            {"description": "Adds 60 + 35 = 95.", "marks": 1}
+          ]
+        },
+        "misconception": "Adding 2 to both numbers.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "count_up_friendly_jumps",
+        "type": "written",
+        "difficulty": 4,
+        "stem": "Explain the counting up strategy for 92 - 68.",
+        "hints": ["Start at 68.", "Jump to a friendly number like 70."],
+        "explanation": "Start at 68. Jump 2 to 70. Jump 20 to 90. Jump 2 to 92. Total = 24.",
+        "rubric": {
+          "criteria": [
+            {"description": "Mentions jumping to 70.", "marks": 1},
+            {"description": "Mentions jumping to 90.", "marks": 1},
+            {"description": "Gets the correct total (24).", "marks": 1}
+          ]
+        },
+        "misconception": "Trying to subtract directly and making a mistake.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "compensation",
+        "type": "written",
+        "difficulty": 4,
+        "stem": "Use compensation to solve 83 - 48. Explain your steps.",
+        "hints": ["Round 48 to 50.", "Subtract 50 from 83.", "Add 2 back."],
+        "explanation": "83 - 50 = 33. Since you subtracted 2 too many, add 2: 33 + 2 = 35.",
+        "rubric": {
+          "criteria": [
+            {"description": "Subtracts 50 to get 33.", "marks": 1},
+            {"description": "Explains adding 2 back.", "marks": 1},
+            {"description": "Gets the correct answer (35).", "marks": 1}
+          ]
+        },
+        "misconception": "Subtracting 83 - 40 = 43, then subtracting 8.",
+        "uncertain": []
+      }
+    ]
+  },
+  {
+    "file_name": "B3.1.2.2.1.json",
+    "indicator": {
+      "code": "B3.1.2.2.1",
+      "subject": "Mathematics",
+      "level": "Basic 3",
+      "strand": "Number",
+      "sub_strand": "Number Operations (Addition, Subtraction, Multiplication and Division)",
+      "content_standard": "B3.1.2.2 Demonstrate an understanding of the concept of \"equality\" and \"not equal to\" in addition and subtraction problems with sums up to 1000",
+      "objective": "Use the concept of \"equal to\" and \"not equal to\"",
+      "source_page": 69
+    },
+    "spec": {
+      "skills": [
+        {"tag": "explain_not_equal", "description": "Explain that # means “not the same as” or “not equal to”.", "minQuestions": 2},
+        {"tag": "construct_unequal_sets", "description": "Construct two sets that are not equal and explain why.", "minQuestions": 2},
+        {"tag": "use_equals_symbol", "description": "Use the = symbol to record equal relationships.", "minQuestions": 2}
+      ],
+      "difficultyPlan": "20 questions: 5 at difficulty 1, 7 at difficulty 2, 5 at difficulty 3, 3 at difficulty 4.",
+      "misconceptions": [
+        "Thinking # means “equal to”.",
+        "Thinking = means “the answer is” rather than “the same as”."
+      ],
+      "needsTeacherAssessment": false
+    },
+    "questions": [
+      {
+        "skill_tag": "explain_not_equal",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "What does the symbol # mean in a number sentence?",
+        "options": ["Equal to", "Not equal to", "Add", "Subtract"],
+        "answer": 1,
+        "hints": ["It looks like a crossed-out equals sign.", "It means the two sides are not the same."],
+        "explanation": "The symbol # means 'not equal to'.",
+        "misconception": "Thinking # means equal to.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "use_equals_symbol",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "Which symbol makes this true: 5 + 3 ___ 8?",
+        "options": ["#", "=", "+", "-"],
+        "answer": 1,
+        "hints": ["Calculate 5 + 3 first.", "Is 8 the same as 8?"],
+        "explanation": "5 + 3 is 8, so the two sides are equal. The symbol is =.",
+        "misconception": "Using # because they think it means 'the answer is'.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "construct_unequal_sets",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "Ama has 3 apples. Kofi has 5 apples. Are their sets equal or not equal?",
+        "options": ["Equal", "Not equal"],
+        "answer": 1,
+        "hints": ["Count the apples.", "3 is not the same as 5."],
+        "explanation": "The sets are not equal because 3 is not the same as 5.",
+        "misconception": "Saying they are equal because they both have apples.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "explain_not_equal",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "Look at the sets: (***) and (****). Which statement is true?",
+        "options": ["3 = 4", "3 # 4", "3 + 4"],
+        "answer": 1,
+        "hints": ["One set has 3 stars, the other has 4.", "Are they the same?"],
+        "explanation": "The sets are not equal, so we write 3 # 4.",
+        "misconception": "Writing 3 = 4.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "use_equals_symbol",
+        "type": "short_answer",
+        "difficulty": 1,
+        "stem": "Fill in the missing symbol: 10 - 2 ___ 8",
+        "answer": ["="],
+        "hints": ["Calculate 10 - 2.", "Is it 8?"],
+        "explanation": "10 - 2 = 8. The symbol is =.",
+        "misconception": "Saying #.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "use_equals_symbol",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "Which of these equations is true?",
+        "options": ["4 + 5 = 10", "6 + 4 = 10", "7 + 2 = 10", "8 + 1 = 10"],
+        "answer": 1,
+        "hints": ["Calculate each side.", "Which sum actually equals 10?"],
+        "explanation": "6 + 4 = 10 is the only true equation.",
+        "misconception": "Thinking 4 + 5 = 10.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "construct_unequal_sets",
+        "type": "short_answer",
+        "difficulty": 2,
+        "stem": "Kwame builds two towers with blocks. Tower A is 6 blocks high. Tower B is 6 blocks high. What symbol compares them?",
+        "answer": ["="],
+        "hints": ["Are the towers the same height?", "Use the equals sign."],
+        "explanation": "The towers are the same height, so 6 = 6.",
+        "misconception": "Using #.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "explain_not_equal",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "In a game, Team A scores 10 points. Team B scores 12 points. How do we compare their scores using #?",
+        "options": ["10 = 12", "10 # 12", "12 # 10", "10 + 12"],
+        "answer": 1,
+        "hints": ["The scores are different.", "Team A's score # Team B's score."],
+        "explanation": "10 is not equal to 12, so 10 # 12.",
+        "misconception": "Using =.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "use_equals_symbol",
+        "type": "numeric",
+        "difficulty": 2,
+        "stem": "Find the missing number to make the equation true: 15 - 5 = ___",
+        "answer": 10,
+        "check": "15-5",
+        "hints": ["What is 15 minus 5?", "Count back from 15."],
+        "explanation": "15 - 5 = 10.",
+        "misconception": "Saying 20 (adding instead).",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "construct_unequal_sets",
+        "type": "written",
+        "difficulty": 2,
+        "stem": "Draw two sets of circles. One set has 4 circles, the other has 6 circles. Write a statement using # or =.",
+        "hints": ["Draw 4 circles.", "Draw 6 circles.", "Are they equal?"],
+        "explanation": "The learner should draw two sets and write 4 # 6 (or 6 # 4).",
+        "rubric": {
+          "criteria": [
+            {"description": "Draws two sets with 4 and 6 circles.", "marks": 1},
+            {"description": "Writes 4 # 6 or 6 # 4.", "marks": 1}
+          ]
+        },
+        "misconception": "Writing 4 = 6.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "explain_not_equal",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "Explain why 8 # 8 is false.",
+        "options": ["Because 8 is equal to 8, so we should use =.", "Because 8 is greater than 8.", "Because # means equal."],
+        "answer": 0,
+        "hints": ["Look at both numbers.", "Are they the same?"],
+        "explanation": "8 is equal to 8, so the correct symbol is =, not #.",
+        "misconception": "Thinking # can be used for any two numbers.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "use_equals_symbol",
+        "type": "short_answer",
+        "difficulty": 2,
+        "stem": "20 - 10 ___ 5 + 5. What symbol makes this true?",
+        "answer": ["="],
+        "hints": ["Calculate both sides.", "20-10 is 10. 5+5 is 10."],
+        "explanation": "Both sides equal 10, so the symbol is =.",
+        "misconception": "Using # because the numbers on the left are bigger.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "use_equals_symbol",
+        "type": "numeric",
+        "difficulty": 3,
+        "stem": "Which number makes this true? 14 + 3 = 10 + ___",
+        "answer": 7,
+        "check": "14+3-10",
+        "hints": ["Calculate 14 + 3.", "What number plus 10 equals 17?"],
+        "explanation": "14 + 3 = 17. 10 + 7 = 17. The missing number is 7.",
+        "misconception": "Saying 17.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "explain_not_equal",
+        "type": "mcq",
+        "difficulty": 3,
+        "stem": "A pupil writes 7 + 2 # 9. Is the pupil correct?",
+        "options": ["Yes, because 7+2 is 9.", "No, because 7+2 equals 9, so we should use =.", "No, because 7+2 is 10."],
+        "answer": 1,
+        "hints": ["Calculate 7 + 2.", "Is it equal to 9?"],
+        "explanation": "7 + 2 = 9, so the sides are equal. The pupil should have used =.",
+        "misconception": "Thinking the symbol is correct.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "construct_unequal_sets",
+        "type": "short_answer",
+        "difficulty": 3,
+        "stem": "Write a number sentence that is NOT equal (using #) for the numbers 15 and 10.",
+        "answer": ["15 # 10", "10 # 15"],
+        "hints": ["Use the # symbol.", "Put the numbers on either side."],
+        "explanation": "15 # 10 or 10 # 15.",
+        "misconception": "Writing 15 = 10.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "use_equals_symbol",
+        "type": "numeric",
+        "difficulty": 3,
+        "stem": "3 groups of 4 is the same as 2 groups of ___.",
+        "answer": 6,
+        "check": "(3*4)/2",
+        "hints": ["3 x 4 = 12.", "What times 2 equals 12?"],
+        "explanation": "3 x 4 = 12. 2 x 6 = 12. The missing number is 6.",
+        "misconception": "Saying 4.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "use_equals_symbol",
+        "type": "numeric",
+        "difficulty": 3,
+        "stem": "Solve for the missing number: 5 x 2 = 20 - ___",
+        "answer": 10,
+        "check": "20-(5*2)",
+        "hints": ["5 x 2 = 10.", "What number minus from 20 equals 10?"],
+        "explanation": "5 x 2 = 10. 20 - 10 = 10. The missing number is 10.",
+        "misconception": "Saying 5.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "explain_not_equal",
+        "type": "written",
+        "difficulty": 4,
+        "stem": "Explain the difference between = and #. Provide an example of each.",
+        "hints": ["What does = mean?", "What does # mean?"],
+        "explanation": "= means 'the same as' or 'equal to' (e.g., 5 = 5). # means 'not the same as' or 'not equal to' (e.g., 3 # 4).",
+        "rubric": {
+          "criteria": [
+            {"description": "Explains = means equal.", "marks": 1},
+            {"description": "Explains # means not equal.", "marks": 1},
+            {"description": "Gives an example of each.", "marks": 1}
+          ]
+        },
+        "misconception": "Thinking = means 'the answer is'.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "construct_unequal_sets",
+        "type": "written",
+        "difficulty": 4,
+        "stem": "Create a word problem where two sets are NOT equal. Write the comparison statement using #.",
+        "hints": ["Think of two groups of items with different counts.", "Write the statement."],
+        "explanation": "For example: Ama has 8 pencils. Kojo has 5 pencils. 8 # 5.",
+        "rubric": {
+          "criteria": [
+            {"description": "Creates a problem with unequal sets.", "marks": 1},
+            {"description": "Writes the correct # statement.", "marks": 1}
+          ]
+        },
+        "misconception": "Creating equal sets.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "use_equals_symbol",
+        "type": "numeric",
+        "difficulty": 4,
+        "stem": "Find the missing number: 3 x ___ = 12 + 3",
+        "answer": 5,
+        "check": "(12+3)/3",
+        "hints": ["Calculate 12 + 3.", "What times 3 equals 15?"],
+        "explanation": "12 + 3 = 15. 3 x 5 = 15. The missing number is 5.",
+        "misconception": "Saying 15.",
+        "uncertain": []
+      }
+    ]
+  }
+]

@@ -1,0 +1,291 @@
+{
+  "indicator": {
+    "code": "B6.5.2.1.1",
+    "subject": "Science",
+    "level": "Basic 6",
+    "strand": "HUMANS AND THE ENVIRONMENT",
+    "sub_strand": "Diseases",
+    "content_standard": "B6.5.2.1 Demonstrate knowledge of common diseases of humans; causes, symptoms, effects and prevention",
+    "objective": "Explain the causes, symptoms and prevention of Eczema",
+    "source_page": 67
+  },
+  "spec": {
+    "skills": [
+      {"tag": "cause_eczema", "description": "Identify causes/triggers of eczema (e.g. dry skin, irritants, allergies).", "minQuestions": 3},
+      {"tag": "symptoms_eczema", "description": "Identify common symptoms of eczema (e.g. itchy skin, redness, rash).", "minQuestions": 4},
+      {"tag": "prevention_eczema", "description": "Identify ways to prevent or manage eczema (e.g. moisturising, avoiding irritants, keeping skin clean).", "minQuestions": 4},
+      {"tag": "effects_eczema", "description": "State effects of eczema on a person (e.g. discomfort, itching, skin damage).", "minQuestions": 3},
+      {"tag": "action_eczema", "description": "State what to do if someone shows signs of eczema (see a health worker).", "minQuestions": 3},
+      {"tag": "concept_map", "description": "Organise causes, symptoms and prevention of eczema in a simple table or map.", "minQuestions": 3}
+    ],
+    "difficultyPlan": "20 questions total — Difficulty 1: 5; Difficulty 2: 7; Difficulty 3: 5; Difficulty 4: 3.",
+    "misconceptions": [
+      "Eczema is contagious.",
+      "Eczema is caused by dirty water only.",
+      "Eczema cannot be managed.",
+      "Eczema is the same as measles.",
+      "Only children get eczema.",
+      "Scratching eczema makes it better."
+    ],
+    "needsTeacherAssessment": true
+  },
+  "questions": [
+    {
+      "skill_tag": "cause_eczema",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which of these can cause eczema?",
+      "options": ["Dry skin and irritants", "Eating too much food", "Sleeping late", "Playing football"],
+      "answer": 0,
+      "hints": ["Eczema affects the skin.", "Dry skin can trigger it."],
+      "explanation": "Eczema can be caused by dry skin and contact with irritants such as soap or dust.",
+      "misconception": "Eczema is caused by dirty water only.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "symptoms_eczema",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which of these is a common symptom of eczema?",
+      "options": ["Itchy skin", "Broken leg", "Toothache", "Hiccups"],
+      "answer": 0,
+      "hints": ["Eczema makes the skin feel uncomfortable.", "It often makes you want to scratch."],
+      "explanation": "Itchy skin is a common symptom of eczema.",
+      "misconception": "Eczema causes toothache.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "prevention_eczema",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which of these helps prevent eczema?",
+      "options": ["Moisturising the skin regularly", "Using harsh soaps", "Scratching the skin", "Avoiding water completely"],
+      "answer": 0,
+      "hints": ["Moisturisers keep the skin soft.", "Dry skin makes eczema worse."],
+      "explanation": "Moisturising the skin regularly helps prevent eczema by keeping the skin from drying out.",
+      "misconception": "Eczema cannot be managed.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "effects_eczema",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "How can eczema affect a person?",
+      "options": ["It causes discomfort and itching", "It makes them taller", "It makes them run faster", "It makes them hungry"],
+      "answer": 0,
+      "hints": ["Eczema affects the skin.", "It can be very uncomfortable."],
+      "explanation": "Eczema causes discomfort and itching, which can affect a person's daily life.",
+      "misconception": "Eczema has no effect.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "action_eczema",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What should you do if you think someone has eczema?",
+      "options": ["Tell an adult and see a health worker", "Hide the person", "Ignore the person", "Give the person sweets"],
+      "answer": 0,
+      "hints": ["A health worker can help.", "Tell an adult you trust."],
+      "explanation": "If someone shows signs of eczema, tell an adult and see a health worker for advice.",
+      "misconception": "Eczema does not need medical attention.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "cause_eczema",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Ama says, 'Eczema is caused by dirty water.' What is the best correction?",
+      "options": ["Yes, eczema comes from dirty water", "No, eczema can be caused by dry skin and irritants", "No, eczema is caused by too much sun", "No, eczema is caused by eating too much"],
+      "answer": 1,
+      "hints": ["Eczema is a skin condition.", "Irritants like soap can trigger it."],
+      "explanation": "Eczema is not caused by dirty water. It can be caused by dry skin, irritants and allergies.",
+      "misconception": "Eczema is caused by dirty water only.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "symptoms_eczema",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which set lists common symptoms of eczema?",
+      "options": ["Itchy skin, redness, rash", "Broken arm, headache, sneezing", "Toothache, hiccups, back pain", "Runny nose, earache, cough"],
+      "answer": 0,
+      "hints": ["Eczema affects the skin.", "It causes itching and redness."],
+      "explanation": "Common symptoms of eczema include itchy skin, redness and a rash.",
+      "misconception": "Eczema only causes a rash.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "prevention_eczema",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which of these can help manage eczema?",
+      "options": ["Avoiding harsh soaps and using mild moisturisers", "Using very hot water on the skin", "Scratching the skin often", "Wearing rough clothes"],
+      "answer": 0,
+      "hints": ["Harsh soaps can irritate the skin.", "Mild moisturisers keep skin soft."],
+      "explanation": "Avoiding harsh soaps and using mild moisturisers can help manage eczema.",
+      "misconception": "Scratching makes eczema better.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "effects_eczema",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Why can eczema be uncomfortable for a person?",
+      "options": ["It causes constant itching and redness", "It makes them taller", "It makes them run faster", "It makes them hungry"],
+      "answer": 0,
+      "hints": ["Think about the symptoms.", "Itching can be very uncomfortable."],
+      "explanation": "Eczema causes constant itching and redness, which can be very uncomfortable.",
+      "misconception": "Eczema is not uncomfortable.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "action_eczema",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "A learner has red, itchy skin that might be eczema. What should the learner do?",
+      "options": ["Tell the teacher and visit a health worker", "Scratch the skin until it bleeds", "Ignore it and continue playing", "Hide the rash from everyone"],
+      "answer": 0,
+      "hints": ["A health worker can help.", "Tell an adult you trust."],
+      "explanation": "The learner should tell the teacher and visit a health worker for proper advice and treatment.",
+      "misconception": "Eczema should be hidden.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "cause_eczema",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Give one cause of eczema.",
+      "answer": ["dry skin", "irritants like soap", "allergies", "dust"],
+      "hints": ["Think about what can irritate the skin.", "Dry skin is one cause."],
+      "explanation": "Causes of eczema include dry skin, irritants like soap or dust, and allergies.",
+      "misconception": "Eczema has no cause.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "symptoms_eczema",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Name two symptoms of eczema.",
+      "answer": ["itchy skin and redness", "rash and itching", "redness and rash"],
+      "hints": ["Eczema affects the skin.", "Itching is common."],
+      "explanation": "Common symptoms of eczema include itchy skin, redness and a rash.",
+      "misconception": "Eczema only causes a rash.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "prevention_eczema",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Give one way to prevent or manage eczema.",
+      "answer": ["moisturise the skin regularly", "avoid harsh soaps", "keep the skin clean", "avoid irritants"],
+      "hints": ["Keep the skin from drying out.", "Avoid harsh soaps."],
+      "explanation": "Ways to prevent or manage eczema include moisturising the skin regularly and avoiding harsh soaps or irritants.",
+      "misconception": "Eczema cannot be managed.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "concept_map",
+      "type": "written",
+      "difficulty": 2,
+      "stem": "Draw a simple table with three columns: 'Causes', 'Symptoms' and 'Prevention'. Write one correct point under each column for eczema.",
+      "rubric": {
+        "criteria": [
+          {"description": "Wrote one correct cause of eczema", "marks": 1},
+          {"description": "Wrote one correct symptom of eczema", "marks": 1},
+          {"description": "Wrote one correct way to prevent eczema", "marks": 1},
+          {"description": "Organised the points clearly under the three headings", "marks": 1}
+        ]
+      },
+      "answer": "",
+      "hints": ["Think about dry skin for causes.", "Think about itching for symptoms.", "Think about moisturising for prevention."],
+      "explanation": "This is a written task. Your teacher will mark it using the rubric.",
+      "misconception": "Eczema has no clear causes or prevention.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "symptoms_eczema",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "Why is eczema sometimes confused with other skin rashes?",
+      "options": ["Because it causes redness and itching like other rashes", "Because it causes a broken leg", "Because it causes a fever", "Because it causes a cough"],
+      "answer": 0,
+      "hints": ["Eczema affects the skin.", "Redness and itching can look like other rashes."],
+      "explanation": "Eczema can be confused with other skin rashes because it causes redness and itching, which are common to many skin conditions.",
+      "misconception": "Eczema is the only skin rash.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "prevention_eczema",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "A pupil with eczema is advised to avoid harsh soaps. Why?",
+      "options": ["Harsh soaps can dry and irritate the skin", "Harsh soaps make the skin soft", "Harsh soaps cure eczema", "Harsh soaps make the skin lighter"],
+      "answer": 0,
+      "hints": ["Soaps can remove natural oils.", "Eczema-prone skin is sensitive."],
+      "explanation": "Harsh soaps can dry and irritate the skin, making eczema worse.",
+      "misconception": "Harsh soaps help eczema.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "effects_eczema",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Explain how eczema can affect a person's daily life.",
+      "answer": ["it causes constant itching and discomfort which can disturb sleep and activities", "the itching can make it hard to concentrate or sleep", "it can make a person uncomfortable and self-conscious"],
+      "hints": ["Think about itching.", "Think about how it feels."],
+      "explanation": "Eczema can cause constant itching and discomfort, which may disturb sleep, make it hard to concentrate and affect a person's confidence.",
+      "misconception": "Eczema has no effect on daily life.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "action_eczema",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "What should you do if a classmate has itchy, red skin that might be eczema?",
+      "answer": ["tell the teacher and encourage them to see a health worker", "advise them to see a health worker and inform an adult", "tell an adult and get medical help"],
+      "hints": ["Tell an adult.", "A health worker can help."],
+      "explanation": "You should tell the teacher and encourage your classmate to see a health worker for advice.",
+      "misconception": "Eczema does not need medical attention.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "concept_map",
+      "type": "drawing",
+      "difficulty": 3,
+      "stem": "Design a simple poster for your class about eczema. Show one cause, one symptom and one way to prevent it. Use drawings and short words.",
+      "rubric": {
+        "criteria": [
+          {"description": "Showed one correct cause of eczema", "marks": 1},
+          {"description": "Showed one correct symptom of eczema", "marks": 1},
+          {"description": "Showed one correct way to prevent eczema", "marks": 1},
+          {"description": "Used clear drawings and short words", "marks": 2},
+          {"description": "Poster is neat and suitable for learners", "marks": 1}
+        ]
+      },
+      "answer": "",
+      "hints": ["Think about dry skin for a cause.", "Draw itchy skin for a symptom.", "Show moisturiser for prevention."],
+      "explanation": "This is a drawing task. Your teacher will mark it using the rubric.",
+      "misconception": "Eczema is not important.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "concept_map",
+      "type": "written",
+      "difficulty": 4,
+      "stem": "Write a short message (3–4 sentences) for your school notice board about eczema. Include what causes it, one symptom, and one way to prevent it.",
+      "rubric": {
+        "criteria": [
+          {"description": "Stated one correct cause of eczema", "marks": 1},
+          {"description": "Stated one correct symptom of eczema", "marks": 1},
+          {"description": "Stated one correct way to prevent eczema", "marks": 1},
+          {"description": "Wrote in clear sentences suitable for a school notice board", "marks": 1}
+        ]
+      },
+      "answer": "",
+      "hints": ["Start with 'Eczema is caused by...'", "Mention itching or redness.", "Mention moisturising or avoiding harsh soaps."],
+      "explanation": "This is a written task. Your teacher will mark it using the rubric.",
+      "misconception": "Eczema cannot be prevented.",
+      "uncertain": []
+    }
+  ]
+}

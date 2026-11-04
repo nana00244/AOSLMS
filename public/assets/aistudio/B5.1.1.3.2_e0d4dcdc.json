@@ -1,0 +1,288 @@
+{
+  "indicator": {
+    "code": "B5.1.1.3.2",
+    "subject": "Mathematics",
+    "level": "Basic 5",
+    "strand": "Number",
+    "sub_strand": "Counting, Representation & Cardinality",
+    "content_standard": "B5.1.1.3 Demonstrate an understanding of factors, multiples of numbers including composite, even, odd and prime numbers from 1 to 100",
+    "objective": "Generate and identify prime numbers and composite numbers between 1 and 100",
+    "source_page": 82
+  },
+  "spec": {
+    "skills": [
+      {"tag": "identify_primes_composites", "description": "Identify prime and composite numbers between 1 and 100.", "minQuestions": 2},
+      {"tag": "use_sieve_of_eratosthenes", "description": "Use the Sieve of Eratosthenes to find primes up to 100.", "minQuestions": 2},
+      {"tag": "explain_prime_composite", "description": "Explain why a number is prime or composite (e.g., number of factors).", "minQuestions": 2}
+    ],
+    "difficultyPlan": "20 questions: 5 at difficulty 1, 7 at difficulty 2, 5 at difficulty 3, 3 at difficulty 4.",
+    "misconceptions": [
+      "Thinking 1 is prime.",
+      "Thinking all odd numbers are prime (e.g., 9, 15, 21).",
+      "Confusing prime with odd.",
+      "Forgetting that 2 is prime."
+    ],
+    "needsTeacherAssessment": false
+  },
+  "questions": [
+    {
+      "skill_tag": "identify_primes_composites",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which of these numbers is prime?",
+      "options": ["4", "7", "9", "12"],
+      "answer": 1,
+      "hints": ["A prime number has exactly two factors: 1 and itself.", "7 has factors 1 and 7 only."],
+      "explanation": "7 is prime because its only factors are 1 and 7.",
+      "misconception": "Choosing 9 because it is odd.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_primes_composites",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which of these numbers is composite?",
+      "options": ["2", "3", "5", "8"],
+      "answer": 3,
+      "hints": ["Composite numbers have more than two factors."],
+      "explanation": "8 is composite because it has factors 1, 2, 4, 8.",
+      "misconception": "Choosing 2, 3, or 5 which are prime.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "explain_prime_composite",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Why is 1 NOT a prime number?",
+      "options": ["It is odd", "It has only one factor", "It is too small", "It is even"],
+      "answer": 1,
+      "hints": ["Prime numbers must have exactly two factors."],
+      "explanation": "1 has only one factor (itself), so it is not prime.",
+      "misconception": "Thinking 1 is prime because it seems like a basic number.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_primes_composites",
+      "type": "numeric",
+      "difficulty": 1,
+      "stem": "What is the smallest prime number?",
+      "answer": 2,
+      "check": "2",
+      "hints": ["It is the only even prime."],
+      "explanation": "2 is the smallest prime number.",
+      "misconception": "Saying 1.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_primes_composites",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Is 2 a prime number?",
+      "options": ["Yes, because it has exactly two factors: 1 and 2.", "No, because it is even.", "No, because it is too small."],
+      "answer": 0,
+      "hints": ["Check its factors."],
+      "explanation": "2 is prime; it is the only even prime number.",
+      "misconception": "Thinking all even numbers are composite.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_primes_composites",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "List all the prime numbers between 1 and 20.",
+      "answer": ["2, 3, 5, 7, 11, 13, 17, 19"],
+      "hints": ["Check each number for factors."],
+      "explanation": "The primes between 1 and 20 are 2, 3, 5, 7, 11, 13, 17, 19.",
+      "misconception": "Including 1 or 9 or 15.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_primes_composites",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "What is the only even prime number?",
+      "answer": 2,
+      "check": "2",
+      "hints": ["All other even numbers are divisible by 2."],
+      "explanation": "2 is the only even prime.",
+      "misconception": "Saying 4 or 6.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "explain_prime_composite",
+      "type": "written",
+      "difficulty": 2,
+      "stem": "Explain why 12 is a composite number.",
+      "hints": ["List its factors."],
+      "explanation": "12 is composite because it has more than two factors: 1, 2, 3, 4, 6, 12.",
+      "rubric": {
+        "criteria": [
+          {"description": "States that 12 has more than two factors.", "marks": 1},
+          {"description": "Lists some of the factors.", "marks": 1}
+        ]
+      },
+      "misconception": "Thinking 12 is prime.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_primes_composites",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which of these numbers is NOT prime?",
+      "options": ["11", "13", "15", "17"],
+      "answer": 2,
+      "hints": ["15 has factors 1, 3, 5, 15."],
+      "explanation": "15 is composite because it has more than two factors.",
+      "misconception": "Thinking all odd numbers are prime.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_primes_composites",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "List all the composite numbers between 1 and 10.",
+      "answer": ["4, 6, 8, 9, 10"],
+      "hints": ["Composite numbers have more than 2 factors."],
+      "explanation": "The composite numbers between 1 and 10 are 4, 6, 8, 9, 10.",
+      "misconception": "Including 1 or 2 or 3.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "use_sieve_of_eratosthenes",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "In the Sieve of Eratosthenes, which number is crossed out first?",
+      "options": ["1", "2", "3", "5"],
+      "answer": 0,
+      "hints": ["1 is not prime, so it is crossed out first."],
+      "explanation": "1 is crossed out first because it is not prime.",
+      "misconception": "Saying 2.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "use_sieve_of_eratosthenes",
+      "type": "written",
+      "difficulty": 2,
+      "stem": "Explain how the Sieve of Eratosthenes works.",
+      "hints": ["Cross out multiples of primes starting from 2."],
+      "explanation": "You write numbers 1 to 100. Cross out 1. Then cross out multiples of 2 (except 2), then multiples of 3 (except 3), then 5, then 7, etc. The numbers not crossed out are prime.",
+      "rubric": {
+        "criteria": [
+          {"description": "Mentions crossing out multiples.", "marks": 1},
+          {"description": "States the remaining numbers are prime.", "marks": 1}
+        ]
+      },
+      "misconception": "Thinking it is a random process.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_primes_composites",
+      "type": "numeric",
+      "difficulty": 3,
+      "stem": "How many prime numbers are there between 1 and 30?",
+      "answer": 10,
+      "check": "10",
+      "hints": ["List them: 2, 3, 5, 7, 11, 13, 17, 19, 23, 29."],
+      "explanation": "There are 10 prime numbers between 1 and 30.",
+      "misconception": "Including 1.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_primes_composites",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "Which of these is a prime number?",
+      "options": ["21", "27", "31", "33"],
+      "answer": 2,
+      "hints": ["31 has only factors 1 and 31."],
+      "explanation": "31 is prime.",
+      "misconception": "Choosing 21, 27, or 33 because they are odd.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "explain_prime_composite",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "Explain why 91 is a composite number, even though it looks like it might be prime.",
+      "hints": ["Try dividing 91 by 7."],
+      "explanation": "91 is composite because 7 × 13 = 91. So its factors are 1, 7, 13, 91.",
+      "rubric": {
+        "criteria": [
+          {"description": "States 91 = 7 × 13.", "marks": 1},
+          {"description": "Concludes it has more than two factors.", "marks": 1}
+        ]
+      },
+      "misconception": "Thinking 91 is prime because it is not divisible by 2, 3, or 5.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_primes_composites",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "List all the prime numbers between 50 and 70.",
+      "answer": ["53, 59, 61, 67"],
+      "hints": ["Check each number for factors."],
+      "explanation": "The primes between 50 and 70 are 53, 59, 61, 67.",
+      "misconception": "Including 51, 57, or 63.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "explain_prime_composite",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "A pupil says 'All odd numbers are prime.' Give three odd numbers that are composite to prove the pupil wrong.",
+      "hints": ["Think of odd numbers with more than two factors."],
+      "explanation": "9 (factors 1,3,9), 15 (1,3,5,15), 21 (1,3,7,21) are odd composite numbers.",
+      "rubric": {
+        "criteria": [
+          {"description": "Gives three odd composite numbers.", "marks": 1}
+        ]
+      },
+      "misconception": "Believing all odd numbers are prime.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_primes_composites",
+      "type": "written",
+      "difficulty": 4,
+      "stem": "A pupil says 1 is prime because it only has 1 and itself as factors. Explain why this is incorrect.",
+      "hints": ["Prime numbers must have exactly two distinct factors."],
+      "explanation": "1 does not have two distinct factors; its only factor is 1. So it is not prime.",
+      "rubric": {
+        "criteria": [
+          {"description": "States 1 has only one factor.", "marks": 1},
+          {"description": "Explains prime needs exactly two factors.", "marks": 1}
+        ]
+      },
+      "misconception": "Agreeing that 1 is prime.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_primes_composites",
+      "type": "mcq",
+      "difficulty": 4,
+      "stem": "What is the largest prime number less than 100?",
+      "options": ["89", "91", "97", "99"],
+      "answer": 2,
+      "hints": ["Check each number for factors."],
+      "explanation": "97 is the largest prime under 100.",
+      "misconception": "Choosing 99 or 91.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "use_sieve_of_eratosthenes",
+      "type": "written",
+      "difficulty": 4,
+      "stem": "After crossing out multiples of 2, 3, and 5, which numbers remain in the first row (1-10) of the Sieve of Eratosthenes?",
+      "hints": ["1 is crossed out first. 4, 6, 8, 10 are multiples of 2. 9 is a multiple of 3."],
+      "explanation": "The remaining numbers are 2, 3, 5, 7.",
+      "rubric": {
+        "criteria": [
+          {"description": "Lists 2, 3, 5, 7.", "marks": 1}
+        ]
+      },
+      "misconception": "Including 1 or 9.",
+      "uncertain": []
+    }
+  ]
+}

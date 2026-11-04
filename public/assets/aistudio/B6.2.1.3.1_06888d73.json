@@ -1,0 +1,463 @@
+{
+  "indicator": {
+    "code": "B6.2.1.3.1",
+    "subject": "Science",
+    "level": "Basic 6",
+    "strand": "CYCLES",
+    "sub_strand": "Earth Science",
+    "content_standard": "B6.2.1.3 Demonstrate understanding of how carbon and nitrogen are cycled in nature",
+    "objective": "Know the functions of carbon within the environment",
+    "source_page": 58
+  },
+  "spec": {
+    "skills": [
+      {
+        "tag": "identify_carbon_materials",
+        "description": "Identify materials in the environment that contain carbon (e.g. pencils, charcoal, food, carbon dioxide).",
+        "minQuestions": 4
+      },
+      {
+        "tag": "role_carbon_materials",
+        "description": "State the role of carbon in those materials (e.g. carbon in pencils for writing, carbon in charcoal for fuel).",
+        "minQuestions": 4
+      },
+      {
+        "tag": "carbon_dioxide_role",
+        "description": "Recognise carbon dioxide as a gas containing carbon that is used by plants.",
+        "minQuestions": 3
+      },
+      {
+        "tag": "carbon_cycle_importance",
+        "description": "Explain simply why carbon is important in the environment.",
+        "minQuestions": 3
+      },
+      {
+        "tag": "role_play_carbon",
+        "description": "Demonstrate understanding of carbon’s function through role-play or simple description.",
+        "minQuestions": 3
+      },
+      {
+        "tag": "carbon_in_food",
+        "description": "Recognise that carbon is part of food and living things.",
+        "minQuestions": 3
+      }
+    ],
+    "difficultyPlan": "20 questions total — Difficulty 1: 5; Difficulty 2: 7; Difficulty 3: 5; Difficulty 4: 3.",
+    "misconceptions": [
+      "Carbon is only found in pencils.",
+      "Carbon is not part of living things.",
+      "Carbon dioxide is not related to carbon.",
+      "Carbon has no function in the environment.",
+      "Carbon is only a pollutant.",
+      "Charcoal does not contain carbon."
+    ],
+    "needsTeacherAssessment": true
+  },
+  "questions": [
+    {
+      "skill_tag": "identify_carbon_materials",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which of these materials contains carbon?",
+      "options": [
+        "A pencil",
+        "A glass of water",
+        "A stone",
+        "A metal spoon"
+      ],
+      "answer": 0,
+      "hints": [
+        "Pencils are made of graphite and clay.",
+        "Graphite is a form of carbon."
+      ],
+      "explanation": "A pencil contains carbon in the form of graphite. Graphite is a form of carbon used for writing.",
+      "misconception": "Carbon is only found in pencils.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_carbon_materials",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which of these is a source of carbon in the environment?",
+      "options": [
+        "Charcoal",
+        "Clean water",
+        "Sunlight",
+        "Wind"
+      ],
+      "answer": 0,
+      "hints": [
+        "Charcoal is made from burnt wood.",
+        "It is mostly carbon."
+      ],
+      "explanation": "Charcoal contains carbon. It is made from wood that has been burned without much air.",
+      "misconception": "Charcoal does not contain carbon.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_carbon_materials",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Name one material in the environment that contains carbon.",
+      "answer": [
+        "pencil",
+        "charcoal",
+        "food",
+        "wood",
+        "coal"
+      ],
+      "hints": [
+        "Think about what you write with.",
+        "Think about what you burn for fuel."
+      ],
+      "explanation": "Materials that contain carbon include pencils (graphite), charcoal, wood, coal and food.",
+      "misconception": "Carbon is only found in pencils.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_carbon_materials",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "A pupil says, 'Carbon is only found in pencils.' What is the best correction?",
+      "options": [
+        "Yes, carbon is only in pencils",
+        "No, carbon is also found in charcoal, food and carbon dioxide",
+        "No, carbon is only found in water",
+        "No, carbon is only found in stones"
+      ],
+      "answer": 1,
+      "hints": [
+        "Think about charcoal and food.",
+        "Carbon is in many things."
+      ],
+      "explanation": "Carbon is found in pencils, but also in charcoal, food, carbon dioxide and many other materials.",
+      "misconception": "Carbon is only found in pencils.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "role_carbon_materials",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What is the role of carbon in a pencil?",
+      "options": [
+        "It helps the pencil write",
+        "It makes the pencil heavy",
+        "It makes the pencil colourless",
+        "It makes the pencil smell good"
+      ],
+      "answer": 0,
+      "hints": [
+        "The dark part of the pencil is graphite.",
+        "Graphite leaves marks on paper."
+      ],
+      "explanation": "Carbon in the form of graphite helps the pencil write by leaving marks on paper.",
+      "misconception": "Carbon in pencils is for colour.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "role_carbon_materials",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "What is the role of carbon in charcoal?",
+      "options": [
+        "It helps charcoal burn as fuel",
+        "It makes charcoal wet",
+        "It makes charcoal transparent",
+        "It makes charcoal soft"
+      ],
+      "answer": 0,
+      "hints": [
+        "Charcoal is used for cooking.",
+        "It burns to give heat."
+      ],
+      "explanation": "Carbon in charcoal helps it burn and produce heat for cooking and other uses.",
+      "misconception": "Charcoal does not use carbon for burning.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "role_carbon_materials",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "State one role of carbon in charcoal.",
+      "answer": [
+        "it helps charcoal burn",
+        "it makes charcoal a good fuel",
+        "it provides heat when charcoal burns"
+      ],
+      "hints": [
+        "Think about cooking with charcoal.",
+        "It burns to give heat."
+      ],
+      "explanation": "Carbon in charcoal helps it burn and produce heat.",
+      "misconception": "Carbon in charcoal is not useful.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "role_carbon_materials",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "A pupil says, 'Carbon in charcoal is only for colour.' What is the best correction?",
+      "options": [
+        "Yes, carbon is only for colour",
+        "No, carbon in charcoal is mainly for burning and producing heat",
+        "No, carbon in charcoal is for writing",
+        "No, carbon in charcoal is for drinking"
+      ],
+      "answer": 1,
+      "hints": [
+        "Charcoal is used for cooking.",
+        "It burns to produce heat."
+      ],
+      "explanation": "Carbon in charcoal is mainly for burning and producing heat, not just for colour.",
+      "misconception": "Carbon in charcoal is only for colour.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "carbon_dioxide_role",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which gas contains carbon and is used by plants to make food?",
+      "options": [
+        "Carbon dioxide",
+        "Oxygen",
+        "Nitrogen",
+        "Hydrogen"
+      ],
+      "answer": 0,
+      "hints": [
+        "Plants take in this gas from the air.",
+        "It contains carbon."
+      ],
+      "explanation": "Carbon dioxide is a gas that contains carbon. Plants use it to make food.",
+      "misconception": "Carbon dioxide is not related to carbon.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "carbon_dioxide_role",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "What do plants use carbon dioxide for?",
+      "answer": [
+        "to make food",
+        "for photosynthesis",
+        "to make their own food"
+      ],
+      "hints": [
+        "Plants need it to make food.",
+        "They take it from the air."
+      ],
+      "explanation": "Plants use carbon dioxide to make food.",
+      "misconception": "Plants do not use carbon dioxide.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "carbon_dioxide_role",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "How is carbon dioxide related to carbon?",
+      "options": [
+        "Carbon dioxide contains carbon",
+        "Carbon dioxide does not contain carbon",
+        "Carbon dioxide is a metal",
+        "Carbon dioxide is a solid"
+      ],
+      "answer": 0,
+      "hints": [
+        "The name says 'carbon' dioxide.",
+        "It has carbon in it."
+      ],
+      "explanation": "Carbon dioxide contains carbon. It is a gas made of carbon and oxygen.",
+      "misconception": "Carbon dioxide is not related to carbon.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "carbon_cycle_importance",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Why is carbon important in the environment?",
+      "options": [
+        "It is part of all living things and helps plants make food",
+        "It makes the environment dirty",
+        "It has no use",
+        "It only exists in pencils"
+      ],
+      "answer": 0,
+      "hints": [
+        "Carbon is in living things.",
+        "Plants use carbon dioxide."
+      ],
+      "explanation": "Carbon is important because it is part of all living things and helps plants make food through carbon dioxide.",
+      "misconception": "Carbon has no function in the environment.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "carbon_cycle_importance",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Give one reason why carbon is important in the environment.",
+      "answer": [
+        "it is part of living things",
+        "plants use carbon dioxide to make food",
+        "it helps plants make food",
+        "it is in food"
+      ],
+      "hints": [
+        "Think about living things.",
+        "Think about plants making food."
+      ],
+      "explanation": "Carbon is important because it is part of all living things and helps plants make food through carbon dioxide.",
+      "misconception": "Carbon has no importance.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "carbon_cycle_importance",
+      "type": "mcq",
+      "difficulty": 4,
+      "stem": "A pupil says, 'Carbon is only a pollutant.' What is the best correction?",
+      "options": [
+        "Yes, carbon is only a pollutant",
+        "No, carbon is also an essential part of living things and helps plants make food",
+        "No, carbon is only found in water",
+        "No, carbon is a metal"
+      ],
+      "answer": 1,
+      "hints": [
+        "Carbon is in all living things.",
+        "Plants need carbon dioxide."
+      ],
+      "explanation": "Carbon is not only a pollutant; it is an essential part of living things and helps plants make food.",
+      "misconception": "Carbon is only a pollutant.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "role_play_carbon",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "In a role-play about carbon, what would a learner acting as carbon in a pencil say?",
+      "options": [
+        "I help you write",
+        "I help you breathe",
+        "I help you drink",
+        "I help you run"
+      ],
+      "answer": 0,
+      "hints": [
+        "Pencils are for writing.",
+        "Carbon in graphite leaves marks."
+      ],
+      "explanation": "A learner acting as carbon in a pencil would say 'I help you write' because carbon in graphite helps pencils write.",
+      "misconception": "Carbon in pencils is for breathing.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "role_play_carbon",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "In a role-play, how would you describe the function of carbon in charcoal?",
+      "answer": [
+        "I help charcoal burn and give heat",
+        "I make charcoal a good fuel",
+        "I help produce heat when charcoal burns"
+      ],
+      "hints": [
+        "Charcoal is used for cooking.",
+        "It burns to give heat."
+      ],
+      "explanation": "Carbon in charcoal helps it burn and produce heat, so a learner could say 'I help charcoal burn and give heat.'",
+      "misconception": "Carbon in charcoal is not useful.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "role_play_carbon",
+      "type": "practical",
+      "difficulty": 3,
+      "stem": "In groups, role-play the functions of carbon in the environment. One learner acts as carbon in a pencil, another as carbon in charcoal, another as carbon dioxide used by plants. Each learner should say one sentence explaining their role. Present to the class.",
+      "rubric": {
+        "criteria": [
+          {
+            "description": "Acted as carbon in a pencil and explained its role (writing)",
+            "marks": 1
+          },
+          {
+            "description": "Acted as carbon in charcoal and explained its role (burning/fuel)",
+            "marks": 1
+          },
+          {
+            "description": "Acted as carbon dioxide and explained its role (used by plants to make food)",
+            "marks": 1
+          },
+          {
+            "description": "Spoke clearly and participated in the role-play",
+            "marks": 1
+          }
+        ]
+      },
+      "answer": "",
+      "hints": [
+        "Think about the role of carbon in each material.",
+        "Say one sentence about what carbon does."
+      ],
+      "explanation": "This is a practical/role-play task. Your teacher will mark it using the rubric.",
+      "misconception": "Carbon has no function.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "carbon_in_food",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Is carbon part of the food we eat?",
+      "options": [
+        "Yes, carbon is part of food",
+        "No, food does not contain carbon",
+        "Only some foods contain carbon",
+        "Carbon is only in pencils"
+      ],
+      "answer": 0,
+      "hints": [
+        "Living things contain carbon.",
+        "Food comes from living things."
+      ],
+      "explanation": "Yes, carbon is part of food because food comes from living things, and all living things contain carbon.",
+      "misconception": "Food does not contain carbon.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "carbon_in_food",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Why is carbon found in food?",
+      "answer": [
+        "because food comes from living things and living things contain carbon",
+        "food is made from living things which contain carbon",
+        "all living things contain carbon, so food does too"
+      ],
+      "hints": [
+        "Food comes from plants and animals.",
+        "Living things contain carbon."
+      ],
+      "explanation": "Carbon is found in food because food comes from living things, and all living things contain carbon.",
+      "misconception": "Food does not contain carbon.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "carbon_in_food",
+      "type": "mcq",
+      "difficulty": 4,
+      "stem": "A learner says, 'Carbon is only found in non-living things like pencils and charcoal.' What is the best correction?",
+      "options": [
+        "Yes, carbon is only in non-living things",
+        "No, carbon is also found in living things and food",
+        "No, carbon is only found in water",
+        "No, carbon is only found in air"
+      ],
+      "answer": 1,
+      "hints": [
+        "Living things contain carbon.",
+        "Food contains carbon."
+      ],
+      "explanation": "Carbon is found in non-living things like pencils and charcoal, but it is also found in living things and food.",
+      "misconception": "Carbon is not part of living things.",
+      "uncertain": []
+    }
+  ]
+}

@@ -1,0 +1,270 @@
+{
+  "indicator": {
+    "code": "B4.2.1.1.1",
+    "subject": "Science",
+    "level": "Basic 4",
+    "strand": "CYCLES",
+    "sub_strand": "Earth Science",
+    "content_standard": "B4.2.1.1 Recognise that some events in our environment occur recurrently",
+    "objective": "Demonstrate understanding of cyclic movements in the environment",
+    "source_page": 27
+  },
+  "spec": {
+    "skills": [
+      {"tag": "recognise_cyclic", "description": "Recognise that a movement or event that repeats in a regular pattern is called a cycle.", "minQuestions": 3},
+      {"tag": "identify_examples", "description": "Identify examples of cyclic movements in the environment (e.g. swinging pendulum, clock hands, merry-go-round, walking limbs).", "minQuestions": 4},
+      {"tag": "pendulum_swing", "description": "Describe the back-and-forth (to-and-fro) swinging of a pendulum as a cyclic movement.", "minQuestions": 3},
+      {"tag": "clock_hands", "description": "Describe the repeating movement of the second hand on an analogue clock.", "minQuestions": 3},
+      {"tag": "body_movement", "description": "Describe how parts of the body move in a repeating pattern during walking.", "minQuestions": 3},
+      {"tag": "common_feature", "description": "State the common feature of cyclic movements (they repeat after a regular time or pattern).", "minQuestions": 4}
+    ],
+    "difficultyPlan": "20 questions total — Difficulty 1: 5; Difficulty 2: 7; Difficulty 3: 5; Difficulty 4: 3.",
+    "misconceptions": [
+      "A cycle is any movement, even if it does not repeat.",
+      "A pendulum moves in only one direction.",
+      "Clock hands move randomly.",
+      "Walking is not a cycle because we can stop.",
+      "Merry-go-round is not cyclic because it does not go back and forth.",
+      "Cyclic movements never stop."
+    ],
+    "needsTeacherAssessment": false
+  },
+  "questions": [
+    {
+      "skill_tag": "recognise_cyclic",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What is a cyclic movement?",
+      "options": ["A movement that happens only once", "A movement that changes direction randomly", "A movement that repeats in a regular pattern", "A movement that stops and never starts again"],
+      "answer": 2,
+      "hints": ["Think about the word 'cycle' — like a bicycle wheel going round and round.", "Does a cyclic movement happen once or many times?"],
+      "explanation": "A cyclic movement is a movement that repeats in a regular pattern. The word 'cycle' means going round and round or repeating.",
+      "misconception": "A cycle is any movement, even if it does not repeat.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_examples",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which of these is a cyclic movement?",
+      "options": ["A swinging pendulum", "A car moving from Accra to Kumasi", "A stone falling once to the ground", "A girl walking straight to the market and stopping"],
+      "answer": 0,
+      "hints": ["Which movement keeps repeating?", "A pendulum swings back and forth many times."],
+      "explanation": "A pendulum keeps swinging back and forth in a regular pattern. That is a cyclic movement.",
+      "misconception": "A cycle is any movement, even if it does not repeat.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "clock_hands",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What does the second hand of an analogue clock do?",
+      "options": ["It moves once and stops", "It only moves when someone pushes it", "It moves randomly in any direction", "It moves round the clock face again and again"],
+      "answer": 3,
+      "hints": ["Watch a clock for one minute.", "Does the second hand keep moving?"],
+      "explanation": "The second hand moves round the clock face again and again in a regular pattern. This is a cyclic movement.",
+      "misconception": "Clock hands move randomly.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "pendulum_swing",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "A pendulum is a small ball hanging on a string. When you pull the ball to one side and let it go, what does it do?",
+      "options": ["It falls off the string", "It swings back and forth", "It stays still", "It spins round and round"],
+      "answer": 1,
+      "hints": ["Think about a swing in a playground.", "It moves from one side to the other."],
+      "explanation": "When you let go, the ball swings from one side to the other and back again. This back-and-forth movement is cyclic.",
+      "misconception": "A pendulum moves in only one direction.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "body_movement",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "When you walk, your legs move in a pattern. What kind of pattern is this?",
+      "options": ["A random pattern", "A pattern that happens only once", "A pattern that repeats", "A pattern that never repeats"],
+      "answer": 2,
+      "hints": ["Think about the steps you take when walking.", "Left, right, left, right — does the pattern repeat?"],
+      "explanation": "When we walk, our legs move left, right, left, right in a repeating pattern. This repeating pattern makes walking a cyclic movement.",
+      "misconception": "Walking is not a cycle because we can stop.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "recognise_cyclic",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which statement best describes a cyclic movement?",
+      "options": ["It repeats after a regular time or pattern", "It happens once and never again", "It only happens at night", "It never stops"],
+      "answer": 0,
+      "hints": ["Think of the word 'cycle'.", "Does it happen once or many times?"],
+      "explanation": "A cyclic movement repeats after a regular time or pattern. Examples include a clock's second hand and a swinging pendulum.",
+      "misconception": "Cyclic movements never stop.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_examples",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which of these is NOT a cyclic movement?",
+      "options": ["A pendulum swinging", "A merry-go-round turning", "The hands of a clock moving", "A ball rolling once down a hill"],
+      "answer": 3,
+      "hints": ["Which movement happens only once and does not repeat by itself?", "A ball rolling down a hill stops at the bottom."],
+      "explanation": "A ball rolling once down a hill does not repeat by itself. The other three movements repeat in a regular pattern.",
+      "misconception": "A cycle is any movement, even if it does not repeat.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "pendulum_swing",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Ama set up a pendulum and watched it. What describes the movement of the pendulum?",
+      "options": ["It moves forward and never comes back", "It moves back and forth many times", "It spins in a full circle", "It moves only when touched"],
+      "answer": 1,
+      "hints": ["Think about how a pendulum hangs.", "Does it swing from side to side?"],
+      "explanation": "A pendulum swings from one side to the other and back again, many times. This is a back-and-forth cyclic movement.",
+      "misconception": "A pendulum moves in only one direction.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "clock_hands",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Why is the movement of the second hand on an analogue clock called a cyclic movement?",
+      "options": ["Because it moves only when the clock is wound", "Because it only moves during the day", "Because it moves in a straight line", "Because it goes round the clock face again and again"],
+      "answer": 3,
+      "hints": ["Watch the second hand for one minute.", "Does it return to where it started?"],
+      "explanation": "The second hand goes round the clock face and returns to the same position again and again. This regular repeating is what makes it cyclic.",
+      "misconception": "Clock hands move randomly.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "common_feature",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "What is the common feature of a swinging pendulum, the second hand of a clock and a merry-go-round?",
+      "options": ["They all move in a repeating pattern", "They all move in straight lines", "They all stop after one round", "They all only move at night"],
+      "answer": 0,
+      "hints": ["Think about what happens after each movement.", "Do they keep doing the same movement?"],
+      "explanation": "All three movements repeat in a regular pattern. That is the common feature of cyclic movements.",
+      "misconception": "A cycle is any movement, even if it does not repeat.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_examples",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which of these is a cyclic movement?",
+      "options": ["A kite flying once across the sky", "A boy running in a straight line", "A merry-go-round in a playground", "A stone thrown into a river"],
+      "answer": 2,
+      "hints": ["Which one keeps going round and round?", "A merry-go-round goes round again and again."],
+      "explanation": "A merry-go-round turns round and round, returning to the same position repeatedly. This is a cyclic movement.",
+      "misconception": "Merry-go-round is not cyclic because it does not go back and forth.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "body_movement",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Name one movement of your body that is cyclic.",
+      "answer": ["walking", "breathing", "blinking", "chewing"],
+      "hints": ["Think of something you do again and again.", "Walking uses your legs in a repeating pattern."],
+      "explanation": "Walking, breathing, blinking and chewing are all movements that repeat. They are cyclic movements of the body.",
+      "misconception": "Only machines show cyclic movement.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "common_feature",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "Pupil A says a pendulum is cyclic. Pupil B says a merry-go-round is cyclic. What makes both movements cyclic?",
+      "options": ["They both happen only once", "They both happen again and again in a regular pattern", "They both happen only at night", "They both move very fast"],
+      "answer": 1,
+      "hints": ["Think about what happens after one round.", "Do they keep repeating?"],
+      "explanation": "Both movements happen again and again in a regular pattern. Repeating regularly is what makes a movement cyclic.",
+      "misconception": "A cycle is any movement, even if it does not repeat.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "recognise_cyclic",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "A pupil notices that the sun rises every morning and sets every evening. Why is this a cyclic movement?",
+      "options": ["Because it happens every day in a regular pattern", "Because it happens only in Kumasi", "Because the sun moves in a straight line", "Because the sun disappears forever"],
+      "answer": 0,
+      "hints": ["Think about how often the sun rises.", "Does it happen every day?"],
+      "explanation": "The sun rises and sets every day in a regular pattern. This repeated daily pattern is a cycle.",
+      "misconception": "A cycle is any movement, even if it does not repeat.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "pendulum_swing",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Describe the movement of a pendulum in one sentence.",
+      "answer": ["a pendulum swings back and forth in a regular pattern", "it swings from side to side and back again", "it moves back and forth"],
+      "hints": ["It is a ball on a string.", "It moves from one side to the other and back."],
+      "explanation": "A pendulum swings from side to side and back again in a regular pattern. This back-and-forth movement repeats, so it is cyclic.",
+      "misconception": "A pendulum moves in only one direction.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "clock_hands",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "A pupil watches the second hand of an analogue clock. The hand passes the 12 at 10:00:00 am and again at 10:01:00 am. What does this show?",
+      "options": ["The hand moves randomly", "The hand stops after one round", "The hand repeats its movement every 60 seconds", "The hand only moves once a day"],
+      "answer": 2,
+      "hints": ["How many seconds are in one minute?", "Does the hand come back to the same place after 60 seconds?"],
+      "explanation": "The second hand passes the 12 once every 60 seconds. So its movement repeats every 60 seconds in a regular pattern — that is a cycle.",
+      "misconception": "Clock hands move randomly.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_examples",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "A pupil lists movements they see at home. Which list contains ONLY cyclic movements?",
+      "options": ["A window being opened once, a door being closed once, a pot boiling", "A cup falling off a table, a stone thrown into a river, a match being lit", "A girl running to school, a boy jumping once, a goat eating once", "A mother stirring soup round and round, a fan spinning, a child swinging on a swing"],
+      "answer": 3,
+      "hints": ["Which list has movements that keep repeating?", "Stirring, spinning and swinging all repeat."],
+      "explanation": "Stirring soup, a spinning fan and a child swinging all repeat in a regular pattern. The other lists contain one-time movements.",
+      "misconception": "A cycle is any movement, even if it does not repeat.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "body_movement",
+      "type": "short_answer",
+      "difficulty": 4,
+      "stem": "Explain why walking is a cyclic movement.",
+      "answer": ["because the legs move in a repeating pattern like left, right, left, right", "because the legs keep moving in the same repeating pattern", "because the legs keep alternating left and right in a pattern"],
+      "hints": ["What pattern do your legs make when walking?", "Does the pattern repeat?"],
+      "explanation": "When we walk, our legs move left, right, left, right in a repeating pattern. This repeating pattern makes walking a cyclic movement.",
+      "misconception": "Walking is not a cycle because we can stop.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "common_feature",
+      "type": "short_answer",
+      "difficulty": 4,
+      "stem": "What do all cyclic movements have in common?",
+      "answer": ["they repeat in a regular pattern", "they happen again and again", "they keep repeating", "they repeat"],
+      "hints": ["Think of the word 'cycle'.", "Do they happen once or many times?"],
+      "explanation": "All cyclic movements repeat in a regular pattern. A pendulum, a clock's second hand and a merry-go-round all do this.",
+      "misconception": "Cyclic movements never stop.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "common_feature",
+      "type": "mcq",
+      "difficulty": 4,
+      "stem": "A pupil says, 'The movement of a fan is NOT cyclic because the fan can be switched off.' Is this correct?",
+      "options": ["Yes, because a movement must never stop to be cyclic", "No, because a movement can stop and still be cyclic while it is happening", "Yes, because only pendulums are cyclic", "No, because a fan does not move"],
+      "answer": 1,
+      "hints": ["Does stopping later mean the movement was never cyclic?", "Think about the movement WHILE the fan is on."],
+      "explanation": "A cyclic movement can stop, but while it is happening, it repeats in a regular pattern. A fan blade turning round and round is cyclic while the fan is on.",
+      "misconception": "Cyclic movements never stop.",
+      "uncertain": []
+    }
+  ]
+}

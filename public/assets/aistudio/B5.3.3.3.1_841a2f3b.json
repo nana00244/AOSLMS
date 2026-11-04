@@ -1,0 +1,276 @@
+{
+  "indicator": {
+    "code": "B5.3.3.3.1",
+    "subject": "Mathematics",
+    "level": "Basic 5",
+    "strand": "Geometry and Measurement",
+    "sub_strand": "Measurement — Angles",
+    "content_standard": "B5.3.3.3 Demonstrate an understanding of angles",
+    "objective": "Identify examples of angles in the environment that are equal to, less than or larger than, a right angle",
+    "source_page": 124
+  },
+  "spec": {
+    "skills": [
+      {"tag": "identify_right_angles_environment", "description": "Identify angles equal to a right angle.", "minQuestions": 2},
+      {"tag": "identify_acute_obtuse", "description": "Identify angles less than or greater than a right angle.", "minQuestions": 2},
+      {"tag": "classify_environment_angles", "description": "Classify angles found in the classroom/compound.", "minQuestions": 2}
+    ],
+    "difficultyPlan": "20 questions: 5 at difficulty 1, 7 at difficulty 2, 5 at difficulty 3, 3 at difficulty 4.",
+    "misconceptions": [
+      "Thinking only corners are angles.",
+      "Relying on visual estimation rather than a square corner.",
+      "Confusing acute and obtuse."
+    ],
+    "needsTeacherAssessment": true
+  },
+  "questions": [
+    {
+      "skill_tag": "identify_right_angles_environment",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which of these is an example of a right angle in the classroom?",
+      "options": ["The corner of a book", "The hands of a clock at 2 o'clock", "A diagonal of a square", "The tip of a pencil"],
+      "answer": 0,
+      "hints": ["A right angle looks like a square corner."],
+      "explanation": "The corner of a book is a right angle.",
+      "misconception": "Choosing the clock hands because they form an angle.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_right_angles_environment",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which object in the classroom has right angles?",
+      "options": ["A ball", "A clock face", "A window frame", "A ruler"],
+      "answer": 2,
+      "hints": ["Look for square corners."],
+      "explanation": "A window frame has right angles.",
+      "misconception": "Choosing a clock face because it is round.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_acute_obtuse",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "An angle that is smaller than a right angle is called...",
+      "options": ["Acute", "Obtuse", "Reflex", "Straight"],
+      "answer": 0,
+      "hints": ["Acute means sharp."],
+      "explanation": "An angle less than 90° is acute.",
+      "misconception": "Saying obtuse.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_acute_obtuse",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "An angle that is larger than a right angle but less than a straight line is called...",
+      "options": ["Acute", "Obtuse", "Reflex", "Right"],
+      "answer": 1,
+      "hints": ["Obtuse means wide."],
+      "explanation": "An angle between 90° and 180° is obtuse.",
+      "misconception": "Saying acute.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "classify_environment_angles",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "The hands of a clock at 3 o'clock form what type of angle?",
+      "options": ["Acute", "Right", "Obtuse", "Reflex"],
+      "answer": 1,
+      "hints": ["The hour hand on 3 and minute hand on 12 form a square corner."],
+      "explanation": "At 3 o'clock, the hands form a right angle.",
+      "misconception": "Saying acute.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_right_angles_environment",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "How many right angles does a rectangular door have?",
+      "answer": 4,
+      "check": "4",
+      "hints": ["Count the corners."],
+      "explanation": "A rectangle has 4 right angles.",
+      "misconception": "Saying 2.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_acute_obtuse",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which of these angles is obtuse?",
+      "options": ["45°", "90°", "120°", "60°"],
+      "answer": 2,
+      "hints": ["Obtuse is greater than 90°."],
+      "explanation": "120° is obtuse.",
+      "misconception": "Choosing 45° because it is not 90.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_acute_obtuse",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which of these angles is acute?",
+      "options": ["100°", "80°", "90°", "120°"],
+      "answer": 1,
+      "hints": ["Acute is less than 90°."],
+      "explanation": "80° is acute.",
+      "misconception": "Choosing 90° because it is a right angle.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "classify_environment_angles",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "A pair of scissors is partially open. The angle between the blades is likely:",
+      "options": ["Acute", "Right", "Obtuse", "Reflex"],
+      "answer": 0,
+      "hints": ["Scissors usually open to a small angle."],
+      "explanation": "The angle is acute (less than 90°).",
+      "misconception": "Saying obtuse.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "classify_environment_angles",
+      "type": "written",
+      "difficulty": 2,
+      "stem": "Look around your classroom and list one object with an acute angle and one with an obtuse angle.",
+      "hints": ["Acute: less than 90°. Obtuse: greater than 90°."],
+      "explanation": "Examples: acute — tip of a pencil; obtuse — a door opened wide.",
+      "rubric": {
+        "criteria": [
+          {"description": "Lists one acute angle object.", "marks": 1},
+          {"description": "Lists one obtuse angle object.", "marks": 1}
+        ]
+      },
+      "misconception": "Listing right angles only.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_right_angles_environment",
+      "type": "written",
+      "difficulty": 2,
+      "stem": "Explain how to check if a corner in the classroom is a right angle using a square corner.",
+      "hints": ["Place the square corner against the angle."],
+      "explanation": "Place the square corner of a piece of paper into the corner. If the edges match perfectly, it is a right angle.",
+      "rubric": {
+        "criteria": [
+          {"description": "Mentions using a square corner.", "marks": 1},
+          {"description": "Explains matching edges indicates a right angle.", "marks": 1}
+        ]
+      },
+      "misconception": "Relying only on visual estimation.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_acute_obtuse",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "How many degrees are in a right angle?",
+      "answer": 90,
+      "check": "90",
+      "hints": ["A right angle is a quarter turn."],
+      "explanation": "90°.",
+      "misconception": "Saying 180°.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "classify_environment_angles",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "The hands of a clock at 5 o'clock form an angle. What type of angle is it?",
+      "options": ["Acute", "Right", "Obtuse", "Reflex"],
+      "answer": 2,
+      "hints": ["The hour hand is on 5, minute on 12. The angle is greater than 90°."],
+      "explanation": "It is obtuse.",
+      "misconception": "Saying right because it looks like 90°.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "classify_environment_angles",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "A door is opened wide. The angle between the door and the frame is likely:",
+      "options": ["Acute", "Right", "Obtuse", "Reflex"],
+      "answer": 2,
+      "hints": ["A wide open door forms an angle greater than 90°."],
+      "explanation": "Obtuse.",
+      "misconception": "Saying acute because it is open.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_acute_obtuse",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "Explain the difference between an acute angle and an obtuse angle.",
+      "hints": ["Compare to a right angle."],
+      "explanation": "An acute angle is less than 90°, while an obtuse angle is greater than 90° but less than 180°.",
+      "rubric": {
+        "criteria": [
+          {"description": "States acute < 90°.", "marks": 1},
+          {"description": "States obtuse > 90°.", "marks": 1}
+        ]
+      },
+      "misconception": "Thinking they are the same.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_right_angles_environment",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "Which of these is NOT a right angle?",
+      "options": ["Corner of a square", "Corner of a rectangle", "Angle of 100°", "Angle of 90°"],
+      "answer": 2,
+      "hints": ["100° is greater than 90°."],
+      "explanation": "100° is obtuse, not a right angle.",
+      "misconception": "Thinking 100° is a right angle.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "classify_environment_angles",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "A pupil says 'All angles in a classroom are right angles.' Is this correct? Explain with examples.",
+      "hints": ["Look for acute and obtuse angles."],
+      "explanation": "No, not all angles are right angles. For example, the angle between the legs of a chair may be acute, and an open door forms an obtuse angle.",
+      "rubric": {
+        "criteria": [
+          {"description": "States incorrect.", "marks": 1},
+          {"description": "Gives examples of acute/obtuse angles.", "marks": 1}
+        ]
+      },
+      "misconception": "Agreeing.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_acute_obtuse",
+      "type": "numeric",
+      "difficulty": 3,
+      "stem": "An angle of 180° is called a ___ angle.",
+      "answer": 180,
+      "check": "180",
+      "hints": ["It is a straight line."],
+      "explanation": "180° is a straight angle.",
+      "misconception": "Saying 90°.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "classify_environment_angles",
+      "type": "written",
+      "difficulty": 4,
+      "stem": "Describe how to use a square corner to classify an angle as acute, right, or obtuse.",
+      "hints": ["Place the corner on the vertex."],
+      "explanation": "Place the square corner on the angle's vertex and align one edge. If the other edge matches the square's edge, it's right. If it's inside the square, acute. If it's outside, obtuse.",
+      "rubric": {
+        "criteria": [
+          {"description": "Mentions aligning one edge.", "marks": 1},
+          {"description": "Explains classifying based on other edge position.", "marks": 1}
+        ]
+      },
+      "misconception": "Not using the square corner correctly.",
+      "uncertain": []
+    }
+  ]
+}

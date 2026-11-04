@@ -1,0 +1,275 @@
+{
+  "indicator": {
+    "code": "B6.4.3.2.1",
+    "subject": "Science",
+    "level": "Basic 6",
+    "strand": "FORCES AND ENERGY",
+    "sub_strand": "Forces and Movement",
+    "content_standard": "B4.4.3.2 (printed as B4.4.3.2; likely typo for B6.4.3.2) Recognise some simple machines used for making work easier, analyse their advantages and know their uses",
+    "objective": "Identify levers, pulleys, inclined planes as classes of simple machines and cite some common examples",
+    "source_page": 65
+  },
+  "spec": {
+    "skills": [
+      {"tag": "define_simple_machine", "description": "Recognise that a simple machine is a device that makes work easier.", "minQuestions": 3},
+      {"tag": "identify_lever", "description": "Identify a lever as a simple machine and give examples (e.g. scissors, wheelbarrow, crowbar, pliers).", "minQuestions": 4},
+      {"tag": "identify_pulley", "description": "Identify a pulley as a simple machine and give examples (e.g. flagpole, well bucket, crane).", "minQuestions": 3},
+      {"tag": "identify_inclined_plane", "description": "Identify an inclined plane as a simple machine and give examples (e.g. ramp, slope, ladder).", "minQuestions": 4},
+      {"tag": "classify_simple_machines", "description": "Classify given tools as levers, pulleys, or inclined planes.", "minQuestions": 3},
+      {"tag": "uses_advantages", "description": "State the uses and advantages of simple machines (make work easier, reduce effort).", "minQuestions": 3}
+    ],
+    "difficultyPlan": "20 questions total — Difficulty 1: 5; Difficulty 2: 7; Difficulty 3: 5; Difficulty 4: 3.",
+    "misconceptions": [
+      "A simple machine does not make work easier.",
+      "A wheelbarrow is a pulley.",
+      "A ramp is a lever.",
+      "Only complex machines are useful.",
+      "All simple machines are the same.",
+      "A flagpole is a lever."
+    ],
+    "needsTeacherAssessment": true
+  },
+  "questions": [
+    {
+      "skill_tag": "define_simple_machine",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What is a simple machine?",
+      "options": ["A device that makes work easier", "A device that makes work harder", "A machine that uses electricity", "A machine that only rich people use"],
+      "answer": 0,
+      "hints": ["It helps us do work with less effort.", "Think about a wheelbarrow or a ramp."],
+      "explanation": "A simple machine is a device that makes work easier by reducing the effort needed.",
+      "misconception": "A simple machine does not make work easier.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "define_simple_machine",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which of these best describes a simple machine?",
+      "options": ["A tool that helps us do work with less effort", "A machine that uses fuel to work", "A machine that is very expensive", "A machine that only works in factories"],
+      "answer": 0,
+      "hints": ["Think about a ramp helping you push a load.", "It makes work easier."],
+      "explanation": "A simple machine is a tool that helps us do work with less effort.",
+      "misconception": "Only complex machines are useful.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "define_simple_machine",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "What is a simple machine?",
+      "answer": ["a device that makes work easier", "a tool that helps do work with less effort", "it makes work easier"],
+      "hints": ["It helps us work.", "It reduces effort."],
+      "explanation": "A simple machine is a device that makes work easier.",
+      "misconception": "Simple machines are not useful.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_lever",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which of these is a lever?",
+      "options": ["A pair of scissors", "A flagpole", "A ramp", "A ladder"],
+      "answer": 0,
+      "hints": ["It has a pivot and two arms.", "You use it for cutting."],
+      "explanation": "A pair of scissors is a lever. It has a pivot and two arms that help cut.",
+      "misconception": "A ramp is a lever.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_lever",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which of these tools is a lever?",
+      "options": ["A wheelbarrow", "A flagpole", "A ramp", "A staircase"],
+      "answer": 0,
+      "hints": ["It has a handle and a wheel.", "You use it to carry heavy loads."],
+      "explanation": "A wheelbarrow is a lever. It helps lift and carry heavy loads with less effort.",
+      "misconception": "A wheelbarrow is a pulley.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_lever",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Name one example of a lever.",
+      "answer": ["scissors", "wheelbarrow", "crowbar", "pliers", "seesaw"],
+      "hints": ["Think about a tool with a pivot.", "Scissors and wheelbarrows are examples."],
+      "explanation": "Examples of levers include scissors, wheelbarrows, crowbars, pliers and seesaws.",
+      "misconception": "A ramp is a lever.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_lever",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "Why is a crowbar considered a lever?",
+      "options": ["It has a pivot and helps lift heavy objects with less effort", "It is a long stick with no pivot", "It is a ramp", "It uses a rope and wheel"],
+      "answer": 0,
+      "hints": ["A crowbar pivots on a point.", "It helps lift heavy things."],
+      "explanation": "A crowbar is a lever because it has a pivot point and helps lift heavy objects with less effort.",
+      "misconception": "A crowbar is not a lever.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_pulley",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which of these is a pulley?",
+      "options": ["A flagpole with a rope and wheel", "A ramp", "A pair of scissors", "A wheelbarrow"],
+      "answer": 0,
+      "hints": ["It has a wheel and a rope.", "It helps raise a flag."],
+      "explanation": "A flagpole with a rope and wheel is a pulley. It helps raise and lower the flag.",
+      "misconception": "A flagpole is a lever.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_pulley",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Name one example of a pulley.",
+      "answer": ["flagpole", "well bucket", "crane", "pulley system"],
+      "hints": ["Think about how a flag is raised.", "Think about a bucket in a well."],
+      "explanation": "Examples of pulleys include a flagpole, a well bucket and a crane.",
+      "misconception": "A flagpole is a lever.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_pulley",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "What makes a crane a pulley?",
+      "options": ["It uses a wheel and rope to lift heavy loads", "It has a ramp", "It uses a pivot and lever", "It is a simple stick"],
+      "answer": 0,
+      "hints": ["Cranes lift heavy loads.", "They use a wheel and rope."],
+      "explanation": "A crane is a pulley because it uses a wheel and rope to lift heavy loads with less effort.",
+      "misconception": "A crane is a lever.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_inclined_plane",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which of these is an inclined plane?",
+      "options": ["A ramp", "A pair of scissors", "A flagpole", "A wheelbarrow"],
+      "answer": 0,
+      "hints": ["It is a slope.", "It helps move things up or down."],
+      "explanation": "A ramp is an inclined plane. It is a slope that helps move things up or down with less effort.",
+      "misconception": "A ramp is a lever.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_inclined_plane",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which of these is an inclined plane used in everyday life?",
+      "options": ["A staircase", "A pair of pliers", "A well bucket", "A crowbar"],
+      "answer": 0,
+      "hints": ["It is a slope.", "You climb it to go up."],
+      "explanation": "A staircase is an inclined plane. It helps people move up to a higher level with less effort.",
+      "misconception": "A staircase is a lever.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_inclined_plane",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Name one example of an inclined plane.",
+      "answer": ["ramp", "slope", "ladder", "staircase"],
+      "hints": ["Think about a slope.", "Think about a ramp."],
+      "explanation": "Examples of inclined planes include ramps, slopes, ladders and staircases.",
+      "misconception": "A ramp is a lever.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_inclined_plane",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "Why is a ramp useful for loading a heavy drum onto a truck?",
+      "options": ["It reduces the effort needed to move the drum up", "It makes the drum heavier", "It uses electricity", "It makes the drum lighter"],
+      "answer": 0,
+      "hints": ["A ramp is an inclined plane.", "It helps move heavy loads with less effort."],
+      "explanation": "A ramp is useful because it reduces the effort needed to move a heavy drum up onto the truck.",
+      "misconception": "A ramp makes work harder.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "classify_simple_machines",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which classification is correct?",
+      "options": ["Ramp → inclined plane; scissors → lever; flagpole → pulley", "Ramp → lever; scissors → pulley; flagpole → inclined plane", "Ramp → pulley; scissors → inclined plane; flagpole → lever", "Ramp → inclined plane; scissors → pulley; flagpole → lever"],
+      "answer": 0,
+      "hints": ["Ramps are slopes.", "Scissors have a pivot.", "Flagpoles use wheels and ropes."],
+      "explanation": "A ramp is an inclined plane, scissors are a lever, and a flagpole is a pulley.",
+      "misconception": "All simple machines are the same.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "classify_simple_machines",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Classify these tools as lever, pulley or inclined plane: wheelbarrow, flagpole, ramp.",
+      "answer": ["wheelbarrow - lever; flagpole - pulley; ramp - inclined plane", "wheelbarrow: lever, flagpole: pulley, ramp: inclined plane"],
+      "hints": ["Think about how each tool works.", "Wheelbarrow has a pivot; flagpole has a wheel; ramp is a slope."],
+      "explanation": "Wheelbarrow is a lever, flagpole is a pulley, and ramp is an inclined plane.",
+      "misconception": "A wheelbarrow is a pulley.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "classify_simple_machines",
+      "type": "mcq",
+      "difficulty": 4,
+      "stem": "A pupil lists four tools: ramp, crowbar, well bucket, staircase. Which classification is correct?",
+      "options": ["Inclined planes: ramp, staircase; Levers: crowbar; Pulleys: well bucket", "Inclined planes: ramp, crowbar; Levers: staircase; Pulleys: well bucket", "Inclined planes: well bucket; Levers: ramp, crowbar; Pulleys: staircase", "Inclined planes: ramp; Levers: crowbar, staircase; Pulleys: well bucket"],
+      "answer": 0,
+      "hints": ["Ramps and staircases are slopes.", "Crowbars are levers.", "Well buckets use pulleys."],
+      "explanation": "Ramps and staircases are inclined planes. A crowbar is a lever. A well bucket uses a pulley.",
+      "misconception": "A staircase is a lever.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "uses_advantages",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "What is the main advantage of using a simple machine?",
+      "options": ["It makes work easier by reducing effort", "It makes work harder", "It makes work slower", "It makes work more expensive"],
+      "answer": 0,
+      "hints": ["Think about a wheelbarrow carrying a load.", "Simple machines help us."],
+      "explanation": "The main advantage of a simple machine is that it makes work easier by reducing the effort needed.",
+      "misconception": "Simple machines are not useful.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "uses_advantages",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "State one advantage of using a pulley.",
+      "answer": ["it makes lifting heavy loads easier", "it reduces the effort needed to lift things", "it helps raise loads with less effort"],
+      "hints": ["Think about lifting a heavy bucket from a well.", "A pulley helps."],
+      "explanation": "One advantage of a pulley is that it makes lifting heavy loads easier by reducing the effort needed.",
+      "misconception": "Pulleys make work harder.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "uses_advantages",
+      "type": "practical",
+      "difficulty": 4,
+      "stem": "In groups, design and make a simple machine of your choice (lever, pulley or inclined plane) using suitable materials such as bamboo, wood, cardboard, plastics, paper or straws. Present your model to the class and explain how it makes work easier.",
+      "rubric": {
+        "criteria": [
+          {"description": "Designed and made a simple machine", "marks": 2},
+          {"description": "Identified the type of simple machine (lever, pulley or inclined plane)", "marks": 1},
+          {"description": "Explained how the machine makes work easier", "marks": 2},
+          {"description": "Presented the model clearly to the class", "marks": 1}
+        ]
+      },
+      "answer": "",
+      "hints": ["Choose one type of simple machine.", "Use materials around you.", "Explain how it reduces effort."],
+      "explanation": "This is a practical task. Your teacher will mark it using the rubric.",
+      "misconception": "Simple machines do not make work easier.",
+      "uncertain": []
+    }
+  ]
+}

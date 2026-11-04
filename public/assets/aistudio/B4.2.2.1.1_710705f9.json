@@ -1,0 +1,290 @@
+{
+  "indicator": {
+    "code": "B4.2.2.1.1",
+    "subject": "Science",
+    "level": "Basic 4",
+    "strand": "CYCLES",
+    "sub_strand": "Life Cycles of Organisms",
+    "content_standard": "B4.2.2.1 Demonstrate understanding of the life cycle of plants",
+    "objective": "Observe, identify and give functions of the parts of a plant",
+    "source_page": 29
+  },
+  "spec": {
+    "skills": [
+      {"tag": "identify_parts", "description": "Name the main parts of a plant: root, stem, leaf, flower.", "minQuestions": 3},
+      {"tag": "function_root", "description": "State the function of the root (absorbs water and mineral salts; holds the plant in the soil).", "minQuestions": 4},
+      {"tag": "function_stem", "description": "State the function of the stem (supports the plant; carries water and food between root and leaves).", "minQuestions": 3},
+      {"tag": "function_leaf", "description": "State the function of the leaf (makes food for the plant using sunlight).", "minQuestions": 3},
+      {"tag": "function_flower", "description": "State the function of the flower (produces seeds/fruits; helps in reproduction).", "minQuestions": 3},
+      {"tag": "part_position_link", "description": "Link a part's position on the plant to its function (e.g. roots are underground because they absorb water from soil).", "minQuestions": 4}
+    ],
+    "difficultyPlan": "20 questions total — Difficulty 1: 5; Difficulty 2: 7; Difficulty 3: 5; Difficulty 4: 3.",
+    "misconceptions": [
+      "Roots only hold the plant; they do not take in water.",
+      "Leaves only make the plant look green.",
+      "The stem is only for beauty.",
+      "Flowers are only for decoration; they have no job.",
+      "All parts of a plant do the same work.",
+      "Roots are always the biggest part of the plant."
+    ],
+    "needsTeacherAssessment": true
+  },
+  "questions": [
+    {
+      "skill_tag": "identify_parts",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which part of a plant is usually found under the ground?",
+      "options": ["Leaf", "Flower", "Root", "Stem"],
+      "answer": 2,
+      "hints": ["Which part holds the plant in the soil?", "It grows downwards into the ground."],
+      "explanation": "The root is usually found under the ground. It holds the plant in place and takes in water from the soil.",
+      "misconception": "All parts of a plant grow above the ground.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_parts",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which part of a plant is usually green and flat?",
+      "options": ["Root", "Leaf", "Flower", "Stem"],
+      "answer": 1,
+      "hints": ["Which part catches sunlight?", "It grows out from the stem."],
+      "explanation": "The leaf is usually green and flat. It catches sunlight to make food for the plant.",
+      "misconception": "Leaves only make the plant look green.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_parts",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which part of a plant is often colourful and produces seeds?",
+      "options": ["Root", "Stem", "Leaf", "Flower"],
+      "answer": 3,
+      "hints": ["Which part attracts insects?", "It produces fruits and seeds."],
+      "explanation": "The flower is often colourful and produces seeds and fruits. It helps the plant reproduce.",
+      "misconception": "Flowers are only for decoration.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "function_root",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What is the main job of the root?",
+      "options": ["To make food for the plant", "To absorb water from the soil", "To produce flowers", "To catch sunlight"],
+      "answer": 1,
+      "hints": ["Roots are under the ground.", "They take in water from the soil."],
+      "explanation": "The main job of the root is to absorb water and mineral salts from the soil. It also holds the plant in place.",
+      "misconception": "Roots only hold the plant; they do not take in water.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "function_leaf",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What is the main job of the leaf?",
+      "options": ["To hold the plant in the soil", "To absorb water from the soil", "To make food for the plant using sunlight", "To carry water to the roots"],
+      "answer": 2,
+      "hints": ["Leaves are green.", "Green leaves use sunlight to make food."],
+      "explanation": "The leaf makes food for the plant using sunlight. The green colour in leaves helps trap sunlight.",
+      "misconception": "Leaves only make the plant look green.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "function_stem",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "What is the main job of the stem?",
+      "options": ["To support the plant and carry water between roots and leaves", "To absorb water from the soil", "To produce seeds", "To make food for the plant"],
+      "answer": 0,
+      "hints": ["The stem stands upright.", "It connects the roots to the leaves."],
+      "explanation": "The stem supports the plant and carries water and food between the roots and the leaves.",
+      "misconception": "The stem is only for beauty.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "function_flower",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "What is the main job of the flower?",
+      "options": ["To absorb water from the soil", "To carry water to the leaves", "To make food from sunlight", "To produce seeds and fruits for reproduction"],
+      "answer": 3,
+      "hints": ["Flowers produce something that can grow into new plants.", "Seeds are found in fruits."],
+      "explanation": "The flower produces seeds and fruits. This helps the plant to reproduce.",
+      "misconception": "Flowers are only for decoration.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "function_root",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "A farmer pulls a plant from the ground and finds many thin roots spread out in the soil. What are these roots doing?",
+      "options": ["They are making food for the plant", "They are absorbing water and holding the plant in the soil", "They are producing flowers", "They are catching sunlight"],
+      "answer": 1,
+      "hints": ["Roots are in the soil.", "They take in water and hold the plant."],
+      "explanation": "The roots spread out in the soil to absorb water and minerals and to hold the plant firmly in the ground.",
+      "misconception": "Roots only hold the plant; they do not take in water.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "part_position_link",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Why is the root found under the ground?",
+      "options": ["So that it can catch sunlight", "So that it can absorb water from the soil and hold the plant in place", "So that it can produce flowers", "So that it can carry food to the leaves"],
+      "answer": 1,
+      "hints": ["Water is in the soil.", "The root holds the plant down."],
+      "explanation": "The root is under the ground so it can absorb water from the soil and hold the plant firmly in place.",
+      "misconception": "Roots are above the ground.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_parts",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Name two parts of a plant.",
+      "answer": ["root and stem", "leaf and flower", "root and leaf", "stem and flower"],
+      "hints": ["Think of what you see above and below the ground.", "One part is green and flat; another is under the soil."],
+      "explanation": "The main parts of a plant are the root, stem, leaf and flower.",
+      "misconception": "Plants only have leaves.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "function_stem",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "What does the stem do for the plant?",
+      "answer": ["it supports the plant and carries water and food", "it holds the plant upright and carries water between the roots and the leaves", "it supports the plant"],
+      "hints": ["The stem stands upright.", "It connects the root to the leaf."],
+      "explanation": "The stem supports the plant and carries water and food between the roots and the leaves.",
+      "misconception": "The stem is only for beauty.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "function_root",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which TWO jobs does the root do for the plant?",
+      "options": ["Makes food and produces flowers", "Absorbs water and holds the plant in the soil", "Catches sunlight and carries water to leaves", "Produces seeds and absorbs sunlight"],
+      "answer": 1,
+      "hints": ["The root is under the ground.", "It does two main things."],
+      "explanation": "The root absorbs water from the soil and holds the plant firmly in place.",
+      "misconception": "Roots only hold the plant; they do not take in water.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "function_leaf",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Why are leaves important to a plant?",
+      "answer": ["they make food for the plant using sunlight", "leaves make food for the plant", "they use sunlight to make food"],
+      "hints": ["Leaves are green.", "Green leaves use sunlight."],
+      "explanation": "Leaves make food for the plant using sunlight. Without leaves, the plant cannot make its own food.",
+      "misconception": "Leaves only make the plant look green.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "part_position_link",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "Why are most leaves found at the top of the plant, spread out?",
+      "options": ["So that they can catch as much sunlight as possible", "So that they can absorb water from the soil", "So that they can hold the plant in the soil", "So that they can produce seeds"],
+      "answer": 0,
+      "hints": ["Where does sunlight come from?", "Leaves need sunlight to make food."],
+      "explanation": "Leaves are spread out at the top of the plant to catch as much sunlight as possible for making food.",
+      "misconception": "Leaves are only for decoration.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "function_flower",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "What is the main function of a flower?",
+      "answer": ["it produces seeds and fruits for the plant to reproduce", "to produce seeds", "to make seeds and fruits", "to help the plant reproduce"],
+      "hints": ["Flowers produce something that grows into new plants.", "Seeds are found in fruits."],
+      "explanation": "The flower produces seeds and fruits. This helps the plant to reproduce.",
+      "misconception": "Flowers are only for decoration.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "function_stem",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "Which statement best describes why the stem is important?",
+      "options": ["It is the only green part of the plant", "It makes food for the plant", "It supports the plant and carries water and food between parts", "It absorbs water from the soil"],
+      "answer": 2,
+      "hints": ["What would happen if the stem were removed?", "The stem is like a pipe."],
+      "explanation": "The stem supports the plant and carries water and food between the roots and the leaves. Without the stem, the plant would fall over and food and water could not move around.",
+      "misconception": "The stem is only for beauty.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "part_position_link",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Why do you think the roots are underground and not above the ground?",
+      "answer": ["because roots absorb water from the soil and hold the plant in place underground", "because the roots need to take water from the soil", "so they can absorb water and hold the plant firmly in the soil"],
+      "hints": ["Where is water found?", "What holds the plant down?"],
+      "explanation": "Roots are underground because they need to absorb water from the soil and hold the plant firmly in place.",
+      "misconception": "Roots are above the ground.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_parts",
+      "type": "drawing",
+      "difficulty": 3,
+      "stem": "Draw a simple plant. Label the root, stem, leaf and flower. Write one function of each part next to its label.",
+      "rubric": {
+        "criteria": [
+          {"description": "Drew a plant showing all four parts: root, stem, leaf and flower", "marks": 2},
+          {"description": "Labeled all four parts correctly", "marks": 2},
+          {"description": "Wrote a correct function for the root (absorbs water and holds plant)", "marks": 1},
+          {"description": "Wrote a correct function for the stem (supports and carries water/food)", "marks": 1},
+          {"description": "Wrote a correct function for the leaf (makes food using sunlight)", "marks": 1},
+          {"description": "Wrote a correct function for the flower (produces seeds/fruits)", "marks": 1}
+        ]
+      },
+      "answer": "Teacher-assessed using the rubric. Expected drawing: a plant with roots below the soil line, a stem going up, leaves attached to the stem, and a flower at the top.",
+      "hints": ["Think about what you see above and below the ground.", "Each part has a special job."],
+      "explanation": "This is a drawing task. Your teacher will mark it using the rubric.",
+      "misconception": "All parts of a plant do the same work.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "part_position_link",
+      "type": "mcq",
+      "difficulty": 4,
+      "stem": "A plant's leaves are shaded by a taller tree. What is likely to happen to the plant?",
+      "options": ["It will grow faster because it has shade", "It will make less food because it cannot get enough sunlight", "It will produce more flowers immediately", "The roots will stop absorbing water"],
+      "answer": 1,
+      "hints": ["What do leaves need to make food?", "Without sunlight, can leaves work well?"],
+      "explanation": "Leaves need sunlight to make food. If the leaves are shaded, the plant gets less sunlight and makes less food, so its growth will slow down.",
+      "misconception": "Leaves can make food without sunlight.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "part_position_link",
+      "type": "mcq",
+      "difficulty": 4,
+      "stem": "A gardener plants a flower in a pot with very little soil and no room for the roots to spread. What problem will the plant most likely have?",
+      "options": ["It will not be able to absorb enough water", "It will produce too many flowers", "The leaves will turn to stone", "The stem will catch fire"],
+      "answer": 0,
+      "hints": ["What do roots need to spread and absorb?", "Very little soil means less water and minerals."],
+      "explanation": "Roots need space in the soil to spread and absorb water. With very little soil, the plant cannot absorb enough water and may die or grow poorly.",
+      "misconception": "Roots can absorb water without soil space.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "function_flower",
+      "type": "mcq",
+      "difficulty": 4,
+      "stem": "A farmer notices that one of his maize plants has no flowers. What is the most likely consequence?",
+      "options": ["The plant will grow taller than others", "The roots will absorb more water", "The plant will not produce seeds or fruits", "The stem will change colour"],
+      "answer": 2,
+      "hints": ["What do flowers produce?", "Seeds are needed for the plant to reproduce."],
+      "explanation": "Flowers produce seeds and fruits. A plant without flowers will not produce seeds or fruits, so it cannot reproduce.",
+      "misconception": "Flowers are only for decoration.",
+      "uncertain": []
+    }
+  ]
+}

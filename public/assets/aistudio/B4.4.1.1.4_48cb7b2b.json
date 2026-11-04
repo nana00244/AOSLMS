@@ -1,0 +1,264 @@
+{
+  "indicator": {
+    "code": "B4.4.1.1.4",
+    "subject": "Mathematics",
+    "level": "Basic 4",
+    "strand": "Data",
+    "sub_strand": "Data Collection, Organization, Presentation, Interpretation and Analysis",
+    "content_standard": "B4.4.1.1 Demonstrate an understanding of many-to-one correspondence in displaying, and reading or interpreting, graphs",
+    "objective": "Find examples of graphs in which many-to-one correspondence is used in print and electronic media, such as newspapers, magazines and the Internet, and describe the correspondence used",
+    "source_page": 72
+  },
+  "spec": {
+    "skills": [
+      {"tag": "identify_media_graphs", "description": "Identify examples of graphs used in media (newspapers, internet).", "minQuestions": 2},
+      {"tag": "describe_correspondence", "description": "Describe the many-to-one correspondence (key/scale) used in a media graph.", "minQuestions": 2}
+    ],
+    "difficultyPlan": "20 questions: 5 at difficulty 1, 7 at difficulty 2, 5 at difficulty 3, 3 at difficulty 4.",
+    "misconceptions": [
+      "Not recognizing the key in media graphs.",
+      "Missing the unit scale."
+    ],
+    "needsTeacherAssessment": false
+  },
+  "questions": [
+    {
+      "skill_tag": "identify_media_graphs",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Where might you find a graph in everyday life?",
+      "options": ["In a storybook", "In a newspaper", "In a dictionary", "In a cookbook"],
+      "answer": 1,
+      "hints": ["Newspapers use graphs to show news.", "Look at the data sections."],
+      "explanation": "Newspapers often use graphs to display statistics and trends.",
+      "misconception": "Thinking graphs are only in textbooks.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_correspondence",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "A weather graph on the internet uses a raindrop symbol to represent 10 mm of rain. What is the correspondence?",
+      "options": ["1 raindrop = 1 mm", "1 raindrop = 10 mm", "1 raindrop = 100 mm", "10 raindrops = 1 mm"],
+      "answer": 1,
+      "hints": ["The key says 1 symbol equals 10 mm.", "That is the many-to-one correspondence."],
+      "explanation": "1 raindrop = 10 mm is the correspondence used.",
+      "misconception": "Thinking 1 symbol equals 1 unit.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_media_graphs",
+      "type": "short_answer",
+      "difficulty": 1,
+      "stem": "Name one place you might see a graph outside of school.",
+      "answer": ["newspaper", "magazine", "internet", "television", "book"],
+      "hints": ["Think of media.", "Where is data displayed?"],
+      "explanation": "Valid answers include newspaper, magazine, internet, television.",
+      "misconception": "Saying only in textbooks.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_correspondence",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "In a pictograph from a magazine, 1 shoe icon = 100 shoes sold. If there are 5 icons, how many shoes were sold?",
+      "options": ["5", "100", "500", "1000"],
+      "answer": 2,
+      "hints": ["5 x 100."],
+      "explanation": "500 shoes.",
+      "misconception": "Saying 5.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_media_graphs",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "A sports website shows a bar graph of goals scored. What type of data is this?",
+      "options": ["Text data", "Numerical data", "Picture data", "No data"],
+      "answer": 1,
+      "hints": ["Goals are numbers.", "It is measured in quantities."],
+      "explanation": "Goals scored is numerical data.",
+      "misconception": "Thinking it's text data.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_correspondence",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "A graph on a news site uses 1 coin symbol = 50 cedis. If there are 4 coins, how much money is represented?",
+      "answer": 200,
+      "check": "4*50",
+      "hints": ["4 x 50."],
+      "explanation": "200 cedis.",
+      "misconception": "Saying 4.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_media_graphs",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Why do newspapers use many-to-one graphs for large numbers?",
+      "answer": ["to save space", "to make it easier to read", "to show the big picture", "too many symbols would be messy"],
+      "hints": ["Imagine drawing 1 million apples.", "It would take up the whole page."],
+      "explanation": "Many-to-one graphs save space and make large numbers easier to understand.",
+      "misconception": "Thinking it's just a stylistic choice.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_correspondence",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "A graph in a newspaper shows 1 person icon = 1,000 people. If there are 2.5 icons, how many people?",
+      "options": ["250", "2,500", "25,000", "1,000"],
+      "answer": 1,
+      "hints": ["2.5 x 1,000."],
+      "explanation": "2,500 people.",
+      "misconception": "Saying 2,000 because they ignore the .5.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_correspondence",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "A bar graph has a scale of 1 cm = 20 units. If a bar is 4 cm, what is the data value?",
+      "answer": 80,
+      "check": "4*20",
+      "hints": ["4 x 20."],
+      "explanation": "80 units.",
+      "misconception": "Saying 4.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_media_graphs",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which of these is a common type of graph used in electronic media?",
+      "options": ["Pictograph", "Bar graph", "Line graph", "All of the above"],
+      "answer": 3,
+      "hints": ["Electronic media uses various types.", "All of them are used."],
+      "explanation": "All three are commonly used in electronic media.",
+      "misconception": "Thinking only bar graphs are used.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_correspondence",
+      "type": "written",
+      "difficulty": 2,
+      "stem": "A website uses a graph with 1 computer icon = 25 computers sold. Explain how you would find out how many computers are represented by 6 icons.",
+      "hints": ["Multiply the number of icons by the scale.", "6 x 25."],
+      "explanation": "Multiply 6 by 25. 6 x 25 = 150 computers.",
+      "rubric": {
+        "criteria": [
+          {"description": "States multiplication of icons by the scale.", "marks": 1},
+          {"description": "Calculates 150.", "marks": 1}
+        ]
+      },
+      "misconception": "Adding instead of multiplying.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_media_graphs",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "A graph in a magazine uses 1 sun icon for 5 sunny days. If there are 3 suns, how many sunny days?",
+      "answer": 15,
+      "check": "3*5",
+      "hints": ["3 x 5."],
+      "explanation": "15 sunny days.",
+      "misconception": "Saying 3.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_correspondence",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "A graph in the newspaper uses a scale of 1 cm = 200 people. If the bar for 'Town A' is 3.5 cm, what is the population?",
+      "options": ["350", "600", "700", "3,500"],
+      "answer": 2,
+      "hints": ["3.5 x 200.", "3 x 200 = 600. 0.5 x 200 = 100. 600 + 100."],
+      "explanation": "700 people.",
+      "misconception": "Saying 350.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_correspondence",
+      "type": "numeric",
+      "difficulty": 3,
+      "stem": "A pictograph uses 1 book = 50 pages read. If a pupil reads 250 pages, how many book symbols are needed?",
+      "answer": 5,
+      "check": "250/50",
+      "hints": ["250 / 50."],
+      "explanation": "5 symbols.",
+      "misconception": "Saying 250.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_correspondence",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "A graph in a news article has a bar that is 5 units tall. If the scale is 1 unit = 300 people, what is the value?",
+      "options": ["300", "1,500", "3,000", "500"],
+      "answer": 1,
+      "hints": ["5 x 300."],
+      "explanation": "1,500 people.",
+      "misconception": "Saying 500.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_media_graphs",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "Find a graph in a newspaper or on the internet. Describe what the graph is about and what correspondence is used.",
+      "hints": ["Look at the key or scale.", "What does one unit or symbol represent?"],
+      "explanation": "The learner's answer will vary based on the graph they find, but should include a description of the key and the data topic.",
+      "rubric": {
+        "criteria": [
+          {"description": "Describes the topic of the graph.", "marks": 1},
+          {"description": "Identifies the key or scale used.", "marks": 1}
+        ]
+      },
+      "misconception": "Not being able to find a graph or understand the key.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_media_graphs",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "A line graph on a website shows temperature over a week. What is the data shown?",
+      "options": ["Temperature", "Rainfall", "Wind speed", "Humidity"],
+      "answer": 0,
+      "hints": ["What does the title say?", "The y-axis likely shows degrees."],
+      "explanation": "The graph shows temperature.",
+      "misconception": "Choosing a different weather metric.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_correspondence",
+      "type": "numeric",
+      "difficulty": 4,
+      "stem": "A bar graph has a scale of 1 cm = 400 units. A bar is 2.5 cm tall. What is the value?",
+      "answer": 1000,
+      "check": "2.5*400",
+      "hints": ["2.5 x 400.", "2 x 400 = 800. 0.5 x 400 = 200."],
+      "explanation": "1,000 units.",
+      "misconception": "Saying 2,500.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_correspondence",
+      "type": "written",
+      "difficulty": 4,
+      "stem": "Explain how to read a graph that uses a scale of 1 unit = 100 people if you want to find a value that is represented by 1.5 units.",
+      "hints": ["Multiply 1.5 by 100.", "1 unit is 100, half a unit is 50."],
+      "explanation": "Multiply 1.5 by 100. 1.5 x 100 = 150.",
+      "rubric": {
+        "criteria": [
+          {"description": "States multiplication by 100.", "marks": 1},
+          {"description": "Calculates 150.", "marks": 1}
+        ]
+      },
+      "misconception": "Saying 1.5.",
+      "uncertain": []
+    }
+  ]
+}

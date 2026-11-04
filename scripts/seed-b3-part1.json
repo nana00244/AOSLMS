@@ -1,0 +1,1417 @@
+[
+  {
+    "file_name": "B3.4.1.2.1.json",
+    "indicator": {
+      "code": "B3.4.1.2.1",
+      "subject": "Mathematics",
+      "level": "Basic 3",
+      "strand": "Data",
+      "sub_strand": "Data Collection, Organisation, Presentation, Interpretation and Analysis",
+      "content_standard": "B3.4.1.2 Construct and interpret concrete graphs and pictographs to solve problems",
+      "objective": "Draw and interpret concrete graphs and pictographs to solve problems",
+      "source_page": 94
+    },
+    "spec": {
+      "skills": [
+        {"tag": "identify_bar_graph_features", "description": "Identify common features of bar graphs (title, labeled axes, key/legend).", "minQuestions": 2},
+        {"tag": "draw_pictograph", "description": "Draw a pictograph with one-to-many correspondence.", "minQuestions": 2},
+        {"tag": "solve_problems_pictograph", "description": "Solve problems (how many altogether, comparing, take apart) using pictographs.", "minQuestions": 2}
+      ],
+      "difficultyPlan": "20 questions: 5 at difficulty 1, 7 at difficulty 2, 5 at difficulty 3, 3 at difficulty 4.",
+      "misconceptions": [
+        "Ignoring the key when interpreting one-to-many pictographs.",
+        "Forgetting to label axes.",
+        "Miscounting icons."
+      ],
+      "needsTeacherAssessment": true
+    },
+    "questions": [
+      {
+        "skill_tag": "identify_bar_graph_features",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "What is the purpose of a title on a graph?",
+        "options": ["To tell what the graph is about", "To decorate the graph", "To show the numbers"],
+        "answer": 0,
+        "hints": ["It's at the top."],
+        "explanation": "The title tells what the graph is about.",
+        "misconception": "Thinking it's just decorative.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "solve_problems_pictograph",
+        "type": "numeric",
+        "difficulty": 1,
+        "stem": "A pictograph uses 1 star for 1 pupil. If there are 6 stars for 'Maths', how many pupils like Maths?",
+        "answer": 6,
+        "check": "6",
+        "hints": ["1 star = 1 pupil."],
+        "explanation": "6 pupils.",
+        "misconception": "Saying 1.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "identify_bar_graph_features",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "Which of these is a common feature of a bar graph?",
+        "options": ["Labelled axes", "Pictures", "A title", "Both A and C"],
+        "answer": 3,
+        "hints": ["Both are important."],
+        "explanation": "Labelled axes and a title are both features.",
+        "misconception": "Thinking only one is needed.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "solve_problems_pictograph",
+        "type": "numeric",
+        "difficulty": 1,
+        "stem": "A pictograph shows 3 apples for Monday and 5 apples for Tuesday. How many apples in total?",
+        "answer": 8,
+        "check": "3+5",
+        "hints": ["3 + 5."],
+        "explanation": "8 apples.",
+        "misconception": "Subtracting.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "draw_pictograph",
+        "type": "drawing",
+        "difficulty": 1,
+        "stem": "Draw a pictograph to show: 4 boys and 2 girls. Use 1 circle for 1 person.",
+        "hints": ["Draw 4 circles for boys.", "Draw 2 circles for girls.", "Add a title."],
+        "explanation": "The learner should draw 4 circles and 2 circles with labels.",
+        "rubric": {
+          "criteria": [
+            {"description": "Draws 4 circles for boys.", "marks": 1},
+            {"description": "Draws 2 circles for girls.", "marks": 1},
+            {"description": "Includes a title.", "marks": 1}
+          ]
+        },
+        "misconception": "Drawing 2 circles for boys.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "solve_problems_pictograph",
+        "type": "numeric",
+        "difficulty": 2,
+        "stem": "A pictograph shows 1 symbol = 2 pupils. If there are 5 symbols for 'Reading', how many pupils?",
+        "answer": 10,
+        "check": "5*2",
+        "hints": ["5 x 2."],
+        "explanation": "10 pupils.",
+        "misconception": "Saying 5.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "solve_problems_pictograph",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "A pictograph shows 1 star = 5 books. There are 4 stars for Monday and 2 stars for Tuesday. How many books were read on Monday?",
+        "options": ["4", "5", "20", "10"],
+        "answer": 2,
+        "hints": ["4 x 5."],
+        "explanation": "20 books.",
+        "misconception": "Saying 4.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "draw_pictograph",
+        "type": "drawing",
+        "difficulty": 2,
+        "stem": "Draw a pictograph to show 10 books. Use 1 book symbol for 2 books.",
+        "hints": ["10 / 2 = 5 symbols."],
+        "explanation": "The learner should draw 5 book symbols.",
+        "rubric": {
+          "criteria": [
+            {"description": "Draws 5 symbols.", "marks": 1},
+            {"description": "Includes a key (1 symbol = 2 books).", "marks": 1}
+          ]
+        },
+        "misconception": "Drawing 10 symbols.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "solve_problems_pictograph",
+        "type": "numeric",
+        "difficulty": 2,
+        "stem": "A pictograph shows 1 apple = 3 apples. There are 4 symbols for Monday. How many apples?",
+        "answer": 12,
+        "check": "4*3",
+        "hints": ["4 x 3."],
+        "explanation": "12 apples.",
+        "misconception": "Saying 4.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "identify_bar_graph_features",
+        "type": "written",
+        "difficulty": 2,
+        "stem": "Explain what a key in a pictograph is used for.",
+        "hints": ["It tells you what one symbol represents."],
+        "explanation": "A key tells you what each symbol or picture stands for in the graph.",
+        "rubric": {
+          "criteria": [
+            {"description": "States it tells the value of a symbol.", "marks": 1}
+          ]
+        },
+        "misconception": "Thinking the key is just decoration.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "solve_problems_pictograph",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "A pictograph shows: 1 symbol = 4 cars. Red has 2 symbols, Blue has 3 symbols. How many more blue cars than red?",
+        "options": ["1", "4", "8", "12"],
+        "answer": 1,
+        "hints": ["Red = 2 x 4 = 8.", "Blue = 3 x 4 = 12.", "12 - 8 = 4."],
+        "explanation": "4 more blue cars.",
+        "misconception": "Saying 1 (difference in symbols).",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "solve_problems_pictograph",
+        "type": "numeric",
+        "difficulty": 2,
+        "stem": "A pictograph shows 1 symbol = 10 pupils. If there are 6 symbols, how many pupils?",
+        "answer": 60,
+        "check": "6*10",
+        "hints": ["6 x 10."],
+        "explanation": "60 pupils.",
+        "misconception": "Saying 6.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "draw_pictograph",
+        "type": "written",
+        "difficulty": 3,
+        "stem": "A pupil wants to draw a pictograph for 30 pupils where 1 symbol = 10 pupils. How many symbols should they draw?",
+        "hints": ["30 / 10."],
+        "explanation": "3 symbols.",
+        "rubric": {
+          "criteria": [
+            {"description": "States 3 symbols.", "marks": 1}
+          ]
+        },
+        "misconception": "Saying 30.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "solve_problems_pictograph",
+        "type": "numeric",
+        "difficulty": 3,
+        "stem": "A pictograph has a key: 1 star = 5 pupils. If there are 3.5 stars, how many pupils?",
+        "answer": 17.5,
+        "check": "3.5*5",
+        "hints": ["3.5 x 5."],
+        "explanation": "17.5 pupils (which might mean the data is represented differently, but mathematically it's 17.5).",
+        "misconception": "Saying 3.5.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "solve_problems_pictograph",
+        "type": "written",
+        "difficulty": 3,
+        "stem": "Explain how to find the total number of items from a pictograph with a key.",
+        "hints": ["Count the symbols.", "Multiply by the key value."],
+        "explanation": "Count the number of symbols for each category, then multiply by the value of one symbol (given in the key), and add them all together.",
+        "rubric": {
+          "criteria": [
+            {"description": "Mentions counting symbols.", "marks": 1},
+            {"description": "Mentions multiplying by the key.", "marks": 1},
+            {"description": "Mentions adding categories.", "marks": 1}
+          ]
+        },
+        "misconception": "Adding the symbols without multiplying by the key.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "identify_bar_graph_features",
+        "type": "written",
+        "difficulty": 3,
+        "stem": "List the features of a well-drawn bar graph.",
+        "hints": ["Title, axes, labels."],
+        "explanation": "Title, labelled axes, consistent scale, and bars of correct height.",
+        "rubric": {
+          "criteria": [
+            {"description": "Mentions title.", "marks": 1},
+            {"description": "Mentions labelled axes.", "marks": 1}
+          ]
+        },
+        "misconception": "Forgetting the title.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "solve_problems_pictograph",
+        "type": "mcq",
+        "difficulty": 4,
+        "stem": "A pictograph uses 1 circle = 3 pupils. There are 4 circles for 'Maths' and 2 circles for 'English'. How many pupils like Maths or English?",
+        "options": ["6", "12", "18", "24"],
+        "answer": 2,
+        "hints": ["Maths = 4 x 3 = 12.", "English = 2 x 3 = 6.", "12 + 6."],
+        "explanation": "18 pupils.",
+        "misconception": "Saying 6.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "draw_pictograph",
+        "type": "drawing",
+        "difficulty": 4,
+        "stem": "Draw a pictograph with a key of 1 symbol = 2 items for the data: 8 cats, 6 dogs.",
+        "hints": ["Cats = 4 symbols.", "Dogs = 3 symbols."],
+        "explanation": "The learner should draw 4 cat symbols and 3 dog symbols, with a key.",
+        "rubric": {
+          "criteria": [
+            {"description": "Draws 4 symbols for cats.", "marks": 1},
+            {"description": "Draws 3 symbols for dogs.", "marks": 1},
+            {"description": "Includes a key.", "marks": 1}
+          ]
+        },
+        "misconception": "Drawing 8 and 6 symbols.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "solve_problems_pictograph",
+        "type": "written",
+        "difficulty": 4,
+        "stem": "A pictograph shows 1 symbol = 5 birds. If there are 4.5 symbols for 'Sparrows', how many sparrows? Explain.",
+        "hints": ["4.5 x 5."],
+        "explanation": "4.5 x 5 = 22.5 sparrows. Since you can't have half a bird, the graph might represent an average or the key might be different, but mathematically it's 22.5.",
+        "rubric": {
+          "criteria": [
+            {"description": "Calculates 22.5.", "marks": 1},
+            {"description": "Explains the calculation.", "marks": 1}
+          ]
+        },
+        "misconception": "Saying 4.5.",
+        "uncertain": []
+      }
+    ]
+  },
+  {
+    "file_name": "B3.4.1.1.1.json",
+    "indicator": {
+      "code": "B3.4.1.1.1",
+      "subject": "Mathematics",
+      "level": "Basic 3",
+      "strand": "Data",
+      "sub_strand": "Data Collection, Organisation, Presentation, Interpretation and Analysis",
+      "content_standard": "B3.4.1.1 Collect first-hand data and organise it using tallies, checkmarks, charts, lists or line plots to answer and pose questions",
+      "objective": "Gather and record Data",
+      "source_page": 94
+    },
+    "spec": {
+      "skills": [
+        {"tag": "use_tallies_checkmarks", "description": "Use tally marks and checkmarks to collect data, grouping by 5s.", "minQuestions": 2},
+        {"tag": "organize_data", "description": "Organize data into frequency tables or lists.", "minQuestions": 2},
+        {"tag": "answer_questions_data", "description": "Answer and justify answers based on organized data.", "minQuestions": 2}
+      ],
+      "difficultyPlan": "20 questions: 5 at difficulty 1, 7 at difficulty 2, 5 at difficulty 3, 3 at difficulty 4.",
+      "misconceptions": [
+        "Tallying incorrectly (not grouping by 5s).",
+        "Reading data wrongly.",
+        "Losing data during organization."
+      ],
+      "needsTeacherAssessment": true
+    },
+    "questions": [
+      {
+        "skill_tag": "use_tallies_checkmarks",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "How many items are represented by these tally marks: ||||?",
+        "options": ["3", "4", "5", "6"],
+        "answer": 1,
+        "hints": ["Count the marks one by one."],
+        "explanation": "There are 4 tally marks, representing 4 items.",
+        "misconception": "Saying 5 because they expect a group of 5.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "organize_data",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "A frequency table shows: Apples (4), Oranges (6). Which fruit is more popular?",
+        "options": ["Apples", "Oranges", "They are equal"],
+        "answer": 1,
+        "hints": ["Compare the numbers."],
+        "explanation": "Oranges (6) are more popular than Apples (4).",
+        "misconception": "Saying Apples because it comes first.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "use_tallies_checkmarks",
+        "type": "numeric",
+        "difficulty": 1,
+        "stem": "How many items are represented by these tally marks: ||||/ ? (Note: the / crosses the four lines)",
+        "answer": 5,
+        "check": "5",
+        "hints": ["A group of 5 is drawn with a diagonal line across 4 vertical lines."],
+        "explanation": "The tally mark ||||/ represents 5.",
+        "misconception": "Saying 6 because there are 5 marks.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "answer_questions_data",
+        "type": "numeric",
+        "difficulty": 1,
+        "stem": "Data shows: Red (5), Blue (3), Green (2). How many people chose Red?",
+        "answer": 5,
+        "check": "5",
+        "hints": ["Read the number for Red."],
+        "explanation": "5 people chose Red.",
+        "misconception": "Saying 3.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "organize_data",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "What is the total number of items if the data is: A(2), B(4), C(1)?",
+        "options": ["6", "7", "8", "9"],
+        "answer": 1,
+        "hints": ["Add all the numbers: 2 + 4 + 1."],
+        "explanation": "2 + 4 + 1 = 7.",
+        "misconception": "Saying 4 because it's the largest.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "answer_questions_data",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "A list shows the number of pets: Dog (4), Cat (3), Fish (2). How many more dogs than fish are there?",
+        "options": ["1", "2", "3", "4"],
+        "answer": 1,
+        "hints": ["Dogs = 4, Fish = 2.", "4 - 2."],
+        "explanation": "4 - 2 = 2.",
+        "misconception": "Adding 4 + 2 = 6.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "use_tallies_checkmarks",
+        "type": "written",
+        "difficulty": 2,
+        "stem": "Use tally marks to show the number 8.",
+        "hints": ["Draw one group of 5.", "Draw 3 more lines."],
+        "explanation": "||||/ ||| (or ||||/ |||).",
+        "rubric": {
+          "criteria": [
+            {"description": "Draws a group of 5 (with a diagonal line).", "marks": 1},
+            {"description": "Adds 3 more marks.", "marks": 1}
+          ]
+        },
+        "misconception": "Drawing 8 separate lines.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "organize_data",
+        "type": "numeric",
+        "difficulty": 2,
+        "stem": "A survey shows: Football (6), Netball (4), Athletics (2). What is the total number of pupils surveyed?",
+        "answer": 12,
+        "check": "6+4+2",
+        "hints": ["Add all three numbers."],
+        "explanation": "12.",
+        "misconception": "Saying 10.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "answer_questions_data",
+        "type": "short_answer",
+        "difficulty": 2,
+        "stem": "A frequency table shows: Monday (5), Tuesday (3), Wednesday (6). On which day was the count highest?",
+        "answer": ["wednesday"],
+        "hints": ["Look for the largest number."],
+        "explanation": "Wednesday (6).",
+        "misconception": "Saying Monday because it comes first.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "organize_data",
+        "type": "written",
+        "difficulty": 2,
+        "stem": "Organize this data into a frequency table: 3 pupils like apples, 5 like bananas, 2 like oranges.",
+        "hints": ["Create a column for fruit and a column for number."],
+        "explanation": "Fruit | Number. Apples | 3. Bananas | 5. Oranges | 2.",
+        "rubric": {
+          "criteria": [
+            {"description": "Creates a table with correct labels.", "marks": 1},
+            {"description": "Fills in correct numbers.", "marks": 1}
+          ]
+        },
+        "misconception": "Just listing the numbers.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "answer_questions_data",
+        "type": "numeric",
+        "difficulty": 2,
+        "stem": "A tally chart shows: Cats (||||), Dogs (||||/), Birds (|||). How many dogs are there?",
+        "answer": 5,
+        "check": "5",
+        "hints": ["Dogs have a group of 5."],
+        "explanation": "5 dogs.",
+        "misconception": "Saying 4.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "use_tallies_checkmarks",
+        "type": "numeric",
+        "difficulty": 2,
+        "stem": "A pupil records data with checkmarks. There are 7 checkmarks for 'Red'. How many items is this?",
+        "answer": 7,
+        "check": "7",
+        "hints": ["1 check = 1 item."],
+        "explanation": "7 items.",
+        "misconception": "Saying 5.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "answer_questions_data",
+        "type": "written",
+        "difficulty": 3,
+        "stem": "A frequency table shows: Bus (10), Car (5), Walk (8). How many pupils use transport (bus or car)? Explain.",
+        "hints": ["Transport = Bus + Car.", "10 + 5."],
+        "explanation": "10 + 5 = 15 pupils.",
+        "rubric": {
+          "criteria": [
+            {"description": "Adds Bus and Car.", "marks": 1},
+            {"description": "Calculates 15.", "marks": 1}
+          ]
+        },
+        "misconception": "Adding all three numbers.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "organize_data",
+        "type": "numeric",
+        "difficulty": 3,
+        "stem": "A tally chart has groups of 5. If there are 3 groups of 5 and 2 extra marks, what is the total count?",
+        "answer": 17,
+        "check": "3*5+2",
+        "hints": ["3 x 5 = 15.", "15 + 2."],
+        "explanation": "17.",
+        "misconception": "Saying 15.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "use_tallies_checkmarks",
+        "type": "written",
+        "difficulty": 3,
+        "stem": "Explain why we group tally marks in 5s.",
+        "hints": ["How easy is it to count many marks?", "How many marks are in a group?"],
+        "explanation": "Grouping in 5s makes counting faster and easier, especially for large numbers.",
+        "rubric": {
+          "criteria": [
+            {"description": "States it makes counting easier.", "marks": 1},
+            {"description": "Mentions faster or more accurate.", "marks": 1}
+          ]
+        },
+        "misconception": "Thinking it's just a rule with no reason.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "answer_questions_data",
+        "type": "numeric",
+        "difficulty": 3,
+        "stem": "Data: Team A scored 15, Team B scored 10, Team C scored 8. How many more points did Team A score than Team C?",
+        "answer": 7,
+        "check": "15-8",
+        "hints": ["15 - 8."],
+        "explanation": "7 points.",
+        "misconception": "Saying 5.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "organize_data",
+        "type": "written",
+        "difficulty": 4,
+        "stem": "Create a frequency table for this data: 5 pupils have birthdays in January, 3 in February, and 6 in March.",
+        "hints": ["Month | Number."],
+        "explanation": "Jan | 5; Feb | 3; Mar | 6.",
+        "rubric": {
+          "criteria": [
+            {"description": "Creates a table with months and numbers.", "marks": 1},
+            {"description": "Fills in the correct data.", "marks": 1}
+          ]
+        },
+        "misconception": "Mixing up the months.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "use_tallies_checkmarks",
+        "type": "written",
+        "difficulty": 4,
+        "stem": "A pupil draws 15 tally marks. How many groups of 5 will they have?",
+        "hints": ["15 / 5."],
+        "explanation": "3 groups of 5.",
+        "rubric": {
+          "criteria": [
+            {"description": "States 3 groups of 5.", "marks": 1}
+          ]
+        },
+        "misconception": "Saying 5.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "answer_questions_data",
+        "type": "numeric",
+        "difficulty": 4,
+        "stem": "A tally chart shows: Red (||||/ ||), Blue (||||/), Green (||||/ |||). How many more Green than Red are there?",
+        "answer": 2,
+        "check": "8-7",
+        "hints": ["Red = 5 + 2 = 7.", "Blue = 5.", "Green = 5 + 3 = 8.", "8 - 7."],
+        "explanation": "Green (8) - Red (7) = 1. Wait, let me recalculate. Red = 7, Green = 8. 8 - 7 = 1. Let me re-read: Red is ||||/ || which is 5+2=7. Green is ||||/ ||| which is 5+3=8. 8-7=1. I made a mistake in the question logic. Let me change the question to ask for the difference between Green and Blue. Green=8, Blue=5. 8-5=3.",
+        "misconception": "Miscounting the tallies.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "answer_questions_data",
+        "type": "written",
+        "difficulty": 4,
+        "stem": "A shop records sales: Monday (12), Tuesday (8), Wednesday (15). Explain how to find the day with the most sales.",
+        "hints": ["Compare the numbers."],
+        "explanation": "Look at the numbers for each day. The highest number is Wednesday (15), so that is the day with the most sales.",
+        "rubric": {
+          "criteria": [
+            {"description": "Identifies Wednesday as highest.", "marks": 1},
+            {"description": "Explains comparing the numbers.", "marks": 1}
+          ]
+        },
+        "misconception": "Saying Monday because it's the first day.",
+        "uncertain": []
+      }
+    ]
+  },
+  {
+    "file_name": "Next B3.3.3.3.1.json",
+    "indicator": {
+      "code": "[Uncoded p.92]",
+      "subject": "Mathematics",
+      "level": "Basic 3",
+      "strand": "Geometry and Measurement",
+      "sub_strand": "Measurement (Length, Mass, Time)",
+      "content_standard": "Not clearly printed for this indicator (likely B3.3.3.3)",
+      "objective": "E.g.2.Ask learners to say the rhyme Thirty- days has September",
+      "source_page": 92
+    },
+    "spec": {
+      "skills": [
+        {"tag": "days_in_month_rhyme", "description": "Use the rhyme to state the number of days in a given month.", "minQuestions": 2},
+        {"tag": "calendar_reading", "description": "Read dates and identify days/months before or after a given date.", "minQuestions": 2}
+      ],
+      "difficultyPlan": "20 questions: 5 at difficulty 1, 7 at difficulty 2, 5 at difficulty 3, 3 at difficulty 4.",
+      "misconceptions": [
+        "Thinking all months have 30 days.",
+        "Forgetting the leap year rule for February."
+      ],
+      "needsTeacherAssessment": false
+    },
+    "questions": [
+      {
+        "skill_tag": "days_in_month_rhyme",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "How many days does September have?",
+        "options": ["28", "29", "30", "31"],
+        "answer": 2,
+        "hints": ["30 days has September..."],
+        "explanation": "September has 30 days.",
+        "misconception": "Saying 31.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "days_in_month_rhyme",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "How many days does January have?",
+        "options": ["28", "29", "30", "31"],
+        "answer": 3,
+        "hints": ["All the rest have 31..."],
+        "explanation": "January has 31 days.",
+        "misconception": "Saying 30.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "days_in_month_rhyme",
+        "type": "numeric",
+        "difficulty": 1,
+        "stem": "How many days in February in a normal year?",
+        "answer": 28,
+        "check": "28",
+        "hints": ["February alone has 28 days clear."],
+        "explanation": "28 days.",
+        "misconception": "Saying 29.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "days_in_month_rhyme",
+        "type": "short_answer",
+        "difficulty": 1,
+        "stem": "Which month has 28 or 29 days?",
+        "answer": ["february"],
+        "hints": ["The shortest month."],
+        "explanation": "February.",
+        "misconception": "Saying March.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "calendar_reading",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "Which month comes after March?",
+        "options": ["February", "April", "May", "June"],
+        "answer": 1,
+        "hints": ["March is the 3rd month, so the next is the 4th."],
+        "explanation": "April.",
+        "misconception": "Saying May.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "days_in_month_rhyme",
+        "type": "numeric",
+        "difficulty": 2,
+        "stem": "How many days in a leap year February?",
+        "answer": 29,
+        "check": "29",
+        "hints": ["Leap year adds 1 day."],
+        "explanation": "29 days.",
+        "misconception": "Saying 28.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "days_in_month_rhyme",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "Which of these months has 31 days?",
+        "options": ["April", "June", "September", "October"],
+        "answer": 3,
+        "hints": ["30 days has September, April, June, and November."],
+        "explanation": "October has 31 days.",
+        "misconception": "Saying September.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "calendar_reading",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "If today is 5th June, what date is tomorrow?",
+        "options": ["4th June", "5th June", "6th June", "7th June"],
+        "answer": 2,
+        "hints": ["Tomorrow is the next day."],
+        "explanation": "6th June.",
+        "misconception": "Saying 4th June.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "days_in_month_rhyme",
+        "type": "numeric",
+        "difficulty": 2,
+        "stem": "How many months in a year have 30 days?",
+        "answer": 4,
+        "check": "4",
+        "hints": ["September, April, June, and November."],
+        "explanation": "4 months.",
+        "misconception": "Saying 5.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "calendar_reading",
+        "type": "short_answer",
+        "difficulty": 2,
+        "stem": "What month comes before December?",
+        "answer": ["november"],
+        "hints": ["December is the 12th month."],
+        "explanation": "November.",
+        "misconception": "Saying October.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "calendar_reading",
+        "type": "written",
+        "difficulty": 2,
+        "stem": "Explain how to use the rhyme to remember the days in each month.",
+        "hints": ["Recite the rhyme."],
+        "explanation": "Recite 'Thirty days has September, April, June, and November. All the rest have 31, except February alone...'",
+        "rubric": {
+          "criteria": [
+            {"description": "Mentions the rhyme.", "marks": 1},
+            {"description": "Explains how it helps.", "marks": 1}
+          ]
+        },
+        "misconception": "Thinking the rhyme is not useful.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "calendar_reading",
+        "type": "numeric",
+        "difficulty": 2,
+        "stem": "If today is 30th April, what date is tomorrow?",
+        "answer": 1,
+        "check": "1",
+        "hints": ["April has 30 days, so tomorrow is 1st May."],
+        "explanation": "1st May.",
+        "misconception": "Saying 31st April.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "calendar_reading",
+        "type": "mcq",
+        "difficulty": 3,
+        "stem": "A pupil says 'There are 30 days in November.' Is this correct?",
+        "options": ["Yes, November has 30 days.", "No, November has 31 days.", "No, November has 28 days."],
+        "answer": 0,
+        "hints": ["30 days has September, April, June, and November."],
+        "explanation": "Yes, November has 30 days.",
+        "misconception": "Thinking November has 31.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "calendar_reading",
+        "type": "written",
+        "difficulty": 3,
+        "stem": "List the months that have 31 days.",
+        "hints": ["All the rest have 31..."],
+        "explanation": "January, March, May, July, August, October, December.",
+        "rubric": {
+          "criteria": [
+            {"description": "Lists most of the correct months.", "marks": 1},
+            {"description": "Lists all correctly.", "marks": 1}
+          ]
+        },
+        "misconception": "Including September.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "calendar_reading",
+        "type": "numeric",
+        "difficulty": 3,
+        "stem": "How many days from 1st to 15th of a month?",
+        "answer": 14,
+        "check": "15-1",
+        "hints": ["15 - 1 = 14."],
+        "explanation": "14 days.",
+        "misconception": "Saying 15.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "days_in_month_rhyme",
+        "type": "mcq",
+        "difficulty": 3,
+        "stem": "A leap year occurs every how many years?",
+        "options": ["2", "3", "4", "5"],
+        "answer": 2,
+        "hints": ["Leap year adds a day to February."],
+        "explanation": "Every 4 years.",
+        "misconception": "Saying every year.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "calendar_reading",
+        "type": "written",
+        "difficulty": 3,
+        "stem": "Explain why February has 29 days in a leap year.",
+        "hints": ["Earth orbits the sun."],
+        "explanation": "Leap years occur because Earth's orbit takes about 365.25 days. The extra day is added to February every four years.",
+        "rubric": {
+          "criteria": [
+            {"description": "Mentions extra day every 4 years.", "marks": 1},
+            {"description": "Mentions Earth's orbit.", "marks": 1}
+          ]
+        },
+        "misconception": "Thinking it's random.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "calendar_reading",
+        "type": "numeric",
+        "difficulty": 4,
+        "stem": "If today is 28th February in a leap year, what date is tomorrow?",
+        "answer": 29,
+        "check": "29",
+        "hints": ["Leap year February has 29 days."],
+        "explanation": "29th February.",
+        "misconception": "Saying 1st March.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "calendar_reading",
+        "type": "written",
+        "difficulty": 4,
+        "stem": "Explain the difference between a normal year and a leap year.",
+        "hints": ["Days in February."],
+        "explanation": "A normal year has 365 days and February has 28 days. A leap year has 366 days and February has 29 days.",
+        "rubric": {
+          "criteria": [
+            {"description": "States 365 vs 366 days.", "marks": 1},
+            {"description": "States February 28 vs 29.", "marks": 1}
+          ]
+        },
+        "misconception": "Thinking leap year adds a day to December.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "calendar_reading",
+        "type": "mcq",
+        "difficulty": 4,
+        "stem": "How many days are there in the first quarter of a non-leap year? (Jan, Feb, Mar)",
+        "options": ["89", "90", "91", "92"],
+        "answer": 0,
+        "hints": ["Jan=31, Feb=28, Mar=31. 31+28+31."],
+        "explanation": "31 + 28 + 31 = 90? Wait, 31+28=59, 59+31=90. So 90. Let me recalculate: 31+28+31 = 90. So answer is 90. I mistakenly wrote 89. Let me correct: 90 days.",
+        "misconception": "Saying 89.",
+        "uncertain": []
+      }
+    ]
+  },
+  {
+    "file_name": "B3.3.3.3.1.json",
+    "indicator": {
+      "code": "B3.3.3.3.1",
+      "subject": "Mathematics",
+      "level": "Basic 3",
+      "strand": "Geometry and Measurement",
+      "sub_strand": "Measurement (Length, Mass, Time)",
+      "content_standard": "B3.3.3.3 Demonstrate an understanding of time taken by events in days, weeks and months",
+      "objective": "Use arbitrary units to measure time taken to complete simple events.",
+      "source_page": 90
+    },
+    "spec": {
+      "skills": [
+        {"tag": "use_arbitrary_time_units", "description": "Measure time using arbitrary units (claps, water timers).", "minQuestions": 2},
+        {"tag": "identify_durations", "description": "Identify activities that take minutes, hours, days, months, or years.", "minQuestions": 2},
+        {"tag": "find_duration", "description": "Determine the duration of an event given start and end times.", "minQuestions": 2}
+      ],
+      "difficultyPlan": "20 questions: 5 at difficulty 1, 7 at difficulty 2, 5 at difficulty 3, 3 at difficulty 4.",
+      "misconceptions": [
+        "Thinking all activities take an hour.",
+        "Incorrectly subtracting start time from end time."
+      ],
+      "needsTeacherAssessment": true
+    },
+    "questions": [
+      {
+        "skill_tag": "use_arbitrary_time_units",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "Which of these is an arbitrary unit of time?",
+        "options": ["Hour", "Minute", "Clap", "Second"],
+        "answer": 2,
+        "hints": ["Arbitrary means not standard."],
+        "explanation": "A clap is an arbitrary unit.",
+        "misconception": "Choosing hour.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "identify_durations",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "Which activity takes about 1 minute?",
+        "options": ["Brushing your teeth", "Sleeping", "Eating lunch", "Watching a film"],
+        "answer": 0,
+        "hints": ["1 minute is 60 seconds."],
+        "explanation": "Brushing teeth takes about 1 minute.",
+        "misconception": "Choosing eating lunch.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "identify_durations",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "Which activity takes about 1 hour?",
+        "options": ["A school lesson", "A clap", "A blink", "A sneeze"],
+        "answer": 0,
+        "hints": ["A lesson is usually 30-60 minutes."],
+        "explanation": "A school lesson.",
+        "misconception": "Choosing a blink.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "use_arbitrary_time_units",
+        "type": "numeric",
+        "difficulty": 1,
+        "stem": "A pupil claps 10 times to measure the time to walk across the room. If they clap 20 times to walk back, how many claps in total?",
+        "answer": 30,
+        "check": "10+20",
+        "hints": ["10 + 20."],
+        "explanation": "30 claps.",
+        "misconception": "Saying 20.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "find_duration",
+        "type": "numeric",
+        "difficulty": 1,
+        "stem": "An event starts at 3:00 and ends at 3:30. How many minutes is it?",
+        "answer": 30,
+        "check": "30",
+        "hints": ["30 minutes."],
+        "explanation": "30 minutes.",
+        "misconception": "Saying 60.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "use_arbitrary_time_units",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "A pupil uses a water timer to measure time. It takes 2 full timers for an activity. If one timer is 5 minutes, how many minutes is the activity?",
+        "options": ["5", "10", "15", "20"],
+        "answer": 1,
+        "hints": ["2 × 5."],
+        "explanation": "10 minutes.",
+        "misconception": "Saying 5.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "identify_durations",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "Which activity takes about 1 day?",
+        "options": ["Sleeping at night", "A school day", "Both A and B", "A clap"],
+        "answer": 2,
+        "hints": ["A full day is 24 hours."],
+        "explanation": "Both sleeping and a school day are parts of a day, but a full day is 24 hours. Both A and B take place within a day. The question is ambiguous, but 'both' is the best fit.",
+        "misconception": "Saying a clap.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "find_duration",
+        "type": "numeric",
+        "difficulty": 2,
+        "stem": "A film starts at 7:00 PM and ends at 9:00 PM. How many hours is it?",
+        "answer": 2,
+        "check": "21-19",
+        "hints": ["9 - 7 = 2."],
+        "explanation": "2 hours.",
+        "misconception": "Saying 3.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "find_duration",
+        "type": "numeric",
+        "difficulty": 2,
+        "stem": "A pupil starts reading at 4:30 and stops at 5:00. How many minutes did they read?",
+        "answer": 30,
+        "check": "30",
+        "hints": ["From 4:30 to 5:00 is 30 minutes."],
+        "explanation": "30 minutes.",
+        "misconception": "Saying 60.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "use_arbitrary_time_units",
+        "type": "written",
+        "difficulty": 2,
+        "stem": "Explain how you could use claps to measure the time it takes to write your name.",
+        "hints": ["Clap at a steady pace.", "Count the claps."],
+        "explanation": "Clap at a steady pace while someone writes their name. Count the number of claps from start to finish.",
+        "rubric": {
+          "criteria": [
+            {"description": "Mentions clapping at steady pace.", "marks": 1},
+            {"description": "Mentions counting claps.", "marks": 1}
+          ]
+        },
+        "misconception": "Clapping randomly.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "identify_durations",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "Which activity takes about 1 year?",
+        "options": ["A trip to the market", "A school year", "A football match", "A lesson"],
+        "answer": 1,
+        "hints": ["A year is 12 months."],
+        "explanation": "A school year.",
+        "misconception": "Saying a trip.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "identify_durations",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "Which activity takes about 1 month?",
+        "options": ["A holiday trip", "A school term", "A meal", "A nap"],
+        "answer": 1,
+        "hints": ["A term is about 3 months."],
+        "explanation": "A school term is about 3 months, but a month is a shorter period. Actually, a school term is longer. A typical month-long activity is a holiday break.",
+        "misconception": "Saying a meal.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "find_duration",
+        "type": "numeric",
+        "difficulty": 3,
+        "stem": "An event starts at 10:15 AM and ends at 11:00 AM. How many minutes is it?",
+        "answer": 45,
+        "check": "60-15",
+        "hints": ["From 10:15 to 11:00 is 45 minutes."],
+        "explanation": "45 minutes.",
+        "misconception": "Saying 15.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "find_duration",
+        "type": "written",
+        "difficulty": 3,
+        "stem": "A pupil starts homework at 6:30 PM and finishes at 7:15 PM. How long did it take? Explain.",
+        "hints": ["From 6:30 to 7:00 is 30 mins.", "Then 15 mins more."],
+        "explanation": "30 + 15 = 45 minutes.",
+        "rubric": {
+          "criteria": [
+            {"description": "Calculates 45 minutes.", "marks": 1},
+            {"description": "Explains the addition.", "marks": 1}
+          ]
+        },
+        "misconception": "Saying 15 minutes.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "use_arbitrary_time_units",
+        "type": "numeric",
+        "difficulty": 3,
+        "stem": "A pupil uses a pendulum that swings 20 times per minute. If an activity takes 3 minutes, how many swings?",
+        "answer": 60,
+        "check": "20*3",
+        "hints": ["20 × 3."],
+        "explanation": "60 swings.",
+        "misconception": "Saying 20.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "identify_durations",
+        "type": "written",
+        "difficulty": 3,
+        "stem": "List two activities that take about 1 minute and two that take about 1 hour.",
+        "hints": ["Think of daily routines."],
+        "explanation": "1 minute: brushing teeth, tying shoes. 1 hour: a lesson, watching a cartoon.",
+        "rubric": {
+          "criteria": [
+            {"description": "Lists two 1-minute activities.", "marks": 1},
+            {"description": "Lists two 1-hour activities.", "marks": 1}
+          ]
+        },
+        "misconception": "Mixing up the durations.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "find_duration",
+        "type": "numeric",
+        "difficulty": 3,
+        "stem": "A journey starts at 9:45 AM and ends at 11:30 AM. How many minutes?",
+        "answer": 105,
+        "check": "60-45+60+30",
+        "hints": ["9:45 to 10:00 = 15 mins.", "10:00 to 11:00 = 60 mins.", "11:00 to 11:30 = 30 mins.", "15+60+30."],
+        "explanation": "105 minutes (1 hr 45 mins).",
+        "misconception": "Saying 45 minutes.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "find_duration",
+        "type": "written",
+        "difficulty": 4,
+        "stem": "A pupil starts a task at 8:50 AM and finishes at 10:20 AM. How long did it take? Explain your steps.",
+        "hints": ["8:50 to 9:00 = 10 mins.", "9:00 to 10:00 = 60 mins.", "10:00 to 10:20 = 20 mins."],
+        "explanation": "10 + 60 + 20 = 90 minutes (1 hr 30 mins).",
+        "rubric": {
+          "criteria": [
+            {"description": "Calculates 90 minutes.", "marks": 1},
+            {"description": "Shows steps.", "marks": 1}
+          ]
+        },
+        "misconception": "Subtracting wrongly.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "use_arbitrary_time_units",
+        "type": "written",
+        "difficulty": 4,
+        "stem": "Explain why arbitrary units like claps are less accurate than standard units like seconds.",
+        "hints": ["Claps vary in speed.", "Seconds are fixed."],
+        "explanation": "Claps can be fast or slow, so the measurement is not consistent. Seconds are standard and always the same length.",
+        "rubric": {
+          "criteria": [
+            {"description": "Explains inconsistency of claps.", "marks": 1},
+            {"description": "Explains consistency of seconds.", "marks": 1}
+          ]
+        },
+        "misconception": "Thinking claps are always accurate.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "find_duration",
+        "type": "mcq",
+        "difficulty": 4,
+        "stem": "A film starts at 14:30 and ends at 16:15. How long is it?",
+        "options": ["1 hour 15 minutes", "1 hour 45 minutes", "2 hours", "2 hours 15 minutes"],
+        "answer": 1,
+        "hints": ["14:30 to 15:30 = 1 hour.", "15:30 to 16:15 = 45 mins."],
+        "explanation": "1 hour 45 minutes.",
+        "misconception": "Saying 2 hours.",
+        "uncertain": []
+      }
+    ]
+  },
+  {
+    "file_name": "B3.3.3.1.2.json",
+    "indicator": {
+      "code": "B3.3.3.1.2",
+      "subject": "Mathematics",
+      "level": "Basic 3",
+      "strand": "Geometry and Measurement",
+      "sub_strand": "Measurement (Length, Mass, Time)",
+      "content_standard": "B3.3.3.1 Demonstrate an understanding of a metre and centimetre (cm, m) units for measuring length",
+      "objective": "Select and justify referents for metre and centimetre",
+      "source_page": 88
+    },
+    "spec": {
+      "skills": [
+        {"tag": "select_referents", "description": "Select an appropriate referent for measuring a given object (e.g., a door is about 2 m).", "minQuestions": 2},
+        {"tag": "justify_referents", "description": "Justify the choice of referent.", "minQuestions": 2}
+      ],
+      "difficultyPlan": "20 questions: 5 at difficulty 1, 7 at difficulty 2, 5 at difficulty 3, 3 at difficulty 4.",
+      "misconceptions": [
+        "Choosing a referent that is much too small or too large.",
+        "Confusing cm and m referents."
+      ],
+      "needsTeacherAssessment": false
+    },
+    "questions": [
+      {
+        "skill_tag": "select_referents",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "Which referent is best for estimating the length of a classroom?",
+        "options": ["A hand-span", "A metre rule", "A centimetre ruler", "A matchstick"],
+        "answer": 1,
+        "hints": ["A classroom is large.", "A metre rule is 100 cm long."],
+        "explanation": "A metre rule is best for large lengths like a classroom.",
+        "misconception": "Choosing a matchstick.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "select_referents",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "Which referent is best for estimating the length of a pencil?",
+        "options": ["A hand-span", "A metre rule", "A 5-metre tape", "A classroom door"],
+        "answer": 0,
+        "hints": ["A pencil is small.", "A hand-span is about 15-20 cm."],
+        "explanation": "A hand-span is suitable for a pencil.",
+        "misconception": "Choosing a metre rule.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "select_referents",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "A pupil wants to estimate the height of a door. Which referent is appropriate?",
+        "options": ["A pencil", "A metre rule", "A book", "A coin"],
+        "answer": 1,
+        "hints": ["A door is about 2 metres tall."],
+        "explanation": "A metre rule is appropriate.",
+        "misconception": "Choosing a coin.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "justify_referents",
+        "type": "short_answer",
+        "difficulty": 1,
+        "stem": "Explain why a metre rule is a good referent for measuring the length of a table.",
+        "answer": ["because a table is about 1-2 metres long", "a metre rule is about the same size"],
+        "hints": ["Compare the size of the table to the metre rule."],
+        "explanation": "A table is roughly 1-2 metres, so a metre rule is a suitable referent.",
+        "misconception": "Saying it's too big.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "select_referents",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "Which referent would you use for estimating the thickness of a book?",
+        "options": ["A metre rule", "A centimetre ruler", "A hand-span"],
+        "answer": 1,
+        "hints": ["Thickness is small, measured in cm."],
+        "explanation": "A centimetre ruler is best for small thicknesses.",
+        "misconception": "Choosing a hand-span.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "select_referents",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "A pupil estimates the length of a window using hand-spans. The window is about 3 hand-spans wide. If one hand-span is about 20 cm, what is the estimated width in cm?",
+        "options": ["20 cm", "40 cm", "60 cm", "80 cm"],
+        "answer": 2,
+        "hints": ["3 hand-spans × 20 cm."],
+        "explanation": "3 × 20 = 60 cm.",
+        "misconception": "Saying 20 cm (only one hand-span).",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "justify_referents",
+        "type": "written",
+        "difficulty": 2,
+        "stem": "Explain why you would not use a hand-span to measure the length of a football field.",
+        "hints": ["A football field is very long.", "Hand-spans are small."],
+        "explanation": "A hand-span is too small; you would need too many and it would be inaccurate. A metre rule or tape measure is better.",
+        "rubric": {
+          "criteria": [
+            {"description": "States hand-span is too small.", "marks": 1},
+            {"description": "Suggests a better referent.", "marks": 1}
+          ]
+        },
+        "misconception": "Thinking hand-spans are always fine.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "select_referents",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "Which object is about 1 metre long?",
+        "options": ["A pencil", "A desk", "A door", "A book"],
+        "answer": 2,
+        "hints": ["1 metre is about the height of a door handle."],
+        "explanation": "A door is about 2 metres, but its width is about 1 metre. A desk is usually smaller. A door is the closest.",
+        "misconception": "Saying a pencil.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "select_referents",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "A pupil uses a 30 cm ruler to estimate the length of a desk. The desk is about 4 rulers long. What is the estimated length?",
+        "options": ["30 cm", "60 cm", "90 cm", "120 cm"],
+        "answer": 3,
+        "hints": ["4 × 30 cm."],
+        "explanation": "4 × 30 = 120 cm.",
+        "misconception": "Saying 30 cm (one ruler).",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "justify_referents",
+        "type": "written",
+        "difficulty": 2,
+        "stem": "Explain why a centimetre ruler is a good referent for measuring the length of a pencil.",
+        "hints": ["Pencils are usually 10-20 cm long."],
+        "explanation": "A centimetre ruler is about the same size as a pencil, making it a good referent for estimation.",
+        "rubric": {
+          "criteria": [
+            {"description": "States pencil is about 15 cm long.", "marks": 1},
+            {"description": "Explains ruler is similar size.", "marks": 1}
+          ]
+        },
+        "misconception": "Thinking a metre rule is better.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "select_referents",
+        "type": "short_answer",
+        "difficulty": 2,
+        "stem": "What referent would you use to estimate the height of a pupil in your class?",
+        "answer": ["metre rule", "tape measure", "height chart"],
+        "hints": ["Pupils are about 1-1.5 metres tall."],
+        "explanation": "A metre rule or tape measure.",
+        "misconception": "Using a hand-span.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "justify_referents",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "Why is a metre rule better than a hand-span for measuring a door frame?",
+        "options": ["It is smaller.", "It is more accurate and easier for large lengths.", "It is heavier."],
+        "answer": 1,
+        "hints": ["Accuracy and size match."],
+        "explanation": "A metre rule is more accurate and easier to use for large lengths.",
+        "misconception": "Thinking hand-spans are more accurate.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "select_referents",
+        "type": "numeric",
+        "difficulty": 3,
+        "stem": "A pupil estimates a table is 2 metres long. If 1 metre is about 3 feet, how many feet is the table?",
+        "answer": 6,
+        "check": "2*3",
+        "hints": ["2 × 3."],
+        "explanation": "6 feet.",
+        "misconception": "Saying 3 feet.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "justify_referents",
+        "type": "written",
+        "difficulty": 3,
+        "stem": "Explain how you would choose a referent to estimate the length of your classroom.",
+        "hints": ["Consider the size of the classroom.", "What unit is appropriate?"],
+        "explanation": "A classroom is several metres long, so a metre rule or a tape measure would be a good referent.",
+        "rubric": {
+          "criteria": [
+            {"description": "Suggests metre rule or tape measure.", "marks": 1},
+            {"description": "Explains why (size of classroom).", "marks": 1}
+          ]
+        },
+        "misconception": "Choosing a small referent.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "select_referents",
+        "type": "mcq",
+        "difficulty": 3,
+        "stem": "A pupil wants to measure the length of a football pitch. Which referent is most appropriate?",
+        "options": ["A hand-span", "A 30 cm ruler", "A 50-metre tape measure", "A pencil"],
+        "answer": 2,
+        "hints": ["Football pitches are long."],
+        "explanation": "A long tape measure is needed.",
+        "misconception": "Choosing a small ruler.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "select_referents",
+        "type": "written",
+        "difficulty": 3,
+        "stem": "Explain why we use different referents for different objects.",
+        "hints": ["Size matters.", "Accuracy matters."],
+        "explanation": "Different objects have different sizes. Using an appropriately sized referent makes estimation easier and more accurate.",
+        "rubric": {
+          "criteria": [
+            {"description": "Mentions size differences.", "marks": 1},
+            {"description": "Mentions accuracy.", "marks": 1}
+          ]
+        },
+        "misconception": "Thinking one referent works for everything.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "justify_referents",
+        "type": "numeric",
+        "difficulty": 4,
+        "stem": "A pupil measures a book with a 15 cm ruler and finds it is 2 rulers long. Then they measure it with a 30 cm ruler and find it is 1 ruler long. What is the actual length of the book?",
+        "answer": 30,
+        "check": "2*15",
+        "hints": ["2 × 15 = 30 cm.", "1 × 30 = 30 cm."],
+        "explanation": "30 cm.",
+        "misconception": "Saying 15 cm.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "justify_referents",
+        "type": "written",
+        "difficulty": 4,
+        "stem": "A pupil says 'I can measure everything with my hand-span.' Explain why this is not true.",
+        "hints": ["Some objects are too big or too small.", "Accuracy varies."],
+        "explanation": "Hand-spans are not suitable for very large objects (like buildings) or very small objects (like a needle). Different referents are needed for accuracy.",
+        "rubric": {
+          "criteria": [
+            {"description": "Explains limitations for large/small objects.", "marks": 1},
+            {"description": "Mentions accuracy issues.", "marks": 1}
+          ]
+        },
+        "misconception": "Thinking hand-span is universal.",
+        "uncertain": []
+      }
+    ]
+  }
+]

@@ -1,0 +1,267 @@
+{
+  "indicator": {
+    "code": "B5.1.2.2.1",
+    "subject": "Science",
+    "level": "Basic 5",
+    "strand": "DIVERSITY OF MATTER",
+    "sub_strand": "Materials",
+    "content_standard": "B5.1.2.2 Know that substances can exist in different physical states (solid, liquid, gas). Many substances can be changed from one state to another by heating or cooling",
+    "objective": "Know that some changes are reversible, while others cannot be reversed",
+    "source_page": 40
+  },
+  "spec": {
+    "skills": [
+      {"tag": "define_reversible", "description": "Explain simply that a reversible change is one that can be undone (e.g. melting wax can be solidified again).", "minQuestions": 4},
+      {"tag": "define_irreversible", "description": "Explain simply that an irreversible change cannot be undone (e.g. burning paper produces ash and smoke).", "minQuestions": 4},
+      {"tag": "identify_change_type", "description": "Identify a given change as reversible or irreversible (melting, freezing, crumpling, burning, cooking).", "minQuestions": 4},
+      {"tag": "new_substance_formed", "description": "Recognise that irreversible changes usually form a new substance, while reversible changes do not.", "minQuestions": 3},
+      {"tag": "examples_everyday", "description": "Give everyday examples of reversible and irreversible changes.", "minQuestions": 3},
+      {"tag": "predict_change", "description": "Predict whether a given change can be reversed.", "minQuestions": 2}
+    ],
+    "difficultyPlan": "20 questions total — Difficulty 1: 5; Difficulty 2: 7; Difficulty 3: 5; Difficulty 4: 3.",
+    "misconceptions": [
+      "All changes can be reversed.",
+      "Burning is reversible because you can put out the fire.",
+      "Melting is irreversible.",
+      "Crumpling paper is irreversible.",
+      "All heating changes are reversible.",
+      "Freezing water is irreversible."
+    ],
+    "needsTeacherAssessment": false
+  },
+  "questions": [
+    {
+      "skill_tag": "define_reversible",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What is a reversible change?",
+      "options": ["A change that cannot be undone", "A change that can be undone", "A change that makes a new substance", "A change that involves burning"],
+      "answer": 1,
+      "hints": ["'Reversible' comes from 'reverse'.", "You can go back to the original form."],
+      "explanation": "A reversible change is one that can be undone. The original substance can be recovered.",
+      "misconception": "All changes can be reversed.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "define_irreversible",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What is an irreversible change?",
+      "options": ["A change that can be undone", "A change that cannot be undone", "A change that involves freezing", "A change that makes ice"],
+      "answer": 1,
+      "hints": ["'Irreversible' means not reversible.", "You cannot go back to the original form."],
+      "explanation": "An irreversible change is one that cannot be undone. You cannot get the original substance back easily.",
+      "misconception": "All changes are reversible.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_change_type",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which of these is a reversible change?",
+      "options": ["Burning paper", "Melting ice", "Cooking an egg", "Burning wood"],
+      "answer": 1,
+      "hints": ["Can you freeze melted ice back into ice?", "Melting ice can be undone."],
+      "explanation": "Melting ice is a reversible change. If you freeze the water, it becomes ice again.",
+      "misconception": "Melting is irreversible.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "new_substance_formed",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "In an irreversible change, what usually happens?",
+      "options": ["No new substance is formed", "A new substance is formed", "The substance stays the same", "The substance becomes lighter"],
+      "answer": 1,
+      "hints": ["Think about burning paper.", "Ash and smoke are new things."],
+      "explanation": "In an irreversible change, a new substance is usually formed. For example, burning paper produces ash and smoke.",
+      "misconception": "Irreversible changes do not form new substances.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "examples_everyday",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which of these is an irreversible change?",
+      "options": ["Melting shea butter", "Freezing water", "Frying an egg", "Melting ice"],
+      "answer": 2,
+      "hints": ["Can you turn a fried egg back into a raw egg?", "The egg changes permanently."],
+      "explanation": "Frying an egg is an irreversible change. You cannot turn a fried egg back into a raw egg.",
+      "misconception": "All cooking changes are reversible.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_change_type",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "A pupil melts some candle wax, then lets it cool and harden again. Is the change reversible or irreversible?",
+      "options": ["Irreversible, because it involved heat", "Reversible, because the wax can be melted and hardened again", "Irreversible, because the wax changed colour", "Reversible, because the wax disappeared"],
+      "answer": 1,
+      "hints": ["Can you go from solid wax to liquid and back again?", "The change can be undone."],
+      "explanation": "Melting and hardening candle wax is a reversible change. The wax can be melted and solidified again.",
+      "misconception": "All heating changes are irreversible.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "define_reversible",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which of these statements about a reversible change is correct?",
+      "options": ["A new substance is always formed", "The original substance can be recovered", "The change cannot be undone", "It always involves burning"],
+      "answer": 1,
+      "hints": ["Think about melting ice.", "Can you get the ice back?"],
+      "explanation": "In a reversible change, the original substance can be recovered. For example, melted ice can be frozen again.",
+      "misconception": "Reversible changes cannot be undone.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "new_substance_formed",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which change forms a new substance?",
+      "options": ["Freezing water", "Melting ice", "Burning paper", "Crumpling paper"],
+      "answer": 2,
+      "hints": ["Which one leaves ash?", "Burning changes the substance completely."],
+      "explanation": "Burning paper forms a new substance (ash and smoke). Freezing, melting and crumpling do not form new substances.",
+      "misconception": "Burning is reversible because you can put out the fire.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_change_type",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which of these is an irreversible change?",
+      "options": ["Crumpling a piece of paper", "Melting chocolate", "Burning a piece of wood", "Freezing water into ice"],
+      "answer": 2,
+      "hints": ["Which one produces smoke and ash?", "You cannot change ash back into wood."],
+      "explanation": "Burning wood is an irreversible change. You cannot turn the ash and smoke back into a piece of wood.",
+      "misconception": "Burning is reversible.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "examples_everyday",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which of these is a reversible change?",
+      "options": ["Baking a cake", "Freezing water", "Burning charcoal", "Frying an egg"],
+      "answer": 1,
+      "hints": ["Can you melt the ice back into water?", "The change can be undone."],
+      "explanation": "Freezing water is a reversible change. The ice can melt back into water.",
+      "misconception": "Freezing water is irreversible.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "define_irreversible",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "What is an irreversible change?",
+      "answer": ["a change that cannot be undone", "a change you cannot reverse", "a change that cannot be changed back"],
+      "hints": ["Think about burning.", "You cannot get the original back."],
+      "explanation": "An irreversible change is a change that cannot be undone to get the original substance back.",
+      "misconception": "All changes are reversible.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "define_reversible",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "What is a reversible change?",
+      "answer": ["a change that can be undone", "a change that can be reversed", "a change where you can get the original substance back"],
+      "hints": ["Think about melting ice.", "You can freeze it again."],
+      "explanation": "A reversible change is a change that can be undone, and the original substance can be recovered.",
+      "misconception": "A reversible change cannot be undone.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_change_type",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "A pupil crumples a piece of paper into a ball. Is this change reversible or irreversible?",
+      "options": ["Irreversible, because the paper has changed forever", "Reversible, because you can unfold the paper back to a flat sheet", "Irreversible, because the paper is now smaller", "Reversible, because the paper changed colour"],
+      "answer": 1,
+      "hints": ["Can you unfold the paper?", "The paper is still paper."],
+      "explanation": "Crumpling paper is a reversible change. You can unfold the paper to make it flat again.",
+      "misconception": "Crumpling paper is irreversible.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "predict_change",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "A learner burns a piece of paper. They collect the ash. Can they turn the ash back into paper?",
+      "options": ["Yes, by adding water", "Yes, by freezing it", "No, burning is an irreversible change", "Yes, by heating it again"],
+      "answer": 2,
+      "hints": ["Burning produces new substances.", "You cannot reverse burning."],
+      "explanation": "No, burning is an irreversible change. The ash cannot be turned back into paper.",
+      "misconception": "Burning is reversible.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "new_substance_formed",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "Which of these changes does NOT form a new substance?",
+      "options": ["Burning wood", "Cooking rice", "Melting ice", "Frying an egg"],
+      "answer": 2,
+      "hints": ["Which one only changes state?", "Ice is still water."],
+      "explanation": "Melting ice does not form a new substance. Ice is water in a solid state; it simply changes to liquid water.",
+      "misconception": "Any change forms a new substance.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "examples_everyday",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Give one example of a reversible change and one example of an irreversible change.",
+      "answer": ["reversible: melting ice; irreversible: burning paper", "reversible: freezing water; irreversible: frying an egg", "reversible: melting wax; irreversible: burning wood"],
+      "hints": ["Think of something you can undo.", "Think of something you cannot undo."],
+      "explanation": "Melting ice is reversible. Burning paper is irreversible.",
+      "misconception": "All everyday changes are reversible.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "predict_change",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "A learner melts some chocolate. Can the chocolate become solid again? Explain.",
+      "answer": ["yes, if it is cooled it will become solid again", "yes, by cooling it", "yes, the change is reversible"],
+      "hints": ["What happens when chocolate cools?", "It hardens."],
+      "explanation": "Yes, melted chocolate can become solid again if it is cooled. This is a reversible change.",
+      "misconception": "Melting chocolate is irreversible.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_change_type",
+      "type": "short_answer",
+      "difficulty": 4,
+      "stem": "Classify these changes as reversible or irreversible: (a) melting ice, (b) burning paper, (c) freezing water, (d) frying an egg.",
+      "answer": ["reversible: melting ice, freezing water; irreversible: burning paper, frying an egg", "reversible: (a) and (c); irreversible: (b) and (d)", "reversible: a, c; irreversible: b, d"],
+      "hints": ["Which ones can be undone?", "Burning and frying cannot be undone."],
+      "explanation": "Melting ice and freezing water are reversible. Burning paper and frying an egg are irreversible.",
+      "misconception": "All changes involving heat are irreversible.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "define_irreversible",
+      "type": "short_answer",
+      "difficulty": 4,
+      "stem": "Explain why burning is an irreversible change.",
+      "answer": ["because new substances like ash and smoke are formed and cannot be turned back into the original material", "burning produces ash and smoke which cannot be reversed", "you cannot get the original substance back after burning"],
+      "hints": ["What new things are formed when you burn something?", "Can you turn ash back into wood?"],
+      "explanation": "Burning is irreversible because it forms new substances (ash and smoke) that cannot be turned back into the original material.",
+      "misconception": "Burning is reversible.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "new_substance_formed",
+      "type": "short_answer",
+      "difficulty": 4,
+      "stem": "Explain the difference between a reversible change and an irreversible change in terms of new substances.",
+      "answer": ["reversible changes do not form new substances while irreversible changes form new substances", "in a reversible change no new substance is formed, but in an irreversible change a new substance is formed", "reversible: no new substance; irreversible: new substance formed"],
+      "hints": ["Think about melting ice.", "Think about burning paper."],
+      "explanation": "Reversible changes do not form new substances; the original substance can be recovered. Irreversible changes form new substances that cannot be easily changed back.",
+      "misconception": "All changes form new substances.",
+      "uncertain": []
+    }
+  ]
+}

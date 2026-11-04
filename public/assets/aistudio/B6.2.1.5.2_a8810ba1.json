@@ -1,0 +1,275 @@
+{
+  "indicator": {
+    "code": "B6.2.1.5.2",
+    "subject": "Science",
+    "level": "Basic 6",
+    "strand": "CYCLES",
+    "sub_strand": "Earth Science",
+    "content_standard": "B6.2.1.4 Recognise water and air as important natural resources (indicator code printed as B6.2.1.5.2)",
+    "objective": "Demonstrate that air supports burning",
+    "source_page": 59
+  },
+  "spec": {
+    "skills": [
+      {"tag": "define_air_composition", "description": "Recognise that air is a mixture of gases including oxygen.", "minQuestions": 3},
+      {"tag": "oxygen_burning", "description": "Explain that oxygen in the air is needed for burning.", "minQuestions": 4},
+      {"tag": "candle_experiment", "description": "Describe what happens when a candle is covered with a glass jar (the flame goes out because oxygen is used up).", "minQuestions": 4},
+      {"tag": "air_importance", "description": "State why air is important for burning and for life.", "minQuestions": 3},
+      {"tag": "predict_outcome", "description": "Predict what happens to a flame when air is removed or when fresh air is supplied.", "minQuestions": 3},
+      {"tag": "everyday_examples", "description": "Give everyday examples showing air supports burning (e.g. blowing on a fire, covering a fire to put it out).", "minQuestions": 3}
+    ],
+    "difficultyPlan": "20 questions total — Difficulty 1: 5; Difficulty 2: 7; Difficulty 3: 5; Difficulty 4: 3.",
+    "misconceptions": [
+      "Air is not needed for burning.",
+      "A candle goes out in a jar because the jar is cold.",
+      "All gases in air support burning.",
+      "Blowing on a fire always puts it out.",
+      "Water puts out fire because it removes air only.",
+      "Air has no effect on fire."
+    ],
+    "needsTeacherAssessment": true
+  },
+  "questions": [
+    {
+      "skill_tag": "define_air_composition",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What is air made of?",
+      "options": ["A mixture of gases including oxygen", "Only oxygen", "Only carbon dioxide", "Only water vapour"],
+      "answer": 0,
+      "hints": ["Air contains many gases.", "One of them is oxygen."],
+      "explanation": "Air is a mixture of gases, including oxygen, nitrogen and carbon dioxide.",
+      "misconception": "Air is only oxygen.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "define_air_composition",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which gas in the air is needed for burning?",
+      "options": ["Oxygen", "Nitrogen", "Carbon dioxide", "Water vapour"],
+      "answer": 0,
+      "hints": ["It is the gas we breathe in to live.", "It supports burning."],
+      "explanation": "Oxygen is the gas in the air that is needed for burning.",
+      "misconception": "Carbon dioxide supports burning.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "define_air_composition",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Which gas in the air supports burning?",
+      "answer": ["oxygen", "the oxygen in air"],
+      "hints": ["It is also needed for breathing.", "It makes up part of the air."],
+      "explanation": "Oxygen in the air supports burning.",
+      "misconception": "Nitrogen supports burning.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "oxygen_burning",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Why does a fire need air?",
+      "options": ["Because air contains oxygen which supports burning", "Because air contains water", "Because air is cold", "Because air makes smoke"],
+      "answer": 0,
+      "hints": ["Oxygen is in the air.", "Fire needs oxygen to burn."],
+      "explanation": "A fire needs air because air contains oxygen, which supports burning.",
+      "misconception": "Air is not needed for burning.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "oxygen_burning",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "What happens to a fire when it is deprived of air?",
+      "options": ["It goes out", "It burns brighter", "It becomes hotter", "It changes colour"],
+      "answer": 0,
+      "hints": ["Fire needs oxygen from air.", "Without air, the fire cannot continue."],
+      "explanation": "A fire goes out when deprived of air because it needs oxygen to keep burning.",
+      "misconception": "Fire burns without air.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "oxygen_burning",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Explain why air is necessary for burning.",
+      "answer": ["air contains oxygen which is needed for burning", "oxygen in the air supports burning", "fire needs oxygen from the air to burn"],
+      "hints": ["What gas in air supports burning?", "Fire needs this gas."],
+      "explanation": "Air is necessary for burning because it contains oxygen, which is needed for a fire to burn.",
+      "misconception": "Air is not needed for burning.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "oxygen_burning",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "A pupil says, 'A fire will burn forever if it has fuel.' What is the best correction?",
+      "options": ["Yes, fuel is all a fire needs", "No, a fire also needs oxygen from the air to keep burning", "No, a fire needs water to keep burning", "No, a fire needs sand to keep burning"],
+      "answer": 1,
+      "hints": ["Fire needs fuel and oxygen.", "Without oxygen, the fire goes out."],
+      "explanation": "A fire needs both fuel and oxygen. Without oxygen from the air, the fire will go out.",
+      "misconception": "Fuel alone is enough for burning.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "candle_experiment",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "A burning candle is covered with a glass jar. What happens after a short time?",
+      "options": ["The candle flame goes out", "The candle burns brighter", "The jar becomes cold", "The candle becomes larger"],
+      "answer": 0,
+      "hints": ["The jar traps the air.", "The candle uses up the oxygen."],
+      "explanation": "When a burning candle is covered with a glass jar, the flame goes out because the candle uses up the oxygen inside the jar.",
+      "misconception": "The candle continues to burn in the jar.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "candle_experiment",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "Why does the candle flame go out when covered with a glass jar?",
+      "options": ["The oxygen inside the jar is used up", "The jar is too cold", "The jar blocks the light", "The candle runs out of wax"],
+      "answer": 0,
+      "hints": ["Fire needs oxygen.", "The jar traps the air, and the oxygen is used up."],
+      "explanation": "The candle flame goes out because the burning candle uses up the oxygen inside the jar. Without oxygen, the flame cannot continue.",
+      "misconception": "The jar is cold, so the flame goes out.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "candle_experiment",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "In the candle-and-jar experiment, why does the flame go out?",
+      "answer": ["the candle uses up the oxygen in the jar", "the oxygen inside the jar is used up", "there is no more oxygen for burning"],
+      "hints": ["Fire needs oxygen.", "The jar traps the air."],
+      "explanation": "The flame goes out because the candle uses up the oxygen trapped inside the jar, and fire cannot burn without oxygen.",
+      "misconception": "The jar blocks the flame physically.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "candle_experiment",
+      "type": "practical",
+      "difficulty": 4,
+      "stem": "In groups, carry out the candle-and-jar experiment. Light a candle, cover it with a glass jar, and observe what happens. Describe your observation and explain why it happens.",
+      "rubric": {
+        "criteria": [
+          {"description": "Carried out the experiment safely", "marks": 1},
+          {"description": "Observed that the candle flame goes out when covered", "marks": 2},
+          {"description": "Explained that the candle uses up the oxygen in the jar", "marks": 2},
+          {"description": "Worked cooperatively in the group", "marks": 1}
+        ]
+      },
+      "answer": "",
+      "hints": ["Light the candle first.", "Cover it with the jar.", "Watch the flame."],
+      "explanation": "This is a practical task. Your teacher will mark it using the rubric.",
+      "misconception": "The candle continues to burn.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "air_importance",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Why is air important for burning?",
+      "options": ["It contains oxygen which supports burning", "It contains water", "It makes smoke", "It makes the flame cold"],
+      "answer": 0,
+      "hints": ["Fire needs oxygen.", "Oxygen is in the air."],
+      "explanation": "Air is important for burning because it contains oxygen, which supports burning.",
+      "misconception": "Air is not important for burning.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "air_importance",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Why is air important for burning?",
+      "answer": ["it contains oxygen which supports burning", "oxygen in air is needed for burning", "fire needs oxygen from air"],
+      "hints": ["Think about oxygen.", "Fire needs it."],
+      "explanation": "Air is important for burning because it contains oxygen, which is needed for fire to burn.",
+      "misconception": "Air has no effect on fire.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "air_importance",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "A pupil says, 'Air is only important for breathing.' What is the best correction?",
+      "options": ["Yes, air is only for breathing", "No, air is also important for burning because it contains oxygen", "No, air is only important for plants", "No, air is not important at all"],
+      "answer": 1,
+      "hints": ["Air has oxygen.", "Oxygen is needed for burning."],
+      "explanation": "Air is important for breathing and also for burning because it contains oxygen.",
+      "misconception": "Air is only for breathing.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "predict_outcome",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "If you cover a burning candle with a jar, what will happen?",
+      "options": ["The flame will go out", "The flame will grow bigger", "The flame will turn blue", "The flame will move out of the jar"],
+      "answer": 0,
+      "hints": ["The jar traps the air.", "Oxygen is used up."],
+      "explanation": "The flame will go out because the candle uses up the oxygen inside the jar.",
+      "misconception": "The flame continues to burn.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "predict_outcome",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Predict what happens if you blow gently on a small flame.",
+      "answer": ["the flame may go out because the air blows it away", "it may go out", "the flame might be extinguished"],
+      "hints": ["Blowing removes the air around the flame.", "What happens when you blow out a candle?"],
+      "explanation": "Blowing gently on a small flame can put it out because it removes the air around the flame and the burning gases are blown away.",
+      "misconception": "Blowing always makes a fire bigger.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "predict_outcome",
+      "type": "mcq",
+      "difficulty": 4,
+      "stem": "A learner fans a glowing charcoal fire with a piece of cardboard. What happens and why?",
+      "options": ["The fire glows brighter because more oxygen is supplied", "The fire goes out because air is removed", "The fire becomes cold", "The fire changes colour"],
+      "answer": 0,
+      "hints": ["Fanning brings fresh air.", "Fresh air contains oxygen."],
+      "explanation": "Fanning the fire supplies more oxygen from the air, which makes the fire glow brighter.",
+      "misconception": "Fanning always puts out a fire.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "everyday_examples",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which of these shows that air supports burning?",
+      "options": ["Blowing on a fire to make it burn brighter", "Pouring water on a fire", "Covering a fire with sand", "Using a fire extinguisher"],
+      "answer": 0,
+      "hints": ["Air contains oxygen.", "Blowing adds more air to the fire."],
+      "explanation": "Blowing on a fire to make it burn brighter shows that air (oxygen) supports burning.",
+      "misconception": "Blowing always puts out a fire.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "everyday_examples",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Give one everyday example showing that air supports burning.",
+      "answer": ["blowing on a fire to make it burn brighter", "fanning a fire", "using a fan to make a fire burn", "opening a window to let air in for a fire"],
+      "hints": ["Think about what makes a fire burn better.", "Fresh air helps."],
+      "explanation": "An everyday example is blowing on a fire or fanning it to make it burn brighter, because fresh air supplies more oxygen.",
+      "misconception": "Air does not affect fire.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "everyday_examples",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "Why does covering a fire with a blanket put it out?",
+      "options": ["It cuts off the air and oxygen supply to the fire", "It makes the fire too hot", "It adds fuel to the fire", "It blows air into the fire"],
+      "answer": 0,
+      "hints": ["A blanket blocks air.", "Fire needs oxygen."],
+      "explanation": "Covering a fire with a blanket puts it out because the blanket cuts off the air and oxygen supply needed for burning.",
+      "misconception": "Blankets add air to a fire.",
+      "uncertain": []
+    }
+  ]
+}

@@ -1,0 +1,295 @@
+{
+  "indicator": {
+    "code": "B4.1.1.4.2",
+    "subject": "Mathematics",
+    "level": "Basic 4",
+    "strand": "Number",
+    "sub_strand": "Counting, Representation & Cardinality",
+    "content_standard": "B4.1.1.4 Interpretative and positive numbers in context",
+    "objective": "Count forwards and backwards with positive and negative whole numbers through zero",
+    "source_page": 34
+  },
+  "spec": {
+    "skills": [
+      {"tag": "count_through_zero_forwards", "description": "Count forwards through zero.", "minQuestions": 2},
+      {"tag": "count_through_zero_backwards", "description": "Count backwards through zero.", "minQuestions": 2},
+      {"tag": "find_interval_jumps", "description": "Count from a given positive number to a negative number.", "minQuestions": 2}
+    ],
+    "difficultyPlan": "20 questions: 5 at difficulty 1, 7 at difficulty 2, 5 at difficulty 3, 3 at difficulty 4.",
+    "misconceptions": [
+      "Skipping zero (e.g., -1, 1).",
+      "Counting forwards when asked to go backwards.",
+      "Thinking -10 is larger than -2."
+    ],
+    "needsTeacherAssessment": false
+  },
+  "questions": [
+    {
+      "skill_tag": "count_through_zero_forwards",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Count forwards: -2, -1, 0, 1, ___. What number comes next?",
+      "options": ["2", "-2", "3", "0"],
+      "answer": 0,
+      "hints": ["Counting forwards means adding 1.", "1 + 1 = 2."],
+      "explanation": "The pattern adds 1. 1 + 1 = 2.",
+      "misconception": "Going back to -2.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "count_through_zero_backwards",
+      "type": "short_answer",
+      "difficulty": 1,
+      "stem": "Count backwards: 2, 1, 0, -1, ___. What number comes next?",
+      "answer": ["-2"],
+      "hints": ["Backwards means subtracting 1.", "-1 - 1."],
+      "explanation": "-1 - 1 = -2.",
+      "misconception": "Counting forward to 2.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "count_through_zero_forwards",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which number comes just after 0 when counting forwards?",
+      "options": ["1", "-1", "0", "2"],
+      "answer": 0,
+      "hints": ["Forwards is to the right.", "The first positive number is 1."],
+      "explanation": "The number just after 0 is 1.",
+      "misconception": "Saying -1.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "count_through_zero_backwards",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which number comes just before 0 when counting backwards?",
+      "options": ["1", "-1", "0", "-2"],
+      "answer": 1,
+      "hints": ["Backwards is to the left.", "The first negative number is -1."],
+      "explanation": "The number just before 0 is -1.",
+      "misconception": "Saying 1.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "find_interval_jumps",
+      "type": "numeric",
+      "difficulty": 1,
+      "stem": "Count forwards from -3 to 1. What is the last number?",
+      "answer": 1,
+      "check": "1",
+      "hints": ["Start at -3: -3, -2, -1, 0, 1.", "The last number is 1."],
+      "explanation": "The sequence ends at 1.",
+      "misconception": "Stopping at 0.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "count_through_zero_forwards",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "Count forwards by 1s: -4, -3, -2, -1, 0, ___. What number comes next?",
+      "answer": 1,
+      "check": "0+1",
+      "hints": ["Add 1 to 0.", "Move one step right."],
+      "explanation": "0 + 1 = 1.",
+      "misconception": "Saying -1.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "count_through_zero_backwards",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "Count backwards by 1s: 3, 2, 1, 0, -1, ___. What number comes next?",
+      "answer": -2,
+      "check": "-1-1",
+      "hints": ["Subtract 1 each time.", "-1 take away 1."],
+      "explanation": "-1 - 1 = -2.",
+      "misconception": "Counting forwards to 1.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "count_through_zero_backwards",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Fill in the missing number: 4, 3, 2, __, 0, -1",
+      "answer": ["1"],
+      "hints": ["The pattern subtracts 1.", "What is between 2 and 0?"],
+      "explanation": "The missing number is 1.",
+      "misconception": "Skipping 1.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "find_interval_jumps",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "Start at 3 and count backwards to -2. What is the last number?",
+      "answer": -2,
+      "check": "-2",
+      "hints": ["Count backwards: 3, 2, 1, 0, -1, -2.", "The last number is -2."],
+      "explanation": "The sequence ends at -2.",
+      "misconception": "Stopping at 0.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "find_interval_jumps",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "How many steps does it take to count from -3 to 3?",
+      "answer": 6,
+      "check": "3-(-3)",
+      "hints": ["From -3 to 0 is 3 steps.", "From 0 to 3 is 3 steps.", "3 + 3."],
+      "explanation": "3 steps to 0, and 3 steps to 3. Total = 6 steps.",
+      "misconception": "Saying 3 steps.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "count_through_zero_forwards",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which sequence correctly counts forwards through zero?",
+      "options": ["-2, -1, 0, 1, 2", "2, 1, 0, -1, -2", "-2, -1, 1, 2, 0", "0, 1, -1, 2, -2"],
+      "answer": 0,
+      "hints": ["Forwards means increasing by 1.", "Start at -2 and go up."],
+      "explanation": "Counting forwards: -2, -1, 0, 1, 2.",
+      "misconception": "Counting backwards.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "count_through_zero_backwards",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which sequence correctly counts backwards through zero?",
+      "options": ["2, 1, 0, -1, -2", "-2, -1, 0, 1, 2", "2, 1, -1, -2, 0", "0, -1, 1, -2, 2"],
+      "answer": 0,
+      "hints": ["Backwards means decreasing by 1.", "Start at 2 and go down."],
+      "explanation": "Counting backwards: 2, 1, 0, -1, -2.",
+      "misconception": "Counting forwards.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "find_interval_jumps",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "Count backwards from 1 to -4. What is the last number?",
+      "answer": -4,
+      "check": "-4",
+      "hints": ["1, 0, -1, -2, -3, -4.", "The last number is -4."],
+      "explanation": "The sequence ends at -4.",
+      "misconception": "Stopping at -1.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "find_interval_jumps",
+      "type": "numeric",
+      "difficulty": 3,
+      "stem": "A pupil hops from -3 to +4 on a number line. How many steps did they take?",
+      "answer": 7,
+      "check": "4-(-3)",
+      "hints": ["From -3 to 0 is 3 steps.", "From 0 to 4 is 4 steps.", "3 + 4."],
+      "explanation": "3 + 4 = 7 steps.",
+      "misconception": "Subtracting 4 - 3 = 1.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "count_through_zero_forwards",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "Write the numbers from -5 to 2 in counting order.",
+      "hints": ["Start at -5.", "Count forwards until you reach 2."],
+      "explanation": "-5, -4, -3, -2, -1, 0, 1, 2.",
+      "rubric": {
+        "criteria": [
+          {"description": "Starts at -5.", "marks": 1},
+          {"description": "Includes 0 in the correct place.", "marks": 1},
+          {"description": "Ends at 2 with all numbers correct.", "marks": 1}
+        ]
+      },
+      "misconception": "Skipping zero.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "find_interval_jumps",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "What is the difference between 5 and -2?",
+      "options": ["3", "7", "-7", "-3"],
+      "answer": 1,
+      "hints": ["Count from -2 to 5.", "From -2 to 0 is 2, then 0 to 5 is 5.", "2 + 5."],
+      "explanation": "The distance between -2 and 5 is 7.",
+      "misconception": "Subtracting 5 - 2 = 3.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "find_interval_jumps",
+      "type": "numeric",
+      "difficulty": 3,
+      "stem": "Start at 4. Count backwards 7 steps. What number do you reach?",
+      "answer": -3,
+      "check": "4-7",
+      "hints": ["4, 3, 2, 1, 0, -1, -2, -3.", "Count the jumps."],
+      "explanation": "4 - 7 = -3.",
+      "misconception": "Reaching +3.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "count_through_zero_backwards",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "Explain what happens when you count backwards from 2 to -2.",
+      "hints": ["Start at 2.", "Keep subtracting 1.", "Pass through 0."],
+      "explanation": "When counting backwards from 2 to -2, you subtract 1 each time: 2, 1, 0, -1, -2. You cross zero and enter negative numbers.",
+      "rubric": {
+        "criteria": [
+          {"description": "Lists the numbers in order.", "marks": 1},
+          {"description": "Mentions crossing zero.", "marks": 1}
+        ]
+      },
+      "misconception": "Thinking you stop at 0.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "find_interval_jumps",
+      "type": "written",
+      "difficulty": 4,
+      "stem": "A pupil says the distance from -4 to 2 is 2 because 4 - 2 = 2. Explain their mistake and give the correct distance.",
+      "hints": ["Draw a number line.", "Count the steps from -4 to 0, then 0 to 2."],
+      "explanation": "The pupil subtracted instead of counting the distance. The distance is 6 steps (4 steps from -4 to 0, and 2 steps from 0 to 2).",
+      "rubric": {
+        "criteria": [
+          {"description": "Explains the mistake (subtracting instead of counting distance).", "marks": 1},
+          {"description": "Gives the correct distance (6).", "marks": 1}
+        ]
+      },
+      "misconception": "Thinking distance is found by subtraction without considering the direction.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "count_through_zero_backwards",
+      "type": "mcq",
+      "difficulty": 4,
+      "stem": "Which number is greater: -8 or -3?",
+      "options": ["-8", "-3", "They are equal", "0"],
+      "answer": 1,
+      "hints": ["On a number line, which is further to the right?", "-3 is to the right of -8."],
+      "explanation": "-3 is greater than -8 because it is closer to zero on the number line.",
+      "misconception": "Thinking -8 is greater because 8 > 3.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "find_interval_jumps",
+      "type": "written",
+      "difficulty": 4,
+      "stem": "Describe how to count from 6 to -3 on a number line. What direction do you move and how many steps?",
+      "hints": ["Start at 6.", "End at -3.", "Count backwards."],
+      "explanation": "You move to the left (backwards) from 6 to -3. The distance is 9 steps (6 to 0 is 6 steps, 0 to -3 is 3 steps).",
+      "rubric": {
+        "criteria": [
+          {"description": "States moving to the left.", "marks": 1},
+          {"description": "States the number of steps is 9.", "marks": 1}
+        ]
+      },
+      "misconception": "Saying you move right.",
+      "uncertain": []
+    }
+  ]
+}

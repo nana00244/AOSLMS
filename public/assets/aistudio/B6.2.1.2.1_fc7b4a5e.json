@@ -1,0 +1,276 @@
+{
+  "indicator": {
+    "code": "B6.2.1.2.1",
+    "subject": "Science",
+    "level": "Basic 6",
+    "strand": "CYCLES",
+    "sub_strand": "Earth Science",
+    "content_standard": "B6.2.1.2 Show understanding of the roles of condensation, evaporation, transpiration and precipitation in the hydrological (water) cycle",
+    "objective": "Explain how rain falls from clouds",
+    "source_page": 58
+  },
+  "spec": {
+    "skills": [
+      {"tag": "define_terms", "description": "Define evaporation, condensation, dew point, ice, cloud, gravity and precipitation.", "minQuestions": 3},
+      {"tag": "cloud_formation", "description": "Explain simply how clouds are formed (water vapour cools and condenses around dust particles).", "minQuestions": 4},
+      {"tag": "raindrop_formation", "description": "Explain how raindrops form around tiny dust or smoke particles and grow heavy.", "minQuestions": 4},
+      {"tag": "gravity_rain", "description": "Explain that gravity causes the raindrops to fall from the clouds.", "minQuestions": 3},
+      {"tag": "not_all_clouds_rain", "description": "Recognise that not all clouds produce rain.", "minQuestions": 3},
+      {"tag": "water_cycle_link", "description": "Link rain formation to the water cycle (evaporation → condensation → precipitation).", "minQuestions": 3}
+    ],
+    "difficultyPlan": "20 questions total — Difficulty 1: 5; Difficulty 2: 7; Difficulty 3: 5; Difficulty 4: 3.",
+    "misconceptions": [
+      "Rain falls directly from the sun.",
+      "All clouds produce rain.",
+      "Raindrops form from nothing.",
+      "Gravity pushes raindrops up.",
+      "Evaporation and condensation are the same.",
+      "Rain falls because clouds are heavy with air only."
+    ],
+    "needsTeacherAssessment": true
+  },
+  "questions": [
+    {
+      "skill_tag": "define_terms",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What is evaporation?",
+      "options": ["Water changing from liquid to vapour", "Water changing from vapour to liquid", "Rain falling from clouds", "Water freezing into ice"],
+      "answer": 0,
+      "hints": ["It is liquid → gas.", "Think about puddles drying."],
+      "explanation": "Evaporation is the change of water from liquid to vapour.",
+      "misconception": "Evaporation is the same as condensation.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "define_terms",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What is condensation?",
+      "options": ["Water vapour changing into liquid droplets", "Water changing into vapour", "Rain falling", "Water freezing"],
+      "answer": 0,
+      "hints": ["It is gas → liquid.", "Think about droplets on a cold glass."],
+      "explanation": "Condensation is the change of water vapour into liquid droplets when it cools.",
+      "misconception": "Condensation is the same as evaporation.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "define_terms",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "What is precipitation?",
+      "answer": ["water falling from clouds as rain, snow, or hail", "rain falling from clouds", "water that falls from clouds"],
+      "hints": ["Think about rain.", "It falls from clouds."],
+      "explanation": "Precipitation is water falling from clouds as rain, snow, or hail.",
+      "misconception": "Precipitation is when water evaporates.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "cloud_formation",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "How are clouds formed?",
+      "options": ["Water vapour cools and condenses around dust particles", "The sun makes clouds directly", "Rain falls upwards to form clouds", "Wind blows clouds from the ground"],
+      "answer": 0,
+      "hints": ["Water vapour rises and cools.", "It condenses around tiny particles."],
+      "explanation": "Clouds are formed when water vapour rises, cools and condenses around tiny dust particles in the air.",
+      "misconception": "Clouds are made by the sun directly.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "cloud_formation",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "What happens to water vapour when it rises and cools?",
+      "options": ["It condenses into tiny water droplets", "It turns into dust", "It becomes the sun", "It disappears completely"],
+      "answer": 0,
+      "hints": ["Cooling vapour forms droplets.", "These droplets form clouds."],
+      "explanation": "When water vapour rises and cools, it condenses into tiny water droplets that form clouds.",
+      "misconception": "Water vapour disappears in the sky.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "cloud_formation",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Explain how clouds are formed.",
+      "answer": ["water vapour rises, cools and condenses around dust particles", "water vapour cools and condenses into droplets", "vapour rises and condenses to form clouds"],
+      "hints": ["Vapour rises.", "It cools and condenses."],
+      "explanation": "Clouds form when water vapour rises, cools and condenses around tiny dust particles in the air.",
+      "misconception": "Clouds are made by the sun.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "cloud_formation",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "Why do clouds form high in the sky?",
+      "options": ["Because water vapour rises and cools at higher altitudes", "Because the sun pushes clouds up", "Because clouds are lighter than air", "Because rain pulls clouds up"],
+      "answer": 0,
+      "hints": ["Warm air rises.", "It cools as it goes higher."],
+      "explanation": "Clouds form high in the sky because water vapour rises with warm air and cools at higher altitudes, where it condenses into droplets.",
+      "misconception": "Clouds form because they are light.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "raindrop_formation",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "How do raindrops form in clouds?",
+      "options": ["Tiny water droplets join together around dust particles and grow bigger", "Dust particles turn into water", "The sun creates raindrops", "Wind blows raindrops from the ground"],
+      "answer": 0,
+      "hints": ["Droplets combine.", "They grow around dust particles."],
+      "explanation": "Raindrops form when tiny water droplets in clouds join together around dust particles and grow bigger and heavier.",
+      "misconception": "Raindrops form from nothing.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "raindrop_formation",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "What happens to water droplets in a cloud when they become too heavy?",
+      "options": ["They fall as rain", "They rise higher", "They turn into dust", "They disappear"],
+      "answer": 0,
+      "hints": ["Heavy droplets cannot stay up.", "They fall."],
+      "explanation": "When water droplets in a cloud become too heavy, they fall as rain.",
+      "misconception": "Heavy droplets rise higher.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "raindrop_formation",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Explain how raindrops form and grow in clouds.",
+      "answer": ["tiny water droplets join together around dust particles and grow bigger until they are heavy enough to fall", "water droplets combine and grow around dust particles", "droplets join and grow until they fall as rain"],
+      "hints": ["Droplets combine.", "They grow around dust particles."],
+      "explanation": "Tiny water droplets in clouds join together around dust particles. As they combine, they grow bigger and heavier until they fall as rain.",
+      "misconception": "Raindrops form from nothing.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "raindrop_formation",
+      "type": "mcq",
+      "difficulty": 4,
+      "stem": "Why do raindrops need tiny dust or smoke particles to form?",
+      "options": ["Water vapour condenses more easily around these particles", "Dust particles are made of water", "Smoke turns into rain", "Dust particles push the rain down"],
+      "answer": 0,
+      "hints": ["Vapour needs a surface to condense on.", "Dust particles provide that surface."],
+      "explanation": "Water vapour condenses more easily around tiny dust or smoke particles, which act as surfaces for droplets to form on.",
+      "misconception": "Dust particles are made of water.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "gravity_rain",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What causes raindrops to fall from clouds?",
+      "options": ["Gravity", "Wind", "The sun", "The moon"],
+      "answer": 0,
+      "hints": ["Things fall down due to this force.", "It pulls objects towards the earth."],
+      "explanation": "Gravity causes raindrops to fall from clouds to the ground.",
+      "misconception": "Gravity pushes raindrops up.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "gravity_rain",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "What force causes rain to fall from clouds?",
+      "answer": ["gravity", "the force of gravity"],
+      "hints": ["It pulls things downward.", "It is the same force that makes objects fall."],
+      "explanation": "Gravity is the force that causes rain to fall from clouds.",
+      "misconception": "Wind causes rain to fall.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "gravity_rain",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "A learner says, 'Rain falls because clouds push the water down.' What is the best correction?",
+      "options": ["Yes, clouds push the water down", "No, gravity pulls the raindrops down", "No, the sun pushes the rain down", "No, wind pushes the rain down"],
+      "answer": 1,
+      "hints": ["Gravity pulls things down.", "Clouds do not push water."],
+      "explanation": "Rain falls because gravity pulls the raindrops down, not because clouds push them.",
+      "misconception": "Clouds push the rain down.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "not_all_clouds_rain",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Do all clouds produce rain?",
+      "options": ["No, not all clouds produce rain", "Yes, all clouds produce rain", "Only white clouds produce rain", "Only dark clouds produce rain"],
+      "answer": 0,
+      "hints": ["Some clouds are thin and wispy.", "Not every cloud has enough water to rain."],
+      "explanation": "Not all clouds produce rain. Some clouds do not contain enough water droplets to fall as rain.",
+      "misconception": "All clouds produce rain.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "not_all_clouds_rain",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Why do some clouds not produce rain?",
+      "answer": ["they do not contain enough water droplets to fall as rain", "the droplets are too small or light", "they do not have enough water"],
+      "hints": ["Clouds need enough water to rain.", "Small droplets may not fall."],
+      "explanation": "Some clouds do not produce rain because they do not contain enough water droplets to become heavy enough to fall.",
+      "misconception": "All clouds produce rain.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "not_all_clouds_rain",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "Which of these best explains why some clouds do not produce rain?",
+      "options": ["They do not contain enough water droplets to fall", "They are too high in the sky", "They are too white", "They are too cold"],
+      "answer": 0,
+      "hints": ["Rain needs enough water droplets.", "If droplets are few, no rain falls."],
+      "explanation": "Some clouds do not produce rain because they do not contain enough water droplets to fall as rain.",
+      "misconception": "All clouds produce rain.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "water_cycle_link",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which sequence correctly describes part of the water cycle?",
+      "options": ["Evaporation → condensation → precipitation", "Condensation → evaporation → precipitation", "Precipitation → condensation → evaporation", "Evaporation → precipitation → condensation"],
+      "answer": 0,
+      "hints": ["Water evaporates first.", "Then it condenses into clouds.", "Then rain falls."],
+      "explanation": "The water cycle includes evaporation, then condensation, then precipitation (rain).",
+      "misconception": "The water cycle has a different order.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "water_cycle_link",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Explain how evaporation and condensation lead to rain in the water cycle.",
+      "answer": ["water evaporates, rises, cools and condenses into clouds, then falls as rain", "evaporation puts vapour in the air, condensation forms clouds, and rain falls from clouds", "water vapour rises, condenses into clouds, and then falls as rain"],
+      "hints": ["Water goes up as vapour.", "It forms clouds.", "Rain falls from clouds."],
+      "explanation": "Water evaporates into the air, rises, cools and condenses into clouds. The water droplets in clouds fall as rain.",
+      "misconception": "Rain falls directly from the sun.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "water_cycle_link",
+      "type": "drawing",
+      "difficulty": 4,
+      "stem": "Design a simple diagram showing how rain falls from clouds. Label the sun, evaporation, condensation (cloud formation), precipitation (rain), and gravity. Use arrows to show the direction of movement.",
+      "rubric": {
+        "criteria": [
+          {"description": "Showed the sun and evaporation from a water source", "marks": 1},
+          {"description": "Showed water vapour rising and condensing into a cloud", "marks": 1},
+          {"description": "Showed rain falling from the cloud", "marks": 1},
+          {"description": "Labeled gravity as the force pulling the rain down", "marks": 1},
+          {"description": "Used arrows to show direction of movement", "marks": 1}
+        ]
+      },
+      "answer": "",
+      "hints": ["Start with the sun heating water.", "Show vapour rising and forming a cloud.", "Show rain falling down."],
+      "explanation": "This is a drawing task. Your teacher will mark it using the rubric.",
+      "misconception": "Rain falls directly from the sun.",
+      "uncertain": []
+    }
+  ]
+}

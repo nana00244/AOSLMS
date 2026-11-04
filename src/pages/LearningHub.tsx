@@ -17,6 +17,7 @@ import {
   ArrowLeft,
   Lightbulb,
   X,
+  Award,
 } from 'lucide-react';
 import { useStore, csv } from '../store';
 import { Button, Field, Modal } from '../components/ui';
@@ -32,10 +33,25 @@ import {
 } from '../learningHub/api';
 import type { HubSnapshot, LearningLesson, HubPracticeResult } from '../learningHub/types';
 import { learningStatus, recommendation } from '../learningHub/progress';
+import { NaccaQuestionBankView } from '../components/NaccaQuestionBankView';
+import { KhanPracticePlayer } from '../components/KhanPracticePlayer';
+import { TeacherQuizCreator } from '../components/TeacherQuizCreator';
+import { KhanQuizPlayer } from '../components/KhanQuizPlayer';
+import { QuizManagementView } from '../components/QuizManagementView';
+import { getQuizById, type QuizDefinition } from '../nacca/quizEngine';
+import { naccaQuestions, naccaIndicators } from '../learningHub/naccaBank';
+import { getLessonPracticeIndicator } from '../learningHub/practiceNavigation';
 import './learning-hub.css';
 
 const blank: HubSnapshot = { lessons: [], assignments: [], attempts: [], readings: [] };
-const tabs = ['Courses', 'Assignments', 'Progress', 'Curriculum resources'] as const;
+const tabs = [
+  'Courses',
+  'NaCCA Question Bank',
+  'Quizzes & Tests',
+  'Assignments',
+  'Progress',
+  'Curriculum resources',
+] as const;
 const levelName = (level: string) =>
   /^B[789]$/.test(level) ? `${level} · JHS ${Number(level[1]) - 6}` : level;
 
@@ -86,6 +102,80 @@ export function LearningHub() {
   const completed = snapshot.assignments.filter(
     (a) => learningStatus(snapshot, sid, a.lessonId, a.id).complete,
   ).length;
+  const [showQuizCreator, setShowQuizCreator] = useState(false);
+  const [creatorInitialIndicator, setCreatorInitialIndicator] = useState<string | undefined>();
+  const [creatorInitialLevel, setCreatorInitialLevel] = useState<string | undefined>();
+
+  const practiceIndicator = params.get('practice');
+  const openPractice = (code: string, subject?: string) => {
+    setParams({ tab: 'NaCCA Question Bank', practice: code, ...(subject ? { subject } : {}) });
+  };
+  const closePractice = () => {
+    const next = new URLSearchParams(params);
+    next.delete('practice');
+    setParams(next);
+  };
+
+  const quizId = params.get('quiz');
+  const activeQuiz = quizId ? getQuizById(quizId) : undefined;
+  const openQuiz = (id: string) => {
+    setParams({ tab: 'Quizzes & Tests', quiz: id });
+  };
+  const closeQuiz = () => {
+    const next = new URLSearchParams(params);
+    next.delete('quiz');
+    setParams(next);
+  };
+
+  if (quizId && activeQuiz) {
+    return (
+      <KhanQuizPlayer
+        quiz={activeQuiz}
+        studentId={sid || 'student_demo'}
+        studentName={user?.name || 'Learner'}
+        onBack={closeQuiz}
+        onCompleted={(sub) => {
+          notify(`Submitted ${sub.quizTitle}: Auto-score ${sub.autoScore.percentage}%`);
+        }}
+      />
+    );
+  }
+
+  if (
+    practiceIndicator &&
+    !naccaIndicators.some(
+      (i) =>
+        i.code === practiceIndicator &&
+        (!params.get('subject') || i.subject === params.get('subject')),
+    )
+  ) {
+    return (
+      <div className="learning-hub">
+        <p role="alert">
+          This practice indicator could not be found. Return to the Learning Hub and choose an
+          indicator.
+        </p>
+        <Button onClick={closePractice}>Back to Learning Hub</Button>
+      </div>
+    );
+  }
+
+  if (practiceIndicator) {
+    return (
+      <KhanPracticePlayer
+        key={`${params.get('subject') || ''}:${practiceIndicator}`}
+        initialIndicatorCode={practiceIndicator}
+        initialSubject={params.get('subject') || undefined}
+        staff={staff}
+        studentId={sid}
+        onBack={closePractice}
+        onRecordAttempt={(attempt) => {
+          notify(`Practice recorded: ${attempt.score}% mastery on ${attempt.indicatorCode}`);
+        }}
+      />
+    );
+  }
+
   return (
     <div className="learning-hub">
       <header className="lh-masthead">
@@ -95,13 +185,22 @@ export function LearningHub() {
           </span>
           <h1>Learning Hub</h1>
         </div>
-        <span className="lh-school">GES · NaCCA curriculum</span>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+          <Button onClick={() => openPractice('B1.1.1.1.1')}>
+            <Target size={16} /> Khan Academy Practice
+          </Button>
+          <span className="lh-school">GES · NaCCA curriculum</span>
+        </div>
       </header>
       <nav className="lh-tabs" aria-label="Learning Hub navigation">
         {tabs.map((t) => (
           <button key={t} aria-current={tab === t ? 'page' : undefined} onClick={() => go(t)}>
             {t === 'Courses' ? (
               <BookOpen size={17} />
+            ) : t === 'NaCCA Question Bank' ? (
+              <Target size={17} />
+            ) : t === 'Quizzes & Tests' ? (
+              <Award size={17} />
             ) : t === 'Assignments' ? (
               <ListChecks size={17} />
             ) : t === 'Progress' ? (
@@ -152,6 +251,7 @@ export function LearningHub() {
                 setAssign(lesson);
               }}
               onSaved={reload}
+              onOpenPractice={openPractice}
             />
           ) : (
             <>
@@ -222,6 +322,34 @@ export function LearningHub() {
                         <h2>Explore courses</h2>
                       </div>
                       <p>Original lessons aligned to published NaCCA standards.</p>
+                    </div>
+
+                    <div
+                      style={{
+                        background: '#eef5fc',
+                        border: '1px solid #cce2f9',
+                        borderRadius: 10,
+                        padding: '14px 18px',
+                        marginBottom: 20,
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'space-between',
+                        flexWrap: 'wrap',
+                        gap: 12,
+                      }}
+                    >
+                      <div>
+                        <strong style={{ color: '#174ea6', display: 'block', marginBottom: 2 }}>
+                          🇬🇭 Ghana NaCCA Question Bank Active
+                        </strong>
+                        <span style={{ fontSize: 13, color: '#3c4043' }}>
+                          {naccaQuestions.length} approved questions loaded across{' '}
+                          {naccaIndicators.length} indicators (Basic 1 to Basic 4 Mathematics).
+                        </span>
+                      </div>
+                      <Button onClick={() => go('NaCCA Question Bank')}>
+                        Browse Question Bank <ArrowRight size={14} />
+                      </Button>
                     </div>
                     <div className="lh-filters">
                       <label className="lh-search">
@@ -335,6 +463,30 @@ export function LearningHub() {
                   </aside>
                 </>
               )}
+              {tab === 'NaCCA Question Bank' && (
+                <NaccaQuestionBankView
+                  onOpenPractice={openPractice}
+                  staff={staff}
+                  onCreateAssessment={(code, lvl) => {
+                    setCreatorInitialIndicator(code);
+                    setCreatorInitialLevel(lvl);
+                    setShowQuizCreator(true);
+                  }}
+                />
+              )}
+              {tab === 'Quizzes & Tests' && (
+                <QuizManagementView
+                  staff={staff}
+                  studentId={sid || 'student_demo'}
+                  studentName={user?.name || 'Learner'}
+                  onOpenCreator={() => {
+                    setCreatorInitialIndicator(undefined);
+                    setShowQuizCreator(true);
+                  }}
+                  onStartQuiz={(q) => openQuiz(q.id)}
+                  onOpenPractice={openPractice}
+                />
+              )}
               {tab === 'Assignments' && (
                 <AssignmentView
                   snapshot={snapshot}
@@ -423,6 +575,20 @@ export function LearningHub() {
           }}
         />
       )}
+      <TeacherQuizCreator
+        isOpen={showQuizCreator}
+        onClose={() => setShowQuizCreator(false)}
+        onQuizCreated={(newQuiz) => {
+          notify(
+            `Created ${newQuiz.kind === 'unit_test' ? 'Unit Test' : 'Quiz'}: ${newQuiz.title}`,
+          );
+        }}
+        classes={data.classes.map((c) => ({ id: c, name: c }))}
+        students={data.students.map((s) => ({ id: s.id, name: s.name, classId: s.classId }))}
+        currentUser={user ? { id: user.id, name: user.name } : undefined}
+        initialIndicator={creatorInitialIndicator}
+        initialLevel={creatorInitialLevel}
+      />
       <footer className="lh-footer">
         <span>
           <GraduationCap size={17} /> Learning Hub · Ayisatu Owen Schools
@@ -451,6 +617,7 @@ function LessonView({
   onBack,
   onAssign,
   onSaved,
+  onOpenPractice,
 }: {
   lesson: LearningLesson;
   assignmentId?: string;
@@ -460,6 +627,7 @@ function LessonView({
   onBack: () => void;
   onAssign: () => void;
   onSaved: () => Promise<void>;
+  onOpenPractice?: (code: string, subject?: string) => void;
 }) {
   const [practice, setPractice] = useState(false),
     [busy, setBusy] = useState(false),
@@ -467,6 +635,7 @@ function LessonView({
   const [answers, setAnswers] = useState<number[]>([]),
     [result, setResult] = useState<HubPracticeResult | null>(null);
   const status = learningStatus(snapshot, studentId, lesson.id, assignmentId);
+  const practiceIndicator = getLessonPracticeIndicator(lesson);
   async function markRead() {
     setBusy(true);
     setError('');
@@ -506,7 +675,17 @@ function LessonView({
             <BookOpen size={18} /> Read lesson {status.read && <CheckCircle2 size={16} />}
           </button>
           {lesson.questions.length > 0 && (
-            <button className={practice ? 'active' : ''} onClick={() => setPractice(true)}>
+            <button
+              className={practice ? 'active' : ''}
+              onClick={() => {
+                if (onOpenPractice && practiceIndicator) {
+                  const code = practiceIndicator.code;
+                  onOpenPractice(code, practiceIndicator.subject);
+                } else {
+                  setPractice(true);
+                }
+              }}
+            >
               <Target size={18} /> Practice {status.latest && <span>{status.latest.score}%</span>}
             </button>
           )}
@@ -563,7 +742,16 @@ function LessonView({
                   </Button>
                 )}
                 {lesson.questions.length > 0 && (
-                  <Button onClick={() => setPractice(true)}>
+                  <Button
+                    onClick={() => {
+                      if (onOpenPractice && practiceIndicator) {
+                        const code = practiceIndicator.code;
+                        onOpenPractice(code, practiceIndicator.subject);
+                      } else {
+                        setPractice(true);
+                      }
+                    }}
+                  >
                     Start practice <ArrowRight size={17} />
                   </Button>
                 )}

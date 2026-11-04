@@ -1,0 +1,292 @@
+{
+  "indicator": {
+    "code": "B5.2.1.1.6",
+    "subject": "Mathematics",
+    "level": "Basic 5",
+    "strand": "Algebra",
+    "sub_strand": "Patterns and Relationships",
+    "content_standard": "B5.2.1.1 Determine the pattern rule to make predictions about subsequent elements",
+    "objective": "Determine and explain why a given number is or is not the next element in a pattern",
+    "source_page": 109
+  },
+  "spec": {
+    "skills": [
+      {"tag": "verify_next_element", "description": "Verify whether a given number fits the pattern rule.", "minQuestions": 2},
+      {"tag": "explain_pattern_fit", "description": "Explain why a number is or is not the next element.", "minQuestions": 2}
+    ],
+    "difficultyPlan": "20 questions: 5 at difficulty 1, 7 at difficulty 2, 5 at difficulty 3, 3 at difficulty 4.",
+    "misconceptions": [
+      "Only checking the last two terms.",
+      "Assuming the pattern is linear when it is not.",
+      "Not considering all possible rules."
+    ],
+    "needsTeacherAssessment": false
+  },
+  "questions": [
+    {
+      "skill_tag": "verify_next_element",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "The pattern is 2, 4, 6, 8, ... Is 10 the next element?",
+      "options": ["Yes", "No"],
+      "answer": 0,
+      "hints": ["The pattern adds 2 each time.", "8 + 2 = 10."],
+      "explanation": "Yes, 10 is the next element because 8 + 2 = 10.",
+      "misconception": "Thinking 9 is next.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "explain_pattern_fit",
+      "type": "written",
+      "difficulty": 1,
+      "stem": "Explain why 12 is the next element in the pattern 3, 6, 9, ...",
+      "hints": ["What is the rule?", "9 + 3 = 12."],
+      "explanation": "The rule is add 3. Since 9 + 3 = 12, 12 is the next element.",
+      "rubric": {
+        "criteria": [
+          {"description": "States the rule is add 3.", "marks": 1},
+          {"description": "Explains 9 + 3 = 12.", "marks": 1}
+        ]
+      },
+      "misconception": "Saying add 2.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "verify_next_element",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "The pattern is 5, 10, 15, 20, ... Is 24 the next element?",
+      "options": ["Yes", "No"],
+      "answer": 1,
+      "hints": ["The pattern adds 5 each time.", "20 + 5 = 25."],
+      "explanation": "No, the next element is 25, not 24.",
+      "misconception": "Thinking 24 fits because it is close.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "explain_pattern_fit",
+      "type": "short_answer",
+      "difficulty": 1,
+      "stem": "Is 16 the next element in the pattern 4, 8, 12? Explain why or why not.",
+      "answer": ["yes", "yes, because the rule is add 4 and 12+4=16"],
+      "hints": ["Check the rule: add 4."],
+      "explanation": "Yes, because 12 + 4 = 16.",
+      "misconception": "Saying no because it skips 14?",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "verify_next_element",
+      "type": "numeric",
+      "difficulty": 1,
+      "stem": "The pattern is 10, 20, 30, ... What number should come next?",
+      "answer": 40,
+      "check": "30+10",
+      "hints": ["Add 10 each time."],
+      "explanation": "30 + 10 = 40.",
+      "misconception": "Saying 35.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "verify_next_element",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "The pattern is 1, 4, 9, 16, ... Is 25 the next element?",
+      "options": ["Yes", "No"],
+      "answer": 0,
+      "hints": ["These are square numbers: 1,4,9,16,25."],
+      "explanation": "Yes, 25 is the next square number.",
+      "misconception": "Thinking 20 is next because 16+4.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "explain_pattern_fit",
+      "type": "written",
+      "difficulty": 2,
+      "stem": "Explain why 17 is NOT the next element in the pattern 3, 7, 11, 15, ...",
+      "hints": ["Find the rule: add 4.", "15 + 4 = 19."],
+      "explanation": "The rule is add 4. 15 + 4 = 19, not 17. So 17 does not fit the pattern.",
+      "rubric": {
+        "criteria": [
+          {"description": "States the rule is add 4.", "marks": 1},
+          {"description": "Explains 15 + 4 = 19, not 17.", "marks": 1}
+        ]
+      },
+      "misconception": "Adding 2 to get 17.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "verify_next_element",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "The pattern is 100, 90, 80, 70, ... Is 60 the next element?",
+      "options": ["Yes", "No"],
+      "answer": 0,
+      "hints": ["Subtract 10 each time."],
+      "explanation": "Yes, 70 - 10 = 60.",
+      "misconception": "Thinking 65 is next.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "verify_next_element",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "The pattern is 2, 6, 18, ... What number should come next?",
+      "answer": 54,
+      "check": "18*3",
+      "hints": ["Multiply by 3 each time."],
+      "explanation": "18 × 3 = 54.",
+      "misconception": "Saying 24 (adding 6).",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "explain_pattern_fit",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Is 32 the next element in the pattern 1, 2, 4, 8, 16? Explain.",
+      "answer": ["yes", "yes, because each number doubles"],
+      "hints": ["The rule is double."],
+      "explanation": "Yes, because 16 × 2 = 32.",
+      "misconception": "Saying no because 16+16=32? That's doubling.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "verify_next_element",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "The pattern is 20, 17, 14, 11, ... Is 8 the next element?",
+      "options": ["Yes", "No"],
+      "answer": 0,
+      "hints": ["Subtract 3 each time."],
+      "explanation": "Yes, 11 - 3 = 8.",
+      "misconception": "Thinking 9 is next.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "explain_pattern_fit",
+      "type": "written",
+      "difficulty": 2,
+      "stem": "Explain why 30 is NOT the next element in the pattern 5, 10, 20, 40, ...",
+      "hints": ["The rule is multiply by 2.", "40 × 2 = 80."],
+      "explanation": "The pattern doubles each time. 40 × 2 = 80, not 30. So 30 does not fit.",
+      "rubric": {
+        "criteria": [
+          {"description": "States the rule is multiply by 2.", "marks": 1},
+          {"description": "Explains 40 × 2 = 80.", "marks": 1}
+        ]
+      },
+      "misconception": "Adding 10 instead of doubling.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "verify_next_element",
+      "type": "numeric",
+      "difficulty": 3,
+      "stem": "The pattern is 1, 1, 2, 3, 5, 8, ... What number should come next?",
+      "answer": 13,
+      "check": "5+8",
+      "hints": ["Each term is the sum of the two previous terms.", "5 + 8 = 13."],
+      "explanation": "5 + 8 = 13.",
+      "misconception": "Saying 11 (adding 3).",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "explain_pattern_fit",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "A pupil says 21 is the next element in the pattern 2, 5, 10, 17, ... Is the pupil correct? Explain.",
+      "hints": ["Find the differences: +3, +5, +7."],
+      "explanation": "The pupil is incorrect. The differences increase by 2. The next difference is +9, so the next term is 17 + 9 = 26.",
+      "rubric": {
+        "criteria": [
+          {"description": "States pupil is incorrect.", "marks": 1},
+          {"description": "Explains next term is 26.", "marks": 1}
+        ]
+      },
+      "misconception": "Adding 4 instead of 9.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "verify_next_element",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "The pattern is 100, 50, 25, 12.5, ... Is 6.25 the next element?",
+      "options": ["Yes", "No"],
+      "answer": 0,
+      "hints": ["Divide by 2 each time."],
+      "explanation": "Yes, 12.5 ÷ 2 = 6.25.",
+      "misconception": "Thinking 0 is next.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "verify_next_element",
+      "type": "numeric",
+      "difficulty": 3,
+      "stem": "The pattern is 3, 7, 15, 31, ... What number should come next?",
+      "answer": 63,
+      "check": "31*2+1",
+      "hints": ["Each term is double the previous plus 1."],
+      "explanation": "31 × 2 + 1 = 63.",
+      "misconception": "Saying 62 (doubling only).",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "explain_pattern_fit",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Is 50 the next element in the pattern 2, 6, 18, 54? Explain.",
+      "answer": ["no", "no, because the rule is multiply by 3 and 54*3=162"],
+      "hints": ["The rule is multiply by 3."],
+      "explanation": "No, because 54 × 3 = 162, not 50.",
+      "misconception": "Saying yes because 50 is close.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "verify_next_element",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "A pattern is 4, 9, 16, 25, ... Is 36 the next element? Explain your reasoning.",
+      "hints": ["These are square numbers."],
+      "explanation": "Yes, 36 is the next square number (6 × 6).",
+      "rubric": {
+        "criteria": [
+          {"description": "States yes.", "marks": 1},
+          {"description": "Explains it is the next square number.", "marks": 1}
+        ]
+      },
+      "misconception": "Saying no because 25+11=36? That's correct, but the pattern is squares.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "explain_pattern_fit",
+      "type": "written",
+      "difficulty": 4,
+      "stem": "A pupil claims 15 is the next element in the pattern 2, 4, 6, 8, ... Explain why the pupil is incorrect and give the correct next element.",
+      "hints": ["The rule is add 2."],
+      "explanation": "The pupil is incorrect because the pattern adds 2 each time. The next element is 10, not 15.",
+      "rubric": {
+        "criteria": [
+          {"description": "States pupil is incorrect.", "marks": 1},
+          {"description": "Gives correct next element 10.", "marks": 1}
+        ]
+      },
+      "misconception": "Thinking 15 fits because it is larger.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "verify_next_element",
+      "type": "written",
+      "difficulty": 4,
+      "stem": "The pattern is 1, 4, 9, 16, 25, ... A pupil says 49 is the next element. Is the pupil correct? Explain.",
+      "hints": ["Square numbers: 1,4,9,16,25,36,49. The next after 25 is 36."],
+      "explanation": "The pupil is incorrect. The next square number after 25 is 36, not 49. 49 is the 7th square number.",
+      "rubric": {
+        "criteria": [
+          {"description": "States pupil is incorrect.", "marks": 1},
+          {"description": "Explains next is 36.", "marks": 1}
+        ]
+      },
+      "misconception": "Skipping 36.",
+      "uncertain": []
+    }
+  ]
+}

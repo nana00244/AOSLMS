@@ -1,0 +1,49 @@
+{
+  "indicator": {
+    "code": "B1.2.1.4.1",
+    "subject": "Science",
+    "level": "Basic 1",
+    "strand": "CYCLES",
+    "sub_strand": "Earth Science",
+    "content_standard": "B1.2.1.4: Recognize water and air as important natural resources",
+    "objective": "Identify sources and uses of water in the home and at school",
+    "source_page": 27
+  },
+  "spec": {
+    "skills": [
+      {"tag": "CYC4-SOURCES", "description": "Name sources of water at home, school and community", "minQuestions": 3},
+      {"tag": "CYC4-USES", "description": "Name uses of water", "minQuestions": 3},
+      {"tag": "CYC4-MATCH", "description": "Match a use to the correct setting or to a source", "minQuestions": 2}
+    ],
+    "difficultyPlan": "5x D1, 7x D2, 5x D3, 3x D4",
+    "misconceptions": [
+      "Water only comes from taps.",
+      "Rain is not a source of water.",
+      "We only use water for drinking.",
+      "The sea is good for drinking water."
+    ],
+    "needsTeacherAssessment": false
+  },
+  "questions": [
+    {"skill_tag": "CYC4-SOURCES", "type": "mcq", "difficulty": 1, "stem": "Where do we usually get water in our homes?", "options": ["From the tap", "From the tree", "From the stone", "From the book"], "answer": 0, "hints": ["You turn it on.", "It is in the kitchen or bathroom."], "explanation": "We usually get water from a tap in our homes.", "misconception": "Pupils may think water only comes from rivers.", "uncertain": []},
+    {"skill_tag": "CYC4-USES", "type": "mcq", "difficulty": 1, "stem": "What do we use water for?", "options": ["Drinking", "Reading", "Writing", "Singing"], "answer": 0, "hints": ["You need it to stay alive.", "You drink it."], "explanation": "We use water for drinking.", "misconception": "Pupils may think water is only for washing.", "uncertain": []},
+    {"skill_tag": "CYC4-SOURCES", "type": "mcq", "difficulty": 1, "stem": "Which of these is a source of water?", "options": ["River", "Tree", "Stone", "Table"], "answer": 0, "hints": ["It is a body of water.", "It flows."], "explanation": "A river is a source of water.", "misconception": "Pupils may think water only comes from taps.", "uncertain": []},
+    {"skill_tag": "CYC4-USES", "type": "mcq", "difficulty": 1, "stem": "What do we use to wash our hands?", "options": ["Water and soap", "Sand and stone", "Milk and sugar", "Oil and salt"], "answer": 0, "hints": ["You need soap.", "You need water to rinse."], "explanation": "We use water and soap to wash our hands.", "misconception": "Pupils may think any liquid can be used for washing.", "uncertain": []},
+    {"skill_tag": "CYC4-SOURCES", "type": "mcq", "difficulty": 1, "stem": "Where do we get rain from?", "options": ["The sun", "The moon", "The sky (clouds)", "The ground"], "answer": 2, "hints": ["It falls from above.", "It comes from clouds."], "explanation": "Rain falls from clouds in the sky.", "misconception": "Pupils may think rain comes from the ground.", "uncertain": []},
+    {"skill_tag": "CYC4-USES", "type": "mcq", "difficulty": 2, "stem": "Ama wants to cook rice. What does she need?", "options": ["Water", "Sand", "Stones", "Books"], "answer": 0, "hints": ["You boil the rice in it.", "It is a liquid."], "explanation": "Ama needs water to cook rice.", "misconception": "Pupils may think cooking only needs fire.", "uncertain": []},
+    {"skill_tag": "CYC4-SOURCES", "type": "mcq", "difficulty": 2, "stem": "Which of these is a source of water in a village?", "options": ["Borehole", "Tree", "Stone", "Car"], "answer": 0, "hints": ["People dig for it.", "It has a pump."], "explanation": "A borehole is a source of water in a village.", "misconception": "Pupils may think boreholes are only in cities.", "uncertain": []},
+    {"skill_tag": "CYC4-MATCH", "type": "mcq", "difficulty": 2, "stem": "Where is water used for watering plants?", "options": ["At the school garden", "In the kitchen", "In the bedroom", "In the car"], "answer": 0, "hints": ["Where do plants grow?", "In a garden."], "explanation": "Water is used for watering plants in the school garden.", "misconception": "Pupils may think water is only for drinking.", "uncertain": []},
+    {"skill_tag": "CYC4-USES", "type": "mcq", "difficulty": 2, "stem": "Why do we use water in the school toilet?", "options": ["To flush the toilet", "To cook food", "To wash the blackboard", "To water the garden"], "answer": 0, "hints": ["After using the toilet.", "It helps keep the toilet clean."], "explanation": "Water is used to flush the toilet.", "misconception": "Pupils may think toilets use sand.", "uncertain": []},
+    {"skill_tag": "CYC4-SOURCES", "type": "mcq", "difficulty": 2, "stem": "Which of these is NOT a source of water?", "options": ["Tap", "River", "Well", "Stone"], "answer": 3, "hints": ["Which one does not hold or give water?", "It is a hard material."], "explanation": "A stone is not a source of water.", "misconception": "Pupils may think stones hold water because they are found in water.", "uncertain": []},
+    {"skill_tag": "CYC4-USES", "type": "short_answer", "difficulty": 2, "stem": "Write one way you use water at school.", "answer": ["drinking", "washing hands", "cleaning", "flushing toilet", "watering plants"], "hints": ["What do you do after using the toilet?", "What do you do before eating?"], "explanation": "There are many ways to use water at school, such as washing hands or flushing the toilet.", "misconception": "Pupils may only think of drinking.", "uncertain": []},
+    {"skill_tag": "CYC4-SOURCES", "type": "short_answer", "difficulty": 2, "stem": "Name one source of water in your community.", "answer": ["tap", "river", "well", "borehole", "rain", "stream"], "hints": ["Where do you get water?", "Look around your area."], "explanation": "A tap, river, well, borehole, or rain are all sources of water.", "misconception": "Pupils may think water only comes from shops.", "uncertain": []},
+    {"skill_tag": "CYC4-MATCH", "type": "mcq", "difficulty": 3, "stem": "Kofi has a bucket. He wants to get water from the ground. Which source should he go to?", "options": ["A tree", "A well", "A stone", "A book"], "answer": 1, "hints": ["You draw water from it.", "It is dug in the ground."], "explanation": "A well is a source of water dug in the ground.", "misconception": "Pupils may not know what a well is.", "uncertain": []},
+    {"skill_tag": "CYC4-USES", "type": "mcq", "difficulty": 3, "stem": "Why is water important for our health?", "options": ["It makes us sleep", "It keeps us hydrated and clean", "It makes us run faster", "It makes us tall"], "answer": 1, "hints": ["What happens if you don't drink water?", "What do you use to wash?"], "explanation": "Water keeps us hydrated and helps us stay clean, which is important for health.", "misconception": "Pupils may think water is only for fun.", "uncertain": []},
+    {"skill_tag": "CYC4-SOURCES", "type": "mcq", "difficulty": 3, "stem": "Which of these sources of water is safe to drink without treating it?", "options": ["River", "Stream", "Tap (treated water)", "Rain that has just fallen on the ground"], "answer": 2, "hints": ["Which one is cleaned by the government?", "Tap water is treated."], "explanation": "Tap water is treated and usually safe to drink. River and stream water may contain dirt and germs.", "misconception": "Pupils may think all natural water is safe to drink.", "uncertain": []},
+    {"skill_tag": "CYC4-USES", "type": "written", "difficulty": 3, "stem": "Write two uses of water at home.", "rubric": {"criteria": [{"description": "Names one correct use (e.g., drinking, cooking)", "marks": 1}, {"description": "Names a second correct use", "marks": 1}]}, "hints": ["What do you do when you are thirsty?", "What do you do before cooking?"], "explanation": "We use water for drinking and cooking.", "uncertain": []},
+    {"skill_tag": "CYC4-MATCH", "type": "mcq", "difficulty": 4, "stem": "Why would a farmer need water on a farm?", "options": ["To water the crops", "To paint the barn", "To feed the tractor", "To build a house"], "answer": 0, "hints": ["Plants need water to grow.", "The farmer grows food."], "explanation": "A farmer needs water to water the crops so they can grow.", "misconception": "Pupils may think farms only need rain.", "uncertain": []},
+    {"skill_tag": "CYC4-SOURCES", "type": "mcq", "difficulty": 4, "stem": "Which of these is a natural source of water?", "options": ["Tap", "Rain", "Bottled water", "Tap water"], "answer": 1, "hints": ["It comes from the sky.", "It is not made by people."], "explanation": "Rain is a natural source of water. Taps and bottled water are man-made.", "misconception": "Pupils may think all water sources are man-made.", "uncertain": []},
+    {"skill_tag": "CYC4-USES", "type": "oral", "difficulty": 4, "stem": "Tell me one way you use water at home and one way you use it at school.", "rubric": {"criteria": [{"description": "Names a valid home use", "marks": 1}, {"description": "Names a valid school use", "marks": 1}]}, "hints": ["What do you do in the bathroom?", "What do you do in the school toilet?"], "explanation": "Water is used for many things at home and school, like drinking, cooking, washing, and flushing.", "uncertain": []},
+    {"skill_tag": "CYC4-SOURCES", "type": "written", "difficulty": 4, "stem": "Write the name of one source of water you can find in your community and one use of water.", "rubric": {"criteria": [{"description": "Names a correct source (e.g., river, tap)", "marks": 1}, {"description": "Names a correct use (e.g., drinking, washing)", "marks": 1}]}, "hints": ["Where do you get water?", "What do you use it for?"], "explanation": "A river is a source, and drinking is a use.", "uncertain": []}
+  ]
+}

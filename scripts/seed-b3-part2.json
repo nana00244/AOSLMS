@@ -1,0 +1,860 @@
+[
+  {
+    "file_name": "B3.3.3.1.1.json",
+    "indicator": {
+      "code": "B3.3.3.1.1",
+      "subject": "Mathematics",
+      "level": "Basic 3",
+      "strand": "Geometry and Measurement",
+      "sub_strand": "Measurement (Length, Mass, Time)",
+      "content_standard": "B3.3.3.1 Demonstrate an understanding of a metre and centimetre (cm, m) units for measuring length",
+      "objective": "Model and describe the relationship between the units metre and centimetre",
+      "source_page": 88
+    },
+    "spec": {
+      "skills": [
+        {"tag": "identify_cm_m", "description": "Identify objects measuring about 1 cm or 1 m.", "minQuestions": 2},
+        {"tag": "relate_100cm_1m", "description": "Demonstrate that 100 cm = 1 m.", "minQuestions": 2},
+        {"tag": "measure_with_ruler", "description": "Measure and record lengths using a ruler.", "minQuestions": 2},
+        {"tag": "draw_line_segment", "description": "Draw a line segment of a given length.", "minQuestions": 2}
+      ],
+      "difficultyPlan": "20 questions: 5 at difficulty 1, 7 at difficulty 2, 5 at difficulty 3, 3 at difficulty 4.",
+      "misconceptions": [
+        "Starting measurement from the 1 mark instead of 0.",
+        "Thinking 10 cm = 1 m.",
+        "Drawing lines without using a ruler."
+      ],
+      "needsTeacherAssessment": true
+    },
+    "questions": [
+      {
+        "skill_tag": "relate_100cm_1m",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "How many centimetres are in 1 metre?",
+        "options": ["10 cm", "50 cm", "100 cm", "1000 cm"],
+        "answer": 2,
+        "hints": ["Metre is a larger unit.", "100 cm = 1 m."],
+        "explanation": "100 cm = 1 m.",
+        "misconception": "Saying 10.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "identify_cm_m",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "Which object is about 1 metre long?",
+        "options": ["A pencil", "A classroom door", "A ruler", "A coin"],
+        "answer": 1,
+        "hints": ["1 metre is about the height of a door handle."],
+        "explanation": "A door is about 1 metre long.",
+        "misconception": "Saying a pencil.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "identify_cm_m",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "Which object is about 1 cm long?",
+        "options": ["A fingernail", "A book", "A desk", "A football field"],
+        "answer": 0,
+        "hints": ["1 cm is very small."],
+        "explanation": "A fingernail is about 1 cm.",
+        "misconception": "Saying a book.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "relate_100cm_1m",
+        "type": "numeric",
+        "difficulty": 1,
+        "stem": "How many centimetres in 2 metres?",
+        "answer": 200,
+        "check": "2*100",
+        "hints": ["1 m = 100 cm.", "2 x 100."],
+        "explanation": "200 cm.",
+        "misconception": "Saying 20.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "relate_100cm_1m",
+        "type": "short_answer",
+        "difficulty": 1,
+        "stem": "Convert 3 metres to centimetres.",
+        "answer": ["300", "300 cm"],
+        "hints": ["3 x 100."],
+        "explanation": "300 cm.",
+        "misconception": "Saying 30.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "relate_100cm_1m",
+        "type": "numeric",
+        "difficulty": 2,
+        "stem": "How many metres is 500 cm?",
+        "answer": 5,
+        "check": "500/100",
+        "hints": ["100 cm = 1 m.", "500 / 100."],
+        "explanation": "5 m.",
+        "misconception": "Saying 50.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "measure_with_ruler",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "When measuring a line with a ruler, where should you place the 0 mark?",
+        "options": ["At the start of the line", "At the end of the line", "In the middle of the line"],
+        "answer": 0,
+        "hints": ["Start from 0."],
+        "explanation": "Place the 0 mark at the start of the line.",
+        "misconception": "Starting at 1.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "measure_with_ruler",
+        "type": "numeric",
+        "difficulty": 2,
+        "stem": "A pencil starts at 0 cm and ends at 12 cm on a ruler. How long is it?",
+        "answer": 12,
+        "check": "12-0",
+        "hints": ["12 - 0."],
+        "explanation": "12 cm.",
+        "misconception": "Saying 11.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "measure_with_ruler",
+        "type": "numeric",
+        "difficulty": 2,
+        "stem": "A line starts at 3 cm and ends at 10 cm on a ruler. How long is it?",
+        "answer": 7,
+        "check": "10-3",
+        "hints": ["10 - 3."],
+        "explanation": "7 cm.",
+        "misconception": "Saying 10.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "relate_100cm_1m",
+        "type": "short_answer",
+        "difficulty": 2,
+        "stem": "Convert 450 cm to metres.",
+        "answer": ["4.5", "4.5 m"],
+        "hints": ["450 / 100."],
+        "explanation": "4.5 m.",
+        "misconception": "Saying 45.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "relate_100cm_1m",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "Which is longer: 150 cm or 1 m?",
+        "options": ["150 cm", "1 m", "They are equal"],
+        "answer": 0,
+        "hints": ["1 m = 100 cm.", "150 > 100."],
+        "explanation": "150 cm is longer.",
+        "misconception": "Saying they are equal.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "draw_line_segment",
+        "type": "drawing",
+        "difficulty": 2,
+        "stem": "Draw a line segment that is 8 cm long.",
+        "hints": ["Use a ruler.", "Start at 0."],
+        "explanation": "A line exactly 8 cm long.",
+        "rubric": {
+          "criteria": [
+            {"description": "Draws a line.", "marks": 1},
+            {"description": "Line is exactly 8 cm.", "marks": 1}
+          ]
+        },
+        "misconception": "Drawing freehand.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "draw_line_segment",
+        "type": "drawing",
+        "difficulty": 2,
+        "stem": "Draw a line segment that is 4 cm long.",
+        "hints": ["Use a ruler."],
+        "explanation": "A line exactly 4 cm long.",
+        "rubric": {
+          "criteria": [
+            {"description": "Draws a line exactly 4 cm long.", "marks": 1}
+          ]
+        },
+        "misconception": "Drawing 5 cm.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "measure_with_ruler",
+        "type": "numeric",
+        "difficulty": 3,
+        "stem": "Two lines are measured. Line A is 15 cm. Line B is 8 cm. What is the difference in length?",
+        "answer": 7,
+        "check": "15-8",
+        "hints": ["15 - 8."],
+        "explanation": "7 cm.",
+        "misconception": "Saying 23.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "measure_with_ruler",
+        "type": "written",
+        "difficulty": 3,
+        "stem": "Explain how to measure a line segment using a ruler.",
+        "hints": ["Place 0 at the start.", "Read the number at the end."],
+        "explanation": "Place the ruler with the 0 mark at one end of the line. Read the number at the other end. The difference is the length.",
+        "rubric": {
+          "criteria": [
+            {"description": "Mentions placing 0 at the start.", "marks": 1},
+            {"description": "Mentions reading the end mark.", "marks": 1}
+          ]
+        },
+        "misconception": "Just estimating.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "relate_100cm_1m",
+        "type": "numeric",
+        "difficulty": 3,
+        "stem": "How many centimetres are in 1.5 metres?",
+        "answer": 150,
+        "check": "1.5*100",
+        "hints": ["1 m = 100 cm. 0.5 m = 50 cm."],
+        "explanation": "150 cm.",
+        "misconception": "Saying 15.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "relate_100cm_1m",
+        "type": "written",
+        "difficulty": 3,
+        "stem": "A pupil measures a table as 120 cm. Another measures it as 1.2 m. Are they both correct? Explain.",
+        "hints": ["Convert 1.2 m to cm."],
+        "explanation": "Yes, they are both correct. 1.2 m = 120 cm.",
+        "rubric": {
+          "criteria": [
+            {"description": "States they are both correct.", "marks": 1},
+            {"description": "Explains 1.2 m = 120 cm.", "marks": 1}
+          ]
+        },
+        "misconception": "Thinking they are different measurements.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "draw_line_segment",
+        "type": "drawing",
+        "difficulty": 3,
+        "stem": "Draw a line segment of 12 cm.",
+        "hints": ["Use a 30 cm ruler."],
+        "explanation": "A line exactly 12 cm.",
+        "rubric": {
+          "criteria": [
+            {"description": "Draws a line exactly 12 cm long.", "marks": 1}
+          ]
+        },
+        "misconception": "Drawing 10 cm.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "measure_with_ruler",
+        "type": "written",
+        "difficulty": 4,
+        "stem": "A pupil measures a line from 2 cm to 9 cm and says it is 9 cm long. Explain their mistake.",
+        "hints": ["Did they start at 0?"],
+        "explanation": "The pupil read the end mark (9) instead of the length. They should subtract the start from the end: 9 - 2 = 7 cm.",
+        "rubric": {
+          "criteria": [
+            {"description": "Identifies the mistake (reading end mark).", "marks": 1},
+            {"description": "Gives correct length (7 cm).", "marks": 1}
+          ]
+        },
+        "misconception": "Thinking the end number is always the length.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "relate_100cm_1m",
+        "type": "numeric",
+        "difficulty": 4,
+        "stem": "A rope is 2.5 m long. How many cm is it?",
+        "answer": 250,
+        "check": "2.5*100",
+        "hints": ["2.5 x 100."],
+        "explanation": "250 cm.",
+        "misconception": "Saying 25.",
+        "uncertain": []
+      }
+    ]
+  },
+  {
+    "file_name": "B3.3.2.1.1.json",
+    "indicator": {
+      "code": "B3.3.2.1.1",
+      "subject": "Mathematics",
+      "level": "Basic 3",
+      "strand": "Geometry and Measurement",
+      "sub_strand": "Position/ Transformation",
+      "content_standard": "B3.3.2.1 Demonstrate that the length of an object does not change with its placement or direction",
+      "objective": "Represent whole numbers as distances from any given location on a number line.",
+      "source_page": 87
+    },
+    "spec": {
+      "skills": [
+        {"tag": "find_distance_number_line", "description": "Find the distance between two points on a number line.", "minQuestions": 2},
+        {"tag": "place_rod_on_number_line", "description": "Place a rod on different number points and count the unit intervals it covers.", "minQuestions": 2}
+      ],
+      "difficultyPlan": "20 questions: 5 at difficulty 1, 7 at difficulty 2, 5 at difficulty 3, 3 at difficulty 4.",
+      "misconceptions": [
+        "Counting the starting point as 1.",
+        "Losing count of intervals."
+      ],
+      "needsTeacherAssessment": true
+    },
+    "questions": [
+      {
+        "skill_tag": "find_distance_number_line",
+        "type": "numeric",
+        "difficulty": 1,
+        "stem": "How many units are between 0 and 5 on a number line?",
+        "answer": 5,
+        "check": "5-0",
+        "hints": ["Count the jumps."],
+        "explanation": "5 units.",
+        "misconception": "Saying 6.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "find_distance_number_line",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "A stick is placed from 2 to 5 on a number line. How long is the stick?",
+        "options": ["2", "3", "5", "7"],
+        "answer": 1,
+        "hints": ["Count from 2 to 5: 3, 4, 5. That's 3 jumps."],
+        "explanation": "5 - 2 = 3 units.",
+        "misconception": "Saying 5 because the end is at 5.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "find_distance_number_line",
+        "type": "numeric",
+        "difficulty": 1,
+        "stem": "How many units between 10 and 15?",
+        "answer": 5,
+        "check": "15-10",
+        "hints": ["15 - 10."],
+        "explanation": "5 units.",
+        "misconception": "Saying 25.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "find_distance_number_line",
+        "type": "short_answer",
+        "difficulty": 1,
+        "stem": "If a worm starts at 3 and moves to 8, how many units did it travel?",
+        "answer": ["5"],
+        "hints": ["8 - 3."],
+        "explanation": "5 units.",
+        "misconception": "Saying 11.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "find_distance_number_line",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "A line segment goes from 0 to 4. What is its length?",
+        "options": ["3", "4", "5", "0"],
+        "answer": 1,
+        "hints": ["Count the intervals."],
+        "explanation": "4 units.",
+        "misconception": "Saying 3.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "find_distance_number_line",
+        "type": "numeric",
+        "difficulty": 2,
+        "stem": "A stick covers the distance from 4 to 11. How many units is that?",
+        "answer": 7,
+        "check": "11-4",
+        "hints": ["11 - 4."],
+        "explanation": "7 units.",
+        "misconception": "Saying 15.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "place_rod_on_number_line",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "If a rod of length 5 is placed starting at 3, where does it end?",
+        "options": ["5", "7", "8", "9"],
+        "answer": 2,
+        "hints": ["Start at 3 and count 5 units: 4, 5, 6, 7, 8."],
+        "explanation": "3 + 5 = 8.",
+        "misconception": "Saying 5.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "find_distance_number_line",
+        "type": "written",
+        "difficulty": 2,
+        "stem": "A rope is placed on a number line from 2 to 9. Explain how to find its length.",
+        "hints": ["Count the units between 2 and 9.", "Use subtraction."],
+        "explanation": "Subtract the starting point from the ending point: 9 - 2 = 7 units.",
+        "rubric": {
+          "criteria": [
+            {"description": "States to subtract 9 - 2.", "marks": 1},
+            {"description": "Calculates 7.", "marks": 1}
+          ]
+        },
+        "misconception": "Counting starting at 2 as 1.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "find_distance_number_line",
+        "type": "numeric",
+        "difficulty": 2,
+        "stem": "How far is it from 6 to 20 on a number line?",
+        "answer": 14,
+        "check": "20-6",
+        "hints": ["20 - 6."],
+        "explanation": "14 units.",
+        "misconception": "Saying 26.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "place_rod_on_number_line",
+        "type": "numeric",
+        "difficulty": 2,
+        "stem": "A rod of length 8 starts at 5. Where does it end?",
+        "answer": 13,
+        "check": "5+8",
+        "hints": ["5 + 8."],
+        "explanation": "13.",
+        "misconception": "Saying 8.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "find_distance_number_line",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "A pupil places a 4-unit rod at 0. They move it to start at 3. What is the new ending point?",
+        "options": ["3", "4", "6", "7"],
+        "answer": 3,
+        "hints": ["Length stays 4. 3 + 4."],
+        "explanation": "3 + 4 = 7. (The length didn't change, just the location).",
+        "misconception": "Saying 4 because the rod is length 4.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "find_distance_number_line",
+        "type": "numeric",
+        "difficulty": 3,
+        "stem": "A pupil walks from 12 to 25. How far did they walk?",
+        "answer": 13,
+        "check": "25-12",
+        "hints": ["25 - 12."],
+        "explanation": "13 units.",
+        "misconception": "Saying 37.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "find_distance_number_line",
+        "type": "written",
+        "difficulty": 3,
+        "stem": "Explain why the length of a stick doesn't change when you move it on a number line.",
+        "hints": ["Does the distance between the ends change?"],
+        "explanation": "The distance between the endpoints of the stick remains the same regardless of where it is placed on the number line. It's the same stick.",
+        "rubric": {
+          "criteria": [
+            {"description": "States the length is the same.", "marks": 1},
+            {"description": "Explains the distance between ends is constant.", "marks": 1}
+          ]
+        },
+        "misconception": "Thinking moving it changes the length.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "find_distance_number_line",
+        "type": "numeric",
+        "difficulty": 3,
+        "stem": "How many units from 15 to 42?",
+        "answer": 27,
+        "check": "42-15",
+        "hints": ["42 - 15."],
+        "explanation": "27 units.",
+        "misconception": "Saying 57.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "place_rod_on_number_line",
+        "type": "written",
+        "difficulty": 3,
+        "stem": "Describe how to place a 6-unit rod on a number line starting at 4.",
+        "hints": ["Start at 4.", "Count 6 jumps."],
+        "explanation": "Start at 4 and count 6 units to the right: 5, 6, 7, 8, 9, 10. The rod ends at 10.",
+        "rubric": {
+          "criteria": [
+            {"description": "States the starting point is 4.", "marks": 1},
+            {"description": "Concludes the ending point is 10.", "marks": 1}
+          ]
+        },
+        "misconception": "Counting the starting point as 1.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "find_distance_number_line",
+        "type": "numeric",
+        "difficulty": 3,
+        "stem": "A number line has marks at 0, 5, 10, 15... What is the distance between the 2nd and 5th mark?",
+        "answer": 15,
+        "check": "5*3",
+        "hints": ["Marks are at 5 and 20.", "20 - 5."],
+        "explanation": "15 units.",
+        "misconception": "Saying 5.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "find_distance_number_line",
+        "type": "written",
+        "difficulty": 4,
+        "stem": "A stick of length 7 is placed on a number line ending at 12. Where does it start?",
+        "hints": ["12 - 7 = ?"],
+        "explanation": "Start at 5.",
+        "rubric": {
+          "criteria": [
+            {"description": "States the starting point is 5.", "marks": 1},
+            {"description": "Explains 12 - 7 = 5.", "marks": 1}
+          ]
+        },
+        "misconception": "Saying 7.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "find_distance_number_line",
+        "type": "written",
+        "difficulty": 4,
+        "stem": "Two sticks are placed on a number line. Stick A goes from 2 to 9. Stick B goes from 15 to 22. Which is longer? Explain.",
+        "hints": ["Find the length of each.", "9-2=7; 22-15=7."],
+        "explanation": "Both are the same length (7 units).",
+        "rubric": {
+          "criteria": [
+            {"description": "Calculates both lengths as 7.", "marks": 1},
+            {"description": "States they are equal.", "marks": 1}
+          ]
+        },
+        "misconception": "Saying B is longer because it ends at a larger number.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "find_distance_number_line",
+        "type": "numeric",
+        "difficulty": 4,
+        "stem": "A pupil walks from 3 to 18. They take a break at 10. How much further do they have to walk?",
+        "answer": 8,
+        "check": "18-10",
+        "hints": ["Remaining distance = end - break point."],
+        "explanation": "18 - 10 = 8 units.",
+        "misconception": "Saying 15.",
+        "uncertain": []
+      }
+    ]
+  },
+  {
+    "file_name": "B3.3.1.1.4.json",
+    "indicator": {
+      "code": "B3.3.1.1.4",
+      "subject": "Mathematics",
+      "level": "Basic 3",
+      "strand": "Geometry and Measurement",
+      "sub_strand": "2D & 3D Shapes",
+      "content_standard": "B3.3.1.1 Analyse the relationships among and between 2-D shapes and 3-D objects according to a variety of attributes, including measurement",
+      "objective": "Use attributes to recognize rhombuses, parallelograms, trapezoids, rectangles, and squares as examples of quadrilaterals and draw examples of quadrilaterals that do not belong to any of these subcategories",
+      "source_page": 86
+    },
+    "spec": {
+      "skills": [
+        {"tag": "recognize_quadrilaterals", "description": "Recognize and name rhombuses, parallelograms, trapezoids, rectangles, and squares.", "minQuestions": 2},
+        {"tag": "draw_non_categories", "description": "Draw quadrilaterals that do not belong to the named subcategories.", "minQuestions": 2},
+        {"tag": "sort_quadrilaterals", "description": "Sort quadrilaterals by their attributes.", "minQuestions": 2}
+      ],
+      "difficultyPlan": "20 questions: 5 at difficulty 1, 7 at difficulty 2, 5 at difficulty 3, 3 at difficulty 4.",
+      "misconceptions": [
+        "Thinking a square is not a rectangle.",
+        "Confusing a rhombus with a square.",
+        "Drawing shapes with curved sides."
+      ],
+      "needsTeacherAssessment": true
+    },
+    "questions": [
+      {
+        "skill_tag": "recognize_quadrilaterals",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "Which of these is a quadrilateral?",
+        "options": ["Triangle", "Square", "Circle", "Pentagon"],
+        "answer": 1,
+        "hints": ["Quadrilateral means 4 sides."],
+        "explanation": "A square has 4 sides, so it is a quadrilateral.",
+        "misconception": "Saying a triangle is a quadrilateral.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "recognize_quadrilaterals",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "A rectangle has how many sides?",
+        "options": ["3", "4", "5", "6"],
+        "answer": 1,
+        "hints": ["Count the sides of a rectangle."],
+        "explanation": "4 sides.",
+        "misconception": "Saying 5.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "recognize_quadrilaterals",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "Which shape is a quadrilateral with all sides equal but no right angles?",
+        "options": ["Square", "Rectangle", "Rhombus", "Trapezoid"],
+        "answer": 2,
+        "hints": ["Think of a tilted square."],
+        "explanation": "A rhombus has all sides equal but angles are not 90 degrees.",
+        "misconception": "Saying square (it has right angles).",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "recognize_quadrilaterals",
+        "type": "short_answer",
+        "difficulty": 1,
+        "stem": "How many sides does a quadrilateral have?",
+        "answer": ["4"],
+        "hints": ["Quad means 4."],
+        "explanation": "4 sides.",
+        "misconception": "Saying 5.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "recognize_quadrilaterals",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "Which quadrilateral has exactly one pair of parallel sides?",
+        "options": ["Rectangle", "Rhombus", "Trapezoid", "Square"],
+        "answer": 2,
+        "hints": ["Parallel means lines that never meet."],
+        "explanation": "A trapezoid has exactly one pair of parallel sides.",
+        "misconception": "Saying rectangle (it has two pairs).",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "recognize_quadrilaterals",
+        "type": "numeric",
+        "difficulty": 2,
+        "stem": "How many sides does a parallelogram have?",
+        "answer": 4,
+        "check": "4",
+        "hints": ["Parallelogram is a quadrilateral."],
+        "explanation": "4 sides.",
+        "misconception": "Saying 6.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "sort_quadrilaterals",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "Which statement is true?",
+        "options": ["All squares are rectangles.", "All rectangles are squares.", "All rhombuses are squares.", "All trapezoids are rectangles."],
+        "answer": 0,
+        "hints": ["A square has all the properties of a rectangle."],
+        "explanation": "A square is a special rectangle with equal sides.",
+        "misconception": "Saying all rectangles are squares.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "recognize_quadrilaterals",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "A shape has 4 sides, opposite sides are equal, and all angles are right angles. What is it?",
+        "options": ["Square", "Rectangle", "Rhombus", "Trapezoid"],
+        "answer": 1,
+        "hints": ["It could be a square, but square is a type of rectangle. Let's look for the general name."],
+        "explanation": "Rectangle.",
+        "misconception": "Saying square (a square is a specific type, but 'rectangle' is the broader category that fits all those properties).",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "sort_quadrilaterals",
+        "type": "written",
+        "difficulty": 2,
+        "stem": "Draw a quadrilateral that is NOT a square, rectangle, rhombus, parallelogram, or trapezoid.",
+        "hints": ["Make the sides unequal and with no parallel lines."],
+        "explanation": "An irregular quadrilateral with no parallel sides.",
+        "rubric": {
+          "criteria": [
+            {"description": "Draws a shape with 4 sides.", "marks": 1},
+            {"description": "Does not fit any of the named categories.", "marks": 1}
+          ]
+        },
+        "misconception": "Drawing a slanted rectangle.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "recognize_quadrilaterals",
+        "type": "short_answer",
+        "difficulty": 2,
+        "stem": "What is the name of a quadrilateral with 4 equal sides and 4 right angles?",
+        "answer": ["square"],
+        "hints": ["All sides equal, all corners square."],
+        "explanation": "Square.",
+        "misconception": "Saying rhombus (which doesn't have right angles).",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "recognize_quadrilaterals",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "A parallelogram has how many pairs of parallel sides?",
+        "options": ["1", "2", "3", "0"],
+        "answer": 1,
+        "hints": ["Think of the shape's name."],
+        "explanation": "2 pairs.",
+        "misconception": "Saying 1.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "sort_quadrilaterals",
+        "type": "written",
+        "difficulty": 2,
+        "stem": "Explain why a square is also a rectangle.",
+        "hints": ["What are the properties of a rectangle?"],
+        "explanation": "A square has 4 right angles and opposite sides that are equal, which are the exact properties of a rectangle.",
+        "rubric": {
+          "criteria": [
+            {"description": "Mentions 4 right angles.", "marks": 1},
+            {"description": "Mentions opposite sides equal.", "marks": 1}
+          ]
+        },
+        "misconception": "Thinking squares and rectangles are mutually exclusive.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "recognize_quadrilaterals",
+        "type": "numeric",
+        "difficulty": 3,
+        "stem": "How many pairs of parallel sides does a trapezoid have?",
+        "answer": 1,
+        "check": "1",
+        "hints": ["Exactly one pair."],
+        "explanation": "1 pair.",
+        "misconception": "Saying 2.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "sort_quadrilaterals",
+        "type": "mcq",
+        "difficulty": 3,
+        "stem": "Which of these is a special type of parallelogram?",
+        "options": ["Trapezoid", "Rhombus", "Irregular quadrilateral"],
+        "answer": 1,
+        "hints": ["A parallelogram has 2 pairs of parallel sides."],
+        "explanation": "A rhombus is a parallelogram with all sides equal.",
+        "misconception": "Saying trapezoid.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "recognize_quadrilaterals",
+        "type": "written",
+        "difficulty": 3,
+        "stem": "Compare a square and a rhombus. How are they alike and how are they different?",
+        "hints": ["Think about sides and angles."],
+        "explanation": "Alike: Both have 4 equal sides. Different: A square has 4 right angles, while a rhombus may not.",
+        "rubric": {
+          "criteria": [
+            {"description": "States both have 4 equal sides.", "marks": 1},
+            {"description": "States square has right angles, rhombus may not.", "marks": 1}
+          ]
+        },
+        "misconception": "Thinking they are the same shape.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "draw_non_categories",
+        "type": "drawing",
+        "difficulty": 3,
+        "stem": "Draw a trapezoid.",
+        "hints": ["One pair of parallel sides."],
+        "explanation": "Any 4-sided shape with exactly one pair of parallel sides.",
+        "rubric": {
+          "criteria": [
+            {"description": "Draws a shape with exactly one pair of parallel sides.", "marks": 1}
+          ]
+        },
+        "misconception": "Drawing a rectangle.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "sort_quadrilaterals",
+        "type": "mcq",
+        "difficulty": 3,
+        "stem": "Which statement is FALSE?",
+        "options": ["All squares are rhombuses.", "All rectangles are squares.", "All squares are parallelograms.", "All trapezoids are quadrilaterals."],
+        "answer": 1,
+        "hints": ["A rectangle doesn't have to have equal sides."],
+        "explanation": "Not all rectangles are squares (sides can be different lengths).",
+        "misconception": "Thinking all rectangles are squares.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "recognize_quadrilaterals",
+        "type": "written",
+        "difficulty": 4,
+        "stem": "Explain the hierarchy of quadrilaterals. Start with quadrilateral and branch out.",
+        "hints": ["Quadrilateral -> Parallelogram -> Rectangle -> Square."],
+        "explanation": "All squares are rectangles, all rectangles are parallelograms, and all parallelograms are quadrilaterals.",
+        "rubric": {
+          "criteria": [
+            {"description": "Places quadrilateral at the top.", "marks": 1},
+            {"description": "Correctly shows the relationships between the subcategories.", "marks": 1}
+          ]
+        },
+        "misconception": "Thinking the categories are completely separate.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "draw_non_categories",
+        "type": "drawing",
+        "difficulty": 4,
+        "stem": "Draw a rhombus that is not a square.",
+        "hints": ["Make it slanted."],
+        "explanation": "A slanted shape with 4 equal sides.",
+        "rubric": {
+          "criteria": [
+            {"description": "Draws a shape with 4 equal sides.", "marks": 1},
+            {"description": "The shape does not have right angles.", "marks": 1}
+          ]
+        },
+        "misconception": "Drawing a square.",
+        "uncertain": []
+      },
+      {
+        "skill_tag": "sort_quadrilaterals",
+        "type": "written",
+        "difficulty": 4,
+        "stem": "A shape has 4 sides and 2 pairs of parallel sides. What are three possible names for this shape?",
+        "hints": ["Think of parallelograms, rectangles, and squares."],
+        "explanation": "Parallelogram, rectangle, or square.",
+        "rubric": {
+          "criteria": [
+            {"description": "Gives at least two valid names.", "marks": 1},
+            {"description": "Gives all three valid names.", "marks": 1}
+          ]
+        },
+        "misconception": "Saying trapezoid.",
+        "uncertain": []
+      }
+    ]
+  }
+]

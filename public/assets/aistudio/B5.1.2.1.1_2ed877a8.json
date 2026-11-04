@@ -1,0 +1,384 @@
+{
+  "indicator": {
+    "code": "B5.1.2.1.1",
+    "subject": "Mathematics",
+    "level": "Basic 5",
+    "strand": "Number",
+    "sub_strand": "Number Operations",
+    "content_standard": "Not clearly printed in extract",
+    "objective": "Apply mental mathematics strategies and number properties, such as skip counting from a known fact, using doubling or halving, using patterns in the 9facts, using repeated doubling or halving, to determine answers for basic multiplication facts to 81 and related division facts",
+    "source_page": 86
+  },
+  "spec": {
+    "skills": [
+      {
+        "tag": "skip_count_from_fact",
+        "description": "Use skip counting from a known fact (e.g., if 5×7=35, then 6×7=35+7).",
+        "minQuestions": 2
+      },
+      {
+        "tag": "double_halve",
+        "description": "Use doubling and halving to multiply (e.g., 8×3 = 2×(4×3)).",
+        "minQuestions": 2
+      },
+      {
+        "tag": "patterns_9_facts",
+        "description": "Use patterns in the 9 times table (e.g., 9×6 = 10×6 – 6).",
+        "minQuestions": 2
+      },
+      {
+        "tag": "repeated_doubling",
+        "description": "Use repeated doubling to multiply (e.g., 4×6 = 2×12 = 24).",
+        "minQuestions": 2
+      },
+      {
+        "tag": "relate_div_mult",
+        "description": "Relate division to multiplication (e.g., 64÷8 = ? because 8×? = 64).",
+        "minQuestions": 2
+      }
+    ],
+    "difficultyPlan": "20 questions: 5 at difficulty 1, 7 at difficulty 2, 5 at difficulty 3, 3 at difficulty 4.",
+    "misconceptions": [
+      "Counting all from 1 instead of using a known fact.",
+      "Confusing doubling with adding 2.",
+      "Thinking the 9s pattern doesn't work for all multiples.",
+      "Forgetting the relationship between multiplication and division."
+    ],
+    "needsTeacherAssessment": false
+  },
+  "questions": [
+    {
+      "skill_tag": "skip_count_from_fact",
+      "type": "numeric",
+      "difficulty": 1,
+      "stem": "If 5 × 7 = 35, what is 6 × 7?",
+      "answer": 42,
+      "check": "35+7",
+      "hints": [
+        "6 × 7 is one more group of 7 than 5 × 7.",
+        "35 + 7."
+      ],
+      "explanation": "6 × 7 = 35 + 7 = 42.",
+      "misconception": "Adding 1 instead of 7.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "skip_count_from_fact",
+      "type": "numeric",
+      "difficulty": 1,
+      "stem": "If 8 × 8 = 64, what is 7 × 8?",
+      "answer": 56,
+      "check": "64-8",
+      "hints": [
+        "7 × 8 is one less group of 8.",
+        "64 - 8."
+      ],
+      "explanation": "7 × 8 = 64 - 8 = 56.",
+      "misconception": "Subtracting 1 instead of 8.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "double_halve",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which strategy helps you solve 8 × 3 by doubling and halving?",
+      "options": [
+        "Double 8 and halve 3",
+        "Halve 8 and double 3",
+        "Double both 8 and 3"
+      ],
+      "answer": 1,
+      "hints": [
+        "Halving one factor and doubling the other keeps the product the same."
+      ],
+      "explanation": "Halve 8 to get 4, double 3 to get 6. 4 × 6 = 24, same as 8 × 3.",
+      "misconception": "Doubling both factors.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "double_halve",
+      "type": "numeric",
+      "difficulty": 1,
+      "stem": "Use doubling and halving to solve 6 × 4. (Hint: halve 6 and double 4.)",
+      "answer": 24,
+      "check": "3*8",
+      "hints": [
+        "6 ÷ 2 = 3, 4 × 2 = 8.",
+        "3 × 8."
+      ],
+      "explanation": "6 × 4 = 3 × 8 = 24.",
+      "misconception": "Halving both.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "patterns_9_facts",
+      "type": "numeric",
+      "difficulty": 1,
+      "stem": "Use the 9s pattern to find 9 × 4. (Hint: 10 × 4 = 40, then subtract 4.)",
+      "answer": 36,
+      "check": "40-4",
+      "hints": [
+        "9 × 4 = 10 × 4 – 4."
+      ],
+      "explanation": "9 × 4 = 40 - 4 = 36.",
+      "misconception": "Adding 4 instead of subtracting.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "patterns_9_facts",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "Use the 9s pattern to find 9 × 7.",
+      "answer": 63,
+      "check": "70-7",
+      "hints": [
+        "9 × 7 = 10 × 7 – 7."
+      ],
+      "explanation": "9 × 7 = 70 - 7 = 63.",
+      "misconception": "Saying 72.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "repeated_doubling",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "Use repeated doubling to find 4 × 6. (Hint: double 2 × 6.)",
+      "answer": 24,
+      "check": "2*12",
+      "hints": [
+        "2 × 6 = 12, then double 12."
+      ],
+      "explanation": "4 × 6 = 2 × (2 × 6) = 2 × 12 = 24.",
+      "misconception": "Adding 4 and 6.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "repeated_doubling",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "Use repeated doubling to find 8 × 3.",
+      "answer": 24,
+      "check": "2*2*6",
+      "hints": [
+        "2 × 3 = 6, double to 4 × 3 = 12, double again to 8 × 3 = 24."
+      ],
+      "explanation": "8 × 3 = 24.",
+      "misconception": "Doubling only once.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "relate_div_mult",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "If 8 × 7 = 56, what is 56 ÷ 8?",
+      "answer": 7,
+      "check": "56/8",
+      "hints": [
+        "Division is the inverse of multiplication."
+      ],
+      "explanation": "56 ÷ 8 = 7.",
+      "misconception": "Saying 8.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "relate_div_mult",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "If 6 × 9 = 54, what is 54 ÷ 6?",
+      "answer": 9,
+      "check": "54/6",
+      "hints": [
+        "Use the multiplication fact."
+      ],
+      "explanation": "54 ÷ 6 = 9.",
+      "misconception": "Saying 6.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "skip_count_from_fact",
+      "type": "written",
+      "difficulty": 2,
+      "stem": "Explain how to use 7 × 7 = 49 to find 8 × 7.",
+      "hints": [
+        "8 × 7 is one more group of 7."
+      ],
+      "explanation": "8 × 7 = 49 + 7 = 56.",
+      "rubric": {
+        "criteria": [
+          {
+            "description": "States 8 × 7 = 49 + 7.",
+            "marks": 1
+          },
+          {
+            "description": "Calculates 56.",
+            "marks": 1
+          }
+        ]
+      },
+      "misconception": "Adding 1 instead of 7.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "double_halve",
+      "type": "written",
+      "difficulty": 2,
+      "stem": "Explain how to use doubling and halving to solve 12 × 5.",
+      "hints": [
+        "Halve 12 to get 6, double 5 to get 10."
+      ],
+      "explanation": "12 × 5 = 6 × 10 = 60.",
+      "rubric": {
+        "criteria": [
+          {
+            "description": "Halves 12 to 6, doubles 5 to 10.",
+            "marks": 1
+          },
+          {
+            "description": "Calculates 60.",
+            "marks": 1
+          }
+        ]
+      },
+      "misconception": "Doubling both.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "patterns_9_facts",
+      "type": "numeric",
+      "difficulty": 3,
+      "stem": "Use the 9s pattern to find 9 × 9.",
+      "answer": 81,
+      "check": "90-9",
+      "hints": [
+        "9 × 9 = 10 × 9 – 9."
+      ],
+      "explanation": "9 × 9 = 90 - 9 = 81.",
+      "misconception": "Saying 72.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "repeated_doubling",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "Explain how to use repeated doubling to find 4 × 8.",
+      "hints": [
+        "Double 2 × 8 = 16 to get 4 × 8."
+      ],
+      "explanation": "2 × 8 = 16, double 16 to get 32, so 4 × 8 = 32.",
+      "rubric": {
+        "criteria": [
+          {
+            "description": "Doubles 2 × 8 = 16.",
+            "marks": 1
+          },
+          {
+            "description": "Doubles again to get 32.",
+            "marks": 1
+          }
+        ]
+      },
+      "misconception": "Doubling only once.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "relate_div_mult",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "Explain how knowing 7 × 8 = 56 helps you solve 56 ÷ 7.",
+      "hints": [
+        "Division is the inverse of multiplication."
+      ],
+      "explanation": "Since 7 × 8 = 56, then 56 ÷ 7 = 8.",
+      "rubric": {
+        "criteria": [
+          {
+            "description": "States division is inverse.",
+            "marks": 1
+          },
+          {
+            "description": "Gives answer 8.",
+            "marks": 1
+          }
+        ]
+      },
+      "misconception": "Not making the connection.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "skip_count_from_fact",
+      "type": "numeric",
+      "difficulty": 3,
+      "stem": "If 9 × 6 = 54, what is 10 × 6?",
+      "answer": 60,
+      "check": "54+6",
+      "hints": [
+        "10 × 6 is one more group of 6."
+      ],
+      "explanation": "10 × 6 = 54 + 6 = 60.",
+      "misconception": "Adding 10 instead of 6.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "double_halve",
+      "type": "numeric",
+      "difficulty": 4,
+      "stem": "Use doubling and halving to solve 16 × 5.",
+      "answer": 80,
+      "check": "8*10",
+      "hints": [
+        "Halve 16 to 8, double 5 to 10."
+      ],
+      "explanation": "16 × 5 = 8 × 10 = 80.",
+      "misconception": "Halving 5, doubling 16.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "patterns_9_facts",
+      "type": "written",
+      "difficulty": 4,
+      "stem": "Explain the 9s pattern and use it to find 9 × 8.",
+      "hints": [
+        "9 × n = 10 × n – n."
+      ],
+      "explanation": "9 × 8 = 10 × 8 – 8 = 80 – 8 = 72.",
+      "rubric": {
+        "criteria": [
+          {
+            "description": "Explains the pattern.",
+            "marks": 1
+          },
+          {
+            "description": "Calculates 72.",
+            "marks": 1
+          }
+        ]
+      },
+      "misconception": "Adding 8.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "relate_div_mult",
+      "type": "written",
+      "difficulty": 4,
+      "stem": "A pupil knows 6 × 7 = 42. Explain how they can use this to find 42 ÷ 6 and 42 ÷ 7.",
+      "hints": [
+        "Division is the inverse of multiplication."
+      ],
+      "explanation": "42 ÷ 6 = 7 and 42 ÷ 7 = 6, because 6 × 7 = 42.",
+      "rubric": {
+        "criteria": [
+          {
+            "description": "States both division facts.",
+            "marks": 1
+          },
+          {
+            "description": "Explains inverse relationship.",
+            "marks": 1
+          }
+        ]
+      },
+      "misconception": "Thinking only one division fact exists.",
+      "uncertain": []
+    }
+  ]
+}

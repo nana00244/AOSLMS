@@ -1,0 +1,269 @@
+{
+  "indicator": {
+    "code": "B4.2.1.2.1",
+    "subject": "Science",
+    "level": "Basic 4",
+    "strand": "CYCLES",
+    "sub_strand": "Earth Science",
+    "content_standard": "B4.2.1.2 Recognise the relationship between the earth and the sun",
+    "objective": "Identify the objects in the sky during day and night",
+    "source_page": 27
+  },
+  "spec": {
+    "skills": [
+      {"tag": "day_objects", "description": "Identify objects seen in the daytime sky (e.g. sun, clouds, birds, sometimes moon).", "minQuestions": 4},
+      {"tag": "night_objects", "description": "Identify objects seen in the night-time sky (e.g. moon, stars, darkness).", "minQuestions": 4},
+      {"tag": "compare_day_night", "description": "Compare similarities and differences between the day sky and the night sky.", "minQuestions": 4},
+      {"tag": "both_skies", "description": "Recognise objects that can be seen in both day and night skies (e.g. moon, clouds, sometimes stars).", "minQuestions": 4},
+      {"tag": "24_hour_cycle", "description": "Explain simply that day and night follow each other in a 24-hour cycle.", "minQuestions": 4}
+    ],
+    "difficultyPlan": "20 questions total — Difficulty 1: 5; Difficulty 2: 7; Difficulty 3: 5; Difficulty 4: 3.",
+    "misconceptions": [
+      "The sun disappears at night because it goes behind a hill.",
+      "Stars only exist at night.",
+      "The moon is only in the night sky.",
+      "Day and night happen at the same time everywhere.",
+      "The sky is always blue at night.",
+      "The sun and moon cannot be seen on the same day."
+    ],
+    "needsTeacherAssessment": false
+  },
+  "questions": [
+    {
+      "skill_tag": "day_objects",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which of these is found in the daytime sky?",
+      "options": ["Stars and darkness", "Sun and stars", "Sun and clouds", "Moon and darkness"],
+      "answer": 2,
+      "hints": ["What lights up the sky in the morning?", "What do you see above you at noon?"],
+      "explanation": "The sun and clouds are seen in the daytime sky. Stars usually appear at night.",
+      "misconception": "The sun disappears at night because it goes behind a hill.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "night_objects",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which of these is found in the night-time sky?",
+      "options": ["Moon and stars", "Sun and clouds", "Rainbow and sun", "Bright blue sky"],
+      "answer": 0,
+      "hints": ["What do you see when it is dark?", "Think of the moon and twinkling lights."],
+      "explanation": "The moon and stars are seen in the night-time sky.",
+      "misconception": "Stars only exist at night.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "day_objects",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What gives light to the earth during the day?",
+      "options": ["The moon", "The stars", "The clouds", "The sun"],
+      "answer": 3,
+      "hints": ["What is very bright in the sky at noon?", "It rises in the morning and sets in the evening."],
+      "explanation": "The sun gives light during the day. The moon and stars give some light at night.",
+      "misconception": "The sun disappears at night because it goes behind a hill.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "night_objects",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What can you see in the sky on a clear night?",
+      "options": ["Sun and clouds", "Moon and stars", "Rain and wind", "Birds and insects"],
+      "answer": 1,
+      "hints": ["What twinkles in the sky at night?", "Think of the moon."],
+      "explanation": "The moon and stars are seen in the night sky on a clear night.",
+      "misconception": "Stars only exist at night.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "24_hour_cycle",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "How long does it take for day and night to follow each other once?",
+      "options": ["12 hours", "7 days", "24 hours", "30 days"],
+      "answer": 2,
+      "hints": ["How many hours are in a day and a night together?", "A day and a night make one full cycle."],
+      "explanation": "Day and night together take 24 hours. This is one full day.",
+      "misconception": "Day and night happen at the same time everywhere.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "compare_day_night",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "What is ONE difference between the day sky and the night sky?",
+      "options": ["The day sky is dark and the night sky is bright", "The night sky is dark and the day sky is bright", "Both skies are always bright", "Both skies are always dark"],
+      "answer": 1,
+      "hints": ["What colour is the sky at noon?", "What colour is the sky at midnight?"],
+      "explanation": "The day sky is bright, mostly lit by the sun. The night sky is dark, lit only by the moon and stars.",
+      "misconception": "The sky is always blue at night.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "both_skies",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which of these can sometimes be seen in BOTH the day sky and the night sky?",
+      "options": ["Sun", "Stars only at night", "Darkness", "Moon"],
+      "answer": 3,
+      "hints": ["Is the moon only visible at night?", "Sometimes you can see the moon before sunset."],
+      "explanation": "The moon can sometimes be seen during the day and also at night. It is not only a night-time object.",
+      "misconception": "The moon is only in the night sky.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "day_objects",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Name two things you can see in the daytime sky.",
+      "answer": ["sun and clouds", "sun and birds", "clouds and sun", "sun and moon"],
+      "hints": ["What is very bright in the sky?", "What white shapes float in the sky?"],
+      "explanation": "The sun, clouds, birds, and sometimes the moon can be seen in the daytime sky.",
+      "misconception": "Only the sun is visible during the day.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "night_objects",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Name two things you can see in the night sky.",
+      "answer": ["moon and stars", "stars and moon"],
+      "hints": ["What is bright in the sky at night?", "What twinkles in the dark?"],
+      "explanation": "The moon and stars are common objects in the night sky.",
+      "misconception": "Only the moon is in the night sky.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "24_hour_cycle",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "What happens to the sky in a 24-hour cycle?",
+      "options": ["Day and night follow each other", "The sky stays bright for 24 hours", "The sky stays dark for 24 hours", "The sky turns green and red"],
+      "answer": 0,
+      "hints": ["What happens after daytime?", "What happens after night-time?"],
+      "explanation": "In 24 hours, day and night follow each other once. This is the 24-hour cycle.",
+      "misconception": "Day and night happen at the same time everywhere.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "compare_day_night",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Why are the sun and moon often seen at different times?",
+      "options": ["Because the sun shines only at noon", "Because the moon runs away from the sun", "Because the sun is afraid of the moon", "Because the sun gives light while the moon is usually brighter at night"],
+      "answer": 3,
+      "hints": ["When is the sun brightest?", "When do we usually see the moon clearly?"],
+      "explanation": "The sun lights the day. The moon is often seen more clearly at night because the sky is darker. The moon is sometimes seen during the day too.",
+      "misconception": "The moon is only in the night sky.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "both_skies",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which object can be seen in the sky during the day and sometimes at night?",
+      "options": ["Sun", "Stars only", "Moon", "Rainbow"],
+      "answer": 2,
+      "hints": ["It is round and gives some light at night.", "Sometimes you can see it in the afternoon too."],
+      "explanation": "The moon can be seen at night and sometimes in the daytime too.",
+      "misconception": "The moon is only in the night sky.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "compare_day_night",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "Which of these correctly compares the day and night skies?",
+      "options": ["Both skies have the same objects all the time", "The day sky is bright and mostly lit by the sun, while the night sky is dark and lit by the moon and stars", "The day sky is dark and the night sky is bright", "Both skies are dark"],
+      "answer": 1,
+      "hints": ["What lights the sky at midday?", "What lights the sky at midnight?"],
+      "explanation": "The day sky is bright because of the sun. The night sky is dark and lit by the moon and stars.",
+      "misconception": "The sky is always blue at night.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "both_skies",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "In which of these ways are the day and night skies SIMILAR?",
+      "options": ["Both can show the moon at some time", "Both are always bright", "Both are always dark", "Both always show the sun"],
+      "answer": 0,
+      "hints": ["Is the moon seen only at night?", "The moon can appear in the day as well."],
+      "explanation": "The moon can appear in both the day and night skies, though it is usually clearer at night. This is one similarity.",
+      "misconception": "The moon is only in the night sky.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "24_hour_cycle",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "What happens to the sky in a 24-hour cycle?",
+      "answer": ["day and night follow each other", "the sky changes from day to night and back to day", "day follows night and night follows day"],
+      "hints": ["Think about what comes after daytime.", "What comes after night-time?"],
+      "explanation": "In 24 hours, daytime follows night-time and then night-time follows daytime again. This repeating pattern is the 24-hour cycle.",
+      "misconception": "The sky stays the same for 24 hours.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "day_objects",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "Ama says, 'The sun goes behind a hill at night.' What is a better explanation?",
+      "options": ["The sun is switched off by people", "The sun moves to another country", "The earth turns so that the sun is hidden from our side until morning", "The sun becomes the moon"],
+      "answer": 2,
+      "hints": ["Why does the sun seem to leave at night?", "Is the sun hidden from view while the earth turns?"],
+      "explanation": "The earth turns (rotates). At night, our side of the earth faces away from the sun, so we cannot see it. In the morning, our side faces the sun again.",
+      "misconception": "The sun disappears at night because it goes behind a hill.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "night_objects",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "Why do stars seem to disappear in the daytime?",
+      "options": ["The stars are switched off", "The stars go away during the day", "The stars turn into the sun", "The bright light of the sun makes it hard to see the stars"],
+      "answer": 3,
+      "hints": ["Do stars go away or do we just see them less?", "The sun is very bright."],
+      "explanation": "Stars are still there in the daytime, but the sun's bright light makes it hard to see them from the earth. They are easier to see at night.",
+      "misconception": "Stars only exist at night.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "compare_day_night",
+      "type": "short_answer",
+      "difficulty": 4,
+      "stem": "Describe one difference and one similarity between the day sky and the night sky.",
+      "answer": ["difference: the day sky is bright and the night sky is dark; similarity: the moon can be seen in both skies", "difference: the sun lights the day while the moon and stars light the night; similarity: clouds can be seen in both skies"],
+      "hints": ["Think of what lights the day and the night.", "Is there anything that can be seen in both?"],
+      "explanation": "Difference: the day sky is bright (from the sun) while the night sky is dark (lit by the moon and stars). Similarity: both skies can show the moon or clouds at some time.",
+      "misconception": "The day and night skies are exactly the same.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "both_skies",
+      "type": "mcq",
+      "difficulty": 4,
+      "stem": "Which of these can be seen in the sky during both the day and the night?",
+      "options": ["Clouds", "The sun", "Rainbow", "Darkness only"],
+      "answer": 0,
+      "hints": ["Think of white or grey shapes in the sky.", "Do clouds only appear in the daytime?"],
+      "explanation": "Clouds can be seen in the sky during both the day and the night. They are not only a daytime object.",
+      "misconception": "Only the sun and stars are in the sky.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "24_hour_cycle",
+      "type": "mcq",
+      "difficulty": 4,
+      "stem": "Why do day and night follow each other every 24 hours?",
+      "options": ["Because the sun goes around the earth once every 24 hours", "Because the earth spins on its axis once every 24 hours", "Because the moon covers the sun", "Because the sky changes its mind"],
+      "answer": 1,
+      "hints": ["What does the earth do every 24 hours?", "Think about one side of the earth facing the sun while the other side is dark."],
+      "explanation": "The earth spins on its axis once every 24 hours. The side facing the sun has day, and the side facing away has night. As it spins, day and night follow each other.",
+      "misconception": "The sun moves around the earth.",
+      "uncertain": []
+    }
+  ]
+}

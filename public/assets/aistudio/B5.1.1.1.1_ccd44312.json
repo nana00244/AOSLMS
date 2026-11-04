@@ -1,0 +1,280 @@
+{
+  "indicator": {
+    "code": "B5.1.1.1.1",
+    "subject": "Science",
+    "level": "Basic 5",
+    "strand": "DIVERSITY OF MATTER",
+    "sub_strand": "Living and Non-Living Things",
+    "content_standard": "B5.1.1.1 Understand the physical features and life processes of living things and use this understanding to classify them",
+    "objective": "Know the life processes of living things (growth, sensitivity to the environment, respiration and excretion)",
+    "source_page": 39
+  },
+  "spec": {
+    "skills": [
+      {"tag": "name_life_processes", "description": "Identify growth, sensitivity, respiration and excretion as life processes of living things.", "minQuestions": 3},
+      {"tag": "describe_growth", "description": "Describe growth as an increase in size over time (e.g. a seedling becoming a mature plant).", "minQuestions": 4},
+      {"tag": "describe_sensitivity", "description": "Describe sensitivity as the ability of living things to respond to changes in their environment (e.g. mimosa plant closing when touched).", "minQuestions": 4},
+      {"tag": "describe_respiration", "description": "Describe respiration as the process of breathing in and out to get energy.", "minQuestions": 3},
+      {"tag": "describe_excretion", "description": "Describe excretion as the removal of waste products from the body.", "minQuestions": 3},
+      {"tag": "importance_of_processes", "description": "Explain simply why each life process is important for living things.", "minQuestions": 3}
+    ],
+    "difficultyPlan": "20 questions total — Difficulty 1: 5; Difficulty 2: 7; Difficulty 3: 5; Difficulty 4: 3.",
+    "misconceptions": [
+      "Plants do not respire.",
+      "Only animals show sensitivity.",
+      "Excretion is the same as eating.",
+      "Growth means only getting taller (not all living things grow the same way).",
+      "Respiration and breathing are exactly the same thing.",
+      "Plants do not excrete waste."
+    ],
+    "needsTeacherAssessment": false
+  },
+  "questions": [
+    {
+      "skill_tag": "name_life_processes",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which of these is a life process of living things?",
+      "options": ["Growth", "Sleeping", "Running", "Reading"],
+      "answer": 0,
+      "hints": ["Think about what all living things do.", "It is one of the four life processes you learned."],
+      "explanation": "Growth is a life process. The four life processes in this lesson are growth, sensitivity, respiration and excretion.",
+      "misconception": "Only animals show life processes.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "name_life_processes",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which of these is NOT one of the four life processes of living things?",
+      "options": ["Growth", "Respiration", "Excretion", "Dancing"],
+      "answer": 3,
+      "hints": ["Think about the four processes you learned.", "Dancing is an activity, not a life process."],
+      "explanation": "The four life processes are growth, sensitivity, respiration and excretion. Dancing is not a life process.",
+      "misconception": "Any activity is a life process.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_growth",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What does growth mean in living things?",
+      "options": ["Getting smaller over time", "Increasing in size over time", "Changing colour", "Making noise"],
+      "answer": 1,
+      "hints": ["Think about a seed becoming a plant.", "Growth means getting bigger."],
+      "explanation": "Growth means increasing in size over time. A seedling grows into a mature plant.",
+      "misconception": "Growth means only getting taller.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_sensitivity",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What is sensitivity in living things?",
+      "options": ["The ability to sleep", "The ability to respond to changes in the environment", "The ability to eat food", "The ability to make sound"],
+      "answer": 1,
+      "hints": ["Think about the mimosa plant closing when touched.", "It is about responding to changes."],
+      "explanation": "Sensitivity is the ability of living things to respond to changes in their environment.",
+      "misconception": "Only animals show sensitivity.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_respiration",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What is respiration?",
+      "options": ["The process of eating food", "The process of breathing in and out to get energy", "The process of removing waste", "The process of growing taller"],
+      "answer": 1,
+      "hints": ["You do this all the time without thinking.", "It involves breathing."],
+      "explanation": "Respiration is the process of breathing in and out to get energy from food.",
+      "misconception": "Respiration and breathing are exactly the same thing.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_growth",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Ama plants a bean seed. After two weeks, the plant is taller and has more leaves. Which life process is this?",
+      "options": ["Respiration", "Excretion", "Growth", "Sensitivity"],
+      "answer": 2,
+      "hints": ["The plant is getting bigger.", "It is increasing in size."],
+      "explanation": "The plant is growing. Growth is the increase in size over time.",
+      "misconception": "Growth only happens in animals.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_sensitivity",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "When you touch the leaves of a mimosa plant, they fold up. What life process is the plant showing?",
+      "options": ["Growth", "Respiration", "Sensitivity", "Excretion"],
+      "answer": 2,
+      "hints": ["The plant is responding to touch.", "It is reacting to a change."],
+      "explanation": "The mimosa plant is responding to touch. This is sensitivity — responding to changes in the environment.",
+      "misconception": "Plants do not show sensitivity.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_respiration",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "A pupil breathes in and out quickly after running. Which life process is this?",
+      "options": ["Growth", "Excretion", "Sensitivity", "Respiration"],
+      "answer": 3,
+      "hints": ["The pupil is breathing.", "Breathing is part of respiration."],
+      "explanation": "The pupil is respiring. Respiration is breathing in and out to get energy.",
+      "misconception": "Respiration only happens when we sleep.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_excretion",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "What is excretion?",
+      "options": ["The process of removing waste products from the body", "The process of eating food", "The process of growing", "The process of responding to touch"],
+      "answer": 0,
+      "hints": ["Think about what the body removes as waste.", "It is not eating."],
+      "explanation": "Excretion is the removal of waste products from the body, such as urine and sweat.",
+      "misconception": "Excretion is the same as eating.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "importance_of_processes",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Why is respiration important for living things?",
+      "options": ["It helps them grow taller", "It gives them energy to live and work", "It helps them remove waste", "It helps them respond to touch"],
+      "answer": 1,
+      "hints": ["What does breathing give the body?", "It provides energy."],
+      "explanation": "Respiration gives living things energy to live, grow and work.",
+      "misconception": "Respiration is only for making noise.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_growth",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "What is growth in living things?",
+      "answer": ["increase in size over time", "getting bigger over time", "growing larger"],
+      "hints": ["Think about a seed becoming a plant.", "It means increasing in size."],
+      "explanation": "Growth is the increase in size of a living thing over time.",
+      "misconception": "Growth only means getting taller.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_respiration",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "What is respiration?",
+      "answer": ["breathing in and out to get energy", "the process of breathing to get energy", "breathing to get energy"],
+      "hints": ["You do it all the time.", "It gives you energy."],
+      "explanation": "Respiration is the process of breathing in and out to get energy from food.",
+      "misconception": "Respiration and breathing are not related.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_sensitivity",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "A pupil touches a snail and it quickly pulls back into its shell. What does this show?",
+      "options": ["The snail is growing", "The snail is respiring", "The snail is showing sensitivity", "The snail is excreting"],
+      "answer": 2,
+      "hints": ["The snail is responding to touch.", "It is reacting to a change."],
+      "explanation": "The snail is responding to touch by pulling back. This is sensitivity.",
+      "misconception": "Only plants show sensitivity.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "importance_of_processes",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "Why is excretion important for living things?",
+      "options": ["It helps them grow", "It removes waste products that can harm the body", "It helps them respond to touch", "It gives them energy"],
+      "answer": 1,
+      "hints": ["What happens if waste stays in the body?", "It can harm the body."],
+      "explanation": "Excretion removes waste products that would harm the body if they stayed inside.",
+      "misconception": "Excretion is not important.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_growth",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "A pupil observes a seedling and a mature plant of the same kind. Which difference shows growth?",
+      "options": ["The mature plant is taller and has more leaves", "The mature plant is a different colour", "The mature plant is in a different pot", "The mature plant has a different smell"],
+      "answer": 0,
+      "hints": ["Growth means getting bigger.", "What happens to size over time?"],
+      "explanation": "The mature plant is taller and has more leaves, showing it has grown.",
+      "misconception": "Growth means only getting taller.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_sensitivity",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Give an example of a plant showing sensitivity.",
+      "answer": ["mimosa plant closing when touched", "the mimosa plant folds its leaves when touched", "a plant responding to touch"],
+      "hints": ["Think about a plant that moves when touched.", "It is called the mimosa."],
+      "explanation": "The mimosa plant folds its leaves when touched. This is an example of sensitivity in plants.",
+      "misconception": "Plants do not show sensitivity.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "importance_of_processes",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Why is sensitivity important for living things?",
+      "answer": ["it helps them respond to danger and changes in their environment", "it helps them react to changes around them", "it helps them stay safe"],
+      "hints": ["Think about responding to danger.", "It helps them react to the environment."],
+      "explanation": "Sensitivity helps living things respond to changes and danger in their environment, helping them survive.",
+      "misconception": "Sensitivity is not important.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_excretion",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "Which of these is an example of excretion in humans?",
+      "options": ["Breathing in air", "Passing out urine", "Eating food", "Growing taller"],
+      "answer": 1,
+      "hints": ["The body removes waste.", "Urine is a waste product."],
+      "explanation": "Passing out urine is an example of excretion. The body removes waste products.",
+      "misconception": "Excretion is the same as eating.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_growth",
+      "type": "short_answer",
+      "difficulty": 4,
+      "stem": "Explain how a seedling shows growth over time.",
+      "answer": ["it gets taller and develops more leaves as it grows", "the seedling increases in size and grows more leaves", "it grows bigger and taller over time"],
+      "hints": ["What happens to size?", "What happens to the number of leaves?"],
+      "explanation": "A seedling shows growth by getting taller and developing more leaves over time.",
+      "misconception": "Growth only means getting taller.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_respiration",
+      "type": "short_answer",
+      "difficulty": 4,
+      "stem": "Explain why living things need respiration.",
+      "answer": ["to get energy from food", "respiration gives the body energy to live and work", "it provides energy for life processes"],
+      "hints": ["What does breathing give the body?", "It provides energy."],
+      "explanation": "Living things need respiration to get energy from food. This energy is used for growth, movement and other life processes.",
+      "misconception": "Respiration is not needed for energy.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "name_life_processes",
+      "type": "mcq",
+      "difficulty": 4,
+      "stem": "A pupil lists four life processes: growth, sensitivity, respiration and excretion. Which statement about these processes is correct?",
+      "options": ["Only animals show all four processes", "Plants show all four processes", "Only humans show all four processes", "Plants show only growth and respiration"],
+      "answer": 1,
+      "hints": ["Do plants grow?", "Do plants respond to touch?", "Do plants breathe?"],
+      "explanation": "Plants show all four life processes: growth, sensitivity, respiration and excretion. They grow, respond to touch, respire and excrete waste.",
+      "misconception": "Plants do not respire.",
+      "uncertain": []
+    }
+  ]
+}

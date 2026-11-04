@@ -1,0 +1,381 @@
+{
+  "indicator": {
+    "code": "B5.1.1.3.4",
+    "subject": "Mathematics",
+    "level": "Basic 5",
+    "strand": "Number",
+    "sub_strand": "Counting, Representation & Cardinality",
+    "content_standard": "Not clearly printed in extract (likely B5.1.1.3)",
+    "objective": "Determine the highest common factor of any 2 or 3 numbers by prime factorisation",
+    "source_page": 84
+  },
+  "spec": {
+    "skills": [
+      {
+        "tag": "find_prime_factors",
+        "description": "Find prime factors of a number using a factor tree.",
+        "minQuestions": 2
+      },
+      {
+        "tag": "find_hcf_prime_factorisation",
+        "description": "Use prime factorisation to find the HCF of two or three numbers.",
+        "minQuestions": 2
+      },
+      {
+        "tag": "use_venn_diagram_hcf",
+        "description": "Use a Venn diagram to find the HCF from prime factors.",
+        "minQuestions": 2
+      }
+    ],
+    "difficultyPlan": "20 questions: 5 at difficulty 1, 7 at difficulty 2, 5 at difficulty 3, 3 at difficulty 4.",
+    "misconceptions": [
+      "Choosing the first common factor instead of the highest.",
+      "Not identifying all common prime factors.",
+      "Confusing HCF with LCM when using prime factors."
+    ],
+    "needsTeacherAssessment": false
+  },
+  "questions": [
+    {
+      "skill_tag": "find_prime_factors",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What are the prime factors of 12?",
+      "options": [
+        "2 and 3",
+        "2 and 6",
+        "3 and 4",
+        "1 and 12"
+      ],
+      "answer": 0,
+      "hints": [
+        "Break 12 into factors until all are prime.",
+        "12 = 2 × 2 × 3."
+      ],
+      "explanation": "The prime factors of 12 are 2 and 3 (12 = 2 × 2 × 3).",
+      "misconception": "Including composite numbers like 6 or 4.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "find_prime_factors",
+      "type": "short_answer",
+      "difficulty": 1,
+      "stem": "Write 18 as a product of its prime factors.",
+      "answer": [
+        "2 x 3 x 3",
+        "2*3*3",
+        "2 × 3 × 3"
+      ],
+      "hints": [
+        "18 = 2 × 9 = 2 × 3 × 3."
+      ],
+      "explanation": "18 = 2 × 3 × 3.",
+      "misconception": "Writing 3 × 6 (6 is not prime).",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "find_prime_factors",
+      "type": "numeric",
+      "difficulty": 1,
+      "stem": "What is the smallest prime factor of 35?",
+      "answer": 5,
+      "check": "5",
+      "hints": [
+        "35 = 5 × 7."
+      ],
+      "explanation": "The smallest prime factor of 35 is 5.",
+      "misconception": "Saying 7.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "find_prime_factors",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which of these is the prime factorisation of 20?",
+      "options": [
+        "2 × 2 × 5",
+        "4 × 5",
+        "2 × 10",
+        "20 × 1"
+      ],
+      "answer": 0,
+      "hints": [
+        "All factors must be prime."
+      ],
+      "explanation": "20 = 2 × 2 × 5.",
+      "misconception": "Choosing 4 × 5 (4 is not prime).",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "find_prime_factors",
+      "type": "short_answer",
+      "difficulty": 1,
+      "stem": "Write 24 as a product of its prime factors.",
+      "answer": [
+        "2 x 2 x 2 x 3",
+        "2*2*2*3"
+      ],
+      "hints": [
+        "24 = 2 × 12 = 2 × 2 × 6 = 2 × 2 × 2 × 3."
+      ],
+      "explanation": "24 = 2 × 2 × 2 × 3.",
+      "misconception": "Stopping at 4 × 6.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "find_prime_factors",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "What is the prime factorisation of 36?",
+      "options": [
+        "2 × 2 × 3 × 3",
+        "2 × 3 × 6",
+        "4 × 9",
+        "2 × 18"
+      ],
+      "answer": 0,
+      "hints": [
+        "36 = 4 × 9 = 2×2 × 3×3."
+      ],
+      "explanation": "36 = 2 × 2 × 3 × 3.",
+      "misconception": "Choosing 4 × 9 (composite factors).",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "find_prime_factors",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "What is the largest prime factor of 42?",
+      "answer": 7,
+      "check": "7",
+      "hints": [
+        "42 = 2 × 3 × 7."
+      ],
+      "explanation": "The largest prime factor of 42 is 7.",
+      "misconception": "Saying 3 or 2.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "find_prime_factors",
+      "type": "written",
+      "difficulty": 2,
+      "stem": "Use a factor tree to find the prime factors of 48.",
+      "hints": [
+        "Start with 48 = 6 × 8, then break down 6 and 8."
+      ],
+      "explanation": "48 = 6 × 8 = (2×3) × (2×2×2) = 2×2×2×2×3.",
+      "rubric": {
+        "criteria": [
+          {
+            "description": "Shows a factor tree.",
+            "marks": 1
+          },
+          {
+            "description": "Lists the prime factors: 2,2,2,2,3.",
+            "marks": 1
+          }
+        ]
+      },
+      "misconception": "Stopping at composite factors.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "find_hcf_prime_factorisation",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "Find the HCF of 12 and 18 using prime factorisation.",
+      "answer": 6,
+      "check": "6",
+      "hints": [
+        "12 = 2×2×3, 18 = 2×3×3.",
+        "Common factors: 2 and 3."
+      ],
+      "explanation": "HCF = 2 × 3 = 6.",
+      "misconception": "Choosing only one common factor (2 or 3).",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "find_hcf_prime_factorisation",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "Use prime factorisation to find the HCF of 20 and 30.",
+      "answer": 10,
+      "check": "10",
+      "hints": [
+        "20 = 2×2×5, 30 = 2×3×5.",
+        "Common: 2 and 5."
+      ],
+      "explanation": "HCF = 2 × 5 = 10.",
+      "misconception": "Saying 5 (only one common factor).",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "find_hcf_prime_factorisation",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "Find the HCF of 24 and 36 using prime factorisation.",
+      "answer": 12,
+      "check": "12",
+      "hints": [
+        "24 = 2×2×2×3, 36 = 2×2×3×3.",
+        "Common: 2,2,3."
+      ],
+      "explanation": "HCF = 2 × 2 × 3 = 12.",
+      "misconception": "Choosing 6 (missing a common 2).",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "find_hcf_prime_factorisation",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Find the HCF of 15 and 25 using prime factorisation.",
+      "answer": [
+        "5"
+      ],
+      "hints": [
+        "15 = 3×5, 25 = 5×5.",
+        "Common factor: 5."
+      ],
+      "explanation": "HCF = 5.",
+      "misconception": "Saying 1 (only common factor? Actually 1 is a common factor but not the highest).",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "find_hcf_prime_factorisation",
+      "type": "numeric",
+      "difficulty": 3,
+      "stem": "Find the HCF of 18, 24, and 30 using prime factorisation.",
+      "answer": 6,
+      "check": "6",
+      "hints": [
+        "18=2×3×3, 24=2×2×2×3, 30=2×3×5.",
+        "Common to all: 2 and 3."
+      ],
+      "explanation": "HCF = 2 × 3 = 6.",
+      "misconception": "Including a factor not common to all three.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "find_hcf_prime_factorisation",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "Explain how to find the HCF of 45 and 60 using prime factorisation.",
+      "hints": [
+        "45 = 3×3×5, 60 = 2×2×3×5.",
+        "Identify the common prime factors."
+      ],
+      "explanation": "Prime factorise both: 45 = 3×3×5, 60 = 2×2×3×5. The common factors are 3 and 5, so HCF = 15.",
+      "rubric": {
+        "criteria": [
+          {
+            "description": "Shows prime factorisation of both numbers.",
+            "marks": 1
+          },
+          {
+            "description": "Multiplies common factors to get 15.",
+            "marks": 1
+          }
+        ]
+      },
+      "misconception": "Stopping at 5.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "find_hcf_prime_factorisation",
+      "type": "numeric",
+      "difficulty": 3,
+      "stem": "What is the HCF of 28 and 42?",
+      "answer": 14,
+      "check": "14",
+      "hints": [
+        "28 = 2×2×7, 42 = 2×3×7.",
+        "Common: 2 and 7."
+      ],
+      "explanation": "HCF = 2 × 7 = 14.",
+      "misconception": "Choosing 7 only.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "use_venn_diagram_hcf",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "A Venn diagram shows prime factors of 12 in the left circle and prime factors of 18 in the right circle. The overlapping region contains 2 and 3. What is the HCF?",
+      "options": [
+        "2",
+        "3",
+        "6",
+        "12"
+      ],
+      "answer": 2,
+      "hints": [
+        "Multiply the factors in the overlap."
+      ],
+      "explanation": "HCF = 2 × 3 = 6.",
+      "misconception": "Choosing 3 or 2 alone.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "use_venn_diagram_hcf",
+      "type": "numeric",
+      "difficulty": 3,
+      "stem": "In a Venn diagram, the common prime factors of two numbers are 2, 2, and 3. What is the HCF?",
+      "answer": 12,
+      "check": "2*2*3",
+      "hints": [
+        "Multiply all common factors."
+      ],
+      "explanation": "HCF = 2 × 2 × 3 = 12.",
+      "misconception": "Adding them instead of multiplying.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "use_venn_diagram_hcf",
+      "type": "written",
+      "difficulty": 4,
+      "stem": "Use a Venn diagram to find the HCF of 24 and 36.",
+      "hints": [
+        "24 = 2×2×2×3, 36 = 2×2×3×3.",
+        "Put common factors in the overlap: 2, 2, 3."
+      ],
+      "explanation": "Common factors are 2, 2, 3. HCF = 2 × 2 × 3 = 12.",
+      "rubric": {
+        "criteria": [
+          {
+            "description": "Places common factors in overlap.",
+            "marks": 1
+          },
+          {
+            "description": "Calculates HCF = 12.",
+            "marks": 1
+          }
+        ]
+      },
+      "misconception": "Including non-common factors in the HCF.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "use_venn_diagram_hcf",
+      "type": "written",
+      "difficulty": 4,
+      "stem": "A Venn diagram shows the prime factors of two numbers. The overlapping factors are 2 and 5. What is the HCF? Explain.",
+      "hints": [
+        "Multiply the common factors."
+      ],
+      "explanation": "The HCF is 2 × 5 = 10 because you multiply the common prime factors.",
+      "rubric": {
+        "criteria": [
+          {
+            "description": "States HCF = 10.",
+            "marks": 1
+          },
+          {
+            "description": "Explains multiplying common factors.",
+            "marks": 1
+          }
+        ]
+      },
+      "misconception": "Adding 2 + 5 = 7.",
+      "uncertain": []
+    }
+  ]
+}

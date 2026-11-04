@@ -1,0 +1,272 @@
+{
+  "indicator": {
+    "code": "B4.5.1.1.1",
+    "subject": "Science",
+    "level": "Basic 4",
+    "strand": "HUMANS AND THE ENVIRONMENT",
+    "sub_strand": "Personal Hygiene and Sanitation",
+    "content_standard": "B4.5.1.1 Recognise the importance of personal hygiene",
+    "objective": "Know how to care for one's self and the environment",
+    "source_page": 35
+  },
+  "spec": {
+    "skills": [
+      {"tag": "identify_personal_hygiene_practices", "description": "Name personal hygiene practices (bathing, brushing teeth, cutting nails, washing clothes/towels).", "minQuestions": 4},
+      {"tag": "explain_why_hygiene", "description": "Explain simply why each hygiene practice matters (e.g. bathing removes dirt and germs, brushing prevents tooth decay).", "minQuestions": 4},
+      {"tag": "consequences_poor_hygiene", "description": "State what can happen if personal hygiene is neglected (body odour, sickness, germs).", "minQuestions": 3},
+      {"tag": "materials_for_hygiene", "description": "Identify materials used for hygiene (soap, toothbrush, toothpaste, water, nail cutter, towel).", "minQuestions": 3},
+      {"tag": "care_for_environment", "description": "Give examples of caring for the environment (sweeping classroom, disposing of waste properly).", "minQuestions": 3},
+      {"tag": "daily_hygiene_routine", "description": "Describe a simple daily hygiene routine (e.g. bath twice daily, brush teeth morning and night).", "minQuestions": 3}
+    ],
+    "difficultyPlan": "20 questions total — Difficulty 1: 5; Difficulty 2: 7; Difficulty 3: 5; Difficulty 4: 3.",
+    "misconceptions": [
+      "Bathing once a week is enough.",
+      "Brushing teeth once a day is enough.",
+      "Dirty fingernails are not a health problem.",
+      "Personal hygiene is only about looking good.",
+      "Sweeping the classroom is not part of hygiene.",
+      "Washing towels is not necessary."
+    ],
+    "needsTeacherAssessment": false
+  },
+  "questions": [
+    {
+      "skill_tag": "identify_personal_hygiene_practices",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which of these is a personal hygiene practice?",
+      "options": ["Bathing regularly", "Playing football", "Watching television", "Sleeping in the afternoon"],
+      "answer": 0,
+      "hints": ["Which activity keeps your body clean?", "It involves soap and water."],
+      "explanation": "Bathing regularly is a personal hygiene practice. It removes dirt and germs from the body.",
+      "misconception": "Personal hygiene is only about looking good.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "materials_for_hygiene",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which materials are used for brushing teeth?",
+      "options": ["Toothbrush and toothpaste", "Broom and dustpan", "Spoon and fork", "Pencil and eraser"],
+      "answer": 0,
+      "hints": ["You use them in your mouth.", "They help keep teeth clean."],
+      "explanation": "A toothbrush and toothpaste are used for brushing teeth. They help remove food particles and prevent tooth decay.",
+      "misconception": "Brushing teeth once a day is enough.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "explain_why_hygiene",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Why do we bathe?",
+      "options": ["To remove dirt and germs", "To make us hungry", "To make us sleepy", "To change our clothes"],
+      "answer": 0,
+      "hints": ["What does soap and water remove?", "Dirt and germs collect on the body."],
+      "explanation": "We bathe to remove dirt and germs from our bodies. This helps us stay clean and healthy.",
+      "misconception": "Bathing is only for looking good.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "daily_hygiene_routine",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "How often should you brush your teeth?",
+      "options": ["Twice a day, morning and night", "Once a week", "Once a month", "Only when they are dirty"],
+      "answer": 0,
+      "hints": ["Think about morning and before bed.", "Brushing twice a day keeps teeth healthy."],
+      "explanation": "You should brush your teeth twice a day, in the morning and before going to bed, to keep them clean and healthy.",
+      "misconception": "Brushing teeth once a day is enough.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_personal_hygiene_practices",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which of these is NOT a personal hygiene practice?",
+      "options": ["Playing in the mud", "Washing hands before eating", "Cutting fingernails", "Bathing regularly"],
+      "answer": 0,
+      "hints": ["Which activity makes you dirty?", "Hygiene practices keep you clean."],
+      "explanation": "Playing in the mud is not a hygiene practice; it makes you dirty. Washing hands, cutting nails and bathing are hygiene practices.",
+      "misconception": "Any activity is a hygiene practice.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "explain_why_hygiene",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Why should you cut your fingernails?",
+      "options": ["To keep dirt and germs out", "To make them grow faster", "To make them colourful", "To make them sharp"],
+      "answer": 0,
+      "hints": ["Dirt can hide under long nails.", "Short nails are easier to keep clean."],
+      "explanation": "Cutting fingernails keeps dirt and germs from collecting under them, which helps prevent sickness.",
+      "misconception": "Dirty fingernails are not a health problem.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "consequences_poor_hygiene",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "What can happen if you do not bathe regularly?",
+      "options": ["You will have body odour", "You will grow taller", "You will run faster", "You will have whiter teeth"],
+      "answer": 0,
+      "hints": ["What happens when sweat stays on the body?", "It can cause an unpleasant smell."],
+      "explanation": "If you do not bathe regularly, sweat and dirt collect on the body, causing body odour.",
+      "misconception": "Bathing once a week is enough.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "materials_for_hygiene",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which materials are used to clean the armpit?",
+      "options": ["Soap and water", "Sand and stones", "Oil and pepper", "Sugar and salt"],
+      "answer": 0,
+      "hints": ["What do you use in the bathroom?", "Soap helps remove dirt and smell."],
+      "explanation": "Soap and water are used to clean the armpit. They remove dirt and sweat that cause body odour.",
+      "misconception": "Water alone is enough to clean the armpit.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "materials_for_hygiene",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which materials are used to wash clothes?",
+      "options": ["Soap and water", "Toothbrush and paste", "Broom and dustpan", "Pencil and paper"],
+      "answer": 0,
+      "hints": ["What do you use in a washing basin?", "Soap removes dirt from cloth."],
+      "explanation": "Soap and water are used to wash clothes. They remove dirt and make the clothes clean.",
+      "misconception": "Washing clothes does not need soap.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "daily_hygiene_routine",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "What is a good daily hygiene routine?",
+      "options": ["Bathe twice daily and brush teeth morning and night", "Bathe once a week", "Brush teeth once a month", "Wash hands only after eating"],
+      "answer": 0,
+      "hints": ["Think about morning and evening activities.", "Good routines include bathing and brushing."],
+      "explanation": "A good daily routine includes bathing twice a day and brushing teeth morning and night. This keeps the body clean and healthy.",
+      "misconception": "Bathing once a week is enough.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_personal_hygiene_practices",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which of these is a hygiene practice at school?",
+      "options": ["Sweeping the classroom", "Playing football", "Sleeping in class", "Eating in class"],
+      "answer": 0,
+      "hints": ["Which activity keeps the classroom clean?", "It involves a broom."],
+      "explanation": "Sweeping the classroom is a hygiene practice at school. It keeps the learning environment clean and free from dirt.",
+      "misconception": "Sweeping the classroom is not part of hygiene.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "explain_why_hygiene",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Why should you wash your towels regularly?",
+      "options": ["To remove dirt and germs", "To make them colourful", "To make them smaller", "To make them heavier"],
+      "answer": 0,
+      "hints": ["Towels collect sweat and dirt.", "Washing removes germs."],
+      "explanation": "Washing towels regularly removes dirt and germs that collect on them. This helps prevent skin infections and sickness.",
+      "misconception": "Washing towels is not necessary.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "consequences_poor_hygiene",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "What can happen if you do not cut your fingernails?",
+      "options": ["Dirt and germs can collect under them and make you sick", "Your nails will become stronger", "Your nails will turn to gold", "Your nails will disappear"],
+      "answer": 0,
+      "hints": ["Long nails can trap dirt.", "Dirt under nails can enter your mouth."],
+      "explanation": "If you do not cut your fingernails, dirt and germs collect under them. These can enter your body when you eat, making you sick.",
+      "misconception": "Dirty fingernails are not a health problem.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "care_for_environment",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "Why should you sweep your classroom?",
+      "options": ["To keep it clean and free from dirt", "To make it darker", "To make it noisier", "To make it hotter"],
+      "answer": 0,
+      "hints": ["What does sweeping remove?", "A clean classroom is good for learning."],
+      "explanation": "Sweeping the classroom keeps it clean and free from dirt. This helps create a healthy learning environment.",
+      "misconception": "Sweeping the classroom is not part of hygiene.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "daily_hygiene_routine",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "What is a good routine for washing clothes?",
+      "options": ["Wash clothes regularly with soap and water", "Wear dirty clothes until they smell", "Wash clothes once a year", "Never wash clothes"],
+      "answer": 0,
+      "hints": ["Dirty clothes can cause skin problems.", "Regular washing keeps clothes clean."],
+      "explanation": "A good routine is to wash clothes regularly with soap and water. This removes dirt and germs and keeps the body healthy.",
+      "misconception": "Washing clothes is not necessary.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "explain_why_hygiene",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "Why is personal hygiene important?",
+      "options": ["It helps prevent sickness and keeps you healthy", "It makes you taller", "It makes you run faster", "It makes you rich"],
+      "answer": 0,
+      "hints": ["Germs cause sickness.", "Hygiene removes germs."],
+      "explanation": "Personal hygiene is important because it removes germs and dirt, helping to prevent sickness and keep you healthy.",
+      "misconception": "Personal hygiene is only about looking good.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "care_for_environment",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "How can learners care for the school environment?",
+      "options": ["By throwing waste into bins", "By littering the compound", "By breaking desks", "By writing on walls"],
+      "answer": 0,
+      "hints": ["Where should waste go?", "Bins keep the environment clean."],
+      "explanation": "Learners can care for the school environment by throwing waste into bins. This keeps the compound clean and healthy.",
+      "misconception": "Littering is acceptable.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "consequences_poor_hygiene",
+      "type": "short_answer",
+      "difficulty": 4,
+      "stem": "Explain why poor hygiene can cause sickness.",
+      "answer": ["because germs from dirt can enter the body and cause diseases", "germs collect on dirty bodies and can make you sick", "poor hygiene allows germs to spread and cause illness"],
+      "hints": ["Think about germs on dirty hands.", "Germs can enter the mouth."],
+      "explanation": "Poor hygiene allows germs to collect on the body and hands. These germs can enter the body through the mouth or skin and cause sickness.",
+      "misconception": "Personal hygiene is only about looking good.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_personal_hygiene_practices",
+      "type": "mcq",
+      "difficulty": 4,
+      "stem": "Which set lists only personal hygiene practices?",
+      "options": ["Bathing, brushing teeth, cutting nails", "Playing, eating, sleeping", "Running, jumping, swimming", "Reading, writing, drawing"],
+      "answer": 0,
+      "hints": ["Which set keeps the body clean?", "Hygiene practices involve soap, water and cleanliness."],
+      "explanation": "Bathing, brushing teeth and cutting nails are all personal hygiene practices. The other sets are not about hygiene.",
+      "misconception": "Any activity is a hygiene practice.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "care_for_environment",
+      "type": "short_answer",
+      "difficulty": 4,
+      "stem": "Why is caring for the environment part of personal hygiene?",
+      "answer": ["because a clean environment helps prevent sickness and keeps people healthy", "a dirty environment breeds germs that make people sick", "keeping the environment clean reduces diseases"],
+      "hints": ["Dirty surroundings attract germs.", "Clean surroundings keep you healthy."],
+      "explanation": "Caring for the environment is part of personal hygiene because a clean environment reduces germs and helps prevent sickness, keeping people healthy.",
+      "misconception": "Sweeping the classroom is not part of hygiene.",
+      "uncertain": []
+    }
+  ]
+}

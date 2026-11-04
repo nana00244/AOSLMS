@@ -1,0 +1,290 @@
+{
+  "indicator": {
+    "code": "B5.4.1.2.1",
+    "subject": "Mathematics",
+    "level": "Basic 5",
+    "strand": "Data",
+    "sub_strand": "Data Collection, Organisation, Presentation, Interpretation and Analysis",
+    "content_standard": "B5.4.1.2 Construct and interpret double bar graphs to draw conclusions",
+    "objective": "Draw double bar graphs, complete with title, labelled axes, key or legend, to represent data collected (up to 3 pairs of categories of data and use it to solve problems.",
+    "source_page": 129
+  },
+  "spec": {
+    "skills": [
+      {"tag": "draw_double_bar_graph", "description": "Draw a double bar graph with all features (title, axes, key).", "minQuestions": 2},
+      {"tag": "interpret_double_bar_graph", "description": "Read and interpret a double bar graph.", "minQuestions": 2},
+      {"tag": "solve_problems_double_bar", "description": "Solve problems using data from a double bar graph.", "minQuestions": 2}
+    ],
+    "difficultyPlan": "20 questions: 5 at difficulty 1, 7 at difficulty 2, 5 at difficulty 3, 3 at difficulty 4.",
+    "misconceptions": [
+      "Forgetting the key.",
+      "Misaligning bars.",
+      "Confusing the two categories.",
+      "Not labelling axes."
+    ],
+    "needsTeacherAssessment": true
+  },
+  "questions": [
+    {
+      "skill_tag": "draw_double_bar_graph",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What is a key (or legend) used for in a double bar graph?",
+      "options": ["To show the title", "To explain what each bar colour represents", "To label the axes", "To show the scale"],
+      "answer": 1,
+      "hints": ["The key tells you which bar is which."],
+      "explanation": "The key explains what each bar colour or pattern represents.",
+      "misconception": "Thinking the key is the same as the title.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "draw_double_bar_graph",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which of these is NOT a required feature of a double bar graph?",
+      "options": ["A title", "Labelled axes", "A key or legend", "A picture of the data collector"],
+      "answer": 3,
+      "hints": ["A picture is not a graph feature."],
+      "explanation": "A picture of the data collector is not a required feature.",
+      "misconception": "Thinking decorative elements are required.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "interpret_double_bar_graph",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "In a double bar graph showing test scores for boys and girls, the blue bars represent boys and the red bars represent girls. If the blue bar for Maths is 80, what does it mean?",
+      "options": ["Girls scored 80 in Maths", "Boys scored 80 in Maths", "The total score is 80", "The average score is 80"],
+      "answer": 1,
+      "hints": ["The key says blue = boys."],
+      "explanation": "The blue bar represents boys, so boys scored 80 in Maths.",
+      "misconception": "Saying girls scored 80.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "interpret_double_bar_graph",
+      "type": "numeric",
+      "difficulty": 1,
+      "stem": "A double bar graph shows the number of books read by boys and girls in two weeks. Week 1: boys 5, girls 7. Week 2: boys 6, girls 4. How many books did girls read in Week 1?",
+      "answer": 7,
+      "check": "7",
+      "hints": ["Read the girls' bar for Week 1."],
+      "explanation": "Girls read 7 books in Week 1.",
+      "misconception": "Reading the boys' bar.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "solve_problems_double_bar",
+      "type": "numeric",
+      "difficulty": 1,
+      "stem": "A double bar graph shows: in January, 10 boys and 12 girls like football. How many pupils like football in January?",
+      "answer": 22,
+      "check": "10+12",
+      "hints": ["Add boys and girls."],
+      "explanation": "10 + 12 = 22 pupils.",
+      "misconception": "Subtracting 12 - 10.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "draw_double_bar_graph",
+      "type": "written",
+      "difficulty": 2,
+      "stem": "Explain the steps to draw a double bar graph.",
+      "hints": ["Title, axes, scale, key, bars."],
+      "explanation": "1. Write a title. 2. Draw and label the axes. 3. Choose a scale. 4. Draw a key. 5. Draw pairs of bars for each category.",
+      "rubric": {
+        "criteria": [
+          {"description": "Mentions title and axes.", "marks": 1},
+          {"description": "Mentions key and scale.", "marks": 1},
+          {"description": "Mentions drawing pairs of bars.", "marks": 1}
+        ]
+      },
+      "misconception": "Forgetting the key.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "interpret_double_bar_graph",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "A double bar graph shows: Boys like Maths (10) and English (8); Girls like Maths (12) and English (14). Which subject is liked by more girls?",
+      "options": ["Maths", "English", "They are equal", "Cannot tell"],
+      "answer": 1,
+      "hints": ["Compare girls' bars: Maths 12, English 14."],
+      "explanation": "More girls like English (14) than Maths (12).",
+      "misconception": "Confusing boys' bars with girls'.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "interpret_double_bar_graph",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "A double bar graph shows: 20 boys and 15 girls choose football; 10 boys and 12 girls choose netball. How many more boys than girls choose football?",
+      "answer": 5,
+      "check": "20-15",
+      "hints": ["20 - 15."],
+      "explanation": "20 - 15 = 5.",
+      "misconception": "Adding 20 + 15.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "solve_problems_double_bar",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "A double bar graph shows: In Kumasi, rainfall in May is 50 mm and in June 45 mm. In Oda, rainfall in May is 40 mm and in June 50 mm. How much more rain fell in Kumasi than Oda in May?",
+      "answer": 10,
+      "check": "50-40",
+      "hints": ["Compare May bars: Kumasi 50, Oda 40."],
+      "explanation": "50 - 40 = 10 mm.",
+      "misconception": "Using June data.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "draw_double_bar_graph",
+      "type": "drawing",
+      "difficulty": 2,
+      "stem": "Draw a double bar graph for the data: Maths scores: boys 75, girls 80; English scores: boys 60, girls 70. Use blue for boys and red for girls.",
+      "hints": ["Label axes, add key."],
+      "explanation": "The learner should draw a double bar graph with correct pairs of bars.",
+      "rubric": {
+        "criteria": [
+          {"description": "Draws two pairs of bars.", "marks": 1},
+          {"description": "Uses correct heights.", "marks": 1},
+          {"description": "Includes key and title.", "marks": 1}
+        ]
+      },
+      "misconception": "Drawing bars of equal height.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "interpret_double_bar_graph",
+      "type": "written",
+      "difficulty": 2,
+      "stem": "Explain how to read a double bar graph.",
+      "hints": ["Look at the key, read the bars for each category."],
+      "explanation": "Look at the key to see which bar is which. Then read the height of each bar for each category.",
+      "rubric": {
+        "criteria": [
+          {"description": "Mentions key.", "marks": 1},
+          {"description": "Mentions reading bar heights.", "marks": 1}
+        ]
+      },
+      "misconception": "Ignoring the key.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "solve_problems_double_bar",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "A double bar graph shows the number of pupils who like two sports: Football: boys 25, girls 10; Netball: boys 5, girls 20. Which sport is liked by more pupils overall? Explain.",
+      "hints": ["Total football = 25+10=35.", "Total netball = 5+20=25."],
+      "explanation": "Football (35) is liked by more pupils than netball (25).",
+      "rubric": {
+        "criteria": [
+          {"description": "Calculates both totals.", "marks": 1},
+          {"description": "Concludes football is more popular.", "marks": 1}
+        ]
+      },
+      "misconception": "Only looking at one gender.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "interpret_double_bar_graph",
+      "type": "numeric",
+      "difficulty": 3,
+      "stem": "A double bar graph shows: in 2020, 120 boys and 100 girls were enrolled; in 2021, 150 boys and 130 girls. How many more boys than girls were enrolled in 2021?",
+      "answer": 20,
+      "check": "150-130",
+      "hints": ["150 - 130."],
+      "explanation": "20 more boys.",
+      "misconception": "Using 2020 data.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "draw_double_bar_graph",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "Explain why a double bar graph is better than two separate single bar graphs for comparing boys' and girls' scores.",
+      "hints": ["Double bar graphs put pairs side by side for easy comparison."],
+      "explanation": "A double bar graph places the bars for boys and girls side by side, making it easier to compare their scores directly.",
+      "rubric": {
+        "criteria": [
+          {"description": "States side-by-side comparison is easier.", "marks": 1}
+        ]
+      },
+      "misconception": "Thinking single graphs are always better.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "solve_problems_double_bar",
+      "type": "numeric",
+      "difficulty": 3,
+      "stem": "A double bar graph shows: School A has 40 boys and 50 girls; School B has 60 boys and 45 girls. How many more girls are in School A than School B?",
+      "answer": 5,
+      "check": "50-45",
+      "hints": ["50 - 45."],
+      "explanation": "5 more girls.",
+      "misconception": "Subtracting boys.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "interpret_double_bar_graph",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "In a double bar graph, if the bar for girls is higher than the bar for boys in every category, what can you conclude?",
+      "options": ["Boys always scored higher", "Girls always scored higher", "Both scored the same", "Cannot tell"],
+      "answer": 1,
+      "hints": ["Higher bar means greater value."],
+      "explanation": "Girls scored higher in every category.",
+      "misconception": "Thinking boys scored higher.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "solve_problems_double_bar",
+      "type": "written",
+      "difficulty": 4,
+      "stem": "A double bar graph shows the number of goals scored by two teams over three matches. Team A: 3, 5, 2. Team B: 4, 2, 4. Which team scored more goals in total? Explain.",
+      "hints": ["Sum Team A: 3+5+2=10.", "Sum Team B: 4+2+4=10."],
+      "explanation": "Both teams scored 10 goals in total.",
+      "rubric": {
+        "criteria": [
+          {"description": "Calculates both totals as 10.", "marks": 1},
+          {"description": "Concludes they are equal.", "marks": 1}
+        ]
+      },
+      "misconception": "Only looking at one match.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "draw_double_bar_graph",
+      "type": "written",
+      "difficulty": 4,
+      "stem": "Create a set of data for a double bar graph that shows 3 pairs of categories. Describe the data and the key.",
+      "hints": ["Choose three subjects and two groups."],
+      "explanation": "Example: Maths (boys 10, girls 12), English (boys 8, girls 14), Science (boys 11, girls 9). Key: blue = boys, red = girls.",
+      "rubric": {
+        "criteria": [
+          {"description": "Provides 3 pairs of data.", "marks": 1},
+          {"description": "Specifies a key.", "marks": 1}
+        ]
+      },
+      "misconception": "Not providing a key.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "solve_problems_double_bar",
+      "type": "written",
+      "difficulty": 4,
+      "stem": "A double bar graph shows that in a class, 15 boys and 10 girls like Fanta, and 5 boys and 12 girls like Coke. A pupil says 'More pupils like Fanta than Coke.' Is the pupil correct? Explain.",
+      "hints": ["Total Fanta = 15+10=25.", "Total Coke = 5+12=17."],
+      "explanation": "Yes, the pupil is correct. 25 pupils like Fanta, while 17 like Coke.",
+      "rubric": {
+        "criteria": [
+          {"description": "Calculates both totals.", "marks": 1},
+          {"description": "Concludes pupil is correct.", "marks": 1}
+        ]
+      },
+      "misconception": "Only comparing boys' numbers.",
+      "uncertain": []
+    }
+  ]
+}

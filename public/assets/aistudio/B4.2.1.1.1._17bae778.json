@@ -1,0 +1,271 @@
+{
+  "indicator": {
+    "code": "1.1.1.1",
+    "subject": "Mathematics",
+    "level": "Basic 4",
+    "strand": "Number",
+    "sub_strand": "Percent",
+    "content_standard": "Demonstrate an understanding of percent (limited to whole numbers) concretely, pictorially, and symbolically)",
+    "objective": "Model or recognise percent (as a fraction related to hundredths) using concrete models, pictorial representations and number line.",
+    "source_page": 49
+  },
+  "spec": {
+    "skills": [
+      {"tag": "identify_percent_fraction", "description": "Identify percent as a fraction out of 100 from models or grids.", "minQuestions": 2},
+      {"tag": "convert_fraction_to_percent", "description": "Convert simple fractions (halves, quarters, fifths, tenths) to percentages.", "minQuestions": 2}
+    ],
+    "difficultyPlan": "20 questions: 5 at difficulty 1, 7 at difficulty 2, 5 at difficulty 3, 3 at difficulty 4.",
+    "misconceptions": [
+      "Thinking 1/4 is 4%.",
+      "Confusing percent with decimals (e.g., 50% = 0.50).",
+      "Thinking a larger denominator means a larger percent."
+    ],
+    "needsTeacherAssessment": false
+  },
+  "questions": [
+    {
+      "skill_tag": "identify_percent_fraction",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "A grid has 23 squares shaded out of 100. What percent is shaded?",
+      "options": ["23%", "2.3%", "230%", "77%"],
+      "answer": 0,
+      "hints": ["Percent means 'out of 100'.", "The number of shaded squares is the percent."],
+      "explanation": "23 out of 100 is 23%.",
+      "misconception": "Writing 2.3%.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_percent_fraction",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which model represents 50%?",
+      "options": ["A circle with 1/4 shaded", "A rectangle with 1/2 shaded", "A grid with 5 out of 100 shaded", "A shape with 3/4 shaded"],
+      "answer": 1,
+      "hints": ["50% is the same as 50 out of 100.", "What fraction is equal to 50/100?"],
+      "explanation": "50% is equal to 50/100, which simplifies to 1/2.",
+      "misconception": "Choosing 5 out of 100 (5%).",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "convert_fraction_to_percent",
+      "type": "short_answer",
+      "difficulty": 1,
+      "stem": "Write 1/2 as a percent.",
+      "answer": ["50%"],
+      "hints": ["1/2 is the same as how many hundredths?", "1/2 = 50/100."],
+      "explanation": "1/2 = 50/100 = 50%.",
+      "misconception": "Writing 2%.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "convert_fraction_to_percent",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What percent is equal to 75/100?",
+      "options": ["7.5%", "75%", "0.75%", "100%"],
+      "answer": 1,
+      "hints": ["The denominator is 100.", "The numerator is the percent."],
+      "explanation": "75/100 is 75%.",
+      "misconception": "Writing 7.5%.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "convert_fraction_to_percent",
+      "type": "numeric",
+      "difficulty": 1,
+      "stem": "Convert 1/4 to a percent. (Enter the number only)",
+      "answer": 25,
+      "check": "100/4",
+      "hints": ["1/4 = ?/100.", "100 divided by 4."],
+      "explanation": "1/4 = 25/100 = 25%.",
+      "misconception": "Saying 4.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "convert_fraction_to_percent",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "What is 1/5 as a percent?",
+      "options": ["5%", "15%", "20%", "50%"],
+      "answer": 2,
+      "hints": ["1/5 = ?/100.", "100 divided by 5."],
+      "explanation": "1/5 = 20/100 = 20%.",
+      "misconception": "Saying 5%.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_percent_fraction",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Write 40 out of 100 as a percent.",
+      "answer": ["40%"],
+      "hints": ["Out of 100 means percent.", "Just add the % sign."],
+      "explanation": "40 out of 100 is 40%.",
+      "misconception": "Writing 4%.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_percent_fraction",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "If a whole is 100%, what is 3/4 of the whole in percent?",
+      "answer": 75,
+      "check": "3*100/4",
+      "hints": ["1/4 is 25%.", "3 x 25."],
+      "explanation": "3/4 = 3 x 25% = 75%.",
+      "misconception": "Saying 34%.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "convert_fraction_to_percent",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which fraction is equal to 10%?",
+      "options": ["1/10", "1/100", "10/1", "1/20"],
+      "answer": 0,
+      "hints": ["10% means 10 out of 100.", "Simplify 10/100."],
+      "explanation": "10% = 10/100 = 1/10.",
+      "misconception": "Choosing 1/100.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "convert_fraction_to_percent",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Write 3/10 as a percent.",
+      "answer": ["30%"],
+      "hints": ["3/10 = ?/100.", "Multiply numerator and denominator by 10."],
+      "explanation": "3/10 = 30/100 = 30%.",
+      "misconception": "Writing 3%.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "convert_fraction_to_percent",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "What is 0.5 as a percent?",
+      "options": ["5%", "50%", "0.5%", "500%"],
+      "answer": 1,
+      "hints": ["0.5 is the same as 5/10.", "5/10 = 50/100."],
+      "explanation": "0.5 = 50%.",
+      "misconception": "Saying 5%.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_percent_fraction",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "Convert 3/4 to a percent.",
+      "answer": 75,
+      "check": "3*100/4",
+      "hints": ["3/4 = ?/100.", "100 divided by 4 is 25.", "3 x 25."],
+      "explanation": "3/4 = 75%.",
+      "misconception": "Saying 34.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_percent_fraction",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "A phone battery is at 25%. What fraction of the battery is left?",
+      "options": ["1/2", "1/4", "1/5", "3/4"],
+      "answer": 1,
+      "hints": ["25% = 25/100.", "Simplify 25/100."],
+      "explanation": "25% = 25/100 = 1/4.",
+      "misconception": "Choosing 1/2 because 50% is half.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "convert_fraction_to_percent",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "Explain why 1/4 is equal to 25%.",
+      "hints": ["What is 1/4 of 100?", "How many 4s are in 100?"],
+      "explanation": "Percent means out of 100. 1/4 of 100 is 25, because 100 divided by 4 is 25. So, 1/4 = 25/100 = 25%.",
+      "rubric": {
+        "criteria": [
+          {"description": "Explains that 1/4 of 100 is 25.", "marks": 1},
+          {"description": "Connects this to the definition of percent.", "marks": 1}
+        ]
+      },
+      "misconception": "Thinking 1/4 is 4%.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_percent_fraction",
+      "type": "numeric",
+      "difficulty": 3,
+      "stem": "What is 1/2 of 100%?",
+      "answer": 50,
+      "check": "100/2",
+      "hints": ["Half of 100.", "1/2 x 100%."],
+      "explanation": "1/2 of 100% is 50%.",
+      "misconception": "Saying 2.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "convert_fraction_to_percent",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "Which fraction is equal to 75%?",
+      "options": ["1/4", "1/2", "3/4", "4/3"],
+      "answer": 2,
+      "hints": ["75% = 75/100.", "Simplify 75/100."],
+      "explanation": "75% = 75/100 = 3/4.",
+      "misconception": "Choosing 1/4.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "convert_fraction_to_percent",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Write 4/5 as a percent.",
+      "answer": ["80%"],
+      "hints": ["4/5 = ?/100.", "Multiply by 20."],
+      "explanation": "4/5 = 80/100 = 80%.",
+      "misconception": "Writing 45%.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "convert_fraction_to_percent",
+      "type": "written",
+      "difficulty": 4,
+      "stem": "Explain how to convert 3/5 to a percent.",
+      "hints": ["Make the denominator 100.", "What do you multiply 5 by to get 100?"],
+      "explanation": "To convert 3/5 to a percent, multiply both the numerator and denominator by 20 to get 60/100. Then, write it as 60%.",
+      "rubric": {
+        "criteria": [
+          {"description": "Explains multiplying by 20.", "marks": 1},
+          {"description": "States the correct answer (60%).", "marks": 1}
+        ]
+      },
+      "misconception": "Just writing the numerator.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_percent_fraction",
+      "type": "mcq",
+      "difficulty": 4,
+      "stem": "A grid has 48 shaded squares out of 100. What percent is shaded?",
+      "options": ["4.8%", "48%", "480%", "52%"],
+      "answer": 1,
+      "hints": ["Out of 100.", "The number of shaded squares is the percent."],
+      "explanation": "48 out of 100 is 48%.",
+      "misconception": "Choosing 4.8%.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "convert_fraction_to_percent",
+      "type": "numeric",
+      "difficulty": 4,
+      "stem": "What is 2/5 as a percent?",
+      "answer": 40,
+      "check": "2*100/5",
+      "hints": ["2/5 = ?/100.", "Multiply by 20."],
+      "explanation": "2/5 = 40/100 = 40%.",
+      "misconception": "Saying 25%.",
+      "uncertain": []
+    }
+  ]
+}

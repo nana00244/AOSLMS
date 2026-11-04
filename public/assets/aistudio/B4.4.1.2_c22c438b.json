@@ -1,0 +1,280 @@
+{
+  "indicator": {
+    "code": "[No code printed, p.74]",
+    "subject": "Mathematics",
+    "level": "Basic 4",
+    "strand": "Data",
+    "sub_strand": "Data Collection, Organization, Presentation, Interpretation and Analysis",
+    "content_standard": "B4.4.1.2 Construct and interpret pictographs and bar graphs involving many-to-one correspondence to draw conclusions.",
+    "objective": "Use understanding of many-to-one correspondence to solve simple problems (how many altogether, comparing, or take apart problems) requiring interpretation of many-to-one bar graphs (up to 4 categories of data).",
+    "source_page": 74
+  },
+  "spec": {
+    "skills": [
+      {"tag": "solve_many_to_one_problems", "description": "Solve problems involving many-to-one bar graphs (how many altogether, comparing, take apart).", "minQuestions": 2},
+      {"tag": "compare_many_to_one_graphs", "description": "Compare categories in a many-to-one graph.", "minQuestions": 2}
+    ],
+    "difficultyPlan": "20 questions: 5 at difficulty 1, 7 at difficulty 2, 5 at difficulty 3, 3 at difficulty 4.",
+    "misconceptions": [
+      "Adding raw icons without multiplying by the key.",
+      "Not using the scale to find the actual value."
+    ],
+    "needsTeacherAssessment": false
+  },
+  "questions": [
+    {
+      "skill_tag": "solve_many_to_one_problems",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "A bar graph shows: Maths = 5, English = 3. If the scale is 1 unit = 10 pupils, how many pupils like Maths?",
+      "options": ["5", "10", "50", "15"],
+      "answer": 2,
+      "hints": ["Multiply the bar value by the scale.", "5 x 10."],
+      "explanation": "5 x 10 = 50 pupils.",
+      "misconception": "Saying 5.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "compare_many_to_one_graphs",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "A graph with a scale of 1 unit = 5 shows bar A = 4 units and bar B = 2 units. Which bar represents more?",
+      "options": ["Bar A", "Bar B", "They are equal", "Cannot tell"],
+      "answer": 0,
+      "hints": ["Bar A is taller.", "4 > 2."],
+      "explanation": "Bar A represents more.",
+      "misconception": "Saying Bar B.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "solve_many_to_one_problems",
+      "type": "numeric",
+      "difficulty": 1,
+      "stem": "A bar graph shows 4 units for 'Reading'. If 1 unit = 5 books, how many books were read?",
+      "answer": 20,
+      "check": "4*5",
+      "hints": ["4 x 5."],
+      "explanation": "20 books.",
+      "misconception": "Saying 4.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "compare_many_to_one_graphs",
+      "type": "short_answer",
+      "difficulty": 1,
+      "stem": "In a graph where 1 unit = 10, if bar A is 3 units and bar B is 5 units, how many more is Bar B than Bar A?",
+      "answer": ["20"],
+      "hints": ["Difference in units = 2.", "2 x 10."],
+      "explanation": "20.",
+      "misconception": "Saying 2.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "solve_many_to_one_problems",
+      "type": "numeric",
+      "difficulty": 1,
+      "stem": "A bar graph shows: Mon = 2 units, Tue = 3 units. If 1 unit = 10 cars, how many cars in total?",
+      "answer": 50,
+      "check": "(2+3)*10",
+      "hints": ["Total units = 5.", "5 x 10."],
+      "explanation": "50 cars.",
+      "misconception": "Adding 2+3=5.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "solve_many_to_one_problems",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "A bar graph has a scale of 1 unit = 20 people. The bar for 'Town A' is 3 units and 'Town B' is 4 units. What is the total population?",
+      "options": ["7", "140", "70", "340"],
+      "answer": 1,
+      "hints": ["Total units = 7.", "7 x 20."],
+      "explanation": "7 x 20 = 140.",
+      "misconception": "Saying 7.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "compare_many_to_one_graphs",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "A graph has a scale of 1 unit = 5. Bar A = 4 units, Bar B = 2 units. How many more in Bar A than Bar B?",
+      "answer": 10,
+      "check": "(4-2)*5",
+      "hints": ["Difference = 2 units.", "2 x 5."],
+      "explanation": "10.",
+      "misconception": "Saying 2.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "solve_many_to_one_problems",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "A bar graph has a scale of 1 unit = 100 people. The 'Maths' bar is 2 units and the 'English' bar is 3 units. How many pupils like Maths and English altogether?",
+      "answer": ["500"],
+      "hints": ["Total units = 5.", "5 x 100."],
+      "explanation": "500 pupils.",
+      "misconception": "Saying 5.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "compare_many_to_one_graphs",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "A graph has a scale of 1 unit = 2 pupils. Bar A = 6 units, Bar B = 5 units. How many more pupils in Bar A than Bar B?",
+      "options": ["1", "2", "3", "4"],
+      "answer": 1,
+      "hints": ["Difference = 1 unit.", "1 x 2."],
+      "explanation": "2 pupils.",
+      "misconception": "Saying 1.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "solve_many_to_one_problems",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "A bar graph shows the number of books: Mon=2, Tue=3, Wed=1. If 1 unit = 10 books, how many books in total?",
+      "answer": 60,
+      "check": "(2+3+1)*10",
+      "hints": ["Total units = 6.", "6 x 10."],
+      "explanation": "60 books.",
+      "misconception": "Saying 6.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "solve_many_to_one_problems",
+      "type": "written",
+      "difficulty": 2,
+      "stem": "Explain how to find the total number of items from a bar graph with a many-to-one scale.",
+      "hints": ["Add the heights of the bars.", "Multiply by the scale."],
+      "explanation": "First, add up the heights (in units) of all the bars. Then, multiply that total by the scale to get the actual total.",
+      "rubric": {
+        "criteria": [
+          {"description": "States to add the units.", "marks": 1},
+          {"description": "States to multiply by the scale.", "marks": 1}
+        ]
+      },
+      "misconception": "Adding the actual values without using the scale.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "compare_many_to_one_graphs",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "A graph has a scale of 1 unit = 5. Bar A is 4 units, Bar B is 3 units, Bar C is 2 units. Which bar is the largest?",
+      "answer": 4,
+      "check": "4",
+      "hints": ["The tallest bar is the largest.", "Bar A is the tallest."],
+      "explanation": "Bar A is the largest.",
+      "misconception": "Saying Bar C.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "compare_many_to_one_graphs",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "A bar graph has a scale of 1 unit = 10. The 'Science' bar is 2.5 units. The 'Maths' bar is 3 units. How many more pupils like Maths than Science?",
+      "options": ["5", "10", "0.5", "1"],
+      "answer": 0,
+      "hints": ["Difference = 0.5 units.", "0.5 x 10."],
+      "explanation": "5 pupils.",
+      "misconception": "Saying 0.5.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "solve_many_to_one_problems",
+      "type": "numeric",
+      "difficulty": 3,
+      "stem": "A bar graph shows 3 units for 'Cats' and 4 units for 'Dogs'. If 1 unit = 15 animals, how many animals in total?",
+      "answer": 105,
+      "check": "(3+4)*15",
+      "hints": ["Total units = 7.", "7 x 15."],
+      "explanation": "105 animals.",
+      "misconception": "Saying 7.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "solve_many_to_one_problems",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "A bar graph uses 1 unit = 50 people. The 'Town A' bar is 4 units, and 'Town B' is 6 units. How many people live in both towns? Explain your working.",
+      "hints": ["Add the units: 4+6=10.", "Multiply by 50."],
+      "explanation": "Total units = 10. 10 x 50 = 500 people.",
+      "rubric": {
+        "criteria": [
+          {"description": "Adds the units (10).", "marks": 1},
+          {"description": "Multiplies by the scale to get 500.", "marks": 1}
+        ]
+      },
+      "misconception": "Forgetting to multiply by the scale.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "compare_many_to_one_graphs",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "A graph has 4 bars: A=3, B=5, C=2, D=4. If the scale is 1 unit = 10, which two bars have a total of 70?",
+      "options": ["A and B", "B and C", "C and D", "A and D"],
+      "answer": 0,
+      "hints": ["A+B = 8 units.", "8 x 10 = 80.", "Look for total units = 7."],
+      "explanation": "A(3) + D(4) = 7 units. 7 x 10 = 70.",
+      "misconception": "Adding any two bars without checking the units.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "solve_many_to_one_problems",
+      "type": "numeric",
+      "difficulty": 3,
+      "stem": "A graph shows 2 units for 'Red', 3 units for 'Blue', and 1 unit for 'Green'. If 1 unit = 12 pupils, how many pupils chose Blue or Green?",
+      "answer": 48,
+      "check": "(3+1)*12",
+      "hints": ["Blue + Green = 4 units.", "4 x 12."],
+      "explanation": "48 pupils.",
+      "misconception": "Saying 4.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "compare_many_to_one_graphs",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "A graph has a scale of 1 unit = 5. Bar A is 6 units, Bar B is 2 units. Explain how to compare the two values.",
+      "hints": ["Calculate the actual values.", "A = 30, B = 10.", "Compare 30 and 10."],
+      "explanation": "Calculate Bar A: 6 x 5 = 30. Calculate Bar B: 2 x 5 = 10. Compare the two numbers. Bar A is greater.",
+      "rubric": {
+        "criteria": [
+          {"description": "Calculates both values (30 and 10).", "marks": 1},
+          {"description": "Compares them correctly.", "marks": 1}
+        ]
+      },
+      "misconception": "Comparing just the bar heights (6 and 2).",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "solve_many_to_one_problems",
+      "type": "numeric",
+      "difficulty": 4,
+      "stem": "A bar graph has a scale of 1 unit = 25 people. A bar is 3.5 units tall. What is the value?",
+      "answer": 87.5,
+      "check": "3.5*25",
+      "hints": ["3.5 x 25.", "3 x 25 = 75. 0.5 x 25 = 12.5."],
+      "explanation": "87.5 people (which means the data might be represented differently, but mathematically it's 87.5).",
+      "misconception": "Saying 3.5.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "solve_many_to_one_problems",
+      "type": "written",
+      "difficulty": 4,
+      "stem": "A bar graph shows the number of pupils who walk to school. The scale is 1 unit = 10 pupils. The bars for Monday to Friday are 3, 4, 2, 5, and 1 unit. What is the average number of pupils who walk per day?",
+      "hints": ["Total units = 15.", "Total pupils = 150.", "Average = 150 / 5."],
+      "explanation": "Total pupils = 15 x 10 = 150. Average = 150 / 5 = 30 pupils.",
+      "rubric": {
+        "criteria": [
+          {"description": "Finds total pupils (150).", "marks": 1},
+          {"description": "Calculates average (30).", "marks": 1}
+        ]
+      },
+      "misconception": "Averaging the units and forgetting to multiply by the scale.",
+      "uncertain": []
+    }
+  ]
+}

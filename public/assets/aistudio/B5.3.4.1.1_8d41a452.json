@@ -1,0 +1,273 @@
+{
+  "indicator": {
+    "code": "B5.3.4.1.1",
+    "subject": "Mathematics",
+    "level": "Basic 5",
+    "strand": "Geometry and Measurement",
+    "sub_strand": "Geometric Reasoning",
+    "content_standard": "B5.3.4.1 Describe the position of objects in space using the cardinal points",
+    "objective": "Tell the position and motion of objects in space using the cardinal points north, south, east and west",
+    "source_page": 126
+  },
+  "spec": {
+    "skills": [
+      {"tag": "use_cardinal_points", "description": "Use N, S, E, W to describe position.", "minQuestions": 2},
+      {"tag": "describe_motion_grid", "description": "Describe motion on a grid using cardinal points.", "minQuestions": 2},
+      {"tag": "give_directions", "description": "Give directions from one location to another.", "minQuestions": 2}
+    ],
+    "difficultyPlan": "20 questions: 5 at difficulty 1, 7 at difficulty 2, 5 at difficulty 3, 3 at difficulty 4.",
+    "misconceptions": [
+      "Confusing East and West.",
+      "Describing motion without a reference point.",
+      "Not using coordinates correctly."
+    ],
+    "needsTeacherAssessment": false
+  },
+  "questions": [
+    {
+      "skill_tag": "use_cardinal_points",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which direction is opposite to North?",
+      "options": ["East", "South", "West", "Up"],
+      "answer": 1,
+      "hints": ["North and South are opposite."],
+      "explanation": "South is opposite to North.",
+      "misconception": "Saying West.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "use_cardinal_points",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "If you face East, what is to your right?",
+      "options": ["North", "South", "West", "East"],
+      "answer": 1,
+      "hints": ["Face East. Right is South."],
+      "explanation": "South is to the right when facing East.",
+      "misconception": "Saying North.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "use_cardinal_points",
+      "type": "short_answer",
+      "difficulty": 1,
+      "stem": "If you face North, what direction is behind you?",
+      "answer": ["south"],
+      "hints": ["Behind is opposite to facing."],
+      "explanation": "South.",
+      "misconception": "Saying East.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_motion_grid",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "A point moves from (1, 2) to (1, 5). In which direction did it move?",
+      "options": ["North", "South", "East", "West"],
+      "answer": 0,
+      "hints": ["The y-coordinate increased."],
+      "explanation": "Moving up on a grid is North.",
+      "misconception": "Saying East because the y-axis is vertical.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_motion_grid",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "A point moves from (4, 3) to (2, 3). In which direction did it move?",
+      "options": ["North", "South", "East", "West"],
+      "answer": 3,
+      "hints": ["The x-coordinate decreased."],
+      "explanation": "Moving left on a grid is West.",
+      "misconception": "Saying East.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "give_directions",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "The school is East of Kofi's house. The hospital is North of Kofi's house. What is the position of the school relative to the hospital?",
+      "options": ["North", "South", "South-East", "West"],
+      "answer": 2,
+      "hints": ["Draw Kofi's house at (0,0).", "School at (2,0), hospital at (0,2).", "From hospital to school is right and down."],
+      "explanation": "The school is South-East of the hospital.",
+      "misconception": "Saying East.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_motion_grid",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "Start at (2, 1). Move 3 squares North. What is the new y-coordinate?",
+      "answer": 4,
+      "check": "1+3",
+      "hints": ["North increases y."],
+      "explanation": "1 + 3 = 4.",
+      "misconception": "Saying 5 (adding to x).",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_motion_grid",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "Start at (5, 4). Move 2 squares West. What is the new x-coordinate?",
+      "answer": 3,
+      "check": "5-2",
+      "hints": ["West decreases x."],
+      "explanation": "5 - 2 = 3.",
+      "misconception": "Saying 7.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "use_cardinal_points",
+      "type": "written",
+      "difficulty": 2,
+      "stem": "Describe the position of the door relative to the teacher's desk using cardinal points.",
+      "hints": ["Look around the classroom."],
+      "explanation": "Example: The door is East of the teacher's desk.",
+      "rubric": {
+        "criteria": [
+          {"description": "Uses a cardinal point correctly.", "marks": 1}
+        ]
+      },
+      "misconception": "Using 'left' or 'right' without a reference.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "give_directions",
+      "type": "written",
+      "difficulty": 2,
+      "stem": "Give directions from (0, 0) to (3, 2) using North, South, East, West.",
+      "hints": ["Move East 3, then North 2."],
+      "explanation": "Move 3 squares East, then 2 squares North.",
+      "rubric": {
+        "criteria": [
+          {"description": "States 3 East and 2 North.", "marks": 1}
+        ]
+      },
+      "misconception": "Swapping the directions.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_motion_grid",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "Start at (3, 3). Move 4 squares South. What is the new y-coordinate?",
+      "answer": -1,
+      "check": "3-4",
+      "hints": ["South decreases y."],
+      "explanation": "3 - 4 = -1.",
+      "misconception": "Saying 7.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "use_cardinal_points",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "On a map, if North is up, where is West?",
+      "options": ["At the top", "At the bottom", "On the left", "On the right"],
+      "answer": 2,
+      "hints": ["West is left."],
+      "explanation": "West is on the left.",
+      "misconception": "Saying right.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "give_directions",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "Point P is North of Q. Point R is East of Q. What is the direction of R from P?",
+      "options": ["South-East", "North-East", "South-West", "North-West"],
+      "answer": 0,
+      "hints": ["Draw Q at (0,0), P at (0,1), R at (1,0).", "From P to R is right and down."],
+      "explanation": "South-East.",
+      "misconception": "Saying North-East.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_motion_grid",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "Explain how to move from (2, 2) to (6, 5) using cardinal directions.",
+      "hints": ["First move East or West."],
+      "explanation": "Move 4 squares East, then 3 squares North.",
+      "rubric": {
+        "criteria": [
+          {"description": "States 4 East and 3 North.", "marks": 1}
+        ]
+      },
+      "misconception": "Mixing the order.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_motion_grid",
+      "type": "numeric",
+      "difficulty": 3,
+      "stem": "Start at (1, 1). Move 3 North, then 4 East. What is the final x-coordinate?",
+      "answer": 5,
+      "check": "1+4",
+      "hints": ["East increases x."],
+      "explanation": "1 + 4 = 5.",
+      "misconception": "Saying 4.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "give_directions",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "A pupil walks from (1, 1) to (1, 5) and then to (4, 5). Describe the path.",
+      "hints": ["First move North, then East."],
+      "explanation": "Move 4 squares North, then 3 squares East.",
+      "rubric": {
+        "criteria": [
+          {"description": "States 4 North and 3 East.", "marks": 1}
+        ]
+      },
+      "misconception": "Reversing the order.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "use_cardinal_points",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "If you face South, what is on your left?",
+      "hints": ["Face South. Left is East."],
+      "explanation": "East is on your left.",
+      "rubric": {
+        "criteria": [
+          {"description": "States East.", "marks": 1}
+        ]
+      },
+      "misconception": "Saying West.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "describe_motion_grid",
+      "type": "numeric",
+      "difficulty": 4,
+      "stem": "Start at (3, 2). Move 2 squares West, then 3 squares South. What is the final position? (Enter as x,y)",
+      "answer": "1,-1",
+      "check": "1,-1",
+      "hints": ["West decreases x: 3-2=1.", "South decreases y: 2-3=-1."],
+      "explanation": "Final position is (1, -1).",
+      "misconception": "Swapping x and y.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "give_directions",
+      "type": "written",
+      "difficulty": 4,
+      "stem": "A treasure is buried at (5, 7). You are at (2, 2). Give the directions to reach the treasure using only North, South, East, West.",
+      "hints": ["East distance = 5-2=3.", "North distance = 7-2=5."],
+      "explanation": "Move 3 squares East, then 5 squares North.",
+      "rubric": {
+        "criteria": [
+          {"description": "States 3 East and 5 North.", "marks": 1}
+        ]
+      },
+      "misconception": "Subtracting incorrectly.",
+      "uncertain": []
+    }
+  ]
+}

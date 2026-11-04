@@ -1,0 +1,276 @@
+{
+  "indicator": {
+    "code": "B5.1.2.4.1",
+    "subject": "Mathematics",
+    "level": "Basic 5",
+    "strand": "Number",
+    "sub_strand": "Number Operations",
+    "content_standard": "Not clearly printed in extract (likely B5.1.2.4)",
+    "objective": "Divide 3- digit numbers by 1- digit number efficiently",
+    "source_page": 91
+  },
+  "spec": {
+    "skills": [
+      {"tag": "divide_3digit_repeated_subtraction", "description": "Use repeated subtraction (long division) to divide 3-digit by 1-digit numbers.", "minQuestions": 2},
+      {"tag": "divide_3digit_estimation", "description": "Use estimation of multiples of 10, 100 and other multiples (Big 7 strategy).", "minQuestions": 2},
+      {"tag": "solve_division_word_problems_3digit", "description": "Solve word problems involving 3-digit ÷ 1-digit.", "minQuestions": 2}
+    ],
+    "difficultyPlan": "20 questions: 5 at difficulty 1, 7 at difficulty 2, 5 at difficulty 3, 3 at difficulty 4.",
+    "misconceptions": [
+      "Forgetting to add the estimation parts together.",
+      "Losing track of the remainder.",
+      "Subtracting incorrectly during repeated subtraction."
+    ],
+    "needsTeacherAssessment": false
+  },
+  "questions": [
+    {
+      "skill_tag": "divide_3digit_repeated_subtraction",
+      "type": "numeric",
+      "difficulty": 1,
+      "stem": "What is 258 ÷ 3?",
+      "answer": 86,
+      "check": "258/3",
+      "hints": ["3 × 80 = 240.", "258 - 240 = 18.", "18 ÷ 3 = 6."],
+      "explanation": "258 ÷ 3 = 80 + 6 = 86.",
+      "misconception": "Forgetting to add the parts.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "divide_3digit_repeated_subtraction",
+      "type": "numeric",
+      "difficulty": 1,
+      "stem": "What is 156 ÷ 4?",
+      "answer": 39,
+      "check": "156/4",
+      "hints": ["4 × 30 = 120.", "156 - 120 = 36.", "36 ÷ 4 = 9."],
+      "explanation": "156 ÷ 4 = 30 + 9 = 39.",
+      "misconception": "Saying 30 or 9.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "divide_3digit_repeated_subtraction",
+      "type": "numeric",
+      "difficulty": 1,
+      "stem": "What is 315 ÷ 5?",
+      "answer": 63,
+      "check": "315/5",
+      "hints": ["5 × 60 = 300.", "315 - 300 = 15.", "15 ÷ 5 = 3."],
+      "explanation": "315 ÷ 5 = 60 + 3 = 63.",
+      "misconception": "Forgetting the 3.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "divide_3digit_repeated_subtraction",
+      "type": "numeric",
+      "difficulty": 1,
+      "stem": "What is 424 ÷ 4?",
+      "answer": 106,
+      "check": "424/4",
+      "hints": ["4 × 100 = 400.", "424 - 400 = 24.", "24 ÷ 4 = 6."],
+      "explanation": "424 ÷ 4 = 100 + 6 = 106.",
+      "misconception": "Saying 16 (forgetting 100).",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "divide_3digit_repeated_subtraction",
+      "type": "numeric",
+      "difficulty": 1,
+      "stem": "What is 189 ÷ 3?",
+      "answer": 63,
+      "check": "189/3",
+      "hints": ["3 × 60 = 180.", "189 - 180 = 9.", "9 ÷ 3 = 3."],
+      "explanation": "189 ÷ 3 = 60 + 3 = 63.",
+      "misconception": "Saying 60.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "divide_3digit_estimation",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "Use estimation to solve 276 ÷ 3.",
+      "answer": 92,
+      "check": "276/3",
+      "hints": ["Estimate 40 (3 × 40 = 120).", "Remaining 156.", "Estimate 50 (3 × 50 = 150).", "Remaining 6.", "Estimate 2 (3 × 2 = 6).", "Add: 40 + 50 + 2."],
+      "explanation": "40 + 50 + 2 = 92.",
+      "misconception": "Stopping too early.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "divide_3digit_estimation",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "Use estimation to solve 345 ÷ 5.",
+      "answer": 69,
+      "check": "345/5",
+      "hints": ["5 × 60 = 300.", "Remaining 45.", "5 × 9 = 45."],
+      "explanation": "60 + 9 = 69.",
+      "misconception": "Saying 60 only.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "divide_3digit_estimation",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "Use estimation to solve 252 ÷ 4.",
+      "answer": 63,
+      "check": "252/4",
+      "hints": ["4 × 50 = 200.", "Remaining 52.", "4 × 13 = 52."],
+      "explanation": "50 + 13 = 63.",
+      "misconception": "Estimating 60 and leaving 12.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "divide_3digit_estimation",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "Use estimation to solve 414 ÷ 6.",
+      "answer": 69,
+      "check": "414/6",
+      "hints": ["6 × 60 = 360.", "Remaining 54.", "6 × 9 = 54."],
+      "explanation": "60 + 9 = 69.",
+      "misconception": "Saying 60.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "divide_3digit_estimation",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "Use estimation to solve 552 ÷ 8.",
+      "answer": 69,
+      "check": "552/8",
+      "hints": ["8 × 60 = 480.", "Remaining 72.", "8 × 9 = 72."],
+      "explanation": "60 + 9 = 69.",
+      "misconception": "Saying 70.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "solve_division_word_problems_3digit",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "A farmer has 720 oranges. He packs them equally into 9 crates. How many oranges are in each crate?",
+      "answer": 80,
+      "check": "720/9",
+      "hints": ["720 ÷ 9."],
+      "explanation": "720 ÷ 9 = 80 oranges.",
+      "misconception": "Saying 70.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "solve_division_word_problems_3digit",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "A school has 675 pupils. They are divided equally into 5 buses. How many pupils are in each bus?",
+      "answer": 135,
+      "check": "675/5",
+      "hints": ["675 ÷ 5."],
+      "explanation": "675 ÷ 5 = 135 pupils.",
+      "misconception": "Saying 130.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "divide_3digit_repeated_subtraction",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "Explain how to use repeated subtraction to solve 384 ÷ 4.",
+      "hints": ["Subtract 4 repeatedly until you reach 0."],
+      "explanation": "Subtract 4 from 384 until you reach 0. Count the number of subtractions: 96.",
+      "rubric": {
+        "criteria": [
+          {"description": "Mentions subtracting 4 repeatedly.", "marks": 1},
+          {"description": "Calculates 96.", "marks": 1}
+        ]
+      },
+      "misconception": "Losing count.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "divide_3digit_estimation",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "Explain how to use estimation (Big 7) to solve 693 ÷ 7.",
+      "hints": ["Estimate 90 (7 × 90 = 630).", "Remaining 63.", "7 × 9 = 63."],
+      "explanation": "Estimate 90, remaining 63, then 9. So 90 + 9 = 99.",
+      "rubric": {
+        "criteria": [
+          {"description": "States 7 × 90 = 630, remaining 63.", "marks": 1},
+          {"description": "Adds 9 to get 99.", "marks": 1}
+        ]
+      },
+      "misconception": "Stopping at 90.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "solve_division_word_problems_3digit",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "A basket has 624 mangoes. They are shared equally among 8 families. How many mangoes does each family get? Explain.",
+      "hints": ["624 ÷ 8."],
+      "explanation": "624 ÷ 8 = 78 mangoes per family.",
+      "rubric": {
+        "criteria": [
+          {"description": "Sets up 624 ÷ 8.", "marks": 1},
+          {"description": "Calculates 78.", "marks": 1}
+        ]
+      },
+      "misconception": "Saying 70 or 80.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "divide_3digit_repeated_subtraction",
+      "type": "numeric",
+      "difficulty": 3,
+      "stem": "What is 504 ÷ 6?",
+      "answer": 84,
+      "check": "504/6",
+      "hints": ["6 × 80 = 480.", "504 - 480 = 24.", "24 ÷ 6 = 4."],
+      "explanation": "80 + 4 = 84.",
+      "misconception": "Saying 80.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "divide_3digit_estimation",
+      "type": "numeric",
+      "difficulty": 3,
+      "stem": "Use estimation to solve 888 ÷ 8.",
+      "answer": 111,
+      "check": "888/8",
+      "hints": ["8 × 100 = 800.", "Remaining 88.", "8 × 11 = 88."],
+      "explanation": "100 + 11 = 111.",
+      "misconception": "Saying 110.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "solve_division_word_problems_3digit",
+      "type": "written",
+      "difficulty": 4,
+      "stem": "A trotro carries 456 passengers in 8 trips. If each trip carries the same number of passengers, how many passengers are on each trip? Explain.",
+      "hints": ["456 ÷ 8."],
+      "explanation": "456 ÷ 8 = 57 passengers per trip.",
+      "rubric": {
+        "criteria": [
+          {"description": "Sets up 456 ÷ 8.", "marks": 1},
+          {"description": "Calculates 57.", "marks": 1}
+        ]
+      },
+      "misconception": "Saying 50 or 60.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "divide_3digit_repeated_subtraction",
+      "type": "written",
+      "difficulty": 4,
+      "stem": "A pupil solves 936 ÷ 9 by repeated subtraction and gets 104. Is the pupil correct? Explain.",
+      "hints": ["9 × 104 = 936."],
+      "explanation": "Yes, the pupil is correct. 9 × 104 = 936.",
+      "rubric": {
+        "criteria": [
+          {"description": "States correct.", "marks": 1},
+          {"description": "Explains 9 × 104 = 936.", "marks": 1}
+        ]
+      },
+      "misconception": "Thinking it is wrong.",
+      "uncertain": []
+    }
+  ]
+}

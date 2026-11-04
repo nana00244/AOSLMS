@@ -1,0 +1,287 @@
+{
+  "indicator": {
+    "code": "B5.1.5.1.2",
+    "subject": "Mathematics",
+    "level": "Basic 5",
+    "strand": "Number",
+    "sub_strand": "Percent",
+    "content_standard": "B5.1.5.1 Demonstrate understanding of percentage of a given number CONT'D",
+    "objective": "Determine the benchmark percentages from their common fractions and use these to estimate percentages of quantities",
+    "source_page": 103
+  },
+  "spec": {
+    "skills": [
+      {"tag": "identify_benchmark_percents", "description": "Identify benchmark percentages (10%, 20%, 25%, 33⅓%, 50%, 66⅔%) and their fraction equivalents.", "minQuestions": 2},
+      {"tag": "estimate_percentages", "description": "Use benchmarks to estimate percentages of quantities (e.g., 60% of 45 is about 50% of 45 = 22.5).", "minQuestions": 2},
+      {"tag": "calculate_percentages_benchmarks", "description": "Calculate exact percentages using benchmark fractions (e.g., 60% of 45 = 3/5 × 45 = 27).", "minQuestions": 2}
+    ],
+    "difficultyPlan": "20 questions: 5 at difficulty 1, 7 at difficulty 2, 5 at difficulty 3, 3 at difficulty 4.",
+    "misconceptions": [
+      "Thinking 50% is always half of the original number regardless of context.",
+      "Not recognizing that 33⅓% is one-third.",
+      "Confusing percentage with the whole number."
+    ],
+    "needsTeacherAssessment": false
+  },
+  "questions": [
+    {
+      "skill_tag": "identify_benchmark_percents",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which fraction is equal to 50%?",
+      "options": ["1/4", "1/2", "1/5", "1/10"],
+      "answer": 1,
+      "hints": ["50% means 50 out of 100."],
+      "explanation": "50% = 1/2.",
+      "misconception": "Choosing 1/4 because it is a common fraction.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_benchmark_percents",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which percentage is equal to 1/4?",
+      "options": ["10%", "20%", "25%", "50%"],
+      "answer": 2,
+      "hints": ["1/4 = 25/100."],
+      "explanation": "1/4 = 25%.",
+      "misconception": "Saying 20%.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_benchmark_percents",
+      "type": "numeric",
+      "difficulty": 1,
+      "stem": "What is 10% as a fraction in simplest form? (Write denominator)",
+      "answer": 10,
+      "check": "10",
+      "hints": ["10% = 10/100 = 1/10."],
+      "explanation": "10% = 1/10, denominator is 10.",
+      "misconception": "Saying 100.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "calculate_percentages_benchmarks",
+      "type": "numeric",
+      "difficulty": 1,
+      "stem": "What is 50% of 20?",
+      "answer": 10,
+      "check": "20/2",
+      "hints": ["50% is half."],
+      "explanation": "50% of 20 = 10.",
+      "misconception": "Saying 40.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "calculate_percentages_benchmarks",
+      "type": "numeric",
+      "difficulty": 1,
+      "stem": "What is 25% of 40?",
+      "answer": 10,
+      "check": "40/4",
+      "hints": ["25% is one quarter."],
+      "explanation": "25% of 40 = 10.",
+      "misconception": "Saying 20.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_benchmark_percents",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which fraction is equal to 20%?",
+      "options": ["1/2", "1/4", "1/5", "1/10"],
+      "answer": 2,
+      "hints": ["20% = 20/100 = 1/5."],
+      "explanation": "20% = 1/5.",
+      "misconception": "Saying 1/4.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_benchmark_percents",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Write 33⅓% as a fraction in simplest form.",
+      "answer": ["1/3"],
+      "hints": ["33⅓% = 100/3 % = 1/3."],
+      "explanation": "33⅓% = 1/3.",
+      "misconception": "Saying 33/100.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "calculate_percentages_benchmarks",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "What is 20% of 60?",
+      "answer": 12,
+      "check": "60/5",
+      "hints": ["20% = 1/5."],
+      "explanation": "20% of 60 = 12.",
+      "misconception": "Saying 20.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "calculate_percentages_benchmarks",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "What is 10% of 250?",
+      "answer": 25,
+      "check": "250/10",
+      "hints": ["10% = 1/10."],
+      "explanation": "10% of 250 = 25.",
+      "misconception": "Saying 2.5.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "estimate_percentages",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which is the best estimate for 48% of 60?",
+      "options": ["20", "30", "40", "50"],
+      "answer": 1,
+      "hints": ["48% is about 50%.", "50% of 60 = 30."],
+      "explanation": "48% is close to 50%, so the estimate is 30.",
+      "misconception": "Choosing 40 (rounding 48 to 40? No, 48% is almost half).",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "estimate_percentages",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which is the best estimate for 26% of 80?",
+      "options": ["10", "20", "30", "40"],
+      "answer": 1,
+      "hints": ["26% is about 25%.", "25% of 80 = 20."],
+      "explanation": "26% is close to 25%, so the estimate is 20.",
+      "misconception": "Choosing 30 because 26 is closer to 30?",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "calculate_percentages_benchmarks",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "What is 33⅓% of 90?",
+      "answer": 30,
+      "check": "90/3",
+      "hints": ["33⅓% = 1/3."],
+      "explanation": "33⅓% of 90 = 30.",
+      "misconception": "Saying 33.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "calculate_percentages_benchmarks",
+      "type": "written",
+      "difficulty": 2,
+      "stem": "Explain how to find 60% of 45 using benchmark fractions.",
+      "hints": ["60% = 3/5."],
+      "explanation": "60% = 3/5. 3/5 of 45 = (45 ÷ 5) × 3 = 9 × 3 = 27.",
+      "rubric": {
+        "criteria": [
+          {"description": "Converts 60% to 3/5.", "marks": 1},
+          {"description": "Calculates 27.", "marks": 1}
+        ]
+      },
+      "misconception": "Using 50% and adding 10% incorrectly.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "estimate_percentages",
+      "type": "written",
+      "difficulty": 2,
+      "stem": "Estimate 48% of 200 using benchmarks.",
+      "hints": ["48% is about 50%.", "50% of 200 = 100."],
+      "explanation": "48% is about 50%, so the estimate is 100.",
+      "rubric": {
+        "criteria": [
+          {"description": "Uses 50% benchmark.", "marks": 1},
+          {"description": "Estimates 100.", "marks": 1}
+        ]
+      },
+      "misconception": "Saying 48.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "calculate_percentages_benchmarks",
+      "type": "numeric",
+      "difficulty": 3,
+      "stem": "What is 66⅔% of 30?",
+      "answer": 20,
+      "check": "30*2/3",
+      "hints": ["66⅔% = 2/3."],
+      "explanation": "66⅔% of 30 = 20.",
+      "misconception": "Saying 30.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "calculate_percentages_benchmarks",
+      "type": "numeric",
+      "difficulty": 3,
+      "stem": "What is 75% of 80?",
+      "answer": 60,
+      "check": "80*3/4",
+      "hints": ["75% = 3/4."],
+      "explanation": "75% of 80 = 60.",
+      "misconception": "Saying 40.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "estimate_percentages",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "A pupil estimates 32% of 90 as 25% of 90 = 22.5. Is this reasonable? Explain.",
+      "hints": ["32% is a bit more than 25%."],
+      "explanation": "It is a reasonable estimate, but the actual value is a bit higher (about 28.8).",
+      "rubric": {
+        "criteria": [
+          {"description": "States reasonable.", "marks": 1},
+          {"description": "Explains 32% is slightly more than 25%.", "marks": 1}
+        ]
+      },
+      "misconception": "Thinking the estimate must be exact.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "calculate_percentages_benchmarks",
+      "type": "numeric",
+      "difficulty": 3,
+      "stem": "What is 40% of 150?",
+      "answer": 60,
+      "check": "150*0.4",
+      "hints": ["40% = 2/5."],
+      "explanation": "40% of 150 = 60.",
+      "misconception": "Saying 30.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "calculate_percentages_benchmarks",
+      "type": "written",
+      "difficulty": 4,
+      "stem": "Explain how to estimate 73% of 50 using benchmarks.",
+      "hints": ["73% is about 75% or 70%.", "75% of 50 = 37.5."],
+      "explanation": "73% is close to 75%. 75% = 3/4, so 3/4 of 50 = 37.5. A reasonable estimate is about 37.",
+      "rubric": {
+        "criteria": [
+          {"description": "Uses 75% benchmark.", "marks": 1},
+          {"description": "Estimates about 37.", "marks": 1}
+        ]
+      },
+      "misconception": "Using 50% only.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "calculate_percentages_benchmarks",
+      "type": "written",
+      "difficulty": 4,
+      "stem": "A pupil says 25% of a number is always the same as dividing by 4. Is this correct? Explain with an example.",
+      "hints": ["25% = 1/4."],
+      "explanation": "Yes, because 25% = 1/4, so 25% of 40 = 40 ÷ 4 = 10.",
+      "rubric": {
+        "criteria": [
+          {"description": "States correct.", "marks": 1},
+          {"description": "Gives an example.", "marks": 1}
+        ]
+      },
+      "misconception": "Thinking percentage is unrelated to fractions.",
+      "uncertain": []
+    }
+  ]
+}

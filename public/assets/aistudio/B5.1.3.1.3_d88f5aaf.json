@@ -1,0 +1,387 @@
+{
+  "indicator": {
+    "code": "B5.1.3.1.3",
+    "subject": "Mathematics",
+    "level": "Basic 5",
+    "strand": "Number",
+    "sub_strand": "Fractions",
+    "content_standard": "Not clearly printed in extract (likely B5.1.3.1)",
+    "objective": "Use the concept of equivalent fractions in changing fractions to the same denominator for addition and subtraction of like fractions (one denominator being a multiple of the other)",
+    "source_page": 94
+  },
+  "spec": {
+    "skills": [
+      {
+        "tag": "convert_to_common_denominator",
+        "description": "Convert one fraction so both have the same denominator (one denominator is a multiple of the other).",
+        "minQuestions": 2
+      },
+      {
+        "tag": "add_like_fractions",
+        "description": "Add fractions with the same denominator and simplify.",
+        "minQuestions": 2
+      },
+      {
+        "tag": "subtract_like_fractions",
+        "description": "Subtract fractions with the same denominator and simplify.",
+        "minQuestions": 2
+      }
+    ],
+    "difficultyPlan": "20 questions: 5 at difficulty 1, 7 at difficulty 2, 5 at difficulty 3, 3 at difficulty 4.",
+    "misconceptions": [
+      "Adding denominators.",
+      "Forgetting to simplify.",
+      "Converting only one fraction correctly."
+    ],
+    "needsTeacherAssessment": false
+  },
+  "questions": [
+    {
+      "skill_tag": "convert_to_common_denominator",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What is 1/2 converted to quarters?",
+      "options": [
+        "1/4",
+        "2/4",
+        "3/4",
+        "4/4"
+      ],
+      "answer": 1,
+      "hints": [
+        "2 × 2 = 4, so multiply numerator by 2."
+      ],
+      "explanation": "1/2 = 2/4.",
+      "misconception": "Saying 1/4.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "add_like_fractions",
+      "type": "numeric",
+      "difficulty": 1,
+      "stem": "What is 2/7 + 3/7?",
+      "answer": 5,
+      "check": "2+3",
+      "hints": [
+        "Add the numerators, keep the denominator."
+      ],
+      "explanation": "2/7 + 3/7 = 5/7.",
+      "misconception": "Adding denominators to get 5/14.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "subtract_like_fractions",
+      "type": "numeric",
+      "difficulty": 1,
+      "stem": "What is 5/8 - 2/8?",
+      "answer": 3,
+      "check": "5-2",
+      "hints": [
+        "Subtract the numerators, keep the denominator."
+      ],
+      "explanation": "5/8 - 2/8 = 3/8.",
+      "misconception": "Subtracting denominators.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "add_like_fractions",
+      "type": "short_answer",
+      "difficulty": 1,
+      "stem": "Add 1/5 + 3/5. Write your answer as a fraction.",
+      "answer": [
+        "4/5"
+      ],
+      "hints": [
+        "1+3=4, keep denominator 5."
+      ],
+      "explanation": "1/5 + 3/5 = 4/5.",
+      "misconception": "Writing 4/10.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "subtract_like_fractions",
+      "type": "short_answer",
+      "difficulty": 1,
+      "stem": "Subtract 3/6 - 1/6.",
+      "answer": [
+        "2/6",
+        "1/3"
+      ],
+      "hints": [
+        "3-1=2, so 2/6 = 1/3."
+      ],
+      "explanation": "3/6 - 1/6 = 2/6 = 1/3.",
+      "misconception": "Saying 2/0.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "convert_to_common_denominator",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "Convert 1/3 to sixths. What is the numerator?",
+      "answer": 2,
+      "check": "1*2",
+      "hints": [
+        "3 × 2 = 6, so 1 × 2 = 2."
+      ],
+      "explanation": "1/3 = 2/6.",
+      "misconception": "Saying 3.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "convert_to_common_denominator",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Convert 3/4 to eighths.",
+      "answer": [
+        "6/8"
+      ],
+      "hints": [
+        "4 × 2 = 8, so 3 × 2 = 6."
+      ],
+      "explanation": "3/4 = 6/8.",
+      "misconception": "Writing 3/8.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "add_like_fractions",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "What is 1/4 + 2/4?",
+      "answer": 3,
+      "check": "1+2",
+      "hints": [
+        "1+2=3, keep denominator 4."
+      ],
+      "explanation": "1/4 + 2/4 = 3/4.",
+      "misconception": "Saying 3/8.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "subtract_like_fractions",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "What is 7/10 - 3/10?",
+      "answer": 4,
+      "check": "7-3",
+      "hints": [
+        "7-3=4, keep denominator 10."
+      ],
+      "explanation": "7/10 - 3/10 = 4/10 = 2/5.",
+      "misconception": "Saying 4/0 or 4/20.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "add_like_fractions",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "What is 3/8 + 1/8?",
+      "options": [
+        "4/8",
+        "4/16",
+        "3/16",
+        "2/8"
+      ],
+      "answer": 0,
+      "hints": [
+        "3+1=4, keep denominator 8."
+      ],
+      "explanation": "3/8 + 1/8 = 4/8 = 1/2.",
+      "misconception": "Adding denominators.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "subtract_like_fractions",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "What is 5/6 - 1/6?",
+      "options": [
+        "4/6",
+        "4/12",
+        "6/6",
+        "5/12"
+      ],
+      "answer": 0,
+      "hints": [
+        "5-1=4, keep denominator 6."
+      ],
+      "explanation": "5/6 - 1/6 = 4/6 = 2/3.",
+      "misconception": "Saying 4/12.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "convert_to_common_denominator",
+      "type": "written",
+      "difficulty": 2,
+      "stem": "Explain how to convert 2/5 to tenths.",
+      "hints": [
+        "5 × 2 = 10, so multiply numerator by 2."
+      ],
+      "explanation": "Multiply both numerator and denominator by 2: 2/5 = 4/10.",
+      "rubric": {
+        "criteria": [
+          {
+            "description": "States multiply by 2.",
+            "marks": 1
+          },
+          {
+            "description": "Gives 4/10.",
+            "marks": 1
+          }
+        ]
+      },
+      "misconception": "Multiplying only denominator.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "add_like_fractions",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "Explain how to add 1/3 and 2/6.",
+      "hints": [
+        "Convert 1/3 to sixths first."
+      ],
+      "explanation": "1/3 = 2/6. Then 2/6 + 2/6 = 4/6 = 2/3.",
+      "rubric": {
+        "criteria": [
+          {
+            "description": "Converts 1/3 to 2/6.",
+            "marks": 1
+          },
+          {
+            "description": "Adds to get 4/6 = 2/3.",
+            "marks": 1
+          }
+        ]
+      },
+      "misconception": "Adding numerators and denominators directly.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "subtract_like_fractions",
+      "type": "numeric",
+      "difficulty": 3,
+      "stem": "What is 5/8 - 1/4?",
+      "answer": 3,
+      "check": "5-2",
+      "hints": [
+        "Convert 1/4 to 2/8.",
+        "5/8 - 2/8 = 3/8."
+      ],
+      "explanation": "5/8 - 1/4 = 5/8 - 2/8 = 3/8.",
+      "misconception": "Saying 4/4.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "add_like_fractions",
+      "type": "numeric",
+      "difficulty": 3,
+      "stem": "What is 3/10 + 2/5?",
+      "answer": 7,
+      "check": "3+4",
+      "hints": [
+        "Convert 2/5 to 4/10.",
+        "3/10 + 4/10."
+      ],
+      "explanation": "3/10 + 4/10 = 7/10.",
+      "misconception": "Saying 5/15.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "subtract_like_fractions",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "Explain how to subtract 1/2 from 3/4.",
+      "hints": [
+        "Convert 1/2 to quarters."
+      ],
+      "explanation": "1/2 = 2/4. 3/4 - 2/4 = 1/4.",
+      "rubric": {
+        "criteria": [
+          {
+            "description": "Converts 1/2 to 2/4.",
+            "marks": 1
+          },
+          {
+            "description": "Subtracts to get 1/4.",
+            "marks": 1
+          }
+        ]
+      },
+      "misconception": "Subtracting numerators and denominators directly.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "convert_to_common_denominator",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "Explain how to convert 3/7 to twenty-firsts.",
+      "hints": [
+        "7 × 3 = 21."
+      ],
+      "explanation": "Multiply numerator and denominator by 3: 3/7 = 9/21.",
+      "rubric": {
+        "criteria": [
+          {
+            "description": "States multiply by 3.",
+            "marks": 1
+          },
+          {
+            "description": "Gives 9/21.",
+            "marks": 1
+          }
+        ]
+      },
+      "misconception": "Multiplying only numerator.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "add_like_fractions",
+      "type": "written",
+      "difficulty": 4,
+      "stem": "A pupil adds 2/3 + 1/6 by getting 3/9. What mistake did they make? Explain.",
+      "hints": [
+        "They added numerators and denominators."
+      ],
+      "explanation": "The pupil added numerators (2+1=3) and denominators (3+6=9). The correct way is to convert 2/3 to 4/6, then 4/6 + 1/6 = 5/6.",
+      "rubric": {
+        "criteria": [
+          {
+            "description": "Identifies adding denominators.",
+            "marks": 1
+          },
+          {
+            "description": "Corrects to 5/6.",
+            "marks": 1
+          }
+        ]
+      },
+      "misconception": "Thinking adding denominators is correct.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "subtract_like_fractions",
+      "type": "written",
+      "difficulty": 4,
+      "stem": "A pupil claims 7/8 - 3/4 = 4/4 = 1. Is the pupil correct? Explain.",
+      "hints": [
+        "Convert 3/4 to eighths first."
+      ],
+      "explanation": "The pupil is incorrect. 3/4 = 6/8. 7/8 - 6/8 = 1/8, not 1.",
+      "rubric": {
+        "criteria": [
+          {
+            "description": "States incorrect.",
+            "marks": 1
+          },
+          {
+            "description": "Correct answer is 1/8.",
+            "marks": 1
+          }
+        ]
+      },
+      "misconception": "Subtracting denominators.",
+      "uncertain": []
+    }
+  ]
+}

@@ -1,0 +1,304 @@
+{
+  "indicator": {
+    "code": "B4.4.1.2.1",
+    "subject": "Mathematics",
+    "level": "Basic 4",
+    "strand": "Data",
+    "sub_strand": "Data Collection, Organization, Presentation, Interpretation and Analysis",
+    "content_standard": "B4.4.1.2 Construct and interpret pictographs and bar graphs involving many-to-one correspondence to draw conclusions.",
+    "objective": "Identify common features of graphs that use many-to-one correspondence and use that understanding to draw bar graphs or pictographs, complete with title, labelled axes, key or legend, to represent data collected (up to 4 categories of data).",
+    "source_page": 73
+  },
+  "spec": {
+    "skills": [
+      {"tag": "identify_graph_features", "description": "Identify title, axes, and key/legend in a graph.", "minQuestions": 2},
+      {"tag": "draw_bar_graph", "description": "Draw a bar graph with a many-to-one scale, title, and axes.", "minQuestions": 2},
+      {"tag": "draw_pictograph", "description": "Draw a pictograph with a many-to-one scale, title, and key.", "minQuestions": 2}
+    ],
+    "difficultyPlan": "20 questions: 5 at difficulty 1, 7 at difficulty 2, 5 at difficulty 3, 3 at difficulty 4.",
+    "misconceptions": [
+      "Forgetting to label axes.",
+      "Incorrect scale.",
+      "Missing the title or key."
+    ],
+    "needsTeacherAssessment": true
+  },
+  "questions": [
+    {
+      "skill_tag": "identify_graph_features",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What part of a graph tells you what the graph is about?",
+      "options": ["The title", "The axes", "The key", "The bars"],
+      "answer": 0,
+      "hints": ["It is usually at the top.", "It gives the main idea."],
+      "explanation": "The title tells you what the graph is about.",
+      "misconception": "Choosing the axes.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_graph_features",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "In a bar graph, what do the labels on the vertical axis (y-axis) usually represent?",
+      "options": ["The categories", "The frequency or number", "The title", "The key"],
+      "answer": 1,
+      "hints": ["It shows how many.", "It is the scale."],
+      "explanation": "The vertical axis shows the number or frequency.",
+      "misconception": "Choosing the categories.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "draw_bar_graph",
+      "type": "drawing",
+      "difficulty": 1,
+      "stem": "Draw a simple bar graph with the title 'Favourite Fruits' and two bars: Apples (4) and Oranges (2). Use a scale where 1 unit = 1 fruit.",
+      "hints": ["Write the title at the top.", "Draw a bar of height 4 for apples.", "Draw a bar of height 2 for oranges."],
+      "explanation": "The learner should draw a bar graph with a title, labeled axes, and bars of correct height.",
+      "rubric": {
+        "criteria": [
+          {"description": "Includes the title 'Favourite Fruits'.", "marks": 1},
+          {"description": "Draws a bar of height 4 and a bar of height 2.", "marks": 1},
+          {"description": "Labels the axes.", "marks": 1}
+        ]
+      },
+      "misconception": "Drawing bars of equal height.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_graph_features",
+      "type": "short_answer",
+      "difficulty": 1,
+      "stem": "What is the purpose of a key in a pictograph?",
+      "answer": ["to show what each symbol represents", "to explain the pictures"],
+      "hints": ["It tells you the value of the picture.", "For example, 1 star = 5 pupils."],
+      "explanation": "The key tells you what each symbol stands for.",
+      "misconception": "Thinking the key is just decoration.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "draw_pictograph",
+      "type": "drawing",
+      "difficulty": 1,
+      "stem": "Draw a pictograph titled 'Books Read'. Kojo read 4 books, Ama read 2 books. Use 1 book symbol = 1 book.",
+      "hints": ["Write the title.", "Draw 4 symbols for Kojo.", "Draw 2 symbols for Ama.", "Add a key."],
+      "explanation": "The learner should draw 4 book symbols next to Kojo and 2 next to Ama, with a key.",
+      "rubric": {
+        "criteria": [
+          {"description": "Includes title.", "marks": 1},
+          {"description": "Draws correct number of symbols for each person.", "marks": 1},
+          {"description": "Includes a key.", "marks": 1}
+        ]
+      },
+      "misconception": "Not including a key.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "draw_bar_graph",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "A pupil wants to draw a bar graph for 20 pupils using a scale of 1 unit = 5 pupils. How tall should the bar be?",
+      "options": ["2 units", "4 units", "5 units", "20 units"],
+      "answer": 1,
+      "hints": ["Divide 20 by 5.", "20 / 5."],
+      "explanation": "20 / 5 = 4 units.",
+      "misconception": "Drawing the bar 20 units tall.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_graph_features",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which of these is NOT a feature of a well-drawn bar graph?",
+      "options": ["A title", "Labelled axes", "A key or legend", "A random scale"],
+      "answer": 3,
+      "hints": ["Good graphs should be clear and readable.", "A random scale makes it hard to read."],
+      "explanation": "A random scale is not a feature of a good graph; it should be consistent.",
+      "misconception": "Thinking any scale is fine.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "draw_pictograph",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "To draw a pictograph with 1 symbol = 10 people, how many symbols are needed for 40 people?",
+      "answer": 4,
+      "check": "40/10",
+      "hints": ["40 / 10."],
+      "explanation": "4 symbols.",
+      "misconception": "Saying 40.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "draw_bar_graph",
+      "type": "written",
+      "difficulty": 2,
+      "stem": "List the steps to draw a bar graph from a set of data.",
+      "hints": ["Start with a title.", "Draw the axes.", "Decide on a scale.", "Draw the bars."],
+      "explanation": "1. Write the title. 2. Draw and label the axes. 3. Choose a suitable scale. 4. Draw bars of the correct height for each category.",
+      "rubric": {
+        "criteria": [
+          {"description": "Mentions title and axes.", "marks": 1},
+          {"description": "Mentions scale and drawing bars.", "marks": 1}
+        ]
+      },
+      "misconception": "Forgetting the scale.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_graph_features",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "What is the horizontal axis (x-axis) usually used for in a bar graph?",
+      "answer": ["the categories", "the labels", "the items"],
+      "hints": ["It lists the things being counted.", "It's at the bottom."],
+      "explanation": "The horizontal axis lists the categories.",
+      "misconception": "Saying it shows the frequency.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "draw_bar_graph",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "A bar graph has a scale of 1 unit = 2 pupils. If a bar is 6 units tall, how many pupils does it represent?",
+      "answer": 12,
+      "check": "6*2",
+      "hints": ["6 x 2."],
+      "explanation": "12 pupils.",
+      "misconception": "Saying 6.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "draw_pictograph",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "A pictograph uses 1 apple symbol = 4 apples. Which of these correctly represents 12 apples?",
+      "options": ["1 apple", "2 apples", "3 apples", "12 apples"],
+      "answer": 2,
+      "hints": ["12 / 4."],
+      "explanation": "3 symbols.",
+      "misconception": "Drawing 12 symbols.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "draw_bar_graph",
+      "type": "drawing",
+      "difficulty": 3,
+      "stem": "Draw a bar graph titled 'Favourite Sports' with 4 categories: Football (10), Netball (5), Athletics (15), and Tennis (5). Use a scale of 1 unit = 5 pupils.",
+      "hints": ["Football bar = 2 units.", "Netball bar = 1 unit.", "Athletics bar = 3 units.", "Tennis bar = 1 unit."],
+      "explanation": "The learner should draw a bar graph with 4 bars of heights 2, 1, 3, and 1 respectively, with title and axes.",
+      "rubric": {
+        "criteria": [
+          {"description": "Title and axes present.", "marks": 1},
+          {"description": "Bars drawn at correct heights (2, 1, 3, 1).", "marks": 1},
+          {"description": "Uses 4 categories.", "marks": 1}
+        ]
+      },
+      "misconception": "Drawing bars with heights 10, 5, 15, 5.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "draw_pictograph",
+      "type": "drawing",
+      "difficulty": 3,
+      "stem": "Draw a pictograph titled 'Books Read' with 3 categories: Kojo (6 books), Ama (4 books), Yaw (2 books). Use 1 book symbol = 2 books.",
+      "hints": ["Kojo: 3 symbols.", "Ama: 2 symbols.", "Yaw: 1 symbol."],
+      "explanation": "The learner should draw 3 symbols for Kojo, 2 for Ama, 1 for Yaw, with a key.",
+      "rubric": {
+        "criteria": [
+          {"description": "Title and key present.", "marks": 1},
+          {"description": "Correct number of symbols for each person.", "marks": 1}
+        ]
+      },
+      "misconception": "Drawing 6, 4, 2 symbols.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "identify_graph_features",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "Explain why a title is important on a graph.",
+      "hints": ["Imagine a graph with no title.", "Would you know what the numbers mean?"],
+      "explanation": "Without a title, you wouldn't know what data the graph is showing.",
+      "rubric": {
+        "criteria": [
+          {"description": "Explains that the title tells what the graph is about.", "marks": 1}
+        ]
+      },
+      "misconception": "Thinking the title is optional.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "draw_bar_graph",
+      "type": "numeric",
+      "difficulty": 3,
+      "stem": "A pupil draws a bar graph with a scale of 1 cm = 10 pupils. If the tallest bar is 5 cm tall, what is the maximum number of pupils represented?",
+      "answer": 50,
+      "check": "5*10",
+      "hints": ["5 x 10."],
+      "explanation": "50 pupils.",
+      "misconception": "Saying 5.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "draw_bar_graph",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "A pupil collects data on favourite colours: Red (10), Blue (15), Green (5), Yellow (10). Explain how to choose a scale for a bar graph of this data.",
+      "hints": ["Look at the largest number (15).", "A scale of 1 unit = 5 fits well."],
+      "explanation": "Choose a scale where the largest value can fit comfortably on the graph. A scale of 1 unit = 5 would give bar heights of 2, 3, 1, and 2 units.",
+      "rubric": {
+        "criteria": [
+          {"description": "Mentions choosing a scale based on the largest value.", "marks": 1},
+          {"description": "Suggests a valid scale (e.g., 1 unit = 5).", "marks": 1}
+        ]
+      },
+      "misconception": "Choosing a scale of 1 unit = 1 for large numbers.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "draw_pictograph",
+      "type": "written",
+      "difficulty": 4,
+      "stem": "Explain how to draw a pictograph where 1 symbol = 5 items and the data values are 20, 10, 15, 5.",
+      "hints": ["Calculate the number of symbols for each value.", "Draw the symbols and add a key."],
+      "explanation": "Divide each value by 5: 4 symbols, 2 symbols, 3 symbols, 1 symbol. Draw these symbols and write '1 symbol = 5 items' in the key.",
+      "rubric": {
+        "criteria": [
+          {"description": "Calculates the correct number of symbols for each category.", "marks": 1},
+          {"description": "Mentions including the key and title.", "marks": 1}
+        ]
+      },
+      "misconception": "Drawing the raw values instead of the scaled symbols.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "draw_pictograph",
+      "type": "numeric",
+      "difficulty": 4,
+      "stem": "A pictograph has 1 star = 100 people. If a row has 2.5 stars, how many people does it represent?",
+      "answer": 250,
+      "check": "2.5*100",
+      "hints": ["2.5 x 100."],
+      "explanation": "250 people.",
+      "misconception": "Saying 2.5.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "draw_bar_graph",
+      "type": "written",
+      "difficulty": 4,
+      "stem": "A pupil says a bar graph should always start at zero on the vertical axis. Is this true? Explain.",
+      "hints": ["What happens if you start at 10?", "Does it change how the bars look?"],
+      "explanation": "It is generally true that bar graphs should start at zero to avoid misleading the reader. Starting at a higher number can exaggerate differences.",
+      "rubric": {
+        "criteria": [
+          {"description": "States that bar graphs should start at zero.", "marks": 1},
+          {"description": "Explains that starting elsewhere can mislead.", "marks": 1}
+        ]
+      },
+      "misconception": "Thinking starting at any number is fine.",
+      "uncertain": []
+    }
+  ]
+}

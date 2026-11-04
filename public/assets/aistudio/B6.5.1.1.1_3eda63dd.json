@@ -1,0 +1,281 @@
+{
+  "indicator": {
+    "code": "B6.5.1.1.1",
+    "subject": "Science",
+    "level": "Basic 6",
+    "strand": "HUMANS AND THE ENVIRONMENT",
+    "sub_strand": "Personal Hygiene and Sanitation",
+    "content_standard": "B6.5.1.1 Recognise the importance of personal hygiene",
+    "objective": "Identify the causes and effects of foul body odour on humans and how it can be prevented",
+    "source_page": 66
+  },
+  "spec": {
+    "skills": [
+      {"tag": "causes_body_odour", "description": "Identify causes of foul body odour (e.g. poor bathing habits, dirty clothes, sweat, certain foods).", "minQuestions": 4},
+      {"tag": "effects_body_odour", "description": "State effects of body odour on humans (e.g. social embarrassment, low confidence, rejection).", "minQuestions": 3},
+      {"tag": "prevention_body_odour", "description": "Identify ways to prevent body odour (e.g. bathing regularly, using deodorant, wearing clean clothes, using lime/lemon).", "minQuestions": 4},
+      {"tag": "hygiene_habits", "description": "Describe daily hygiene habits that prevent body odour.", "minQuestions": 3},
+      {"tag": "materials_prevention", "description": "Identify materials used to prevent body odour (e.g. soap, deodorant, lime, lemon).", "minQuestions": 3},
+      {"tag": "plan_project", "description": "Plan a simple project on eliminating foul body odour.", "minQuestions": 3}
+    ],
+    "difficultyPlan": "20 questions total — Difficulty 1: 5; Difficulty 2: 7; Difficulty 3: 5; Difficulty 4: 3.",
+    "misconceptions": [
+      "Body odour is caused by eating too much.",
+      "Deodorant is the only way to prevent body odour.",
+      "Body odour is not a health issue.",
+      "Bathing once a week prevents body odour.",
+      "Lime and lemon have no use in hygiene.",
+      "Dirty clothes do not cause body odour."
+    ],
+    "needsTeacherAssessment": true
+  },
+  "questions": [
+    {
+      "skill_tag": "causes_body_odour",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which of these can cause foul body odour?",
+      "options": ["Not bathing regularly", "Eating too much food", "Sleeping late", "Playing football"],
+      "answer": 0,
+      "hints": ["Think about what happens when sweat stays on the body.", "Bathing removes sweat and dirt."],
+      "explanation": "Not bathing regularly allows sweat and dirt to collect on the body, causing foul body odour.",
+      "misconception": "Body odour is caused by eating too much.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "causes_body_odour",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Ama wears the same uniform for one week without washing it. What is likely to happen?",
+      "options": ["The uniform will smell and may cause body odour", "The uniform will become cleaner", "The uniform will change colour", "The uniform will become stronger"],
+      "answer": 0,
+      "hints": ["Sweat and dirt collect on worn clothes.", "Dirty clothes can smell."],
+      "explanation": "Wearing unwashed clothes allows sweat and dirt to collect, causing body odour.",
+      "misconception": "Dirty clothes do not cause body odour.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "causes_body_odour",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Give one cause of foul body odour.",
+      "answer": ["not bathing regularly", "dirty clothes", "sweat", "poor hygiene"],
+      "hints": ["Think about sweat and dirt.", "Think about wearing dirty clothes."],
+      "explanation": "Causes of body odour include poor bathing habits, dirty clothes and sweat.",
+      "misconception": "Body odour is caused by eating too much.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "causes_body_odour",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "Which of these is NOT a cause of body odour?",
+      "options": ["Bathing regularly", "Wearing dirty clothes", "Sweating and not bathing", "Poor hygiene"],
+      "answer": 0,
+      "hints": ["Which action keeps the body clean?", "Bathing prevents body odour."],
+      "explanation": "Bathing regularly prevents body odour; it does not cause it. Dirty clothes, sweat and poor hygiene can cause body odour.",
+      "misconception": "Bathing causes body odour.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "effects_body_odour",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "How can foul body odour affect a person?",
+      "options": ["It can make them feel embarrassed", "It makes them taller", "It makes them run faster", "It makes them hungry"],
+      "answer": 0,
+      "hints": ["Think about how people react to bad smell.", "It can affect confidence."],
+      "explanation": "Foul body odour can make a person feel embarrassed and less confident.",
+      "misconception": "Body odour is not a health issue.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "effects_body_odour",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "State one effect of body odour on a person.",
+      "answer": ["embarrassment", "low confidence", "people avoid them", "social rejection"],
+      "hints": ["Think about how they feel.", "Think about how others react."],
+      "explanation": "Body odour can cause embarrassment, low confidence and social rejection.",
+      "misconception": "Body odour has no effect.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "effects_body_odour",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "Why might a learner with body odour be avoided by classmates?",
+      "options": ["Because the smell is unpleasant", "Because they are taller", "Because they are smarter", "Because they run faster"],
+      "answer": 0,
+      "hints": ["Think about the smell.", "People avoid unpleasant smells."],
+      "explanation": "A learner with body odour may be avoided because the smell is unpleasant, which can affect their social relationships.",
+      "misconception": "Body odour is not a problem.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "prevention_body_odour",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which of these helps prevent body odour?",
+      "options": ["Bathing regularly", "Wearing dirty clothes", "Not using soap", "Sweating without bathing"],
+      "answer": 0,
+      "hints": ["Bathing removes sweat and dirt.", "It keeps the body clean."],
+      "explanation": "Bathing regularly helps prevent body odour by removing sweat and dirt.",
+      "misconception": "Bathing once a week prevents body odour.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "prevention_body_odour",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which of these is a way to prevent body odour?",
+      "options": ["Using deodorant after bathing", "Wearing the same clothes for a week", "Avoiding soap", "Not drying the body after bathing"],
+      "answer": 0,
+      "hints": ["Deodorant helps control smell.", "It is used after bathing."],
+      "explanation": "Using deodorant after bathing helps prevent body odour.",
+      "misconception": "Deodorant is the only way to prevent body odour.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "prevention_body_odour",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Give one way to prevent body odour.",
+      "answer": ["bathe regularly", "wear clean clothes", "use deodorant", "use lime or lemon"],
+      "hints": ["Think about bathing.", "Think about clean clothes."],
+      "explanation": "Ways to prevent body odour include bathing regularly, wearing clean clothes, using deodorant and using lime or lemon.",
+      "misconception": "Body odour cannot be prevented.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "prevention_body_odour",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "A pupil uses lime or lemon on the armpit after bathing. Why is this useful?",
+      "options": ["It helps reduce body odour", "It makes the skin darker", "It makes the skin dry", "It causes body odour"],
+      "answer": 0,
+      "hints": ["Lime and lemon have a strong smell.", "They can help control body odour."],
+      "explanation": "Lime or lemon can help reduce body odour because of their strong, fresh smell.",
+      "misconception": "Lime and lemon have no use in hygiene.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "hygiene_habits",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "Which daily habit helps prevent body odour?",
+      "options": ["Bathing at least twice a day", "Bathing once a week", "Wearing dirty socks", "Not brushing teeth"],
+      "answer": 0,
+      "hints": ["Bathing removes sweat.", "Twice a day is good."],
+      "explanation": "Bathing at least twice a day helps prevent body odour by keeping the body clean.",
+      "misconception": "Bathing once a week is enough.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "hygiene_habits",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Describe one daily hygiene habit that prevents body odour.",
+      "answer": ["bathing regularly", "wearing clean clothes", "using deodorant", "washing the armpits with soap"],
+      "hints": ["Think about what you do every day.", "Bathing is one habit."],
+      "explanation": "A daily hygiene habit that prevents body odour is bathing regularly with soap and water.",
+      "misconception": "Hygiene habits do not affect body odour.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "hygiene_habits",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "Which set lists good daily habits to prevent body odour?",
+      "options": ["Bathe twice daily, wear clean clothes, use deodorant", "Bathe once a week, wear dirty clothes, avoid soap", "Bathe once a month, wear the same clothes, avoid water", "Never bathe, wear dirty socks, use no soap"],
+      "answer": 0,
+      "hints": ["Good habits keep the body clean.", "Bathing and clean clothes help."],
+      "explanation": "Good daily habits include bathing twice daily, wearing clean clothes and using deodorant.",
+      "misconception": "Bathing once a week is enough.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "materials_prevention",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "Which materials are used to prevent body odour?",
+      "options": ["Soap and deodorant", "Sand and stones", "Oil and pepper", "Sugar and salt"],
+      "answer": 0,
+      "hints": ["Think about what you use in the bathroom.", "Soap removes sweat and dirt."],
+      "explanation": "Soap and deodorant are used to prevent body odour.",
+      "misconception": "Deodorant is the only material used.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "materials_prevention",
+      "type": "short_answer",
+      "difficulty": 2,
+      "stem": "Name two materials used to prevent body odour.",
+      "answer": ["soap and deodorant", "soap and water", "lime and lemon", "deodorant and lime"],
+      "hints": ["One is used for bathing.", "One is used after bathing."],
+      "explanation": "Materials used to prevent body odour include soap, water, deodorant, lime and lemon.",
+      "misconception": "Lime and lemon have no use.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "materials_prevention",
+      "type": "mcq",
+      "difficulty": 3,
+      "stem": "Why is soap important in preventing body odour?",
+      "options": ["It removes sweat and dirt from the body", "It makes the body smell stronger", "It makes the skin dry", "It causes body odour"],
+      "answer": 0,
+      "hints": ["Soap cleans the body.", "It removes sweat and dirt."],
+      "explanation": "Soap is important because it removes sweat and dirt from the body, helping prevent body odour.",
+      "misconception": "Soap causes body odour.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "plan_project",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "Plan a simple project to help your class reduce body odour. Write three steps you will take (e.g. make a poster, organise a hygiene talk, create a reminder chart).",
+      "rubric": {
+        "criteria": [
+          {"description": "Wrote three clear steps for the project", "marks": 3},
+          {"description": "Steps are relevant to reducing body odour", "marks": 2},
+          {"description": "Plan is realistic for a class project", "marks": 1}
+        ]
+      },
+      "answer": "",
+      "hints": ["Think about what you can do in class.", "Posters and talks are good ideas."],
+      "explanation": "This is a written task. Your teacher will mark it using the rubric.",
+      "misconception": "Body odour cannot be addressed in a project.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "plan_project",
+      "type": "drawing",
+      "difficulty": 4,
+      "stem": "Design a poster for your school to teach learners how to prevent body odour. Show at least two actions, such as bathing and using deodorant.",
+      "rubric": {
+        "criteria": [
+          {"description": "Showed at least two correct actions to prevent body odour", "marks": 2},
+          {"description": "Used clear drawings or symbols for each action", "marks": 2},
+          {"description": "Included short words or labels to explain the actions", "marks": 1},
+          {"description": "Poster is clear and suitable for learners", "marks": 1}
+        ]
+      },
+      "answer": "",
+      "hints": ["Think about bathing and clean clothes.", "Use drawings of soap, water, and deodorant."],
+      "explanation": "This is a drawing task. Your teacher will mark it using the rubric.",
+      "misconception": "Body odour is not a health issue.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "plan_project",
+      "type": "short_answer",
+      "difficulty": 3,
+      "stem": "Why is it important to plan a project on body odour?",
+      "answer": ["to help people learn how to prevent it", "to raise awareness and improve hygiene", "to teach others about good hygiene"],
+      "hints": ["Think about helping others.", "A project can teach people."],
+      "explanation": "Planning a project on body odour is important to raise awareness and teach people how to prevent it.",
+      "misconception": "Projects on body odour are not useful.",
+      "uncertain": []
+    }
+  ]
+}

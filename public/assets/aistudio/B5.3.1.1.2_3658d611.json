@@ -1,0 +1,308 @@
+{
+  "indicator": {
+    "code": "B5.3.1.1.2",
+    "subject": "Mathematics",
+    "level": "Basic 5",
+    "strand": "Geometry and Measurement",
+    "sub_strand": "Lines and Shapes",
+    "content_standard": "B5.3.1.1 Identify and sort quadrilaterals, including rectangles, squares, trapezoids, parallelograms, and rhombuses, according to their attributes",
+    "objective": "Use paper folding with cut-out squares and rectangles to investigate sides, angles, and diagonals properties",
+    "source_page": 116
+  },
+  "spec": {
+    "skills": [
+      {"tag": "fold_to_investigate_sides", "description": "Use paper folding to show equal sides.", "minQuestions": 2},
+      {"tag": "fold_to_investigate_angles", "description": "Use paper folding to show right angles.", "minQuestions": 2},
+      {"tag": "fold_to_investigate_diagonals", "description": "Use paper folding to investigate diagonals.", "minQuestions": 2}
+    ],
+    "difficultyPlan": "20 questions: 5 at difficulty 1, 7 at difficulty 2, 5 at difficulty 3, 3 at difficulty 4.",
+    "misconceptions": [
+      "Folding unevenly.",
+      "Not aligning corners.",
+      "Failing to connect folding with properties."
+    ],
+    "needsTeacherAssessment": true
+  },
+  "questions": [
+    {
+      "skill_tag": "fold_to_investigate_sides",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "How can you use paper folding to show that all sides of a square are equal?",
+      "options": ["Fold the square in half and see if the sides match", "Fold the square diagonally and compare the sides", "Fold the square so that adjacent sides overlap", "Measure the sides with a ruler"],
+      "answer": 0,
+      "hints": ["Folding helps compare lengths without measuring."],
+      "explanation": "Folding the square so that sides overlap shows they are equal.",
+      "misconception": "Thinking folding doesn't help compare sides.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "fold_to_investigate_angles",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "How can you use paper folding to check if a corner is a right angle?",
+      "options": ["Fold the corner so the two edges meet perfectly", "Fold the paper in half", "Fold the paper diagonally", "Tear the corner"],
+      "answer": 0,
+      "hints": ["A right angle is formed when two edges meet perfectly."],
+      "explanation": "Folding the corner so edges meet gives a right angle.",
+      "misconception": "Thinking any fold gives a right angle.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "fold_to_investigate_diagonals",
+      "type": "mcq",
+      "difficulty": 1,
+      "stem": "What do you notice about the diagonals of a square when you fold along them?",
+      "options": ["They are equal and cross at right angles", "They are unequal", "They do not cross", "They cross at 45°"],
+      "answer": 0,
+      "hints": ["Fold along both diagonals and observe."],
+      "explanation": "The diagonals of a square are equal and perpendicular.",
+      "misconception": "Thinking diagonals are unequal.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "fold_to_investigate_sides",
+      "type": "practical",
+      "difficulty": 1,
+      "stem": "Take a square piece of paper. Fold it so that one side overlaps the opposite side. What do you observe?",
+      "hints": ["Fold one side onto the opposite side."],
+      "explanation": "The sides match perfectly, showing they are equal.",
+      "rubric": {
+        "criteria": [
+          {"description": "Folds so sides overlap.", "marks": 1},
+          {"description": "Observes that sides are equal.", "marks": 1}
+        ]
+      },
+      "misconception": "Not folding accurately.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "fold_to_investigate_angles",
+      "type": "practical",
+      "difficulty": 1,
+      "stem": "Take a rectangular piece of paper. Fold one corner so that the two edges meet. What type of angle is formed?",
+      "hints": ["A square corner is a right angle."],
+      "explanation": "A right angle is formed.",
+      "rubric": {
+        "criteria": [
+          {"description": "Folds corner correctly.", "marks": 1},
+          {"description": "Identifies right angle.", "marks": 1}
+        ]
+      },
+      "misconception": "Saying acute or obtuse.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "fold_to_investigate_sides",
+      "type": "written",
+      "difficulty": 2,
+      "stem": "Explain how to use paper folding to show that opposite sides of a rectangle are equal.",
+      "hints": ["Fold one side onto the opposite side."],
+      "explanation": "Fold the rectangle so that one side lies exactly on the opposite side. If they match perfectly, the sides are equal.",
+      "rubric": {
+        "criteria": [
+          {"description": "States to fold one side onto opposite side.", "marks": 1},
+          {"description": "Concludes equality if they match.", "marks": 1}
+        ]
+      },
+      "misconception": "Thinking folding cannot show equality.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "fold_to_investigate_angles",
+      "type": "written",
+      "difficulty": 2,
+      "stem": "Explain how paper folding can help you check if all angles in a square are right angles.",
+      "hints": ["Fold each corner and see if edges meet perfectly."],
+      "explanation": "Fold each corner so the two edges meet perfectly. If they do, each corner is a right angle.",
+      "rubric": {
+        "criteria": [
+          {"description": "Mentions folding each corner.", "marks": 1},
+          {"description": "Explains that matching edges indicate right angles.", "marks": 1}
+        ]
+      },
+      "misconception": "Thinking only one corner needs checking.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "fold_to_investigate_diagonals",
+      "type": "numeric",
+      "difficulty": 2,
+      "stem": "A square is folded along one diagonal. How many equal triangles are formed?",
+      "answer": 2,
+      "check": "2",
+      "hints": ["A diagonal cuts a square into two triangles."],
+      "explanation": "2 equal triangles.",
+      "misconception": "Saying 4.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "fold_to_investigate_diagonals",
+      "type": "mcq",
+      "difficulty": 2,
+      "stem": "When you fold a rectangle along its diagonal, do the two halves match perfectly?",
+      "options": ["Yes, always", "No, they are not identical", "Only if it is a square"],
+      "answer": 2,
+      "hints": ["A rectangle has unequal sides, so diagonal folding does not match perfectly unless it's a square."],
+      "explanation": "Only if it is a square.",
+      "misconception": "Thinking all rectangles fold perfectly along diagonals.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "fold_to_investigate_sides",
+      "type": "practical",
+      "difficulty": 2,
+      "stem": "Take a square paper. Fold it in half vertically and horizontally. What do you notice about the creases?",
+      "hints": ["The creases are lines of symmetry."],
+      "explanation": "The creases are lines of symmetry that divide the square into equal parts.",
+      "rubric": {
+        "criteria": [
+          {"description": "Folds vertically and horizontally.", "marks": 1},
+          {"description": "Observes equal parts or symmetry.", "marks": 1}
+        ]
+      },
+      "misconception": "Not relating creases to symmetry.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "fold_to_investigate_angles",
+      "type": "practical",
+      "difficulty": 2,
+      "stem": "Fold a square diagonally. What angle do the two diagonals make where they cross?",
+      "hints": ["They cross at a square corner."],
+      "explanation": "The diagonals cross at right angles (90°).",
+      "rubric": {
+        "criteria": [
+          {"description": "Folds diagonally.", "marks": 1},
+          {"description": "Identifies right angle at crossing.", "marks": 1}
+        ]
+      },
+      "misconception": "Saying 45°.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "fold_to_investigate_diagonals",
+      "type": "written",
+      "difficulty": 2,
+      "stem": "Explain how to check if a quadrilateral is a square using paper folding.",
+      "hints": ["Check equal sides and right angles by folding."],
+      "explanation": "Fold to check all sides are equal (fold each side onto the opposite) and all angles are right angles (fold corners).",
+      "rubric": {
+        "criteria": [
+          {"description": "Mentions checking equal sides.", "marks": 1},
+          {"description": "Mentions checking right angles.", "marks": 1}
+        ]
+      },
+      "misconception": "Only checking one property.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "fold_to_investigate_sides",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "A pupil folds a rectangle along its diagonal and says the two halves are identical. Is the pupil correct? Explain.",
+      "hints": ["A rectangle has unequal sides."],
+      "explanation": "No, the halves are not identical unless the rectangle is a square. The diagonal does not divide a rectangle into two congruent triangles.",
+      "rubric": {
+        "criteria": [
+          {"description": "States pupil is incorrect.", "marks": 1},
+          {"description": "Explains only squares give identical halves.", "marks": 1}
+        ]
+      },
+      "misconception": "Agreeing with the pupil.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "fold_to_investigate_diagonals",
+      "type": "numeric",
+      "difficulty": 3,
+      "stem": "A square is folded along both diagonals. How many small triangles are formed?",
+      "answer": 4,
+      "check": "4",
+      "hints": ["Two diagonals divide a square into 4 triangles."],
+      "explanation": "4 triangles.",
+      "misconception": "Saying 2.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "fold_to_investigate_diagonals",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "Explain how you can use paper folding to show that the diagonals of a square bisect each other.",
+      "hints": ["Fold both diagonals and observe the intersection."],
+      "explanation": "Fold along both diagonals. The point where they cross is the midpoint of each diagonal, showing they bisect each other.",
+      "rubric": {
+        "criteria": [
+          {"description": "Mentions folding both diagonals.", "marks": 1},
+          {"description": "Observes intersection at midpoints.", "marks": 1}
+        ]
+      },
+      "misconception": "Not connecting fold to bisection.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "fold_to_investigate_angles",
+      "type": "written",
+      "difficulty": 3,
+      "stem": "A pupil folds a rectangle's corner so edges meet. They say this proves the angle is 90°. Is this correct? Explain.",
+      "hints": ["Folding edges to meet shows a right angle."],
+      "explanation": "Yes, when the two edges meet perfectly, the angle is 90°.",
+      "rubric": {
+        "criteria": [
+          {"description": "States correct.", "marks": 1},
+          {"description": "Explains edges meeting indicates 90°.", "marks": 1}
+        ]
+      },
+      "misconception": "Thinking folding is not proof.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "fold_to_investigate_diagonals",
+      "type": "written",
+      "difficulty": 4,
+      "stem": "Describe an experiment using paper folding to compare the diagonals of a square and a rectangle.",
+      "hints": ["Fold along diagonals and compare lengths/angles."],
+      "explanation": "Fold each shape along its diagonals. In the square, diagonals are equal and cross at 90°. In the rectangle, diagonals are equal but do not cross at 90°.",
+      "rubric": {
+        "criteria": [
+          {"description": "Describes folding both shapes.", "marks": 1},
+          {"description": "Compares diagonal properties.", "marks": 1}
+        ]
+      },
+      "misconception": "Thinking they behave the same.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "fold_to_investigate_sides",
+      "type": "written",
+      "difficulty": 4,
+      "stem": "A pupil says folding can only show symmetry, not side lengths. Explain how folding can be used to compare side lengths.",
+      "hints": ["Fold one side onto another to see if they match."],
+      "explanation": "Folding one side onto another shows if they are equal length. This is a valid way to compare side lengths without a ruler.",
+      "rubric": {
+        "criteria": [
+          {"description": "States folding compares lengths.", "marks": 1},
+          {"description": "Explains matching sides indicate equality.", "marks": 1}
+        ]
+      },
+      "misconception": "Thinking folding is only for symmetry.",
+      "uncertain": []
+    },
+    {
+      "skill_tag": "fold_to_investigate_angles",
+      "type": "written",
+      "difficulty": 4,
+      "stem": "Explain how folding a square in half twice can show that its diagonals meet at the centre.",
+      "hints": ["Folding in half creates the centre point."],
+      "explanation": "Folding the square in half vertically and horizontally creates creases that intersect at the centre. Folding diagonals also passes through this centre, showing the diagonals meet there.",
+      "rubric": {
+        "criteria": [
+          {"description": "Mentions vertical/horizontal folds.", "marks": 1},
+          {"description": "Explains diagonals pass through centre.", "marks": 1}
+        ]
+      },
+      "misconception": "Not relating folds to centre.",
+      "uncertain": []
+    }
+  ]
+}

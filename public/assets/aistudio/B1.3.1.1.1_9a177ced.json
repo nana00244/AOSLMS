@@ -1,0 +1,50 @@
+{
+  "indicator": {
+    "code": "B1.3.1.1.1",
+    "subject": "Science",
+    "level": "Basic 1",
+    "strand": "SYSTEMS",
+    "sub_strand": "The Human Body Systems",
+    "content_standard": "B1.3.1.1: (Content standard garbled in source document)",
+    "objective": "Identify the external human body parts by their appropriate names (e.g. eyes, ears, mouth, nose, legs, hands, shoulders, knees, fingers, toes and chest)",
+    "source_page": 28
+  },
+  "spec": {
+    "skills": [
+      {"tag": "HBS1-NAME", "description": "Name external body parts correctly when shown or pointed to", "minQuestions": 4},
+      {"tag": "HBS1-IDENT", "description": "Identify/point to a named body part on self or on a picture", "minQuestions": 3},
+      {"tag": "HBS1-LOCATE", "description": "Say where a body part is found", "minQuestions": 2},
+      {"tag": "HBS1-DRAW", "description": "Draw and label at least three external body parts", "minQuestions": 2}
+    ],
+    "difficultyPlan": "5x D1, 7x D2, 5x D3, 3x D4",
+    "misconceptions": [
+      "The chest is the same as the stomach.",
+      "Fingers and toes are the same.",
+      "Shoulders are part of the arm only.",
+      "Confusing 'knee' and 'elbow'."
+    ],
+    "needsTeacherAssessment": true
+  },
+  "questions": [
+    {"skill_tag": "HBS1-NAME", "type": "mcq", "difficulty": 1, "stem": "Which part of the body do we use to see?", "options": ["Eyes", "Ears", "Nose", "Mouth"], "answer": 0, "hints": ["You look with it.", "It is on your face."], "explanation": "We use our eyes to see.", "misconception": "Pupils may confuse the eyes with other facial parts.", "uncertain": []},
+    {"skill_tag": "HBS1-NAME", "type": "mcq", "difficulty": 1, "stem": "Which part of the body do we use to hear?", "options": ["Eyes", "Ears", "Legs", "Hands"], "answer": 1, "hints": ["You listen with it.", "It is on the side of your head."], "explanation": "We use our ears to hear.", "misconception": "Pupils may think they hear with their eyes.", "uncertain": []},
+    {"skill_tag": "HBS1-NAME", "type": "mcq", "difficulty": 1, "stem": "What is the name of the body part we use to walk?", "options": ["Hands", "Eyes", "Legs", "Nose"], "answer": 2, "hints": ["You stand on them.", "They have knees."], "explanation": "We use our legs to walk.", "misconception": "Pupils may confuse legs with arms.", "uncertain": []},
+    {"skill_tag": "HBS1-IDENT", "type": "mcq", "difficulty": 1, "stem": "Point to the part of your body used for smelling. What is it called?", "options": ["Ear", "Eye", "Mouth", "Nose"], "answer": 3, "hints": ["It is in the middle of your face.", "You breathe through it."], "explanation": "The nose is used for smelling.", "misconception": "Pupils may think the mouth is for smelling.", "uncertain": []},
+    {"skill_tag": "HBS1-LOCATE", "type": "mcq", "difficulty": 1, "stem": "Where are your fingers found?", "options": ["On your hand", "On your leg", "On your head", "On your chest"], "answer": 0, "hints": ["You use them to hold a pencil.", "They are at the end of your arms."], "explanation": "Fingers are found on the hand.", "misconception": "Pupils may think fingers are on the feet.", "uncertain": []},
+    {"skill_tag": "HBS1-NAME", "type": "mcq", "difficulty": 2, "stem": "Which of these is a body part?", "options": ["Stone", "Shoulder", "Tree", "Cup"], "answer": 1, "hints": ["Which one is part of you?", "It is near your neck."], "explanation": "The shoulder is a body part.", "misconception": "Pupils may think external objects are body parts.", "uncertain": []},
+    {"skill_tag": "HBS1-IDENT", "type": "mcq", "difficulty": 2, "stem": "Kofi is touching the part of his body where his arm joins his neck. What part is he touching?", "options": ["Knee", "Chest", "Shoulder", "Toe"], "answer": 2, "hints": ["It is near the neck.", "You can shrug it."], "explanation": "Kofi is touching his shoulder.", "misconception": "Pupils may confuse the shoulder with the chest.", "uncertain": []},
+    {"skill_tag": "HBS1-LOCATE", "type": "mcq", "difficulty": 2, "stem": "Where is your chest located?", "options": ["At the back of your body", "On the front of your body between your neck and stomach", "On your head", "On your foot"], "answer": 1, "hints": ["It is below your neck.", "It is the front part of your upper body."], "explanation": "The chest is on the front of the body between the neck and the stomach.", "misconception": "Pupils may think the chest is the same as the stomach.", "uncertain": []},
+    {"skill_tag": "HBS1-NAME", "type": "mcq", "difficulty": 2, "stem": "Which part of the body is used to eat?", "options": ["Nose", "Eyes", "Mouth", "Ears"], "answer": 2, "hints": ["You put food in it.", "It has lips and teeth."], "explanation": "We use the mouth to eat.", "misconception": "Pupils may think the nose is used to eat because it is near the mouth.", "uncertain": []},
+    {"skill_tag": "HBS1-NAME", "type": "mcq", "difficulty": 2, "stem": "What do we call the parts at the end of our arms?", "options": ["Feet", "Hands", "Knees", "Toes"], "answer": 1, "hints": ["You use them to clap.", "They have fingers."], "explanation": "The parts at the end of our arms are the hands.", "misconception": "Pupils may confuse hands with feet.", "uncertain": []},
+    {"skill_tag": "HBS1-LOCATE", "type": "mcq", "difficulty": 2, "stem": "Where are your knees?", "options": ["On your arms", "On your legs", "On your head", "On your hands"], "answer": 1, "hints": ["You bend them when you walk.", "They are in the middle of your legs."], "explanation": "The knees are found on the legs.", "misconception": "Pupils may confuse knees with elbows.", "uncertain": []},
+    {"skill_tag": "HBS1-IDENT", "type": "short_answer", "difficulty": 2, "stem": "Name the body part you use to kick a ball.", "answer": ["leg", "legs", "foot", "feet"], "hints": ["It is at the bottom of your body.", "It has a knee."], "explanation": "We use our legs (and feet) to kick a ball.", "misconception": "Pupils may say 'hands'.", "uncertain": []},
+    {"skill_tag": "HBS1-DRAW", "type": "drawing", "difficulty": 3, "stem": "Draw a human head. Label the eyes, nose, and mouth.", "rubric": {"criteria": [{"description": "Draws a recognisable head", "marks": 1}, {"description": "Labels the eyes correctly", "marks": 1}, {"description": "Labels the nose correctly", "marks": 1}, {"description": "Labels the mouth correctly", "marks": 1}]}, "hints": ["Draw a circle.", "Add the features you see on your own face."], "explanation": "This tests drawing and identifying parts of the face.", "uncertain": []},
+    {"skill_tag": "HBS1-NAME", "type": "short_answer", "difficulty": 3, "stem": "Name three parts of the body that are on your face.", "answer": ["eyes", "nose", "mouth", "ears"], "hints": ["Look in a mirror.", "What do you see?"], "explanation": "The eyes, nose, mouth, and ears are found on the face.", "misconception": "Pupils may name body parts not on the face, like knees.", "uncertain": []},
+    {"skill_tag": "HBS1-IDENT", "type": "mcq", "difficulty": 3, "stem": "Ama has a pain in the part of her body that connects her head to her shoulders. What part is this?", "options": ["Chest", "Neck", "Knee", "Toe"], "answer": 1, "hints": ["It holds your head up.", "It is between the head and shoulders."], "explanation": "The neck connects the head to the shoulders.", "misconception": "Pupils may confuse the neck with the chest.", "uncertain": []},
+    {"skill_tag": "HBS1-LOCATE", "type": "mcq", "difficulty": 3, "stem": "Which body parts work together when you clap your hands?", "options": ["Your hands", "Your feet", "Your eyes", "Your knees"], "answer": 0, "hints": ["You bring them together.", "They are at the end of your arms."], "explanation": "You use your hands to clap.", "misconception": "Pupils may think you clap with your legs.", "uncertain": []},
+    {"skill_tag": "HBS1-DRAW", "type": "drawing", "difficulty": 3, "stem": "Draw a hand and label the fingers.", "rubric": {"criteria": [{"description": "Draws a recognisable hand", "marks": 1}, {"description": "Draws fingers", "marks": 1}, {"description": "Labels the fingers", "marks": 1}]}, "hints": ["Draw an outline of your hand.", "Count the fingers."], "explanation": "This tests drawing and labeling the hand.", "uncertain": []},
+    {"skill_tag": "HBS1-IDENT", "type": "mcq", "difficulty": 4, "stem": "Which of these is NOT an external body part you can see on the outside?", "options": ["Eyes", "Chest", "Heart", "Hands"], "answer": 2, "hints": ["Can you see it from the outside?", "It is inside your chest."], "explanation": "The heart is an internal organ. You cannot see it from the outside.", "misconception": "Pupils may think they can see their heart because they can feel it beating.", "uncertain": []},
+    {"skill_tag": "HBS1-NAME", "type": "short_answer", "difficulty": 4, "stem": "Write down three body parts you use when you wash your face.", "answer": ["hands", "fingers", "eyes", "face", "mouth"], "hints": ["What do you use to scrub?", "What are you washing?"], "explanation": "You use your hands and fingers to wash your face, which includes your eyes and mouth.", "misconception": "Pupils may list unrelated parts like knees.", "uncertain": []},
+    {"skill_tag": "HBS1-LOCATE", "type": "mcq", "difficulty": 4, "stem": "Kwame is standing straight. Which body part is touching the ground?", "options": ["His hands", "His knees", "His feet", "His chest"], "answer": 2, "hints": ["You stand on them.", "They have toes."], "explanation": "When standing, the feet touch the ground.", "misconception": "Pupils may say knees, forgetting that feet are at the very bottom.", "uncertain": []}
+  ]
+}
