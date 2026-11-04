@@ -1,6 +1,6 @@
 # Learning Hub curriculum source ledger
 
-Researched 28 October 2026. The built-in catalog contains **18 original lessons and 54 multiple-choice questions**, with three Mathematics and three Science lessons at each of B7, B8 and B9. It is a starter catalog covering selected standards, not the full Ghanaian curriculum, a replacement textbook, or a NaCCA-endorsed product. Science coverage currently concentrates on Diversity of Matter. No Khan Academy teaching content is included.
+Researched 28 October 2026. The built-in catalog contains **18 original lessons and 54 multiple-choice questions**, with three Mathematics and three Science lessons at each of B7, B8 and B9. It is a starter catalog covering selected standards, not the full Ghanaian curriculum, a replacement textbook, or a NaCCA-endorsed product. Science coverage currently concentrates on Diversity of Matter. No the external learning platform teaching content is included.
 
 ## Source identity and access
 

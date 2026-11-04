@@ -3,7 +3,7 @@
 
 ---
 
-I am building a Khan Academy-style learning app for Ghana's NaCCA curriculum, Basic 1 to Basic 9. I have attached `published_questions.json`: questions that teachers have already reviewed and approved. Please build the features below. Work in the numbered steps, and STOP after each step so I can test it before you continue. If something cannot be done in this environment, tell me plainly instead of working around it.
+I am building a Practice Arena learning app for Ghana's NaCCA curriculum, Basic 1 to Basic 9. I have attached `published_questions.json`: questions that teachers have already reviewed and approved. Please build the features below. Work in the numbered steps, and STOP after each step so I can test it before you continue. If something cannot be done in this environment, tell me plainly instead of working around it.
 
 ## DATA YOU ARE GIVEN
 `published_questions.json` is an array. Each item has: `id`, `indicator_code`, `subject`, `level` (B1 to B9), `strand`, `sub_strand`, `objective`, `skill_tag`, `type`, `difficulty` (1 to 4), `stem`, `options`, `answer`, `hints`, `explanation`, `rubric`, `reviewer`.

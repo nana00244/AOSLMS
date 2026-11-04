@@ -1,10 +1,10 @@
 # Text and colour visibility review — 13 October 2026
 
-Reference: https://www.khanacademy.org/ (English public homepage).
+Reference: an external educational website’s English public homepage.
 
 ## Observed reference
 
-REA controlled browser capture `ev_a65374d594ae003c84e133a07f40bc44589e5c7a46808e054a99e411cb12909b` inspected the loaded page after dismissing the cookie and donation overlays. DOM, accessibility text and screenshot were captured. The earlier capture `ev_06b9d9eb0344a06b8074106b58260122807683a60e48279d1dd4484790583be5` shows those overlays. These observations cover the public homepage only, not authenticated Khan Academy screens.
+REA controlled browser capture `ev_a65374d594ae003c84e133a07f40bc44589e5c7a46808e054a99e411cb12909b` inspected the loaded page after dismissing the cookie and donation overlays. DOM, accessibility text and screenshot were captured. The earlier capture `ev_06b9d9eb0344a06b8074106b58260122807683a60e48279d1dd4484790583be5` shows those overlays. These observations cover the public homepage only, not authenticated the external learning platform screens.
 
 The rendered page uses near-black text, white surfaces, purple links/actions, a prominent heading and clearly separated role cards. A supplementary Playwright computed-style read measured:
 

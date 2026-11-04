@@ -829,7 +829,7 @@ function Shell() {
                 element={<Guard path={path as string}>{el}</Guard>}
               />
             ))}
-            <Route path="/khan" element={<Navigate to="/learning-hub" replace />} />
+            <Route path="/practice-arena" element={<Navigate to="/learning-hub" replace />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
           <footer className="workspace-footer">

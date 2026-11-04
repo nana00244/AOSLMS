@@ -34,9 +34,9 @@ import {
 import type { HubSnapshot, LearningLesson, HubPracticeResult } from '../learningHub/types';
 import { learningStatus, recommendation } from '../learningHub/progress';
 import { NaccaQuestionBankView } from '../components/NaccaQuestionBankView';
-import { KhanPracticePlayer } from '../components/KhanPracticePlayer';
+import { PracticeArenaPlayer } from '../components/PracticeArenaPlayer';
 import { TeacherQuizCreator } from '../components/TeacherQuizCreator';
-import { KhanQuizPlayer } from '../components/KhanQuizPlayer';
+import { PracticeArenaQuizPlayer } from '../components/PracticeArenaQuizPlayer';
 import { QuizManagementView } from '../components/QuizManagementView';
 import { getQuizById, type QuizDefinition } from '../nacca/quizEngine';
 import { naccaQuestions, naccaIndicators } from '../learningHub/naccaBank';
@@ -129,7 +129,7 @@ export function LearningHub() {
 
   if (quizId && activeQuiz) {
     return (
-      <KhanQuizPlayer
+      <PracticeArenaQuizPlayer
         quiz={activeQuiz}
         studentId={sid || 'student_demo'}
         studentName={user?.name || 'Learner'}
@@ -162,7 +162,7 @@ export function LearningHub() {
 
   if (practiceIndicator) {
     return (
-      <KhanPracticePlayer
+      <PracticeArenaPlayer
         key={`${params.get('subject') || ''}:${practiceIndicator}`}
         initialIndicatorCode={practiceIndicator}
         initialSubject={params.get('subject') || undefined}
@@ -187,7 +187,7 @@ export function LearningHub() {
         </div>
         <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
           <Button onClick={() => openPractice('B1.1.1.1.1')}>
-            <Target size={16} /> Khan Academy Practice
+            <Target size={16} /> Practice Arena
           </Button>
           <span className="lh-school">GES · NaCCA curriculum</span>
         </div>

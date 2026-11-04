@@ -75,7 +75,7 @@ interface QuestionState {
   explanationViewed: boolean;
 }
 
-export function KhanPracticePlayer({
+export function PracticeArenaPlayer({
   initialIndicatorCode,
   initialSubject,
   onBack,
@@ -455,16 +455,16 @@ export function KhanPracticePlayer({
   };
 
   return (
-    <div className="khan-app-container">
+    <div className="practice-arena-app-container">
       {/* Top Header Bar */}
-      <header className="khan-top-header">
-        <div className="khan-header-left">
-          <Button variant="ghost" className="khan-header-back" onClick={onBack}>
+      <header className="practice-arena-top-header">
+        <div className="practice-arena-header-left">
+          <Button variant="ghost" className="practice-arena-header-back" onClick={onBack}>
             <ArrowLeft size={16} /> Learning Hub
           </Button>
 
           {/* Level Switcher (Basic 1, Basic 2) */}
-          <div className="khan-explore-badge" style={{ display: 'flex', gap: 6 }}>
+          <div className="practice-arena-explore-badge" style={{ display: 'flex', gap: 6 }}>
             {availableLevels.map((lvl) => (
               <span
                 key={lvl}
@@ -484,16 +484,16 @@ export function KhanPracticePlayer({
           </div>
         </div>
 
-        <div className="khan-header-center">
-          <div className="khan-brand-logo">
-            <span className="khan-leaf-icon">🌿</span>
-            <span className="khan-logo-text">
+        <div className="practice-arena-header-center">
+          <div className="practice-arena-brand-logo">
+            <span className="practice-arena-leaf-icon">🌿</span>
+            <span className="practice-arena-logo-text">
               AYISATU OWEN · <em>NaCCA LMS</em>
             </span>
           </div>
         </div>
 
-        <div className="khan-header-right">
+        <div className="practice-arena-header-right">
           <button
             onClick={() => setShowHistoryModal(true)}
             style={{
@@ -512,20 +512,20 @@ export function KhanPracticePlayer({
           >
             <History size={14} /> Attempt History ({indicatorAttemptsData.allAttempts.length})
           </button>
-          <span className="khan-curriculum-tag">
+          <span className="practice-arena-curriculum-tag">
             {selectedLevel} {selectedSubject}
           </span>
-          {staff && <span className="khan-role-badge">Teacher Mode</span>}
+          {staff && <span className="practice-arena-role-badge">Teacher Mode</span>}
         </div>
       </header>
 
       {/* Main Two-Column Practice Layout */}
-      <div className={`khan-layout ${sidebarCollapsed ? 'sidebar-collapsed' : ''}`}>
+      <div className={`practice-arena-layout ${sidebarCollapsed ? 'sidebar-collapsed' : ''}`}>
         {/* Left Sidebar */}
-        <aside className="khan-sidebar">
-          <div className="khan-sidebar-header">
-            <div className="khan-course-card">
-              <span className="khan-course-icon">📘</span>
+        <aside className="practice-arena-sidebar">
+          <div className="practice-arena-sidebar-header">
+            <div className="practice-arena-course-card">
+              <span className="practice-arena-course-icon">📘</span>
               <div>
                 <h4>
                   {selectedLevel} {selectedSubject}
@@ -534,14 +534,14 @@ export function KhanPracticePlayer({
               </div>
             </div>
 
-            <div className="khan-unit-breadcrumb">
+            <div className="practice-arena-unit-breadcrumb">
               <span>
                 COURSE: {selectedLevel.toUpperCase()} {selectedSubject.toUpperCase()}
               </span>{' '}
               › <span>UNIT: {currentUnit.name.toUpperCase()}</span>
             </div>
 
-            <div className="khan-lesson-title-bar">
+            <div className="practice-arena-lesson-title-bar">
               <h5>
                 {currentIndicator.code}: {currentIndicator.sub_strand || currentIndicator.strand}
               </h5>
@@ -615,7 +615,7 @@ export function KhanPracticePlayer({
           </div>
 
           {/* Mode Selector */}
-          <div className="khan-mode-tabs">
+          <div className="practice-arena-mode-tabs">
             <button
               className={mode === 'practice' ? 'active' : ''}
               onClick={() => setMode('practice')}
@@ -647,8 +647,8 @@ export function KhanPracticePlayer({
           </div>
 
           {/* Topic List */}
-          <div className="khan-exercise-list">
-            <div className="khan-list-heading">
+          <div className="practice-arena-exercise-list">
+            <div className="practice-arena-list-heading">
               TOPICS IN {currentUnit.name.toUpperCase()} ({currentUnit.indicators.length})
             </div>
             {currentUnit.indicators.map((ind) => {
@@ -656,16 +656,16 @@ export function KhanPracticePlayer({
               return (
                 <button
                   key={`${ind.subject}:${ind.code}`}
-                  className={`khan-exercise-item ${active ? 'active' : ''}`}
+                  className={`practice-arena-exercise-item ${active ? 'active' : ''}`}
                   onClick={() => {
                     setCurrentIndicatorCode(ind.code);
                     restartSession();
                   }}
                 >
-                  <span className="khan-item-indicator-icon">{active ? '✏️' : '○'}</span>
-                  <div className="khan-item-info">
-                    <span className="khan-item-code">{ind.code}</span>
-                    <span className="khan-item-name">{ind.sub_strand || ind.strand}</span>
+                  <span className="practice-arena-item-indicator-icon">{active ? '✏️' : '○'}</span>
+                  <div className="practice-arena-item-info">
+                    <span className="practice-arena-item-code">{ind.code}</span>
+                    <span className="practice-arena-item-name">{ind.sub_strand || ind.strand}</span>
                   </div>
                 </button>
               );
@@ -673,8 +673,8 @@ export function KhanPracticePlayer({
           </div>
 
           {/* Bottom Breadcrumbs */}
-          <div className="khan-sidebar-footer">
-            <div className="khan-deep-breadcrumb">
+          <div className="practice-arena-sidebar-footer">
+            <div className="practice-arena-deep-breadcrumb">
               {selectedSubject} › {selectedLevel} › {currentIndicator.strand} ›{' '}
               {currentIndicator.sub_strand} › {currentIndicator.code}
             </div>
@@ -683,7 +683,7 @@ export function KhanPracticePlayer({
 
         {/* Sidebar Collapse Toggle */}
         <button
-          className="khan-sidebar-toggle"
+          className="practice-arena-sidebar-toggle"
           aria-label={sidebarCollapsed ? 'Expand sidebar' : 'Collapse sidebar'}
           onClick={() => setSidebarCollapsed(!sidebarCollapsed)}
         >
@@ -691,11 +691,11 @@ export function KhanPracticePlayer({
         </button>
 
         {/* Center / Right Canvas */}
-        <main className="khan-main-stage">
+        <main className="practice-arena-main-stage">
           {sessionCompleted ? (
             /* Session Completed Screen */
-            <div className="khan-complete-card">
-              <div className="khan-celebration-badge">
+            <div className="practice-arena-complete-card">
+              <div className="practice-arena-celebration-badge">
                 <Sparkles size={36} />
               </div>
               <h2>Good effort! Practice complete</h2>
@@ -703,12 +703,12 @@ export function KhanPracticePlayer({
                 You’ve finished this practice set on <strong>{currentIndicator.code}</strong>.
               </p>
 
-              <div className="khan-score-box">
-                <div className="khan-score-number">
+              <div className="practice-arena-score-box">
+                <div className="practice-arena-score-number">
                   {questionStates.filter((q) => q.isCorrect).length} / {questionStates.length}
                 </div>
                 <span>Questions Correct</span>
-                <div className="khan-score-percent">
+                <div className="practice-arena-score-percent">
                   {Math.round(
                     (questionStates.filter((q) => q.isCorrect).length /
                       (questionStates.length || 1)) *
@@ -765,7 +765,7 @@ export function KhanPracticePlayer({
                 </small>
               </div>
 
-              <div className="khan-completion-actions">
+              <div className="practice-arena-completion-actions">
                 <Button onClick={restartSession}>
                   <RotateCcw size={16} /> Practise again (Retake)
                 </Button>
@@ -790,17 +790,17 @@ export function KhanPracticePlayer({
               </div>
             </div>
           ) : !studentSafeQuestion ? (
-            <div className="khan-loading-stage">
+            <div className="practice-arena-loading-stage">
               <p>No questions found for this indicator. Choose "Practice" or another topic.</p>
               <Button onClick={() => setMode('practice')}>Return to Practice</Button>
             </div>
           ) : (
             /* Active Question Screen */
-            <div className="khan-question-view">
-              <div className="khan-question-header-rule" />
+            <div className="practice-arena-question-view">
+              <div className="practice-arena-question-header-rule" />
 
               {/* Question Stem */}
-              <div className="khan-question-content">
+              <div className="practice-arena-question-content">
                 <div
                   style={{
                     display: 'flex',
@@ -835,10 +835,10 @@ export function KhanPracticePlayer({
                   </span>
                 </div>
 
-                <h3 className="khan-stem-text">{studentSafeQuestion.stem}</h3>
+                <h3 className="practice-arena-stem-text">{studentSafeQuestion.stem}</h3>
 
                 {/* Sub-instruction label */}
-                <div className="khan-instruction-label">
+                <div className="practice-arena-instruction-label">
                   {studentSafeQuestion.type === 'mcq' && 'Choose 1 answer:'}
                   {studentSafeQuestion.type === 'numeric' &&
                     'Enter your numeric answer (digits only):'}
@@ -871,14 +871,14 @@ export function KhanPracticePlayer({
 
                 {/* Question Inputs */}
                 {studentSafeQuestion.type === 'mcq' && studentSafeQuestion.options && (
-                  <div className="khan-mcq-options">
+                  <div className="practice-arena-mcq-options">
                     {studentSafeQuestion.options.map((opt, optIdx) => {
                       const isSelected = currentQState.selectedOption === optIdx;
                       const isChecked = currentQState.isAnswered;
                       // Determine correct only AFTER check
                       const isOptionCorrect = isChecked && optIdx === currentQ?.answer;
 
-                      let rowClass = 'khan-option-row';
+                      let rowClass = 'practice-arena-option-row';
                       if (isSelected) rowClass += ' selected';
                       if (isChecked && isSelected) {
                         rowClass += currentQState.isCorrect ? ' correct' : ' incorrect';
@@ -892,10 +892,10 @@ export function KhanPracticePlayer({
                           className={rowClass}
                           onClick={() => handleSelectOption(optIdx)}
                         >
-                          <span className="khan-opt-badge">{String.fromCharCode(65 + optIdx)}</span>
-                          <span className="khan-opt-text">{opt}</span>
+                          <span className="practice-arena-opt-badge">{String.fromCharCode(65 + optIdx)}</span>
+                          <span className="practice-arena-opt-text">{opt}</span>
                           {isChecked && isSelected && (
-                            <span className="khan-result-icon">
+                            <span className="practice-arena-result-icon">
                               {currentQState.isCorrect ? (
                                 <CheckCircle2 size={18} color="#137333" />
                               ) : (
@@ -911,7 +911,7 @@ export function KhanPracticePlayer({
 
                 {/* Numeric Entry */}
                 {studentSafeQuestion.type === 'numeric' && (
-                  <div className="khan-numeric-entry">
+                  <div className="practice-arena-numeric-entry">
                     <input
                       type="text"
                       inputMode="decimal"
@@ -931,7 +931,7 @@ export function KhanPracticePlayer({
 
                 {/* Short Answer Entry */}
                 {studentSafeQuestion.type === 'short_answer' && (
-                  <div className="khan-short-answer-entry">
+                  <div className="practice-arena-short-answer-entry">
                     <input
                       type="text"
                       placeholder="Type your answer here…"
@@ -952,8 +952,8 @@ export function KhanPracticePlayer({
                 {['written', 'oral', 'drawing', 'practical', 'role_play'].includes(
                   studentSafeQuestion.type,
                 ) && (
-                  <div className="khan-teacher-task-box">
-                    <div className="khan-rubric-table">
+                  <div className="practice-arena-teacher-task-box">
+                    <div className="practice-arena-rubric-table">
                       <strong>Marking Criteria:</strong>
                       <ul>
                         {currentQ?.rubric?.criteria.map((c, cIdx) => (
@@ -985,10 +985,10 @@ export function KhanPracticePlayer({
 
                 {/* Step-by-Step Hints BEFORE Answering */}
                 {revealedHints > 0 && studentSafeQuestion.hints && (
-                  <div className="khan-hints-display">
+                  <div className="practice-arena-hints-display">
                     {studentSafeQuestion.hints.slice(0, revealedHints).map((h, hIdx) => (
-                      <div key={hIdx} className="khan-hint-bubble">
-                        <span className="khan-hint-num">Hint {hIdx + 1}:</span>
+                      <div key={hIdx} className="practice-arena-hint-bubble">
+                        <span className="practice-arena-hint-num">Hint {hIdx + 1}:</span>
                         <span>{h}</span>
                       </div>
                     ))}
@@ -997,11 +997,11 @@ export function KhanPracticePlayer({
 
                 {/* Worked Explanation AFTER Answering */}
                 {showExplanation && currentQ?.explanation && (
-                  <div className="khan-explanation-display">
+                  <div className="practice-arena-explanation-display">
                     <strong>Worked Solution & Explanation:</strong>
                     <p>{currentQ.explanation}</p>
                     {currentQ.misconception && (
-                      <p className="khan-misconception-note">
+                      <p className="practice-arena-misconception-note">
                         💡 <strong>Common misconception note:</strong> {currentQ.misconception}
                       </p>
                     )}
@@ -1011,7 +1011,7 @@ export function KhanPracticePlayer({
 
               {/* Bottom Sticky Action Bar */}
               <footer
-                className={`khan-bottom-bar ${
+                className={`practice-arena-bottom-bar ${
                   currentQState.isAnswered
                     ? currentQState.isCorrect
                       ? 'bar-correct'
@@ -1020,10 +1020,10 @@ export function KhanPracticePlayer({
                 }`}
               >
                 {/* Left tools / Hints */}
-                <div className="khan-bar-left">
+                <div className="practice-arena-bar-left">
                   {studentSafeQuestion.hints && studentSafeQuestion.hints.length > 0 && (
                     <button
-                      className="khan-hint-btn"
+                      className="practice-arena-hint-btn"
                       onClick={handleShowHint}
                       disabled={revealedHints >= studentSafeQuestion.hints.length}
                     >
@@ -1037,7 +1037,7 @@ export function KhanPracticePlayer({
                   )}
                   {currentQState.isAnswered && currentQ?.explanation && (
                     <button
-                      className="khan-hint-btn"
+                      className="practice-arena-hint-btn"
                       onClick={() => setShowExplanation(!showExplanation)}
                     >
                       <BookOpen size={16} />
@@ -1047,19 +1047,19 @@ export function KhanPracticePlayer({
                 </div>
 
                 {/* Center: Problem progress circles */}
-                <div className="khan-bar-center">
+                <div className="practice-arena-bar-center">
                   <button
-                    className="khan-restart-btn"
+                    className="practice-arena-restart-btn"
                     onClick={restartSession}
                     title="Restart this problem set"
                   >
                     <RotateCcw size={15} />
                   </button>
-                  <span className="khan-progress-label">Do {TARGET_PROBLEMS} problems</span>
-                  <div className="khan-progress-dots">
+                  <span className="practice-arena-progress-label">Do {TARGET_PROBLEMS} problems</span>
+                  <div className="practice-arena-progress-dots">
                     {Array.from({ length: TARGET_PROBLEMS }).map((_, dotIdx) => {
                       const st = questionStates[dotIdx];
-                      let dotClass = 'khan-dot';
+                      let dotClass = 'practice-arena-dot';
                       if (dotIdx === currentIndex) dotClass += ' current';
                       if (st && st.isAnswered) {
                         dotClass += st.isCorrect ? ' dot-correct' : ' dot-incorrect';
@@ -1070,14 +1070,14 @@ export function KhanPracticePlayer({
                 </div>
 
                 {/* Right: Actions */}
-                <div className="khan-bar-right">
+                <div className="practice-arena-bar-right">
                   {!currentQState.isAnswered ? (
                     <>
-                      <button className="khan-skip-btn" onClick={handleSkip}>
+                      <button className="practice-arena-skip-btn" onClick={handleSkip}>
                         Skip
                       </button>
                       <button
-                        className={`khan-check-btn ${isInputSelected ? 'ready' : 'disabled'}`}
+                        className={`practice-arena-check-btn ${isInputSelected ? 'ready' : 'disabled'}`}
                         disabled={!isInputSelected}
                         onClick={handleCheck}
                       >
@@ -1085,20 +1085,20 @@ export function KhanPracticePlayer({
                       </button>
                     </>
                   ) : currentQState.isCorrect ? (
-                    <div className="khan-feedback-group">
-                      <span className="khan-feedback-text correct">
+                    <div className="practice-arena-feedback-group">
+                      <span className="practice-arena-feedback-text correct">
                         <Check size={18} /> Great work!
                       </span>
-                      <button className="khan-next-btn" onClick={handleNext}>
+                      <button className="practice-arena-next-btn" onClick={handleNext}>
                         {currentIndex < TARGET_PROBLEMS - 1 ? 'Next question' : 'Show summary'}
                       </button>
                     </div>
                   ) : (
-                    <div className="khan-feedback-group">
-                      <span className="khan-feedback-text incorrect">
+                    <div className="practice-arena-feedback-group">
+                      <span className="practice-arena-feedback-text incorrect">
                         <AlertCircle size={18} /> Review explanation
                       </span>
-                      <button className="khan-next-btn" onClick={handleNext}>
+                      <button className="practice-arena-next-btn" onClick={handleNext}>
                         Move on
                       </button>
                     </div>

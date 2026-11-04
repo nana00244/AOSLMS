@@ -18,7 +18,7 @@ import { Button } from './ui';
 import type { QuizDefinition, QuizSubmissionRecord } from '../nacca/quizEngine';
 import { getStudentQuizQuestions, submitQuiz } from '../nacca/quizEngine';
 import type { StudentNaccaQuestion } from '../nacca/types';
-import '../pages/khan-academy.css';
+import '../pages/practice-arena.css';
 
 interface Props {
   quiz: QuizDefinition;
@@ -28,7 +28,7 @@ interface Props {
   onCompleted?: (submission: QuizSubmissionRecord) => void;
 }
 
-export function KhanQuizPlayer({
+export function PracticeArenaQuizPlayer({
   quiz,
   studentId = 'student_demo',
   studentName = 'Learner',
@@ -125,25 +125,25 @@ export function KhanQuizPlayer({
     const isAwaitingTeacher = submissionResult.status === 'awaiting teacher marking';
 
     return (
-      <div className="khan-app-container">
+      <div className="practice-arena-app-container">
         {/* Top Header */}
-        <header className="khan-top-header">
-          <div className="khan-header-left">
-            <button className="khan-nav-btn khan-header-back" onClick={onBack}>
+        <header className="practice-arena-top-header">
+          <div className="practice-arena-header-left">
+            <button className="practice-arena-nav-btn practice-arena-header-back" onClick={onBack}>
               <ArrowLeft size={16} /> Exit Assessment
             </button>
-            <div className="khan-brand-logo">
-              <span className="khan-leaf-icon">🌿</span>
-              <span className="khan-logo-text">
-                Khan Academy <em>NaCCA</em>
+            <div className="practice-arena-brand-logo">
+              <span className="practice-arena-leaf-icon">🌿</span>
+              <span className="practice-arena-logo-text">
+                Practice Arena <em>NaCCA</em>
               </span>
             </div>
           </div>
-          <div className="khan-header-right">
-            <span className="khan-curriculum-tag">
+          <div className="practice-arena-header-right">
+            <span className="practice-arena-curriculum-tag">
               {quiz.level} · {quiz.subject}
             </span>
-            <span className="khan-role-badge">Student: {studentName}</span>
+            <span className="practice-arena-role-badge">Student: {studentName}</span>
           </div>
         </header>
 
@@ -461,33 +461,33 @@ export function KhanQuizPlayer({
 
   // 2. Quiz Playing Screen
   return (
-    <div className="khan-app-container">
+    <div className="practice-arena-app-container">
       {/* Top Header */}
-      <header className="khan-top-header">
-        <div className="khan-header-left">
-          <button className="khan-nav-btn khan-header-back" onClick={onBack}>
+      <header className="practice-arena-top-header">
+        <div className="practice-arena-header-left">
+          <button className="practice-arena-nav-btn practice-arena-header-back" onClick={onBack}>
             <ArrowLeft size={16} /> Exit Assessment
           </button>
-          <div className="khan-brand-logo">
-            <span className="khan-leaf-icon">🌿</span>
-            <span className="khan-logo-text">
-              Khan Academy <em>NaCCA</em>
+          <div className="practice-arena-brand-logo">
+            <span className="practice-arena-leaf-icon">🌿</span>
+            <span className="practice-arena-logo-text">
+              Practice Arena <em>NaCCA</em>
             </span>
           </div>
         </div>
-        <div className="khan-header-center">
+        <div className="practice-arena-header-center">
           <span style={{ fontSize: 14, fontWeight: 600, color: '#e2e8f0' }}>{quiz.title}</span>
         </div>
-        <div className="khan-header-right">
-          <span className="khan-curriculum-tag">
+        <div className="practice-arena-header-right">
+          <span className="practice-arena-curriculum-tag">
             {quiz.level} · {quiz.subject}
           </span>
-          <span className="khan-role-badge">Student: {studentName}</span>
+          <span className="practice-arena-role-badge">Student: {studentName}</span>
         </div>
       </header>
 
       {/* Main Two-Column Layout */}
-      <div className="khan-layout">
+      <div className="practice-arena-layout">
         {/* Left Navigator Panel */}
         <aside
           style={{

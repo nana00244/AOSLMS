@@ -85,7 +85,7 @@ When hosting the frontend, set `auth.site_url` and `auth.additional_redirect_url
 
 ### Learning Hub
 
-Open **Learning Hub** in the administrator, teacher or student navigation. The old `/khan` link redirects to `/learning-hub`.
+Open **Learning Hub** in the administrator, teacher or student navigation. The `/practice-arena` link opens the Learning Hub.
 
 - **Courses:** browse by subject, level or search; open a lesson to read explanations and practise.
 - **Create lesson:** teaching staff can write original content, cite a curriculum standard/source, and add multiple-choice questions with explanations.

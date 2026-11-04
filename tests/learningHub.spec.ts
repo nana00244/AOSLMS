@@ -357,15 +357,15 @@ for (const subject of ['Mathematics', 'Science']) {
       )!;
       await page.goto(`/#/learning-hub?tab=Courses&lesson=${encodeURIComponent(target.id)}`);
       await page.getByRole('button', { name: 'Start practice', exact: true }).click();
-      await expect(page.locator('.khan-question-view')).toContainText(question.stem);
-      await expect(page.locator('.khan-app-container')).toContainText(`${level} ${subject}`);
+      await expect(page.locator('.practice-arena-question-view')).toContainText(question.stem);
+      await expect(page.locator('.practice-arena-app-container')).toContainText(`${level} ${subject}`);
       await expect(page).toHaveURL(new RegExp(`practice=${indicator.code.replaceAll('.', '\\.')}`));
       await page.reload();
-      await expect(page.locator('.khan-question-view')).toContainText(question.stem);
+      await expect(page.locator('.practice-arena-question-view')).toContainText(question.stem);
       await page.goBack();
       await expect(page.getByRole('button', { name: 'Start practice', exact: true })).toBeVisible();
       await page.getByRole('button', { name: 'Practice', exact: true }).click();
-      await expect(page.locator('.khan-question-view')).toContainText(question.stem);
+      await expect(page.locator('.practice-arena-question-view')).toContainText(question.stem);
     });
   }
 }
@@ -383,6 +383,6 @@ test('question bank practice preserves Science when Mathematics shares the code'
     createAdaptiveSession(code),
   )!;
   await card.getByRole('button', { name: /Practise Indicator/ }).click();
-  await expect(page.locator('.khan-question-view')).toContainText(q.stem);
+  await expect(page.locator('.practice-arena-question-view')).toContainText(q.stem);
   await expect(page).toHaveURL(/subject=Science/);
 });
