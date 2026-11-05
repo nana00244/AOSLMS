@@ -402,3 +402,20 @@ test('Basic 6 Science retake changes the opening question even with identical ra
   await expect(stem).toBeVisible();
   await expect(stem).not.toHaveText(first);
 });
+
+for (const role of ['Student', 'Teacher'] as const) {
+  test(`${role} opens practice from Courses and returns to the same lesson`, async ({ page }) => {
+    await setup(page, role);
+    const courses = page.getByRole('button', { name: 'Courses', exact: true });
+    await courses.click();
+    await expect(page.getByRole('button', { name: 'Practice Arena', exact: true })).toHaveCount(0);
+    const lessonId = 'nacca-science-b6-5-4-1-1';
+    await page.goto(`/#/learning-hub?tab=Courses&lesson=${lessonId}`);
+    const start = page.getByRole('button', { name: 'Start practice', exact: true });
+    await start.click();
+    await expect(page.locator('.practice-arena-question-view')).toBeVisible();
+    await page.getByRole('button', { name: 'Learning Hub', exact: true }).click();
+    await expect(start).toBeVisible();
+    await expect(page).toHaveURL(new RegExp(`tab=Courses&lesson=${lessonId}$`));
+  });
+}

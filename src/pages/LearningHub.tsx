@@ -109,11 +109,17 @@ export function LearningHub() {
 
   const practiceIndicator = params.get('practice');
   const openPractice = (code: string, subject?: string) => {
-    setParams({ tab: 'NaCCA Question Bank', practice: code, ...(subject ? { subject } : {}) });
+    const next = new URLSearchParams(params);
+    next.set('tab', tab);
+    next.set('practice', code);
+    if (subject) next.set('subject', subject);
+    else next.delete('subject');
+    setParams(next);
   };
   const closePractice = () => {
     const next = new URLSearchParams(params);
     next.delete('practice');
+    next.delete('subject');
     setParams(next);
   };
 
@@ -187,12 +193,7 @@ export function LearningHub() {
           </span>
           <h1>Learning Hub</h1>
         </div>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-          <Button onClick={() => openPractice('B1.1.1.1.1')}>
-            <Target size={16} /> Practice Arena
-          </Button>
-          <span className="lh-school">GES · NaCCA curriculum</span>
-        </div>
+        <span className="lh-school">GES · NaCCA curriculum</span>
       </header>
       <nav className="lh-tabs" aria-label="Learning Hub navigation">
         {tabs.map((t) => (
