@@ -1,5 +1,6 @@
 export interface QuestionAttemptLog {
   questionId: string;
+  optionOrder?: number[];
   type: string;
   difficulty: number;
   isCorrect?: boolean;

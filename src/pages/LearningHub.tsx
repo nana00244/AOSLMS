@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useState } from 'react';
+import { shuffled, shuffledOptionIndices } from '../nacca/attemptOrder';
 import { useSearchParams } from 'react-router-dom';
 import {
   BookOpen,
@@ -635,6 +636,17 @@ function LessonView({
     [error, setError] = useState('');
   const [answers, setAnswers] = useState<number[]>([]),
     [result, setResult] = useState<HubPracticeResult | null>(null);
+  function makeOrder(previous?: { index: number; options: number[] }[]) {
+    const order = shuffled(lesson.questions.map((q, index) => ({
+      index,
+      options: shuffledOptionIndices(q.options, previous?.find((row) => row.index === index)?.options),
+    })));
+    if (previous && order.length > 1 && order[0].index === previous[0]?.index) {
+      [order[0], order[1]] = [order[1], order[0]];
+    }
+    return order;
+  }
+  const [order, setOrder] = useState(() => makeOrder());
   const status = learningStatus(snapshot, studentId, lesson.id, assignmentId);
   const practiceIndicator = getLessonPracticeIndicator(lesson);
   async function markRead() {
@@ -765,12 +777,14 @@ function LessonView({
                   Teacher preview. Student answers are scored and saved when a student submits.
                 </p>
               )}
-              {lesson.questions.map((q, i) => (
+              {order.map(({ index: i, options }, position) => {
+                const q = lesson.questions[i];
+                return (
                 <fieldset className="lh-question" key={q.id}>
                   <legend>
-                    <span>{i + 1}</span> {q.prompt}
+                    <span>{position + 1}</span> {q.prompt}
                   </legend>
-                  {q.options.map((o, n) => (
+                  {options.map((n, displayIndex) => (
                     <label
                       key={n}
                       className={`${answers[i] === n ? 'selected' : ''} ${result?.feedback[i]?.answer === n ? 'correct' : ''}`}
@@ -788,8 +802,8 @@ function LessonView({
                           })
                         }
                       />
-                      <span>{String.fromCharCode(65 + n)}</span>
-                      {o}
+                      <span>{String.fromCharCode(65 + displayIndex)}</span>
+                      {q.options[n]}
                     </label>
                   ))}
                   {result && (
@@ -809,7 +823,8 @@ function LessonView({
                     </details>
                   )}
                 </fieldset>
-              ))}
+                );
+              })}
               {result ? (
                 <div className="lh-result" role="status">
                   <h3>
@@ -825,6 +840,7 @@ function LessonView({
                     onClick={() => {
                       setResult(null);
                       setAnswers([]);
+                      setOrder(makeOrder(order));
                     }}
                   >
                     Try again

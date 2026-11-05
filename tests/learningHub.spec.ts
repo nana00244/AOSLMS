@@ -386,3 +386,19 @@ test('question bank practice preserves Science when Mathematics shares the code'
   await expect(page.locator('.practice-arena-question-view')).toContainText(q.stem);
   await expect(page).toHaveURL(/subject=Science/);
 });
+
+test('Basic 6 Science retake changes the opening question even with identical random draws', async ({ page }) => {
+  await setup(page, 'Student');
+  await page.evaluate(() => { Math.random = () => 0.999; });
+  await page.goto('/#/learning-hub?tab=NaCCA+Question+Bank&practice=B6.5.4.1.1&subject=Science');
+  const stem = page.locator('.practice-arena-stem-text');
+  const first = await stem.innerText();
+  for (let i = 0; i < 4; i++) {
+    await page.locator('.practice-arena-option-row').nth(1).click();
+    await page.getByRole('button', { name: 'Check', exact: true }).click();
+    await page.locator('.practice-arena-next-btn').click();
+  }
+  await page.getByRole('button', { name: /Practise again/ }).click();
+  await expect(stem).toBeVisible();
+  await expect(stem).not.toHaveText(first);
+});

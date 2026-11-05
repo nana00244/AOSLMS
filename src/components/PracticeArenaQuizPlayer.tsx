@@ -36,7 +36,7 @@ export function PracticeArenaQuizPlayer({
   onCompleted,
 }: Props) {
   // Retrieve sanitized questions for student (Rule 2: answer and explanation stripped)
-  const { questions, hasTeacherMarked } = useState(() => {
+  const [{ questions, hasTeacherMarked }] = useState(() => {
     const paper = getStudentQuizQuestions(quiz, studentId);
     return {
       ...paper,

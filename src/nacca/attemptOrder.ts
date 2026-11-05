@@ -7,6 +7,11 @@ export function shuffled<T>(items: readonly T[]): T[] {
   return result;
 }
 
-export function shuffledOptionIndices(options?: readonly string[]): number[] {
+export function shuffledOptionIndices(options?: readonly string[], previous?: readonly number[]): number[] {
+  if (previous && previous.length === options?.length && previous.length > 1) {
+    // A non-zero rotation moves every choice away from its previous letter.
+    const shift = 1 + Math.floor(Math.random() * (previous.length - 1));
+    return [...previous.slice(shift), ...previous.slice(0, shift)];
+  }
   return shuffled((options ?? []).map((_, index) => index));
 }

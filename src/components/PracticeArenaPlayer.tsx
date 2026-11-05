@@ -228,14 +228,19 @@ export function PracticeArenaPlayer({
     setAdaptiveState(newSession);
 
     // Pick first question using adaptive engine (starts at difficulty 1)
-    const pool = shuffled(practiceQuestions.filter((q) => q.indicator_code === currentIndicatorCode));
+    const previous = getIndicatorAttempts(currentIndicatorCode, studentId, selectedSubject, selectedLevel).allAttempts[0]?.questions ?? [];
+    const lastSeen = new Set(previous.map((q) => q.questionId));
+    const pool = shuffled(practiceQuestions.filter((q) => q.indicator_code === currentIndicatorCode))
+      .sort((a, b) => Number(lastSeen.has(a.id)) - Number(lastSeen.has(b.id)));
     setAttemptPool(pool);
-    const firstQ = getNextAdaptiveQuestion(pool, newSession);
+    const lastFirst = previous[0]?.questionId;
+    const firstQ = getNextAdaptiveQuestion(pool.filter((q) => q.id !== lastFirst), newSession)
+      ?? getNextAdaptiveQuestion(pool, newSession);
     if (firstQ) {
       setQuestionStates([
         {
           question: firstQ,
-          optionOrder: shuffledOptionIndices(firstQ.options),
+          optionOrder: shuffledOptionIndices(firstQ.options, previous.find((q) => q.questionId === firstQ.id)?.optionOrder),
           isAnswered: false,
           explanationViewed: false,
         },
@@ -376,7 +381,7 @@ export function PracticeArenaPlayer({
       // Pick next adaptive question based on updated difficulty
       const nextQ = getNextAdaptiveQuestion(attemptPool, adaptiveState);
       if (nextQ) {
-        const optionOrder = shuffledOptionIndices(nextQ.options);
+        const optionOrder = shuffledOptionIndices(nextQ.options, indicatorAttemptsData.allAttempts[0]?.questions.find((q) => q.questionId === nextQ.id)?.optionOrder);
         setQuestionStates((prev) => [
           ...prev,
           {
@@ -417,6 +422,7 @@ export function PracticeArenaPlayer({
       totalCount,
       questions: questionStates.map((qs) => ({
         questionId: qs.question.id,
+        optionOrder: qs.optionOrder,
         type: qs.question.type,
         difficulty: qs.question.difficulty,
         isCorrect: qs.isCorrect,
