@@ -1,3 +1,4 @@
+import { matchesShortAnswer } from './shortAnswer';
 import type { NaccaQuestion, StudentNaccaQuestion } from './types';
 
 export interface CheckAnswerResult {
@@ -117,18 +118,7 @@ export function evaluateAnswer(
       };
     }
 
-    const normalizedStudent = rawVal.toLowerCase().replace(/\s+/g, ' ');
-
-    let acceptedAnswers: string[] = [];
-    if (Array.isArray(question.answer)) {
-      acceptedAnswers = question.answer.map((a) =>
-        String(a).trim().toLowerCase().replace(/\s+/g, ' '),
-      );
-    } else if (question.answer !== undefined && question.answer !== null) {
-      acceptedAnswers = [String(question.answer).trim().toLowerCase().replace(/\s+/g, ' ')];
-    }
-
-    const isCorrect = acceptedAnswers.includes(normalizedStudent);
+    const isCorrect = matchesShortAnswer(question, rawVal);
 
     return {
       valid: true,
