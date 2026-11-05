@@ -1,3 +1,4 @@
+import { useCorrectAnswerSound } from '../learningHub/useCorrectAnswerSound';
 import { useState } from 'react';
 import {
   ArrowLeft,
@@ -22,6 +23,7 @@ import '../pages/practice-arena.css';
 
 interface Props {
   quiz: QuizDefinition;
+  student: boolean;
   studentId?: string;
   studentName?: string;
   onBack: () => void;
@@ -30,6 +32,7 @@ interface Props {
 
 export function PracticeArenaQuizPlayer({
   quiz,
+  student,
   studentId = 'student_demo',
   studentName = 'Learner',
   onBack,
@@ -119,8 +122,12 @@ export function PracticeArenaQuizPlayer({
     }));
   };
 
+  const prepareSound = useCorrectAnswerSound();
   const handleSubmit = () => {
     const result = submitQuiz(quiz, studentId, studentName, responses, undefined, questions.map((q) => q.id));
+    if (student && result.autoScore.pointsAwarded > 0) {
+      prepareSound()(result.answers.filter((answer) => answer.isCorrect).length);
+    }
     setSubmissionResult(result);
     if (onCompleted) {
       onCompleted(result);

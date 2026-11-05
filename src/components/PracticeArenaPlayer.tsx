@@ -1,3 +1,4 @@
+import { useCorrectAnswerSound } from '../learningHub/useCorrectAnswerSound';
 import { useState, useMemo, useEffect } from 'react';
 import {
   BookOpen,
@@ -340,6 +341,7 @@ export function PracticeArenaPlayer({
   };
 
   // Check Answer
+  const prepareSound = useCorrectAnswerSound();
   const handleCheck = () => {
     if (!currentQ || !currentQState || currentQState.isAnswered) return;
 
@@ -357,6 +359,7 @@ export function PracticeArenaPlayer({
 
     setValidationError('');
     const isCorrect = !!result.isCorrect;
+    if (isCorrect && !staff) prepareSound()();
 
     // Update adaptive session difficulty
     const nextAdaptive = recordAdaptiveAnswer(adaptiveState, currentQ.id, isCorrect);

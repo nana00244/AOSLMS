@@ -419,3 +419,29 @@ for (const role of ['Student', 'Teacher'] as const) {
     await expect(page).toHaveURL(new RegExp(`tab=Courses&lesson=${lessonId}$`));
   });
 }
+
+test('student practice plays the correct-answer clip only for a correct answer', async ({ page }) => {
+  await setup(page, 'Student');
+  await page.goto('/#/learning-hub?tab=Courses&practice=B6.5.4.1.1&subject=Science');
+  await page.evaluate(() => {
+    const start = AudioBufferSourceNode.prototype.start;
+    AudioBufferSourceNode.prototype.start = function (...args) {
+      document.documentElement.dataset.feedbackClip = String(this.buffer?.duration ?? 0);
+      return start.apply(this, args);
+    };
+  });
+  for (const correct of [false, true]) {
+    const stem = await page.locator('.practice-arena-stem-text').innerText();
+    const question = naccaQuestions.find((q) => q.stem === stem && q.indicator_code === 'B6.5.4.1.1' && q.subject === 'Science')!;
+    const key = Number(question.answer);
+    const option = question.options![correct ? key : (key + 1) % question.options!.length];
+    await page.getByText(option, { exact: true }).click();
+    await page.getByRole('button', { name: 'Check', exact: true }).click();
+    if (!correct) {
+      await expect(page.locator('.practice-arena-next-btn')).toBeVisible();
+      expect(await page.locator('html').getAttribute('data-feedback-clip')).toBeNull();
+      await page.locator('.practice-arena-next-btn').click();
+    }
+  }
+  await expect.poll(async () => Number(await page.locator('html').getAttribute('data-feedback-clip'))).toBeGreaterThan(0);
+});
