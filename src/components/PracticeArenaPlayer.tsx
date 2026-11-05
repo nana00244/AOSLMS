@@ -46,6 +46,8 @@ import {
   type PracticeSessionRecord,
 } from '../nacca/practiceHistory';
 
+import { shuffled, shuffledOptionIndices } from '../nacca/attemptOrder';
+
 interface Props {
   initialIndicatorCode?: string;
   initialSubject?: string;
@@ -65,6 +67,7 @@ type PracticeMode = 'practice' | 'quiz' | 'unit_test' | 'teacher_task';
 
 interface QuestionState {
   question: NaccaQuestion;
+  optionOrder: number[];
   selectedOption?: number;
   numericInput?: string;
   shortAnswerInput?: string;
@@ -217,17 +220,22 @@ export function PracticeArenaPlayer({
   const [showExplanation, setShowExplanation] = useState(false);
   const [validationError, setValidationError] = useState<string>('');
 
+  const [attemptPool, setAttemptPool] = useState<NaccaQuestion[]>([]);
+
   // Start or restart session
   const restartSession = () => {
     const newSession = createAdaptiveSession(currentIndicatorCode, TARGET_PROBLEMS);
     setAdaptiveState(newSession);
 
     // Pick first question using adaptive engine (starts at difficulty 1)
-    const firstQ = getNextAdaptiveQuestion(practiceQuestions, newSession);
+    const pool = shuffled(practiceQuestions.filter((q) => q.indicator_code === currentIndicatorCode));
+    setAttemptPool(pool);
+    const firstQ = getNextAdaptiveQuestion(pool, newSession);
     if (firstQ) {
       setQuestionStates([
         {
           question: firstQ,
+          optionOrder: shuffledOptionIndices(firstQ.options),
           isAnswered: false,
           explanationViewed: false,
         },
@@ -366,12 +374,14 @@ export function PracticeArenaPlayer({
   const handleNext = () => {
     if (currentIndex < TARGET_PROBLEMS - 1) {
       // Pick next adaptive question based on updated difficulty
-      const nextQ = getNextAdaptiveQuestion(practiceQuestions, adaptiveState);
+      const nextQ = getNextAdaptiveQuestion(attemptPool, adaptiveState);
       if (nextQ) {
+        const optionOrder = shuffledOptionIndices(nextQ.options);
         setQuestionStates((prev) => [
           ...prev,
           {
             question: nextQ,
+            optionOrder,
             isAnswered: false,
             explanationViewed: false,
           },
@@ -872,7 +882,7 @@ export function PracticeArenaPlayer({
                 {/* Question Inputs */}
                 {studentSafeQuestion.type === 'mcq' && studentSafeQuestion.options && (
                   <div className="practice-arena-mcq-options">
-                    {studentSafeQuestion.options.map((opt, optIdx) => {
+                    {currentQState.optionOrder.map((optIdx, displayIndex) => {
                       const isSelected = currentQState.selectedOption === optIdx;
                       const isChecked = currentQState.isAnswered;
                       // Determine correct only AFTER check
@@ -892,8 +902,8 @@ export function PracticeArenaPlayer({
                           className={rowClass}
                           onClick={() => handleSelectOption(optIdx)}
                         >
-                          <span className="practice-arena-opt-badge">{String.fromCharCode(65 + optIdx)}</span>
-                          <span className="practice-arena-opt-text">{opt}</span>
+                          <span className="practice-arena-opt-badge">{String.fromCharCode(65 + displayIndex)}</span>
+                          <span className="practice-arena-opt-text">{studentSafeQuestion.options?.[optIdx]}</span>
                           {isChecked && isSelected && (
                             <span className="practice-arena-result-icon">
                               {currentQState.isCorrect ? (

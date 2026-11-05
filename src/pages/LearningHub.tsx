@@ -130,6 +130,7 @@ export function LearningHub() {
   if (quizId && activeQuiz) {
     return (
       <PracticeArenaQuizPlayer
+        key={JSON.stringify([activeQuiz.id, sid])}
         quiz={activeQuiz}
         studentId={sid || 'student_demo'}
         studentName={user?.name || 'Learner'}

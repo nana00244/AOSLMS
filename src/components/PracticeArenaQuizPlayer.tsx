@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react';
+import { useState } from 'react';
 import {
   ArrowLeft,
   ChevronLeft,
@@ -17,7 +17,7 @@ import {
 import { Button } from './ui';
 import type { QuizDefinition, QuizSubmissionRecord } from '../nacca/quizEngine';
 import { getStudentQuizQuestions, submitQuiz } from '../nacca/quizEngine';
-import type { StudentNaccaQuestion } from '../nacca/types';
+import { shuffled, shuffledOptionIndices } from '../nacca/attemptOrder';
 import '../pages/practice-arena.css';
 
 interface Props {
@@ -36,9 +36,16 @@ export function PracticeArenaQuizPlayer({
   onCompleted,
 }: Props) {
   // Retrieve sanitized questions for student (Rule 2: answer and explanation stripped)
-  const { questions, hasTeacherMarked } = useMemo(() => {
-    return getStudentQuizQuestions(quiz, studentId);
-  }, [quiz, studentId]);
+  const { questions, hasTeacherMarked } = useState(() => {
+    const paper = getStudentQuizQuestions(quiz, studentId);
+    return {
+      ...paper,
+      questions: shuffled(paper.questions).map((q) => ({
+        ...q,
+        optionOrder: shuffledOptionIndices(q.options),
+      })),
+    };
+  });
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [responses, setResponses] = useState<
@@ -55,7 +62,7 @@ export function PracticeArenaQuizPlayer({
   const [submissionResult, setSubmissionResult] = useState<QuizSubmissionRecord | null>(null);
   const [showReview, setShowReview] = useState(false);
 
-  const currentQ: StudentNaccaQuestion | undefined = questions[currentIndex];
+  const currentQ = questions[currentIndex];
   const currentResp = currentQ ? responses[currentQ.id] || {} : {};
 
   const answeredCount = Object.keys(responses).filter((k) => {
@@ -113,7 +120,7 @@ export function PracticeArenaQuizPlayer({
   };
 
   const handleSubmit = () => {
-    const result = submitQuiz(quiz, studentId, studentName, responses);
+    const result = submitQuiz(quiz, studentId, studentName, responses, undefined, questions.map((q) => q.id));
     setSubmissionResult(result);
     if (onCompleted) {
       onCompleted(result);
@@ -624,9 +631,9 @@ export function PracticeArenaQuizPlayer({
                   <div style={{ fontSize: 13, fontWeight: 600, color: '#64748b', marginBottom: 4 }}>
                     Choose 1 answer:
                   </div>
-                  {currentQ.options?.map((opt, oIdx) => {
+                  {currentQ.optionOrder.map((oIdx, displayIndex) => {
                     const isSelected = currentResp.selectedOption === oIdx;
-                    const letter = String.fromCharCode(65 + oIdx); // A, B, C, D
+                    const letter = String.fromCharCode(65 + displayIndex); // A, B, C, D
                     return (
                       <button
                         key={oIdx}
@@ -670,7 +677,7 @@ export function PracticeArenaQuizPlayer({
                             fontWeight: isSelected ? 600 : 400,
                           }}
                         >
-                          {opt}
+                          {currentQ.options?.[oIdx]}
                         </span>
                       </button>
                     );

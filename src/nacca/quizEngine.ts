@@ -589,10 +589,14 @@ export function submitQuiz(
     }
   >,
   pool: NaccaQuestion[] = naccaQuestions,
+  attemptQuestionIds?: readonly string[],
 ): QuizSubmissionRecord {
-  // Find canonical full questions for the student
+  // Grade the questions in the order presented to the student.
   let fullQuestions: NaccaQuestion[] = [];
-  if (quiz.randomizePerStudent) {
+  if (attemptQuestionIds) {
+    const byId = new Map(pool.map((q) => [q.id, q]));
+    fullQuestions = attemptQuestionIds.flatMap((id) => byId.get(id) ?? []);
+  } else if (quiz.randomizePerStudent) {
     const eligible = getEligibleQuestions(quiz.subject, quiz.level, quiz.indicatorCodes, pool);
     fullQuestions = pickQuizQuestions(eligible, quiz.questionCount, quiz.difficultyMix, studentId);
   } else if (quiz.fixedQuestionIds && quiz.fixedQuestionIds.length > 0) {
