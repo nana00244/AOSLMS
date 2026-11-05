@@ -1,3 +1,4 @@
+import { gradeByRequirements } from './shortAnswerRequirements';
 import type { NaccaQuestion } from './types';
 
 // Each alternative is compared only against the current question's own keys.
@@ -63,6 +64,26 @@ export function matchesShortAnswer(question: NaccaQuestion, response: string): b
     input,
     input.replace(/^(?:the answer is|my answer is|it is|it's|one example is|an example is) /, ''),
   ];
+  const preamble = /^(?:(?:i think|i believe|in my opinion|for example|for instance)[, ]+)+/;
+  if (preamble.test(input)) candidates.push(input.replace(preamble, ''));
+  const stem = normalized(question.stem).replace(/\?$/, '');
+  const request = stem.match(
+    /^(?:name|state|give|list|identify|suggest|describe) (?:any |the )?(one|two|three|an?|some) (.+)$/,
+  );
+  if (request) {
+    const topic = request[2].replace(/^(?:example|examples) of /, '');
+    const label = topic.replace(/\byour\b/g, 'my');
+    for (const text of [...candidates]) {
+      for (const count of [request[1], 'the', 'a', 'an']) {
+        for (const verb of [' is ', ' are ', ' include ', ' can be ']) {
+          const frame = count + ' ' + label + verb;
+          if (text.startsWith(frame)) candidates.push(text.slice(frame.length));
+          const suffix = verb + count + ' ' + label;
+          if (text.endsWith(suffix)) candidates.push(text.slice(0, -suffix.length));
+        }
+      }
+    }
+  }
   // Accept causal sentence frames only when the prompt actually asks for an effect.
   const effect = question.stem.toLowerCase().match(/\beffects? of (.+?)(?: on .+)?[?.!]?$/);
   if (effect) {
@@ -89,6 +110,11 @@ export function matchesShortAnswer(question: NaccaQuestion, response: string): b
       if (shortage) candidates.push(shortage[1]);
     }
     candidates.push(input.replace(/^(?:one|an) effect is /, ''));
+  }
+  const keyTexts = keys.filter((key) => key != null).map((key) => normalized(String(key)));
+  const requirementResult = gradeByRequirements(question, keyTexts, candidates);
+  if (requirementResult !== undefined) {
+    return requirementResult;
   }
   return keys.some((key) => {
     if (key == null) return false;
