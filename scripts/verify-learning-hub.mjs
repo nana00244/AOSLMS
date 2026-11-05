@@ -214,8 +214,21 @@ try {
     answers: [1, 0],
   });
   assert.equal(second.attempt.score, 100);
+  const adaptive = {
+    action: 'submit-adaptive', lessonId: 'nacca-science-b6-5-4-1-1', attemptId: randomUUID(),
+    completedAt: new Date().toISOString(), responses: [
+      { questionId: 'sci_B6.5.4.1.1_q1', selectedOption: 0 },
+      { questionId: 'sci_B6.5.4.1.1_q2' },
+    ],
+  };
+  const recorded = await hub(pupilA.client, adaptive);
+  assert.equal(recorded.score, 50);
+  assert.equal(recorded.studentId, studentIds[0]);
+  assert.equal((await hub(pupilA.client, adaptive)).id, recorded.id);
+  assert.equal((await hub(pupilA.client, { action: 'load' })).attempts.filter(a => a.id === recorded.id).length, 1);
   const staffView = await hub(teacher.client, { action: 'load' });
   assert.equal(staffView.attempts.filter((a) => a.lessonId === lesson.id).length, 2);
+  assert(staffView.attempts.some(a => a.id === recorded.id));
   assert(staffView.readings.some((r) => r.id === reading.id));
   const privateView = await hub(pupilB.client, { action: 'load' });
   assert(!privateView.attempts.some((a) => a.studentId === studentIds[0]));
@@ -232,7 +245,9 @@ try {
   console.log(
     'PASS: Learning Hub authoring, class/individual assignments, reading completion, server-scored retries, teacher progress, answer redaction, student privacy, role/class restrictions and direct-write protection.',
   );
-} finally {
+ } finally {
+  const cleanup = await service.from('learning_hub_attempts').delete().in('student_id', studentIds);
+  if (cleanup.error && fixtures) console.error('Could not clean temporary practice rows:', cleanup.error.message);
   for (const table of [
     'learning_hub_readings',
     'learning_hub_attempts',

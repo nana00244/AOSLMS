@@ -1,5 +1,5 @@
 import { useAnswerSounds } from '../learningHub/useAnswerSounds';
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { shuffled, shuffledOptionIndices } from '../nacca/attemptOrder';
 import { useSearchParams } from 'react-router-dom';
 import {
@@ -32,6 +32,8 @@ import {
   assignHubLesson,
   completeHubReading,
   submitHubPractice,
+  submitAdaptive,
+  localHubAttempt,
 } from '../learningHub/api';
 import type { HubSnapshot, LearningLesson, HubPracticeResult } from '../learningHub/types';
 import { learningStatus, recommendation } from '../learningHub/progress';
@@ -73,19 +75,38 @@ export function LearningHub() {
   const staff = role === 'Administrator' || role === 'Teacher';
   const lesson = snapshot.lessons.find((l) => l.id === params.get('lesson'));
   const assignmentId = params.get('assignment') || undefined;
-  const reload = useCallback(async () => {
+  const progressStudent = role === 'Student' ? user?.studentId : undefined;
+  const revision = useRef(0);
+  const reload = useCallback(async (background = false) => {
+    const request = ++revision.current;
     setError('');
     try {
-      setSnapshot(await loadHub());
+      const next = await loadHub(progressStudent, background);
+      if (request === revision.current) setSnapshot(next);
     } catch (e) {
-      setError(e instanceof Error ? e.message : 'Learning Hub could not load.');
+      if (!background && request === revision.current) setError(e instanceof Error ? e.message : 'Learning Hub could not load.');
     } finally {
       setLoading(false);
     }
-  }, []);
+  }, [progressStudent]);
   useEffect(() => {
     void reload();
   }, [reload, user?.id]);
+  useEffect(() => {
+    if (tab !== 'Progress') return;
+    const refresh = () => { if (!document.hidden) void reload(true); };
+    refresh();
+    const timer = window.setInterval(refresh, 15000);
+    window.addEventListener('focus', refresh);
+    window.addEventListener('online', refresh);
+    window.addEventListener('storage', refresh);
+    return () => {
+      window.clearInterval(timer);
+      window.removeEventListener('focus', refresh);
+      window.removeEventListener('online', refresh);
+      window.removeEventListener('storage', refresh);
+    };
+  }, [tab, reload]);
   const go = (next: string) => setParams({ tab: next });
   const open = (id: string, assignment?: string) =>
     setParams({ tab, lesson: id, ...(assignment ? { assignment } : {}) });
@@ -182,9 +203,18 @@ export function LearningHub() {
         initialSubject={params.get('subject') || undefined}
         staff={staff}
         studentId={sid}
+        assignmentId={assignmentId}
+        assignmentLessonId={params.get('lesson') ?? undefined}
         onBack={closePractice}
         onRecordAttempt={(attempt) => {
-          notify(`Practice recorded: ${attempt.score}% mastery on ${attempt.indicatorCode}`);
+          if (!progressStudent || attempt.category !== 'auto') return;
+          const local = localHubAttempt(attempt);
+          revision.current++;
+          setSnapshot(s => ({ ...s, attempts: [...s.attempts.filter(a => a.id !== local.id), local] }));
+          void submitAdaptive(attempt).then(() => {
+            notify(`Practice recorded: ${attempt.score}% on ${attempt.indicatorCode}`);
+          }).catch(() => notify('Practice saved on this device. Open Progress while online to sync.'));
+
         }}
       />
     );

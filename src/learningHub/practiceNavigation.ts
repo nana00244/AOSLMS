@@ -1,3 +1,4 @@
+import { indicatorLessonId } from './indicatorLessonId';
 import { naccaIndicators } from './naccaBank';
 
 /** Content standards can contain several indicators; route by the lesson's exact ID. */
@@ -7,6 +8,6 @@ export function getLessonPracticeIndicator(lesson: { id: string; subject: string
       indicator.subject === lesson.subject &&
       indicator.level === lesson.level &&
       lesson.id ===
-        `nacca-${indicator.subject.toLowerCase()}-${indicator.code.toLowerCase().replace(/[^a-z0-9]/g, '-')}`,
+        indicatorLessonId(indicator.subject, indicator.code),
   );
 }

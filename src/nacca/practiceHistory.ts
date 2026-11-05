@@ -1,5 +1,6 @@
 export interface QuestionAttemptLog {
   questionId: string;
+  response?: { selectedOption?: number; numericInput?: string; shortAnswerInput?: string };
   optionOrder?: number[];
   type: string;
   difficulty: number;
@@ -17,6 +18,7 @@ export interface PracticeSessionRecord {
   level: string;
   strand?: string;
   subStrand?: string;
+  assignmentId?: string;
   category: 'auto' | 'teacher'; // Rule 4: strictly separate auto vs teacher
   score: number; // 0 to 100
   correctCount: number;

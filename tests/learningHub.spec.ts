@@ -99,6 +99,12 @@ async function setup(page: Page, role: Role) {
       hub.readings.push(reading);
       return route.fulfill({ json: reading });
     }
+    if (body.action === 'submit-adaptive') {
+      const attempt = { id: body.attemptId, studentId: owner.studentId!, lessonId: body.lessonId,
+        assignmentId: null, createdAt: body.completedAt, correct: 0, total: body.responses.length, score: 0 };
+      if (!hub.attempts.some(a => a.id === attempt.id)) hub.attempts.push(attempt);
+      return route.fulfill({ json: attempt });
+    }
     if (body.action === 'submit-practice') {
       const correct = body.answers.filter(
         (answer: number, i: number) => answer === [0, 1][i],
@@ -467,4 +473,25 @@ test('starting student practice and skipping play their own clips', async ({ pag
     await response;
     await expect.poll(async () => Number(await page.locator('html').getAttribute('data-cue-length'))).toBeGreaterThan(0);
   }
+});
+
+test('completed adaptive practice and earlier device history appear in student Progress', async ({ page }) => {
+  const { hub } = await setup(page, 'Student');
+  await page.evaluate(() => localStorage.setItem('nacca_student_practice_history_hub-student-0', JSON.stringify([{
+    id: 'attempt-earlier', studentId: 'hub-student-0', indicatorCode: 'B6.5.4.1.1', subject: 'Science',
+    level: 'Basic 6', category: 'auto', score: 75, correctCount: 3, totalCount: 4,
+    completedAt: '2026-10-20T08:00:00.000Z', questions: [],
+  }])));
+  await page.goto('/#/learning-hub?tab=Courses&practice=B6.5.4.1.1&subject=Science');
+  for (let i = 0; i < 4; i++) await page.getByRole('button', { name: 'Skip', exact: true }).click();
+  await expect.poll(() => hub.attempts.length).toBe(1);
+  await page.getByRole('button', { name: 'Learning Hub', exact: true }).click();
+  await page.getByRole('button', { name: 'Progress', exact: true }).click();
+  const history = page.locator('.lh-history > div');
+  await expect(history).toHaveCount(2);
+  await expect(history.first()).toContainText('0%');
+  await expect(history.last()).toContainText('75%');
+  await page.reload();
+  await expect(history).toHaveCount(2);
+  expect(hub.attempts).toHaveLength(1);
 });

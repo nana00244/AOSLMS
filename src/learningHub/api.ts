@@ -1,7 +1,10 @@
+import { loadPracticeHistory, type PracticeSessionRecord } from '../nacca/practiceHistory';
+import { indicatorLessonId } from './indicatorLessonId';
 import { invokeBackend } from '../backend';
 import type { HubLesson } from './catalog';
 import type {
   HubAssignment,
+  HubAttempt,
   HubPracticeResult,
   HubReading,
   HubSnapshot,
@@ -11,11 +14,28 @@ import type {
 import { hubLessons } from './catalog';
 import { naccaHubLessons } from './naccaBank';
 
-export const loadHub = async (): Promise<HubSnapshot> => {
+export function localHubAttempt(record: PracticeSessionRecord): HubAttempt {
+  return {
+    id: record.id, lessonId: indicatorLessonId(record.subject, record.indicatorCode),
+    studentId: record.studentId, assignmentId: record.assignmentId ?? null,
+    score: record.score, correct: record.correctCount, total: record.totalCount, createdAt: record.completedAt,
+  };
+}
+
+export function submitAdaptive(record: PracticeSessionRecord): Promise<HubAttempt> {
+  return invokeBackend('learning-hub', {
+    action: 'submit-adaptive', attemptId: record.id, completedAt: record.completedAt,
+    lessonId: indicatorLessonId(record.subject, record.indicatorCode), assignmentId: record.assignmentId,
+    responses: record.questions.map(q => ({ questionId: q.questionId, ...q.response })),
+  });
+}
+
+export const loadHub = async (studentId?: string, background = false): Promise<HubSnapshot> => {
   let remote: HubSnapshot | null = null;
   try {
     remote = await invokeBackend('learning-hub', { action: 'load' });
-  } catch {
+  } catch (error) {
+    if (background) throw error;
     // Backend offline / local fallback
   }
 
@@ -49,10 +69,25 @@ export const loadHub = async (): Promise<HubSnapshot> => {
     }
   }
 
+  const attempts = new Map((remote?.attempts ?? []).map(a => [a.id, a]));
+  if (studentId) {
+    for (const record of loadPracticeHistory(studentId)) {
+      if (record.studentId !== studentId || record.category !== 'auto' || attempts.has(record.id)) continue;
+      attempts.set(record.id, localHubAttempt(record));
+      // Older records have totals only. Keep them on the originating device.
+      if (remote && record.questions.length && record.questions.every(q => q.response !== undefined)) {
+        try {
+          attempts.set(record.id, await submitAdaptive(record));
+        } catch {
+          // The local history is the retry queue. A later load will retry this same ID.
+        }
+      }
+    }
+  }
   return {
     lessons: combinedLessons,
     assignments: remote?.assignments || [],
-    attempts: remote?.attempts || [],
+    attempts: [...attempts.values()],
     readings: remote?.readings || [],
   };
 };

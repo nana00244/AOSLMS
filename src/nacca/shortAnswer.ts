@@ -1,4 +1,4 @@
-import { gradeByRequirements } from './shortAnswerRequirements';
+import { gradeByRequirements } from './shortAnswerRequirements.ts';
 import type { NaccaQuestion } from './types';
 
 // Each alternative is compared only against the current question's own keys.

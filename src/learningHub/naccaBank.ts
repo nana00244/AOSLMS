@@ -1,3 +1,4 @@
+import { indicatorLessonId } from './indicatorLessonId';
 import bankData from '../nacca/importedBank.json';
 import type { NaccaQuestion, NaccaIndicator, NaccaSubject, NaccaLevel } from '../nacca/types';
 import type { HubLesson, HubQuestion } from './catalog';
@@ -85,7 +86,7 @@ export const naccaHubLessons: HubLesson[] = naccaIndicators.map((ind) => {
   );
 
   return {
-    id: `nacca-${ind.subject.toLowerCase()}-${ind.code.toLowerCase().replace(/[^a-z0-9]/g, '-')}`,
+    id: indicatorLessonId(ind.subject, ind.code),
     title: `${ind.code} · ${ind.sub_strand || ind.strand}`,
     subject: ind.subject,
     level: ind.level,

@@ -47,6 +47,7 @@ import {
   type PracticeSessionRecord,
 } from '../nacca/practiceHistory';
 
+import { indicatorLessonId } from '../learningHub/indicatorLessonId';
 import { shuffled, shuffledOptionIndices } from '../nacca/attemptOrder';
 
 interface Props {
@@ -56,13 +57,9 @@ interface Props {
   onBack: () => void;
   staff: boolean;
   studentId?: string;
-  onRecordAttempt?: (data: {
-    indicatorCode: string;
-    score: number;
-    correct: number;
-    total: number;
-    type: 'auto' | 'teacher';
-  }) => void;
+  assignmentId?: string;
+  assignmentLessonId?: string;
+  onRecordAttempt?: (record: PracticeSessionRecord) => void;
 }
 
 type PracticeMode = 'practice' | 'quiz' | 'unit_test' | 'teacher_task';
@@ -87,6 +84,8 @@ export function PracticeArenaPlayer({
   onBack,
   staff,
   studentId = 'guest_student',
+  assignmentId,
+  assignmentLessonId,
   onRecordAttempt,
 }: Props) {
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
@@ -414,7 +413,9 @@ export function PracticeArenaPlayer({
     const category = isTeacherTask ? 'teacher' : 'auto';
 
     // Save attempt to history (allowing retakes and keeping auto & teacher scores separate)
-    savePracticeAttempt({
+    const record = savePracticeAttempt({
+      id: crypto.randomUUID(),
+      assignmentId: assignmentLessonId === indicatorLessonId(currentIndicator.subject, currentIndicatorCode) ? assignmentId : undefined,
       studentId,
       indicatorCode: currentIndicatorCode,
       subject: currentIndicator.subject,
@@ -428,6 +429,7 @@ export function PracticeArenaPlayer({
       questions: questionStates.map((qs) => ({
         questionId: qs.question.id,
         optionOrder: qs.optionOrder,
+        response: qs.isAnswered ? { selectedOption: qs.selectedOption, numericInput: qs.numericInput, shortAnswerInput: qs.shortAnswerInput } : {},
         type: qs.question.type,
         difficulty: qs.question.difficulty,
         isCorrect: qs.isCorrect,
@@ -437,15 +439,7 @@ export function PracticeArenaPlayer({
 
     setHistoryKey((k) => k + 1);
 
-    if (onRecordAttempt) {
-      onRecordAttempt({
-        indicatorCode: currentIndicatorCode,
-        score,
-        correct: correctCount,
-        total: totalCount,
-        type: category,
-      });
-    }
+    onRecordAttempt?.(record);
   };
 
   const handleSkip = () => {
@@ -464,6 +458,9 @@ export function PracticeArenaPlayer({
         ...next[currentIndex],
         isAnswered: true,
         isCorrect: false,
+        selectedOption: undefined,
+        numericInput: undefined,
+        shortAnswerInput: undefined,
       };
       return next;
     });

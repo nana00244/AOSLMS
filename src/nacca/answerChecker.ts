@@ -1,4 +1,4 @@
-import { matchesShortAnswer } from './shortAnswer';
+import { matchesShortAnswer } from './shortAnswer.ts';
 import type { NaccaQuestion, StudentNaccaQuestion } from './types';
 
 export interface CheckAnswerResult {

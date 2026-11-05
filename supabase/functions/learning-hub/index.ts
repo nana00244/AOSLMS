@@ -2,6 +2,13 @@ import { authenticate, json } from '../_shared/http.ts';
 import { hubLessons, type HubLesson } from '../../../src/learningHub/catalog.ts';
 import { gradePractice, learnerLesson, manages, profileUser, requestSchema } from './rules.ts';
 
+import bank from './adaptive-bank.json' with { type: 'json' };
+import type { NaccaQuestion } from '../../../src/nacca/types.ts';
+import { evaluateAnswer } from '../../../src/nacca/answerChecker.ts';
+import { indicatorLessonId } from '../../../src/learningHub/indicatorLessonId.ts';
+const indicators = new Map(bank.indicators.map(i => [indicatorLessonId(i.subject, i.code), i]));
+const questions = new Map(bank.questions.map(q => [q.id, q]));
+
 const assignmentView = (r: any) => ({
   id: r.id,
   lessonId: r.lesson_id,
@@ -66,7 +73,7 @@ Deno.serve(async (request) => {
     ];
     const lessonById = new Map(lessons.map((l) => [l.id, l]));
     const visibleAssignments = assignments.filter((a) => {
-      const lesson = lessonById.get(a.lesson_id);
+      const lesson = lessonById.get(a.lesson_id) ?? indicators.get(a.lesson_id);
       if (!lesson) return false;
       return user.role === 'Student'
         ? a.student_ids.includes(student!.id) && a.class_id === student!.classId
@@ -89,12 +96,13 @@ Deno.serve(async (request) => {
       const visibleActivity = (r: any) => {
         const lesson = lessonById.get(r.lesson_id);
         const owner = roster.find((s) => s.id === r.student_id);
-        if (!lesson || !owner || !visibleLessonIds.has(lesson.id)) return false;
+        const subject = lesson?.subject ?? indicators.get(r.lesson_id)?.subject;
+        if (!owner || !subject || (!visibleLessonIds.has(r.lesson_id) && !indicators.has(r.lesson_id))) return false;
         if (r.assignment_id && !visibleAssignments.some((a) => a.id === r.assignment_id))
           return false;
         return user.role === 'Student'
           ? r.student_id === student!.id
-          : manages(user, owner.classId, lesson.subject);
+          : manages(user, owner.classId, subject);
       };
       return json({
         lessons: user.role === 'Student' ? visibleLessons.map(learnerLesson) : visibleLessons,
@@ -108,7 +116,7 @@ Deno.serve(async (request) => {
                     roster.some(
                       (s) =>
                         s.id === id &&
-                        manages(user, s.classId, lessonById.get(a.lesson_id)!.subject),
+                        manages(user, s.classId, (lessonById.get(a.lesson_id) ?? indicators.get(a.lesson_id))!.subject),
                     ),
                   ),
           }),
@@ -136,6 +144,34 @@ Deno.serve(async (request) => {
         .single();
       if (result.error) throw result.error;
       return json({ ...result.data.document, id: result.data.id }, 201);
+    }
+    if (input.action === 'submit-adaptive') {
+      const indicator = indicators.get(input.lessonId);
+      if (user.role !== 'Student' || !student || !indicator) return json({ error: 'Practice unavailable' }, 403);
+      if (input.assignmentId && !visibleAssignments.some(a => a.id === input.assignmentId && a.lesson_id === input.lessonId))
+        return json({ error: 'Assignment unavailable' }, 403);
+      const ids = new Set<string>();
+      let correct = 0;
+      for (const response of input.responses) {
+        const q = questions.get(response.questionId);
+        if (!q || q.subject !== indicator.subject || q.indicator_code !== indicator.code ||
+            !['mcq','numeric','short_answer'].includes(q.type) || ids.has(q.id))
+          return json({ error: 'Invalid practice question' }, 400);
+        ids.add(q.id);
+        const question = { ...q, options: q.optionCount ? Array(q.optionCount).fill('') : undefined } as NaccaQuestion;
+        if (evaluateAnswer(question, response).isCorrect) correct++;
+      }
+      const total = ids.size;
+      const saved = await client.from('learning_hub_attempts').upsert({
+        id: input.attemptId, student_id: student.id, lesson_id: input.lessonId,
+        assignment_id: input.assignmentId ?? null, created_at: input.completedAt,
+        correct, total, score: Math.round(correct * 100 / total),
+      }, { onConflict: 'id', ignoreDuplicates: true });
+      if (saved.error) throw saved.error;
+      const row = await client.from('learning_hub_attempts').select('*').eq('id', input.attemptId)
+        .eq('student_id', student.id).eq('lesson_id', input.lessonId).single();
+      if (row.error) throw row.error;
+      return json(activityView(row.data));
     }
     const lesson = visibleLessons.find((l) => l.id === input.lessonId);
     if (!lesson) return json({ error: 'Lesson unavailable' }, 404);
