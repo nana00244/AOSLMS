@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 
-const clips = { correct: 'cute-wow-yeye.mp3', wrong: 'wrong-answer-gameshow.mp3' };
-type Outcome = keyof typeof clips;
+const clips = { correct: 'cute-wow-yeye.mp3', wrong: 'wrong-answer-gameshow.mp3', skipped: 'run-vine.mp3', practice: 'practice-start-preview.mp3' };
+export type Outcome = keyof typeof clips;
 
 export function useAnswerSounds() {
   const context = useRef<AudioContext | null>(null);
@@ -40,12 +40,12 @@ export function useAnswerSounds() {
         buffers.current.set(outcome, buffer);
         return buffer;
       }
-      return (results: boolean[]) => {
-        void Promise.all([ready, Promise.all(results.map((ok) => load(ok ? 'correct' : 'wrong')))])
+      return (results: Outcome[]) => {
+        void Promise.all([ready, Promise.all(results.map(load))])
           .then(([enabled, sounds]) => {
             if (!enabled || version.current !== current) return;
             let when = audio.currentTime;
-            for (const buffer of sounds) {
+            for (const [index, buffer] of sounds.entries()) {
               const source = audio.createBufferSource();
               source.buffer = buffer;
               source.connect(audio.destination);
@@ -54,8 +54,9 @@ export function useAnswerSounds() {
                 source.disconnect();
                 sources.current.delete(source);
               };
-              source.start(when);
-              when += buffer.duration;
+              const duration = results[index] === 'practice' ? Math.min(3, buffer.duration) : buffer.duration;
+              source.start(when, 0, duration);
+              when += duration;
             }
           }).catch(() => {});
       };

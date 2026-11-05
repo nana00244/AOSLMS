@@ -449,3 +449,22 @@ test('student practice plays the selected wrong and correct answer clips', async
   }
   await expect.poll(async () => Number(await page.locator('html').getAttribute('data-feedback-clip'))).toBeGreaterThan(0);
 });
+
+test('starting student practice and skipping play their own clips', async ({ page }) => {
+  await setup(page, 'Student');
+  await page.goto('/#/learning-hub?tab=Courses&lesson=nacca-science-b6-5-4-1-1');
+  await page.evaluate(() => {
+    const start = AudioBufferSourceNode.prototype.start;
+    AudioBufferSourceNode.prototype.start = function (...args) {
+      document.documentElement.dataset.cueLength = String(args[2]);
+      return start.apply(this, args);
+    };
+  });
+  for (const [button, clip] of [['Start practice', 'practice-start-preview'], ['Skip', 'run-vine']]) {
+    const response = page.waitForResponse((r) => r.url().endsWith('/assets/' + clip + '.mp3') && r.ok());
+    await page.evaluate(() => { delete document.documentElement.dataset.cueLength; });
+    await page.getByRole('button', { name: button, exact: true }).click();
+    await response;
+    await expect.poll(async () => Number(await page.locator('html').getAttribute('data-cue-length'))).toBeGreaterThan(0);
+  }
+});

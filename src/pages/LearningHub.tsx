@@ -109,8 +109,11 @@ export function LearningHub() {
   const [creatorInitialLevel, setCreatorInitialLevel] = useState<string | undefined>();
 
   const practiceIndicator = params.get('practice');
+  const prepareSound = useAnswerSounds();
+  const playPracticeCue = () => { if (!staff) prepareSound()(['practice']); };
   const openPractice = (code: string, subject?: string) => {
     const next = new URLSearchParams(params);
+    playPracticeCue();
     next.set('tab', tab);
     next.set('practice', code);
     if (subject) next.set('subject', subject);
@@ -173,6 +176,7 @@ export function LearningHub() {
   if (practiceIndicator) {
     return (
       <PracticeArenaPlayer
+        prepareSound={prepareSound}
         key={`${params.get('subject') || ''}:${practiceIndicator}`}
         initialIndicatorCode={practiceIndicator}
         initialSubject={params.get('subject') || undefined}
@@ -244,6 +248,7 @@ export function LearningHub() {
         <>
           {lesson ? (
             <LessonView
+              prepareSound={prepareSound}
               key={`${lesson.id}-${assignmentId || ''}`}
               lesson={lesson}
               assignmentId={assignmentId}
@@ -614,6 +619,7 @@ function EmptyHub({ title, text }: { title: string; text: string }) {
   );
 }
 function LessonView({
+  prepareSound,
   lesson,
   assignmentId,
   snapshot,
@@ -624,6 +630,7 @@ function LessonView({
   onSaved,
   onOpenPractice,
 }: {
+  prepareSound: ReturnType<typeof useAnswerSounds>;
   lesson: LearningLesson;
   assignmentId?: string;
   snapshot: HubSnapshot;
@@ -634,7 +641,6 @@ function LessonView({
   onSaved: () => Promise<void>;
   onOpenPractice?: (code: string, subject?: string) => void;
 }) {
-  const prepareSound = useAnswerSounds();
   const [practice, setPractice] = useState(false),
     [busy, setBusy] = useState(false),
     [error, setError] = useState('');
@@ -672,7 +678,7 @@ function LessonView({
       const play = staff ? undefined : prepareSound();
       const graded = await submitHubPractice(lesson.id, answers, assignmentId);
       setResult(graded);
-      play?.(graded.feedback.map((answer) => answer.correct));
+      play?.(graded.feedback.map((answer) => answer.correct ? 'correct' : 'wrong'));
       await onSaved();
     } catch (e) {
       setError(e instanceof Error ? e.message : 'Could not save your answers.');
@@ -702,6 +708,7 @@ function LessonView({
                   const code = practiceIndicator.code;
                   onOpenPractice(code, practiceIndicator.subject);
                 } else {
+                  if (!staff) prepareSound()(['practice']);
                   setPractice(true);
                 }
               }}
@@ -768,7 +775,8 @@ function LessonView({
                         const code = practiceIndicator.code;
                         onOpenPractice(code, practiceIndicator.subject);
                       } else {
-                        setPractice(true);
+                        if (!staff) prepareSound()(['practice']);
+                  setPractice(true);
                       }
                     }}
                   >
@@ -848,6 +856,7 @@ function LessonView({
                       setResult(null);
                       setAnswers([]);
                       setOrder(makeOrder(order));
+                      if (!staff) prepareSound()(['practice']);
                     }}
                   >
                     Try again

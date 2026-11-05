@@ -1,4 +1,4 @@
-import { useAnswerSounds } from '../learningHub/useAnswerSounds';
+import type { useAnswerSounds } from '../learningHub/useAnswerSounds';
 import { useState, useMemo, useEffect } from 'react';
 import {
   BookOpen,
@@ -50,6 +50,7 @@ import {
 import { shuffled, shuffledOptionIndices } from '../nacca/attemptOrder';
 
 interface Props {
+  prepareSound: ReturnType<typeof useAnswerSounds>;
   initialIndicatorCode?: string;
   initialSubject?: string;
   onBack: () => void;
@@ -80,6 +81,7 @@ interface QuestionState {
 }
 
 export function PracticeArenaPlayer({
+  prepareSound,
   initialIndicatorCode,
   initialSubject,
   onBack,
@@ -341,7 +343,7 @@ export function PracticeArenaPlayer({
   };
 
   // Check Answer
-  const prepareSound = useAnswerSounds();
+  const playPracticeCue = () => { if (!staff) prepareSound()(['practice']); };
   const handleCheck = () => {
     if (!currentQ || !currentQState || currentQState.isAnswered) return;
 
@@ -359,7 +361,7 @@ export function PracticeArenaPlayer({
 
     setValidationError('');
     const isCorrect = !!result.isCorrect;
-    if (!staff) prepareSound()([isCorrect]);
+    if (!staff) prepareSound()([isCorrect ? 'correct' : 'wrong']);
 
     // Update adaptive session difficulty
     const nextAdaptive = recordAdaptiveAnswer(adaptiveState, currentQ.id, isCorrect);
@@ -379,10 +381,10 @@ export function PracticeArenaPlayer({
   };
 
   // Next Question / Finish Session
-  const handleNext = () => {
+  const handleNext = (state = adaptiveState) => {
     if (currentIndex < TARGET_PROBLEMS - 1) {
       // Pick next adaptive question based on updated difficulty
-      const nextQ = getNextAdaptiveQuestion(attemptPool, adaptiveState);
+      const nextQ = getNextAdaptiveQuestion(attemptPool, state);
       if (nextQ) {
         const optionOrder = shuffledOptionIndices(nextQ.options, indicatorAttemptsData.allAttempts[0]?.questions.find((q) => q.questionId === nextQ.id)?.optionOrder);
         setQuestionStates((prev) => [
@@ -451,6 +453,7 @@ export function PracticeArenaPlayer({
       handleNext();
       return;
     }
+    if (!staff) prepareSound()(['skipped']);
     // Record skipped as incorrect in adaptive progression
     const nextAdaptive = recordAdaptiveAnswer(adaptiveState, currentQ!.id, false);
     setAdaptiveState(nextAdaptive);
@@ -465,7 +468,7 @@ export function PracticeArenaPlayer({
       return next;
     });
 
-    handleNext();
+    handleNext(nextAdaptive);
   };
 
   const handleShowHint = () => {
@@ -637,7 +640,7 @@ export function PracticeArenaPlayer({
           <div className="practice-arena-mode-tabs">
             <button
               className={mode === 'practice' ? 'active' : ''}
-              onClick={() => setMode('practice')}
+              onClick={() => { playPracticeCue(); setMode('practice'); }}
               title="Adaptive student practice"
             >
               Practice
@@ -677,6 +680,7 @@ export function PracticeArenaPlayer({
                   key={`${ind.subject}:${ind.code}`}
                   className={`practice-arena-exercise-item ${active ? 'active' : ''}`}
                   onClick={() => {
+                    playPracticeCue();
                     setCurrentIndicatorCode(ind.code);
                     restartSession();
                   }}
@@ -785,7 +789,7 @@ export function PracticeArenaPlayer({
               </div>
 
               <div className="practice-arena-completion-actions">
-                <Button onClick={restartSession}>
+                <Button onClick={() => { playPracticeCue(); restartSession(); }}>
                   <RotateCcw size={16} /> Practise again (Retake)
                 </Button>
                 <Button
@@ -811,7 +815,7 @@ export function PracticeArenaPlayer({
           ) : !studentSafeQuestion ? (
             <div className="practice-arena-loading-stage">
               <p>No questions found for this indicator. Choose "Practice" or another topic.</p>
-              <Button onClick={() => setMode('practice')}>Return to Practice</Button>
+              <Button onClick={() => { playPracticeCue(); setMode('practice'); }}>Return to Practice</Button>
             </div>
           ) : (
             /* Active Question Screen */
@@ -1069,7 +1073,7 @@ export function PracticeArenaPlayer({
                 <div className="practice-arena-bar-center">
                   <button
                     className="practice-arena-restart-btn"
-                    onClick={restartSession}
+                    onClick={() => { playPracticeCue(); restartSession(); }}
                     title="Restart this problem set"
                   >
                     <RotateCcw size={15} />
@@ -1108,7 +1112,7 @@ export function PracticeArenaPlayer({
                       <span className="practice-arena-feedback-text correct">
                         <Check size={18} /> Great work!
                       </span>
-                      <button className="practice-arena-next-btn" onClick={handleNext}>
+                      <button className="practice-arena-next-btn" onClick={() => handleNext()}>
                         {currentIndex < TARGET_PROBLEMS - 1 ? 'Next question' : 'Show summary'}
                       </button>
                     </div>
@@ -1117,7 +1121,7 @@ export function PracticeArenaPlayer({
                       <span className="practice-arena-feedback-text incorrect">
                         <AlertCircle size={18} /> Review explanation
                       </span>
-                      <button className="practice-arena-next-btn" onClick={handleNext}>
+                      <button className="practice-arena-next-btn" onClick={() => handleNext()}>
                         Move on
                       </button>
                     </div>
