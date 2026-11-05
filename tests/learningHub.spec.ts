@@ -420,7 +420,7 @@ for (const role of ['Student', 'Teacher'] as const) {
   });
 }
 
-test('student practice plays the correct-answer clip only for a correct answer', async ({ page }) => {
+test('student practice plays the selected wrong and correct answer clips', async ({ page }) => {
   await setup(page, 'Student');
   await page.goto('/#/learning-hub?tab=Courses&practice=B6.5.4.1.1&subject=Science');
   await page.evaluate(() => {
@@ -436,10 +436,14 @@ test('student practice plays the correct-answer clip only for a correct answer',
     const key = Number(question.answer);
     const option = question.options![correct ? key : (key + 1) % question.options!.length];
     await page.getByText(option, { exact: true }).click();
+    const filename = correct ? 'cute-wow-yeye.mp3' : 'wrong-answer-gameshow.mp3';
+    const fetched = page.waitForResponse((r) => r.url().endsWith('/assets/' + filename) && r.ok());
+    await page.evaluate(() => { delete document.documentElement.dataset.feedbackClip; });
     await page.getByRole('button', { name: 'Check', exact: true }).click();
+    await fetched;
+    await expect.poll(async () => Number(await page.locator('html').getAttribute('data-feedback-clip'))).toBeGreaterThan(0);
     if (!correct) {
       await expect(page.locator('.practice-arena-next-btn')).toBeVisible();
-      expect(await page.locator('html').getAttribute('data-feedback-clip')).toBeNull();
       await page.locator('.practice-arena-next-btn').click();
     }
   }

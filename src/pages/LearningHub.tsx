@@ -1,4 +1,4 @@
-import { useCorrectAnswerSound } from '../learningHub/useCorrectAnswerSound';
+import { useAnswerSounds } from '../learningHub/useAnswerSounds';
 import { useCallback, useEffect, useState } from 'react';
 import { shuffled, shuffledOptionIndices } from '../nacca/attemptOrder';
 import { useSearchParams } from 'react-router-dom';
@@ -634,7 +634,7 @@ function LessonView({
   onSaved: () => Promise<void>;
   onOpenPractice?: (code: string, subject?: string) => void;
 }) {
-  const prepareSound = useCorrectAnswerSound();
+  const prepareSound = useAnswerSounds();
   const [practice, setPractice] = useState(false),
     [busy, setBusy] = useState(false),
     [error, setError] = useState('');
@@ -672,7 +672,7 @@ function LessonView({
       const play = staff ? undefined : prepareSound();
       const graded = await submitHubPractice(lesson.id, answers, assignmentId);
       setResult(graded);
-      play?.(graded.attempt.correct);
+      play?.(graded.feedback.map((answer) => answer.correct));
       await onSaved();
     } catch (e) {
       setError(e instanceof Error ? e.message : 'Could not save your answers.');

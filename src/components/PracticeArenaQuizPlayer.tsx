@@ -1,4 +1,4 @@
-import { useCorrectAnswerSound } from '../learningHub/useCorrectAnswerSound';
+import { useAnswerSounds } from '../learningHub/useAnswerSounds';
 import { useState } from 'react';
 import {
   ArrowLeft,
@@ -122,11 +122,13 @@ export function PracticeArenaQuizPlayer({
     }));
   };
 
-  const prepareSound = useCorrectAnswerSound();
+  const prepareSound = useAnswerSounds();
   const handleSubmit = () => {
     const result = submitQuiz(quiz, studentId, studentName, responses, undefined, questions.map((q) => q.id));
-    if (student && result.autoScore.pointsAwarded > 0) {
-      prepareSound()(result.answers.filter((answer) => answer.isCorrect).length);
+    if (student) {
+      const graded = result.answers.filter((answer) => answer.isAutoScored &&
+        (answer.selectedOption !== undefined || answer.numericInput?.trim() || answer.shortAnswerInput?.trim()));
+      prepareSound()(graded.map((answer) => answer.isCorrect === true));
     }
     setSubmissionResult(result);
     if (onCompleted) {
