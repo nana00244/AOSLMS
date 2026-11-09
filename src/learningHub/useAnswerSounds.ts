@@ -1,7 +1,13 @@
 import { useEffect, useRef } from 'react';
 
-const clips = { correct: 'cute-wow-yeye.mp3', wrong: 'wrong-answer-gameshow.mp3', skipped: 'run-vine.mp3', practice: 'practice-start-preview.mp3' };
+const clips = {
+  correct: 'cute-wow-yeye.mp3',
+  wrong: 'wrong-answer-gameshow.mp3',
+  skipped: 'run-vine.mp3',
+  practice: 'practice-start-preview.mp3',
+};
 export type Outcome = keyof typeof clips;
+const outcomes = Object.keys(clips) as Outcome[];
 
 export function useAnswerSounds() {
   const context = useRef<AudioContext | null>(null);
@@ -9,12 +15,43 @@ export function useAnswerSounds() {
   const sources = useRef(new Set<AudioBufferSourceNode>());
   const version = useRef(0);
 
-  useEffect(() => () => {
-    version.current++;
-    if (context.current) void context.current.close().catch(() => {});
-    context.current = null;
-    sources.current.clear();
-    buffers.current.clear();
+  function getContext() {
+    return (context.current ??= new AudioContext());
+  }
+
+  function load(outcome: Outcome, audio: AudioContext) {
+    const cached = buffers.current.get(outcome);
+    if (cached) return cached;
+    const buffer = fetch(import.meta.env.BASE_URL + 'assets/' + clips[outcome])
+      .then((response) => {
+        if (!response.ok) throw new Error('Sound unavailable');
+        return response.arrayBuffer();
+      })
+      .then((bytes) => audio.decodeAudioData(bytes))
+      .catch((error) => {
+        if (context.current === audio) buffers.current.delete(outcome);
+        throw error;
+      });
+    buffers.current.set(outcome, buffer);
+    return buffer;
+  }
+
+  useEffect(() => {
+    try {
+      const audio = getContext();
+      // Fetch and decode before the learner needs feedback; resume remains gesture-gated.
+      for (const outcome of outcomes) void load(outcome, audio).catch(() => {});
+    } catch {
+      // Audio is optional; the practice flow continues if the browser lacks Web Audio.
+    }
+
+    return () => {
+      version.current++;
+      if (context.current) void context.current.close().catch(() => {});
+      context.current = null;
+      sources.current.clear();
+      buffers.current.clear();
+    };
   }, []);
 
   // Unlock audio on the submit gesture even when the results arrive asynchronously.
@@ -22,26 +59,10 @@ export function useAnswerSounds() {
     const current = ++version.current;
     try {
       for (const source of sources.current) source.stop();
-      const audio = context.current ??= new AudioContext();
+      const audio = getContext();
       const ready = audio.resume().then(() => true, () => false);
-      function load(outcome: Outcome) {
-        const cached = buffers.current.get(outcome);
-        if (cached) return cached;
-        const buffer = fetch(import.meta.env.BASE_URL + 'assets/' + clips[outcome])
-          .then((response) => {
-            if (!response.ok) throw new Error('Sound unavailable');
-            return response.arrayBuffer();
-          })
-          .then((bytes) => audio.decodeAudioData(bytes))
-          .catch((error) => {
-            if (context.current === audio) buffers.current.delete(outcome);
-            throw error;
-          });
-        buffers.current.set(outcome, buffer);
-        return buffer;
-      }
       return (results: Outcome[]) => {
-        void Promise.all([ready, Promise.all(results.map(load))])
+        void Promise.all([ready, Promise.all(results.map((outcome) => load(outcome, audio)))])
           .then(([enabled, sounds]) => {
             if (!enabled || version.current !== current) return;
             let when = audio.currentTime;
