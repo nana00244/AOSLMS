@@ -109,7 +109,7 @@ export const naccaHubLessons: HubLesson[] = naccaIndicators.map((ind) => {
     standard: ind.content_standard || ind.code,
     description: ind.objective || `Practice questions and skills for ${ind.code}.`,
     body,
-    sourceUrl: mathSource,
+    sourceUrl,
     sourceTitle:
       ind.subject === 'Mathematics'
         ? `NaCCA Ghana ${ind.subject} Curriculum (${ind.level}) · Source Page ${ind.source_page || '30'}`
