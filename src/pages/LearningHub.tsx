@@ -384,7 +384,7 @@ export function LearningHub() {
                         </strong>
                         <span style={{ fontSize: 13, color: '#3c4043' }}>
                           {naccaQuestions.length} approved questions loaded across{' '}
-                          {naccaIndicators.length} indicators (Basic 1 to Basic 4 Mathematics).
+                          {naccaIndicators.length} indicators (Basic 1 English and Basic 1 to Basic 4 Mathematics).
                         </span>
                       </div>
                       <Button onClick={() => go('NaCCA Question Bank')}>

@@ -1,17 +1,30 @@
 import { indicatorLessonId } from './indicatorLessonId';
 import bankData from '../nacca/importedBank.json';
+import basic1EnglishData from '../nacca/basic1EnglishBank.json';
 import type { NaccaQuestion, NaccaIndicator, NaccaSubject, NaccaLevel } from '../nacca/types';
 import type { HubLesson, HubQuestion } from './catalog';
 import { sortIndicators, sortQuestions } from '../nacca/sortOrder';
 
-const rawIndicators = (bankData.indicators || []) as unknown as NaccaIndicator[];
+const rawIndicators = [
+  ...(bankData.indicators || []),
+  ...(basic1EnglishData.indicators || []),
+] as unknown as NaccaIndicator[];
 export const naccaIndicators: NaccaIndicator[] = sortIndicators(rawIndicators);
 
-const rawQuestions = (bankData.questions || []) as unknown as NaccaQuestion[];
+const rawQuestions = [
+  ...(bankData.questions || []),
+  ...(basic1EnglishData.questions || []),
+] as unknown as NaccaQuestion[];
 export const naccaQuestions: NaccaQuestion[] = sortQuestions(rawQuestions, naccaIndicators);
 
-export const naccaSubjects: NaccaSubject[] = (bankData.subjects || []) as unknown as NaccaSubject[];
-export const naccaLevels: NaccaLevel[] = (bankData.levels || []) as unknown as NaccaLevel[];
+export const naccaSubjects: NaccaSubject[] = [
+  ...((bankData.subjects || []) as unknown as NaccaSubject[]),
+  ...((basic1EnglishData.subjects || []) as unknown as NaccaSubject[]),
+];
+export const naccaLevels: NaccaLevel[] = [
+  ...((bankData.levels || []) as unknown as NaccaLevel[]),
+  ...((basic1EnglishData.levels || []) as unknown as NaccaLevel[]),
+];
 export const naccaImportedAt = bankData.importedAt || new Date().toISOString();
 
 /**
@@ -62,8 +75,10 @@ export const naccaHubLessons: HubLesson[] = naccaIndicators.map((ind) => {
   const questions = naccaQuestions.filter(
     (q) => q.indicator_code === ind.code && q.subject === ind.subject,
   );
-  const mathSource =
-    'https://mingycomputersgh.wordpress.com/wp-content/uploads/2023/10/mathematics-1.pdf';
+  const sourceUrl =
+    ind.subject === 'Mathematics'
+      ? 'https://mingycomputersgh.wordpress.com/wp-content/uploads/2023/10/mathematics-1.pdf'
+      : '';
 
   const skillDescriptions = ind.spec?.skills?.map((s) => `• ${s.description}`).join('\n') || '';
   const misconceptions = ind.spec?.misconceptions?.map((m) => `• ${m}`).join('\n') || '';
@@ -95,7 +110,10 @@ export const naccaHubLessons: HubLesson[] = naccaIndicators.map((ind) => {
     description: ind.objective || `Practice questions and skills for ${ind.code}.`,
     body,
     sourceUrl: mathSource,
-    sourceTitle: `NaCCA Ghana ${ind.subject} Curriculum (${ind.level}) · Source Page ${ind.source_page || '30'}`,
+    sourceTitle:
+      ind.subject === 'Mathematics'
+        ? `NaCCA Ghana ${ind.subject} Curriculum (${ind.level}) · Source Page ${ind.source_page || '30'}`
+        : `NaCCA Ghana ${ind.subject} Curriculum (${ind.level}) · Source Page ${ind.source_page || 'not specified'}`,
     questions: toHubQuestions(questions),
   };
 });
