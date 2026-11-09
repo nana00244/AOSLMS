@@ -125,15 +125,13 @@ export function PracticeArenaQuizPlayer({
   const prepareSound = useAnswerSounds();
   const handleSubmit = () => {
     const result = submitQuiz(quiz, studentId, studentName, responses, undefined, questions.map((q) => q.id));
-    if (student) {
-      const outcomes = result.answers.flatMap((answer): Outcome[] => {
-        const filled = answer.selectedOption !== undefined || answer.numericInput?.trim() ||
-          answer.shortAnswerInput?.trim() || answer.writtenAnswer?.trim();
-        if (!filled) return ['skipped'];
-        return answer.isAutoScored ? [answer.isCorrect ? 'correct' : 'wrong'] : [];
-      });
-      prepareSound()(outcomes);
-    }
+    const outcomes = result.answers.flatMap((answer): Outcome[] => {
+      const filled = answer.selectedOption !== undefined || answer.numericInput?.trim() ||
+        answer.shortAnswerInput?.trim() || answer.writtenAnswer?.trim();
+      if (!filled) return ['skipped'];
+      return answer.isAutoScored ? [answer.isCorrect ? 'correct' : 'wrong'] : [];
+    });
+    prepareSound()(outcomes);
     setSubmissionResult(result);
     if (onCompleted) {
       onCompleted(result);

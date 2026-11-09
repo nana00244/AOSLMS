@@ -342,7 +342,7 @@ export function PracticeArenaPlayer({
   };
 
   // Check Answer
-  const playPracticeCue = () => { if (!staff) prepareSound()(['practice']); };
+  const playPracticeCue = () => prepareSound()(['practice']);
   const handleCheck = () => {
     if (!currentQ || !currentQState || currentQState.isAnswered) return;
 
@@ -360,7 +360,7 @@ export function PracticeArenaPlayer({
 
     setValidationError('');
     const isCorrect = !!result.isCorrect;
-    if (!staff) prepareSound()([isCorrect ? 'correct' : 'wrong']);
+    prepareSound()([isCorrect ? 'correct' : 'wrong']);
 
     // Update adaptive session difficulty
     const nextAdaptive = recordAdaptiveAnswer(adaptiveState, currentQ.id, isCorrect);
@@ -447,7 +447,7 @@ export function PracticeArenaPlayer({
       handleNext();
       return;
     }
-    if (!staff) prepareSound()(['skipped']);
+    prepareSound()(['skipped']);
     // Record skipped as incorrect in adaptive progression
     const nextAdaptive = recordAdaptiveAnswer(adaptiveState, currentQ!.id, false);
     setAdaptiveState(nextAdaptive);

@@ -131,7 +131,7 @@ export function LearningHub() {
 
   const practiceIndicator = params.get('practice');
   const prepareSound = useAnswerSounds();
-  const playPracticeCue = () => { if (!staff) prepareSound()(['practice']); };
+  const playPracticeCue = () => prepareSound()(['practice']);
   const openPractice = (code: string, subject?: string) => {
     const next = new URLSearchParams(params);
     playPracticeCue();
@@ -705,7 +705,7 @@ function LessonView({
     setBusy(true);
     setError('');
     try {
-      const play = staff ? undefined : prepareSound();
+      const play = prepareSound();
       const graded = await submitHubPractice(lesson.id, answers, assignmentId);
       setResult(graded);
       play?.(graded.feedback.map((answer) => answer.correct ? 'correct' : 'wrong'));
@@ -738,7 +738,7 @@ function LessonView({
                   const code = practiceIndicator.code;
                   onOpenPractice(code, practiceIndicator.subject);
                 } else {
-                  if (!staff) prepareSound()(['practice']);
+                  prepareSound()(['practice']);
                   setPractice(true);
                 }
               }}
@@ -805,7 +805,7 @@ function LessonView({
                         const code = practiceIndicator.code;
                         onOpenPractice(code, practiceIndicator.subject);
                       } else {
-                        if (!staff) prepareSound()(['practice']);
+                        prepareSound()(['practice']);
                   setPractice(true);
                       }
                     }}
@@ -886,7 +886,7 @@ function LessonView({
                       setResult(null);
                       setAnswers([]);
                       setOrder(makeOrder(order));
-                      if (!staff) prepareSound()(['practice']);
+                      prepareSound()(['practice']);
                     }}
                   >
                     Try again
