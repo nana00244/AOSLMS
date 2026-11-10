@@ -1,7 +1,12 @@
-import { describe, expect, it } from 'vitest';
+import { describe, expect, it, vi } from 'vitest';
 import { hubLessons } from './learningHub/catalog';
 import * as publicSources from './learningHub/sources';
 import { basicTwoEnglishLessons } from './learningHub/englishBank';
+import { loadHub } from './learningHub/api';
+
+vi.mock('./backend', () => ({
+  invokeBackend: async () => ({ lessons: [], assignments: [], attempts: [], readings: [] }),
+}));
 
 // Protect stable references used by saved assignments and server-graded attempts.
 describe('Learning Hub curriculum integrity', () => {
@@ -12,12 +17,21 @@ describe('Learning Hub curriculum integrity', () => {
       true,
     );
     expect(basicTwoEnglishLessons.every((lesson) => lesson.level === 'B2')).toBe(true);
-    expect(basicTwoEnglishLessons.reduce((total, lesson) => total + lesson.questions.length, 0)).toBe(
-      502,
-    );
-    expect(basicTwoEnglishLessons.some((lesson) => lesson.body.join(' ').includes('teacher-assessed'))).toBe(
-      true,
-    );
+    expect(
+      basicTwoEnglishLessons.reduce((total, lesson) => total + lesson.questions.length, 0),
+    ).toBe(502);
+    expect(
+      basicTwoEnglishLessons.some((lesson) => lesson.body.join(' ').includes('teacher-assessed')),
+    ).toBe(true);
+  });
+  it('keeps local catalog courses visible when the backend returns a remote snapshot', async () => {
+    const snapshot = await loadHub();
+    expect(
+      snapshot.lessons.filter(
+        (lesson) => lesson.level === 'B2' && lesson.subject === 'English Language',
+      ),
+    ).toHaveLength(49);
+    expect(snapshot.lessons.some((lesson) => lesson.standard === 'B2.6.1.1.1')).toBe(true);
   });
   it('has unique references, valid answer options and level-consistent standard codes', () => {
     expect(new Set(hubLessons.map((lesson) => lesson.id)).size).toBe(hubLessons.length);

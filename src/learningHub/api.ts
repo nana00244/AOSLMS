@@ -16,17 +16,25 @@ import { naccaHubLessons } from './naccaBank';
 
 export function localHubAttempt(record: PracticeSessionRecord): HubAttempt {
   return {
-    id: record.id, lessonId: indicatorLessonId(record.subject, record.indicatorCode),
-    studentId: record.studentId, assignmentId: record.assignmentId ?? null,
-    score: record.score, correct: record.correctCount, total: record.totalCount, createdAt: record.completedAt,
+    id: record.id,
+    lessonId: indicatorLessonId(record.subject, record.indicatorCode),
+    studentId: record.studentId,
+    assignmentId: record.assignmentId ?? null,
+    score: record.score,
+    correct: record.correctCount,
+    total: record.totalCount,
+    createdAt: record.completedAt,
   };
 }
 
 export function submitAdaptive(record: PracticeSessionRecord): Promise<HubAttempt> {
   return invokeBackend('learning-hub', {
-    action: 'submit-adaptive', attemptId: record.id, completedAt: record.completedAt,
-    lessonId: indicatorLessonId(record.subject, record.indicatorCode), assignmentId: record.assignmentId,
-    responses: record.questions.map(q => ({ questionId: q.questionId, ...q.response })),
+    action: 'submit-adaptive',
+    attemptId: record.id,
+    completedAt: record.completedAt,
+    lessonId: indicatorLessonId(record.subject, record.indicatorCode),
+    assignmentId: record.assignmentId,
+    responses: record.questions.map((q) => ({ questionId: q.questionId, ...q.response })),
   });
 }
 
@@ -48,34 +56,38 @@ export const loadHub = async (studentId?: string, background = false): Promise<H
     })),
   }));
 
-  const baseLessons: LearningLesson[] = remote
-    ? remote.lessons
-    : hubLessons.map((l) => ({
-        ...l,
-        questions: l.questions.map((q) => ({
-          id: q.id,
-          prompt: q.prompt,
-          options: q.options,
-        })),
-      }));
+  const catalogLessons: LearningLesson[] = hubLessons.map((l) => ({
+    ...l,
+    questions: l.questions.map((q) => ({
+      id: q.id,
+      prompt: q.prompt,
+      options: q.options,
+    })),
+  }));
+  const remoteLessons = remote?.lessons ?? [];
 
   // Ensure NaCCA curriculum lessons are always present alongside any remote lessons
   const seen = new Set<string>();
   const combinedLessons: LearningLesson[] = [];
-  for (const l of [...naccaLessonsMapped, ...baseLessons]) {
+  for (const l of [...naccaLessonsMapped, ...catalogLessons, ...remoteLessons]) {
     if (!seen.has(l.id)) {
       seen.add(l.id);
       combinedLessons.push(l);
     }
   }
 
-  const attempts = new Map((remote?.attempts ?? []).map(a => [a.id, a]));
+  const attempts = new Map((remote?.attempts ?? []).map((a) => [a.id, a]));
   if (studentId) {
     for (const record of loadPracticeHistory(studentId)) {
-      if (record.studentId !== studentId || record.category !== 'auto' || attempts.has(record.id)) continue;
+      if (record.studentId !== studentId || record.category !== 'auto' || attempts.has(record.id))
+        continue;
       attempts.set(record.id, localHubAttempt(record));
       // Older records have totals only. Keep them on the originating device.
-      if (remote && record.questions.length && record.questions.every(q => q.response !== undefined)) {
+      if (
+        remote &&
+        record.questions.length &&
+        record.questions.every((q) => q.response !== undefined)
+      ) {
         try {
           attempts.set(record.id, await submitAdaptive(record));
         } catch {
