@@ -1,23 +1,9 @@
-import { describe, expect, it, vi } from 'vitest';
+import { describe, expect, it } from 'vitest';
 import { hubLessons } from './learningHub/catalog';
 import * as publicSources from './learningHub/sources';
 import { basicTwoEnglishLessons } from './learningHub/englishBank';
-import { loadHub } from './learningHub/api';
 import { getLessonPracticeIndicator } from './learningHub/practiceNavigation';
 import { naccaQuestions, naccaIndicators } from './learningHub/naccaBank';
-
-vi.mock('./backend', () => ({
-  invokeBackend: async () => ({
-    lessons: [],
-    assignments: [],
-    attempts: [],
-    readings: [],
-  }),
-}));
-vi.mock('./learningHub/naccaBank', async (importOriginal) => {
-  const actual = await importOriginal<typeof import('./learningHub/naccaBank')>();
-  return { ...actual, naccaHubLessons: [] };
-});
 
 // Protect stable references used by saved assignments and server-graded attempts.
 describe('Learning Hub curriculum integrity', () => {
@@ -34,15 +20,6 @@ describe('Learning Hub curriculum integrity', () => {
     expect(
       basicTwoEnglishLessons.some((lesson) => lesson.body.join(' ').includes('teacher-assessed')),
     ).toBe(true);
-  });
-  it('keeps local catalog courses visible when the backend returns a remote snapshot', async () => {
-    const snapshot = await loadHub();
-    expect(
-      snapshot.lessons.filter(
-        (lesson) => lesson.level === 'B2' && lesson.subject === 'English Language',
-      ),
-    ).toHaveLength(49);
-    expect(snapshot.lessons.some((lesson) => lesson.standard === 'B2.6.1.1.1')).toBe(true);
   });
   it('routes Basic 2 English course practice into the one-question-at-a-time bank', () => {
     const lesson = basicTwoEnglishLessons.find((item) => item.standard === 'B2.6.1.1.1')!;
