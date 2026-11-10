@@ -23,7 +23,7 @@ export const curriculumSources: CurriculumSource[] = [
     description:
       'Official curriculum directory for primary learning areas. The site may be temporarily unavailable; the archive below provides additional access.',
     levels: ['KG1', 'KG2', ...primary],
-    subjects: ['All subjects'],
+    subjects: ['All subjects', 'English Language'],
   },
   {
     title: 'Ministry of Education curriculum resource hub',

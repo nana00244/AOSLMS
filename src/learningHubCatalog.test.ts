@@ -1,9 +1,24 @@
 import { describe, expect, it } from 'vitest';
 import { hubLessons } from './learningHub/catalog';
 import * as publicSources from './learningHub/sources';
+import { basicTwoEnglishLessons } from './learningHub/englishBank';
 
 // Protect stable references used by saved assignments and server-graded attempts.
 describe('Learning Hub curriculum integrity', () => {
+  it('includes the 49 supplied Basic 2 English indicators and only scores authentic MCQs', () => {
+    expect(basicTwoEnglishLessons).toHaveLength(49);
+    expect(new Set(basicTwoEnglishLessons.map((lesson) => lesson.standard)).size).toBe(49);
+    expect(basicTwoEnglishLessons.every((lesson) => lesson.subject === 'English Language')).toBe(
+      true,
+    );
+    expect(basicTwoEnglishLessons.every((lesson) => lesson.level === 'B2')).toBe(true);
+    expect(basicTwoEnglishLessons.reduce((total, lesson) => total + lesson.questions.length, 0)).toBe(
+      502,
+    );
+    expect(basicTwoEnglishLessons.some((lesson) => lesson.body.join(' ').includes('teacher-assessed'))).toBe(
+      true,
+    );
+  });
   it('has unique references, valid answer options and level-consistent standard codes', () => {
     expect(new Set(hubLessons.map((lesson) => lesson.id)).size).toBe(hubLessons.length);
     for (const lesson of hubLessons) {
