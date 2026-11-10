@@ -1,6 +1,6 @@
 import { indicatorLessonId } from './indicatorLessonId';
 import { naccaIndicators } from './naccaBank';
-import { basicTwoEnglishLessons } from './englishBank';
+import { basicThreeEnglishLessons, basicTwoEnglishLessons } from './englishBank';
 
 /** Content standards can contain several indicators; route by the lesson's exact ID. */
 export function getLessonPracticeIndicator(lesson: { id: string; subject: string; level: string }) {
@@ -15,7 +15,9 @@ export function getLessonPracticeIndicator(lesson: { id: string; subject: string
       (indicator) =>
         indicator.subject === lesson.subject &&
         indicator.code ===
-          basicTwoEnglishLessons.find((candidate) => candidate.id === lesson.id)?.standard,
+          [...basicTwoEnglishLessons, ...basicThreeEnglishLessons].find(
+            (candidate) => candidate.id === lesson.id,
+          )?.standard,
     )
   );
 }

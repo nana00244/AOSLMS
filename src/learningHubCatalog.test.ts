@@ -1,9 +1,10 @@
 import { describe, expect, it } from 'vitest';
 import { hubLessons } from './learningHub/catalog';
 import * as publicSources from './learningHub/sources';
-import { basicTwoEnglishLessons } from './learningHub/englishBank';
+import { basicThreeEnglishLessons, basicTwoEnglishLessons } from './learningHub/englishBank';
 import { getLessonPracticeIndicator } from './learningHub/practiceNavigation';
 import { naccaQuestions, naccaIndicators } from './learningHub/naccaBank';
+import englishB3Bank from './learningHub/englishB3Bank.json';
 
 // Protect stable references used by saved assignments and server-graded attempts.
 describe('Learning Hub curriculum integrity', () => {
@@ -34,6 +35,30 @@ describe('Learning Hub curriculum integrity', () => {
         (item) => item.level === 'Basic 2' && item.subject === 'English Language',
       ),
     ).toHaveLength(49);
+  });
+  it('includes the 66 supplied Basic 3 English indicators in the adaptive practice bank', () => {
+    expect(basicThreeEnglishLessons).toHaveLength(66);
+    expect(new Set(basicThreeEnglishLessons.map((lesson) => lesson.standard)).size).toBe(66);
+    expect(basicThreeEnglishLessons.every((lesson) => lesson.subject === 'English Language')).toBe(
+      true,
+    );
+    expect(basicThreeEnglishLessons.every((lesson) => lesson.level === 'B3')).toBe(true);
+    expect(
+      basicThreeEnglishLessons.reduce((total, lesson) => total + lesson.questions.length, 0),
+    ).toBe(839);
+    expect(englishB3Bank.reduce((total, bank) => total + bank.excludedMcqCount, 0)).toBe(2);
+    const lesson = basicThreeEnglishLessons.find((item) => item.standard === 'B3.6.1.1.1')!;
+    const indicator = getLessonPracticeIndicator(lesson);
+    expect(indicator?.code).toBe(lesson.standard);
+    expect(indicator?.level).toBe('Basic 3');
+    expect(
+      naccaQuestions.filter((question) => question.indicator_code === lesson.standard),
+    ).toHaveLength(lesson.questions.length);
+    expect(
+      naccaIndicators.filter(
+        (item) => item.level === 'Basic 3' && item.subject === 'English Language',
+      ),
+    ).toHaveLength(66);
   });
   it('has unique references, valid answer options and level-consistent standard codes', () => {
     expect(new Set(hubLessons.map((lesson) => lesson.id)).size).toBe(hubLessons.length);

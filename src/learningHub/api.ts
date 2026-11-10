@@ -66,10 +66,10 @@ export const loadHub = async (studentId?: string, background = false): Promise<H
   }));
   const remoteLessons = remote?.lessons ?? [];
 
-  // Ensure NaCCA curriculum lessons are always present alongside any remote lessons
+  // Prefer curated catalog lessons when generated indicator entries share the same ID.
   const seen = new Set<string>();
   const combinedLessons: LearningLesson[] = [];
-  for (const l of [...naccaLessonsMapped, ...catalogLessons, ...remoteLessons]) {
+  for (const l of [...catalogLessons, ...naccaLessonsMapped, ...remoteLessons]) {
     if (!seen.has(l.id)) {
       seen.add(l.id);
       combinedLessons.push(l);
