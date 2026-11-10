@@ -1,6 +1,7 @@
 import { indicatorLessonId } from './indicatorLessonId';
 import bankData from '../nacca/importedBank.json';
 import basic1EnglishData from '../nacca/basic1EnglishBank.json';
+import basic2EnglishData from './englishB2Bank.json';
 import type { NaccaQuestion, NaccaIndicator, NaccaSubject, NaccaLevel } from '../nacca/types';
 import type { HubLesson, HubQuestion } from './catalog';
 import { sortIndicators, sortQuestions } from '../nacca/sortOrder';
@@ -8,22 +9,56 @@ import { sortIndicators, sortQuestions } from '../nacca/sortOrder';
 const rawIndicators = [
   ...(bankData.indicators || []),
   ...(basic1EnglishData.indicators || []),
+  ...basic2EnglishData.map(({ indicator, spec }) => ({
+    code: indicator.code,
+    subject: indicator.subject,
+    level: 'Basic 2',
+    strand: indicator.strand,
+    sub_strand: indicator.sub_strand,
+    content_standard: indicator.content_standard,
+    objective: indicator.objective,
+    source_page: indicator.source_page,
+    spec,
+  })),
 ] as unknown as NaccaIndicator[];
 export const naccaIndicators: NaccaIndicator[] = sortIndicators(rawIndicators);
 
 const rawQuestions = [
   ...(bankData.questions || []),
   ...(basic1EnglishData.questions || []),
+  ...basic2EnglishData.flatMap(({ indicator, questions }) =>
+    questions.map((question, index) => ({
+      id: `${indicator.code.toLowerCase()}-q${index + 1}`,
+      indicator_code: indicator.code,
+      subject: indicator.subject,
+      level: 'Basic 2',
+      strand: indicator.strand,
+      sub_strand: indicator.sub_strand,
+      objective: indicator.objective,
+      skill_tag: question.skill_tag,
+      type: 'mcq',
+      difficulty: question.difficulty,
+      stem: question.stem,
+      options: question.options,
+      answer: question.answer,
+      hints: question.hints || [],
+      explanation: question.explanation,
+      misconception: question.misconception,
+      uncertain: question.uncertain || [],
+    })),
+  ),
 ] as unknown as NaccaQuestion[];
 export const naccaQuestions: NaccaQuestion[] = sortQuestions(rawQuestions, naccaIndicators);
 
 export const naccaSubjects: NaccaSubject[] = [
   ...((bankData.subjects || []) as unknown as NaccaSubject[]),
   ...((basic1EnglishData.subjects || []) as unknown as NaccaSubject[]),
+  ...(basic2EnglishData.length ? [{ id: 'english-language', name: 'English Language' }] : []),
 ];
 export const naccaLevels: NaccaLevel[] = [
   ...((bankData.levels || []) as unknown as NaccaLevel[]),
   ...((basic1EnglishData.levels || []) as unknown as NaccaLevel[]),
+  ...(basic2EnglishData.length ? [{ id: 'basic-2', name: 'Basic 2', sequence: 2 }] : []),
 ];
 export const naccaImportedAt = bankData.importedAt || new Date().toISOString();
 
@@ -78,7 +113,7 @@ export const naccaHubLessons: HubLesson[] = naccaIndicators.map((ind) => {
   const sourceUrl =
     ind.subject === 'Mathematics'
       ? 'https://mingycomputersgh.wordpress.com/wp-content/uploads/2023/10/mathematics-1.pdf'
-      : '';
+      : 'https://nacca.gov.gh/learning-areas-subjects/new-standards-based-curriculum-2019/';
 
   const skillDescriptions = ind.spec?.skills?.map((s) => `• ${s.description}`).join('\n') || '';
   const misconceptions = ind.spec?.misconceptions?.map((m) => `• ${m}`).join('\n') || '';

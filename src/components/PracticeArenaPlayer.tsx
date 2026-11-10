@@ -158,7 +158,14 @@ export function PracticeArenaPlayer({
   }, [filteredIndicators, currentIndicatorCode]);
 
   const practiceQuestions = useMemo(
-    () => naccaQuestions.filter((q) => q.subject === selectedSubject && q.level === selectedLevel),
+    () =>
+      naccaQuestions.filter(
+        (q) =>
+          q.subject === selectedSubject &&
+          (q.level === selectedLevel ||
+            (selectedLevel === 'Basic 2' && q.level === 'B2') ||
+            (selectedLevel === 'B2' && q.level === 'Basic 2')),
+      ),
     [selectedSubject, selectedLevel],
   );
 
@@ -230,19 +237,28 @@ export function PracticeArenaPlayer({
     setAdaptiveState(newSession);
 
     // Pick first question using adaptive engine (starts at difficulty 1)
-    const previous = getIndicatorAttempts(currentIndicatorCode, studentId, selectedSubject, selectedLevel).allAttempts[0]?.questions ?? [];
+    const previous =
+      getIndicatorAttempts(currentIndicatorCode, studentId, selectedSubject, selectedLevel)
+        .allAttempts[0]?.questions ?? [];
     const lastSeen = new Set(previous.map((q) => q.questionId));
-    const pool = shuffled(practiceQuestions.filter((q) => q.indicator_code === currentIndicatorCode))
-      .sort((a, b) => Number(lastSeen.has(a.id)) - Number(lastSeen.has(b.id)));
+    const pool = shuffled(
+      practiceQuestions.filter((q) => q.indicator_code === currentIndicatorCode),
+    ).sort((a, b) => Number(lastSeen.has(a.id)) - Number(lastSeen.has(b.id)));
     setAttemptPool(pool);
     const lastFirst = previous[0]?.questionId;
-    const firstQ = getNextAdaptiveQuestion(pool.filter((q) => q.id !== lastFirst), newSession)
-      ?? getNextAdaptiveQuestion(pool, newSession);
+    const firstQ =
+      getNextAdaptiveQuestion(
+        pool.filter((q) => q.id !== lastFirst),
+        newSession,
+      ) ?? getNextAdaptiveQuestion(pool, newSession);
     if (firstQ) {
       setQuestionStates([
         {
           question: firstQ,
-          optionOrder: shuffledOptionIndices(firstQ.options, previous.find((q) => q.questionId === firstQ.id)?.optionOrder),
+          optionOrder: shuffledOptionIndices(
+            firstQ.options,
+            previous.find((q) => q.questionId === firstQ.id)?.optionOrder,
+          ),
           isAnswered: false,
           explanationViewed: false,
         },
@@ -385,7 +401,11 @@ export function PracticeArenaPlayer({
       // Pick next adaptive question based on updated difficulty
       const nextQ = getNextAdaptiveQuestion(attemptPool, state);
       if (nextQ) {
-        const optionOrder = shuffledOptionIndices(nextQ.options, indicatorAttemptsData.allAttempts[0]?.questions.find((q) => q.questionId === nextQ.id)?.optionOrder);
+        const optionOrder = shuffledOptionIndices(
+          nextQ.options,
+          indicatorAttemptsData.allAttempts[0]?.questions.find((q) => q.questionId === nextQ.id)
+            ?.optionOrder,
+        );
         setQuestionStates((prev) => [
           ...prev,
           {
@@ -415,7 +435,10 @@ export function PracticeArenaPlayer({
     // Save attempt to history (allowing retakes and keeping auto & teacher scores separate)
     const record = savePracticeAttempt({
       id: crypto.randomUUID(),
-      assignmentId: assignmentLessonId === indicatorLessonId(currentIndicator.subject, currentIndicatorCode) ? assignmentId : undefined,
+      assignmentId:
+        assignmentLessonId === indicatorLessonId(currentIndicator.subject, currentIndicatorCode)
+          ? assignmentId
+          : undefined,
       studentId,
       indicatorCode: currentIndicatorCode,
       subject: currentIndicator.subject,
@@ -429,7 +452,13 @@ export function PracticeArenaPlayer({
       questions: questionStates.map((qs) => ({
         questionId: qs.question.id,
         optionOrder: qs.optionOrder,
-        response: qs.isAnswered ? { selectedOption: qs.selectedOption, numericInput: qs.numericInput, shortAnswerInput: qs.shortAnswerInput } : {},
+        response: qs.isAnswered
+          ? {
+              selectedOption: qs.selectedOption,
+              numericInput: qs.numericInput,
+              shortAnswerInput: qs.shortAnswerInput,
+            }
+          : {},
         type: qs.question.type,
         difficulty: qs.question.difficulty,
         isCorrect: qs.isCorrect,
@@ -637,7 +666,10 @@ export function PracticeArenaPlayer({
           <div className="practice-arena-mode-tabs">
             <button
               className={mode === 'practice' ? 'active' : ''}
-              onClick={() => { playPracticeCue(); setMode('practice'); }}
+              onClick={() => {
+                playPracticeCue();
+                setMode('practice');
+              }}
               title="Adaptive student practice"
             >
               Practice
@@ -786,7 +818,12 @@ export function PracticeArenaPlayer({
               </div>
 
               <div className="practice-arena-completion-actions">
-                <Button onClick={() => { playPracticeCue(); restartSession(); }}>
+                <Button
+                  onClick={() => {
+                    playPracticeCue();
+                    restartSession();
+                  }}
+                >
                   <RotateCcw size={16} /> Practise again (Retake)
                 </Button>
                 <Button
@@ -812,7 +849,14 @@ export function PracticeArenaPlayer({
           ) : !studentSafeQuestion ? (
             <div className="practice-arena-loading-stage">
               <p>No questions found for this indicator. Choose "Practice" or another topic.</p>
-              <Button onClick={() => { playPracticeCue(); setMode('practice'); }}>Return to Practice</Button>
+              <Button
+                onClick={() => {
+                  playPracticeCue();
+                  setMode('practice');
+                }}
+              >
+                Return to Practice
+              </Button>
             </div>
           ) : (
             /* Active Question Screen */
@@ -912,8 +956,12 @@ export function PracticeArenaPlayer({
                           className={rowClass}
                           onClick={() => handleSelectOption(optIdx)}
                         >
-                          <span className="practice-arena-opt-badge">{String.fromCharCode(65 + displayIndex)}</span>
-                          <span className="practice-arena-opt-text">{studentSafeQuestion.options?.[optIdx]}</span>
+                          <span className="practice-arena-opt-badge">
+                            {String.fromCharCode(65 + displayIndex)}
+                          </span>
+                          <span className="practice-arena-opt-text">
+                            {studentSafeQuestion.options?.[optIdx]}
+                          </span>
                           {isChecked && isSelected && (
                             <span className="practice-arena-result-icon">
                               {currentQState.isCorrect ? (
@@ -1070,12 +1118,17 @@ export function PracticeArenaPlayer({
                 <div className="practice-arena-bar-center">
                   <button
                     className="practice-arena-restart-btn"
-                    onClick={() => { playPracticeCue(); restartSession(); }}
+                    onClick={() => {
+                      playPracticeCue();
+                      restartSession();
+                    }}
                     title="Restart this problem set"
                   >
                     <RotateCcw size={15} />
                   </button>
-                  <span className="practice-arena-progress-label">Do {TARGET_PROBLEMS} problems</span>
+                  <span className="practice-arena-progress-label">
+                    Do {TARGET_PROBLEMS} problems
+                  </span>
                   <div className="practice-arena-progress-dots">
                     {Array.from({ length: TARGET_PROBLEMS }).map((_, dotIdx) => {
                       const st = questionStates[dotIdx];

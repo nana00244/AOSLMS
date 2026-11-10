@@ -1,5 +1,6 @@
 import bankData from './englishB2Bank.json';
 import type { HubLesson, HubQuestion } from './catalog';
+import { indicatorLessonId } from './indicatorLessonId';
 
 interface EnglishBankQuestion {
   skill_tag: string;
@@ -68,7 +69,7 @@ export const basicTwoEnglishLessons: HubLesson[] = banks.map((bank) => {
   const misconceptions = spec.misconceptions.map((item) => `• ${item}`);
 
   return {
-    id: `english-${indicator.code.toLowerCase().replaceAll('.', '-')}`,
+    id: indicatorLessonId(indicator.subject, indicator.code),
     title: `${indicator.code} · ${indicator.sub_strand}`,
     subject: 'English Language',
     level: 'B2',
