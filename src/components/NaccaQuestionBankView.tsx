@@ -18,6 +18,10 @@ import { Button } from './ui';
 import { naccaQuestions, naccaIndicators } from '../learningHub/naccaBank';
 import type { NaccaQuestion } from '../nacca/types';
 import { displayHubLevel } from '../learningHub/displayOrder';
+import {
+  matchesSelectedIndicators,
+  questionIndicatorKey,
+} from '../learningHub/questionBankFilters';
 import { summarizeQuestionBank } from '../learningHub/questionBankSummary';
 import {
   buildQuestionBankDocument,
@@ -35,7 +39,7 @@ export function NaccaQuestionBankView({ onOpenPractice, staff, onCreateAssessmen
   const [search, setSearch] = useState('');
   const [selectedSubject, setSelectedSubject] = useState('ALL');
   const [selectedLevel, setSelectedLevel] = useState('ALL');
-  const [selectedIndicator, setSelectedIndicator] = useState('ALL');
+  const [selectedIndicators, setSelectedIndicators] = useState<string[]>([]);
   const [selectedType, setSelectedType] = useState<string>('ALL');
   const [selectedDifficulty, setSelectedDifficulty] = useState<string>('ALL');
   const [expandedHints, setExpandedHints] = useState<Record<string, boolean>>({});
@@ -45,6 +49,7 @@ export function NaccaQuestionBankView({ onOpenPractice, staff, onCreateAssessmen
   const bankSummary = useMemo(() => summarizeQuestionBank(naccaQuestions, naccaIndicators), []);
   const subjectOptions = bankSummary.subjects;
   const levelOptions = bankSummary.levels;
+  const selectedIndicatorSet = useMemo(() => new Set(selectedIndicators), [selectedIndicators]);
 
   const toggleHint = (id: string) => {
     setExpandedHints((prev) => ({ ...prev, [id]: !prev[id] }));
@@ -76,12 +81,7 @@ export function NaccaQuestionBankView({ onOpenPractice, staff, onCreateAssessmen
       if (selectedLevel !== 'ALL' && displayHubLevel(q.level) !== selectedLevel) {
         return false;
       }
-      if (selectedIndicator !== 'ALL') {
-        const matches = selectedIndicator.includes(':')
-          ? `${q.subject}:${q.indicator_code}` === selectedIndicator
-          : q.indicator_code === selectedIndicator;
-        if (!matches) return false;
-      }
+      if (!matchesSelectedIndicators(q, selectedIndicatorSet)) return false;
       if (selectedType !== 'ALL' && q.type !== selectedType) {
         return false;
       }
@@ -96,7 +96,14 @@ export function NaccaQuestionBankView({ onOpenPractice, staff, onCreateAssessmen
       }
       return true;
     });
-  }, [search, selectedSubject, selectedLevel, selectedIndicator, selectedType, selectedDifficulty]);
+  }, [
+    search,
+    selectedSubject,
+    selectedLevel,
+    selectedIndicatorSet,
+    selectedType,
+    selectedDifficulty,
+  ]);
 
   const exportQuestions = useMemo(
     () => (selectedSubject !== 'ALL' && selectedLevel !== 'ALL' ? filtered : []),
@@ -293,7 +300,7 @@ export function NaccaQuestionBankView({ onOpenPractice, staff, onCreateAssessmen
             value={selectedSubject}
             onChange={(e) => {
               setSelectedSubject(e.target.value);
-              setSelectedIndicator('ALL');
+              setSelectedIndicators([]);
             }}
           >
             <option value="ALL">All Subjects</option>
@@ -309,7 +316,7 @@ export function NaccaQuestionBankView({ onOpenPractice, staff, onCreateAssessmen
             value={selectedLevel}
             onChange={(e) => {
               setSelectedLevel(e.target.value);
-              setSelectedIndicator('ALL');
+              setSelectedIndicators([]);
             }}
           >
             <option value="ALL">All Classes / Levels</option>
@@ -320,21 +327,40 @@ export function NaccaQuestionBankView({ onOpenPractice, staff, onCreateAssessmen
             ))}
           </select>
 
-          <select
-            aria-label="Filter by indicator"
-            value={selectedIndicator}
-            onChange={(e) => setSelectedIndicator(e.target.value)}
-          >
-            <option value="ALL">All {availableIndicators.length} Indicators</option>
-            {availableIndicators.map((ind) => {
-              const uniqueKey = `${ind.subject}:${ind.code}`;
-              return (
-                <option key={uniqueKey} value={uniqueKey}>
-                  [{ind.subject}] {ind.level}: {ind.code} - {ind.sub_strand.slice(0, 30)}
-                </option>
-              );
-            })}
-          </select>
+          <details className="nacca-indicator-picker">
+            <summary aria-label="Filter by one or more indicators">
+              {selectedIndicators.length
+                ? `${selectedIndicators.length} indicators selected`
+                : `All ${availableIndicators.length} Indicators`}
+            </summary>
+            <div className="nacca-indicator-options">
+              <button type="button" onClick={() => setSelectedIndicators([])}>
+                Clear indicator selection
+              </button>
+              {availableIndicators.map((ind) => {
+                const key = questionIndicatorKey(ind.subject, ind.code);
+                return (
+                  <label key={key}>
+                    <input
+                      type="checkbox"
+                      checked={selectedIndicators.includes(key)}
+                      onChange={() =>
+                        setSelectedIndicators((selected) =>
+                          selected.includes(key)
+                            ? selected.filter((item) => item !== key)
+                            : [...selected, key],
+                        )
+                      }
+                    />
+                    <span>
+                      [{ind.subject}] {displayHubLevel(ind.level)}: {ind.code} -{' '}
+                      {ind.sub_strand.slice(0, 30)}
+                    </span>
+                  </label>
+                );
+              })}
+            </div>
+          </details>
 
           <select
             aria-label="Filter by type"
@@ -406,7 +432,7 @@ export function NaccaQuestionBankView({ onOpenPractice, staff, onCreateAssessmen
               variant="secondary"
               onClick={() => {
                 setSearch('');
-                setSelectedIndicator('ALL');
+                setSelectedIndicators([]);
                 setSelectedType('ALL');
                 setSelectedDifficulty('ALL');
               }}
