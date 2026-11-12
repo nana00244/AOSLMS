@@ -1,10 +1,15 @@
 import { describe, expect, it } from 'vitest';
 import { hubLessons } from './learningHub/catalog';
 import * as publicSources from './learningHub/sources';
-import { basicThreeEnglishLessons, basicTwoEnglishLessons } from './learningHub/englishBank';
+import {
+  basicFourEnglishLessons,
+  basicThreeEnglishLessons,
+  basicTwoEnglishLessons,
+} from './learningHub/englishBank';
 import { getLessonPracticeIndicator } from './learningHub/practiceNavigation';
 import { naccaQuestions, naccaIndicators } from './learningHub/naccaBank';
 import englishB3Bank from './learningHub/englishB3Bank.json';
+import englishB4Bank from './learningHub/englishB4Bank.json';
 
 // Protect stable references used by saved assignments and server-graded attempts.
 describe('Learning Hub curriculum integrity', () => {
@@ -60,11 +65,45 @@ describe('Learning Hub curriculum integrity', () => {
       ),
     ).toHaveLength(66);
   });
+  it('includes the supplied Basic 4 English question banks in one-question practice', () => {
+    expect(englishB4Bank).toHaveLength(120);
+    expect(englishB4Bank.reduce((total, bank) => total + (bank.duplicateSourceCount || 0), 0)).toBe(
+      1,
+    );
+    expect(basicFourEnglishLessons).toHaveLength(120);
+    expect(new Set(basicFourEnglishLessons.map((lesson) => lesson.standard)).size).toBe(120);
+    expect(basicFourEnglishLessons.every((lesson) => lesson.subject === 'English Language')).toBe(
+      true,
+    );
+    expect(basicFourEnglishLessons.every((lesson) => lesson.level === 'B4')).toBe(true);
+    expect(
+      basicFourEnglishLessons.reduce((total, lesson) => total + lesson.questions.length, 0),
+    ).toBe(1925);
+    expect(englishB4Bank.reduce((total, bank) => total + bank.questionCount, 0)).toBe(2375);
+    expect(englishB4Bank.reduce((total, bank) => total + bank.excludedMcqCount, 0)).toBe(20);
+    const lesson = basicFourEnglishLessons.find((item) => item.standard === 'B4.3.2.1.1')!;
+    const indicator = getLessonPracticeIndicator(lesson);
+    expect(indicator?.code).toBe(lesson.standard);
+    expect(indicator?.level).toBe('Basic 4');
+    expect(
+      naccaQuestions.filter(
+        (question) =>
+          question.indicator_code === lesson.standard &&
+          question.level === 'Basic 4' &&
+          question.subject === 'English Language',
+      ),
+    ).toHaveLength(lesson.questions.length);
+    expect(
+      naccaIndicators.filter(
+        (item) => item.level === 'Basic 4' && item.subject === 'English Language',
+      ),
+    ).toHaveLength(120);
+  });
   it('has unique references, valid answer options and level-consistent standard codes', () => {
     expect(new Set(hubLessons.map((lesson) => lesson.id)).size).toBe(hubLessons.length);
     for (const lesson of hubLessons) {
       expect(lesson.standard.split('.')[0], lesson.id).toBe(lesson.level);
-      expect(lesson.standard, lesson.id).toMatch(/^B[1-9](?:\.[1-9]\d*){3,4}$/);
+      expect(lesson.standard, lesson.id).toMatch(/^B[1-9](?:\.[1-9]\d*){3,5}$/);
       expect(lesson.body.length, lesson.id).toBeGreaterThan(0);
       expect(lesson.questions.length, lesson.id).toBeGreaterThan(0);
       expect(new Set(lesson.questions.map((question) => question.id)).size, lesson.id).toBe(

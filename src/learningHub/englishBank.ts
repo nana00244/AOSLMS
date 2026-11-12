@@ -1,5 +1,6 @@
 import bankData from './englishB2Bank.json';
 import basicThreeBankData from './englishB3Bank.json';
+import basicFourBankData from './englishB4Bank.json';
 import type { HubLesson, HubQuestion } from './catalog';
 import { indicatorLessonId } from './indicatorLessonId';
 
@@ -34,6 +35,7 @@ interface EnglishIndicatorBank {
   questionCount?: number;
   teacherAssessedCount?: number;
   excludedMcqCount?: number;
+  duplicateSourceCount?: number;
 }
 
 const sourceUrl =
@@ -122,6 +124,42 @@ export const basicThreeEnglishLessons: HubLesson[] = (
     ],
     sourceUrl,
     sourceTitle: `NaCCA English Language B1–B3 curriculum · ${indicator.code} · PDF page ${indicator.source_page}`,
+    questions,
+  };
+});
+
+export const basicFourEnglishLessons: HubLesson[] = (
+  basicFourBankData as EnglishIndicatorBank[]
+).map((bank) => {
+  const { indicator, spec } = bank;
+  const questions = scoredQuestions(bank);
+  const teacherAssessed = bank.questions.filter((question) => question.type !== 'mcq');
+  return {
+    id: indicatorLessonId(indicator.subject, indicator.code),
+    title: `${indicator.code} · ${indicator.sub_strand}`,
+    subject: 'English Language',
+    level: 'B4',
+    strand: indicator.strand,
+    standard: indicator.code,
+    description: indicator.objective,
+    body: [
+      `Curriculum indicator ${indicator.code}: ${indicator.strand} — ${indicator.sub_strand}.`,
+      `Content standard: ${indicator.content_standard}.`,
+      `Learning objective: ${indicator.objective}.`,
+      `Skills to practise:\n${spec.skills.map((skill) => `• ${skill.description}`).join('\n')}`,
+      `Common learning pitfalls:\n${spec.misconceptions.map((item) => `• ${item}`).join('\n')}`,
+      `Question bank: ${bank.questionCount ?? bank.questions.length} authored items (${questions.length} automatically scored multiple-choice and ${bank.teacherAssessedCount ?? teacherAssessed.length} teacher-assessed written, oral, or performance activities). Difficulty plan: ${spec.difficultyPlan}. ${spec.needsTeacherAssessment ? 'Some activities require teacher assessment.' : ''}`,
+      ...(bank.excludedMcqCount
+        ? [
+            `${bank.excludedMcqCount} ambiguous or inconsistent multiple-choice items were excluded from automatic scoring.`,
+          ]
+        : []),
+      ...(bank.duplicateSourceCount
+        ? [`${bank.duplicateSourceCount} supplied file duplicated this indicator and was merged.`]
+        : []),
+    ],
+    sourceUrl,
+    sourceTitle: `NaCCA English Language B1–B6 curriculum · ${indicator.code} · PDF page ${indicator.source_page}`,
     questions,
   };
 });

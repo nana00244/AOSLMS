@@ -3,6 +3,7 @@ import bankData from '../nacca/importedBank.json';
 import basic1EnglishData from '../nacca/basic1EnglishBank.json';
 import basic2EnglishData from './englishB2Bank.json';
 import basic3EnglishData from './englishB3Bank.json';
+import basic4EnglishData from './englishB4Bank.json';
 import type { NaccaQuestion, NaccaIndicator, NaccaSubject, NaccaLevel } from '../nacca/types';
 import type { HubLesson, HubQuestion } from './catalog';
 import { sortIndicators, sortQuestions } from '../nacca/sortOrder';
@@ -25,6 +26,17 @@ const rawIndicators = [
     code: indicator.code,
     subject: indicator.subject,
     level: 'Basic 3',
+    strand: indicator.strand,
+    sub_strand: indicator.sub_strand,
+    content_standard: indicator.content_standard,
+    objective: indicator.objective,
+    source_page: indicator.source_page,
+    spec,
+  })),
+  ...basic4EnglishData.map(({ indicator, spec }) => ({
+    code: indicator.code,
+    subject: indicator.subject,
+    level: 'Basic 4',
     strand: indicator.strand,
     sub_strand: indicator.sub_strand,
     content_standard: indicator.content_standard,
@@ -80,6 +92,27 @@ const rawQuestions = [
       uncertain: question.uncertain || [],
     })),
   ),
+  ...basic4EnglishData.flatMap(({ indicator, questions }) =>
+    questions.map((question, index) => ({
+      id: `${indicator.code.toLowerCase()}-q${index + 1}`,
+      indicator_code: indicator.code,
+      subject: indicator.subject,
+      level: 'Basic 4',
+      strand: indicator.strand,
+      sub_strand: indicator.sub_strand,
+      objective: indicator.objective,
+      skill_tag: question.skill_tag,
+      type: 'mcq',
+      difficulty: question.difficulty,
+      stem: question.stem,
+      options: question.options,
+      answer: question.answer,
+      hints: question.hints || [],
+      explanation: question.explanation,
+      misconception: 'misconceptions' in question ? question.misconceptions.join(' ') : '',
+      uncertain: question.uncertain || [],
+    })),
+  ),
 ] as unknown as NaccaQuestion[];
 export const naccaQuestions: NaccaQuestion[] = sortQuestions(rawQuestions, naccaIndicators);
 
@@ -93,6 +126,7 @@ export const naccaLevels: NaccaLevel[] = [
   ...((basic1EnglishData.levels || []) as unknown as NaccaLevel[]),
   ...(basic2EnglishData.length ? [{ id: 'basic-2', name: 'Basic 2', sequence: 2 }] : []),
   ...(basic3EnglishData.length ? [{ id: 'basic-3', name: 'Basic 3', sequence: 3 }] : []),
+  ...(basic4EnglishData.length ? [{ id: 'basic-4', name: 'Basic 4', sequence: 4 }] : []),
 ];
 export const naccaImportedAt = bankData.importedAt || new Date().toISOString();
 

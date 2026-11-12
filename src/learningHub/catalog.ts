@@ -1,4 +1,8 @@
-import { basicThreeEnglishLessons, basicTwoEnglishLessons } from './englishBank';
+import {
+  basicFourEnglishLessons,
+  basicThreeEnglishLessons,
+  basicTwoEnglishLessons,
+} from './englishBank';
 
 /** Original learning material mapped to the cited NaCCA curriculum; not an official textbook. */
 export interface HubQuestion {
@@ -60,6 +64,7 @@ const lesson = (
 export const hubLessons: HubLesson[] = [
   ...basicTwoEnglishLessons,
   ...basicThreeEnglishLessons,
+  ...basicFourEnglishLessons,
   lesson(
     'b7-math-fractions',
     'Fractions, decimals and percentages',
