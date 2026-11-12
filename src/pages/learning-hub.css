@@ -1308,6 +1308,34 @@
   gap: 12px;
   margin-bottom: 24px;
 }
+.nacca-export-panel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding: 16px 18px;
+  margin: -6px 0 24px;
+  border: 1px solid var(--lh-line);
+  border-radius: 10px;
+  background: #f7faff;
+}
+.nacca-export-panel p {
+  margin: 4px 0 0;
+  color: var(--lh-muted);
+  font-size: 13px;
+}
+.nacca-export-panel small {
+  display: block;
+  margin-top: 5px;
+  color: var(--lh-blue);
+}
+.nacca-export-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
 @media (max-width: 900px) {
   .nacca-filters-grid {
     grid-template-columns: 1fr;

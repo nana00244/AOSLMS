@@ -45,6 +45,7 @@ import { QuizManagementView } from '../components/QuizManagementView';
 import { getQuizById, type QuizDefinition } from '../nacca/quizEngine';
 import { naccaQuestions, naccaIndicators } from '../learningHub/naccaBank';
 import { getLessonPracticeIndicator } from '../learningHub/practiceNavigation';
+import { summarizeQuestionBank } from '../learningHub/questionBankSummary';
 import {
   compareHubCourseGroups,
   compareHubLevels,
@@ -54,6 +55,7 @@ import {
 import './learning-hub.css';
 
 const blank: HubSnapshot = { lessons: [], assignments: [], attempts: [], readings: [] };
+const questionBankSummary = summarizeQuestionBank(naccaQuestions, naccaIndicators);
 const tabs = [
   'Courses',
   'NaCCA Question Bank',
@@ -402,9 +404,10 @@ export function LearningHub() {
                           🇬🇭 Ghana NaCCA Question Bank Active
                         </strong>
                         <span style={{ fontSize: 13, color: '#3c4043' }}>
-                          {naccaQuestions.length} approved questions loaded across{' '}
-                          {naccaIndicators.length} indicators (Basic 1 English and Basic 1 to Basic
-                          4 Mathematics).
+                          {questionBankSummary.questionCount.toLocaleString()} questions across{' '}
+                          {questionBankSummary.indicatorCount.toLocaleString()} indicators, all
+                          loaded levels ({questionBankSummary.levels.join(', ')}) and subjects (
+                          {questionBankSummary.subjects.join(', ')}).
                         </span>
                       </div>
                       <Button onClick={() => go('NaCCA Question Bank')}>

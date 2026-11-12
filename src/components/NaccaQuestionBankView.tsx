@@ -8,20 +8,22 @@ import {
   ChevronDown,
   ChevronUp,
   Play,
-  Filter,
   FileText,
   AlertCircle,
-  ExternalLink,
   FileQuestion,
+  Download,
+  Printer,
 } from 'lucide-react';
 import { Button } from './ui';
+import { naccaQuestions, naccaIndicators } from '../learningHub/naccaBank';
+import type { NaccaQuestion } from '../nacca/types';
+import { displayHubLevel } from '../learningHub/displayOrder';
+import { summarizeQuestionBank } from '../learningHub/questionBankSummary';
 import {
-  naccaQuestions,
-  naccaIndicators,
-  naccaSubjects,
-  naccaImportedAt,
-} from '../learningHub/naccaBank';
-import type { NaccaQuestion, QuestionType } from '../nacca/types';
+  buildQuestionBankDocument,
+  downloadQuestionBankWord,
+  printQuestionBankPdf,
+} from '../learningHub/questionBankExport';
 
 interface Props {
   onOpenPractice: (indicatorCode: string, subject?: string) => void;
@@ -39,6 +41,10 @@ export function NaccaQuestionBankView({ onOpenPractice, staff, onCreateAssessmen
   const [expandedHints, setExpandedHints] = useState<Record<string, boolean>>({});
   const [expandedExplanations, setExpandedExplanations] = useState<Record<string, boolean>>({});
   const [expandedRubrics, setExpandedRubrics] = useState<Record<string, boolean>>({});
+  const [exportMessage, setExportMessage] = useState('');
+  const bankSummary = useMemo(() => summarizeQuestionBank(naccaQuestions, naccaIndicators), []);
+  const subjectOptions = bankSummary.subjects;
+  const levelOptions = bankSummary.levels;
 
   const toggleHint = (id: string) => {
     setExpandedHints((prev) => ({ ...prev, [id]: !prev[id] }));
@@ -56,7 +62,7 @@ export function NaccaQuestionBankView({ onOpenPractice, staff, onCreateAssessmen
   const availableIndicators = useMemo(() => {
     return naccaIndicators.filter((i) => {
       if (selectedSubject !== 'ALL' && i.subject !== selectedSubject) return false;
-      if (selectedLevel !== 'ALL' && i.level !== selectedLevel) return false;
+      if (selectedLevel !== 'ALL' && displayHubLevel(i.level) !== selectedLevel) return false;
       return true;
     });
   }, [selectedSubject, selectedLevel]);
@@ -67,7 +73,7 @@ export function NaccaQuestionBankView({ onOpenPractice, staff, onCreateAssessmen
       if (selectedSubject !== 'ALL' && q.subject !== selectedSubject) {
         return false;
       }
-      if (selectedLevel !== 'ALL' && q.level !== selectedLevel) {
+      if (selectedLevel !== 'ALL' && displayHubLevel(q.level) !== selectedLevel) {
         return false;
       }
       if (selectedIndicator !== 'ALL') {
@@ -91,6 +97,29 @@ export function NaccaQuestionBankView({ onOpenPractice, staff, onCreateAssessmen
       return true;
     });
   }, [search, selectedSubject, selectedLevel, selectedIndicator, selectedType, selectedDifficulty]);
+
+  const exportQuestions = useMemo(
+    () =>
+      naccaQuestions.filter(
+        (question) =>
+          selectedSubject !== 'ALL' &&
+          selectedLevel !== 'ALL' &&
+          question.subject === selectedSubject &&
+          displayHubLevel(question.level) === selectedLevel,
+      ),
+    [selectedSubject, selectedLevel],
+  );
+
+  const exportHtml = () =>
+    buildQuestionBankDocument(exportQuestions, selectedSubject, selectedLevel);
+
+  const handlePdfExport = () => {
+    if (!printQuestionBankPdf(exportHtml())) {
+      setExportMessage('Allow pop-ups from this site to open the printable PDF document.');
+    } else {
+      setExportMessage('Choose “Save as PDF” in the print dialog to download your PDF.');
+    }
+  };
 
   const [visibleCount, setVisibleCount] = useState(50);
   useEffect(() => {
@@ -140,16 +169,16 @@ export function NaccaQuestionBankView({ onOpenPractice, staff, onCreateAssessmen
           </p>
           <div className="nacca-hero-stats">
             <span className="nacca-pill">
-              <strong>{naccaQuestions.length}</strong> Approved Questions
+              <strong>{bankSummary.questionCount.toLocaleString()}</strong> Questions
             </span>
             <span className="nacca-pill">
-              <strong>{naccaIndicators.length}</strong> Indicators
+              <strong>{bankSummary.indicatorCount.toLocaleString()}</strong> Indicators
             </span>
             <span className="nacca-pill">
-              <strong>Basic 1 to Basic 6</strong> (Mathematics & Science)
+              <strong>Levels</strong> {bankSummary.levels.join(', ')}
             </span>
             <span className="nacca-pill">
-              <strong>100%</strong> Ghana Curriculum Aligned
+              <strong>Subjects</strong> {bankSummary.subjects.join(', ')}
             </span>
           </div>
         </div>
@@ -275,28 +304,27 @@ export function NaccaQuestionBankView({ onOpenPractice, staff, onCreateAssessmen
             }}
           >
             <option value="ALL">All Subjects</option>
-            {naccaSubjects.map((s) => (
-              <option key={s.id} value={s.name}>
-                {s.name}
+            {subjectOptions.map((name) => (
+              <option key={name} value={name}>
+                {name}
               </option>
             ))}
           </select>
 
           <select
-            aria-label="Filter by level"
+            aria-label="Filter by class or level"
             value={selectedLevel}
             onChange={(e) => {
               setSelectedLevel(e.target.value);
               setSelectedIndicator('ALL');
             }}
           >
-            <option value="ALL">All Levels (Basic 1 to 6)</option>
-            <option value="Basic 1">Basic 1</option>
-            <option value="Basic 2">Basic 2</option>
-            <option value="Basic 3">Basic 3</option>
-            <option value="Basic 4">Basic 4</option>
-            <option value="Basic 5">Basic 5</option>
-            <option value="Basic 6">Basic 6</option>
+            <option value="ALL">All Classes / Levels</option>
+            {levelOptions.map((level) => (
+              <option key={level} value={level}>
+                {level}
+              </option>
+            ))}
           </select>
 
           <select
@@ -343,6 +371,35 @@ export function NaccaQuestionBankView({ onOpenPractice, staff, onCreateAssessmen
             <option value="4">Difficulty 4 (Advanced)</option>
           </select>
         </div>
+        {staff && (
+          <div className="nacca-export-panel">
+            <div>
+              <strong>Download a class question set</strong>
+              <p>
+                Select a class and subject above.
+                {selectedSubject !== 'ALL' && selectedLevel !== 'ALL'
+                  ? ` ${exportQuestions.length.toLocaleString()} questions match ${selectedLevel} · ${selectedSubject}.`
+                  : ''}
+              </p>
+              {exportMessage && <small role="status">{exportMessage}</small>}
+            </div>
+            <div className="nacca-export-actions">
+              <Button
+                type="button"
+                variant="secondary"
+                disabled={!exportQuestions.length}
+                onClick={() =>
+                  downloadQuestionBankWord(exportHtml(), selectedSubject, selectedLevel)
+                }
+              >
+                <Download size={15} /> Download Word
+              </Button>
+              <Button type="button" disabled={!exportQuestions.length} onClick={handlePdfExport}>
+                <Printer size={15} /> Save as PDF
+              </Button>
+            </div>
+          </div>
+        )}
       </section>
 
       {/* Questions List */}
