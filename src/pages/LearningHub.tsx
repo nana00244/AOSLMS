@@ -45,6 +45,12 @@ import { QuizManagementView } from '../components/QuizManagementView';
 import { getQuizById, type QuizDefinition } from '../nacca/quizEngine';
 import { naccaQuestions, naccaIndicators } from '../learningHub/naccaBank';
 import { getLessonPracticeIndicator } from '../learningHub/practiceNavigation';
+import {
+  compareHubCourseGroups,
+  compareHubLevels,
+  compareHubSubjects,
+  displayHubLevel,
+} from '../learningHub/displayOrder';
 import './learning-hub.css';
 
 const blank: HubSnapshot = { lessons: [], assignments: [], attempts: [], readings: [] };
@@ -56,9 +62,6 @@ const tabs = [
   'Progress',
   'Curriculum resources',
 ] as const;
-const levelName = (level: string) =>
-  /^B[789]$/.test(level) ? `${level} · JHS ${Number(level[1]) - 6}` : level;
-
 export function LearningHub() {
   const { data, user, role, notify } = useStore();
   const [params, setParams] = useSearchParams();
@@ -77,24 +80,30 @@ export function LearningHub() {
   const assignmentId = params.get('assignment') || undefined;
   const progressStudent = role === 'Student' ? user?.studentId : undefined;
   const revision = useRef(0);
-  const reload = useCallback(async (background = false) => {
-    const request = ++revision.current;
-    setError('');
-    try {
-      const next = await loadHub(progressStudent, background);
-      if (request === revision.current) setSnapshot(next);
-    } catch (e) {
-      if (!background && request === revision.current) setError(e instanceof Error ? e.message : 'Learning Hub could not load.');
-    } finally {
-      setLoading(false);
-    }
-  }, [progressStudent]);
+  const reload = useCallback(
+    async (background = false) => {
+      const request = ++revision.current;
+      setError('');
+      try {
+        const next = await loadHub(progressStudent, background);
+        if (request === revision.current) setSnapshot(next);
+      } catch (e) {
+        if (!background && request === revision.current)
+          setError(e instanceof Error ? e.message : 'Learning Hub could not load.');
+      } finally {
+        setLoading(false);
+      }
+    },
+    [progressStudent],
+  );
   useEffect(() => {
     void reload();
   }, [reload, user?.id]);
   useEffect(() => {
     if (tab !== 'Progress') return;
-    const refresh = () => { if (!document.hidden) void reload(true); };
+    const refresh = () => {
+      if (!document.hidden) void reload(true);
+    };
     refresh();
     const timer = window.setInterval(refresh, 15000);
     window.addEventListener('focus', refresh);
@@ -110,17 +119,21 @@ export function LearningHub() {
   const go = (next: string) => setParams({ tab: next });
   const open = (id: string, assignment?: string) =>
     setParams({ tab, lesson: id, ...(assignment ? { assignment } : {}) });
-  const subjects = [...new Set(snapshot.lessons.map((l) => l.subject))].sort();
-  const levels = [...new Set(snapshot.lessons.map((l) => l.level))].sort();
+  const subjects = [...new Set(snapshot.lessons.map((l) => l.subject))].sort(compareHubSubjects);
+  const levels = [...new Set(snapshot.lessons.map((l) => displayHubLevel(l.level)))].sort(
+    compareHubLevels,
+  );
   const filtered = snapshot.lessons.filter(
     (l) =>
       (subject === 'All subjects' || l.subject === subject) &&
-      (level === 'All levels' || l.level === level) &&
+      (level === 'All levels' || displayHubLevel(l.level) === level) &&
       `${l.title} ${l.subject} ${l.strand} ${l.standard}`
         .toLowerCase()
         .includes(search.toLowerCase()),
   );
-  const groups = [...new Set(filtered.map((l) => `${l.level}|${l.subject}`))];
+  const groups = [...new Set(filtered.map((l) => `${l.level}|${l.subject}`))].sort(
+    compareHubCourseGroups,
+  );
   const sid = user?.studentId || '';
   const completed = snapshot.assignments.filter(
     (a) => learningStatus(snapshot, sid, a.lessonId, a.id).complete,
@@ -210,11 +223,17 @@ export function LearningHub() {
           if (!progressStudent || attempt.category !== 'auto') return;
           const local = localHubAttempt(attempt);
           revision.current++;
-          setSnapshot(s => ({ ...s, attempts: [...s.attempts.filter(a => a.id !== local.id), local] }));
-          void submitAdaptive(attempt).then(() => {
-            notify(`Practice recorded: ${attempt.score}% on ${attempt.indicatorCode}`);
-          }).catch(() => notify('Practice saved on this device. Open Progress while online to sync.'));
-
+          setSnapshot((s) => ({
+            ...s,
+            attempts: [...s.attempts.filter((a) => a.id !== local.id), local],
+          }));
+          void submitAdaptive(attempt)
+            .then(() => {
+              notify(`Practice recorded: ${attempt.score}% on ${attempt.indicatorCode}`);
+            })
+            .catch(() =>
+              notify('Practice saved on this device. Open Progress while online to sync.'),
+            );
         }}
       />
     );
@@ -384,7 +403,8 @@ export function LearningHub() {
                         </strong>
                         <span style={{ fontSize: 13, color: '#3c4043' }}>
                           {naccaQuestions.length} approved questions loaded across{' '}
-                          {naccaIndicators.length} indicators (Basic 1 English and Basic 1 to Basic 4 Mathematics).
+                          {naccaIndicators.length} indicators (Basic 1 English and Basic 1 to Basic
+                          4 Mathematics).
                         </span>
                       </div>
                       <Button onClick={() => go('NaCCA Question Bank')}>
@@ -419,7 +439,7 @@ export function LearningHub() {
                         <option>All levels</option>
                         {levels.map((l) => (
                           <option key={l} value={l}>
-                            {levelName(l)}
+                            {l}
                           </option>
                         ))}
                       </select>
@@ -447,7 +467,7 @@ export function LearningHub() {
                                 )}
                               </span>
                               <div>
-                                <span>{levelName(first.level)}</span>
+                                <span>{displayHubLevel(first.level)}</span>
                                 <h3>{first.subject}</h3>
                               </div>
                               <span className="lh-count">{lessons.length} lessons</span>
@@ -480,7 +500,9 @@ export function LearningHub() {
                               })}
                             </div>
                             <footer>
-                              <span>{first.level} curriculum · self-paced learning</span>
+                              <span>
+                                {displayHubLevel(first.level)} curriculum · self-paced learning
+                              </span>
                             </footer>
                           </section>
                         );
@@ -677,10 +699,15 @@ function LessonView({
   const [answers, setAnswers] = useState<number[]>([]),
     [result, setResult] = useState<HubPracticeResult | null>(null);
   function makeOrder(previous?: { index: number; options: number[] }[]) {
-    const order = shuffled(lesson.questions.map((q, index) => ({
-      index,
-      options: shuffledOptionIndices(q.options, previous?.find((row) => row.index === index)?.options),
-    })));
+    const order = shuffled(
+      lesson.questions.map((q, index) => ({
+        index,
+        options: shuffledOptionIndices(
+          q.options,
+          previous?.find((row) => row.index === index)?.options,
+        ),
+      })),
+    );
     if (previous && order.length > 1 && order[0].index === previous[0]?.index) {
       [order[0], order[1]] = [order[1], order[0]];
     }
@@ -708,7 +735,7 @@ function LessonView({
       const play = prepareSound();
       const graded = await submitHubPractice(lesson.id, answers, assignmentId);
       setResult(graded);
-      play?.(graded.feedback.map((answer) => answer.correct ? 'correct' : 'wrong'));
+      play?.(graded.feedback.map((answer) => (answer.correct ? 'correct' : 'wrong')));
       await onSaved();
     } catch (e) {
       setError(e instanceof Error ? e.message : 'Could not save your answers.');
@@ -724,7 +751,7 @@ function LessonView({
       <div className="lh-lesson-layout">
         <aside className="lh-outline">
           <span className="lh-eyebrow">
-            {levelName(lesson.level)} · {lesson.subject}
+            {displayHubLevel(lesson.level)} · {lesson.subject}
           </span>
           <h3>{lesson.strand}</h3>
           <button className={!practice ? 'active' : ''} onClick={() => setPractice(false)}>
@@ -806,7 +833,7 @@ function LessonView({
                         onOpenPractice(code, practiceIndicator.subject);
                       } else {
                         prepareSound()(['practice']);
-                  setPractice(true);
+                        setPractice(true);
                       }
                     }}
                   >
@@ -825,49 +852,49 @@ function LessonView({
               {order.map(({ index: i, options }, position) => {
                 const q = lesson.questions[i];
                 return (
-                <fieldset className="lh-question" key={q.id}>
-                  <legend>
-                    <span>{position + 1}</span> {q.prompt}
-                  </legend>
-                  {options.map((n, displayIndex) => (
-                    <label
-                      key={n}
-                      className={`${answers[i] === n ? 'selected' : ''} ${result?.feedback[i]?.answer === n ? 'correct' : ''}`}
-                    >
-                      <input
-                        type="radio"
-                        name={`answer-${i}`}
-                        checked={answers[i] === n}
-                        disabled={!!result}
-                        onChange={() =>
-                          setAnswers((a) => {
-                            const next = [...a];
-                            next[i] = n;
-                            return next;
-                          })
-                        }
-                      />
-                      <span>{String.fromCharCode(65 + displayIndex)}</span>
-                      {q.options[n]}
-                    </label>
-                  ))}
-                  {result && (
-                    <p
-                      className={`lh-feedback ${result.feedback[i]?.correct ? 'correct' : 'incorrect'}`}
-                    >
-                      {result.feedback[i]?.correct ? 'Correct. ' : 'Review this idea. '}
-                      {result.feedback[i]?.explanation}
-                    </p>
-                  )}
-                  {staff && q.answer !== undefined && (
-                    <details>
-                      <summary>View answer and explanation</summary>
-                      <p>
-                        {q.options[q.answer]} — {q.explanation}
+                  <fieldset className="lh-question" key={q.id}>
+                    <legend>
+                      <span>{position + 1}</span> {q.prompt}
+                    </legend>
+                    {options.map((n, displayIndex) => (
+                      <label
+                        key={n}
+                        className={`${answers[i] === n ? 'selected' : ''} ${result?.feedback[i]?.answer === n ? 'correct' : ''}`}
+                      >
+                        <input
+                          type="radio"
+                          name={`answer-${i}`}
+                          checked={answers[i] === n}
+                          disabled={!!result}
+                          onChange={() =>
+                            setAnswers((a) => {
+                              const next = [...a];
+                              next[i] = n;
+                              return next;
+                            })
+                          }
+                        />
+                        <span>{String.fromCharCode(65 + displayIndex)}</span>
+                        {q.options[n]}
+                      </label>
+                    ))}
+                    {result && (
+                      <p
+                        className={`lh-feedback ${result.feedback[i]?.correct ? 'correct' : 'incorrect'}`}
+                      >
+                        {result.feedback[i]?.correct ? 'Correct. ' : 'Review this idea. '}
+                        {result.feedback[i]?.explanation}
                       </p>
-                    </details>
-                  )}
-                </fieldset>
+                    )}
+                    {staff && q.answer !== undefined && (
+                      <details>
+                        <summary>View answer and explanation</summary>
+                        <p>
+                          {q.options[q.answer]} — {q.explanation}
+                        </p>
+                      </details>
+                    )}
+                  </fieldset>
                 );
               })}
               {result ? (
