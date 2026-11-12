@@ -7,12 +7,38 @@ import {
   basicTwoEnglishLessons,
 } from './learningHub/englishBank';
 import { getLessonPracticeIndicator } from './learningHub/practiceNavigation';
-import { naccaQuestions, naccaIndicators } from './learningHub/naccaBank';
+import { naccaQuestions, naccaIndicators, naccaLevels } from './learningHub/naccaBank';
+import { summarizeQuestionBank } from './learningHub/questionBankSummary';
 import englishB3Bank from './learningHub/englishB3Bank.json';
 import englishB4Bank from './learningHub/englishB4Bank.json';
 
 // Protect stable references used by saved assignments and server-graded attempts.
 describe('Learning Hub curriculum integrity', () => {
+  it('includes catalog JHS lessons in the question bank and displays all represented levels', () => {
+    const jhsIndicators = naccaIndicators.filter((indicator) => /^B[789]$/.test(indicator.level));
+    const jhsQuestions = naccaQuestions.filter((question) => /^B[789]$/.test(question.level));
+    expect(jhsIndicators).toHaveLength(18);
+    expect(jhsQuestions).toHaveLength(54);
+    expect(naccaLevels.filter((level) => /^B[789]$/.test(level.name))).toHaveLength(3);
+    expect(new Set(jhsIndicators.map((indicator) => indicator.subject))).toEqual(
+      new Set(['Mathematics', 'Science']),
+    );
+    const summary = summarizeQuestionBank(naccaQuestions, naccaIndicators);
+    expect(summary.questionCount).toBe(10408);
+    expect(summary.indicatorCount).toBe(610);
+    expect(summary.subjects).toEqual(['English Language', 'Mathematics', 'Science']);
+    expect(summary.levels).toEqual([
+      'Basic 1',
+      'Basic 2',
+      'Basic 3',
+      'Basic 4',
+      'Basic 5',
+      'Basic 6',
+      'JHS 1',
+      'JHS 2',
+      'JHS 3',
+    ]);
+  });
   it('includes the 49 supplied Basic 2 English indicators and only scores authentic MCQs', () => {
     expect(basicTwoEnglishLessons).toHaveLength(49);
     expect(new Set(basicTwoEnglishLessons.map((lesson) => lesson.standard)).size).toBe(49);

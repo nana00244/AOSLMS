@@ -17,12 +17,15 @@ import {
 import { Button } from './ui';
 import { naccaQuestions, naccaIndicators } from '../learningHub/naccaBank';
 import type { NaccaQuestion } from '../nacca/types';
-import { displayHubLevel } from '../learningHub/displayOrder';
+import { compareHubLevels, compareHubSubjects } from '../learningHub/displayOrder';
 import {
   matchesSelectedIndicators,
   questionIndicatorKey,
 } from '../learningHub/questionBankFilters';
-import { summarizeQuestionBank } from '../learningHub/questionBankSummary';
+import {
+  displayQuestionBankLevel,
+  summarizeQuestionBank,
+} from '../learningHub/questionBankSummary';
 import {
   buildQuestionBankDocument,
   downloadQuestionBankWord,
@@ -67,7 +70,8 @@ export function NaccaQuestionBankView({ onOpenPractice, staff, onCreateAssessmen
   const availableIndicators = useMemo(() => {
     return naccaIndicators.filter((i) => {
       if (selectedSubject !== 'ALL' && i.subject !== selectedSubject) return false;
-      if (selectedLevel !== 'ALL' && displayHubLevel(i.level) !== selectedLevel) return false;
+      if (selectedLevel !== 'ALL' && displayQuestionBankLevel(i.level) !== selectedLevel)
+        return false;
       return true;
     });
   }, [selectedSubject, selectedLevel]);
@@ -78,7 +82,7 @@ export function NaccaQuestionBankView({ onOpenPractice, staff, onCreateAssessmen
       if (selectedSubject !== 'ALL' && q.subject !== selectedSubject) {
         return false;
       }
-      if (selectedLevel !== 'ALL' && displayHubLevel(q.level) !== selectedLevel) {
+      if (selectedLevel !== 'ALL' && displayQuestionBankLevel(q.level) !== selectedLevel) {
         return false;
       }
       if (!matchesSelectedIndicators(q, selectedIndicatorSet)) return false;
@@ -144,12 +148,24 @@ export function NaccaQuestionBankView({ onOpenPractice, staff, onCreateAssessmen
   }, []);
 
   const strandCounts = useMemo(() => {
-    const counts: Record<string, number> = {};
+    const counts = new Map<
+      string,
+      { subject: string; level: string; strand: string; count: number }
+    >();
     for (const ind of naccaIndicators) {
-      const s = ind.strand || 'General';
-      counts[s] = (counts[s] || 0) + 1;
+      const strand = ind.strand || 'General';
+      const level = displayQuestionBankLevel(ind.level);
+      const key = `${ind.subject}|${level}|${strand}`;
+      const row = counts.get(key);
+      if (row) row.count += 1;
+      else counts.set(key, { subject: ind.subject, level, strand, count: 1 });
     }
-    return counts;
+    return [...counts.values()].sort(
+      (a, b) =>
+        compareHubSubjects(a.subject, b.subject) ||
+        compareHubLevels(a.level, b.level) ||
+        a.strand.localeCompare(b.strand),
+    );
   }, []);
 
   return (
@@ -248,25 +264,15 @@ export function NaccaQuestionBankView({ onOpenPractice, staff, onCreateAssessmen
             <span>Curriculum Strands</span>
           </div>
           <div className="nacca-card-body">
-            <div className="nacca-stat-row">
-              <span>Number</span>
-              <strong>{strandCounts['Number'] || 0} indicators</strong>
-            </div>
-            <div className="nacca-stat-row">
-              <span>Geometry & Measurement</span>
-              <strong>
-                {(strandCounts['Geometry and Measurement'] || 0) +
-                  (strandCounts['Geometry & Measurement'] || 0)}{' '}
-                indicators
-              </strong>
-            </div>
-            <div className="nacca-stat-row">
-              <span>Algebra (Patterns)</span>
-              <strong>{strandCounts['Algebra'] || 0} indicators</strong>
-            </div>
-            <div className="nacca-stat-row">
-              <span>Data Collection</span>
-              <strong>{strandCounts['Data'] || 0} indicators</strong>
+            <div className="nacca-strand-breakdown">
+              {strandCounts.map(({ subject, level, strand, count }) => (
+                <div className="nacca-stat-row" key={`${subject}|${level}|${strand}`}>
+                  <span>
+                    {subject} · {level} — {strand}
+                  </span>
+                  <strong>{count} indicators</strong>
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -353,7 +359,7 @@ export function NaccaQuestionBankView({ onOpenPractice, staff, onCreateAssessmen
                       }
                     />
                     <span>
-                      [{ind.subject}] {displayHubLevel(ind.level)}: {ind.code} -{' '}
+                      [{ind.subject}] {displayQuestionBankLevel(ind.level)}: {ind.code} -{' '}
                       {ind.sub_strand.slice(0, 30)}
                     </span>
                   </label>

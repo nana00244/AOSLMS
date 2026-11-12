@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import type { NaccaIndicator, NaccaQuestion } from '../nacca/types';
 import { buildQuestionBankDocument } from './questionBankExport';
-import { summarizeQuestionBank } from './questionBankSummary';
+import { displayQuestionBankLevel, summarizeQuestionBank } from './questionBankSummary';
 
 describe('Learning Hub question bank summaries and exports', () => {
   it('derives subjects and levels from the supplied bank data', () => {
@@ -19,8 +19,9 @@ describe('Learning Hub question bank summaries and exports', () => {
       questionCount: 2,
       indicatorCount: 3,
       subjects: ['English Language', 'Mathematics', 'Science'],
-      levels: ['Basic 1', 'Basic 4', 'B7 · JHS 1'],
+      levels: ['Basic 1', 'Basic 4', 'JHS 1'],
     });
+    expect(['B7', 'B8', 'B9'].map(displayQuestionBankLevel)).toEqual(['JHS 1', 'JHS 2', 'JHS 3']);
   });
 
   it('builds a teacher document with choices, answer key and escaped source text', () => {

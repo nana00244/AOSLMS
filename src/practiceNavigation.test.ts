@@ -22,7 +22,7 @@ describe('indicator practice navigation', () => {
         expect(question.level).toBe(lesson.level);
       }
     }
-    expect(naccaHubLessons).toHaveLength(naccaIndicators.length);
+    expect(naccaHubLessons).toHaveLength(naccaIndicators.length - 18);
   });
 
   it('keeps custom Basic 1 lessons in their own lesson player', () => {
