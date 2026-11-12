@@ -4,6 +4,7 @@ import basic1EnglishData from '../nacca/basic1EnglishBank.json';
 import basic2EnglishData from './englishB2Bank.json';
 import basic3EnglishData from './englishB3Bank.json';
 import basic4EnglishData from './englishB4Bank.json';
+import basic5EnglishData from './englishB5Bank.json';
 import { hubLessons } from './catalog';
 import type { NaccaQuestion, NaccaIndicator, NaccaSubject, NaccaLevel } from '../nacca/types';
 import type { HubLesson, HubQuestion } from './catalog';
@@ -40,6 +41,17 @@ const rawIndicators = [
     code: indicator.code,
     subject: indicator.subject,
     level: 'Basic 4',
+    strand: indicator.strand,
+    sub_strand: indicator.sub_strand,
+    content_standard: indicator.content_standard,
+    objective: indicator.objective,
+    source_page: indicator.source_page,
+    spec,
+  })),
+  ...basic5EnglishData.map(({ indicator, spec }) => ({
+    code: indicator.code,
+    subject: indicator.subject,
+    level: 'Basic 5',
     strand: indicator.strand,
     sub_strand: indicator.sub_strand,
     content_standard: indicator.content_standard,
@@ -125,6 +137,40 @@ const rawQuestions = [
       uncertain: question.uncertain || [],
     })),
   ),
+  ...basic5EnglishData.flatMap(({ indicator, questions }) =>
+    questions.flatMap((question, index) => {
+      if (
+        question.type === 'mcq' &&
+        Array.isArray(question.options) &&
+        new Set(question.options.map((option) => option.trim().toLowerCase())).size !==
+          question.options.length
+      ) {
+        return [];
+      }
+      return [
+        {
+          id: `english-b5-${indicator.code.toLowerCase()}-q${index + 1}`,
+          indicator_code: indicator.code,
+          subject: indicator.subject,
+          level: 'Basic 5',
+          strand: indicator.strand,
+          sub_strand: indicator.sub_strand,
+          objective: indicator.objective,
+          skill_tag: question.skill_tag,
+          type: question.type,
+          difficulty: question.difficulty,
+          stem: question.stem,
+          options: question.options,
+          answer: question.answer,
+          hints: question.hints || [],
+          explanation: question.explanation,
+          rubric: 'rubric' in question ? question.rubric : undefined,
+          misconception: question.misconception,
+          uncertain: question.uncertain || [],
+        },
+      ];
+    }),
+  ),
   ...jhsLessons.flatMap((lesson) =>
     lesson.questions.map((question) => ({
       id: `${lesson.id}-${question.id}`,
@@ -153,18 +199,22 @@ export const naccaSubjects: NaccaSubject[] = [
   ...((basic1EnglishData.subjects || []) as unknown as NaccaSubject[]),
   ...(basic2EnglishData.length ? [{ id: 'english-language', name: 'English Language' }] : []),
 ];
-export const naccaLevels: NaccaLevel[] = [
+const availableLevels: NaccaLevel[] = [
   ...((bankData.levels || []) as unknown as NaccaLevel[]),
   ...((basic1EnglishData.levels || []) as unknown as NaccaLevel[]),
   ...(basic2EnglishData.length ? [{ id: 'basic-2', name: 'Basic 2', sequence: 2 }] : []),
   ...(basic3EnglishData.length ? [{ id: 'basic-3', name: 'Basic 3', sequence: 3 }] : []),
   ...(basic4EnglishData.length ? [{ id: 'basic-4', name: 'Basic 4', sequence: 4 }] : []),
+  ...(basic5EnglishData.length ? [{ id: 'basic-5', name: 'Basic 5', sequence: 5 }] : []),
   ...[...new Set(jhsLessons.map((lesson) => lesson.level))].map((name) => ({
     id: name.toLowerCase(),
     name,
     sequence: Number(name[1]),
   })),
 ];
+export const naccaLevels: NaccaLevel[] = [
+  ...new Map(availableLevels.map((level) => [level.name.toLowerCase(), level])).values(),
+].sort((a, b) => a.sequence - b.sequence || a.name.localeCompare(b.name));
 export const naccaImportedAt = bankData.importedAt || new Date().toISOString();
 
 /**
