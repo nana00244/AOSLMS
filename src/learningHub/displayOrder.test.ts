@@ -21,16 +21,23 @@ describe('Learning Hub curriculum display order', () => {
     expect(displayHubLevel('B7')).toBe('B7 · JHS 1');
   });
 
-  it('orders course groups by subject then curriculum level', () => {
+  it('keeps all primary course groups before JHS, ordered by level then subject', () => {
     expect(
-      ['B3|Science', 'Basic 1|Mathematics', 'B2|English Language', 'Basic 1|English Language'].sort(
-        compareHubCourseGroups,
-      ),
+      [
+        'B7|Science',
+        'Basic 1|Mathematics',
+        'B2|English Language',
+        'Basic 1|English Language',
+        'Basic 6|Science',
+        'B7|Mathematics',
+      ].sort(compareHubCourseGroups),
     ).toEqual([
       'Basic 1|English Language',
-      'B2|English Language',
       'Basic 1|Mathematics',
-      'B3|Science',
+      'B2|English Language',
+      'Basic 6|Science',
+      'B7|Mathematics',
+      'B7|Science',
     ]);
   });
 });

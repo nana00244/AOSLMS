@@ -43,5 +43,5 @@ export function displayHubLevel(level: string): string {
 export function compareHubCourseGroups(a: string, b: string): number {
   const [levelA, subjectA] = a.split('|');
   const [levelB, subjectB] = b.split('|');
-  return compareHubSubjects(subjectA, subjectB) || compareHubLevels(levelA, levelB);
+  return compareHubLevels(levelA, levelB) || compareHubSubjects(subjectA, subjectB);
 }
