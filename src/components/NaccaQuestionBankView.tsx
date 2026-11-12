@@ -99,15 +99,8 @@ export function NaccaQuestionBankView({ onOpenPractice, staff, onCreateAssessmen
   }, [search, selectedSubject, selectedLevel, selectedIndicator, selectedType, selectedDifficulty]);
 
   const exportQuestions = useMemo(
-    () =>
-      naccaQuestions.filter(
-        (question) =>
-          selectedSubject !== 'ALL' &&
-          selectedLevel !== 'ALL' &&
-          question.subject === selectedSubject &&
-          displayHubLevel(question.level) === selectedLevel,
-      ),
-    [selectedSubject, selectedLevel],
+    () => (selectedSubject !== 'ALL' && selectedLevel !== 'ALL' ? filtered : []),
+    [filtered, selectedSubject, selectedLevel],
   );
 
   const exportHtml = () =>
@@ -376,9 +369,9 @@ export function NaccaQuestionBankView({ onOpenPractice, staff, onCreateAssessmen
             <div>
               <strong>Download a class question set</strong>
               <p>
-                Select a class and subject above.
+                Select a class and subject above; all active filters are applied to the export.
                 {selectedSubject !== 'ALL' && selectedLevel !== 'ALL'
-                  ? ` ${exportQuestions.length.toLocaleString()} questions match ${selectedLevel} · ${selectedSubject}.`
+                  ? ` ${exportQuestions.length.toLocaleString()} questions match the current filters.`
                   : ''}
               </p>
               {exportMessage && <small role="status">{exportMessage}</small>}
