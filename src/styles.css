@@ -5699,3 +5699,28 @@ tr.is-selected {
   margin-top: 12px;
   padding-top: 12px;
 }
+/* Public school palette: blue and white, aligned with the LMS portal. */
+.school-site,.school-admin,.school-admin-gate{--forest:#244b8b;--forest-2:#3567b7;--sun:#e6b552;--paper:#fff;--olive:#eaf1fb;color:#20334e}
+.school-site{background:#fff;color:#20334e}
+.school-topline,.school-quote{background:#1c3767;color:#f4f7fc}
+.school-header,.school-admin>header{background:#fff}
+.school-hero .hero-visual{background-color:#e8f0fb;background-image:linear-gradient(165deg,#dce9f8 0%,#f5f8fd 63%,#dbe6f5 100%)}
+.hero-visual .visual-sun{background:#e9bb62;box-shadow:0 0 0 24px #e9bb6224,0 0 0 51px #e9bb6211}
+.hero-visual .hill-back{background:#a8c1e4}.hero-visual .hill-front{background:#7396c5}
+.hero-visual .school-roof{border-bottom-color:#3567b7}.hero-visual .school-roof:after{background:#aac3e5}
+.hero-visual .school-building{background:#fff;border-bottom-color:#9cb6da}.hero-visual .school-building-name{color:#244b8b}
+.hero-visual .school-windows i{background:#89aee0}
+.school-ribbon{background:#244b8b;color:#f7faff}
+.home-about-art,.story-note,.school-feature,.school-values article,.school-contact article{background:#edf3fb}
+.art-circle{background:#dce8f8;border-color:#f9fbff;color:#496fa8}
+.school-learning{background:#f3f7fc}.learning-cards article{background:#fff}
+.learning-icon{background:#e7effa;color:#3567a4}
+.school-quote{color:#f4f7fc}.school-quote p{color:#d3e0f2}.school-quote>span{color:#e6b552}
+.school-footer{background:#f2f6fc;color:#63738a}
+.school-page-hero{background:linear-gradient(120deg,#e8f0fb,#f7f9fd)}
+.school-programs article{border-top-color:#cbd9ec}.school-feature{background:#edf3fb}
+.school-admin,.school-admin-gate{background:#f4f7fc;color:#20334e}
+.editor-card{border-color:#dce6f3;box-shadow:0 12px 36px #244b8b0b}.editor-card input,.editor-card textarea{border-color:#d5e0ef}
+.editor-card .upload-field{border-color:#afc4e1}
+.school-contact small,.school-admin .editor-note{color:#73839a}
+.school-menu-btn{color:#244b8b}
