@@ -267,6 +267,9 @@ function Login() {
       </section>
       <section className="login-panel">
         <div className="login-form">
+          <Link className="login-public-link" to="/school">
+            <GraduationCap size={16} /> School website <ArrowRight size={15} />
+          </Link>
           <img
             className="login-school-logo"
             src={data.settings.crest || './crest.svg'}
@@ -555,6 +558,9 @@ function Shell() {
             <strong>{items.find((n) => n.path === location.pathname)?.label || 'Overview'}</strong>
           </div>
           <div className="topbar-right">
+            <Link className="workspace-public-link" to="/school">
+              <GraduationCap size={17} /> <span>School website</span>
+            </Link>
             <button
               className="icon-btn theme-toggle"
               aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}

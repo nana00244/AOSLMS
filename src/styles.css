@@ -851,6 +851,10 @@ td .person {
   gap: 23px;
   align-items: center;
 }
+.workspace-public-link,.login-public-link{display:inline-flex;align-items:center;justify-content:center;gap:7px;font-size:12px;font-weight:650;transition:color .2s,background .2s}
+.workspace-public-link{color:#2456a6;padding:8px 11px;border:1px solid #dce5f2;border-radius:7px;white-space:nowrap}
+.workspace-public-link:hover{background:#edf3fb;color:#193f7e}
+.login-public-link{color:#365f99;margin-bottom:23px}.login-public-link:hover{color:#1d4580}
 .topbar-right > .avatar {
   height: 31px;
   width: 31px;
@@ -3012,6 +3016,8 @@ td .person {
   .topbar-right {
     gap: 17px;
   }
+  .workspace-public-link span{display:none}
+  .workspace-public-link{width:35px;height:35px;padding:0}
 }
 @media (max-width: 800px) {
   .app-shell,
