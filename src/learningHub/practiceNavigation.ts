@@ -4,6 +4,7 @@ import { naccaIndicators } from './naccaBank';
 import {
   basicFiveEnglishLessons,
   basicFourEnglishLessons,
+  basicSixEnglishLessons,
   basicThreeEnglishLessons,
   basicTwoEnglishLessons,
 } from './englishBank';
@@ -27,6 +28,7 @@ export function getLessonPracticeIndicator(lesson: { id: string; subject: string
               ...basicThreeEnglishLessons,
               ...basicFourEnglishLessons,
               ...basicFiveEnglishLessons,
+              ...basicSixEnglishLessons,
             ].find((candidate) => candidate.id === lesson.id) ??
             hubLessons.find((candidate) => candidate.id === lesson.id)
           )?.standard,

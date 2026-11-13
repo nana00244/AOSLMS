@@ -4,6 +4,7 @@ import * as publicSources from './learningHub/sources';
 import {
   basicFiveEnglishLessons,
   basicFourEnglishLessons,
+  basicSixEnglishLessons,
   basicThreeEnglishLessons,
   basicTwoEnglishLessons,
 } from './learningHub/englishBank';
@@ -13,6 +14,7 @@ import { summarizeQuestionBank } from './learningHub/questionBankSummary';
 import englishB3Bank from './learningHub/englishB3Bank.json';
 import englishB4Bank from './learningHub/englishB4Bank.json';
 import englishB5Bank from './learningHub/englishB5Bank.json';
+import englishB6Bank from './learningHub/englishB6Bank.json';
 
 // Protect stable references used by saved assignments and server-graded attempts.
 describe('Learning Hub curriculum integrity', () => {
@@ -26,8 +28,8 @@ describe('Learning Hub curriculum integrity', () => {
       new Set(['Mathematics', 'Science']),
     );
     const summary = summarizeQuestionBank(naccaQuestions, naccaIndicators);
-    expect(summary.questionCount).toBe(12416);
-    expect(summary.indicatorCount).toBe(711);
+    expect(summary.questionCount).toBe(14902);
+    expect(summary.indicatorCount).toBe(843);
     expect(summary.subjects).toEqual(['English Language', 'Mathematics', 'Science']);
     expect(summary.levels).toEqual([
       'Basic 1',
@@ -154,6 +156,38 @@ describe('Learning Hub curriculum integrity', () => {
     expect(getLessonPracticeIndicator(lesson)?.level).toBe('Basic 5');
     expect(
       basicFiveEnglishLessons.some((item) =>
+        item.body.join(' ').includes('omitted from student practice'),
+      ),
+    ).toBe(true);
+  });
+  it('includes the supplied Basic 6 English bank and preserves one-question practice scoring', () => {
+    expect(englishB6Bank).toHaveLength(132);
+    expect(basicSixEnglishLessons).toHaveLength(132);
+    expect(new Set(basicSixEnglishLessons.map((lesson) => lesson.standard)).size).toBe(132);
+    expect(basicSixEnglishLessons.every((lesson) => lesson.subject === 'English Language')).toBe(
+      true,
+    );
+    expect(basicSixEnglishLessons.every((lesson) => lesson.level === 'B6')).toBe(true);
+    expect(
+      basicSixEnglishLessons.reduce((total, lesson) => total + lesson.questions.length, 0),
+    ).toBe(1150);
+    expect(englishB6Bank.reduce((total, bank) => total + bank.questions.length, 0)).toBe(2503);
+    expect(
+      naccaQuestions.filter(
+        (question) => question.level === 'Basic 6' && question.subject === 'English Language',
+      ),
+    ).toHaveLength(2486);
+    expect(
+      naccaIndicators.filter(
+        (indicator) => indicator.level === 'Basic 6' && indicator.subject === 'English Language',
+      ),
+    ).toHaveLength(132);
+    expect(naccaLevels.filter((level) => level.name.toLowerCase() === 'basic 6')).toHaveLength(1);
+    const lesson = basicSixEnglishLessons.find((item) => item.standard === 'B6.6.1.1.1')!;
+    expect(getLessonPracticeIndicator(lesson)?.code).toBe(lesson.standard);
+    expect(getLessonPracticeIndicator(lesson)?.level).toBe('Basic 6');
+    expect(
+      basicSixEnglishLessons.some((item) =>
         item.body.join(' ').includes('omitted from student practice'),
       ),
     ).toBe(true);

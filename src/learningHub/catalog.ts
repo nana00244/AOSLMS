@@ -1,6 +1,7 @@
 import {
   basicFiveEnglishLessons,
   basicFourEnglishLessons,
+  basicSixEnglishLessons,
   basicThreeEnglishLessons,
   basicTwoEnglishLessons,
 } from './englishBank';
@@ -67,6 +68,7 @@ export const hubLessons: HubLesson[] = [
   ...basicThreeEnglishLessons,
   ...basicFourEnglishLessons,
   ...basicFiveEnglishLessons,
+  ...basicSixEnglishLessons,
   lesson(
     'b7-math-fractions',
     'Fractions, decimals and percentages',

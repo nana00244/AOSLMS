@@ -5,6 +5,7 @@ import basic2EnglishData from './englishB2Bank.json';
 import basic3EnglishData from './englishB3Bank.json';
 import basic4EnglishData from './englishB4Bank.json';
 import basic5EnglishData from './englishB5Bank.json';
+import basic6EnglishData from './englishB6Bank.json';
 import { hubLessons } from './catalog';
 import type { NaccaQuestion, NaccaIndicator, NaccaSubject, NaccaLevel } from '../nacca/types';
 import type { HubLesson, HubQuestion } from './catalog';
@@ -52,6 +53,17 @@ const rawIndicators = [
     code: indicator.code,
     subject: indicator.subject,
     level: 'Basic 5',
+    strand: indicator.strand,
+    sub_strand: indicator.sub_strand,
+    content_standard: indicator.content_standard,
+    objective: indicator.objective,
+    source_page: indicator.source_page,
+    spec,
+  })),
+  ...basic6EnglishData.map(({ indicator, spec }) => ({
+    code: indicator.code,
+    subject: indicator.subject,
+    level: 'Basic 6',
     strand: indicator.strand,
     sub_strand: indicator.sub_strand,
     content_standard: indicator.content_standard,
@@ -166,7 +178,41 @@ const rawQuestions = [
           explanation: question.explanation,
           rubric: 'rubric' in question ? question.rubric : undefined,
           misconception: question.misconception,
-          uncertain: question.uncertain || [],
+          uncertain: 'uncertain' in question ? question.uncertain || [] : [],
+        },
+      ];
+    }),
+  ),
+  ...basic6EnglishData.flatMap(({ indicator, questions }) =>
+    questions.flatMap((question, index) => {
+      if (
+        question.type === 'mcq' &&
+        Array.isArray(question.options) &&
+        new Set(question.options.map((option) => option.trim().toLowerCase())).size !==
+          question.options.length
+      ) {
+        return [];
+      }
+      return [
+        {
+          id: `english-b6-${indicator.code.toLowerCase()}-q${index + 1}`,
+          indicator_code: indicator.code,
+          subject: indicator.subject,
+          level: 'Basic 6',
+          strand: indicator.strand,
+          sub_strand: indicator.sub_strand,
+          objective: indicator.objective,
+          skill_tag: question.skill_tag,
+          type: question.type,
+          difficulty: question.difficulty,
+          stem: question.stem,
+          options: question.options,
+          answer: question.answer,
+          hints: question.hints || [],
+          explanation: question.explanation,
+          rubric: 'rubric' in question ? question.rubric : undefined,
+          misconception: question.misconception,
+          uncertain: 'uncertain' in question ? question.uncertain || [] : [],
         },
       ];
     }),
