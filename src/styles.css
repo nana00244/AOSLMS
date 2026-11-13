@@ -5731,6 +5731,7 @@ tr.is-selected {
 .school-contact small,.school-admin .editor-note{color:#73839a}
 .school-menu-btn{color:#244b8b}
 .school-seal img{width:30px;height:30px;object-fit:contain}.site-card-image{width:100%;height:130px;object-fit:cover;margin-bottom:15px;border-radius:3px}
+.school-icon-logo{width:22px;height:22px;object-fit:contain}.school-art-logo{width:76px;height:76px;object-fit:contain}.site-current-page{display:grid;gap:4px;padding:17px 20px;margin:12px 0 18px;background:#edf3fb;border-left:3px solid #3567b7;border-radius:3px}.site-current-page span{font-size:9px;letter-spacing:1.5px;font-weight:750;color:#6680a2}.site-current-page strong{font-family:'Manrope';font-size:19px;color:#244b8b}.site-current-page small{font-size:10px;color:#72839b;letter-spacing:1px}
 .school-hero .hero-visual{width:100%;grid-column:2;grid-row:1}
 .school-page-image{display:block;width:min(100%,760px);max-height:380px;object-fit:cover;border-radius:6px;margin:34px auto 0}
 .site-edit-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}
