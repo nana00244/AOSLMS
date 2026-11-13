@@ -169,6 +169,13 @@ export interface Settings {
   vacation: string;
   reopening: string;
   crest?: string;
+  publicSite?: {
+    headline: string;
+    intro: string;
+    about: string;
+    contact: string;
+    heroImage: string;
+  };
   reportStamps?: Record<string, string>;
 }
 export interface StudentBill {

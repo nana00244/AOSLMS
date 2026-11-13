@@ -257,6 +257,13 @@ export const workspaceSchema = z
       vacation: text,
       reopening: text,
       crest: optionalImage,
+      publicSite: z.object({
+        headline: text,
+        intro: text,
+        about: text,
+        contact: text,
+        heroImage: z.union([z.literal(''), optionalImage.unwrap()]).optional(),
+      }).optional(),
       reportStamps: z
         .record(
           z.string(),

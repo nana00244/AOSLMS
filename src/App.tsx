@@ -59,6 +59,7 @@ import {
   StudentPerformanceTracking,
   StudentSchedule,
 } from './pages/StudentPortal';
+import { PublicSchool } from './pages/PublicSchool';
 const nav = [
   {
     label: 'Overview',
@@ -847,8 +848,14 @@ export default function App() {
   return (
     <StoreProvider>
       <HashRouter>
-        <Shell />
+        <AppRoutes />
       </HashRouter>
     </StoreProvider>
   );
+}
+
+function AppRoutes() {
+  const location = useLocation();
+  if (location.pathname.startsWith('/school')) return <PublicSchool />;
+  return <Shell />;
 }
