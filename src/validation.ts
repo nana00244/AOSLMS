@@ -16,6 +16,10 @@ const optionalImage = z
   .max(800000)
   .regex(/^data:image\/(png|jpeg);base64,[A-Za-z0-9+/=]+$/)
   .optional();
+const schoolWebsiteImage = z.union([
+  z.literal(''),
+  z.string().url().max(1000),
+]);
 const url = z
   .string()
   .refine((value) => !value || /^https?:\/\//i.test(value))
@@ -261,6 +265,7 @@ export const workspaceSchema = z
         z.object({
           brandName: text,
           brandSubtitle: text,
+          logo: schoolWebsiteImage,
           topLineLeft: text,
           topLineRight: text,
           footerNote: text,
@@ -268,12 +273,12 @@ export const workspaceSchema = z
           navigation: z.array(z.object({ label: text, path: text })),
           pages: z.record(z.string(), z.object({
             eyebrow: text, title: text, intro: text,
-            image: z.union([z.literal(''), optionalImage.unwrap()]),
+            image: schoolWebsiteImage,
             blocks: z.array(z.object({
               id, kind: z.enum(['text','cards','quote','cta']), eyebrow: text,
               title: text, body: text, actionLabel: text, actionPath: text,
-              image: z.union([z.literal(''), optionalImage.unwrap()]),
-              items: z.array(z.object({ id, title: text, body: text, detail: text })),
+              image: schoolWebsiteImage,
+              items: z.array(z.object({ id, title: text, body: text, detail: text, icon: text, image: schoolWebsiteImage })),
             })),
           })),
         }),

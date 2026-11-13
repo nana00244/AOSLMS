@@ -27,6 +27,7 @@ import {
   Moon,
   Receipt as ReceiptIcon,
   Printer as PrinterIcon,
+  Globe,
 } from 'lucide-react';
 import { StoreProvider, useStore } from './store';
 import { type Role } from './data';
@@ -125,6 +126,7 @@ const nav = [
   { label: 'Payroll', path: '/payroll', icon: Landmark, roles: ['Administrator', 'Accountant'] },
   { label: 'Users & access', path: '/users', icon: Users, roles: ['Administrator'] },
   { label: 'Activity log', path: '/audit', icon: ShieldCheck, roles: ['Administrator'] },
+  { label: 'Public website', path: '/admin/website', icon: Globe, roles: ['Administrator'] },
   { label: 'Settings', path: '/settings', icon: Settings, roles: ['Administrator'] },
 ];
 const accountantNav = [
@@ -699,6 +701,14 @@ function Shell() {
               element={
                 <ProtectedRoute allowedRoles={['Administrator']}>
                   <SettingsPage />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/admin/website"
+              element={
+                <ProtectedRoute allowedRoles={['Administrator']}>
+                  <PublicSchool />
                 </ProtectedRoute>
               }
             />

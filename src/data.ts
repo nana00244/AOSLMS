@@ -166,7 +166,7 @@ export interface SchoolWebsiteBlock {
   body: string;
   actionLabel: string;
   actionPath: string;
-  items: { id: string; title: string; body: string; detail: string }[];
+  items: { id: string; title: string; body: string; detail: string; icon: string; image: string }[];
   image: string;
 }
 export interface SchoolWebsitePage {
@@ -179,6 +179,7 @@ export interface SchoolWebsitePage {
 export interface SchoolWebsiteContent {
   brandName: string;
   brandSubtitle: string;
+  logo: string;
   topLineLeft: string;
   topLineRight: string;
   navigation: { label: string; path: string }[];
