@@ -257,13 +257,31 @@ export const workspaceSchema = z
       vacation: text,
       reopening: text,
       crest: optionalImage,
-      publicSite: z.object({
-        headline: text,
-        intro: text,
-        about: text,
-        contact: text,
-        heroImage: z.union([z.literal(''), optionalImage.unwrap()]).optional(),
-      }).optional(),
+      publicSite: z.union([
+        z.object({
+          brandName: text,
+          brandSubtitle: text,
+          topLineLeft: text,
+          topLineRight: text,
+          footerNote: text,
+          lmsLabel: text,
+          navigation: z.array(z.object({ label: text, path: text })),
+          pages: z.record(z.string(), z.object({
+            eyebrow: text, title: text, intro: text,
+            image: z.union([z.literal(''), optionalImage.unwrap()]),
+            blocks: z.array(z.object({
+              id, kind: z.enum(['text','cards','quote','cta']), eyebrow: text,
+              title: text, body: text, actionLabel: text, actionPath: text,
+              image: z.union([z.literal(''), optionalImage.unwrap()]),
+              items: z.array(z.object({ id, title: text, body: text, detail: text })),
+            })),
+          })),
+        }),
+        z.object({
+          headline: text, intro: text, about: text, contact: text,
+          heroImage: z.union([z.literal(''), optionalImage.unwrap()]).optional(),
+        }),
+      ]).optional(),
       reportStamps: z
         .record(
           z.string(),

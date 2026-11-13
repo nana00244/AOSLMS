@@ -158,6 +158,41 @@ export interface Grade {
   exam: number;
   remark: string;
 }
+export interface SchoolWebsiteBlock {
+  id: string;
+  kind: 'text' | 'cards' | 'quote' | 'cta';
+  eyebrow: string;
+  title: string;
+  body: string;
+  actionLabel: string;
+  actionPath: string;
+  items: { id: string; title: string; body: string; detail: string }[];
+  image: string;
+}
+export interface SchoolWebsitePage {
+  eyebrow: string;
+  title: string;
+  intro: string;
+  image: string;
+  blocks: SchoolWebsiteBlock[];
+}
+export interface SchoolWebsiteContent {
+  brandName: string;
+  brandSubtitle: string;
+  topLineLeft: string;
+  topLineRight: string;
+  navigation: { label: string; path: string }[];
+  footerNote: string;
+  lmsLabel: string;
+  pages: Record<string, SchoolWebsitePage>;
+}
+export interface LegacySchoolWebsiteContent {
+  headline: string;
+  intro: string;
+  about: string;
+  contact: string;
+  heroImage: string;
+}
 export interface Settings {
   name: string;
   motto: string;
@@ -169,13 +204,7 @@ export interface Settings {
   vacation: string;
   reopening: string;
   crest?: string;
-  publicSite?: {
-    headline: string;
-    intro: string;
-    about: string;
-    contact: string;
-    heroImage: string;
-  };
+  publicSite?: SchoolWebsiteContent | LegacySchoolWebsiteContent;
   reportStamps?: Record<string, string>;
 }
 export interface StudentBill {
