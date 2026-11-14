@@ -274,12 +274,13 @@ export const workspaceSchema = z
           pages: z.record(z.string(), z.object({
             eyebrow: text, title: text, intro: text,
             image: schoolWebsiteImage,
-            typography: z.object({ headingFont: z.string().max(80), headingSize: z.number().int().min(20).max(96), headingColor: z.string().regex(/^#[0-9a-fA-F]{6}$/), bodyFont: z.string().max(80), bodySize: z.number().int().min(12).max(32), bodyColor: z.string().regex(/^#[0-9a-fA-F]{6}$/) }).optional(),
+            textStyles: z.record(z.string(), z.object({ fontFamily: z.string().max(80), fontSize: z.number().int().min(10).max(100), color: z.string().regex(/^#[0-9a-fA-F]{6}$/) })).optional(),
             blocks: z.array(z.object({
               id, kind: z.enum(['text','cards','quote','cta']), eyebrow: text,
               title: text, body: text, actionLabel: text, actionPath: text,
               image: schoolWebsiteImage,
-              items: z.array(z.object({ id, title: text, body: text, detail: text, icon: text, image: schoolWebsiteImage })),
+              textStyles: z.record(z.string(), z.object({ fontFamily: z.string().max(80), fontSize: z.number().int().min(10).max(100), color: z.string().regex(/^#[0-9a-fA-F]{6}$/) })).optional(),
+              items: z.array(z.object({ id, title: text, body: text, detail: text, icon: text, image: schoolWebsiteImage, textStyles: z.record(z.string(), z.object({ fontFamily: z.string().max(80), fontSize: z.number().int().min(10).max(100), color: z.string().regex(/^#[0-9a-fA-F]{6}$/) })).optional() })),
             })),
           })),
         }),

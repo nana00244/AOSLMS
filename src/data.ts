@@ -166,8 +166,9 @@ export interface SchoolWebsiteBlock {
   body: string;
   actionLabel: string;
   actionPath: string;
-  items: { id: string; title: string; body: string; detail: string; icon: string; image: string }[];
+  items: { id: string; title: string; body: string; detail: string; icon: string; image: string; textStyles?: Record<string, { fontFamily: string; fontSize: number; color: string }> }[];
   image: string;
+  textStyles?: Record<string, { fontFamily: string; fontSize: number; color: string }>;
 }
 export interface SchoolWebsitePage {
   eyebrow: string;
@@ -175,7 +176,7 @@ export interface SchoolWebsitePage {
   intro: string;
   image: string;
   blocks: SchoolWebsiteBlock[];
-  typography?: { headingFont: string; headingSize: number; headingColor: string; bodyFont: string; bodySize: number; bodyColor: string };
+  textStyles?: Record<string, { fontFamily: string; fontSize: number; color: string }>;
 }
 export interface SchoolWebsiteContent {
   brandName: string;

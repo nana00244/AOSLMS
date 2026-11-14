@@ -5773,9 +5773,11 @@ tr.is-selected {
 .builder-preview-page footer{padding:11px 8%;background:#f3f7fc;color:#76869b;font-size:8px}
 .builder-page-tabs{position:sticky;top:72px;z-index:10}
 .builder-type-title{margin:20px 0 0;color:#244b8b;font-size:14px}.builder-typography input[type=color]{height:42px;padding:4px;cursor:pointer}.builder-typography input[type=range]{accent-color:#3567b7}
-.school-site .school-hero h1,.school-site .school-page-hero h1,.school-site .school-learning h2,.school-site .home-about h2,.school-site .school-cta h2,.school-site .school-quote blockquote{font-family:var(--school-heading-font,Manrope),sans-serif;color:var(--school-heading-color,#244b8b)}
-.school-site .school-hero h1,.school-site .school-page-hero h1{font-size:clamp(32px,min(var(--school-heading-size,56px),8vw),var(--school-heading-size,56px))}
-.school-site .hero-copy>p:not(.school-kicker),.school-site .school-page-hero>p:last-child,.school-site .school-learning .section-heading p:not(.school-kicker),.school-site .home-about>div>p:not(.school-kicker),.school-site .school-cta>div>p:not(.school-kicker){font-family:var(--school-body-font,'DM Sans'),sans-serif;font-size:var(--school-body-size,16px);color:var(--school-body-color,#52657d)}
+.field-typography{display:grid;grid-template-columns:1fr 1.2fr 60px;gap:8px;margin-top:7px;padding:9px;background:#f4f7fc;border:1px solid #e2eaf5;border-radius:5px}
+.field-typography label{display:grid;gap:4px;min-width:0;color:#71839a;font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.04em}
+.field-typography select{min-width:0;height:28px;padding:3px 5px;border:1px solid #d5e0ef;border-radius:4px;background:white;color:#315a91;font-size:10px;text-transform:none;letter-spacing:0}
+.field-typography input[type=range]{width:100%;height:16px;accent-color:#3567b7}.field-typography input[type=color]{width:100%;height:28px;padding:2px;border:1px solid #d5e0ef;border-radius:4px;background:white;cursor:pointer}
+.field-typography b{font-size:9px;color:#315a91}
 @media(max-width:700px){.builder-preview-page{margin:10px}.builder-preview-brand{padding:0 12px}.builder-preview-brand nav{gap:7px}.builder-preview-sections{grid-template-columns:1fr 1fr;padding:14px}.builder-preview-hero{min-height:145px;padding:22px}.builder-preview-toolbar span:last-child{font-size:8px}}
 .site-block-editor{transition:box-shadow .18s ease,transform .18s ease}.site-block-editor:hover{box-shadow:0 10px 28px #244b8b10;transform:translateY(-1px)}
 @media(max-width:700px){.builder-heading{align-items:flex-start;flex-direction:column}.builder-heading .site-save{margin-top:0}.builder-layout>.editor-card{padding:20px}.builder-header-actions{gap:8px}.builder-header-actions .builder-ghost{font-size:0}.builder-header-actions .builder-ghost svg{width:18px;height:18px}}
