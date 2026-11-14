@@ -17,6 +17,8 @@ import {
 import { parsePendingRecovery, type RecoveryRow } from './pendingRecovery';
 import { pendingSaveBatch } from './saveBatch';
 import { changesBetween } from './backendAccess';
+import type { Change } from './backendAccess';
+import { migrateSchoolWebsiteImage } from './schoolWebsiteAssets';
 import { applyScoreImport, type ScoreImportRequest } from './scoreImport';
 import { overlayChanges, mergeSavedValue, recordValue } from './saveRecovery';
 import {
@@ -28,6 +30,45 @@ import {
 } from './pendingSaves';
 export function validateState(value: unknown): value is State {
   return workspaceSchema.safeParse(value).success;
+}
+async function migratePendingWebsiteSave(save: PendingSave): Promise<PendingSave> {
+  let changed = false;
+  const changes: Change[] = [];
+  for (const change of save.changes) {
+    if (change.collection !== 'settings' || !change.after?.publicSite?.pages) {
+      changes.push(change);
+      continue;
+    }
+    const site = structuredClone(change.after.publicSite);
+    const migrate = async (value: unknown): Promise<unknown> => {
+      if (typeof value === 'string' && value.startsWith('data:image/')) {
+        changed = true;
+        return migrateSchoolWebsiteImage(value);
+      }
+      if (Array.isArray(value)) return Promise.all(value.map(migrate));
+      if (value && typeof value === 'object') {
+        return Object.fromEntries(await Promise.all(Object.entries(value).map(async ([key, entry]) => [key, await migrate(entry)])));
+      }
+      return value;
+    };
+    const migrated = await migrate(site) as Record<string, any>;
+    for (const page of Object.values(migrated.pages || {}) as any[]) {
+      page.image ??= '';
+      for (const section of page.blocks || []) {
+        section.image ??= '';
+        section.items ??= [];
+        for (const entry of section.items) {
+          if (!entry.icon) { entry.icon = 'graduation'; changed = true; }
+          entry.image ??= '';
+        }
+      }
+    }
+    if (changed || JSON.stringify(migrated) !== JSON.stringify(site)) {
+      changes.push({ ...change, after: { ...change.after, publicSite: migrated } });
+      changed = true;
+    } else changes.push(change);
+  }
+  return changed ? { ...save, changes } : save;
 }
 export type Theme = 'light' | 'dark';
 interface Store {
@@ -177,13 +218,16 @@ export function StoreProvider({ children }: { children: ReactNode }) {
       try {
         let pending = await readPendingSaves(userId);
         while (pending.length && current === generation.current) {
-          const save = pending[0];
+          let save = pending[0];
           if (save.conflict) {
             if (snapshot.current) show(snapshot.current, pending);
             return; // A human decision is required; polling cannot resolve this.
           }
           setSyncingNow(true);
           setStorageError('');
+          save = await migratePendingWebsiteSave(save);
+          await retainSave(save);
+          pending[0] = save;
           let batch = pendingSaveBatch(pending);
           let result: SaveResult | undefined;
           for (let attempt = 0; attempt < 3; attempt++) {

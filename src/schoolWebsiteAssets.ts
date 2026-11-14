@@ -34,3 +34,11 @@ export async function uploadSchoolWebsiteImage(file: File) {
   if (error) throw error;
   return supabase.storage.from(bucket).getPublicUrl(path).data.publicUrl;
 }
+
+/** Convert a retained legacy data URL to the same optimized Storage object as a new upload. */
+export async function migrateSchoolWebsiteImage(value: string) {
+  const response = await fetch(value);
+  const blob = await response.blob();
+  const extension = blob.type.split('/')[1] || 'png';
+  return uploadSchoolWebsiteImage(new File([blob], `website-image.${extension}`, { type: blob.type }));
+}
