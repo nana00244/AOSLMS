@@ -59,9 +59,33 @@ function SiteIcon({ name, logo }: { name: string; logo: string }) {
   return <Icon/>;
 }
 function normalize(value: unknown): SchoolWebsiteContent {
-  if (value && typeof value === 'object' && 'pages' in value && 'navigation' in value) return value as SchoolWebsiteContent;
-  const legacy = value as { headline?: string; intro?: string; about?: string; contact?: string; heroImage?: string } | undefined;
   const migrated = createDefaults();
+  if (value && typeof value === 'object' && 'pages' in value && 'navigation' in value) {
+    const raw = value as Partial<SchoolWebsiteContent>;
+    const pages = raw.pages && typeof raw.pages === 'object' ? raw.pages : {};
+    const mergedPages = { ...migrated.pages } as SchoolWebsiteContent['pages'];
+    for (const [key, candidate] of Object.entries(pages)) {
+      if (!candidate || typeof candidate !== 'object') continue;
+      const basePage = migrated.pages[key] || { eyebrow: '', title: key, intro: '', image: '', blocks: [] };
+      const pageValue = candidate as Partial<SchoolWebsitePage>;
+      mergedPages[key] = {
+        ...basePage, ...pageValue,
+        blocks: Array.isArray(pageValue.blocks) ? pageValue.blocks.map((candidateBlock, index) => {
+          const baseBlock = basePage.blocks[index] || block('text', '');
+          const blockValue = candidateBlock as Partial<SchoolWebsiteBlock>;
+          return {
+            ...baseBlock, ...blockValue,
+            items: Array.isArray(blockValue.items) ? blockValue.items.map(candidateItem => ({
+              id: crypto.randomUUID(), title: '', body: '', detail: '', icon: 'graduation', image: '',
+              ...(candidateItem && typeof candidateItem === 'object' ? candidateItem : {}),
+            })) : baseBlock.items,
+          };
+        }) : basePage.blocks,
+      };
+    }
+    return { ...migrated, ...raw, pages: mergedPages };
+  }
+  const legacy = value as { headline?: string; intro?: string; about?: string; contact?: string; heroImage?: string } | undefined;
   if (legacy) {
     migrated.pages.home.title = legacy.headline || migrated.pages.home.title;
     migrated.pages.home.intro = legacy.intro || migrated.pages.home.intro;
@@ -115,8 +139,35 @@ export function PublicSchool() {
     catch(error) { setNotice(error instanceof Error ? error.message : 'Image upload failed.'); }
   };
   const save = async () => {
-    const result = await update(state => ({ ...state, settings: { ...state.settings, publicSite: draft } }), 'Updated public school website');
-    setNotice(result ? 'All website changes have been saved.' : 'Could not save. Check the workspace status and try again.');
+    setNotice('Preparing website images…');
+    try {
+      const next = structuredClone(draft);
+      const uploadEmbedded = async (value: string) => {
+        if (!value.startsWith('data:image/')) return value;
+        const response = await fetch(value);
+        const blob = await response.blob();
+        const extension = blob.type.split('/')[1] || 'png';
+        return uploadSchoolWebsiteImage(new File([blob], `website-image.${extension}`, { type: blob.type }));
+      };
+      const imageJobs: Array<(url: string) => void> = [];
+      imageJobs.push(url => { next.logo = url; });
+      for (const page of Object.values(next.pages)) {
+        imageJobs.push(url => { page.image = url; });
+        for (const section of page.blocks) {
+          imageJobs.push(url => { section.image = url; });
+          for (const entry of section.items) imageJobs.push(url => { entry.image = url; });
+        }
+      }
+      const values = [next.logo, ...Object.values(next.pages).flatMap(page => [page.image, ...page.blocks.flatMap(section => [section.image, ...section.items.map(entry => entry.image)])])];
+      const legacyImages = values.map((image, index) => image.startsWith('data:image/') ? index : -1).filter(index => index >= 0);
+      if (legacyImages.length) setNotice(`Moving ${legacyImages.length} older image${legacyImages.length === 1 ? '' : 's'} to Supabase…`);
+      for (const index of legacyImages) imageJobs[index](await uploadEmbedded(values[index]));
+      const result = await update(state => ({ ...state, settings: { ...state.settings, publicSite: next } }), 'Updated public school website');
+      if (result) { setDraft(next); setSite(next); }
+      setNotice(result ? 'All website changes have been saved.' : 'Could not save. Check the workspace status and try again.');
+    } catch (error) {
+      setNotice(error instanceof Error ? `Image preparation failed: ${error.message}` : 'Could not prepare website images.');
+    }
   };
   if (admin) {
     if (role !== 'Administrator') return <main className="school-admin-gate"><div><GraduationCap size={36}/><h1>School website editor</h1><p>Sign in with an administrator account to update the public school website.</p><Link className="school-button" to="/">Open staff sign in <ArrowRight size={17}/></Link></div></main>;
