@@ -175,6 +175,7 @@ export interface SchoolWebsitePage {
   intro: string;
   image: string;
   blocks: SchoolWebsiteBlock[];
+  typography?: { headingFont: string; headingSize: number; headingColor: string; bodyFont: string; bodySize: number; bodyColor: string };
 }
 export interface SchoolWebsiteContent {
   brandName: string;
