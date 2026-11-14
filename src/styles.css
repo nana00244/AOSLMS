@@ -5747,4 +5747,17 @@ tr.is-selected {
 .site-icon-btn svg,.site-add-button svg{width:16px;height:16px}
 .site-icon-btn.danger{color:#a14343}.site-add-button{display:inline-flex;align-items:center;gap:8px;padding:9px 12px;border:1px dashed #9bb1d0;border-radius:4px;background:#f7faff;color:#315a91;font-size:12px;font-weight:650}
 .site-save{margin-top:20px}.school-admin .editor-card>h2{margin-top:12px;color:#244b8b}.school-admin .editor-card>h2:first-child{margin-top:0}
+.school-admin>header{position:sticky;top:0;z-index:20;height:72px;border-bottom:1px solid #e0e8f3;box-shadow:0 5px 20px #193b6608}
+.builder-header-actions{display:flex;align-items:center;gap:18px}.builder-header-actions>a{display:inline-flex;align-items:center;gap:8px;color:#315c49;font-size:13px;font-weight:650}
+.builder-ghost{display:inline-flex;align-items:center;gap:8px;padding:9px 13px;border:1px solid #d5e0ef;border-radius:6px;background:#fff;color:#315a91;font-size:12px;font-weight:650}
+.builder-wrap{max-width:1160px;padding-top:42px}.builder-heading{display:flex;justify-content:space-between;align-items:center;gap:20px;margin-bottom:24px}.builder-heading h1{font-size:34px}.builder-heading .school-lead{margin-bottom:0}
+.builder-page-tabs{display:flex;align-items:center;gap:8px;overflow:auto;padding:10px;margin:0 0 18px;background:white;border:1px solid #dce6f3;border-radius:9px;box-shadow:0 8px 24px #244b8b08}
+.builder-tabs-label{display:flex;align-items:center;gap:8px;padding:0 12px;color:#6880a0;font-size:11px;font-weight:750;text-transform:uppercase;letter-spacing:.08em;white-space:nowrap}
+.builder-page-tabs>button{flex:0 0 auto;border:0;border-radius:6px;background:transparent;padding:10px 13px;color:#536b8b;font-size:12px;font-weight:650;white-space:nowrap;transition:.18s ease}
+.builder-page-tabs>button:hover{background:#f1f6fc;color:#244b8b}.builder-page-tabs>button.active{background:#e9f1fc;color:#244b8b;box-shadow:inset 0 0 0 1px #d5e3f6}
+.builder-page-tabs>button.builder-add-page{display:inline-flex;align-items:center;gap:6px;border:1px dashed #a9bdd9;color:#315a91}
+.builder-layout{display:grid;grid-template-columns:minmax(0,1fr);gap:18px}.builder-layout>.editor-card{border-radius:10px;padding:32px}
+.builder-layout>.editor-card>h2{display:flex;align-items:center;gap:9px;font-size:17px}
+.site-block-editor{transition:box-shadow .18s ease,transform .18s ease}.site-block-editor:hover{box-shadow:0 10px 28px #244b8b10;transform:translateY(-1px)}
+@media(max-width:700px){.builder-heading{align-items:flex-start;flex-direction:column}.builder-heading .site-save{margin-top:0}.builder-layout>.editor-card{padding:20px}.builder-header-actions{gap:8px}.builder-header-actions .builder-ghost{font-size:0}.builder-header-actions .builder-ghost svg{width:18px;height:18px}}
 @media(max-width:700px){.site-edit-grid,.site-edit-row{grid-template-columns:1fr}.site-edit-row .site-icon-btn{justify-self:end}.school-hero .hero-visual{grid-column:1;grid-row:auto}.school-hero .school-page-image{grid-column:1;grid-row:auto}}
