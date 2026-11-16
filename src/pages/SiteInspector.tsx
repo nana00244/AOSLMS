@@ -513,7 +513,13 @@ function BlockSettings({
       {block.kind !== 'divider' && block.kind !== 'blank' && (
         <>
           {block.kind !== 'quote' && (
-            <StyledField label="Section eyebrow" field="eyebrow" target={block} edit={edit} size={12} />
+            <StyledField
+              label="Section eyebrow"
+              field="eyebrow"
+              target={block}
+              edit={edit}
+              size={12}
+            />
           )}
           <StyledField label="Section title" field="title" target={block} edit={edit} size={32} />
           <StyledField label="Section text" field="body" target={block} edit={edit} multiline />

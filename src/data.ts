@@ -181,7 +181,15 @@ export interface SchoolWebsiteBlock {
   body: string;
   actionLabel: string;
   actionPath: string;
-  items: { id: string; title: string; body: string; detail: string; icon: string; image: string; textStyles?: Record<string, { fontFamily: string; fontSize: number; color: string }> }[];
+  items: {
+    id: string;
+    title: string;
+    body: string;
+    detail: string;
+    icon: string;
+    image: string;
+    textStyles?: Record<string, { fontFamily: string; fontSize: number; color: string }>;
+  }[];
   image: string;
   textStyles?: Record<string, { fontFamily: string; fontSize: number; color: string }>;
 }

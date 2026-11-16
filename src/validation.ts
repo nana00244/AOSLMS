@@ -16,10 +16,7 @@ const optionalImage = z
   .max(800000)
   .regex(/^data:image\/(png|jpeg);base64,[A-Za-z0-9+/=]+$/)
   .optional();
-const schoolWebsiteImage = z.union([
-  z.literal(''),
-  z.string().url().max(1000),
-]);
+const schoolWebsiteImage = z.union([z.literal(''), z.string().url().max(1000)]);
 const url = z
   .string()
   .refine((value) => !value || /^https?:\/\//i.test(value))
@@ -261,49 +258,129 @@ export const workspaceSchema = z
       vacation: text,
       reopening: text,
       crest: optionalImage,
-      publicSite: z.union([
-        z.object({
-          brandName: text,
-          theme: z.object({
-            accent: z.string().regex(/^#[0-9a-f]{6}$/i).optional(),
-            fontFamily: z.string().max(80).optional(),
-          }).optional(),
-          brandSubtitle: text,
-          logo: schoolWebsiteImage,
-          topLineLeft: text,
-          topLineRight: text,
-          footerNote: text,
-          lmsLabel: text,
-          navigation: z.array(z.object({ label: text, path: text })),
-          pages: z.record(z.string(), z.object({
-            eyebrow: text, title: text, intro: text,
-            image: schoolWebsiteImage,
-            textStyles: z.record(z.string(), z.object({ fontFamily: z.string().max(80), fontSize: z.number().int().min(10).max(100), color: z.string().regex(/^#[0-9a-fA-F]{6}$/) })).optional(),
-            blocks: z.array(z.object({
-              id, kind: z.enum(['text','cards','quote','cta','gallery','faq','divider','blank']), eyebrow: text,
-              elements: z.array(z.object({
-                id, kind: z.enum(['heading','paragraph','button','image','spacer']),
-                text, url: text, width: z.enum(['full','half','third']),
-              })).optional(),
-              design: z.object({
-                background: z.string().regex(/^#[0-9a-f]{6}$/i).optional(),
-                align: z.enum(['left','center','right']).optional(),
-                spacing: z.enum(['compact','normal','airy']).optional(),
-                effect: z.enum(['none','fade','rise','zoom']).optional(),
-                hideOnMobile: z.boolean().optional(),
-              }).optional(),
-              title: text, body: text, actionLabel: text, actionPath: text,
-              image: schoolWebsiteImage,
-              textStyles: z.record(z.string(), z.object({ fontFamily: z.string().max(80), fontSize: z.number().int().min(10).max(100), color: z.string().regex(/^#[0-9a-fA-F]{6}$/) })).optional(),
-              items: z.array(z.object({ id, title: text, body: text, detail: text, icon: text, image: schoolWebsiteImage, textStyles: z.record(z.string(), z.object({ fontFamily: z.string().max(80), fontSize: z.number().int().min(10).max(100), color: z.string().regex(/^#[0-9a-fA-F]{6}$/) })).optional() })),
-            })),
-          })),
-        }),
-        z.object({
-          headline: text, intro: text, about: text, contact: text,
-          heroImage: z.union([z.literal(''), optionalImage.unwrap()]).optional(),
-        }),
-      ]).optional(),
+      publicSite: z
+        .union([
+          z.object({
+            brandName: text,
+            theme: z
+              .object({
+                accent: z
+                  .string()
+                  .regex(/^#[0-9a-f]{6}$/i)
+                  .optional(),
+                fontFamily: z.string().max(80).optional(),
+              })
+              .optional(),
+            brandSubtitle: text,
+            logo: schoolWebsiteImage,
+            topLineLeft: text,
+            topLineRight: text,
+            footerNote: text,
+            lmsLabel: text,
+            navigation: z.array(z.object({ label: text, path: text })),
+            pages: z.record(
+              z.string(),
+              z.object({
+                eyebrow: text,
+                title: text,
+                intro: text,
+                image: schoolWebsiteImage,
+                textStyles: z
+                  .record(
+                    z.string(),
+                    z.object({
+                      fontFamily: z.string().max(80),
+                      fontSize: z.number().int().min(10).max(100),
+                      color: z.string().regex(/^#[0-9a-fA-F]{6}$/),
+                    }),
+                  )
+                  .optional(),
+                blocks: z.array(
+                  z.object({
+                    id,
+                    kind: z.enum([
+                      'text',
+                      'cards',
+                      'quote',
+                      'cta',
+                      'gallery',
+                      'faq',
+                      'divider',
+                      'blank',
+                    ]),
+                    eyebrow: text,
+                    elements: z
+                      .array(
+                        z.object({
+                          id,
+                          kind: z.enum(['heading', 'paragraph', 'button', 'image', 'spacer']),
+                          text,
+                          url: text,
+                          width: z.enum(['full', 'half', 'third']),
+                        }),
+                      )
+                      .optional(),
+                    design: z
+                      .object({
+                        background: z
+                          .string()
+                          .regex(/^#[0-9a-f]{6}$/i)
+                          .optional(),
+                        align: z.enum(['left', 'center', 'right']).optional(),
+                        spacing: z.enum(['compact', 'normal', 'airy']).optional(),
+                        effect: z.enum(['none', 'fade', 'rise', 'zoom']).optional(),
+                        hideOnMobile: z.boolean().optional(),
+                      })
+                      .optional(),
+                    title: text,
+                    body: text,
+                    actionLabel: text,
+                    actionPath: text,
+                    image: schoolWebsiteImage,
+                    textStyles: z
+                      .record(
+                        z.string(),
+                        z.object({
+                          fontFamily: z.string().max(80),
+                          fontSize: z.number().int().min(10).max(100),
+                          color: z.string().regex(/^#[0-9a-fA-F]{6}$/),
+                        }),
+                      )
+                      .optional(),
+                    items: z.array(
+                      z.object({
+                        id,
+                        title: text,
+                        body: text,
+                        detail: text,
+                        icon: text,
+                        image: schoolWebsiteImage,
+                        textStyles: z
+                          .record(
+                            z.string(),
+                            z.object({
+                              fontFamily: z.string().max(80),
+                              fontSize: z.number().int().min(10).max(100),
+                              color: z.string().regex(/^#[0-9a-fA-F]{6}$/),
+                            }),
+                          )
+                          .optional(),
+                      }),
+                    ),
+                  }),
+                ),
+              }),
+            ),
+          }),
+          z.object({
+            headline: text,
+            intro: text,
+            about: text,
+            contact: text,
+            heroImage: z.union([z.literal(''), optionalImage.unwrap()]).optional(),
+          }),
+        ])
+        .optional(),
       reportStamps: z
         .record(
           z.string(),
