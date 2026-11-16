@@ -17,6 +17,15 @@ const optionalImage = z
   .regex(/^data:image\/(png|jpeg);base64,[A-Za-z0-9+/=]+$/)
   .optional();
 const schoolWebsiteImage = z.union([z.literal(''), z.string().url().max(1000)]);
+const mediaLayout = z
+  .object({
+    pageWidth: z.boolean().optional(),
+    width: z.number().min(1).max(100),
+    left: z.number().min(0).max(99),
+    aspect: z.number().min(0.05).max(30),
+    fit: z.enum(['cover', 'contain']),
+  })
+  .optional();
 const url = z
   .string()
   .refine((value) => !value || /^https?:\/\//i.test(value))
@@ -284,6 +293,7 @@ export const workspaceSchema = z
                 eyebrow: text,
                 title: text,
                 intro: text,
+                mediaLayout,
                 image: schoolWebsiteImage,
                 textStyles: z
                   .record(
@@ -304,16 +314,27 @@ export const workspaceSchema = z
                       'quote',
                       'cta',
                       'gallery',
+                      'carousel',
                       'faq',
                       'divider',
                       'blank',
                     ]),
                     eyebrow: text,
+                    mediaLayout,
+                    slideSeconds: z.number().int().min(2).max(30).optional(),
                     elements: z
                       .array(
                         z.object({
                           id,
-                          kind: z.enum(['heading', 'paragraph', 'button', 'image', 'spacer']),
+                          kind: z.enum([
+                            'heading',
+                            'paragraph',
+                            'button',
+                            'image',
+                            'video',
+                            'spacer',
+                          ]),
+                          mediaLayout,
                           text,
                           url: text,
                           width: z.enum(['full', 'half', 'third']),
@@ -353,6 +374,7 @@ export const workspaceSchema = z
                         title: text,
                         body: text,
                         detail: text,
+                        mediaLayout,
                         icon: text,
                         image: schoolWebsiteImage,
                         textStyles: z

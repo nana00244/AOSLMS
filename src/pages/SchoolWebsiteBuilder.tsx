@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState, type DragEvent } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 import {
   ArrowDown,
   ArrowLeft,
@@ -38,6 +38,7 @@ import {
 import { migrateSchoolWebsiteImage } from '../schoolWebsiteAssets';
 import { useStore } from '../store';
 import { SchoolSiteCanvas } from './SchoolSiteCanvas';
+import { MediaEditContext, resizePageMedia } from './WebsiteMedia';
 import { ElementEditor, focusElementInspector } from './SectionElements';
 import { moveWebsiteElement } from './websiteElementMove';
 import { SiteInspector } from './SiteInspector';
@@ -81,7 +82,8 @@ export function SchoolWebsiteBuilder({
   const version = useMemo(() => siteVersion(source), [source]);
   const { history, dispatch, problem } = useWebsiteDraft(owner, published, version);
   const site = history.current;
-  const [pageChoice, setPageChoice] = useState('home');
+  const [search, setSearch] = useSearchParams();
+  const pageChoice = search.get('page') || 'home';
   const pageKey = Object.hasOwn(site.pages, pageChoice) ? pageChoice : 'home';
   const page = site.pages[pageKey];
   const [selected, setSelected] = useState('hero');
@@ -116,7 +118,15 @@ export function SchoolWebsiteBuilder({
     );
   function choosePage(key: string) {
     canvas.current?.scrollTo({ top: 0 });
-    setPageChoice(key);
+    setSearch(
+      (previous) => {
+        const next = new URLSearchParams(previous);
+        if (key === 'home') next.delete('page');
+        else next.set('page', key);
+        return next;
+      },
+      { replace: true },
+    );
     setSelected('hero');
     setTab('layers');
   }
@@ -203,6 +213,7 @@ export function SchoolWebsiteBuilder({
     setName('');
     setLayout('Blank page');
     setNewPage(false);
+    setNotice('Page created in your draft. Publish to add it to the live website.');
   }
   function discard() {
     if (!window.confirm('Discard this browser draft and load the published website?')) return;
@@ -311,7 +322,7 @@ export function SchoolWebsiteBuilder({
           </label>
           {!preview && (
             <button title="Add page" aria-label="Add page" onClick={() => setNewPage((p) => !p)}>
-              <FilePlus2 />
+              <FilePlus2 /> Add page
             </button>
           )}
         </div>
@@ -327,9 +338,13 @@ export function SchoolWebsiteBuilder({
             <Smartphone />
           </button>
         </div>
-        <Link className="studio-live" target="_blank" rel="noopener" to={schoolPagePath(pageKey)}>
-          Live site <ExternalLink />
-        </Link>
+        {Object.hasOwn(published.pages, pageKey) ? (
+          <Link className="studio-live" target="_blank" rel="noopener" to={schoolPagePath(pageKey)}>
+            Live site <ExternalLink />
+          </Link>
+        ) : (
+          <span className="studio-live">Draft page</span>
+        )}
       </div>
       {newPage && !preview && (
         <form
@@ -357,7 +372,10 @@ export function SchoolWebsiteBuilder({
               ))}
             </select>
           </label>
-          <button disabled={locked}>Create page</button>
+          {name.trim() && <small>#{schoolPagePath(newPageKey(name, site.pages)!)}</small>}
+          <button type="submit" disabled={locked || !name.trim()}>
+            Create page
+          </button>
           <button type="button" onClick={() => setNewPage(false)}>
             Cancel
           </button>
@@ -577,31 +595,39 @@ export function SchoolWebsiteBuilder({
               <Globe2 />
               {schoolPagePath(pageKey)}
             </div>
-            <SchoolSiteCanvas
-              site={site}
-              pageKey={pageKey}
-              onSelect={preview ? undefined : (id) => inspect(id)}
-              selectedId={preview ? undefined : selectedId}
-              onNavigatePage={choosePage}
-              selectedElementId={preview ? undefined : elementId}
-              onSelectElement={
-                preview
+            <MediaEditContext.Provider
+              value={
+                preview || publishing
                   ? undefined
-                  : (sectionId, id) => {
-                      inspect(sectionId);
-                      setElementId(id);
-                      requestAnimationFrame(() => focusElementInspector(id));
-                    }
+                  : (target, layout) => editPage((p) => resizePageMedia(p, target, layout))
               }
-              onMoveElement={
-                preview || locked
-                  ? undefined
-                  : (move) => {
-                      editPage((p) => moveWebsiteElement(p, move));
-                      inspect(move.toSectionId);
-                    }
-              }
-            />
+            >
+              <SchoolSiteCanvas
+                site={site}
+                pageKey={pageKey}
+                onSelect={preview ? undefined : (id) => inspect(id)}
+                selectedId={preview ? undefined : selectedId}
+                onNavigatePage={choosePage}
+                selectedElementId={preview ? undefined : elementId}
+                onSelectElement={
+                  preview
+                    ? undefined
+                    : (sectionId, id) => {
+                        inspect(sectionId);
+                        setElementId(id);
+                        requestAnimationFrame(() => focusElementInspector(id));
+                      }
+                }
+                onMoveElement={
+                  preview || locked
+                    ? undefined
+                    : (move) => {
+                        editPage((p) => moveWebsiteElement(p, move));
+                        inspect(move.toSectionId);
+                      }
+                }
+              />
+            </MediaEditContext.Provider>
           </div>
         </section>
       </div>

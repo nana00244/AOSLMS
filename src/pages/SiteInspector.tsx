@@ -1,7 +1,12 @@
 import { useState, type ChangeEvent } from 'react';
 import { ArrowDown, ArrowUp, Plus, Trash2 } from 'lucide-react';
 import type { SchoolWebsiteBlock, SchoolWebsiteContent, SchoolWebsitePage } from '../data';
-import { uploadSchoolWebsiteImage } from '../schoolWebsiteAssets';
+import {
+  isWebsiteVideo,
+  uploadSchoolWebsiteImage,
+  uploadSchoolWebsiteMedia,
+  websiteMediaAccept,
+} from '../schoolWebsiteAssets';
 import { createSiteItem, sectionTemplates } from './siteTemplates';
 
 type Item = SchoolWebsiteBlock['items'][number];
@@ -146,11 +151,13 @@ function StyledField<T extends { textStyles?: Record<string, Typography> }>({
 }
 
 function ImageField({
+  imagesOnly = false,
   label,
   value,
   apply,
   pending,
 }: {
+  imagesOnly?: boolean;
   label: string;
   value: string;
   apply: (url: string) => void;
@@ -166,9 +173,9 @@ function ImageField({
     setUploading(true);
     pending?.(1);
     try {
-      apply(await uploadSchoolWebsiteImage(file));
+      apply(await (imagesOnly ? uploadSchoolWebsiteImage(file) : uploadSchoolWebsiteMedia(file)));
     } catch (cause) {
-      setError(cause instanceof Error ? cause.message : 'Image upload failed. Try again.');
+      setError(cause instanceof Error ? cause.message : 'Upload failed. Try again.');
     } finally {
       setUploading(false);
       pending?.(-1);
@@ -178,20 +185,35 @@ function ImageField({
     <div className="studio-image-field">
       <label className="site-edit-field">
         <span>{label}</span>
-        <input type="file" accept="image/*" disabled={uploading} onChange={upload} />
+        <input
+          type="file"
+          accept={imagesOnly ? 'image/*' : websiteMediaAccept}
+          disabled={uploading}
+          onChange={upload}
+        />
       </label>
-      {uploading && <small role="status">Uploading image…</small>}
+      {uploading && <small role="status">Uploading…</small>}
       {error && <small role="alert">{error}</small>}
       {value && (
         <div>
-          <img className="editor-preview" src={value} alt={label + ' preview'} />
+          {isWebsiteVideo(value) ? (
+            <video
+              className="editor-preview"
+              controls
+              preload="metadata"
+              src={value}
+              aria-label={label + ' preview'}
+            />
+          ) : (
+            <img className="editor-preview" src={value} alt={label + ' preview'} />
+          )}
           <button
             type="button"
             className="builder-ghost"
             onClick={() => apply('')}
             disabled={uploading}
           >
-            Remove image
+            Remove {imagesOnly ? 'image' : 'media'}
           </button>
         </div>
       )}
@@ -315,6 +337,7 @@ function SiteSettings({
       ))}
       <ImageField
         label="School logo"
+        imagesOnly
         value={site.logo}
         pending={pending}
         apply={(logo) => edit((current) => ({ ...current, logo }))}
@@ -384,12 +407,72 @@ function Items({
   edit: Edit<SchoolWebsiteBlock>;
   pending?: UploadPending;
 }) {
-  const gallery = block.kind === 'gallery';
+  const carousel = block.kind === 'carousel';
+  const gallery = block.kind === 'gallery' || carousel;
+  const [importing, setImporting] = useState(false);
+  const [importMessage, setImportMessage] = useState('');
+  async function importFiles(event: ChangeEvent<HTMLInputElement>) {
+    const files = Array.from(event.target.files || []);
+    event.target.value = '';
+    if (!files.length) return;
+    pending?.(1);
+    setImporting(true);
+    const added: Item[] = [];
+    const failed: string[] = [];
+    try {
+      for (const [index, file] of files.entries()) {
+        setImportMessage('Uploading ' + (index + 1) + ' of ' + files.length + '…');
+        try {
+          added.push({ ...createSiteItem(), image: await uploadSchoolWebsiteMedia(file) });
+        } catch (error) {
+          failed.push(
+            file.name + ': ' + (error instanceof Error ? error.message : 'Upload failed'),
+          );
+        }
+      }
+      if (added.length) edit((current) => ({ ...current, items: [...current.items, ...added] }));
+      setImportMessage([added.length + ' added.', ...failed].join(' '));
+    } finally {
+      setImporting(false);
+      pending?.(-1);
+    }
+  }
   const faq = block.kind === 'faq';
-  const noun = gallery ? 'Photo' : faq ? 'Question' : 'Card';
+  const noun = carousel ? 'Slide' : gallery ? 'Photo' : faq ? 'Question' : 'Card';
   return (
     <>
-      <h3>{gallery ? 'Photos' : faq ? 'Questions and answers' : 'Cards'}</h3>
+      <h3>
+        {carousel ? 'Slides' : gallery ? 'Gallery media' : faq ? 'Questions and answers' : 'Cards'}
+      </h3>
+      {carousel && (
+        <label className="site-edit-field">
+          Seconds per slide
+          <select
+            value={block.slideSeconds ?? 5}
+            onChange={(e) => edit((b) => ({ ...b, slideSeconds: Number(e.target.value) }))}
+          >
+            {[2, 3, 5, 8, 10, 15, 30].map((n) => (
+              <option key={n} value={n}>
+                {n}
+              </option>
+            ))}
+          </select>
+        </label>
+      )}
+      {gallery && (
+        <label className="site-edit-field">
+          Import photos or videos
+          <input
+            type="file"
+            accept={websiteMediaAccept}
+            multiple
+            disabled={importing}
+            onChange={importFiles}
+          />
+          <small>Images, MP4 or WebM. Up to 50 MB per video.</small>
+        </label>
+      )}
+      {gallery && importMessage && <p role="status">{importMessage}</p>}
       {block.items.map((entry, index) => {
         const editItem: Edit<Item> = (change) =>
           edit((current) => ({
@@ -422,7 +505,13 @@ function Items({
             </div>
             {!faq && (
               <ImageField
-                label={gallery ? 'Gallery photo' : 'Card image'}
+                label={
+                  carousel
+                    ? 'Slide image or video'
+                    : gallery
+                      ? 'Gallery image or video'
+                      : 'Card image or video'
+                }
                 value={entry.image}
                 pending={pending}
                 apply={(image) => editItem((row) => ({ ...row, image }))}
@@ -525,7 +614,7 @@ function BlockSettings({
           <StyledField label="Section text" field="body" target={block} edit={edit} multiline />
           {block.kind === 'text' && (
             <ImageField
-              label="Section image"
+              label="Section image or video"
               value={block.image}
               pending={pending}
               apply={(image) => edit((current) => ({ ...current, image }))}
@@ -545,7 +634,7 @@ function BlockSettings({
               />
             </>
           )}
-          {['cards', 'gallery', 'faq'].includes(block.kind) && (
+          {['cards', 'gallery', 'carousel', 'faq'].includes(block.kind) && (
             <Items block={block} edit={edit} pending={pending} />
           )}
         </>
@@ -652,7 +741,7 @@ export function SiteInspector({
         />
         <ImageField
           key={pageKey}
-          label="Page hero image"
+          label="Page hero image or video"
           value={page.image}
           pending={onUploadPending}
           apply={(image) => editPage((current) => ({ ...current, image }))}

@@ -23,6 +23,8 @@ import {
 import type { SchoolWebsiteBlock, SchoolWebsiteContent } from '../data';
 import { schoolPagePath } from '../schoolWebsiteModel';
 import { SectionElements } from './SectionElements';
+import { WebsiteMedia } from './WebsiteMedia';
+import { SchoolCarousel } from './SchoolCarousel';
 import { useCanvasElementDrag } from './useCanvasElementDrag';
 import type { WebsiteElementMove } from './websiteElementMove';
 import { schoolLinkDestination } from './schoolSiteLinks';
@@ -161,7 +163,12 @@ function BlockContent({
         <div className="home-about">
           <div className="home-about-art">
             {section.image ? (
-              <img className="school-story-photo" alt="" src={section.image} />
+              <WebsiteMedia
+                variant="story"
+                src={section.image}
+                target={{ blockId: section.id }}
+                layout={section.mediaLayout}
+              />
             ) : site.logo ? (
               <img className="school-art-logo" alt="" src={site.logo} />
             ) : (
@@ -198,7 +205,13 @@ function BlockContent({
               return (
                 <article key={entry.id}>
                   {entry.image ? (
-                    <img className="site-card-image" src={entry.image} alt="" loading="lazy" />
+                    <WebsiteMedia
+                      variant="card"
+                      src={entry.image}
+                      alt={entry.title}
+                      target={{ blockId: section.id, itemId: entry.id }}
+                      layout={entry.mediaLayout}
+                    />
                   ) : (
                     <span className="learning-icon">
                       {entry.icon === 'graduation' && site.logo ? (
@@ -217,6 +230,13 @@ function BlockContent({
           </div>
         </div>
       );
+    case 'carousel':
+      return (
+        <div className="school-learning">
+          <SectionHeading section={section} />
+          <SchoolCarousel section={section} />
+        </div>
+      );
     case 'gallery':
       return (
         <div className="school-gallery school-learning">
@@ -226,7 +246,13 @@ function BlockContent({
               .filter((entry) => entry.image)
               .map((entry) => (
                 <figure key={entry.id}>
-                  <img src={entry.image} alt={entry.title} loading="lazy" />
+                  <WebsiteMedia
+                    variant="gallery"
+                    src={entry.image}
+                    alt={entry.title}
+                    target={{ blockId: section.id, itemId: entry.id }}
+                    layout={entry.mediaLayout}
+                  />
                   {entry.body && (
                     <figcaption style={entry.textStyles?.body}>{entry.body}</figcaption>
                   )}
@@ -342,6 +368,7 @@ function CanvasSection({
         </button>
       )}
       <SectionElements
+        blockId={section.id}
         elements={section.elements}
         editable={editElements}
         movable={moveElements}
@@ -380,7 +407,12 @@ export function SchoolSiteCanvas({
   function handleCanvasClick(event: MouseEvent<HTMLDivElement>) {
     const target = event.target;
     if (!(target instanceof Element)) return;
-    if (target.closest('.school-menu-btn, .school-select-region, .school-blank-section')) return;
+    if (
+      target.closest(
+        '.school-menu-btn, .school-select-region, .school-blank-section, .website-media-tools, .slide-controls, video',
+      )
+    )
+      return;
     const link = target.closest('a');
     const id = target.closest<HTMLElement>('[data-edit-id]')?.dataset.editId;
     const elementId = target.closest<HTMLElement>('[data-canvas-element]')?.dataset.canvasElement;
@@ -506,7 +538,7 @@ export function SchoolSiteCanvas({
           heroText
         )}
         {page.image ? (
-          <img className="school-page-image" src={page.image} alt="" />
+          <WebsiteMedia variant="hero" src={page.image} target={{}} layout={page.mediaLayout} />
         ) : (
           home && <SchoolIllustration site={site} />
         )}

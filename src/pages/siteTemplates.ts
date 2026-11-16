@@ -8,6 +8,7 @@ export const sectionTemplates: { kind: Kind; label: string }[] = [
   { kind: 'text', label: 'Text and image' },
   { kind: 'cards', label: 'Feature cards' },
   { kind: 'gallery', label: 'Photo gallery' },
+  { kind: 'carousel', label: 'Media carousel' },
   { kind: 'faq', label: 'Frequently asked questions' },
   { kind: 'quote', label: 'Quote' },
   { kind: 'cta', label: 'Call to action' },
@@ -47,6 +48,8 @@ export function createSection(kind: Kind): SchoolWebsiteBlock {
       };
     case 'gallery':
       return { ...base, title: 'Life at school', items: [createSiteItem()] };
+    case 'carousel':
+      return { ...base, title: 'School highlights', slideSeconds: 5 };
     case 'faq':
       return {
         ...base,

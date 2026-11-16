@@ -23,8 +23,32 @@ async function openEditor(page: Page, rejectPublish = false) {
   };
   let revision = 1;
   let saves = 0;
+  const assets = new Map<string, { body: Buffer; contentType: string }>();
   const backend = async (route: Route) => {
     const url = route.request().url();
+    if (url.includes('/auth/v1/user'))
+      return route.fulfill({
+        json: { id: owner.id, email: owner.email, aud: 'authenticated', role: 'authenticated' },
+      });
+    if (url.includes('/storage/v1/object/')) {
+      const path = new URL(url).pathname
+        .replace('/storage/v1/object/', '')
+        .replace(/^public\//, '');
+      if (route.request().method() === 'POST') {
+        const type = route.request().headers()['content-type'];
+        const bytes = route.request().postDataBuffer()!;
+        if (type.includes('multipart/form-data')) {
+          const form = await new Response(new Uint8Array(bytes), {
+            headers: { 'Content-Type': type },
+          }).formData();
+          const file = [...form.values()].find((v) => typeof v !== 'string') as File;
+          assets.set(path, { body: Buffer.from(await file.arrayBuffer()), contentType: file.type });
+        } else assets.set(path, { body: bytes, contentType: type });
+        return route.fulfill({ json: { Key: path, Id: path } });
+      }
+      const asset = assets.get(path);
+      return asset ? route.fulfill(asset) : route.fulfill({ status: 404 });
+    }
     if (url.includes('/functions/v1/school-website')) {
       expect(route.request().postDataJSON().action).toBe('public-content');
       return route.fulfill({ json: { site: state.settings.publicSite } });
@@ -155,4 +179,131 @@ test('an administrator can select and drag a canvas element between sections on 
   await expect(sections.nth(0).getByRole('heading', { name: 'Club events' })).toBeVisible();
   await page.getByRole('button', { name: 'Redo', exact: true }).click();
   await expect(sections.nth(1).getByRole('heading', { name: 'Club events' })).toBeVisible();
+});
+
+test('new pages publish with resized media, video playback and a rotating carousel', async ({
+  page,
+  browser,
+}) => {
+  test.setTimeout(90000);
+  await page.setViewportSize({ width: 1360, height: 900 });
+  const fixture = await openEditor(page);
+  // Academics already belongs to a built-in page. The duplicate title needs its own URL.
+  await page.getByRole('button', { name: 'Add page', exact: true }).click();
+  await page.getByLabel('New page name').fill('Academics');
+  await page.getByLabel('New page name').press('Enter');
+  await expect(page.getByLabel('Page', { exact: true })).toHaveValue('academics-2');
+  await expect(page.getByText('Draft page', { exact: true })).toBeVisible();
+  await page.reload();
+  await expect(page.getByLabel('Page', { exact: true })).toHaveValue('academics-2');
+  await page.getByRole('button', { name: 'Add section', exact: true }).click();
+  await page.getByRole('button', { name: 'Media carousel', exact: true }).click();
+  const media = await page.evaluate(async () => {
+    const canvas = document.createElement('canvas');
+    canvas.width = 96;
+    canvas.height = 64;
+    const ctx = canvas.getContext('2d')!;
+    ctx.fillStyle = 'teal';
+    ctx.fillRect(0, 0, 96, 64);
+    const png = canvas.toDataURL().split(',')[1];
+    const stream = canvas.captureStream(0);
+    const track = stream.getVideoTracks()[0] as CanvasCaptureMediaStreamTrack;
+    const recorder = new MediaRecorder(stream, { mimeType: 'video/webm;codecs=vp8' });
+    const result = new Promise<Blob>((resolve) => {
+      const parts: Blob[] = [];
+      recorder.ondataavailable = (e) => parts.push(e.data);
+      recorder.onstop = () => resolve(new Blob(parts, { type: 'video/webm' }));
+    });
+    recorder.start();
+    for (let n = 0; n < 10; n++) {
+      await new Promise((resolve) => setTimeout(resolve, 85));
+      ctx.fillStyle = n % 2 ? 'navy' : 'teal';
+      ctx.fillRect(0, 0, 96, 64);
+      track.requestFrame();
+    }
+    recorder.stop();
+    const clip = await result;
+    stream.getTracks().forEach((track) => track.stop());
+    return { png, video: Array.from(new Uint8Array(await clip.arrayBuffer())) };
+  });
+  expect(media.video.length).toBeGreaterThan(250);
+  await page.getByLabel('Import photos or videos').setInputFiles([
+    { name: 'campus.png', mimeType: 'image/png', buffer: Buffer.from(media.png, 'base64') },
+    { name: 'assembly.webm', mimeType: 'video/webm', buffer: Buffer.from(media.video) },
+  ]);
+  await expect(page.getByText('2 added.', { exact: true })).toBeVisible();
+  await page.getByLabel('Seconds per slide').selectOption('2');
+  const frame = page.locator('.carousel-window .website-media-box');
+  await frame.scrollIntoViewIfNeeded();
+  await frame.hover();
+  const before = (await frame.boundingBox())!;
+  const grip = (await frame
+    .getByRole('button', { name: 'Resize media right', exact: true })
+    .boundingBox())!;
+  await page.mouse.move(grip.x + grip.width / 2, grip.y + grip.height / 2);
+  await page.mouse.down();
+  await page.mouse.move(grip.x - 115, grip.y + grip.height / 2, { steps: 6 });
+  await page.mouse.up();
+  expect((await frame.boundingBox())!.width).toBeLessThan(before.width - 50);
+  await frame
+    .getByRole('button', { name: 'Resize media right', exact: true })
+    .press('Shift+ArrowRight');
+  const resizedWidth = await frame.evaluate((el) => el.style.width);
+  await frame.hover();
+  await frame.getByRole('button', { name: 'Page width', exact: true }).click();
+  expect(
+    Math.abs(
+      (await frame.boundingBox())!.width -
+        (await page.locator('.school-canvas').boundingBox())!.width,
+    ),
+  ).toBeLessThan(2);
+  await page.getByRole('button', { name: 'Undo', exact: true }).click();
+  await frame.hover();
+  await frame.getByRole('button', { name: 'Fit entire image' }).click();
+  await page.getByRole('button', { name: 'Publish', exact: true }).click();
+  await expect(page.getByText('Website published.', { exact: true })).toBeVisible();
+  const live = page.getByRole('link', { name: 'Live site' });
+  await expect(live).toHaveAttribute('href', /#\/school\/academics-2$/);
+  const visitor = await browser.newPage({ baseURL: new URL(page.url()).origin });
+  try {
+    await visitor.emulateMedia({ reducedMotion: 'no-preference' });
+    await visitor.route('https://*.supabase.co/**', fixture.backend);
+    await visitor.goto('/#/school');
+    await visitor
+      .getByRole('navigation', { name: 'School navigation' })
+      .getByRole('link', { name: 'Academics', exact: true })
+      .click();
+    await expect(visitor.getByRole('heading', { name: 'Academics', exact: true })).toBeVisible();
+    await visitor.reload();
+    const carousel = visitor.getByRole('region', { name: 'School highlights' });
+    await carousel.getByRole('button', { name: 'Pause slideshow' }).click();
+    if (await carousel.locator('video').count())
+      await carousel.getByRole('button', { name: 'Previous slide' }).click();
+    await expect(carousel.locator('img')).toHaveCSS('object-fit', 'contain');
+    expect(
+      await carousel
+        .locator('.website-media-box')
+        .evaluate((el) => (el as HTMLElement).style.width),
+    ).toBe(resizedWidth);
+    await carousel.getByRole('button', { name: 'Play slideshow' }).click();
+    await expect(carousel.locator('video')).toBeVisible({ timeout: 5000 });
+    await carousel.getByRole('button', { name: 'Pause slideshow' }).click();
+    await expect
+      .poll(() => carousel.locator('video').evaluate((v: HTMLVideoElement) => v.videoWidth))
+      .toBe(96);
+    await carousel.locator('video').evaluate(async (v: HTMLVideoElement) => {
+      v.muted = true;
+      await v.play();
+    });
+    await expect
+      .poll(() => carousel.locator('video').evaluate((v: HTMLVideoElement) => v.currentTime))
+      .toBeGreaterThan(0);
+    await visitor.setViewportSize({ width: 390, height: 844 });
+    expect(await visitor.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(
+      390,
+    );
+    await expect(visitor.getByRole('button', { name: 'Resize media right' })).toHaveCount(0);
+  } finally {
+    await visitor.close();
+  }
 });

@@ -158,16 +158,26 @@ export interface Grade {
   exam: number;
   remark: string;
 }
+export interface WebsiteMediaLayout {
+  pageWidth?: boolean;
+  width: number;
+  left: number;
+  aspect: number;
+  fit: 'cover' | 'contain';
+}
 export interface SchoolWebsiteElement {
   id: string;
-  kind: 'heading' | 'paragraph' | 'button' | 'image' | 'spacer';
+  kind: 'heading' | 'paragraph' | 'button' | 'image' | 'video' | 'spacer';
+  mediaLayout?: WebsiteMediaLayout;
   text: string;
   url: string;
   width: 'full' | 'half' | 'third';
 }
 export interface SchoolWebsiteBlock {
   id: string;
-  kind: 'text' | 'cards' | 'quote' | 'cta' | 'gallery' | 'faq' | 'divider' | 'blank';
+  kind: 'text' | 'cards' | 'quote' | 'cta' | 'gallery' | 'carousel' | 'faq' | 'divider' | 'blank';
+  mediaLayout?: WebsiteMediaLayout;
+  slideSeconds?: number;
   elements?: SchoolWebsiteElement[];
   design?: {
     background?: string;
@@ -182,6 +192,7 @@ export interface SchoolWebsiteBlock {
   actionLabel: string;
   actionPath: string;
   items: {
+    mediaLayout?: WebsiteMediaLayout;
     id: string;
     title: string;
     body: string;
@@ -194,6 +205,7 @@ export interface SchoolWebsiteBlock {
   textStyles?: Record<string, { fontFamily: string; fontSize: number; color: string }>;
 }
 export interface SchoolWebsitePage {
+  mediaLayout?: WebsiteMediaLayout;
   eyebrow: string;
   title: string;
   intro: string;

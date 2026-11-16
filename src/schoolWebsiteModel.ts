@@ -21,8 +21,19 @@ export function newPageKey(name: string, pages: SchoolWebsiteContent['pages']) {
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/^-+|-+$/g, '');
-  if (!key || key in pages || Object.values(paths).includes('/school/' + key)) return undefined;
-  return key;
+  if (!name.trim()) return undefined;
+  const base = key || 'page';
+  let candidate = base;
+  for (
+    let suffix = 2;
+    candidate in pages ||
+    candidate === 'prototype' ||
+    Object.values(paths).includes('/school/' + candidate);
+    suffix++
+  ) {
+    candidate = base + '-' + suffix;
+  }
+  return candidate;
 }
 
 // JSONB can reorder object keys between a save and a reload.

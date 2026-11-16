@@ -16,6 +16,7 @@ export function PublicSchool() {
     [data.settings.publicSite],
   );
   const [published, setPublished] = useState<typeof saved>();
+  const [loadFailed, setLoadFailed] = useState(false);
   const [starter] = useState(() => normalizeSchoolSite(undefined));
   useEffect(() => {
     if (admin) return;
@@ -24,7 +25,9 @@ export function PublicSchool() {
       .then((result) => {
         if (active) setPublished(normalizeSchoolSite(result.site));
       })
-      .catch(() => {});
+      .catch(() => {
+        if (active) setLoadFailed(true);
+      });
     return () => {
       active = false;
     };
@@ -54,10 +57,26 @@ export function PublicSchool() {
     );
   }
   const site = published || starter;
-  const pageKey =
-    Object.keys(site.pages).find(
-      (key) =>
-        schoolPagePath(key) === pathname || (key !== 'home' && pathname === '/school/' + key),
-    ) || 'home';
+  const path = pathname.replace(/\/+$/, '');
+  const pageKey = Object.keys(site.pages).find(
+    (key) => schoolPagePath(key) === path || (key !== 'home' && path === '/school/' + key),
+  );
+  if (!pageKey)
+    return (
+      <main className="school-admin-gate">
+        <div>
+          {!published && !loadFailed ? (
+            <p role="status">Loading school page…</p>
+          ) : (
+            <>
+              <h1>{loadFailed ? 'Could not load this page' : 'Page not found'}</h1>
+              <Link className="school-button" to="/school">
+                School homepage
+              </Link>
+            </>
+          )}
+        </div>
+      </main>
+    );
   return <SchoolSiteCanvas site={site} pageKey={pageKey} />;
 }

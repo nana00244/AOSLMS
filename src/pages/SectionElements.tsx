@@ -2,7 +2,12 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowUp, ArrowDown, Trash2, Plus, GripVertical } from 'lucide-react';
 import type { SchoolWebsiteElement, SchoolWebsiteBlock } from '../data';
-import { uploadSchoolWebsiteImage } from '../schoolWebsiteAssets';
+import {
+  isWebsiteVideo,
+  uploadSchoolWebsiteMedia,
+  websiteMediaAccept,
+} from '../schoolWebsiteAssets';
+import { WebsiteMedia } from './WebsiteMedia';
 import { schoolLinkDestination } from './schoolSiteLinks';
 
 const labels = {
@@ -10,10 +15,12 @@ const labels = {
   paragraph: 'Paragraph',
   button: 'Button',
   image: 'Image',
+  video: 'Video',
   spacer: 'Spacer',
 };
 type Kind = SchoolWebsiteElement['kind'];
 interface CanvasElementsProps {
+  blockId: string;
   elements?: SchoolWebsiteElement[];
   editable?: boolean;
   movable?: boolean;
@@ -21,6 +28,7 @@ interface CanvasElementsProps {
   dropMarker?: { id: string; edge: 'before' | 'after' };
 }
 export function SectionElements({
+  blockId,
   elements = [],
   editable,
   movable,
@@ -58,7 +66,15 @@ export function SectionElements({
             break;
           }
           case 'image':
-            content = element.url && <img loading="lazy" src={element.url} alt={element.text} />;
+          case 'video':
+            content = element.url && (
+              <WebsiteMedia
+                src={element.url}
+                alt={element.text}
+                layout={element.mediaLayout}
+                target={{ blockId, elementId: element.id }}
+              />
+            );
             break;
           case 'spacer':
             content = <div className="studio-spacer" aria-hidden="true" />;
@@ -113,6 +129,7 @@ interface ElementEditorProps {
 export function ElementEditor({ block, edit, onUploadPending }: ElementEditorProps) {
   const [kind, setKind] = useState<Kind>('heading');
   const [message, setMessage] = useState('');
+  const [uploading, setUploading] = useState(false);
   const elements = block.elements || [];
   const modify = (fn: (values: SchoolWebsiteElement[]) => SchoolWebsiteElement[]) =>
     edit((current) => ({ ...current, elements: fn(current.elements || []) }));
@@ -131,14 +148,17 @@ export function ElementEditor({ block, edit, onUploadPending }: ElementEditorPro
     });
   }
   async function upload(id: string, file: File) {
+    setUploading(true);
     onUploadPending(1);
-    setMessage('Uploading image…');
+    setMessage('Uploading media…');
     try {
-      patch(id, { url: await uploadSchoolWebsiteImage(file) });
-      setMessage('Image added.');
+      const url = await uploadSchoolWebsiteMedia(file);
+      patch(id, { url, kind: isWebsiteVideo(url) ? 'video' : 'image' });
+      setMessage('Media added.');
     } catch (error) {
-      setMessage(error instanceof Error ? error.message : 'Image upload failed.');
+      setMessage(error instanceof Error ? error.message : 'Media upload failed.');
     } finally {
+      setUploading(false);
       onUploadPending(-1);
     }
   }
@@ -157,8 +177,8 @@ export function ElementEditor({ block, edit, onUploadPending }: ElementEditorPro
           </summary>
           {element.kind !== 'spacer' && (
             <label>
-              {element.kind === 'image'
-                ? 'Image description'
+              {element.kind === 'image' || element.kind === 'video'
+                ? 'Media description'
                 : element.kind === 'button'
                   ? 'Button text'
                   : 'Text'}
@@ -177,14 +197,16 @@ export function ElementEditor({ block, edit, onUploadPending }: ElementEditorPro
               />
             </label>
           )}
-          {element.kind === 'image' && (
+          {(element.kind === 'image' || element.kind === 'video') && (
             <label>
-              Choose image
+              Choose image or video
               <input
                 type="file"
-                accept="image/*"
+                accept={websiteMediaAccept}
+                disabled={uploading}
                 onChange={(event) => {
                   const file = event.target.files?.[0];
+                  event.target.value = '';
                   if (file) void upload(element.id, file);
                 }}
               />
