@@ -158,9 +158,24 @@ export interface Grade {
   exam: number;
   remark: string;
 }
+export interface SchoolWebsiteElement {
+  id: string;
+  kind: 'heading' | 'paragraph' | 'button' | 'image' | 'spacer';
+  text: string;
+  url: string;
+  width: 'full' | 'half' | 'third';
+}
 export interface SchoolWebsiteBlock {
   id: string;
-  kind: 'text' | 'cards' | 'quote' | 'cta';
+  kind: 'text' | 'cards' | 'quote' | 'cta' | 'gallery' | 'faq' | 'divider' | 'blank';
+  elements?: SchoolWebsiteElement[];
+  design?: {
+    background?: string;
+    align?: 'left' | 'center' | 'right';
+    spacing?: 'compact' | 'normal' | 'airy';
+    effect?: 'none' | 'fade' | 'rise' | 'zoom';
+    hideOnMobile?: boolean;
+  };
   eyebrow: string;
   title: string;
   body: string;
@@ -179,6 +194,7 @@ export interface SchoolWebsitePage {
   textStyles?: Record<string, { fontFamily: string; fontSize: number; color: string }>;
 }
 export interface SchoolWebsiteContent {
+  theme?: { accent?: string; fontFamily?: string };
   brandName: string;
   brandSubtitle: string;
   logo: string;

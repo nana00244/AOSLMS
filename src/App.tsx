@@ -458,6 +458,13 @@ function Shell() {
     };
   }, [mobile]);
   if (!role) return <Login />;
+  if (location.pathname === '/admin/website') {
+    return (
+      <ProtectedRoute allowedRoles={['Administrator']}>
+        <PublicSchool />
+      </ProtectedRoute>
+    );
+  }
   const items = (
     role === 'Accountant' ? accountantNav : role === 'Student' ? studentNav : nav
   ).filter((n) => n.roles.includes(role));
@@ -701,14 +708,6 @@ function Shell() {
               element={
                 <ProtectedRoute allowedRoles={['Administrator']}>
                   <SettingsPage />
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="/admin/website"
-              element={
-                <ProtectedRoute allowedRoles={['Administrator']}>
-                  <PublicSchool />
                 </ProtectedRoute>
               }
             />

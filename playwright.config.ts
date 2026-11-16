@@ -10,6 +10,7 @@ export default defineConfig({
         '**/reportAttitudes.spec.ts',
         '**/attendanceWeekdays.spec.ts',
         '**/learningHub.spec.ts',
+        '**/websiteBuilder.spec.ts',
       ],
   fullyParallel: true,
   workers: process.env.AOS_CLOUD_TESTS ? 1 : 2,
