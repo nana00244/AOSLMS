@@ -1,10 +1,10 @@
-import bankData from './englishB2Bank.json';
-import basicThreeBankData from './englishB3Bank.json';
-import basicFourBankData from './englishB4Bank.json';
-import basicFiveBankData from './englishB5Bank.json';
-import basicSixBankData from './englishB6Bank.json';
+import bankData from './englishB2Bank.json' with { type: 'json' };
+import basicThreeBankData from './englishB3Bank.json' with { type: 'json' };
+import basicFourBankData from './englishB4Bank.json' with { type: 'json' };
+import basicFiveBankData from './englishB5Bank.json' with { type: 'json' };
+import basicSixBankData from './englishB6Bank.json' with { type: 'json' };
 import type { HubLesson, HubQuestion } from './catalog';
-import { indicatorLessonId } from './indicatorLessonId';
+import { indicatorLessonId } from './indicatorLessonId.ts';
 
 interface EnglishBankQuestion {
   skill_tag: string;

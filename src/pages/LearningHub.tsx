@@ -143,6 +143,7 @@ export function LearningHub() {
   const [showQuizCreator, setShowQuizCreator] = useState(false);
   const [creatorInitialIndicator, setCreatorInitialIndicator] = useState<string | undefined>();
   const [creatorInitialLevel, setCreatorInitialLevel] = useState<string | undefined>();
+  const [creatorInitialSubject, setCreatorInitialSubject] = useState<string | undefined>();
 
   const practiceIndicator = params.get('practice');
   const prepareSound = useAnswerSounds();
@@ -494,7 +495,8 @@ export function LearningHub() {
                                     <span>
                                       <strong>{l.title}</strong>
                                       <small>
-                                        {l.strand} · {l.questions.length} practice questions
+                                        {l.strand} · {l.practiceQuestionCount ?? l.questions.length}{' '}
+                                        practice questions
                                       </small>
                                     </span>
                                     <ChevronRight size={18} />
@@ -532,9 +534,10 @@ export function LearningHub() {
                 <NaccaQuestionBankView
                   onOpenPractice={openPractice}
                   staff={staff}
-                  onCreateAssessment={(code, lvl) => {
+                  onCreateAssessment={(code, lvl, subject) => {
                     setCreatorInitialIndicator(code);
                     setCreatorInitialLevel(lvl);
+                    setCreatorInitialSubject(subject);
                     setShowQuizCreator(true);
                   }}
                 />
@@ -546,6 +549,8 @@ export function LearningHub() {
                   studentName={user?.name || 'Learner'}
                   onOpenCreator={() => {
                     setCreatorInitialIndicator(undefined);
+                    setCreatorInitialLevel(undefined);
+                    setCreatorInitialSubject(undefined);
                     setShowQuizCreator(true);
                   }}
                   onStartQuiz={(q) => openQuiz(q.id)}
@@ -640,20 +645,23 @@ export function LearningHub() {
           }}
         />
       )}
-      <TeacherQuizCreator
-        isOpen={showQuizCreator}
-        onClose={() => setShowQuizCreator(false)}
-        onQuizCreated={(newQuiz) => {
-          notify(
-            `Created ${newQuiz.kind === 'unit_test' ? 'Unit Test' : 'Quiz'}: ${newQuiz.title}`,
-          );
-        }}
-        classes={data.classes.map((c) => ({ id: c, name: c }))}
-        students={data.students.map((s) => ({ id: s.id, name: s.name, classId: s.classId }))}
-        currentUser={user ? { id: user.id, name: user.name } : undefined}
-        initialIndicator={creatorInitialIndicator}
-        initialLevel={creatorInitialLevel}
-      />
+      {showQuizCreator && (
+        <TeacherQuizCreator
+          isOpen={showQuizCreator}
+          onClose={() => setShowQuizCreator(false)}
+          onQuizCreated={(newQuiz) => {
+            notify(
+              `Created ${newQuiz.kind === 'unit_test' ? 'Unit Test' : 'Quiz'}: ${newQuiz.title}`,
+            );
+          }}
+          classes={data.classes.map((c) => ({ id: c, name: c }))}
+          students={data.students.map((s) => ({ id: s.id, name: s.name, classId: s.classId }))}
+          currentUser={user ? { id: user.id, name: user.name } : undefined}
+          initialIndicator={creatorInitialIndicator}
+          initialLevel={creatorInitialLevel}
+          initialSubject={creatorInitialSubject}
+        />
+      )}
       <footer className="lh-footer">
         <span>
           <GraduationCap size={17} /> Learning Hub · Ayisatu Owen Schools
@@ -760,7 +768,7 @@ function LessonView({
           <button className={!practice ? 'active' : ''} onClick={() => setPractice(false)}>
             <BookOpen size={18} /> Read lesson {status.read && <CheckCircle2 size={16} />}
           </button>
-          {lesson.questions.length > 0 && (
+          {(lesson.practiceQuestionCount ?? lesson.questions.length) > 0 && (
             <button
               className={practice ? 'active' : ''}
               onClick={() => {
@@ -828,7 +836,7 @@ function LessonView({
                     )}
                   </Button>
                 )}
-                {lesson.questions.length > 0 && (
+                {(lesson.practiceQuestionCount ?? lesson.questions.length) > 0 && (
                   <Button
                     onClick={() => {
                       if (onOpenPractice && practiceIndicator) {

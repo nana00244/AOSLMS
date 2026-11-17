@@ -1,5 +1,12 @@
 import type { NaccaQuestion } from './types';
 
+export function isRubricTask(question: NaccaQuestion) {
+  return (
+    ['written', 'oral', 'drawing', 'practical', 'role_play'].includes(question.type) &&
+    Boolean(question.rubric?.criteria.length)
+  );
+}
+
 export interface AdaptiveSessionState {
   indicatorCode: string;
   currentDifficulty: number;

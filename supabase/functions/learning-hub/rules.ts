@@ -1,7 +1,7 @@
 import { z } from 'zod';
 import { canTeach } from '../../../src/backendAccess.ts';
 import type { User } from '../../../src/data.ts';
-import type { HubLesson } from '../../../src/learningHub/catalog.ts';
+import type { HubLesson } from '../../../src/learningHub/types.ts';
 
 const text = (max: number) => z.string().trim().min(1).max(max);
 const questionSchema = z

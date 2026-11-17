@@ -393,6 +393,43 @@ test('question bank practice preserves Science when Mathematics shares the code'
   await expect(page).toHaveURL(/subject=Science/);
 });
 
+test('a teacher can build a Computing quiz from a Basic 5 question', async ({ page }) => {
+  await setup(page, 'Teacher');
+  await page.getByRole('button', { name: 'NaCCA Question Bank', exact: true }).click();
+  await page.getByLabel('Filter by subject').selectOption('Computing');
+  await page.getByLabel('Filter by class or level').selectOption('Basic 5');
+  const card = page.locator('.nacca-question-card').first();
+  const code = await card.locator('.nacca-badge-code').innerText();
+  await card.getByTitle('Create Quiz or Unit Test for indicator ' + code).click();
+  await expect(page.getByLabel('Quiz subject')).toHaveValue('Computing');
+  await expect(page.getByLabel('Quiz level')).toHaveValue('Basic 5');
+  await expect(page.getByRole('checkbox', { name: new RegExp(code.replaceAll('.', '\\.')) }).first()).toBeChecked();
+});
+
+test('Computing rubric tasks preserve the pupil response without recording an automatic grade', async ({ page }) => {
+  const { requests } = await setup(page, 'Student');
+  await page.goto('/#/learning-hub?tab=Courses&practice=B4.1.3.2.3&subject=Computing');
+  await page.getByTitle('Teacher-assessed tasks').click();
+  await expect(page.locator('.practice-arena-rubric-table')).toBeVisible();
+  await page.locator('.practice-arena-teacher-task-box textarea').fill('I drew a key and marked the school gate.');
+  await page.getByRole('button', { name: 'Save response' }).click();
+  const records = await page.evaluate(() => JSON.parse(localStorage.getItem('nacca_student_practice_history_hub-student-0') || '[]'));
+  expect(records).toEqual(expect.arrayContaining([expect.objectContaining({
+    subject: 'Computing', reviewStatus: 'pending', category: 'teacher',
+    questions: [expect.objectContaining({ response: { teacherInput: 'I drew a key and marked the school gate.' } })],
+  })]));
+  expect(requests.some(r => r.action === 'submit-adaptive')).toBe(false);
+});
+
+test('a pupil can open a numeric Computing lesson from its course page', async ({ page }) => {
+  await setup(page, 'Student');
+  await page.goto('/#/learning-hub?tab=Courses&lesson=nacca-computing-b4-1-3-1-5');
+  await page.getByRole('button', { name: 'Start practice' }).click();
+  await expect(page).toHaveURL(/subject=Computing/);
+  await expect(page.locator('.practice-arena-stem-text')).toBeVisible();
+  await expect(page.locator('.practice-arena-question-view input')).toBeVisible();
+});
+
 test('Basic 6 Science retake changes the opening question even with identical random draws', async ({ page }) => {
   await setup(page, 'Student');
   await page.evaluate(() => { Math.random = () => 0.999; });

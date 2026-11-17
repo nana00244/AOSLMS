@@ -35,7 +35,7 @@ import {
 interface Props {
   onOpenPractice: (indicatorCode: string, subject?: string) => void;
   staff: boolean;
-  onCreateAssessment?: (indicatorCode?: string, level?: string) => void;
+  onCreateAssessment?: (indicatorCode: string, level: string, subject: string) => void;
 }
 
 export function NaccaQuestionBankView({ onOpenPractice, staff, onCreateAssessment }: Props) {
@@ -631,7 +631,7 @@ export function NaccaQuestionBankView({ onOpenPractice, staff, onCreateAssessmen
                     {onCreateAssessment && staff && (
                       <Button
                         variant="secondary"
-                        onClick={() => onCreateAssessment(q.indicator_code, q.level)}
+                        onClick={() => onCreateAssessment(q.indicator_code, q.level, q.subject)}
                         title={`Create Quiz or Unit Test for indicator ${q.indicator_code}`}
                       >
                         <FileQuestion size={14} /> Create Test

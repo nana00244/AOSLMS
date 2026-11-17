@@ -57,12 +57,16 @@ export interface NaccaQuestion {
   rubric?: Rubric;
   reviewer?: string;
   misconception?: string;
+  distractorMisconceptions?: Record<string, string>;
   uncertain?: string[];
   check_formula?: string;
 }
 
 // Student-safe version that never includes the answer before submission (Rule 2)
-export type StudentNaccaQuestion = Omit<NaccaQuestion, 'answer' | 'explanation'> & {
+export type StudentNaccaQuestion = Omit<
+  NaccaQuestion,
+  'answer' | 'explanation' | 'check_formula' | 'misconception' | 'distractorMisconceptions'
+> & {
   // Explanation is shown ONLY after answering
   explanation?: string;
 };

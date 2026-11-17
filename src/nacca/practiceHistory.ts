@@ -1,6 +1,15 @@
+import type { Rubric } from './types';
+
 export interface QuestionAttemptLog {
   questionId: string;
-  response?: { selectedOption?: number; numericInput?: string; shortAnswerInput?: string };
+  response?: {
+    selectedOption?: number;
+    numericInput?: string;
+    shortAnswerInput?: string;
+    teacherInput?: string;
+  };
+  stem?: string;
+  rubric?: Rubric;
   optionOrder?: number[];
   type: string;
   difficulty: number;
@@ -10,7 +19,7 @@ export interface QuestionAttemptLog {
   timestamp: string;
 }
 
-export interface PracticeSessionRecord {
+interface PracticeRecordDetails {
   id: string;
   studentId: string;
   indicatorCode: string;
@@ -19,13 +28,22 @@ export interface PracticeSessionRecord {
   strand?: string;
   subStrand?: string;
   assignmentId?: string;
-  category: 'auto' | 'teacher'; // Rule 4: strictly separate auto vs teacher
-  score: number; // 0 to 100
-  correctCount: number;
   totalCount: number;
   questions: QuestionAttemptLog[];
   completedAt: string;
 }
+export type AutoPracticeRecord = PracticeRecordDetails & {
+  category: 'auto';
+  score: number;
+  correctCount: number;
+};
+type TeacherPracticeRecord = PracticeRecordDetails & {
+  category: 'teacher';
+  reviewStatus?: 'pending';
+  score?: number;
+  correctCount?: number;
+};
+export type PracticeSessionRecord = AutoPracticeRecord | TeacherPracticeRecord;
 
 const STORAGE_KEY = 'nacca_student_practice_history';
 const inMemoryStore = new Map<string, string>();
@@ -41,14 +59,14 @@ function getStorageItem(key: string): string | null {
   return inMemoryStore.get(key) || null;
 }
 
-function setStorageItem(key: string, val: string): void {
+function setStorageItem(key: string, val: string, needsDeviceStorage = false): void {
   try {
     if (typeof localStorage !== 'undefined') {
       localStorage.setItem(key, val);
       return;
     }
-  } catch {
-    // fallback
+  } catch (error) {
+    if (needsDeviceStorage) throw error;
   }
   inMemoryStore.set(key, val);
 }
@@ -70,7 +88,10 @@ export function loadPracticeHistory(studentId = 'guest_student'): PracticeSessio
  * Saves a new practice session attempt, preserving full history (allowing retakes).
  */
 export function savePracticeAttempt(
-  record: Omit<PracticeSessionRecord, 'id' | 'completedAt'> & { id?: string; completedAt?: string },
+  record: (
+    | Omit<AutoPracticeRecord, 'id' | 'completedAt'>
+    | Omit<TeacherPracticeRecord, 'id' | 'completedAt'>
+  ) & { id?: string; completedAt?: string },
 ): PracticeSessionRecord {
   const fullRecord: PracticeSessionRecord = {
     ...record,
@@ -81,8 +102,13 @@ export function savePracticeAttempt(
   try {
     const existing = loadPracticeHistory(fullRecord.studentId);
     const updated = [fullRecord, ...existing];
-    setStorageItem(`${STORAGE_KEY}_${fullRecord.studentId}`, JSON.stringify(updated));
+    setStorageItem(
+      `${STORAGE_KEY}_${fullRecord.studentId}`,
+      JSON.stringify(updated),
+      fullRecord.category === 'teacher' && fullRecord.reviewStatus === 'pending',
+    );
   } catch (err) {
+    if (fullRecord.category === 'teacher' && fullRecord.reviewStatus === 'pending') throw err;
     console.error('Failed to save practice history:', err);
   }
 

@@ -1,4 +1,6 @@
 import { describe, expect, it } from 'vitest';
+import { gunzipSync } from 'node:zlib';
+import serverCatalog from '../supabase/functions/learning-hub/lesson-catalog.json';
 import { hubLessons } from './learningHub/catalog';
 import * as publicSources from './learningHub/sources';
 import {
@@ -18,6 +20,11 @@ import englishB6Bank from './learningHub/englishB6Bank.json';
 
 // Protect stable references used by saved assignments and server-graded attempts.
 describe('Learning Hub curriculum integrity', () => {
+  it('keeps the deployed lesson catalog in sync with its source', () => {
+    expect(JSON.parse(gunzipSync(Buffer.from(serverCatalog, 'base64')).toString())).toEqual(
+      hubLessons,
+    );
+  });
   it('includes catalog JHS lessons in the question bank and displays all represented levels', () => {
     const jhsIndicators = naccaIndicators.filter((indicator) => /^B[789]$/.test(indicator.level));
     const jhsQuestions = naccaQuestions.filter((question) => /^B[789]$/.test(question.level));
@@ -28,9 +35,9 @@ describe('Learning Hub curriculum integrity', () => {
       new Set(['Mathematics', 'Science']),
     );
     const summary = summarizeQuestionBank(naccaQuestions, naccaIndicators);
-    expect(summary.questionCount).toBe(14902);
-    expect(summary.indicatorCount).toBe(843);
-    expect(summary.subjects).toEqual(['English Language', 'Mathematics', 'Science']);
+    expect(summary.questionCount).toBe(19062);
+    expect(summary.indicatorCount).toBe(1051);
+    expect(summary.subjects).toEqual(['English Language', 'Mathematics', 'Science', 'Computing']);
     expect(summary.levels).toEqual([
       'Basic 1',
       'Basic 2',

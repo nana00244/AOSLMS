@@ -1,5 +1,27 @@
-import type { HubLesson } from './catalog';
-
+/** Original learning material mapped to the cited NaCCA curriculum; not an official textbook. */
+export interface HubQuestion {
+  id: string;
+  prompt: string;
+  options: string[];
+  /** Zero-based correct option. Only trusted grading code should accept scores. */
+  answer: number;
+  explanation: string;
+}
+export interface HubLesson {
+  id: string;
+  title: string;
+  subject: string;
+  level: string;
+  strand: string;
+  standard: string;
+  description: string;
+  body: string[];
+  sourceUrl: string;
+  sourceTitle: string;
+  questions: HubQuestion[];
+  /** Includes typed responses and rubric activities opened in indicator practice. */
+  practiceQuestionCount?: number;
+}
 export type LearningLesson = Omit<HubLesson, 'questions'> & {
   questions: (Omit<HubLesson['questions'][number], 'answer' | 'explanation'> & {
     answer?: number;

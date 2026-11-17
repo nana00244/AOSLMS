@@ -15,7 +15,14 @@ export interface CheckAnswerResult {
  */
 export function sanitizeQuestionForStudent(q: NaccaQuestion): StudentNaccaQuestion {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const { answer, explanation, ...safeQuestion } = q;
+  const {
+    answer,
+    explanation,
+    check_formula,
+    misconception,
+    distractorMisconceptions,
+    ...safeQuestion
+  } = q;
   return safeQuestion;
 }
 

@@ -4,30 +4,10 @@ import {
   basicSixEnglishLessons,
   basicThreeEnglishLessons,
   basicTwoEnglishLessons,
-} from './englishBank';
+} from './englishBank.ts';
 
-/** Original learning material mapped to the cited NaCCA curriculum; not an official textbook. */
-export interface HubQuestion {
-  id: string;
-  prompt: string;
-  options: string[];
-  /** Zero-based correct option. Only trusted grading code should accept scores. */
-  answer: number;
-  explanation: string;
-}
-export interface HubLesson {
-  id: string;
-  title: string;
-  subject: string;
-  level: string;
-  strand: string;
-  standard: string;
-  description: string;
-  body: string[];
-  sourceUrl: string;
-  sourceTitle: string;
-  questions: HubQuestion[];
-}
+import type { HubLesson, HubQuestion } from './types.ts';
+export type { HubLesson, HubQuestion } from './types.ts';
 export { curriculumSources, type CurriculumSource } from './sources.ts';
 const mathSource =
   'https://mingycomputersgh.wordpress.com/wp-content/uploads/2023/10/mathematics-1.pdf';

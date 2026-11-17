@@ -19,7 +19,8 @@ export function learningStatus(
       r.lessonId === lessonId &&
       (!assignmentId || r.assignmentId === assignmentId),
   );
-  const hasQuestions = !!snapshot.lessons.find((l) => l.id === lessonId)?.questions.length;
+  const lesson = snapshot.lessons.find((l) => l.id === lessonId);
+  const hasQuestions = !!(lesson?.practiceQuestionCount ?? lesson?.questions.length);
   return {
     attempts,
     latest,

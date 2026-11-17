@@ -28,6 +28,7 @@ import type { NaccaQuestion, NaccaIndicator } from '../nacca/types';
 import {
   createAdaptiveSession,
   getNextAdaptiveQuestion,
+  isRubricTask,
   recordAdaptiveAnswer,
   type AdaptiveSessionState,
 } from '../nacca/adaptiveEngine';
@@ -192,6 +193,7 @@ export function PracticeArenaPlayer({
   }, [units, currentIndicatorCode]);
 
   const [mode, setMode] = useState<PracticeMode>('practice');
+  const teacherTask = mode === 'teacher_task';
 
   // Mastery calculation for current indicator
   const [historyKey, setHistoryKey] = useState(0);
@@ -237,20 +239,25 @@ export function PracticeArenaPlayer({
     setAdaptiveState(newSession);
 
     // Pick first question using adaptive engine (starts at difficulty 1)
-    const previous =
-      getIndicatorAttempts(currentIndicatorCode, studentId, selectedSubject, selectedLevel)
-        .allAttempts[0]?.questions ?? [];
+    const history = getIndicatorAttempts(
+      currentIndicatorCode,
+      studentId,
+      selectedSubject,
+      selectedLevel,
+    );
+    const previous = (teacherTask ? history.teacherMarked : history.autoMarked)[0]?.questions ?? [];
     const lastSeen = new Set(previous.map((q) => q.questionId));
     const pool = shuffled(
       practiceQuestions.filter((q) => q.indicator_code === currentIndicatorCode),
     ).sort((a, b) => Number(lastSeen.has(a.id)) - Number(lastSeen.has(b.id)));
     setAttemptPool(pool);
     const lastFirst = previous[0]?.questionId;
-    const firstQ =
-      getNextAdaptiveQuestion(
-        pool.filter((q) => q.id !== lastFirst),
-        newSession,
-      ) ?? getNextAdaptiveQuestion(pool, newSession);
+    const firstQ = teacherTask
+      ? pool.find(isRubricTask)
+      : (getNextAdaptiveQuestion(
+          pool.filter((q) => q.id !== lastFirst),
+          newSession,
+        ) ?? getNextAdaptiveQuestion(pool, newSession));
     if (firstQ) {
       setQuestionStates([
         {
@@ -362,6 +369,48 @@ export function PracticeArenaPlayer({
   const handleCheck = () => {
     if (!currentQ || !currentQState || currentQState.isAnswered) return;
 
+    if (teacherTask) {
+      if (!isRubricTask(currentQ) || !currentQState.teacherInput?.trim()) return;
+      try {
+        savePracticeAttempt({
+          category: 'teacher',
+          reviewStatus: 'pending',
+          studentId,
+          indicatorCode: currentIndicatorCode,
+          subject: currentIndicator.subject,
+          level: currentIndicator.level,
+          strand: currentIndicator.strand,
+          subStrand: currentIndicator.sub_strand,
+          assignmentId:
+            assignmentLessonId === indicatorLessonId(currentIndicator.subject, currentIndicatorCode)
+              ? assignmentId
+              : undefined,
+          totalCount: 1,
+          questions: [
+            {
+              questionId: currentQ.id,
+              stem: currentQ.stem,
+              rubric: currentQ.rubric,
+              type: currentQ.type,
+              difficulty: currentQ.difficulty,
+              timestamp: new Date().toISOString(),
+              response: { teacherInput: currentQState.teacherInput.trim() },
+            },
+          ],
+        });
+      } catch {
+        setValidationError(
+          'Your response could not be saved on this device. Keep this page open and try again.',
+        );
+        return;
+      }
+      setHistoryKey((k) => k + 1);
+      setSessionCompleted(true);
+      // Completed teacher tasks stay in this device's review history.
+      // Only automatically scored attempts go through the adaptive grading callback.
+      return;
+    }
+
     // Evaluate answer with validation
     const result: CheckAnswerResult = evaluateAnswer(currentQ, {
       selectedOption: currentQState.selectedOption,
@@ -429,9 +478,6 @@ export function PracticeArenaPlayer({
     const totalCount = questionStates.length;
     const score = Math.round((correctCount / (totalCount || 1)) * 100);
 
-    const isTeacherTask = mode === 'teacher_task';
-    const category = isTeacherTask ? 'teacher' : 'auto';
-
     // Save attempt to history (allowing retakes and keeping auto & teacher scores separate)
     const record = savePracticeAttempt({
       id: crypto.randomUUID(),
@@ -445,7 +491,7 @@ export function PracticeArenaPlayer({
       level: currentIndicator.level,
       strand: currentIndicator.strand,
       subStrand: currentIndicator.sub_strand,
-      category,
+      category: 'auto',
       score,
       correctCount,
       totalCount,
@@ -750,73 +796,85 @@ export function PracticeArenaPlayer({
               <div className="practice-arena-celebration-badge">
                 <Sparkles size={36} />
               </div>
-              <h2>Good effort! Practice complete</h2>
-              <p>
-                You’ve finished this practice set on <strong>{currentIndicator.code}</strong>.
-              </p>
+              {teacherTask ? (
+                <>
+                  <h2>Response saved for teacher review</h2>
+                  <p>
+                    Your response is in the attempt history on this device. Show it to your teacher
+                    with your work.
+                  </p>
+                  <blockquote>{currentQState?.teacherInput}</blockquote>
+                </>
+              ) : (
+                <>
+                  <h2>Good effort! Practice complete</h2>
+                  <p>
+                    You’ve finished this practice set on <strong>{currentIndicator.code}</strong>.
+                  </p>
 
-              <div className="practice-arena-score-box">
-                <div className="practice-arena-score-number">
-                  {questionStates.filter((q) => q.isCorrect).length} / {questionStates.length}
-                </div>
-                <span>Questions Correct</span>
-                <div className="practice-arena-score-percent">
-                  {Math.round(
-                    (questionStates.filter((q) => q.isCorrect).length /
-                      (questionStates.length || 1)) *
-                      100,
-                  )}
-                  % Accuracy
-                </div>
-              </div>
+                  <div className="practice-arena-score-box">
+                    <div className="practice-arena-score-number">
+                      {questionStates.filter((q) => q.isCorrect).length} / {questionStates.length}
+                    </div>
+                    <span>Questions Correct</span>
+                    <div className="practice-arena-score-percent">
+                      {Math.round(
+                        (questionStates.filter((q) => q.isCorrect).length /
+                          (questionStates.length || 1)) *
+                          100,
+                      )}
+                      % Accuracy
+                    </div>
+                  </div>
 
-              {/* Mastery Progress Info */}
-              <div
-                style={{
-                  background: '#f8fafc',
-                  border: '1px solid #e2e8f0',
-                  borderRadius: 8,
-                  padding: '12px 16px',
-                  maxWidth: 400,
-                  margin: '0 auto 20px auto',
-                  textAlign: 'left',
-                }}
-              >
-                <div
-                  style={{
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    fontWeight: 600,
-                    marginBottom: 6,
-                  }}
-                >
-                  <span>Indicator Mastery:</span>
-                  <span style={{ color: masteryResult.isMastered ? '#137333' : '#1865f2' }}>
-                    {masteryResult.progressPercent}%{' '}
-                    {masteryResult.isMastered ? '(Mastered! 🏆)' : '(In Progress)'}
-                  </span>
-                </div>
-                <div
-                  style={{
-                    height: 8,
-                    background: '#e2e8f0',
-                    borderRadius: 4,
-                    overflow: 'hidden',
-                  }}
-                >
+                  {/* Mastery Progress Info */}
                   <div
                     style={{
-                      height: '100%',
-                      width: `${masteryResult.progressPercent}%`,
-                      background: masteryResult.isMastered ? '#137333' : '#1865f2',
+                      background: '#f8fafc',
+                      border: '1px solid #e2e8f0',
+                      borderRadius: 8,
+                      padding: '12px 16px',
+                      maxWidth: 400,
+                      margin: '0 auto 20px auto',
+                      textAlign: 'left',
                     }}
-                  />
-                </div>
-                <small style={{ color: '#64748b', display: 'block', marginTop: 6 }}>
-                  Rule: Mastered after 5 correct in a row or 80% over the last 10 attempts.
-                </small>
-              </div>
-
+                  >
+                    <div
+                      style={{
+                        display: 'flex',
+                        justifyContent: 'space-between',
+                        fontWeight: 600,
+                        marginBottom: 6,
+                      }}
+                    >
+                      <span>Indicator Mastery:</span>
+                      <span style={{ color: masteryResult.isMastered ? '#137333' : '#1865f2' }}>
+                        {masteryResult.progressPercent}%{' '}
+                        {masteryResult.isMastered ? '(Mastered! 🏆)' : '(In Progress)'}
+                      </span>
+                    </div>
+                    <div
+                      style={{
+                        height: 8,
+                        background: '#e2e8f0',
+                        borderRadius: 4,
+                        overflow: 'hidden',
+                      }}
+                    >
+                      <div
+                        style={{
+                          height: '100%',
+                          width: `${masteryResult.progressPercent}%`,
+                          background: masteryResult.isMastered ? '#137333' : '#1865f2',
+                        }}
+                      />
+                    </div>
+                    <small style={{ color: '#64748b', display: 'block', marginTop: 6 }}>
+                      Rule: Mastered after 5 correct in a row or 80% over the last 10 attempts.
+                    </small>
+                  </div>
+                </>
+              )}
               <div className="practice-arena-completion-actions">
                 <Button
                   onClick={() => {
@@ -824,7 +882,8 @@ export function PracticeArenaPlayer({
                     restartSession();
                   }}
                 >
-                  <RotateCcw size={16} /> Practise again (Retake)
+                  <RotateCcw size={16} />{' '}
+                  {teacherTask ? 'Start another task' : 'Practise again (Retake)'}
                 </Button>
                 <Button
                   variant="secondary"
@@ -848,14 +907,18 @@ export function PracticeArenaPlayer({
             </div>
           ) : !studentSafeQuestion ? (
             <div className="practice-arena-loading-stage">
-              <p>No questions found for this indicator. Choose "Practice" or another topic.</p>
+              <p>
+                {teacherTask
+                  ? 'This indicator has no teacher-assessed tasks. Choose practice or another topic.'
+                  : 'No automatically scored questions are available for this indicator.'}
+              </p>
               <Button
                 onClick={() => {
                   playPracticeCue();
-                  setMode('practice');
+                  setMode(teacherTask ? 'practice' : 'teacher_task');
                 }}
               >
-                Return to Practice
+                {teacherTask ? 'Return to Practice' : 'View rubric tasks'}
               </Button>
             </div>
           ) : (
@@ -882,8 +945,10 @@ export function PracticeArenaPlayer({
                       letterSpacing: 0.5,
                     }}
                   >
-                    Question {currentIndex + 1} of {TARGET_PROBLEMS} · Difficulty Level{' '}
-                    {studentSafeQuestion.difficulty}/4
+                    {teacherTask
+                      ? 'Teacher-assessed task'
+                      : `Question ${currentIndex + 1} of ${TARGET_PROBLEMS}`}{' '}
+                    · Difficulty Level {studentSafeQuestion.difficulty}/4
                   </span>
                   <span
                     style={{
@@ -895,7 +960,7 @@ export function PracticeArenaPlayer({
                       fontWeight: 500,
                     }}
                   >
-                    Adaptive Session
+                    {teacherTask ? 'Rubric activity' : 'Adaptive Session'}
                   </span>
                 </div>
 
@@ -1036,12 +1101,13 @@ export function PracticeArenaPlayer({
                     </div>
 
                     <textarea
+                      aria-label="Your response for teacher review"
                       placeholder={
                         studentSafeQuestion.type === 'oral'
                           ? 'Transcribe your verbal response or notes here…'
                           : studentSafeQuestion.type === 'drawing'
-                            ? 'Describe your drawing or upload a photo of your exercise book…'
-                            : 'Type your detailed explanation or answer…'
+                            ? 'Describe your drawing, then show the drawing to your teacher…'
+                            : 'Write your response or notes about your work…'
                       }
                       rows={4}
                       disabled={currentQState.isAnswered}
@@ -1126,35 +1192,41 @@ export function PracticeArenaPlayer({
                   >
                     <RotateCcw size={15} />
                   </button>
-                  <span className="practice-arena-progress-label">
-                    Do {TARGET_PROBLEMS} problems
-                  </span>
-                  <div className="practice-arena-progress-dots">
-                    {Array.from({ length: TARGET_PROBLEMS }).map((_, dotIdx) => {
-                      const st = questionStates[dotIdx];
-                      let dotClass = 'practice-arena-dot';
-                      if (dotIdx === currentIndex) dotClass += ' current';
-                      if (st && st.isAnswered) {
-                        dotClass += st.isCorrect ? ' dot-correct' : ' dot-incorrect';
-                      }
-                      return <span key={dotIdx} className={dotClass} />;
-                    })}
-                  </div>
+                  {!teacherTask && (
+                    <>
+                      <span className="practice-arena-progress-label">
+                        Do {TARGET_PROBLEMS} problems
+                      </span>
+                      <div className="practice-arena-progress-dots">
+                        {Array.from({ length: TARGET_PROBLEMS }).map((_, dotIdx) => {
+                          const st = questionStates[dotIdx];
+                          let dotClass = 'practice-arena-dot';
+                          if (dotIdx === currentIndex) dotClass += ' current';
+                          if (st && st.isAnswered) {
+                            dotClass += st.isCorrect ? ' dot-correct' : ' dot-incorrect';
+                          }
+                          return <span key={dotIdx} className={dotClass} />;
+                        })}
+                      </div>
+                    </>
+                  )}
                 </div>
 
                 {/* Right: Actions */}
                 <div className="practice-arena-bar-right">
                   {!currentQState.isAnswered ? (
                     <>
-                      <button className="practice-arena-skip-btn" onClick={handleSkip}>
-                        Skip
-                      </button>
+                      {!teacherTask && (
+                        <button className="practice-arena-skip-btn" onClick={handleSkip}>
+                          Skip
+                        </button>
+                      )}
                       <button
                         className={`practice-arena-check-btn ${isInputSelected ? 'ready' : 'disabled'}`}
                         disabled={!isInputSelected}
                         onClick={handleCheck}
                       >
-                        Check
+                        {teacherTask ? 'Save response' : 'Check'}
                       </button>
                     </>
                   ) : currentQState.isCorrect ? (
@@ -1311,7 +1383,7 @@ export function PracticeArenaPlayer({
                 </h4>
                 {indicatorAttemptsData.teacherMarked.length === 0 ? (
                   <p style={{ fontSize: 13, color: '#94a3b8' }}>
-                    No teacher-marked tasks submitted for this indicator yet.
+                    No teacher-assessed tasks saved on this device for this indicator yet.
                   </p>
                 ) : (
                   <table
@@ -1330,8 +1402,8 @@ export function PracticeArenaPlayer({
                         }}
                       >
                         <th style={{ padding: '8px 10px' }}>Date</th>
-                        <th style={{ padding: '8px 10px' }}>Score</th>
-                        <th style={{ padding: '8px 10px' }}>Assessed By</th>
+                        <th style={{ padding: '8px 10px' }}>Pupil response</th>
+                        <th style={{ padding: '8px 10px' }}>Review status</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -1340,9 +1412,36 @@ export function PracticeArenaPlayer({
                           <td style={{ padding: '8px 10px', color: '#64748b' }}>
                             {new Date(att.completedAt).toLocaleString()}
                           </td>
-                          <td style={{ padding: '8px 10px', fontWeight: 600 }}>{att.score}%</td>
+                          <td style={{ padding: '8px 10px' }}>
+                            {att.questions.some((q) => q.response?.teacherInput)
+                              ? att.questions
+                                  .filter((q) => q.response?.teacherInput)
+                                  .map((q) => (
+                                    <details key={q.questionId}>
+                                      <summary>{q.stem || 'View response'}</summary>
+                                      <p
+                                        style={{ whiteSpace: 'pre-wrap', overflowWrap: 'anywhere' }}
+                                      >
+                                        {q.response?.teacherInput}
+                                      </p>
+                                      {q.rubric && (
+                                        <ul>
+                                          {q.rubric.criteria.map((criterion, i) => (
+                                            <li key={i}>
+                                              {criterion.description} ({criterion.marks}{' '}
+                                              {criterion.marks === 1 ? 'mark' : 'marks'})
+                                            </li>
+                                          ))}
+                                        </ul>
+                                      )}
+                                    </details>
+                                  ))
+                              : 'No response text recorded'}
+                          </td>
                           <td style={{ padding: '8px 10px', color: '#64748b' }}>
-                            Teacher Review Queue
+                            {att.reviewStatus === 'pending'
+                              ? 'Awaiting teacher review'
+                              : 'Earlier local record'}
                           </td>
                         </tr>
                       ))}

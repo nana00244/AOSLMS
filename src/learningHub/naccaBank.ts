@@ -1,4 +1,6 @@
 import { indicatorLessonId } from './indicatorLessonId';
+import { computingIndicators, computingQuestions } from './computingBank';
+import { questionIndicatorKey } from './questionBankFilters';
 import bankData from '../nacca/importedBank.json';
 import basic1EnglishData from '../nacca/basic1EnglishBank.json';
 import basic2EnglishData from './englishB2Bank.json';
@@ -14,6 +16,7 @@ import { sortIndicators, sortQuestions } from '../nacca/sortOrder';
 const jhsLessons = hubLessons.filter((lesson) => /^B[789]$/.test(lesson.level));
 
 const rawIndicators = [
+  ...computingIndicators,
   ...(bankData.indicators || []),
   ...(basic1EnglishData.indicators || []),
   ...basic2EnglishData.map(({ indicator, spec }) => ({
@@ -84,6 +87,7 @@ const rawIndicators = [
 export const naccaIndicators: NaccaIndicator[] = sortIndicators(rawIndicators);
 
 const rawQuestions = [
+  ...computingQuestions,
   ...(bankData.questions || []),
   ...(basic1EnglishData.questions || []),
   ...basic2EnglishData.flatMap(({ indicator, questions }) =>
@@ -244,8 +248,10 @@ export const naccaSubjects: NaccaSubject[] = [
   ...((bankData.subjects || []) as unknown as NaccaSubject[]),
   ...((basic1EnglishData.subjects || []) as unknown as NaccaSubject[]),
   ...(basic2EnglishData.length ? [{ id: 'english-language', name: 'English Language' }] : []),
+  { id: 'computing', name: 'Computing' },
 ];
 const availableLevels: NaccaLevel[] = [
+  { id: 'basic-6', name: 'Basic 6', sequence: 6 },
   ...((bankData.levels || []) as unknown as NaccaLevel[]),
   ...((basic1EnglishData.levels || []) as unknown as NaccaLevel[]),
   ...(basic2EnglishData.length ? [{ id: 'basic-2', name: 'Basic 2', sequence: 2 }] : []),
@@ -310,6 +316,13 @@ function toHubQuestions(questions: NaccaQuestion[]): HubQuestion[] {
 const catalogJhsIndicatorKeys = new Set(
   jhsLessons.map((lesson) => `${lesson.subject}:${lesson.level}:${lesson.standard}`),
 );
+const questionsByIndicator = new Map<string, NaccaQuestion[]>();
+for (const question of naccaQuestions) {
+  const key = questionIndicatorKey(question.subject, question.indicator_code);
+  const group = questionsByIndicator.get(key);
+  if (group) group.push(question);
+  else questionsByIndicator.set(key, [question]);
+}
 
 export const naccaHubLessons: HubLesson[] = naccaIndicators
   .filter(
@@ -317,9 +330,7 @@ export const naccaHubLessons: HubLesson[] = naccaIndicators
       !catalogJhsIndicatorKeys.has(`${indicator.subject}:${indicator.level}:${indicator.code}`),
   )
   .map((ind) => {
-    const questions = naccaQuestions.filter(
-      (q) => q.indicator_code === ind.code && q.subject === ind.subject,
-    );
+    const questions = questionsByIndicator.get(questionIndicatorKey(ind.subject, ind.code)) ?? [];
     const sourceUrl =
       ind.subject === 'Mathematics'
         ? 'https://mingycomputersgh.wordpress.com/wp-content/uploads/2023/10/mathematics-1.pdf'
@@ -342,7 +353,7 @@ export const naccaHubLessons: HubLesson[] = naccaIndicators
     }
 
     body.push(
-      `This topic contains ${questions.length} officially reviewed NaCCA practice questions ranging from Difficulty 1 (Foundational) to Difficulty 4 (Advanced Reasoning).`,
+      `This topic contains ${questions.length} curriculum-aligned practice questions ranging from Difficulty 1 (Foundational) to Difficulty 4 (Advanced Reasoning).`,
     );
 
     return {
@@ -353,12 +364,17 @@ export const naccaHubLessons: HubLesson[] = naccaIndicators
       strand: ind.strand,
       standard: ind.content_standard || ind.code,
       description: ind.objective || `Practice questions and skills for ${ind.code}.`,
+      ...(ind.subject === 'Computing' ? { practiceQuestionCount: questions.length } : {}),
       body,
       sourceUrl,
       sourceTitle:
-        ind.subject === 'Mathematics'
-          ? `NaCCA Ghana ${ind.subject} Curriculum (${ind.level}) · Source Page ${ind.source_page || '30'}`
-          : `NaCCA Ghana ${ind.subject} Curriculum (${ind.level}) · Source Page ${ind.source_page || 'not specified'}`,
-      questions: toHubQuestions(questions),
+        ind.subject === 'Computing'
+          ? `NaCCA Computing B4–B6 (2019) · printed page ${ind.source_page}`
+          : ind.subject === 'Mathematics'
+            ? `NaCCA Ghana ${ind.subject} Curriculum (${ind.level}) · Source Page ${ind.source_page || '30'}`
+            : `NaCCA Ghana ${ind.subject} Curriculum (${ind.level}) · Source Page ${ind.source_page || 'not specified'}`,
+      questions: toHubQuestions(
+        ind.subject === 'Computing' ? questions.filter((q) => q.type === 'mcq') : questions,
+      ),
     };
   });

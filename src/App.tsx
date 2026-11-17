@@ -1,4 +1,4 @@
-import { useState, useEffect, type ReactNode } from 'react';
+import { lazy, Suspense, useState, useEffect, type ReactNode } from 'react';
 import { HashRouter, Routes, Route, Navigate, NavLink, useLocation, Link } from 'react-router-dom';
 import {
   GraduationCap,
@@ -37,7 +37,6 @@ import { Students } from './pages/Students';
 import { Attendance } from './pages/Attendance';
 import { Coursework, Reports } from './pages/Academics';
 import { Timetable, Resources, Certificates, Community } from './pages/Learning';
-import { LearningHub } from './pages/LearningHub';
 import { AdminFinanceDashboard, Finance, Payroll } from './pages/Finance';
 import { SettingsPage, UsersPage, Audit } from './pages/Settings';
 import { TeacherClassGuard } from './components/TeacherClassGuard';
@@ -61,6 +60,9 @@ import {
   StudentSchedule,
 } from './pages/StudentPortal';
 import { PublicSchool } from './pages/PublicSchool';
+const LearningHub = lazy(() =>
+  import('./pages/LearningHub').then(({ LearningHub }) => ({ default: LearningHub })),
+);
 const nav = [
   {
     label: 'Overview',
@@ -829,7 +831,12 @@ function Shell() {
               ['/coursework', <Coursework />],
               ['/reports', <Reports />],
               ['/timetable', <Timetable />],
-              ['/learning-hub', <LearningHub />],
+              [
+                '/learning-hub',
+                <Suspense fallback={<p role="status">Loading Learning Hub…</p>}>
+                  <LearningHub />
+                </Suspense>,
+              ],
               ['/resources', <Resources />],
               ['/certificates', <Certificates />],
               ['/community', <Community />],

@@ -4,6 +4,8 @@ import { execFileSync } from 'node:child_process';
 import { readFileSync } from 'node:fs';
 import { randomBytes, randomUUID } from 'node:crypto';
 import { createClient } from '@supabase/supabase-js';
+import { computingQuestions } from '../src/learningHub/computingBank.ts';
+import { indicatorLessonId } from '../src/learningHub/indicatorLessonId.ts';
 const project = JSON.parse(readFileSync('src/supabase-project.json', 'utf8'));
 const options = { auth: { persistSession: false, autoRefreshToken: false } };
 const shell = process.platform === 'win32' ? 'cmd.exe' : 'sh';
@@ -214,6 +216,24 @@ try {
     answers: [1, 0],
   });
   assert.equal(second.attempt.score, 100);
+  for (const level of ['Basic 4', 'Basic 5', 'Basic 6']) {
+    const question = computingQuestions.find(q => q.level === level && q.type === 'mcq');
+    assert(question, `Missing scored Computing question for ${level}`);
+    const lessonId = indicatorLessonId(question.subject, question.indicator_code);
+    const assigned = await hub(teacher.client, {
+      action: 'assign', lessonId, classId: cls, studentIds: [studentIds[0]], dueDate,
+    });
+    assignmentIds.push(assigned.id);
+    const practice = {
+      action: 'submit-adaptive', lessonId, assignmentId: assigned.id, attemptId: randomUUID(),
+      completedAt: new Date().toISOString(),
+      responses: [{ questionId: question.id, selectedOption: question.answer }],
+    };
+    const result = await hub(pupilA.client, practice);
+    assert.equal(result.score, 100);
+    assert.equal(result.lessonId, lessonId);
+    await hub(pupilB.client, { ...practice, attemptId: randomUUID() }, true);
+  }
   const adaptive = {
     action: 'submit-adaptive', lessonId: 'nacca-science-b6-5-4-1-1', attemptId: randomUUID(),
     completedAt: new Date().toISOString(), responses: [
@@ -246,6 +266,10 @@ try {
     'PASS: Learning Hub authoring, class/individual assignments, reading completion, server-scored retries, teacher progress, answer redaction, student privacy, role/class restrictions and direct-write protection.',
   );
  } finally {
+  if (assignmentIds.length) {
+    const result = await service.from('learning_hub_assignments').delete().in('id', assignmentIds);
+    if (result.error) throw result.error;
+  }
   const cleanup = await service.from('learning_hub_attempts').delete().in('student_id', studentIds);
   if (cleanup.error && fixtures) console.error('Could not clean temporary practice rows:', cleanup.error.message);
   for (const table of [

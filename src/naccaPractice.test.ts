@@ -2,6 +2,7 @@ import { describe, it, expect } from 'vitest';
 import {
   createAdaptiveSession,
   getNextAdaptiveQuestion,
+  isRubricTask,
   recordAdaptiveAnswer,
 } from './nacca/adaptiveEngine';
 import { evaluateAnswer, sanitizeQuestionForStudent } from './nacca/answerChecker';
@@ -406,6 +407,51 @@ describe('NaCCA Student Practice Engine (Step 2)', () => {
   });
 
   describe('Retakes and Score Separation (Rule 4)', () => {
+    it('preserves the rubric and pupil response pending review without generating an automatic score', () => {
+      const rubric = { criteria: [{ description: 'Places the symbols correctly', marks: 2 }] };
+      const task: NaccaQuestion = {
+        ...sampleQuestions[0],
+        id: 'draw-map',
+        type: 'drawing',
+        rubric,
+      };
+      expect(
+        [sampleQuestions[0], task, { ...task, rubric: undefined }].filter(isRubricTask),
+      ).toEqual([task]);
+      expect(
+        getNextAdaptiveQuestion([task], createAdaptiveSession(task.indicator_code)),
+      ).toBeNull();
+      const studentId = 'pupil-rubric-test';
+      savePracticeAttempt({
+        category: 'teacher',
+        reviewStatus: 'pending',
+        studentId,
+        indicatorCode: task.indicator_code,
+        subject: 'Computing',
+        level: 'Basic 4',
+        totalCount: 1,
+        questions: [
+          {
+            questionId: task.id,
+            type: task.type,
+            difficulty: 2,
+            timestamp: '2026-01-01T00:00:00Z',
+            stem: 'Sketch the school survey area.',
+            rubric,
+            response: { teacherInput: 'The gate is beside the hall.' },
+          },
+        ],
+      });
+      const history = getIndicatorAttempts(task.indicator_code, studentId, 'Computing', 'Basic 4');
+      expect(history.autoMarked).toEqual([]);
+      expect(history.teacherMarked[0]).not.toHaveProperty('score');
+      expect(history.teacherMarked[0].reviewStatus).toBe('pending');
+      expect(history.teacherMarked[0].questions[0]).toMatchObject({
+        rubric,
+        response: { teacherInput: 'The gate is beside the hall.' },
+      });
+      expect(history.teacherMarked[0].questions[0]).not.toHaveProperty('isCorrect');
+    });
     it('preserves attempt history across multiple retakes without overwriting', () => {
       const testStudent = 'test_student_123';
       const att1 = savePracticeAttempt({

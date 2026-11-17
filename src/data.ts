@@ -579,6 +579,7 @@ export const courseworkSubjectId = (subject: string) => {
     'creative arts & design': 'sub_cad',
     'ghanaian language (twi)': 'sub_twi',
     'computing / ict': 'sub_ict',
+    computing: 'sub_ict',
     history: 'sub_hist',
     'social studies': 'sub_soc',
   };

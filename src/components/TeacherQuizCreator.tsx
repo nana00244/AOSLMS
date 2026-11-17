@@ -34,6 +34,7 @@ interface Props {
   students: { id: string; name: string; classId: string }[];
   currentUser?: { id: string; name: string };
   initialLevel?: string;
+  initialSubject?: string;
   initialIndicator?: string;
 }
 
@@ -45,10 +46,11 @@ export function TeacherQuizCreator({
   students,
   currentUser,
   initialLevel,
+  initialSubject,
   initialIndicator,
 }: Props) {
   const [kind, setKind] = useState<AssessmentKind>('quiz');
-  const [subject, setSubject] = useState('Mathematics');
+  const [subject, setSubject] = useState(initialSubject || 'Mathematics');
   const [level, setLevel] = useState(initialLevel || 'Basic 1');
   const [title, setTitle] = useState('');
   const [selectedIndicators, setSelectedIndicators] = useState<string[]>(
@@ -374,6 +376,7 @@ export function TeacherQuizCreator({
                 Subject
               </label>
               <select
+                aria-label="Quiz subject"
                 value={subject}
                 onChange={(e) => setSubject(e.target.value)}
                 style={{
@@ -406,6 +409,7 @@ export function TeacherQuizCreator({
                 Level
               </label>
               <select
+                aria-label="Quiz level"
                 value={level}
                 onChange={(e) => {
                   setLevel(e.target.value);

@@ -1,4 +1,4 @@
-import { loadPracticeHistory, type PracticeSessionRecord } from '../nacca/practiceHistory';
+import { loadPracticeHistory, type AutoPracticeRecord } from '../nacca/practiceHistory';
 import { indicatorLessonId } from './indicatorLessonId';
 import { invokeBackend } from '../backend';
 import type { HubLesson } from './catalog';
@@ -14,7 +14,7 @@ import type {
 import { hubLessons } from './catalog';
 import { naccaHubLessons } from './naccaBank';
 
-export function localHubAttempt(record: PracticeSessionRecord): HubAttempt {
+export function localHubAttempt(record: AutoPracticeRecord): HubAttempt {
   return {
     id: record.id,
     lessonId: indicatorLessonId(record.subject, record.indicatorCode),
@@ -27,7 +27,7 @@ export function localHubAttempt(record: PracticeSessionRecord): HubAttempt {
   };
 }
 
-export function submitAdaptive(record: PracticeSessionRecord): Promise<HubAttempt> {
+export function submitAdaptive(record: AutoPracticeRecord): Promise<HubAttempt> {
   return invokeBackend('learning-hub', {
     action: 'submit-adaptive',
     attemptId: record.id,
