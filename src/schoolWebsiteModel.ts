@@ -86,7 +86,11 @@ function createDefaults(): SchoolWebsiteContent {
     topLineLeft: 'TECHIMAN · BONO EAST REGION, GHANA',
     topLineRight: '“DEEPER UNDERSTANDING”',
     footerNote: 'Techiman, Bono East Region, Ghana',
+    footerCopyright: `© ${new Date().getFullYear()} AYISATU OWEN INTERNATIONAL SCHOOL`,
     lmsLabel: 'LMS portal',
+    lmsPath: '/',
+    socialLinks: [],
+    removedPages: [],
     navigation: [
       { label: 'Home', path: '/school' },
       { label: 'Our school', path: '/school/about' },
@@ -251,7 +255,9 @@ export function normalizeSchoolSite(value: unknown): SchoolWebsiteContent {
     const raw = value as Partial<SchoolWebsiteContent>;
     const pages = raw.pages && typeof raw.pages === 'object' ? raw.pages : {};
     const mergedPages = { ...migrated.pages } as SchoolWebsiteContent['pages'];
+    const removedPages = Array.isArray(raw.removedPages) ? raw.removedPages : [];
     for (const [key, candidate] of Object.entries(pages)) {
+      if (removedPages.includes(key)) continue;
       if (!candidate || typeof candidate !== 'object') continue;
       const basePage = migrated.pages[key] || {
         eyebrow: '',
@@ -287,7 +293,17 @@ export function normalizeSchoolSite(value: unknown): SchoolWebsiteContent {
           : basePage.blocks,
       };
     }
-    return { ...migrated, ...raw, pages: mergedPages };
+    return {
+      ...migrated,
+      ...raw,
+      footerCopyright: raw.footerCopyright ?? migrated.footerCopyright,
+      lmsPath: raw.lmsPath ?? '/',
+      socialLinks: Array.isArray(raw.socialLinks)
+        ? raw.socialLinks.filter((link) => link && typeof link.id === 'string')
+        : [],
+      removedPages,
+      pages: mergedPages,
+    };
   }
   const legacy = value as
     | { headline?: string; intro?: string; about?: string; contact?: string; heroImage?: string }

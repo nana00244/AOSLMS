@@ -222,7 +222,16 @@ export interface SchoolWebsiteContent {
   topLineRight: string;
   navigation: { label: string; path: string }[];
   footerNote: string;
+  footerCopyright: string;
   lmsLabel: string;
+  lmsPath: string;
+  socialLinks?: {
+    id: string;
+    platform: 'facebook' | 'instagram' | 'youtube' | 'linkedin' | 'tiktok';
+    label: string;
+    url: string;
+  }[];
+  removedPages?: string[];
   pages: Record<string, SchoolWebsitePage>;
 }
 export interface LegacySchoolWebsiteContent {

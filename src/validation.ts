@@ -286,6 +286,19 @@ export const workspaceSchema = z
             topLineRight: text,
             footerNote: text,
             lmsLabel: text,
+            footerCopyright: text.optional(),
+            lmsPath: text.optional(),
+            socialLinks: z
+              .array(
+                z.object({
+                  id,
+                  platform: z.enum(['facebook', 'instagram', 'youtube', 'linkedin', 'tiktok']),
+                  label: text,
+                  url: text,
+                }),
+              )
+              .optional(),
+            removedPages: z.array(z.string().max(120)).optional(),
             navigation: z.array(z.object({ label: text, path: text })),
             pages: z.record(
               z.string(),

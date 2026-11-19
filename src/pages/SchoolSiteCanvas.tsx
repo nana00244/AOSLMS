@@ -11,13 +11,18 @@ import { Link } from 'react-router-dom';
 import {
   ArrowRight,
   BookOpen,
+  Facebook,
   ChevronDown,
   GraduationCap,
   Heart,
+  Instagram,
+  Linkedin,
   Menu,
   Microscope,
+  Music2,
   Pencil,
   Trophy,
+  Youtube,
   X,
 } from 'lucide-react';
 import type { SchoolWebsiteBlock, SchoolWebsiteContent } from '../data';
@@ -88,6 +93,14 @@ function Brand({ site }: { site: SchoolWebsiteContent }) {
     </SiteLink>
   );
 }
+
+const socialIcons = {
+  facebook: Facebook,
+  instagram: Instagram,
+  youtube: Youtube,
+  linkedin: Linkedin,
+  tiktok: Music2,
+};
 
 function SchoolIllustration({ site }: { site: SchoolWebsiteContent }) {
   return (
@@ -562,15 +575,36 @@ export function SchoolSiteCanvas({
         data-selected={Boolean(onSelect && selectedId === 'site')}
       >
         <Brand site={site} />
-        <div>
+        <div className="school-footer-copy">
           <p>{site.footerNote}</p>
           <p>
-            © {new Date().getFullYear()} {site.brandName} {site.brandSubtitle}
+            {site.footerCopyright}
           </p>
         </div>
-        <SiteLink to="/">
-          {site.lmsLabel} <ArrowRight size={16} />
-        </SiteLink>
+        <div className="school-footer-actions">
+          <div className="school-social-links" aria-label="Social media">
+            {(site.socialLinks || []).map((link) => {
+              const href = schoolLinkDestination(link.url);
+              if (!href) return null;
+              const Icon = socialIcons[link.platform];
+              return (
+                <a
+                  key={link.id}
+                  href={href}
+                  target={href.startsWith('/') ? undefined : '_blank'}
+                  rel={href.startsWith('/') ? undefined : 'noopener noreferrer'}
+                  aria-label={link.label || link.platform}
+                  title={link.label || link.platform}
+                >
+                  <Icon size={17} />
+                </a>
+              );
+            })}
+          </div>
+          <SiteLink to={site.lmsPath || '/'}>
+            {site.lmsLabel} <ArrowRight size={16} />
+          </SiteLink>
+        </div>
       </footer>
     </div>
   );

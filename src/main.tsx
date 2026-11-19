@@ -11,4 +11,11 @@ import './styles.css';
 import './readability.css';
 import './score-grid.css';
 import './pages/practice-arena.css';
+
+if (import.meta.env.PROD && 'serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    void navigator.serviceWorker.register('/service-worker.js').catch(() => {});
+  });
+}
+
 createRoot(document.getElementById('root')!).render(<App />);

@@ -9,14 +9,49 @@ export interface PendingSave {
   scoreRequest?: ScoreImportRequest;
   conflict?: string;
 }
+export interface CachedWorkspaceSnapshot {
+  owner: string;
+  state: import('./data').State;
+  revision: number;
+  savedAt: string;
+}
 function open(): Promise<IDBDatabase> {
   return new Promise((resolve, reject) => {
-    const request = indexedDB.open('aos-pending-saves', 1);
-    request.onupgradeneeded = () => request.result.createObjectStore('saves', { keyPath: 'id' });
+    const request = indexedDB.open('aos-pending-saves', 2);
+    request.onupgradeneeded = () => {
+      if (!request.result.objectStoreNames.contains('saves'))
+        request.result.createObjectStore('saves', { keyPath: 'id' });
+      if (!request.result.objectStoreNames.contains('snapshots'))
+        request.result.createObjectStore('snapshots', { keyPath: 'owner' });
+    };
     request.onsuccess = () => resolve(request.result);
     request.onerror = () => reject(request.error);
   });
 }
+async function snapshotTransaction<T>(
+  mode: IDBTransactionMode,
+  run: (store: IDBObjectStore) => IDBRequest<T>,
+): Promise<T> {
+  const db = await open();
+  return new Promise((resolve, reject) => {
+    const tx = db.transaction('snapshots', mode);
+    const request = run(tx.objectStore('snapshots'));
+    tx.oncomplete = () => {
+      db.close();
+      resolve(request.result);
+    };
+    tx.onerror = tx.onabort = () => {
+      db.close();
+      reject(tx.error || Error('Could not access the offline workspace copy'));
+    };
+  });
+}
+export const cacheWorkspaceSnapshot = (snapshot: CachedWorkspaceSnapshot) =>
+  snapshotTransaction('readwrite', (store) => store.put(snapshot));
+export const readWorkspaceSnapshot = (owner: string) =>
+  snapshotTransaction('readonly', (store) => store.get(owner)) as Promise<
+    CachedWorkspaceSnapshot | undefined
+  >;
 async function transact<T>(
   mode: IDBTransactionMode,
   fn: (store: IDBObjectStore) => IDBRequest<T>,

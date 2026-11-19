@@ -29,12 +29,7 @@ import type {
   SchoolWebsitePage as Page,
   Settings,
 } from '../data';
-import {
-  isBuiltInSchoolPage,
-  newPageKey,
-  schoolPagePath,
-  siteVersion,
-} from '../schoolWebsiteModel';
+import { newPageKey, schoolPagePath, siteVersion } from '../schoolWebsiteModel';
 import { migrateSchoolWebsiteImage } from '../schoolWebsiteAssets';
 import { useStore } from '../store';
 import { SchoolSiteCanvas } from './SchoolSiteCanvas';
@@ -431,7 +426,7 @@ export function SchoolWebsiteBuilder({
                   <button className="studio-wide" onClick={() => setTab('library')}>
                     <Plus /> Browse sections
                   </button>
-                  {!isBuiltInSchoolPage(pageKey) && (
+                  {pageKey !== 'home' && (
                     <button
                       className="studio-discard"
                       onClick={() => {
@@ -444,9 +439,11 @@ export function SchoolWebsiteBuilder({
                         change((s) => {
                           const pages = { ...s.pages };
                           delete pages[pageKey];
+                          const removedPages = [...(s.removedPages || []), pageKey];
                           return {
                             ...s,
                             pages,
+                            removedPages,
                             navigation: s.navigation.filter(
                               (n) => n.path !== schoolPagePath(pageKey),
                             ),

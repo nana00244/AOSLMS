@@ -26,6 +26,8 @@ import {
   retainSave,
   retainRecoveredSaves,
   removeSave,
+  cacheWorkspaceSnapshot,
+  readWorkspaceSnapshot,
   type PendingSave,
 } from './pendingSaves';
 export function validateState(value: unknown): value is State {
@@ -47,18 +49,25 @@ async function migratePendingWebsiteSave(save: PendingSave): Promise<PendingSave
       }
       if (Array.isArray(value)) return Promise.all(value.map(migrate));
       if (value && typeof value === 'object') {
-        return Object.fromEntries(await Promise.all(Object.entries(value).map(async ([key, entry]) => [key, await migrate(entry)])));
+        return Object.fromEntries(
+          await Promise.all(
+            Object.entries(value).map(async ([key, entry]) => [key, await migrate(entry)]),
+          ),
+        );
       }
       return value;
     };
-    const migrated = await migrate(site) as Record<string, any>;
+    const migrated = (await migrate(site)) as Record<string, any>;
     for (const page of Object.values(migrated.pages || {}) as any[]) {
       page.image ??= '';
       for (const section of page.blocks || []) {
         section.image ??= '';
         section.items ??= [];
         for (const entry of section.items) {
-          if (!entry.icon) { entry.icon = 'graduation'; changed = true; }
+          if (!entry.icon) {
+            entry.icon = 'graduation';
+            changed = true;
+          }
           entry.image ??= '';
         }
       }
@@ -146,6 +155,13 @@ export function StoreProvider({ children }: { children: ReactNode }) {
   }
   function show(result: Snapshot, pending: PendingSave[]) {
     snapshot.current = result;
+    if (owner.current)
+      void cacheWorkspaceSnapshot({
+        owner: owner.current,
+        state: result.state,
+        revision: result.revision,
+        savedAt: new Date().toISOString(),
+      }).catch(() => {});
     pendingRef.current = pending;
     setPendingCount(pending.length);
     if (pending[0]?.conflict) setStorageError(pending[0].conflict);
@@ -179,7 +195,26 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     const current = generation.current,
       userId = owner.current;
     const task = (async () => {
-      const result = await loadWorkspace(snapshot.current?.revision);
+      let result: Snapshot | { unchanged: true; revision: number };
+      let offlineFallback = false;
+      try {
+        if (!navigator.onLine) {
+          offlineFallback = true;
+          if (snapshot.current) result = snapshot.current;
+          else {
+            const cached = await readWorkspaceSnapshot(userId);
+            if (!cached)
+              throw Error('This account has no saved offline workspace on this device yet.');
+            result = { state: cached.state, revision: cached.revision };
+          }
+        } else result = await loadWorkspace(snapshot.current?.revision);
+      } catch (error) {
+        if (snapshot.current) throw error;
+        const cached = await readWorkspaceSnapshot(userId);
+        if (!cached) throw error;
+        result = { state: cached.state, revision: cached.revision };
+        offlineFallback = true;
+      }
       const pending = await readPendingSaves(userId);
       if (
         current !== generation.current ||
@@ -190,7 +225,11 @@ export function StoreProvider({ children }: { children: ReactNode }) {
       if (!('unchanged' in result)) show(result, pending);
       else if (snapshot.current) show(snapshot.current, pending);
       lastRefresh.current = Date.now();
-      if (!pending.length) setStorageError('');
+      if (offlineFallback)
+        setStorageError(
+          'Offline mode: showing this account’s last saved workspace. Changes will sync when connection returns.',
+        );
+      else if (!pending.length) setStorageError('');
     })();
     refreshing.current = task;
     try {
@@ -207,7 +246,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     }
   }
   async function syncQueue() {
-    if (!owner.current || !supabase) return;
+    if (!owner.current || !supabase || !navigator.onLine) return;
     if (syncing.current) return syncing.current;
     const userId = owner.current,
       current = generation.current;

@@ -288,7 +288,9 @@ function SiteSettings({
     ['topLineLeft', 'Top bar, left'],
     ['topLineRight', 'Top bar, right'],
     ['footerNote', 'Footer location / information'],
+    ['footerCopyright', 'Footer copyright line'],
     ['lmsLabel', 'LMS link label'],
+    ['lmsPath', 'LMS link destination'],
   ] as const;
   return (
     <>
@@ -342,6 +344,72 @@ function SiteSettings({
         pending={pending}
         apply={(logo) => edit((current) => ({ ...current, logo }))}
       />
+      <h3>Footer social links</h3>
+      {(site.socialLinks || []).map((link, index) => {
+        const patchLink = (patch: Partial<typeof link>) =>
+          edit((current) => ({
+            ...current,
+            socialLinks: (current.socialLinks || []).map((row, i) =>
+              i === index ? { ...row, ...patch } : row,
+            ),
+          }));
+        return (
+          <div className="site-item-editor" key={link.id}>
+            <div className="site-block-head">
+              <strong>Social link {index + 1}</strong>
+              <ListActions
+                label={'social link ' + (index + 1)}
+                index={index}
+                count={(site.socialLinks || []).length}
+                onMove={(step) =>
+                  edit((current) => ({
+                    ...current,
+                    socialLinks: move(current.socialLinks || [], index, index + step),
+                  }))
+                }
+                onRemove={() =>
+                  edit((current) => ({
+                    ...current,
+                    socialLinks: (current.socialLinks || []).filter((row) => row.id !== link.id),
+                  }))
+                }
+              />
+            </div>
+            <Select
+              label="Platform"
+              value={link.platform}
+              choices={['facebook', 'instagram', 'youtube', 'linkedin', 'tiktok'].map(
+                (platform) => ({
+                  value: platform,
+                  label: platform[0].toUpperCase() + platform.slice(1),
+                }),
+              )}
+              onChange={(platform) => patchLink({ platform: platform as typeof link.platform })}
+            />
+            <Field
+              label="Accessible label"
+              value={link.label}
+              onChange={(label) => patchLink({ label })}
+            />
+            <Field label="Profile URL" value={link.url} onChange={(url) => patchLink({ url })} />
+          </div>
+        );
+      })}
+      <button
+        type="button"
+        className="site-add-button"
+        onClick={() =>
+          edit((current) => ({
+            ...current,
+            socialLinks: [
+              ...(current.socialLinks || []),
+              { id: crypto.randomUUID(), platform: 'facebook', label: 'Facebook', url: '' },
+            ],
+          }))
+        }
+      >
+        <Plus /> Add social link
+      </button>
       <h3>Navigation links</h3>
       {site.navigation.map((link, index) => {
         const patchLink = (patch: Partial<typeof link>) =>
