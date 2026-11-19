@@ -11,6 +11,7 @@ import { Link } from 'react-router-dom';
 import {
   ArrowRight,
   BookOpen,
+  Copyright,
   Facebook,
   ChevronDown,
   GraduationCap,
@@ -577,7 +578,8 @@ export function SchoolSiteCanvas({
         <Brand site={site} />
         <div className="school-footer-copy">
           <p>{site.footerNote}</p>
-          <p>
+          <p className="school-copyright">
+            <Copyright size={14} aria-hidden="true" />
             {site.footerCopyright}
           </p>
         </div>

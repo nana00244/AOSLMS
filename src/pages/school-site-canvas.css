@@ -30,6 +30,11 @@
 .school-social-links a:hover {
   color: var(--forest);
 }
+.school-copyright {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
 .school-canvas .school-topline {
   gap: 1rem;
 }
