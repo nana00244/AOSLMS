@@ -1,5 +1,10 @@
 import { indicatorLessonId } from './indicatorLessonId';
 import { computingIndicators, computingQuestions } from './computingBank';
+import {
+  primaryCurriculumIndicators,
+  primaryCurriculumQuestions,
+  primaryCurriculumSubjects,
+} from './primaryCurriculumBank';
 import { questionIndicatorKey } from './questionBankFilters';
 import bankData from '../nacca/importedBank.json';
 import basic1EnglishData from '../nacca/basic1EnglishBank.json';
@@ -17,6 +22,7 @@ const jhsLessons = hubLessons.filter((lesson) => /^B[789]$/.test(lesson.level));
 
 const rawIndicators = [
   ...computingIndicators,
+  ...primaryCurriculumIndicators,
   ...(bankData.indicators || []),
   ...(basic1EnglishData.indicators || []),
   ...basic2EnglishData.map(({ indicator, spec }) => ({
@@ -88,6 +94,7 @@ export const naccaIndicators: NaccaIndicator[] = sortIndicators(rawIndicators);
 
 const rawQuestions = [
   ...computingQuestions,
+  ...primaryCurriculumQuestions,
   ...(bankData.questions || []),
   ...(basic1EnglishData.questions || []),
   ...basic2EnglishData.flatMap(({ indicator, questions }) =>
@@ -249,6 +256,7 @@ export const naccaSubjects: NaccaSubject[] = [
   ...((basic1EnglishData.subjects || []) as unknown as NaccaSubject[]),
   ...(basic2EnglishData.length ? [{ id: 'english-language', name: 'English Language' }] : []),
   { id: 'computing', name: 'Computing' },
+  ...primaryCurriculumSubjects,
 ];
 const availableLevels: NaccaLevel[] = [
   { id: 'basic-6', name: 'Basic 6', sequence: 6 },
@@ -258,6 +266,16 @@ const availableLevels: NaccaLevel[] = [
   ...(basic3EnglishData.length ? [{ id: 'basic-3', name: 'Basic 3', sequence: 3 }] : []),
   ...(basic4EnglishData.length ? [{ id: 'basic-4', name: 'Basic 4', sequence: 4 }] : []),
   ...(basic5EnglishData.length ? [{ id: 'basic-5', name: 'Basic 5', sequence: 5 }] : []),
+  ...new Map(
+    primaryCurriculumIndicators.map((indicator) => [
+      indicator.level,
+      {
+        id: indicator.level.toLowerCase().replace(/\s+/g, '-'),
+        name: indicator.level,
+        sequence: Number(indicator.level.match(/\d+/)?.[0] || 99),
+      },
+    ]),
+  ).values(),
   ...[...new Set(jhsLessons.map((lesson) => lesson.level))].map((name) => ({
     id: name.toLowerCase(),
     name,
@@ -330,6 +348,12 @@ export const naccaHubLessons: HubLesson[] = naccaIndicators
       !catalogJhsIndicatorKeys.has(`${indicator.subject}:${indicator.level}:${indicator.code}`),
   )
   .map((ind) => {
+    const primaryCurriculum =
+      ind.subject === 'Religious and Moral Education'
+        ? 'Religious and Moral Education B1–B6'
+        : ind.subject === 'Creative Arts'
+          ? 'Creative Arts B1–B6'
+          : undefined;
     const questions = questionsByIndicator.get(questionIndicatorKey(ind.subject, ind.code)) ?? [];
     const sourceUrl =
       ind.subject === 'Mathematics'
@@ -364,17 +388,22 @@ export const naccaHubLessons: HubLesson[] = naccaIndicators
       strand: ind.strand,
       standard: ind.content_standard || ind.code,
       description: ind.objective || `Practice questions and skills for ${ind.code}.`,
-      ...(ind.subject === 'Computing' ? { practiceQuestionCount: questions.length } : {}),
+      ...(primaryCurriculum ? { practiceQuestionCount: questions.length } : {}),
       body,
       sourceUrl,
-      sourceTitle:
-        ind.subject === 'Computing'
+      sourceTitle: primaryCurriculum
+        ? `NaCCA ${primaryCurriculum} (2019) · printed page ${ind.source_page}`
+        : ind.subject === 'Computing'
           ? `NaCCA Computing B4–B6 (2019) · printed page ${ind.source_page}`
           : ind.subject === 'Mathematics'
             ? `NaCCA Ghana ${ind.subject} Curriculum (${ind.level}) · Source Page ${ind.source_page || '30'}`
             : `NaCCA Ghana ${ind.subject} Curriculum (${ind.level}) · Source Page ${ind.source_page || 'not specified'}`,
       questions: toHubQuestions(
-        ind.subject === 'Computing' ? questions.filter((q) => q.type === 'mcq') : questions,
+        primaryCurriculum
+          ? questions.filter((q) => q.type === 'mcq')
+          : ind.subject === 'Computing'
+            ? questions.filter((q) => q.type === 'mcq')
+            : questions,
       ),
     };
   });
