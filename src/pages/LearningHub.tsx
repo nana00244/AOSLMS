@@ -1,4 +1,5 @@
 import { useAnswerSounds } from '../learningHub/useAnswerSounds';
+import { currentPracticeCode } from '../learningHub/indicatorLessonId';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { shuffled, shuffledOptionIndices } from '../nacca/attemptOrder';
 import { useSearchParams } from 'react-router-dom';
@@ -145,7 +146,7 @@ export function LearningHub() {
   const [creatorInitialLevel, setCreatorInitialLevel] = useState<string | undefined>();
   const [creatorInitialSubject, setCreatorInitialSubject] = useState<string | undefined>();
 
-  const practiceIndicator = params.get('practice');
+  const practiceIndicator = currentPracticeCode(params.get('subject'), params.get('practice'));
   const prepareSound = useAnswerSounds();
   const playPracticeCue = () => prepareSound()(['practice']);
   const openPractice = (code: string, subject?: string) => {

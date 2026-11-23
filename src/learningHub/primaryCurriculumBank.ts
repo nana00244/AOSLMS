@@ -246,7 +246,12 @@ function convertQuestion(
     hints,
     ...(explanation && { explanation }),
     ...(rubric && { rubric }),
-    ...(typeof raw?.misconception === 'string' && { misconception: raw.misconception }),
+    ...((raw?.misconception || raw?.misconception_note) && {
+      misconception: raw.misconception || raw.misconception_note,
+    }),
+    ...(raw?.distractor_misconceptions && {
+      distractorMisconceptions: raw.distractor_misconceptions,
+    }),
     ...(Array.isArray(raw?.uncertain) && { uncertain: raw.uncertain }),
   };
 }
@@ -302,6 +307,8 @@ function expand(
 }
 
 const rme = expand(rmeFiles, 'Religious and Moral Education');
+export const rmeIndicators = rme.indicators;
+export const rmeQuestions = rme.questions;
 const arts = expand(artsFiles, 'Creative Arts');
 export const primaryCurriculumIndicators = [...rme.indicators, ...arts.indicators];
 export const primaryCurriculumQuestions = [...rme.questions, ...arts.questions];

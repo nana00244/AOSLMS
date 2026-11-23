@@ -1,78 +1,1216 @@
 {
-  "class":"Basic 3",
-  "part":3,
-  "curriculum":"NaCCA Religious and Moral Education Curriculum for Primary Schools, September 2019",
-  "indicator_codes":["B3.2.2.1.1","B3.2.2.1.2","B3.3.1.1.1"],
-  "question_count":60,
-  "accessibility_note":"Teachers may read prompts aloud. Accept oral, written, drawn or role-play responses where suitable. Learners may use teacher-provided accounts and need not disclose private religious practice. Do not require travel to festivals, worship sites, or hazardous activities.",
-  "curriculum_note":"Festival examples are those named in the curriculum; practices vary by community. For religious leaders' youthful lives, questions rely on accounts supplied in lessons rather than adding unsupported narrative details.",
-  "indicators":[
-    {"code":"B3.2.2.1.1","statement":"Describe how various festivals are celebrated.","questions":[
-      {"id":"B3.2.2.1.1-Q01","type":"multiple_choice","prompt":"Which is an example of an Islamic festival named in the curriculum?","options":["Eid-ul-Fitr","Christmas","Aboakyer","Hogbetsotso"],"answer":"Eid-ul-Fitr","hint":"Choose the festival listed under Islam.","explanation":"The curriculum names Eid-ul-Fitr and Eid-ul-Adha as Islamic festival examples.","misconception_note":"Do not assume every Muslim community celebrates in exactly the same way."},
-      {"id":"B3.2.2.1.1-Q02","type":"multiple_choice","prompt":"Which festival is named as a Christian example in the curriculum?","options":["Easter","Aboakyer","Adae","Feok"],"answer":"Easter","hint":"It is one of the Christian festivals in the lesson list.","explanation":"Easter and Christmas are listed as Christian festival examples.","misconception_note":"Accept Christmas as another correct example if asked generally."},
-      {"id":"B3.2.2.1.1-Q03","type":"short_answer","prompt":"Name one festival example from each of these groups: Islam, Christianity and Traditional Religion.","answer":["Islam: Eid-ul-Fitr or Eid-ul-Adha; Christianity: Easter, Christmas, Ash Wednesday or Pentecost Day; Traditional Religion: Aboakyer, Hogbetsotso, Adae, Fetu Afahye or Feok."],"hint":"Use the festival examples listed in class.","explanation":"The curriculum lists examples from each of the three religious traditions.","misconception_note":"Festival names and local observances may vary; accept taught local examples."},
-      {"id":"B3.2.2.1.1-Q04","type":"multiple_choice","prompt":"Which activity is mentioned in the curriculum as a possible part of festival celebrations?","options":["Drumming and dancing","Breaking classroom furniture","Polluting a stream","Forcing everyone to join a ritual"],"answer":"Drumming and dancing","hint":"The curriculum describes scenes that may be seen at festivals.","explanation":"Drumming and dancing are included among possible festival scenes.","misconception_note":"Not every festival includes the same activities."},
-      {"id":"B3.2.2.1.1-Q05","type":"multiple_choice","prompt":"A group is describing a festival scene. Which activity is a suitable example from the curriculum?","options":["A durbar of chiefs","A school examination","A road accident","A rubbish dump"],"answer":"A durbar of chiefs","hint":"This is one scene named in the festival exemplar.","explanation":"The curriculum suggests scenes such as a durbar of chiefs, drumming and dancing, and merry-making.","misconception_note":"Use only activities relevant to the festival being discussed."},
-      {"id":"B3.2.2.1.1-Q06","type":"oral","prompt":"Describe one activity that may take place during a festival you have learned about. You may use a teacher-provided example.","answer":["A clear description of a relevant activity such as worship, a gathering, drumming, dancing, sharing, or merry-making, depending on the festival account taught."],"hint":"Say what people do and, if known, how they take part.","explanation":"The indicator asks learners to describe how festivals are celebrated.","misconception_note":"Do not require the learner to have attended a festival personally."},
-      {"id":"B3.2.2.1.1-Q07","type":"matching","prompt":"Match each festival with the religious tradition named in the curriculum: (1) Christmas; (2) Eid-ul-Adha; (3) Aboakyer. Traditions: A. Islam; B. Christianity; C. Traditional Religion.","answer":{"1":"B","2":"A","3":"C"},"hint":"Use the curriculum's example list.","explanation":"These examples are associated respectively with Christianity, Islam and Traditional Religion in the curriculum.","misconception_note":"The examples are not an exhaustive list of each tradition's festivals."},
-      {"id":"B3.2.2.1.1-Q08","type":"short_answer","prompt":"Name two activities that may be seen during festivals, according to the curriculum examples.","answer":["Any two suitable examples: durbar of chiefs, drumming, dancing, merry-making, worship, sharing or family/community gathering where taught."],"hint":"Think of the activities named in the exemplar.","explanation":"These examples help learners describe festival celebrations.","misconception_note":"Accept relevant activities but do not claim all festivals share them."},
-      {"id":"B3.2.2.1.1-Q09","type":"scenario","prompt":"A learner is drawing a festival scene but has never attended one. What can the learner use?","options":["A picture, video or teacher-provided description studied in class","An invented claim presented as fact","A stereotype about a religious group","A scene unrelated to any festival"],"answer":"A picture, video or teacher-provided description studied in class","hint":"The curriculum allows visual teaching resources.","explanation":"Pictures and videos can support learning about festivals; personal attendance is not required.","misconception_note":"Use reliable class material and avoid inventing details."},
-      {"id":"B3.2.2.1.1-Q10","type":"drawing","prompt":"Draw a respectful scene showing one festival activity you studied. Add a short label naming the activity.","answer":["A scene related to a taught festival activity with a suitable label, such as worship, drumming, dancing or a gathering."],"hint":"You may use a teacher-provided picture or description as a guide.","explanation":"Drawing festival scenes is an exemplar activity.","misconception_note":"Assess whether the activity is identified, not artistic ability or personal attendance."},
-      {"id":"B3.2.2.1.1-Q11","type":"multiple_choice","prompt":"Which pair contains two festival examples listed for Traditional Religion?","options":["Aboakyer and Hogbetsotso","Easter and Christmas","Eid-ul-Fitr and Eid-ul-Adha","Psalm 23 and Al-Fātihah"],"answer":"Aboakyer and Hogbetsotso","hint":"Choose two names from the Traditional Religion examples.","explanation":"Aboakyer and Hogbetsotso are listed as Traditional Religion festival examples.","misconception_note":"Festival classifications follow the curriculum's examples; local contexts may add others."},
-      {"id":"B3.2.2.1.1-Q12","type":"short_answer","prompt":"What does it mean to describe how a festival is celebrated?","answer":["To explain or tell some activities and events that take place during the festival."],"hint":"Think of describing what people do.","explanation":"The indicator focuses on describing festival activities and scenes.","misconception_note":"Accept simple wording."},
-      {"id":"B3.2.2.1.1-Q13","type":"scenario","prompt":"A group says every festival includes the same songs and activities. What is a better statement?","options":["Different festivals and communities may have different practices","Every festival is exactly alike","Only one festival is real","No festival includes activities"],"answer":"Different festivals and communities may have different practices","hint":"The curriculum includes examples from several traditions and communities.","explanation":"Festival practices vary; learners should describe the festival being studied rather than generalise to all.","misconception_note":"Avoid treating a single example as universal."},
-      {"id":"B3.2.2.1.1-Q14","type":"multiple_choice","prompt":"Which is another Christian festival named in the curriculum besides Easter and Christmas?","options":["Pentecost Day","Hogbetsotso","Adae","Aboakyer"],"answer":"Pentecost Day","hint":"It is included with the Christian examples.","explanation":"The curriculum names Ash Wednesday and Pentecost Day among Christian festival examples.","misconception_note":"Ash Wednesday is also a correct response to a general question about another Christian festival."},
-      {"id":"B3.2.2.1.1-Q15","type":"role_play","prompt":"In a small group, present a short, respectful scene showing one festival activity from a teacher-provided account. Narrate which activity is being shown.","answer":["The scene represents an activity in the supplied account and identifies it clearly; learners behave respectfully."],"hint":"A narrator may explain the scene so no one needs to imitate a religious rite.","explanation":"The curriculum suggests dramatizing festival activities, using examples studied in class.","misconception_note":"Do not require ritual performance, costumes, or imitation of sacred acts; a narrated tableau is acceptable.","rubric":{"activity_identified":"0–2: activity matches the taught account","respect":"0–2: portrayal is respectful","explanation":"0–1: narration names the activity"}},
-      {"id":"B3.2.2.1.1-Q16","type":"matching","prompt":"Match the scene with the likely festival activity: (1) people gather for a public celebration; (2) musicians play rhythms while people move to music; (3) people share food or gifts. Activities: A. sharing; B. drumming and dancing; C. gathering or durbar.","answer":{"1":"C","2":"B","3":"A"},"hint":"Choose the activity that best describes each scene.","explanation":"These are possible scenes named in the festival exemplar.","misconception_note":"Specific practices depend on the festival account being discussed."},
-      {"id":"B3.2.2.1.1-Q17","type":"multiple_choice","prompt":"Which option names an Islamic festival from the curriculum?","options":["Eid-ul-Adha","Pentecost Day","Feok","Fetu Afahye"],"answer":"Eid-ul-Adha","hint":"It is listed with Eid-ul-Fitr.","explanation":"Eid-ul-Adha is identified as an Islamic festival example.","misconception_note":"Accept variant spellings commonly used in class."},
-      {"id":"B3.2.2.1.1-Q18","type":"oral","prompt":"Compare two festival examples by naming one activity that is similar or different, using information from class materials.","answer":["A reasonable comparison based on the two festival accounts supplied or studied in class."],"hint":"Use evidence from the descriptions, pictures or videos provided.","explanation":"Comparing festival scenes deepens understanding of how various festivals are celebrated.","misconception_note":"Do not assume a practice belongs to every member of a religion."},
-      {"id":"B3.2.2.1.1-Q19","type":"performance","prompt":"Make a short oral or written description of one festival using its name, religious tradition and two activities from the account studied.","answer":["A correct festival example and tradition, plus two activities consistent with the class account."],"hint":"Use the class notes or teacher-provided account.","explanation":"This directly checks the ability to describe festival celebration.","misconception_note":"If the curriculum does not give detail for a particular local festival, use a teacher-provided reliable account rather than inventing facts.","rubric":{"festival_and_tradition":"0–2: identifies accurately","activities":"0–2: gives two relevant activities","clarity":"0–1: description is understandable"}},
-      {"id":"B3.2.2.1.1-Q20","type":"short_answer","prompt":"Name one way pictures or videos can help learners study festivals.","answer":["They let learners observe scenes or activities and use them to describe how a festival is celebrated."],"hint":"Think of what a learner can see in the visual material.","explanation":"The curriculum recommends pictures and videos to demonstrate festival celebrations.","misconception_note":"Visual resources should be introduced respectfully and with accurate context."}
-    ]},
-    {"code":"B3.2.2.1.2","statement":"Demonstrate the importance of religious festivals.","questions":[
-      {"id":"B3.2.2.1.2-Q01","type":"multiple_choice","prompt":"Which is one importance of festivals named in the curriculum?","options":["Remembering key events in the past","Forgetting all history","Creating conflict","Stopping people from giving thanks"],"answer":"Remembering key events in the past","hint":"Choose a purpose connected with remembering.","explanation":"The curriculum says festivals can help people remember key events in the past.","misconception_note":"Different festivals commemorate different events; use the relevant account."},
-      {"id":"B3.2.2.1.2-Q02","type":"multiple_choice","prompt":"Which value or outcome may festivals help promote, according to the curriculum?","options":["Reconciliation","Bullying","Dishonesty","Pollution"],"answer":"Reconciliation","hint":"It means restoring friendly relations after disagreement.","explanation":"Reconciliation is listed as an importance of festivals.","misconception_note":"Explain the word in age-appropriate terms."},
-      {"id":"B3.2.2.1.2-Q03","type":"short_answer","prompt":"Give two reasons festivals are important according to the curriculum.","answer":["Any two: remembering key events in the past, reconciliation, renewal of faith, or thanksgiving."],"hint":"There are four reasons in the lesson list.","explanation":"These are the reasons stated in the curriculum examples.","misconception_note":"Accept equivalent wording."},
-      {"id":"B3.2.2.1.2-Q04","type":"multiple_choice","prompt":"What does 'renewal of faith' mean in the festival lesson?","options":["Strengthening or renewing a person's religious commitment","Changing a festival into a school test","Forgetting all religious teachings","Competing to be better than others"],"answer":"Strengthening or renewing a person's religious commitment","hint":"Think of faith being refreshed or strengthened.","explanation":"Renewal of faith is listed as one importance of festivals.","misconception_note":"This is a curriculum concept; do not assess how much faith a learner has."},
-      {"id":"B3.2.2.1.2-Q05","type":"scenario","prompt":"After a festival, two neighbours make peace after an earlier disagreement. Which importance of festivals does this illustrate?","options":["Reconciliation","Pollution","Dishonesty","Waste"],"answer":"Reconciliation","hint":"They have restored a friendly relationship.","explanation":"The curriculum lists reconciliation as a reason festivals are important.","misconception_note":"Use fictional examples; do not ask learners to disclose family conflicts."},
-      {"id":"B3.2.2.1.2-Q06","type":"oral","prompt":"Explain how a festival may help people remember an important event from the past.","answer":["A reasonable explanation that a festival's activities or stories remind followers of a significant event or teaching, based on the account studied."],"hint":"Connect celebration with remembering a story, event or teaching.","explanation":"The curriculum states that festivals can help people remember key past events.","misconception_note":"Use teacher-provided accounts where details are needed."},
-      {"id":"B3.2.2.1.2-Q07","type":"matching","prompt":"Match each importance with the description: (1) thanksgiving; (2) reconciliation; (3) remembering past events. Descriptions: A. expressing gratitude; B. restoring friendly relations; C. recalling something significant that happened before.","answer":{"1":"A","2":"B","3":"C"},"hint":"Match the term to its plain meaning.","explanation":"These meanings reflect the reasons named in the curriculum.","misconception_note":"Accept equivalent simple wording."},
-      {"id":"B3.2.2.1.2-Q08","type":"multiple_choice","prompt":"A group is presenting why festivals matter. Which response is supported by the curriculum?","options":["They may provide an occasion for thanksgiving","They always end every problem","They have no meaning","They teach people to disrespect one another"],"answer":"They may provide an occasion for thanksgiving","hint":"Choose one of the stated reasons.","explanation":"Thanksgiving is one importance of festivals named in the curriculum.","misconception_note":"Do not imply festivals guarantee that all problems disappear."},
-      {"id":"B3.2.2.1.2-Q09","type":"short_answer","prompt":"Give one example of how a class could demonstrate the importance of a festival without performing a religious rite.","answer":["Examples: make an explanatory poster, narrate a teacher-provided account, show a respectful drawing, or present a scene with narration about remembrance, thanksgiving or reconciliation."],"hint":"Choose a classroom presentation that explains the meaning.","explanation":"The curriculum suggests demonstrations using pictures, videos, discussion and drawings.","misconception_note":"No learner needs to perform worship or disclose personal religious practice."},
-      {"id":"B3.2.2.1.2-Q10","type":"drawing","prompt":"Draw or make a simple poster showing one reason a festival is important. Add a label: remembrance, reconciliation, renewal of faith or thanksgiving.","answer":["A clear visual connected to one listed importance and an appropriate label or oral explanation."],"hint":"Choose one reason and show it with a simple scene or symbol.","explanation":"The curriculum includes drawings and discussion of festival importance.","misconception_note":"Assess the idea, not drawing skill or use of sacred images."},
-      {"id":"B3.2.2.1.2-Q11","type":"multiple_choice","prompt":"Which word means expressing gratitude and is listed as an importance of festivals?","options":["Thanksgiving","Teasing","Littering","Disobedience"],"answer":"Thanksgiving","hint":"It is about giving thanks.","explanation":"Thanksgiving is included in the curriculum's list of festival importance.","misconception_note":"Accept 'giving thanks' as an equivalent answer."},
-      {"id":"B3.2.2.1.2-Q12","type":"scenario","prompt":"A learner says festivals matter only because people enjoy food and music. What additional importance could the learner mention from the curriculum?","options":["Remembering important events, reconciliation, renewal of faith or thanksgiving","Making people forget the past","Preventing all community relationships","Encouraging pollution"],"answer":"Remembering important events, reconciliation, renewal of faith or thanksgiving","hint":"Recall the curriculum's list of purposes.","explanation":"Festivals can have religious, historical and social importance beyond enjoyment.","misconception_note":"Do not diminish enjoyment; the question asks for an additional purpose."},
-      {"id":"B3.2.2.1.2-Q13","type":"oral","prompt":"Name one festival importance and describe a classroom scene that could help others understand it.","answer":["A valid importance plus a relevant narrated, drawn or pictured example."],"hint":"Choose one listed importance and a simple way to show it.","explanation":"The curriculum encourages learners to demonstrate and discuss festival importance using visuals and presentations.","misconception_note":"Use accurate, teacher-supplied festival information."},
-      {"id":"B3.2.2.1.2-Q14","type":"multiple_choice","prompt":"Why might a festival bring people together?","options":["It can support community gathering, remembrance or thanksgiving","It requires people to reject all neighbours","It prevents sharing","It always causes disagreement"],"answer":"It can support community gathering, remembrance or thanksgiving","hint":"Think about the social and religious meanings of festivals.","explanation":"Festival activities may bring people together and support the listed importance of remembrance and thanksgiving.","misconception_note":"The curriculum's key reasons should be grounded in the specific festival account."},
-      {"id":"B3.2.2.1.2-Q15","type":"matching","prompt":"Match the classroom example with the importance it demonstrates: (1) learners narrate a significant past event; (2) characters restore a friendly relationship; (3) people express gratitude. Importances: A. thanksgiving; B. remembrance; C. reconciliation.","answer":{"1":"B","2":"C","3":"A"},"hint":"Look for the main idea shown in each example.","explanation":"The activities illustrate three reasons festivals are important.","misconception_note":"Accept an oral explanation for each match."},
-      {"id":"B3.2.2.1.2-Q16","type":"scenario","prompt":"A teacher asks the class to explain a festival's importance using a video. Which learner response shows understanding?","options":["The video shows how the festival helps people remember an event or give thanks","The video proves every festival is identical","The video means no explanation is needed","The video is only for entertainment"],"answer":"The video shows how the festival helps people remember an event or give thanks","hint":"Connect what is seen with a reason from the lesson.","explanation":"The curriculum uses pictures and videos as evidence for discussing festival importance.","misconception_note":"Learners should describe what the specific video actually shows."},
-      {"id":"B3.2.2.1.2-Q17","type":"short_answer","prompt":"What is reconciliation? Explain briefly why it can be important during or after a festival.","answer":["Reconciliation is restoring good relations after disagreement; it can help people live peacefully together."],"hint":"Think of making peace after a disagreement.","explanation":"Reconciliation is listed as one importance of festivals.","misconception_note":"Accept simple wording; no personal conflict needs to be shared."},
-      {"id":"B3.2.2.1.2-Q18","type":"role_play","prompt":"In pairs, present a short, respectful scene illustrating reconciliation or thanksgiving as a festival importance. Add a narrator who explains the point.","answer":["The scene illustrates one selected importance and the narrator explains it clearly."],"hint":"Use a fictional situation and avoid imitating sacred rites.","explanation":"The curriculum recommends demonstrations and discussions of festival importance.","misconception_note":"Keep the role-play inclusive and non-coercive.","rubric":{"importance_shown":"0–2: scene illustrates the chosen idea","explanation":"0–2: narrator explains the connection","respect":"0–1: presentation is respectful"}},
-      {"id":"B3.2.2.1.2-Q19","type":"performance","prompt":"Give an oral, written or drawn explanation of two ways festivals can be important, using examples from a class account.","answer":["Any two of remembrance of key events, reconciliation, renewal of faith or thanksgiving, linked to suitable class examples."],"hint":"State each importance and connect it to something studied.","explanation":"This measures the ability to demonstrate or explain festival significance.","misconception_note":"Do not invent details for festivals where class materials give limited information.","rubric":{"two_importances":"0–2: one point for each valid importance","examples":"0–2: relevant supporting examples","clarity":"0–1: response is understandable"}},
-      {"id":"B3.2.2.1.2-Q20","type":"multiple_choice","prompt":"Which statement is the most accurate summary of festival importance in the curriculum?","options":["Festivals may help people remember, reconcile, renew faith and give thanks","Festivals have no purpose beyond music","Every festival has exactly the same meaning","Festivals prevent people from living together"],"answer":"Festivals may help people remember, reconcile, renew faith and give thanks","hint":"Choose the option that contains the curriculum's listed reasons.","explanation":"The curriculum lists remembrance, reconciliation, renewal of faith and thanksgiving.","misconception_note":"The particular importance may differ by festival; use 'may' rather than claiming all are identical."}
-    ]},
-    {"code":"B3.3.1.1.1","statement":"Describe the youthful lives of the leaders of the three major religions in Ghana.","questions":[
-      {"id":"B3.3.1.1.1-Q01","type":"multiple_choice","prompt":"Which activity does the curriculum suggest when studying the youthful lives of religious leaders?","options":["Discussing their youthful lives using lesson accounts","Inventing unsupported stories","Ranking religions","Mocking religious figures"],"answer":"Discussing their youthful lives using lesson accounts","hint":"Use information supplied in class or reliable teacher materials.","explanation":"The curriculum guides learners to discuss the youthful lives of leaders from the three major religions.","misconception_note":"The source gives limited narrative detail; do not invent facts."},
-      {"id":"B3.3.1.1.1-Q02","type":"short_answer","prompt":"Name one religious leader whose youthful life may be studied in this indicator.","answer":["The Lord Jesus Christ, the Holy Prophet Muhammad (S.A.W.), or a Traditional Religious Leader presented in the teacher's account."],"hint":"The curriculum names two leaders and also includes a Traditional Religious Leader.","explanation":"The indicator includes leaders from the three major religious traditions.","misconception_note":"Accept the respectful names and titles used in class."},
-      {"id":"B3.3.1.1.1-Q03","type":"multiple_choice","prompt":"Which occupation is linked to Jesus in the curriculum exemplar?","options":["Carpenter","Farmer","Businessman","Pilot"],"answer":"Carpenter","hint":"The curriculum gives a brief occupational example.","explanation":"The curriculum exemplar describes Jesus as a carpenter.","misconception_note":"Keep claims within the curriculum example; do not add unsupported details."},
-      {"id":"B3.3.1.1.1-Q04","type":"multiple_choice","prompt":"Which occupation is linked to the Holy Prophet Muhammad (S.A.W.) in the curriculum exemplar?","options":["Businessman","Carpenter","Farmer","Fisher"],"answer":"Businessman","hint":"This is the occupation named in the curriculum example.","explanation":"The curriculum exemplar identifies the Holy Prophet Muhammad (S.A.W.) as a businessman.","misconception_note":"Use the curriculum's respectful title and avoid adding unverified biographical specifics."},
-      {"id":"B3.3.1.1.1-Q05","type":"multiple_choice","prompt":"Which occupation is given for Egya Ahor in the curriculum exemplar?","options":["Farmer","Carpenter","Businessman","Doctor"],"answer":"Farmer","hint":"The example names a Traditional Religious Leader and an occupation.","explanation":"The curriculum gives Egya Ahor as an example of a Traditional Religious Leader and describes him as a farmer.","misconception_note":"The curriculum's example is limited; do not generalise about all traditional leaders."},
-      {"id":"B3.3.1.1.1-Q06","type":"short_answer","prompt":"Name two leaders or leader examples mentioned in the curriculum for this topic.","answer":["Any two: Jesus Christ, the Holy Prophet Muhammad (S.A.W.), or Egya Ahor as a Traditional Religious Leader example."],"hint":"Use the names stated in the curriculum or teacher's lesson account.","explanation":"The curriculum lists examples from Christianity, Islam and Traditional Religion.","misconception_note":"The teacher may provide another suitable Traditional Religious Leader account."},
-      {"id":"B3.3.1.1.1-Q07","type":"matching","prompt":"Match the leader with the occupation stated in the curriculum: (1) Jesus Christ; (2) Holy Prophet Muhammad (S.A.W.); (3) Egya Ahor. Occupations: A. farmer; B. carpenter; C. businessman.","answer":{"1":"B","2":"C","3":"A"},"hint":"Use the brief occupation examples in the curriculum.","explanation":"The curriculum associates these leaders with carpenter, businessman and farmer respectively.","misconception_note":"Treat these as curriculum examples, not complete biographies."},
-      {"id":"B3.3.1.1.1-Q08","type":"oral","prompt":"Describe one fact about a religious leader's youthful life that was provided in your class account.","answer":["A fact accurately recalled from a teacher-provided or class-studied account; occupation examples may be used."],"hint":"Use only details studied in class.","explanation":"The indicator asks learners to describe youthful lives based on lesson content.","misconception_note":"Do not require learners to supply details absent from the curriculum or class material."},
-      {"id":"B3.3.1.1.1-Q09","type":"scenario","prompt":"A learner is asked to write about a leader, but the textbook gives only a few facts. What should the learner do?","options":["Use the facts supplied by the teacher or reliable class materials","Invent events and present them as true","Copy a rumour","Add insulting details"],"answer":"Use the facts supplied by the teacher or reliable class materials","hint":"A factual description should be based on evidence.","explanation":"The curriculum provides limited details for some leaders, so teachers should supply reliable accounts rather than learners inventing facts.","misconception_note":"Distinguish established lesson information from stories not supported by the materials."},
-      {"id":"B3.3.1.1.1-Q10","type":"multiple_choice","prompt":"Why does the class study the occupations of religious leaders in this indicator?","options":["They are part of the curriculum's examples of their youthful or occupational lives","To decide which religion is best","To make fun of their work","To prove every leader had the same job"],"answer":"They are part of the curriculum's examples of their youthful or occupational lives","hint":"The curriculum asks learners to discuss and write about occupations.","explanation":"Occupational lives are expressly included in the curriculum exemplar.","misconception_note":"Occupations should be discussed respectfully and not used to rank leaders."},
-      {"id":"B3.3.1.1.1-Q11","type":"short_answer","prompt":"Write one sentence describing an occupation example from the curriculum.","answer":["Example: The curriculum gives Jesus Christ as a carpenter, the Holy Prophet Muhammad (S.A.W.) as a businessman, or Egya Ahor as a farmer."],"hint":"Choose one named example and write a clear sentence.","explanation":"This checks recall of the occupation examples in the curriculum.","misconception_note":"Accept respectful titles and equivalent phrasing."},
-      {"id":"B3.3.1.1.1-Q12","type":"multiple_choice","prompt":"Which approach is respectful when learning about leaders from different religions?","options":["Listen carefully and describe each account accurately","Imitate sacred practices to cause laughter","Say one leader is unworthy of study","Make up stories about a leader"],"answer":"Listen carefully and describe each account accurately","hint":"Think about respect and accuracy.","explanation":"The curriculum promotes respect and learning about the three major religions.","misconception_note":"Role-play, if used, should be respectful and based on appropriate class material."},
-      {"id":"B3.3.1.1.1-Q13","type":"drawing","prompt":"Create a simple labelled chart showing one leader and the occupation example associated with them in the curriculum.","answer":["A correct leader-occupation pair: Jesus Christ—carpenter; Holy Prophet Muhammad (S.A.W.)—businessman; Egya Ahor—farmer."],"hint":"Choose one pair from the curriculum examples.","explanation":"A chart is a way to organise the occupational examples learners discuss.","misconception_note":"Assess accuracy rather than drawing skill."},
-      {"id":"B3.3.1.1.1-Q14","type":"multiple_choice","prompt":"Which statement is accurate according to the curriculum examples?","options":["Egya Ahor is given as an example of a Traditional Religious Leader and farmer","Every Traditional Religious Leader is a farmer","The curriculum says all leaders had the same occupation","No occupation examples are given"],"answer":"Egya Ahor is given as an example of a Traditional Religious Leader and farmer","hint":"Choose the specific example rather than a broad generalisation.","explanation":"The curriculum names Egya Ahor as an example and describes him as a farmer.","misconception_note":"Do not generalise this occupation to all Traditional Religious Leaders."},
-      {"id":"B3.3.1.1.1-Q15","type":"scenario","prompt":"A group has reliable notes about a leader's youthful life and wants to present them. What is a good way to proceed?","options":["Write a short factual paragraph and discuss it respectfully","Add dramatic details that are not in the notes","Turn the presentation into a competition between religions","Refuse to name the source of the information"],"answer":"Write a short factual paragraph and discuss it respectfully","hint":"The curriculum suggests short paragraphs and class discussion.","explanation":"Learners are asked to write paragraphs on occupational lives and present them for discussion.","misconception_note":"Keep the account grounded in trusted class sources."},
-      {"id":"B3.3.1.1.1-Q16","type":"short_answer","prompt":"What should a learner do if unsure whether a biographical detail about a religious leader is accurate?","answer":["Check the teacher-provided or reliable class source, or leave the detail out until verified."],"hint":"Factual descriptions need reliable information.","explanation":"The curriculum's narrative detail is limited in places, so unsupported additions should be avoided.","misconception_note":"It is better to state only verified facts than to invent a story."},
-      {"id":"B3.3.1.1.1-Q17","type":"matching","prompt":"Match each tradition with a leader example named for this topic: (1) Christianity; (2) Islam; (3) Traditional Religion. Leaders: A. Egya Ahor; B. Jesus Christ; C. Holy Prophet Muhammad (S.A.W.).","answer":{"1":"B","2":"C","3":"A"},"hint":"Use the curriculum's three tradition examples.","explanation":"The curriculum names these leaders in connection with the three religions.","misconception_note":"The curriculum includes other Traditional Religious Leader examples as well; accept a teacher-taught alternative."},
-      {"id":"B3.3.1.1.1-Q18","type":"role_play","prompt":"In small groups, present a respectful narrated tableau showing a leader doing an occupation named in the curriculum. The narrator should state the source of the fact; no sacred event needs to be acted out.","answer":["The presentation shows a curriculum occupation example and identifies it accurately and respectfully."],"hint":"Use a simple scene such as a person doing carpentry, business work or farming, with narration.","explanation":"The curriculum suggests role-play and discussion of occupational lives; a narrated tableau avoids unsupported religious narratives.","misconception_note":"Do not caricature the leader or imply invented scenes are historical facts.","rubric":{"occupation_fact":"0–2: matches a curriculum example","narration":"0–2: clearly identifies the example and source","respect":"0–1: portrayal is respectful"}},
-      {"id":"B3.3.1.1.1-Q19","type":"performance","prompt":"Write or say a short paragraph about one leader using one or more facts supplied in the class account. Avoid adding unsupported details.","answer":["A coherent, respectful description containing accurate facts from the teacher-provided or class-studied account."],"hint":"Include only what you have learned from a reliable class source.","explanation":"The curriculum asks learners to write short paragraphs on leaders' occupational lives and present them.","misconception_note":"Do not penalise a learner for omitting details the curriculum does not supply.","rubric":{"accuracy":"0–2: facts match the class source","description":"0–2: gives a clear description","respect":"0–1: uses respectful language"}},
-      {"id":"B3.3.1.1.1-Q20","type":"short_answer","prompt":"Name one occupation example for a religious leader and identify the leader linked with it in the curriculum.","answer":["Carpenter—Jesus Christ; businessman—Holy Prophet Muhammad (S.A.W.); farmer—Egya Ahor."],"hint":"Choose one of the three occupation pairs.","explanation":"These are the occupational examples given in the curriculum.","misconception_note":"Accept any one accurate pair."}
-    ]}
+  "class": "Basic 3",
+  "part": 3,
+  "curriculum": "NaCCA Religious and Moral Education Curriculum for Primary Schools, September 2019",
+  "indicator_codes": ["B3.2.2.1.1", "B3.2.2.1.2", "B3.3.1.1.1"],
+  "question_count": 60,
+  "accessibility_note": "Teachers may read prompts aloud. Accept oral, written, drawn or role-play responses where suitable. Learners may use teacher-provided accounts and need not disclose private religious practice. Do not require travel to festivals, worship sites, or hazardous activities.",
+  "curriculum_note": "Festival examples are those named in the curriculum; practices vary by community. For religious leaders' youthful lives, questions rely on accounts supplied in lessons rather than adding unsupported narrative details.",
+  "indicators": [
+    {
+      "code": "B3.2.2.1.1",
+      "statement": "Describe how various festivals are celebrated.",
+      "questions": [
+        {
+          "id": "B3.2.2.1.1-Q01",
+          "type": "mcq",
+          "prompt": "Which is an example of an Islamic festival named in the curriculum?",
+          "options": ["Eid-ul-Fitr", "Christmas", "Aboakyer", "Hogbetsotso"],
+          "answer": "Eid-ul-Fitr",
+          "hint": "Choose the festival listed under Islam.",
+          "explanation": "The curriculum names Eid-ul-Fitr and Eid-ul-Adha as Islamic festival examples.",
+          "misconception_note": "Do not assume every Muslim community celebrates in exactly the same way.",
+          "skill_tag": "recognise",
+          "difficulty": 1
+        },
+        {
+          "id": "B3.2.2.1.1-Q02",
+          "type": "mcq",
+          "prompt": "Which festival is named as a Christian example in the curriculum?",
+          "options": ["Easter", "Aboakyer", "Adae", "Feok"],
+          "answer": "Easter",
+          "hint": "It is one of the Christian festivals in the lesson list.",
+          "explanation": "Easter and Christmas are listed as Christian festival examples.",
+          "misconception_note": "Accept Christmas as another correct example if asked generally.",
+          "skill_tag": "recognise",
+          "difficulty": 1
+        },
+        {
+          "id": "B3.2.2.1.1-Q03",
+          "type": "written",
+          "prompt": "Name one festival example from each of these groups: Islam, Christianity and Traditional Religion.",
+          "hint": "Use the festival examples listed in class.",
+          "explanation": "The curriculum lists examples from each of the three religious traditions.",
+          "misconception_note": "Festival names and local observances may vary; accept taught local examples.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Islam: Eid-ul-Fitr or Eid-ul-Adha; Christianity: Easter, Christmas, Ash Wednesday or Pentecost Day; Traditional Religion: Aboakyer, Hogbetsotso, Adae, Fetu Afahye or Feok.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "recognise",
+          "difficulty": 2
+        },
+        {
+          "id": "B3.2.2.1.1-Q04",
+          "type": "mcq",
+          "prompt": "Which activity is mentioned in the curriculum as a possible part of festival celebrations?",
+          "options": [
+            "Drumming and dancing",
+            "Breaking classroom furniture",
+            "Polluting a stream",
+            "Forcing everyone to join a ritual"
+          ],
+          "answer": "Drumming and dancing",
+          "hint": "The curriculum describes scenes that may be seen at festivals.",
+          "explanation": "Drumming and dancing are included among possible festival scenes.",
+          "misconception_note": "Not every festival includes the same activities.",
+          "skill_tag": "recognise",
+          "difficulty": 1
+        },
+        {
+          "id": "B3.2.2.1.1-Q05",
+          "type": "mcq",
+          "prompt": "A group is describing a festival scene. Which activity is a suitable example from the curriculum?",
+          "options": [
+            "A durbar of chiefs",
+            "A school examination",
+            "A road accident",
+            "A rubbish dump"
+          ],
+          "answer": "A durbar of chiefs",
+          "hint": "This is one scene named in the festival exemplar.",
+          "explanation": "The curriculum suggests scenes such as a durbar of chiefs, drumming and dancing, and merry-making.",
+          "misconception_note": "Use only activities relevant to the festival being discussed.",
+          "skill_tag": "recognise",
+          "difficulty": 1
+        },
+        {
+          "id": "B3.2.2.1.1-Q06",
+          "type": "oral",
+          "prompt": "Describe one activity that may take place during a festival you have learned about. You may use a teacher-provided example.",
+          "hint": "Say what people do and, if known, how they take part.",
+          "explanation": "The indicator asks learners to describe how festivals are celebrated.",
+          "misconception_note": "Do not require the learner to have attended a festival personally.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "A clear description of a relevant activity such as worship, a gathering, drumming, dancing, sharing, or merry-making, depending on the festival account taught.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "interpret",
+          "difficulty": 3
+        },
+        {
+          "id": "B3.2.2.1.1-Q07",
+          "type": "matching",
+          "prompt": "Match each festival with the religious tradition named in the curriculum: (1) Christmas; (2) Eid-ul-Adha; (3) Aboakyer. Traditions: A. Islam; B. Christianity; C. Traditional Religion.",
+          "hint": "Use the curriculum's example list.",
+          "explanation": "These examples are associated respectively with Christianity, Islam and Traditional Religion in the curriculum.",
+          "misconception_note": "The examples are not an exhaustive list of each tradition's festivals.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Matches 1 with B.",
+                "marks": 1
+              },
+              {
+                "description": "Matches 2 with A.",
+                "marks": 1
+              },
+              {
+                "description": "Matches 3 with C.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "interpret",
+          "difficulty": 2
+        },
+        {
+          "id": "B3.2.2.1.1-Q08",
+          "type": "written",
+          "prompt": "Name two activities that may be seen during festivals, according to the curriculum examples.",
+          "hint": "Think of the activities named in the exemplar.",
+          "explanation": "These examples help learners describe festival celebrations.",
+          "misconception_note": "Accept relevant activities but do not claim all festivals share them.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Any two suitable examples: durbar of chiefs, drumming, dancing, merry-making, worship, sharing or family/community gathering where taught.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "recognise",
+          "difficulty": 2
+        },
+        {
+          "id": "B3.2.2.1.1-Q09",
+          "type": "mcq",
+          "prompt": "A learner is drawing a festival scene but has never attended one. What can the learner use?",
+          "options": [
+            "A picture, video or teacher-provided description studied in class",
+            "An invented claim presented as fact",
+            "A stereotype about a religious group",
+            "A scene unrelated to any festival"
+          ],
+          "answer": "A picture, video or teacher-provided description studied in class",
+          "hint": "The curriculum allows visual teaching resources.",
+          "explanation": "Pictures and videos can support learning about festivals; personal attendance is not required.",
+          "misconception_note": "Use reliable class material and avoid inventing details.",
+          "skill_tag": "interpret",
+          "difficulty": 3
+        },
+        {
+          "id": "B3.2.2.1.1-Q10",
+          "type": "drawing",
+          "prompt": "Draw a respectful scene showing one festival activity you studied. Add a short label naming the activity.",
+          "hint": "You may use a teacher-provided picture or description as a guide.",
+          "explanation": "Drawing festival scenes is an exemplar activity.",
+          "misconception_note": "Assess whether the activity is identified, not artistic ability or personal attendance.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "A scene related to a taught festival activity with a suitable label, such as worship, drumming, dancing or a gathering.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "demonstrate",
+          "difficulty": 4
+        },
+        {
+          "id": "B3.2.2.1.1-Q11",
+          "type": "mcq",
+          "prompt": "Which pair contains two festival examples listed for Traditional Religion?",
+          "options": [
+            "Aboakyer and Hogbetsotso",
+            "Easter and Christmas",
+            "Eid-ul-Fitr and Eid-ul-Adha",
+            "Psalm 23 and Al-Fātihah"
+          ],
+          "answer": "Aboakyer and Hogbetsotso",
+          "hint": "Choose two names from the Traditional Religion examples.",
+          "explanation": "Aboakyer and Hogbetsotso are listed as Traditional Religion festival examples.",
+          "misconception_note": "Festival classifications follow the curriculum's examples; local contexts may add others.",
+          "skill_tag": "recognise",
+          "difficulty": 1
+        },
+        {
+          "id": "B3.2.2.1.1-Q12",
+          "type": "written",
+          "prompt": "What does it mean to describe how a festival is celebrated?",
+          "hint": "Think of describing what people do.",
+          "explanation": "The indicator focuses on describing festival activities and scenes.",
+          "misconception_note": "Accept simple wording.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "To explain or tell some activities and events that take place during the festival.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "interpret",
+          "difficulty": 3
+        },
+        {
+          "id": "B3.2.2.1.1-Q13",
+          "type": "mcq",
+          "prompt": "A group says every festival includes the same songs and activities. What is a better statement?",
+          "options": [
+            "Different festivals and communities may have different practices",
+            "Every festival is exactly alike",
+            "Only one festival is real",
+            "No festival includes activities"
+          ],
+          "answer": "Different festivals and communities may have different practices",
+          "hint": "The curriculum includes examples from several traditions and communities.",
+          "explanation": "Festival practices vary; learners should describe the festival being studied rather than generalise to all.",
+          "misconception_note": "Avoid treating a single example as universal.",
+          "skill_tag": "recognise",
+          "difficulty": 2
+        },
+        {
+          "id": "B3.2.2.1.1-Q14",
+          "type": "mcq",
+          "prompt": "Which is another Christian festival named in the curriculum besides Easter and Christmas?",
+          "options": ["Pentecost Day", "Hogbetsotso", "Adae", "Aboakyer"],
+          "answer": "Pentecost Day",
+          "hint": "It is included with the Christian examples.",
+          "explanation": "The curriculum names Ash Wednesday and Pentecost Day among Christian festival examples.",
+          "misconception_note": "Ash Wednesday is also a correct response to a general question about another Christian festival.",
+          "skill_tag": "recognise",
+          "difficulty": 2
+        },
+        {
+          "id": "B3.2.2.1.1-Q15",
+          "type": "role_play",
+          "prompt": "In a small group, present a short, respectful scene showing one festival activity from a teacher-provided account. Narrate which activity is being shown.",
+          "hint": "A narrator may explain the scene so no one needs to imitate a religious rite.",
+          "explanation": "The curriculum suggests dramatizing festival activities, using examples studied in class.",
+          "misconception_note": "Do not require ritual performance, costumes, or imitation of sacred acts; a narrated tableau is acceptable.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "activity matches the taught account",
+                "marks": 2
+              },
+              {
+                "description": "portrayal is respectful",
+                "marks": 2
+              },
+              {
+                "description": "narration names the activity",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "demonstrate",
+          "difficulty": 4
+        },
+        {
+          "id": "B3.2.2.1.1-Q16",
+          "type": "matching",
+          "prompt": "Match the scene with the likely festival activity: (1) people gather for a public celebration; (2) musicians play rhythms while people move to music; (3) people share food or gifts. Activities: A. sharing; B. drumming and dancing; C. gathering or durbar.",
+          "hint": "Choose the activity that best describes each scene.",
+          "explanation": "These are possible scenes named in the festival exemplar.",
+          "misconception_note": "Specific practices depend on the festival account being discussed.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Matches 1 with C.",
+                "marks": 1
+              },
+              {
+                "description": "Matches 2 with B.",
+                "marks": 1
+              },
+              {
+                "description": "Matches 3 with A.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "interpret",
+          "difficulty": 3
+        },
+        {
+          "id": "B3.2.2.1.1-Q17",
+          "type": "mcq",
+          "prompt": "Which option names an Islamic festival from the curriculum?",
+          "options": ["Eid-ul-Adha", "Pentecost Day", "Feok", "Fetu Afahye"],
+          "answer": "Eid-ul-Adha",
+          "hint": "It is listed with Eid-ul-Fitr.",
+          "explanation": "Eid-ul-Adha is identified as an Islamic festival example.",
+          "misconception_note": "Accept variant spellings commonly used in class.",
+          "skill_tag": "recognise",
+          "difficulty": 2
+        },
+        {
+          "id": "B3.2.2.1.1-Q18",
+          "type": "oral",
+          "prompt": "Compare two festival examples by naming one activity that is similar or different, using information from class materials.",
+          "hint": "Use evidence from the descriptions, pictures or videos provided.",
+          "explanation": "Comparing festival scenes deepens understanding of how various festivals are celebrated.",
+          "misconception_note": "Do not assume a practice belongs to every member of a religion.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "A reasonable comparison based on the two festival accounts supplied or studied in class.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "interpret",
+          "difficulty": 3
+        },
+        {
+          "id": "B3.2.2.1.1-Q19",
+          "type": "performance",
+          "prompt": "Make a short oral or written description of one festival using its name, religious tradition and two activities from the account studied.",
+          "hint": "Use the class notes or teacher-provided account.",
+          "explanation": "This directly checks the ability to describe festival celebration.",
+          "misconception_note": "If the curriculum does not give detail for a particular local festival, use a teacher-provided reliable account rather than inventing facts.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "identifies accurately",
+                "marks": 2
+              },
+              {
+                "description": "gives two relevant activities",
+                "marks": 2
+              },
+              {
+                "description": "description is understandable",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "demonstrate",
+          "difficulty": 4
+        },
+        {
+          "id": "B3.2.2.1.1-Q20",
+          "type": "written",
+          "prompt": "Name one way pictures or videos can help learners study festivals.",
+          "hint": "Think of what a learner can see in the visual material.",
+          "explanation": "The curriculum recommends pictures and videos to demonstrate festival celebrations.",
+          "misconception_note": "Visual resources should be introduced respectfully and with accurate context.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "They let learners observe scenes or activities and use them to describe how a festival is celebrated.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "recognise",
+          "difficulty": 2
+        }
+      ],
+      "source_page": 19,
+      "strand": "Religious Practices and their Moral Implications",
+      "sub_strand": "Festivals in the Three Major Religions",
+      "content_standard": "Explain the importance of religious festivals",
+      "spec": {
+        "skills": [
+          {
+            "tag": "recognise",
+            "description": "Recognise the examples and vocabulary in the lesson.",
+            "minQuestions": 2
+          },
+          {
+            "tag": "interpret",
+            "description": "Explain meanings and connections in an example.",
+            "minQuestions": 2
+          },
+          {
+            "tag": "demonstrate",
+            "description": "Communicate understanding through a performance, drawing or demonstration.",
+            "minQuestions": 2
+          }
+        ],
+        "needsTeacherAssessment": true,
+        "difficultyPlan": "5 foundational, 7 simple-use, 5 application and 3 challenge questions."
+      }
+    },
+    {
+      "code": "B3.2.2.1.2",
+      "statement": "Demonstrate the importance of religious festivals.",
+      "questions": [
+        {
+          "id": "B3.2.2.1.2-Q01",
+          "type": "mcq",
+          "prompt": "Which is one importance of festivals named in the curriculum?",
+          "options": [
+            "Remembering key events in the past",
+            "Forgetting all history",
+            "Creating conflict",
+            "Stopping people from giving thanks"
+          ],
+          "answer": "Remembering key events in the past",
+          "hint": "Choose a purpose connected with remembering.",
+          "explanation": "The curriculum says festivals can help people remember key events in the past.",
+          "misconception_note": "Different festivals commemorate different events; use the relevant account.",
+          "skill_tag": "recognise",
+          "difficulty": 1
+        },
+        {
+          "id": "B3.2.2.1.2-Q02",
+          "type": "mcq",
+          "prompt": "Which value or outcome may festivals help promote, according to the curriculum?",
+          "options": ["Reconciliation", "Bullying", "Dishonesty", "Pollution"],
+          "answer": "Reconciliation",
+          "hint": "It means restoring friendly relations after disagreement.",
+          "explanation": "Reconciliation is listed as an importance of festivals.",
+          "misconception_note": "Explain the word in age-appropriate terms.",
+          "skill_tag": "recognise",
+          "difficulty": 1
+        },
+        {
+          "id": "B3.2.2.1.2-Q03",
+          "type": "written",
+          "prompt": "Give two reasons festivals are important according to the curriculum.",
+          "hint": "There are four reasons in the lesson list.",
+          "explanation": "These are the reasons stated in the curriculum examples.",
+          "misconception_note": "Accept equivalent wording.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Any two: remembering key events in the past, reconciliation, renewal of faith, or thanksgiving.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "interpret",
+          "difficulty": 3
+        },
+        {
+          "id": "B3.2.2.1.2-Q04",
+          "type": "mcq",
+          "prompt": "What does 'renewal of faith' mean in the festival lesson?",
+          "options": [
+            "Strengthening or renewing a person's religious commitment",
+            "Changing a festival into a school test",
+            "Forgetting all religious teachings",
+            "Competing to be better than others"
+          ],
+          "answer": "Strengthening or renewing a person's religious commitment",
+          "hint": "Think of faith being refreshed or strengthened.",
+          "explanation": "Renewal of faith is listed as one importance of festivals.",
+          "misconception_note": "This is a curriculum concept; do not assess how much faith a learner has.",
+          "skill_tag": "recognise",
+          "difficulty": 1
+        },
+        {
+          "id": "B3.2.2.1.2-Q05",
+          "type": "mcq",
+          "prompt": "After a festival, two neighbours make peace after an earlier disagreement. Which importance of festivals does this illustrate?",
+          "options": ["Reconciliation", "Pollution", "Dishonesty", "Waste"],
+          "answer": "Reconciliation",
+          "hint": "They have restored a friendly relationship.",
+          "explanation": "The curriculum lists reconciliation as a reason festivals are important.",
+          "misconception_note": "Use fictional examples; do not ask learners to disclose family conflicts.",
+          "skill_tag": "recognise",
+          "difficulty": 1
+        },
+        {
+          "id": "B3.2.2.1.2-Q06",
+          "type": "oral",
+          "prompt": "Explain how a festival may help people remember an important event from the past.",
+          "hint": "Connect celebration with remembering a story, event or teaching.",
+          "explanation": "The curriculum states that festivals can help people remember key past events.",
+          "misconception_note": "Use teacher-provided accounts where details are needed.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "A reasonable explanation that a festival's activities or stories remind followers of a significant event or teaching, based on the account studied.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "interpret",
+          "difficulty": 3
+        },
+        {
+          "id": "B3.2.2.1.2-Q07",
+          "type": "matching",
+          "prompt": "Match each importance with the description: (1) thanksgiving; (2) reconciliation; (3) remembering past events. Descriptions: A. expressing gratitude; B. restoring friendly relations; C. recalling something significant that happened before.",
+          "hint": "Match the term to its plain meaning.",
+          "explanation": "These meanings reflect the reasons named in the curriculum.",
+          "misconception_note": "Accept equivalent simple wording.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Matches 1 with A.",
+                "marks": 1
+              },
+              {
+                "description": "Matches 2 with B.",
+                "marks": 1
+              },
+              {
+                "description": "Matches 3 with C.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "interpret",
+          "difficulty": 2
+        },
+        {
+          "id": "B3.2.2.1.2-Q08",
+          "type": "mcq",
+          "prompt": "A group is presenting why festivals matter. Which response is supported by the curriculum?",
+          "options": [
+            "They may provide an occasion for thanksgiving",
+            "They always end every problem",
+            "They have no meaning",
+            "They teach people to disrespect one another"
+          ],
+          "answer": "They may provide an occasion for thanksgiving",
+          "hint": "Choose one of the stated reasons.",
+          "explanation": "Thanksgiving is one importance of festivals named in the curriculum.",
+          "misconception_note": "Do not imply festivals guarantee that all problems disappear.",
+          "skill_tag": "interpret",
+          "difficulty": 2
+        },
+        {
+          "id": "B3.2.2.1.2-Q09",
+          "type": "written",
+          "prompt": "Give one example of how a class could demonstrate the importance of a festival without performing a religious rite.",
+          "hint": "Choose a classroom presentation that explains the meaning.",
+          "explanation": "The curriculum suggests demonstrations using pictures, videos, discussion and drawings.",
+          "misconception_note": "No learner needs to perform worship or disclose personal religious practice.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Examples: make an explanatory poster, narrate a teacher-provided account, show a respectful drawing, or present a scene with narration about remembrance, thanksgiving or reconciliation.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "recognise",
+          "difficulty": 2
+        },
+        {
+          "id": "B3.2.2.1.2-Q10",
+          "type": "drawing",
+          "prompt": "Draw or make a simple poster showing one reason a festival is important. Add a label: remembrance, reconciliation, renewal of faith or thanksgiving.",
+          "hint": "Choose one reason and show it with a simple scene or symbol.",
+          "explanation": "The curriculum includes drawings and discussion of festival importance.",
+          "misconception_note": "Assess the idea, not drawing skill or use of sacred images.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "A clear visual connected to one listed importance and an appropriate label or oral explanation.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "demonstrate",
+          "difficulty": 4
+        },
+        {
+          "id": "B3.2.2.1.2-Q11",
+          "type": "mcq",
+          "prompt": "Which word means expressing gratitude and is listed as an importance of festivals?",
+          "options": ["Thanksgiving", "Teasing", "Littering", "Disobedience"],
+          "answer": "Thanksgiving",
+          "hint": "It is about giving thanks.",
+          "explanation": "Thanksgiving is included in the curriculum's list of festival importance.",
+          "misconception_note": "Accept 'giving thanks' as an equivalent answer.",
+          "skill_tag": "recognise",
+          "difficulty": 1
+        },
+        {
+          "id": "B3.2.2.1.2-Q12",
+          "type": "mcq",
+          "prompt": "A learner says festivals matter only because people enjoy food and music. What additional importance could the learner mention from the curriculum?",
+          "options": [
+            "Remembering important events, reconciliation, renewal of faith or thanksgiving",
+            "Making people forget the past",
+            "Preventing all community relationships",
+            "Encouraging pollution"
+          ],
+          "answer": "Remembering important events, reconciliation, renewal of faith or thanksgiving",
+          "hint": "Recall the curriculum's list of purposes.",
+          "explanation": "Festivals can have religious, historical and social importance beyond enjoyment.",
+          "misconception_note": "Do not diminish enjoyment; the question asks for an additional purpose.",
+          "skill_tag": "interpret",
+          "difficulty": 3
+        },
+        {
+          "id": "B3.2.2.1.2-Q13",
+          "type": "oral",
+          "prompt": "Name one festival importance and describe a classroom scene that could help others understand it.",
+          "hint": "Choose one listed importance and a simple way to show it.",
+          "explanation": "The curriculum encourages learners to demonstrate and discuss festival importance using visuals and presentations.",
+          "misconception_note": "Use accurate, teacher-supplied festival information.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "A valid importance plus a relevant narrated, drawn or pictured example.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "interpret",
+          "difficulty": 3
+        },
+        {
+          "id": "B3.2.2.1.2-Q14",
+          "type": "mcq",
+          "prompt": "Why might a festival bring people together?",
+          "options": [
+            "It can support community gathering, remembrance or thanksgiving",
+            "It requires people to reject all neighbours",
+            "It prevents sharing",
+            "It always causes disagreement"
+          ],
+          "answer": "It can support community gathering, remembrance or thanksgiving",
+          "hint": "Think about the social and religious meanings of festivals.",
+          "explanation": "Festival activities may bring people together and support the listed importance of remembrance and thanksgiving.",
+          "misconception_note": "The curriculum's key reasons should be grounded in the specific festival account.",
+          "skill_tag": "interpret",
+          "difficulty": 2
+        },
+        {
+          "id": "B3.2.2.1.2-Q15",
+          "type": "matching",
+          "prompt": "Match the classroom example with the importance it demonstrates: (1) learners narrate a significant past event; (2) characters restore a friendly relationship; (3) people express gratitude. Importances: A. thanksgiving; B. remembrance; C. reconciliation.",
+          "hint": "Look for the main idea shown in each example.",
+          "explanation": "The activities illustrate three reasons festivals are important.",
+          "misconception_note": "Accept an oral explanation for each match.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Matches 1 with B.",
+                "marks": 1
+              },
+              {
+                "description": "Matches 2 with C.",
+                "marks": 1
+              },
+              {
+                "description": "Matches 3 with A.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "interpret",
+          "difficulty": 2
+        },
+        {
+          "id": "B3.2.2.1.2-Q16",
+          "type": "mcq",
+          "prompt": "A teacher asks the class to explain a festival's importance using a video. Which learner response shows understanding?",
+          "options": [
+            "The video shows how the festival helps people remember an event or give thanks",
+            "The video proves every festival is identical",
+            "The video means no explanation is needed",
+            "The video is only for entertainment"
+          ],
+          "answer": "The video shows how the festival helps people remember an event or give thanks",
+          "hint": "Connect what is seen with a reason from the lesson.",
+          "explanation": "The curriculum uses pictures and videos as evidence for discussing festival importance.",
+          "misconception_note": "Learners should describe what the specific video actually shows.",
+          "skill_tag": "interpret",
+          "difficulty": 2
+        },
+        {
+          "id": "B3.2.2.1.2-Q17",
+          "type": "written",
+          "prompt": "What is reconciliation? Explain briefly why it can be important during or after a festival.",
+          "hint": "Think of making peace after a disagreement.",
+          "explanation": "Reconciliation is listed as one importance of festivals.",
+          "misconception_note": "Accept simple wording; no personal conflict needs to be shared.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Reconciliation is restoring good relations after disagreement; it can help people live peacefully together.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "interpret",
+          "difficulty": 3
+        },
+        {
+          "id": "B3.2.2.1.2-Q18",
+          "type": "role_play",
+          "prompt": "In pairs, present a short, respectful scene illustrating reconciliation or thanksgiving as a festival importance. Add a narrator who explains the point.",
+          "hint": "Use a fictional situation and avoid imitating sacred rites.",
+          "explanation": "The curriculum recommends demonstrations and discussions of festival importance.",
+          "misconception_note": "Keep the role-play inclusive and non-coercive.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "scene illustrates the chosen idea",
+                "marks": 2
+              },
+              {
+                "description": "narrator explains the connection",
+                "marks": 2
+              },
+              {
+                "description": "presentation is respectful",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "demonstrate",
+          "difficulty": 4
+        },
+        {
+          "id": "B3.2.2.1.2-Q19",
+          "type": "performance",
+          "prompt": "Give an oral, written or drawn explanation of two ways festivals can be important, using examples from a class account.",
+          "hint": "State each importance and connect it to something studied.",
+          "explanation": "This measures the ability to demonstrate or explain festival significance.",
+          "misconception_note": "Do not invent details for festivals where class materials give limited information.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "one point for each valid importance",
+                "marks": 2
+              },
+              {
+                "description": "relevant supporting examples",
+                "marks": 2
+              },
+              {
+                "description": "response is understandable",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "demonstrate",
+          "difficulty": 4
+        },
+        {
+          "id": "B3.2.2.1.2-Q20",
+          "type": "mcq",
+          "prompt": "Which statement is the most accurate summary of festival importance in the curriculum?",
+          "options": [
+            "Festivals may help people remember, reconcile, renew faith and give thanks",
+            "Festivals have no purpose beyond music",
+            "Every festival has exactly the same meaning",
+            "Festivals prevent people from living together"
+          ],
+          "answer": "Festivals may help people remember, reconcile, renew faith and give thanks",
+          "hint": "Choose the option that contains the curriculum's listed reasons.",
+          "explanation": "The curriculum lists remembrance, reconciliation, renewal of faith and thanksgiving.",
+          "misconception_note": "The particular importance may differ by festival; use 'may' rather than claiming all are identical.",
+          "skill_tag": "recognise",
+          "difficulty": 2
+        }
+      ],
+      "source_page": 19,
+      "strand": "Religious Practices and their Moral Implications",
+      "sub_strand": "Festivals in the Three Major Religions",
+      "content_standard": "Explain the importance of religious festivals",
+      "spec": {
+        "skills": [
+          {
+            "tag": "recognise",
+            "description": "Recognise the examples and vocabulary in the lesson.",
+            "minQuestions": 2
+          },
+          {
+            "tag": "interpret",
+            "description": "Explain meanings and connections in an example.",
+            "minQuestions": 2
+          },
+          {
+            "tag": "demonstrate",
+            "description": "Communicate understanding through a performance, drawing or demonstration.",
+            "minQuestions": 2
+          }
+        ],
+        "needsTeacherAssessment": true,
+        "difficultyPlan": "5 foundational, 7 simple-use, 5 application and 3 challenge questions."
+      }
+    },
+    {
+      "code": "B3.3.1.1.1",
+      "statement": "Describe the youthful lives of the leaders of the three major religions in Ghana.",
+      "questions": [
+        {
+          "id": "B3.3.1.1.1-Q01",
+          "type": "mcq",
+          "prompt": "Which activity does the curriculum suggest when studying the youthful lives of religious leaders?",
+          "options": [
+            "Discussing their youthful lives using lesson accounts",
+            "Inventing unsupported stories",
+            "Ranking religions",
+            "Mocking religious figures"
+          ],
+          "answer": "Discussing their youthful lives using lesson accounts",
+          "hint": "Use information supplied in class or reliable teacher materials.",
+          "explanation": "The curriculum guides learners to discuss the youthful lives of leaders from the three major religions.",
+          "misconception_note": "The source gives limited narrative detail; do not invent facts.",
+          "skill_tag": "apply",
+          "difficulty": 3
+        },
+        {
+          "id": "B3.3.1.1.1-Q02",
+          "type": "written",
+          "prompt": "Name one religious leader whose youthful life may be studied in this indicator.",
+          "hint": "The curriculum names two leaders and also includes a Traditional Religious Leader.",
+          "explanation": "The indicator includes leaders from the three major religious traditions.",
+          "misconception_note": "Accept the respectful names and titles used in class.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "The Lord Jesus Christ, the Holy Prophet Muhammad (S.A.W.), or a Traditional Religious Leader presented in the teacher's account.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "recognise",
+          "difficulty": 2
+        },
+        {
+          "id": "B3.3.1.1.1-Q03",
+          "type": "mcq",
+          "prompt": "Which occupation is linked to Jesus in the curriculum exemplar?",
+          "options": ["Carpenter", "Farmer", "Businessman", "Pilot"],
+          "answer": "Carpenter",
+          "hint": "The curriculum gives a brief occupational example.",
+          "explanation": "The curriculum exemplar describes Jesus as a carpenter.",
+          "misconception_note": "Keep claims within the curriculum example; do not add unsupported details.",
+          "skill_tag": "recognise",
+          "difficulty": 1
+        },
+        {
+          "id": "B3.3.1.1.1-Q04",
+          "type": "mcq",
+          "prompt": "Which occupation is linked to the Holy Prophet Muhammad (S.A.W.) in the curriculum exemplar?",
+          "options": ["Businessman", "Carpenter", "Farmer", "Fisher"],
+          "answer": "Businessman",
+          "hint": "This is the occupation named in the curriculum example.",
+          "explanation": "The curriculum exemplar identifies the Holy Prophet Muhammad (S.A.W.) as a businessman.",
+          "misconception_note": "Use the curriculum's respectful title and avoid adding unverified biographical specifics.",
+          "skill_tag": "recognise",
+          "difficulty": 1
+        },
+        {
+          "id": "B3.3.1.1.1-Q05",
+          "type": "mcq",
+          "prompt": "Which occupation is given for Egya Ahor in the curriculum exemplar?",
+          "options": ["Farmer", "Carpenter", "Businessman", "Doctor"],
+          "answer": "Farmer",
+          "hint": "The example names a Traditional Religious Leader and an occupation.",
+          "explanation": "The curriculum gives Egya Ahor as an example of a Traditional Religious Leader and describes him as a farmer.",
+          "misconception_note": "The curriculum's example is limited; do not generalise about all traditional leaders.",
+          "skill_tag": "recognise",
+          "difficulty": 1
+        },
+        {
+          "id": "B3.3.1.1.1-Q06",
+          "type": "written",
+          "prompt": "Name two leaders or leader examples mentioned in the curriculum for this topic.",
+          "hint": "Use the names stated in the curriculum or teacher's lesson account.",
+          "explanation": "The curriculum lists examples from Christianity, Islam and Traditional Religion.",
+          "misconception_note": "The teacher may provide another suitable Traditional Religious Leader account.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Any two: Jesus Christ, the Holy Prophet Muhammad (S.A.W.), or Egya Ahor as a Traditional Religious Leader example.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "recognise",
+          "difficulty": 2
+        },
+        {
+          "id": "B3.3.1.1.1-Q07",
+          "type": "matching",
+          "prompt": "Match the leader with the occupation stated in the curriculum: (1) Jesus Christ; (2) Holy Prophet Muhammad (S.A.W.); (3) Egya Ahor. Occupations: A. farmer; B. carpenter; C. businessman.",
+          "hint": "Use the brief occupation examples in the curriculum.",
+          "explanation": "The curriculum associates these leaders with carpenter, businessman and farmer respectively.",
+          "misconception_note": "Treat these as curriculum examples, not complete biographies.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Matches 1 with B.",
+                "marks": 1
+              },
+              {
+                "description": "Matches 2 with C.",
+                "marks": 1
+              },
+              {
+                "description": "Matches 3 with A.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "interpret",
+          "difficulty": 2
+        },
+        {
+          "id": "B3.3.1.1.1-Q08",
+          "type": "oral",
+          "prompt": "Describe one fact about a religious leader's youthful life that was provided in your class account.",
+          "hint": "Use only details studied in class.",
+          "explanation": "The indicator asks learners to describe youthful lives based on lesson content.",
+          "misconception_note": "Do not require learners to supply details absent from the curriculum or class material.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "A fact accurately recalled from a teacher-provided or class-studied account; occupation examples may be used.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "apply",
+          "difficulty": 3
+        },
+        {
+          "id": "B3.3.1.1.1-Q09",
+          "type": "mcq",
+          "prompt": "A learner is asked to write about a leader, but the textbook gives only a few facts. What should the learner do?",
+          "options": [
+            "Use the facts supplied by the teacher or reliable class materials",
+            "Invent events and present them as true",
+            "Copy a rumour",
+            "Add insulting details"
+          ],
+          "answer": "Use the facts supplied by the teacher or reliable class materials",
+          "hint": "A factual description should be based on evidence.",
+          "explanation": "The curriculum provides limited details for some leaders, so teachers should supply reliable accounts rather than learners inventing facts.",
+          "misconception_note": "Distinguish established lesson information from stories not supported by the materials.",
+          "skill_tag": "apply",
+          "difficulty": 3
+        },
+        {
+          "id": "B3.3.1.1.1-Q10",
+          "type": "mcq",
+          "prompt": "Why does the class study the occupations of religious leaders in this indicator?",
+          "options": [
+            "They are part of the curriculum's examples of their youthful or occupational lives",
+            "To decide which religion is best",
+            "To make fun of their work",
+            "To prove every leader had the same job"
+          ],
+          "answer": "They are part of the curriculum's examples of their youthful or occupational lives",
+          "hint": "The curriculum asks learners to discuss and write about occupations.",
+          "explanation": "Occupational lives are expressly included in the curriculum exemplar.",
+          "misconception_note": "Occupations should be discussed respectfully and not used to rank leaders.",
+          "skill_tag": "interpret",
+          "difficulty": 2
+        },
+        {
+          "id": "B3.3.1.1.1-Q11",
+          "type": "written",
+          "prompt": "Write one sentence describing an occupation example from the curriculum.",
+          "hint": "Choose one named example and write a clear sentence.",
+          "explanation": "This checks recall of the occupation examples in the curriculum.",
+          "misconception_note": "Accept respectful titles and equivalent phrasing.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Example: The curriculum gives Jesus Christ as a carpenter, the Holy Prophet Muhammad (S.A.W.) as a businessman, or Egya Ahor as a farmer.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "recognise",
+          "difficulty": 2
+        },
+        {
+          "id": "B3.3.1.1.1-Q12",
+          "type": "mcq",
+          "prompt": "Which approach is respectful when learning about leaders from different religions?",
+          "options": [
+            "Listen carefully and describe each account accurately",
+            "Imitate sacred practices to cause laughter",
+            "Say one leader is unworthy of study",
+            "Make up stories about a leader"
+          ],
+          "answer": "Listen carefully and describe each account accurately",
+          "hint": "Think about respect and accuracy.",
+          "explanation": "The curriculum promotes respect and learning about the three major religions.",
+          "misconception_note": "Role-play, if used, should be respectful and based on appropriate class material.",
+          "skill_tag": "recognise",
+          "difficulty": 1
+        },
+        {
+          "id": "B3.3.1.1.1-Q13",
+          "type": "drawing",
+          "prompt": "Create a simple labelled chart showing one leader and the occupation example associated with them in the curriculum.",
+          "hint": "Choose one pair from the curriculum examples.",
+          "explanation": "A chart is a way to organise the occupational examples learners discuss.",
+          "misconception_note": "Assess accuracy rather than drawing skill.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "A correct leader-occupation pair: Jesus Christ—carpenter; Holy Prophet Muhammad (S.A.W.)—businessman; Egya Ahor—farmer.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "demonstrate",
+          "difficulty": 4
+        },
+        {
+          "id": "B3.3.1.1.1-Q14",
+          "type": "mcq",
+          "prompt": "Which statement is accurate according to the curriculum examples?",
+          "options": [
+            "Egya Ahor is given as an example of a Traditional Religious Leader and farmer",
+            "Every Traditional Religious Leader is a farmer",
+            "The curriculum says all leaders had the same occupation",
+            "No occupation examples are given"
+          ],
+          "answer": "Egya Ahor is given as an example of a Traditional Religious Leader and farmer",
+          "hint": "Choose the specific example rather than a broad generalisation.",
+          "explanation": "The curriculum names Egya Ahor as an example and describes him as a farmer.",
+          "misconception_note": "Do not generalise this occupation to all Traditional Religious Leaders.",
+          "skill_tag": "recognise",
+          "difficulty": 1
+        },
+        {
+          "id": "B3.3.1.1.1-Q15",
+          "type": "mcq",
+          "prompt": "A group has reliable notes about a leader's youthful life and wants to present them. What is a good way to proceed?",
+          "options": [
+            "Write a short factual paragraph and discuss it respectfully",
+            "Add dramatic details that are not in the notes",
+            "Turn the presentation into a competition between religions",
+            "Refuse to name the source of the information"
+          ],
+          "answer": "Write a short factual paragraph and discuss it respectfully",
+          "hint": "The curriculum suggests short paragraphs and class discussion.",
+          "explanation": "Learners are asked to write paragraphs on occupational lives and present them for discussion.",
+          "misconception_note": "Keep the account grounded in trusted class sources.",
+          "skill_tag": "recognise",
+          "difficulty": 2
+        },
+        {
+          "id": "B3.3.1.1.1-Q16",
+          "type": "written",
+          "prompt": "What should a learner do if unsure whether a biographical detail about a religious leader is accurate?",
+          "hint": "Factual descriptions need reliable information.",
+          "explanation": "The curriculum's narrative detail is limited in places, so unsupported additions should be avoided.",
+          "misconception_note": "It is better to state only verified facts than to invent a story.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Check the teacher-provided or reliable class source, or leave the detail out until verified.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "apply",
+          "difficulty": 3
+        },
+        {
+          "id": "B3.3.1.1.1-Q17",
+          "type": "matching",
+          "prompt": "Match each tradition with a leader example named for this topic: (1) Christianity; (2) Islam; (3) Traditional Religion. Leaders: A. Egya Ahor; B. Jesus Christ; C. Holy Prophet Muhammad (S.A.W.).",
+          "hint": "Use the curriculum's three tradition examples.",
+          "explanation": "The curriculum names these leaders in connection with the three religions.",
+          "misconception_note": "The curriculum includes other Traditional Religious Leader examples as well; accept a teacher-taught alternative.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Matches 1 with B.",
+                "marks": 1
+              },
+              {
+                "description": "Matches 2 with C.",
+                "marks": 1
+              },
+              {
+                "description": "Matches 3 with A.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "interpret",
+          "difficulty": 3
+        },
+        {
+          "id": "B3.3.1.1.1-Q18",
+          "type": "role_play",
+          "prompt": "In small groups, present a respectful narrated tableau showing a leader doing an occupation named in the curriculum. The narrator should state the source of the fact; no sacred event needs to be acted out.",
+          "hint": "Use a simple scene such as a person doing carpentry, business work or farming, with narration.",
+          "explanation": "The curriculum suggests role-play and discussion of occupational lives; a narrated tableau avoids unsupported religious narratives.",
+          "misconception_note": "Do not caricature the leader or imply invented scenes are historical facts.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "matches a curriculum example",
+                "marks": 2
+              },
+              {
+                "description": "clearly identifies the example and source",
+                "marks": 2
+              },
+              {
+                "description": "portrayal is respectful",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "demonstrate",
+          "difficulty": 4
+        },
+        {
+          "id": "B3.3.1.1.1-Q19",
+          "type": "performance",
+          "prompt": "Write or say a short paragraph about one leader using one or more facts supplied in the class account. Avoid adding unsupported details.",
+          "hint": "Include only what you have learned from a reliable class source.",
+          "explanation": "The curriculum asks learners to write short paragraphs on leaders' occupational lives and present them.",
+          "misconception_note": "Do not penalise a learner for omitting details the curriculum does not supply.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "facts match the class source",
+                "marks": 2
+              },
+              {
+                "description": "gives a clear description",
+                "marks": 2
+              },
+              {
+                "description": "uses respectful language",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "demonstrate",
+          "difficulty": 4
+        },
+        {
+          "id": "B3.3.1.1.1-Q20",
+          "type": "written",
+          "prompt": "Name one occupation example for a religious leader and identify the leader linked with it in the curriculum.",
+          "hint": "Choose one of the three occupation pairs.",
+          "explanation": "These are the occupational examples given in the curriculum.",
+          "misconception_note": "Accept any one accurate pair.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Carpenter—Jesus Christ; businessman—Holy Prophet Muhammad (S.A.W.); farmer—Egya Ahor.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "recognise",
+          "difficulty": 2
+        }
+      ],
+      "source_page": 20,
+      "strand": "Religious Leaders",
+      "sub_strand": "Early Life of the Leaders of the Three Major Religions",
+      "content_standard": "Narrate the youthful life stories of the leaders of the major religions",
+      "spec": {
+        "skills": [
+          {
+            "tag": "recognise",
+            "description": "Recognise the examples and vocabulary in the lesson.",
+            "minQuestions": 2
+          },
+          {
+            "tag": "interpret",
+            "description": "Explain meanings and connections in an example.",
+            "minQuestions": 2
+          },
+          {
+            "tag": "apply",
+            "description": "Apply the lesson to a situation and justify a choice.",
+            "minQuestions": 2
+          },
+          {
+            "tag": "demonstrate",
+            "description": "Communicate understanding through a performance, drawing or demonstration.",
+            "minQuestions": 2
+          }
+        ],
+        "needsTeacherAssessment": true,
+        "difficultyPlan": "5 foundational, 7 simple-use, 5 application and 3 challenge questions."
+      }
+    }
   ],
-  "progress":{"basic3_indicators_completed":9,"basic3_indicators_total":14,"basic3_questions_completed":180,"overall_questions_completed":600,"overall_questions_target":1560,"next_indicator":"B3.3.1.1.2","note":"Continuing indicator set from the 2019 curriculum; codes and content are normalized where printed formatting is inconsistent."}
+  "progress": {
+    "basic3_indicators_completed": 9,
+    "basic3_indicators_total": 14,
+    "basic3_questions_completed": 180,
+    "overall_questions_completed": 600,
+    "overall_questions_target": 1560,
+    "next_indicator": "B3.3.1.1.2",
+    "note": "Continuing indicator set from the 2019 curriculum; codes and content are normalized where printed formatting is inconsistent."
+  }
 }

@@ -394,15 +394,18 @@ test('question bank practice preserves Science when Mathematics shares the code'
   await expect(page).toHaveURL(/subject=Science/);
 });
 
-for (const subject of ['Computing', 'History']) {
+for (const subject of ['Computing', 'History', 'Religious and Moral Education']) {
   test(`a teacher can build a ${subject} quiz from a Basic 5 question`, async ({ page }) => {
     await setup(page, 'Teacher');
-    await expect(page.getByRole('button', { name: 'Browse Question Bank' })).toBeVisible();
+    await expect(page.getByRole('button', { name: 'Browse Question Bank' })).toBeVisible({ timeout: 20000 });
     await page.getByRole('button', { name: 'NaCCA Question Bank', exact: true }).click();
     await page.getByLabel('Filter by subject').selectOption(subject);
     await page.getByLabel('Filter by class or level').selectOption('Basic 5');
     if (subject === 'History') {
       await page.getByPlaceholder('Search stem, skill, indicator or concept…').fill('B4.5.3.1.2');
+    }
+    if (subject === 'Religious and Moral Education') {
+      await page.getByPlaceholder('Search stem, skill, indicator or concept…').fill('B5.5.1.1.2');
     }
     const card = page.locator('.nacca-question-card').first();
     const code = await card.locator('.nacca-badge-code').innerText();

@@ -6,6 +6,7 @@ import { randomBytes, randomUUID } from 'node:crypto';
 import { createClient } from '@supabase/supabase-js';
 import { computingQuestions } from '../src/learningHub/computingBank.ts';
 import { historyQuestions } from '../src/learningHub/historyBank.ts';
+import { rmeQuestions } from '../src/learningHub/primaryCurriculumBank.ts';
 import { indicatorLessonId } from '../src/learningHub/indicatorLessonId.ts';
 const project = JSON.parse(readFileSync('src/supabase-project.json', 'utf8'));
 const options = { auth: { persistSession: false, autoRefreshToken: false } };
@@ -226,6 +227,7 @@ try {
     return question;
   };
   const checks = [
+    ...[1, 2, 3, 4, 5, 6].map((grade) => scoredQuestion(rmeQuestions, grade)),
     ...[4, 5, 6].map((grade) => scoredQuestion(computingQuestions, grade)),
     ...[1, 3, 4, 6].map((grade) => scoredQuestion(historyQuestions, grade)),
     scoredQuestion(historyQuestions, 2, 'B2.2.1.1.1'),

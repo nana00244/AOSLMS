@@ -3,11 +3,12 @@ import { gzipSync } from 'node:zlib';
 import { hubLessons } from '../src/learningHub/catalog.ts';
 import { computingIndicators, computingQuestions } from '../src/learningHub/computingBank.ts';
 import { historyIndicators, historyQuestions } from '../src/learningHub/historyBank.ts';
+import { rmeIndicators, rmeQuestions } from '../src/learningHub/primaryCurriculumBank.ts';
 
 // Keep the Edge Function upload within the API size limit. Copy only the
 // question fields used to authorize the lesson and grade adaptive answers.
 const bank = JSON.parse(readFileSync('src/nacca/importedBank.json', 'utf8'));
-const questions = [...bank.questions, ...computingQuestions, ...historyQuestions]
+const questions = [...bank.questions, ...computingQuestions, ...historyQuestions, ...rmeQuestions]
   .filter((q) => ['mcq', 'numeric', 'short_answer'].includes(q.type))
   .map((q) => ({
     id: q.id,
@@ -18,7 +19,7 @@ const questions = [...bank.questions, ...computingQuestions, ...historyQuestions
     ...(q.type === 'short_answer' ? { stem: q.stem } : {}),
     ...(q.type === 'mcq' ? { optionCount: q.options.length } : {}),
   }));
-const indicators = [...bank.indicators, ...computingIndicators, ...historyIndicators].map(
+const indicators = [...bank.indicators, ...computingIndicators, ...historyIndicators, ...rmeIndicators].map(
   ({ code, subject }) => ({ code, subject }),
 );
 writeFileSync(

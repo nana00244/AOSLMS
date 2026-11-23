@@ -585,6 +585,7 @@ export const courseworkSubjectId = (subject: string) => {
     'english language': 'sub_eng',
     'integrated science': 'sub_sci',
     'religious & moral education (rme)': 'sub_rme',
+    'religious and moral education': 'sub_rme',
     'creative arts & design': 'sub_cad',
     'ghanaian language (twi)': 'sub_twi',
     'computing / ict': 'sub_ict',

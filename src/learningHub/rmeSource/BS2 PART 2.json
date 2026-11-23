@@ -12,30 +12,379 @@
       "sub_strand": "The Environment",
       "content_standard": "B2.1.2.1. Appreciate the environment as God's creation",
       "objective": "Explain the importance of the environment.",
-      "spec": {"skills":[{"tag":"identify_environment","description":"Distinguish natural features from human-made objects in the environment.","minQuestions":6},{"tag":"explain_importance","description":"Explain how air, food, water, and shelter support survival.","minQuestions":7},{"tag":"connect_environment","description":"Connect care for the environment with the survival of living things.","minQuestions":7}],"difficulty_plan":{"recall":5,"understanding":7,"application":5,"challenge":3},"misconceptions":["Thinking all surroundings are natural rather than partly human-made","Believing living things can survive without air, food, water, or shelter","Confusing human-made objects with natural creations"],"teacher_assessment_required":true},
+      "spec": {
+        "skills": [
+          {
+            "tag": "recognise",
+            "description": "Recognise the examples and vocabulary in the lesson.",
+            "minQuestions": 2
+          },
+          {
+            "tag": "interpret",
+            "description": "Explain meanings and connections in an example.",
+            "minQuestions": 2
+          }
+        ],
+        "difficulty_plan": {
+          "recall": 5,
+          "understanding": 7,
+          "application": 5,
+          "challenge": 3
+        },
+        "misconceptions": [
+          "Thinking all surroundings are natural rather than partly human-made",
+          "Believing living things can survive without air, food, water, or shelter",
+          "Confusing human-made objects with natural creations"
+        ],
+        "teacher_assessment_required": true,
+        "needsTeacherAssessment": true,
+        "difficultyPlan": "5 foundational, 7 simple-use, 5 application and 3 challenge questions."
+      },
       "questions": [
-        {"id":"B2-P02-Q01","skill_tag":"identify_environment","type":"mcq","difficulty":1,"stem":"Which is a natural thing in the environment named in the curriculum?","options":["A tree","A table","A car","A building"],"answer":0,"hints":["Choose something that grows naturally."],"explanation":"Trees are examples of natural things in the curriculum."},
-        {"id":"B2-P02-Q02","skill_tag":"identify_environment","type":"mcq","difficulty":1,"stem":"Which object is made by people?","options":["A stone","An animal","A chair","A tree"],"answer":2,"hints":["People make furniture to sit on."],"explanation":"A chair is human-made; stones, animals, and trees are examples of natural things."},
-        {"id":"B2-P02-Q03","skill_tag":"identify_environment","type":"short_answer","difficulty":1,"stem":"Name one natural thing you might observe on a nature walk around school.","answer":["tree","stone","animal","plant","bird"],"hints":["Think of something not manufactured by people."],"explanation":"The curriculum gives trees, stones, and animals as examples of natural things."},
-        {"id":"B2-P02-Q04","skill_tag":"identify_environment","type":"mcq","difficulty":1,"stem":"Which pair contains two human-made objects?","options":["Car and table","Stone and tree","Animal and tree","River and stone"],"answer":0,"hints":["Choose objects people construct or manufacture."],"explanation":"Cars and tables are made by people. The other options list natural things."},
-        {"id":"B2-P02-Q05","skill_tag":"identify_environment","type":"oral","difficulty":1,"stem":"Name one natural thing and one human-made thing you can see near your classroom.","hints":["For example, a tree and a desk."],"explanation":"Classify one observed natural feature and one object made by people.","rubric":{"criteria":[{"description":"Names a natural thing.","marks":1},{"description":"Names a human-made object.","marks":1}]}},
-        {"id":"B2-P02-Q06","skill_tag":"explain_importance","type":"mcq","difficulty":2,"stem":"Which is important for people and animals to breathe?","options":["Air","A table","A shoe","A car"],"answer":0,"hints":["Living things breathe it."],"explanation":"Air is necessary for breathing and is one of the environmental needs named in the curriculum."},
-        {"id":"B2-P02-Q07","skill_tag":"explain_importance","type":"mcq","difficulty":2,"stem":"Which environmental need do people drink?","options":["Water","A chair","A stone","A book"],"answer":0,"hints":["It can be poured into a cup."],"explanation":"Water is needed by people and other living things."},
-        {"id":"B2-P02-Q08","skill_tag":"explain_importance","type":"short_answer","difficulty":2,"stem":"Name one thing people need from the environment to eat.","answer":["food","plants","crops","animals"],"hints":["The curriculum names this as a basic need."],"explanation":"Food is one of the environmental needs listed in the curriculum."},
-        {"id":"B2-P02-Q09","skill_tag":"explain_importance","type":"mcq","difficulty":2,"stem":"Why is shelter important to people?","options":["It helps protect people from weather and danger","It replaces the need to breathe","It makes people stop drinking water","It is food for every animal"],"answer":0,"hints":["Think of a safe place to live."],"explanation":"Shelter provides a place of protection and is one of the needs listed in the curriculum."},
-        {"id":"B2-P02-Q10","skill_tag":"explain_importance","type":"oral","difficulty":2,"stem":"Name two environmental needs that help living things survive.","hints":["Choose from air, food, water, and shelter."],"explanation":"Any two of the four examples in the curriculum are acceptable.","rubric":{"criteria":[{"description":"Names two needs from air, food, water, and shelter.","marks":2}]}},
-        {"id":"B2-P02-Q11","skill_tag":"explain_importance","type":"oral","difficulty":2,"stem":"Explain one way a tree or animal depends on its environment.","hints":["Think about water, air, food, or a place to live."],"explanation":"Living things rely on environmental conditions and resources for survival.","rubric":{"criteria":[{"description":"Names a relevant environmental need or condition.","marks":1},{"description":"Explains how it supports the chosen living thing.","marks":1}]}},
-        {"id":"B2-P02-Q12","skill_tag":"explain_importance","type":"mcq","difficulty":2,"stem":"Which statement best explains why the environment is important?","options":["Living things depend on it for needs such as air, food, water, and shelter","It is only useful for making cars","People and animals do not need it","It contains only buildings"],"answer":0,"hints":["Connect the environment to survival."],"explanation":"The curriculum says the survival of God's creation depends on the environment."},
-        {"id":"B2-P02-Q13","skill_tag":"connect_environment","type":"oral","difficulty":3,"stem":"A school garden has healthy soil, water, and air. Explain why these help plants live.","hints":["Think about the needs of growing plants."],"explanation":"Plants need suitable environmental conditions, including water and air, to grow.","rubric":{"criteria":[{"description":"Identifies at least one relevant need or condition.","marks":1},{"description":"Explains how it supports plant growth or survival.","marks":1}]}},
-        {"id":"B2-P02-Q14","skill_tag":"connect_environment","type":"oral","difficulty":3,"stem":"What could happen to animals if their environment no longer provides food, water, or shelter?","hints":["Think about how they would meet their basic needs."],"explanation":"Animals may struggle to survive if essential needs are unavailable.","rubric":{"criteria":[{"description":"States that animals may become weak, move away, or fail to survive.","marks":1},{"description":"Links the outcome to missing needs.","marks":1}]}},
-        {"id":"B2-P02-Q15","skill_tag":"connect_environment","type":"mcq","difficulty":3,"stem":"A class wants to care for the school environment. Which action best supports living things?","options":["Keep the area clean and protect plants","Pour rubbish into a stream","Break young trees for fun","Waste all the water"],"answer":0,"hints":["Choose an action that protects shared surroundings."],"explanation":"Keeping the area clean and protecting plants helps maintain a healthy environment."},
-        {"id":"B2-P02-Q16","skill_tag":"connect_environment","type":"oral","difficulty":3,"stem":"Describe one way your class can keep its environment clean and explain who benefits.","hints":["You could put litter in a bin or care for the garden."],"explanation":"Practical care supports the wellbeing of learners and other living things.","rubric":{"criteria":[{"description":"Suggests a practical, safe action.","marks":1},{"description":"Identifies people, plants, animals, or the community as beneficiaries.","marks":1}]}},
-        {"id":"B2-P02-Q17","skill_tag":"connect_environment","type":"oral","difficulty":3,"stem":"Explain how clean water in a community can help people, animals, and plants.","hints":["Think of drinking, growing, and staying healthy."],"explanation":"Clean water supports drinking, health, and plant growth for living things.","rubric":{"criteria":[{"description":"Gives a relevant benefit of clean water.","marks":1},{"description":"Connects the benefit to more than one living group or a clear survival need.","marks":1}]}},
-        {"id":"B2-P02-Q18","skill_tag":"connect_environment","type":"oral","difficulty":4,"stem":"A friend says, 'The environment is only trees and animals.' Explain why the curriculum includes more than natural things.","hints":["Remember that people also create buildings, cars, tables, and chairs."],"explanation":"The environment includes natural things as well as human-made things and the surroundings in which life takes place.","rubric":{"criteria":[{"description":"Explains that human-made objects are also part of the surroundings.","marks":1},{"description":"Gives an accurate example of a human-made object.","marks":1},{"description":"Connects environment to the needs of living things.","marks":1}]}},
-        {"id":"B2-P02-Q19","skill_tag":"connect_environment","type":"drawing","difficulty":4,"stem":"Draw a healthy environment that provides at least two needs for living things. Label the needs and explain your drawing.","hints":["Show, for example, clean water and plants or shelter."],"explanation":"The drawing should represent environmental needs and how they support life. Artistic quality is not graded.","rubric":{"criteria":[{"description":"Shows a healthy environment.","marks":1},{"description":"Identifies two relevant needs.","marks":2},{"description":"Explains how the needs support living things.","marks":1}]}},
-        {"id":"B2-P02-Q20","skill_tag":"connect_environment","type":"oral","difficulty":4,"stem":"Use one natural feature and one human-made object from a nature walk to explain how people depend on and shape their environment.","hints":["For example, a tree and a classroom building."],"explanation":"People depend on natural resources and also create objects and structures in their surroundings.","rubric":{"criteria":[{"description":"Names an accurate natural feature.","marks":1},{"description":"Names an accurate human-made object.","marks":1},{"description":"Explains dependence on or shaping of the environment.","marks":1}]}}
+        {
+          "id": "B2-P02-Q01",
+          "skill_tag": "recognise",
+          "type": "mcq",
+          "difficulty": 1,
+          "stem": "Which is a natural thing in the environment named in the curriculum?",
+          "options": ["A tree", "A table", "A car", "A building"],
+          "answer": 0,
+          "hints": ["Choose something that grows naturally."],
+          "explanation": "Trees are examples of natural things in the curriculum."
+        },
+        {
+          "id": "B2-P02-Q02",
+          "skill_tag": "recognise",
+          "type": "mcq",
+          "difficulty": 1,
+          "stem": "Which object is made by people?",
+          "options": ["A stone", "An animal", "A chair", "A tree"],
+          "answer": 2,
+          "hints": ["People make furniture to sit on."],
+          "explanation": "A chair is human-made; stones, animals, and trees are examples of natural things."
+        },
+        {
+          "id": "B2-P02-Q03",
+          "skill_tag": "recognise",
+          "type": "short_answer",
+          "difficulty": 1,
+          "stem": "Name one natural thing you might observe on a nature walk around school.",
+          "answer": ["tree", "stone", "animal", "plant", "bird"],
+          "hints": ["Think of something not manufactured by people."],
+          "explanation": "The curriculum gives trees, stones, and animals as examples of natural things."
+        },
+        {
+          "id": "B2-P02-Q04",
+          "skill_tag": "recognise",
+          "type": "mcq",
+          "difficulty": 1,
+          "stem": "Which pair contains two human-made objects?",
+          "options": ["Car and table", "Stone and tree", "Animal and tree", "River and stone"],
+          "answer": 0,
+          "hints": ["Choose objects people construct or manufacture."],
+          "explanation": "Cars and tables are made by people. The other options list natural things."
+        },
+        {
+          "id": "B2-P02-Q05",
+          "skill_tag": "recognise",
+          "type": "oral",
+          "difficulty": 1,
+          "stem": "Name one natural thing and one human-made thing you can see near your classroom.",
+          "hints": ["For example, a tree and a desk."],
+          "explanation": "Classify one observed natural feature and one object made by people.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Names a natural thing.",
+                "marks": 1
+              },
+              {
+                "description": "Names a human-made object.",
+                "marks": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "B2-P02-Q06",
+          "skill_tag": "recognise",
+          "type": "mcq",
+          "difficulty": 2,
+          "stem": "Which is important for people and animals to breathe?",
+          "options": ["Air", "A table", "A shoe", "A car"],
+          "answer": 0,
+          "hints": ["Living things breathe it."],
+          "explanation": "Air is necessary for breathing and is one of the environmental needs named in the curriculum."
+        },
+        {
+          "id": "B2-P02-Q07",
+          "skill_tag": "recognise",
+          "type": "mcq",
+          "difficulty": 2,
+          "stem": "Which environmental need do people drink?",
+          "options": ["Water", "A chair", "A stone", "A book"],
+          "answer": 0,
+          "hints": ["It can be poured into a cup."],
+          "explanation": "Water is needed by people and other living things."
+        },
+        {
+          "id": "B2-P02-Q08",
+          "skill_tag": "recognise",
+          "type": "short_answer",
+          "difficulty": 2,
+          "stem": "Name one thing people need from the environment to eat.",
+          "answer": ["food", "plants", "crops", "animals"],
+          "hints": ["The curriculum names this as a basic need."],
+          "explanation": "Food is one of the environmental needs listed in the curriculum."
+        },
+        {
+          "id": "B2-P02-Q09",
+          "skill_tag": "interpret",
+          "type": "mcq",
+          "difficulty": 2,
+          "stem": "Why is shelter important to people?",
+          "options": [
+            "It helps protect people from weather and danger",
+            "It replaces the need to breathe",
+            "It makes people stop drinking water",
+            "It is food for every animal"
+          ],
+          "answer": 0,
+          "hints": ["Think of a safe place to live."],
+          "explanation": "Shelter provides a place of protection and is one of the needs listed in the curriculum."
+        },
+        {
+          "id": "B2-P02-Q10",
+          "skill_tag": "recognise",
+          "type": "oral",
+          "difficulty": 2,
+          "stem": "Name two environmental needs that help living things survive.",
+          "hints": ["Choose from air, food, water, and shelter."],
+          "explanation": "Any two of the four examples in the curriculum are acceptable.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Names two needs from air, food, water, and shelter.",
+                "marks": 2
+              }
+            ]
+          }
+        },
+        {
+          "id": "B2-P02-Q11",
+          "skill_tag": "interpret",
+          "type": "oral",
+          "difficulty": 2,
+          "stem": "Explain one way a tree or animal depends on its environment.",
+          "hints": ["Think about water, air, food, or a place to live."],
+          "explanation": "Living things rely on environmental conditions and resources for survival.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Names a relevant environmental need or condition.",
+                "marks": 1
+              },
+              {
+                "description": "Explains how it supports the chosen living thing.",
+                "marks": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "B2-P02-Q12",
+          "skill_tag": "interpret",
+          "type": "mcq",
+          "difficulty": 2,
+          "stem": "Which statement best explains why the environment is important?",
+          "options": [
+            "Living things depend on it for needs such as air, food, water, and shelter",
+            "It is only useful for making cars",
+            "People and animals do not need it",
+            "It contains only buildings"
+          ],
+          "answer": 0,
+          "hints": ["Connect the environment to survival."],
+          "explanation": "The curriculum says the survival of God's creation depends on the environment."
+        },
+        {
+          "id": "B2-P02-Q13",
+          "skill_tag": "interpret",
+          "type": "oral",
+          "difficulty": 3,
+          "stem": "A school garden has healthy soil, water, and air. Explain why these help plants live.",
+          "hints": ["Think about the needs of growing plants."],
+          "explanation": "Plants need suitable environmental conditions, including water and air, to grow.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Identifies at least one relevant need or condition.",
+                "marks": 1
+              },
+              {
+                "description": "Explains how it supports plant growth or survival.",
+                "marks": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "B2-P02-Q14",
+          "skill_tag": "recognise",
+          "type": "oral",
+          "difficulty": 3,
+          "stem": "What could happen to animals if their environment no longer provides food, water, or shelter?",
+          "hints": ["Think about how they would meet their basic needs."],
+          "explanation": "Animals may struggle to survive if essential needs are unavailable.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "States that animals may become weak, move away, or fail to survive.",
+                "marks": 1
+              },
+              {
+                "description": "Links the outcome to missing needs.",
+                "marks": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "B2-P02-Q15",
+          "skill_tag": "recognise",
+          "type": "mcq",
+          "difficulty": 3,
+          "stem": "A class wants to care for the school environment. Which action best supports living things?",
+          "options": [
+            "Keep the area clean and protect plants",
+            "Pour rubbish into a stream",
+            "Break young trees for fun",
+            "Waste all the water"
+          ],
+          "answer": 0,
+          "hints": ["Choose an action that protects shared surroundings."],
+          "explanation": "Keeping the area clean and protecting plants helps maintain a healthy environment."
+        },
+        {
+          "id": "B2-P02-Q16",
+          "skill_tag": "interpret",
+          "type": "oral",
+          "difficulty": 3,
+          "stem": "Describe one way your class can keep its environment clean and explain who benefits.",
+          "hints": ["You could put litter in a bin or care for the garden."],
+          "explanation": "Practical care supports the wellbeing of learners and other living things.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Suggests a practical, safe action.",
+                "marks": 1
+              },
+              {
+                "description": "Identifies people, plants, animals, or the community as beneficiaries.",
+                "marks": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "B2-P02-Q17",
+          "skill_tag": "interpret",
+          "type": "oral",
+          "difficulty": 3,
+          "stem": "Explain how clean water in a community can help people, animals, and plants.",
+          "hints": ["Think of drinking, growing, and staying healthy."],
+          "explanation": "Clean water supports drinking, health, and plant growth for living things.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Gives a relevant benefit of clean water.",
+                "marks": 1
+              },
+              {
+                "description": "Connects the benefit to more than one living group or a clear survival need.",
+                "marks": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "B2-P02-Q18",
+          "skill_tag": "interpret",
+          "type": "oral",
+          "difficulty": 4,
+          "stem": "A friend says, 'The environment is only trees and animals.' Explain why the curriculum includes more than natural things.",
+          "hints": ["Remember that people also create buildings, cars, tables, and chairs."],
+          "explanation": "The environment includes natural things as well as human-made things and the surroundings in which life takes place.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Explains that human-made objects are also part of the surroundings.",
+                "marks": 1
+              },
+              {
+                "description": "Gives an accurate example of a human-made object.",
+                "marks": 1
+              },
+              {
+                "description": "Connects environment to the needs of living things.",
+                "marks": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "B2-P02-Q19",
+          "skill_tag": "interpret",
+          "type": "drawing",
+          "difficulty": 4,
+          "stem": "Draw a healthy environment that provides at least two needs for living things. Label the needs and explain your drawing.",
+          "hints": ["Show, for example, clean water and plants or shelter."],
+          "explanation": "The drawing should represent environmental needs and how they support life. Artistic quality is not graded.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Shows a healthy environment.",
+                "marks": 1
+              },
+              {
+                "description": "Identifies two relevant needs.",
+                "marks": 2
+              },
+              {
+                "description": "Explains how the needs support living things.",
+                "marks": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "B2-P02-Q20",
+          "skill_tag": "interpret",
+          "type": "oral",
+          "difficulty": 4,
+          "stem": "Use one natural feature and one human-made object from a nature walk to explain how people depend on and shape their environment.",
+          "hints": ["For example, a tree and a classroom building."],
+          "explanation": "People depend on natural resources and also create objects and structures in their surroundings.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Names an accurate natural feature.",
+                "marks": 1
+              },
+              {
+                "description": "Names an accurate human-made object.",
+                "marks": 1
+              },
+              {
+                "description": "Explains dependence on or shaping of the environment.",
+                "marks": 1
+              }
+            ]
+          }
+        }
       ],
-      "uncertain": []
+      "uncertain": [],
+      "source_page": 7
     },
     {
       "code": "B2. 1.2.1.2",
@@ -43,64 +392,849 @@
       "sub_strand": "The Environment",
       "content_standard": "B2.1.2.1. Appreciate the environment as God's creation",
       "objective": "Demonstrate human activities that destroy God's creation or the environment.",
-      "curriculum_examples": ["Indiscriminate cutting down of trees", "Illegal mining (galamsey)", "Pollution of water bodies", "Climate change heat, floods, rainstorms, less rainfall, drought, famine"],
-      "spec": {"skills":[{"tag":"identify_damage","description":"Identify human activities that damage the environment named in the curriculum.","minQuestions":6},{"tag":"explain_effects","description":"Explain curriculum-stated effects of environmental destruction.","minQuestions":7},{"tag":"demonstrate_protection","description":"Represent safe and unsafe environments and suggest protective actions.","minQuestions":7}],"difficulty_plan":{"recall":5,"understanding":7,"application":5,"challenge":3},"misconceptions":["Thinking galamsey helps water bodies","Believing cutting every tree has no consequence","Confusing a natural hazard with a human activity that can worsen environmental harm"],"teacher_assessment_required":true},
-      "questions": [
-        {"id":"B2-P02-Q21","skill_tag":"identify_damage","type":"mcq","difficulty":1,"stem":"Which activity does the curriculum identify as harmful to the environment?","options":["Indiscriminately cutting down trees","Planting and caring for trees","Putting litter in a bin","Keeping a stream clean"],"answer":0,"hints":["Look for cutting trees without care or control."],"explanation":"The curriculum identifies indiscriminate tree cutting as an activity that destroys the environment."},
-        {"id":"B2-P02-Q22","skill_tag":"identify_damage","type":"short_answer","difficulty":1,"stem":"What name is commonly given to illegal mining activities in Ghana?","answer":["galamsey","illegal mining"],"hints":["The curriculum gives this Ghanaian term in brackets."],"explanation":"The curriculum names illegal mining activities as galamsey."},
-        {"id":"B2-P02-Q23","skill_tag":"identify_damage","type":"mcq","difficulty":1,"stem":"Which action can pollute a water body?","options":["Dumping rubbish or harmful waste into it","Keeping waste away from it","Planting trees nearby","Using a proper rubbish bin"],"answer":0,"hints":["Choose the action that makes the water dirty."],"explanation":"Putting rubbish or harmful waste in water pollutes the water body."},
-        {"id":"B2-P02-Q24","skill_tag":"identify_damage","type":"oral","difficulty":1,"stem":"Name one human activity from the curriculum that can damage the environment.","hints":["Think of tree cutting, galamsey, or water pollution."],"explanation":"Any one of the curriculum examples is acceptable.","rubric":{"criteria":[{"description":"Names one curriculum example accurately.","marks":1}]}},
-        {"id":"B2-P02-Q25","skill_tag":"identify_damage","type":"mcq","difficulty":1,"stem":"Which pair contains two harmful activities named in the curriculum?","options":["Galamsey and water pollution","Tree planting and stream cleaning","Recycling and gardening","Sweeping and sorting rubbish"],"answer":0,"hints":["Look for activities the lesson says destroy or pollute."],"explanation":"Illegal mining (galamsey) and pollution of water bodies are both listed as harmful."},
-        {"id":"B2-P02-Q26","skill_tag":"explain_effects","type":"mcq","difficulty":2,"stem":"Which problem can follow environmental destruction, according to the curriculum?","options":["Drought","More clean water everywhere","Every plant growing faster","No changes to weather"],"answer":0,"hints":["Think of a long time with too little rain."],"explanation":"Drought is one of the effects the curriculum lists."},
-        {"id":"B2-P02-Q27","skill_tag":"explain_effects","type":"mcq","difficulty":2,"stem":"Which event is listed as a possible effect of environmental destruction?","options":["Floods","A classroom lesson","A new book","A birthday song"],"answer":0,"hints":["It happens when water covers land that is usually dry."],"explanation":"Floods are among the effects named in the curriculum."},
-        {"id":"B2-P02-Q28","skill_tag":"explain_effects","type":"short_answer","difficulty":2,"stem":"Name one effect of environmental destruction from the curriculum besides floods.","answer":["drought","rainstorms","famine","heat","less rainfall","climate change"],"hints":["Choose from the list of weather and food problems."],"explanation":"The curriculum lists heat, rainstorms, less rainfall, drought, and famine among possible effects."},
-        {"id":"B2-P02-Q29","skill_tag":"explain_effects","type":"oral","difficulty":2,"stem":"Explain one way polluted water can harm living things that depend on it.","hints":["Think about drinking water or living in the water."],"explanation":"Polluted water can be unsafe for people and animals and can harm aquatic life.","rubric":{"criteria":[{"description":"Describes a plausible harm to people, animals, or aquatic life.","marks":1},{"description":"Connects the harm to polluted water.","marks":1}]}},
-        {"id":"B2-P02-Q30","skill_tag":"explain_effects","type":"oral","difficulty":2,"stem":"How could cutting many trees affect people and animals who need the environment?","hints":["Think about shade, shelter, and places where animals live."],"explanation":"Removing trees can reduce shelter and affect habitats and environmental balance.","rubric":{"criteria":[{"description":"Names a relevant effect such as loss of shelter or habitat.","marks":1},{"description":"Explains who or what is affected.","marks":1}]}},
-        {"id":"B2-P02-Q31","skill_tag":"explain_effects","type":"mcq","difficulty":2,"stem":"A long period with less rainfall can make it harder to grow food. Which listed effect may follow?","options":["Drought and famine","More shade from trees","Cleaner rivers automatically","More rainfall every day"],"answer":0,"hints":["Think about dry conditions and not enough food."],"explanation":"Less rainfall can contribute to drought, which may reduce food production and lead to famine."},
-        {"id":"B2-P02-Q32","skill_tag":"explain_effects","type":"oral","difficulty":2,"stem":"The curriculum names heat, floods, rainstorms, less rainfall, drought, and famine. Give two examples of effects it asks learners to discuss.","hints":["Choose any two from the list."],"explanation":"Any two listed environmental effects are acceptable.","rubric":{"criteria":[{"description":"Names one listed effect accurately.","marks":1},{"description":"Names a second distinct listed effect accurately.","marks":1}]}},
-        {"id":"B2-P02-Q33","skill_tag":"demonstrate_protection","type":"oral","difficulty":3,"stem":"Describe one safe action a learner can take to help keep a nearby stream clean.","hints":["Keep rubbish out of the water and tell a trusted adult about pollution."],"explanation":"Children can avoid littering, use bins, and alert responsible adults. They should not handle hazardous waste or polluted water.","rubric":{"criteria":[{"description":"Suggests a safe, practical protective action.","marks":1},{"description":"Avoids unsafe contact with polluted water or waste.","marks":1}]}},
-        {"id":"B2-P02-Q34","skill_tag":"demonstrate_protection","type":"mcq","difficulty":3,"stem":"A learner sees waste being dumped in a stream. What is the safest helpful response?","options":["Stay away from the waste and tell a trusted adult","Touch the waste to identify it","Drink the stream water","Jump into the stream to remove it"],"answer":0,"hints":["Choose the safe action for a child."],"explanation":"A child should avoid hazardous waste and alert a trusted adult who can respond safely."},
-        {"id":"B2-P02-Q35","skill_tag":"demonstrate_protection","type":"oral","difficulty":3,"stem":"Suggest one way a community can reduce unnecessary cutting of trees.","hints":["Think about protecting trees or planting replacements."],"explanation":"Communities can protect existing trees, plant trees, and use resources responsibly.","rubric":{"criteria":[{"description":"Suggests a practical tree-protection or replanting action.","marks":1},{"description":"Explains how it helps the environment.","marks":1}]}},
-        {"id":"B2-P02-Q36","skill_tag":"demonstrate_protection","type":"drawing","difficulty":3,"stem":"Draw a safe environment and an unsafe environment. Label one feature in each picture.","hints":["A clean area with protected trees can contrast with polluted water or a damaged area."],"explanation":"Represent a safe and unsafe environment using clear examples. Artistic quality is not graded.","rubric":{"criteria":[{"description":"Shows and labels one safe environmental feature.","marks":1},{"description":"Shows and labels one unsafe or damaged feature.","marks":1}]}},
-        {"id":"B2-P02-Q37","skill_tag":"demonstrate_protection","type":"oral","difficulty":3,"stem":"Explain why people should not pour harmful waste into rivers and streams.","hints":["Think about drinking water and living things in the water."],"explanation":"Pollution can make water unsafe and harm living things that depend on it.","rubric":{"criteria":[{"description":"Names a risk to people or animals.","marks":1},{"description":"Connects the risk to water pollution.","marks":1}]}},
-        {"id":"B2-P02-Q38","skill_tag":"demonstrate_protection","type":"oral","difficulty":4,"stem":"Your group is recording environmental problems for a class discussion. Name two harmful activities and one safe way to share your observations.","hints":["Use the curriculum examples and tell an adult or report to the class."],"explanation":"Learners may record observations about tree cutting, illegal mining, or water pollution and present them safely without approaching danger.","rubric":{"criteria":[{"description":"Names two curriculum-listed harmful activities.","marks":2},{"description":"Suggests a safe method of recording or presenting observations.","marks":1}]}},
-        {"id":"B2-P02-Q39","skill_tag":"demonstrate_protection","type":"oral","difficulty":4,"stem":"A friend says, 'Galamsey only changes the ground; it cannot affect the environment.' Explain why this claim needs care, using the curriculum's concerns about environmental damage.","hints":["Illegal mining is listed as harmful; discuss possible effects without claiming every result is automatic."],"explanation":"The curriculum identifies illegal mining as an activity that destroys the environment and lists broader environmental effects. Avoid asserting that any single activity automatically causes every listed effect.","rubric":{"criteria":[{"description":"Identifies galamsey as a harmful activity named in the curriculum.","marks":1},{"description":"Explains that environmental damage can affect land, water, or living things.","marks":1},{"description":"Avoids unsupported certainty about a particular effect.","marks":1}]}},
-        {"id":"B2-P02-Q40","skill_tag":"demonstrate_protection","type":"oral","difficulty":4,"stem":"Plan a short class message asking people to protect God's creation from tree destruction and water pollution. Include two actions people can take.","hints":["Keep the message respectful and suggest safe actions."],"explanation":"Create an age-appropriate message with two practical actions to care for trees and water.","rubric":{"criteria":[{"description":"Identifies tree destruction and water pollution as concerns.","marks":1},{"description":"Gives two practical protective actions.","marks":2},{"description":"Communicates respectfully and clearly.","marks":1}]}}
+      "curriculum_examples": [
+        "Indiscriminate cutting down of trees",
+        "Illegal mining (galamsey)",
+        "Pollution of water bodies",
+        "Climate change heat, floods, rainstorms, less rainfall, drought, famine"
       ],
-      "uncertain": ["The curriculum lists climate change heat, floods, rainstorms, less rainfall, drought, and famine as effects of environmental destruction; questions preserve this list but avoid asserting that every listed effect follows automatically from each activity."]
+      "spec": {
+        "skills": [
+          {
+            "tag": "recognise",
+            "description": "Recognise the examples and vocabulary in the lesson.",
+            "minQuestions": 2
+          },
+          {
+            "tag": "interpret",
+            "description": "Explain meanings and connections in an example.",
+            "minQuestions": 2
+          },
+          {
+            "tag": "apply",
+            "description": "Apply the lesson to a situation and justify a choice.",
+            "minQuestions": 2
+          }
+        ],
+        "difficulty_plan": {
+          "recall": 5,
+          "understanding": 7,
+          "application": 5,
+          "challenge": 3
+        },
+        "misconceptions": [
+          "Thinking galamsey helps water bodies",
+          "Believing cutting every tree has no consequence",
+          "Confusing a natural hazard with a human activity that can worsen environmental harm"
+        ],
+        "teacher_assessment_required": true,
+        "needsTeacherAssessment": true,
+        "difficultyPlan": "5 foundational, 7 simple-use, 5 application and 3 challenge questions."
+      },
+      "questions": [
+        {
+          "id": "B2-P02-Q21",
+          "skill_tag": "recognise",
+          "type": "mcq",
+          "difficulty": 1,
+          "stem": "Which activity does the curriculum identify as harmful to the environment?",
+          "options": [
+            "Indiscriminately cutting down trees",
+            "Planting and caring for trees",
+            "Putting litter in a bin",
+            "Keeping a stream clean"
+          ],
+          "answer": 0,
+          "hints": ["Look for cutting trees without care or control."],
+          "explanation": "The curriculum identifies indiscriminate tree cutting as an activity that destroys the environment."
+        },
+        {
+          "id": "B2-P02-Q22",
+          "skill_tag": "recognise",
+          "type": "short_answer",
+          "difficulty": 1,
+          "stem": "What name is commonly given to illegal mining activities in Ghana?",
+          "answer": ["galamsey", "illegal mining"],
+          "hints": ["The curriculum gives this Ghanaian term in brackets."],
+          "explanation": "The curriculum names illegal mining activities as galamsey."
+        },
+        {
+          "id": "B2-P02-Q23",
+          "skill_tag": "recognise",
+          "type": "mcq",
+          "difficulty": 1,
+          "stem": "Which action can pollute a water body?",
+          "options": [
+            "Dumping rubbish or harmful waste into it",
+            "Keeping waste away from it",
+            "Planting trees nearby",
+            "Using a proper rubbish bin"
+          ],
+          "answer": 0,
+          "hints": ["Choose the action that makes the water dirty."],
+          "explanation": "Putting rubbish or harmful waste in water pollutes the water body."
+        },
+        {
+          "id": "B2-P02-Q24",
+          "skill_tag": "recognise",
+          "type": "oral",
+          "difficulty": 1,
+          "stem": "Name one human activity from the curriculum that can damage the environment.",
+          "hints": ["Think of tree cutting, galamsey, or water pollution."],
+          "explanation": "Any one of the curriculum examples is acceptable.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Names one curriculum example accurately.",
+                "marks": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "B2-P02-Q25",
+          "skill_tag": "recognise",
+          "type": "mcq",
+          "difficulty": 1,
+          "stem": "Which pair contains two harmful activities named in the curriculum?",
+          "options": [
+            "Galamsey and water pollution",
+            "Tree planting and stream cleaning",
+            "Recycling and gardening",
+            "Sweeping and sorting rubbish"
+          ],
+          "answer": 0,
+          "hints": ["Look for activities the lesson says destroy or pollute."],
+          "explanation": "Illegal mining (galamsey) and pollution of water bodies are both listed as harmful."
+        },
+        {
+          "id": "B2-P02-Q26",
+          "skill_tag": "recognise",
+          "type": "mcq",
+          "difficulty": 2,
+          "stem": "Which problem can follow environmental destruction, according to the curriculum?",
+          "options": [
+            "Drought",
+            "More clean water everywhere",
+            "Every plant growing faster",
+            "No changes to weather"
+          ],
+          "answer": 0,
+          "hints": ["Think of a long time with too little rain."],
+          "explanation": "Drought is one of the effects the curriculum lists."
+        },
+        {
+          "id": "B2-P02-Q27",
+          "skill_tag": "recognise",
+          "type": "mcq",
+          "difficulty": 2,
+          "stem": "Which event is listed as a possible effect of environmental destruction?",
+          "options": ["Floods", "A classroom lesson", "A new book", "A birthday song"],
+          "answer": 0,
+          "hints": ["It happens when water covers land that is usually dry."],
+          "explanation": "Floods are among the effects named in the curriculum."
+        },
+        {
+          "id": "B2-P02-Q28",
+          "skill_tag": "recognise",
+          "type": "short_answer",
+          "difficulty": 2,
+          "stem": "Name one effect of environmental destruction from the curriculum besides floods.",
+          "answer": ["drought", "rainstorms", "famine", "heat", "less rainfall", "climate change"],
+          "hints": ["Choose from the list of weather and food problems."],
+          "explanation": "The curriculum lists heat, rainstorms, less rainfall, drought, and famine among possible effects."
+        },
+        {
+          "id": "B2-P02-Q29",
+          "skill_tag": "interpret",
+          "type": "oral",
+          "difficulty": 2,
+          "stem": "Explain one way polluted water can harm living things that depend on it.",
+          "hints": ["Think about drinking water or living in the water."],
+          "explanation": "Polluted water can be unsafe for people and animals and can harm aquatic life.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Describes a plausible harm to people, animals, or aquatic life.",
+                "marks": 1
+              },
+              {
+                "description": "Connects the harm to polluted water.",
+                "marks": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "B2-P02-Q30",
+          "skill_tag": "apply",
+          "type": "oral",
+          "difficulty": 2,
+          "stem": "How could cutting many trees affect people and animals who need the environment?",
+          "hints": ["Think about shade, shelter, and places where animals live."],
+          "explanation": "Removing trees can reduce shelter and affect habitats and environmental balance.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Names a relevant effect such as loss of shelter or habitat.",
+                "marks": 1
+              },
+              {
+                "description": "Explains who or what is affected.",
+                "marks": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "B2-P02-Q31",
+          "skill_tag": "recognise",
+          "type": "mcq",
+          "difficulty": 2,
+          "stem": "A long period with less rainfall can make it harder to grow food. Which listed effect may follow?",
+          "options": [
+            "Drought and famine",
+            "More shade from trees",
+            "Cleaner rivers automatically",
+            "More rainfall every day"
+          ],
+          "answer": 0,
+          "hints": ["Think about dry conditions and not enough food."],
+          "explanation": "Less rainfall can contribute to drought, which may reduce food production and lead to famine."
+        },
+        {
+          "id": "B2-P02-Q32",
+          "skill_tag": "interpret",
+          "type": "oral",
+          "difficulty": 2,
+          "stem": "The curriculum names heat, floods, rainstorms, less rainfall, drought, and famine. Give two examples of effects it asks learners to discuss.",
+          "hints": ["Choose any two from the list."],
+          "explanation": "Any two listed environmental effects are acceptable.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Names one listed effect accurately.",
+                "marks": 1
+              },
+              {
+                "description": "Names a second distinct listed effect accurately.",
+                "marks": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "B2-P02-Q33",
+          "skill_tag": "apply",
+          "type": "oral",
+          "difficulty": 3,
+          "stem": "Describe one safe action a learner can take to help keep a nearby stream clean.",
+          "hints": ["Keep rubbish out of the water and tell a trusted adult about pollution."],
+          "explanation": "Children can avoid littering, use bins, and alert responsible adults. They should not handle hazardous waste or polluted water.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Suggests a safe, practical protective action.",
+                "marks": 1
+              },
+              {
+                "description": "Avoids unsafe contact with polluted water or waste.",
+                "marks": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "B2-P02-Q34",
+          "skill_tag": "apply",
+          "type": "mcq",
+          "difficulty": 3,
+          "stem": "A learner sees waste being dumped in a stream. What is the safest helpful response?",
+          "options": [
+            "Stay away from the waste and tell a trusted adult",
+            "Touch the waste to identify it",
+            "Drink the stream water",
+            "Jump into the stream to remove it"
+          ],
+          "answer": 0,
+          "hints": ["Choose the safe action for a child."],
+          "explanation": "A child should avoid hazardous waste and alert a trusted adult who can respond safely."
+        },
+        {
+          "id": "B2-P02-Q35",
+          "skill_tag": "apply",
+          "type": "oral",
+          "difficulty": 3,
+          "stem": "Suggest one way a community can reduce unnecessary cutting of trees.",
+          "hints": ["Think about protecting trees or planting replacements."],
+          "explanation": "Communities can protect existing trees, plant trees, and use resources responsibly.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Suggests a practical tree-protection or replanting action.",
+                "marks": 1
+              },
+              {
+                "description": "Explains how it helps the environment.",
+                "marks": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "B2-P02-Q36",
+          "skill_tag": "apply",
+          "type": "drawing",
+          "difficulty": 3,
+          "stem": "Draw a safe environment and an unsafe environment. Label one feature in each picture.",
+          "hints": [
+            "A clean area with protected trees can contrast with polluted water or a damaged area."
+          ],
+          "explanation": "Represent a safe and unsafe environment using clear examples. Artistic quality is not graded.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Shows and labels one safe environmental feature.",
+                "marks": 1
+              },
+              {
+                "description": "Shows and labels one unsafe or damaged feature.",
+                "marks": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "B2-P02-Q37",
+          "skill_tag": "interpret",
+          "type": "oral",
+          "difficulty": 3,
+          "stem": "Explain why people should not pour harmful waste into rivers and streams.",
+          "hints": ["Think about drinking water and living things in the water."],
+          "explanation": "Pollution can make water unsafe and harm living things that depend on it.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Names a risk to people or animals.",
+                "marks": 1
+              },
+              {
+                "description": "Connects the risk to water pollution.",
+                "marks": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "B2-P02-Q38",
+          "skill_tag": "interpret",
+          "type": "oral",
+          "difficulty": 4,
+          "stem": "Your group is recording environmental problems for a class discussion. Name two harmful activities and one safe way to share your observations.",
+          "hints": ["Use the curriculum examples and tell an adult or report to the class."],
+          "explanation": "Learners may record observations about tree cutting, illegal mining, or water pollution and present them safely without approaching danger.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Names two curriculum-listed harmful activities.",
+                "marks": 2
+              },
+              {
+                "description": "Suggests a safe method of recording or presenting observations.",
+                "marks": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "B2-P02-Q39",
+          "skill_tag": "interpret",
+          "type": "oral",
+          "difficulty": 4,
+          "stem": "A friend says, 'Galamsey only changes the ground; it cannot affect the environment.' Explain why this claim needs care, using the curriculum's concerns about environmental damage.",
+          "hints": [
+            "Illegal mining is listed as harmful; discuss possible effects without claiming every result is automatic."
+          ],
+          "explanation": "The curriculum identifies illegal mining as an activity that destroys the environment and lists broader environmental effects. Avoid asserting that any single activity automatically causes every listed effect.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Identifies galamsey as a harmful activity named in the curriculum.",
+                "marks": 1
+              },
+              {
+                "description": "Explains that environmental damage can affect land, water, or living things.",
+                "marks": 1
+              },
+              {
+                "description": "Avoids unsupported certainty about a particular effect.",
+                "marks": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "B2-P02-Q40",
+          "skill_tag": "recognise",
+          "type": "oral",
+          "difficulty": 4,
+          "stem": "Plan a short class message asking people to protect God's creation from tree destruction and water pollution. Include two actions people can take.",
+          "hints": ["Keep the message respectful and suggest safe actions."],
+          "explanation": "Create an age-appropriate message with two practical actions to care for trees and water.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Identifies tree destruction and water pollution as concerns.",
+                "marks": 1
+              },
+              {
+                "description": "Gives two practical protective actions.",
+                "marks": 2
+              },
+              {
+                "description": "Communicates respectfully and clearly.",
+                "marks": 1
+              }
+            ]
+          }
+        }
+      ],
+      "uncertain": [
+        "The curriculum lists climate change heat, floods, rainstorms, less rainfall, drought, and famine as effects of environmental destruction; questions preserve this list but avoid asserting that every listed effect follows automatically from each activity."
+      ],
+      "source_page": 8
     },
     {
       "code": "B2.1.3.1.1",
       "strand": "God, His Creation and Attributes",
-      "sub_strand": "Purpose of God's Creation",
+      "sub_strand": "The Purpose of God's Creation",
       "content_standard": "B2.1.3.1. Appreciate things created by God",
       "objective": "Explain the purpose of God's creation.",
-      "curriculum_examples": ["Discuss the usefulness of plants and animals to humankind", "Identify uses of animals and plants", "Draw and colour useful plants and animals"],
-      "spec": {"skills":[{"tag":"identify_uses","description":"Identify useful plants and animals and their uses to people.","minQuestions":7},{"tag":"explain_usefulness","description":"Explain how plants and animals support people's needs and daily life.","minQuestions":7},{"tag":"represent_creation","description":"Represent useful plants and animals and explain their contribution.","minQuestions":6}],"difficulty_plan":{"recall":5,"understanding":7,"application":5,"challenge":3},"misconceptions":["Thinking plants and animals have no use to people","Believing every animal is safe to handle","Confusing usefulness with permission to harm or waste living things"],"teacher_assessment_required":true},
-      "questions": [
-        {"id":"B2-P02-Q41","skill_tag":"identify_uses","type":"mcq","difficulty":1,"stem":"Which plant is commonly used as food?","options":["Maize","A plastic chair","A car tyre","A glass bottle"],"answer":0,"hints":["It is a crop that people cook and eat."],"explanation":"Maize is a plant crop used as food."},
-        {"id":"B2-P02-Q42","skill_tag":"identify_uses","type":"short_answer","difficulty":1,"stem":"Name one plant people use for food.","answer":["maize","cassava","yam","plantain","rice","cocoyam","tomato"],"hints":["Think of a crop eaten in Ghana."],"explanation":"Many plants provide food. Any suitable example is acceptable."},
-        {"id":"B2-P02-Q43","skill_tag":"identify_uses","type":"mcq","difficulty":1,"stem":"Which animal gives people eggs?","options":["A hen","A tree","A stone","A river"],"answer":0,"hints":["It is a bird kept on some farms."],"explanation":"Hens can provide eggs, an example of an animal's usefulness to people."},
-        {"id":"B2-P02-Q44","skill_tag":"identify_uses","type":"short_answer","difficulty":1,"stem":"Name one useful thing people can get from a cow.","answer":["milk","meat","leather","manure"],"hints":["Think of food or another product from a farm animal."],"explanation":"Cows can provide milk, meat, leather, or manure, when cared for and used responsibly."},
-        {"id":"B2-P02-Q45","skill_tag":"identify_uses","type":"oral","difficulty":1,"stem":"Name one useful plant and one useful animal, then say one use for each.","hints":["For example, cassava for food and a hen for eggs."],"explanation":"Give one plant and one animal and connect each with a sensible use.","rubric":{"criteria":[{"description":"Names a useful plant and gives a relevant use.","marks":2},{"description":"Names a useful animal and gives a relevant use.","marks":2}]}},
-        {"id":"B2-P02-Q46","skill_tag":"explain_usefulness","type":"mcq","difficulty":2,"stem":"How can trees be useful to people?","options":["They can provide fruit, shade, or materials","They make people stop needing air","They are only useful when cut down carelessly","They replace all water"],"answer":0,"hints":["Think about fruit trees and shade on a hot day."],"explanation":"Trees can provide fruit, shade, and useful materials. They should be cared for responsibly."},
-        {"id":"B2-P02-Q47","skill_tag":"explain_usefulness","type":"oral","difficulty":2,"stem":"Explain how a plant such as maize or cassava is useful to a family.","hints":["Think about meals made from crops."],"explanation":"Crops provide food and contribute to family nutrition.","rubric":{"criteria":[{"description":"Identifies the plant as a food crop or names a food made from it.","marks":1},{"description":"Explains its usefulness to the family.","marks":1}]}},
-        {"id":"B2-P02-Q48","skill_tag":"explain_usefulness","type":"mcq","difficulty":2,"stem":"A farmer keeps bees. Which useful product can bees help provide?","options":["Honey","School desks","Plastic bottles","Shoes"],"answer":0,"hints":["It is a sweet food made by bees."],"explanation":"Bees produce honey, a useful product. Bees also help pollinate many plants."},
-        {"id":"B2-P02-Q49","skill_tag":"explain_usefulness","type":"oral","difficulty":2,"stem":"Describe one way animals can help people with food or farm work.","hints":["Think about eggs, milk, meat, or an animal helping on a farm."],"explanation":"Animals can provide food or assist with work, depending on the animal and local practice.","rubric":{"criteria":[{"description":"Names a plausible animal use.","marks":1},{"description":"Explains how it helps people.","marks":1}]}},
-        {"id":"B2-P02-Q50","skill_tag":"explain_usefulness","type":"short_answer","difficulty":2,"stem":"What do some plants provide that people need to breathe?","answer":["oxygen","air"],"hints":["Plants help keep the air suitable for life."],"explanation":"Plants contribute oxygen to the air, which people and animals need for breathing."},
-        {"id":"B2-P02-Q51","skill_tag":"explain_usefulness","type":"oral","difficulty":2,"stem":"How can plants and animals together help provide food for people? Give one example of each.","hints":["A crop and a farm animal can both provide food."],"explanation":"Plants such as maize provide crop foods; animals such as hens provide eggs or meat.","rubric":{"criteria":[{"description":"Gives a plant food example.","marks":1},{"description":"Gives an animal food example.","marks":1},{"description":"Explains that both contribute to people's food.","marks":1}]}},
-        {"id":"B2-P02-Q52","skill_tag":"explain_usefulness","type":"mcq","difficulty":2,"stem":"Which statement best describes why the curriculum asks learners to study useful plants and animals?","options":["To understand how creation supports human life","To learn that plants and animals should be wasted","To prove that people do not need nature","To encourage children to harm animals"],"answer":0,"hints":["The indicator asks about usefulness to humankind."],"explanation":"The curriculum directs learners to discuss the usefulness of plants and animals to people."},
-        {"id":"B2-P02-Q53","skill_tag":"represent_creation","type":"oral","difficulty":3,"stem":"Choose one useful plant and explain how you could show its usefulness in a drawing.","hints":["You might draw a food crop beside a meal made from it."],"explanation":"Connect the plant representation to a use such as food, shade, or material.","rubric":{"criteria":[{"description":"Names a plant and a relevant use.","marks":1},{"description":"Describes a drawing that makes the use clear.","marks":1}]}},
-        {"id":"B2-P02-Q54","skill_tag":"represent_creation","type":"drawing","difficulty":3,"stem":"Draw one useful animal and show or label one way it helps people.","hints":["A hen with eggs or a cow with milk are examples."],"explanation":"Represent an animal and its usefulness. Artistic skill is not assessed.","rubric":{"criteria":[{"description":"Draws or clearly identifies a useful animal.","marks":1},{"description":"Shows or labels a valid use.","marks":1}]}},
-        {"id":"B2-P02-Q55","skill_tag":"represent_creation","type":"oral","difficulty":3,"stem":"A classmate says trees are useful only after they are cut down. Give two other useful roles of living trees.","hints":["Think about fruit, shade, habitats, or helping the environment."],"explanation":"Living trees can provide shade, fruit, habitats, and environmental benefits without being cut down.","rubric":{"criteria":[{"description":"Names one useful role of a living tree.","marks":1},{"description":"Names a second distinct role.","marks":1}]}},
-        {"id":"B2-P02-Q56","skill_tag":"represent_creation","type":"oral","difficulty":3,"stem":"Why should people care for useful animals instead of being cruel to them?","hints":["They are living things and can support people's needs."],"explanation":"Animals are living things that may provide food or other benefits; responsible care avoids unnecessary suffering.","rubric":{"criteria":[{"description":"Recognises animals as living things deserving care.","marks":1},{"description":"Mentions a valid usefulness to people.","marks":1}]}},
-        {"id":"B2-P02-Q57","skill_tag":"represent_creation","type":"drawing","difficulty":3,"stem":"Make a two-part picture: one useful plant and one useful animal. Label one benefit from each.","hints":["Show a plant food and an animal product or service."],"explanation":"Show and label a useful plant and a useful animal and connect each to a benefit.","rubric":{"criteria":[{"description":"Shows and labels a plant with a valid benefit.","marks":2},{"description":"Shows and labels an animal with a valid benefit.","marks":2}]}},
-        {"id":"B2-P02-Q58","skill_tag":"represent_creation","type":"oral","difficulty":4,"stem":"Explain how a plant and an animal can each help meet people's needs, and give one example of caring for each responsibly.","hints":["Match each example to a need and a safe care action."],"explanation":"Connect one plant and one animal to human usefulness while describing responsible stewardship.","rubric":{"criteria":[{"description":"Explains a useful role of a plant.","marks":1},{"description":"Explains a useful role of an animal.","marks":1},{"description":"Gives a responsible care action for both or clearly for each.","marks":2}]}},
-        {"id":"B2-P02-Q59","skill_tag":"represent_creation","type":"oral","difficulty":4,"stem":"Your group is making a class display about useful creation. Choose a plant and an animal and explain why neither should be wasted or treated carelessly.","hints":["Consider their usefulness and their value as living things."],"explanation":"Explain both usefulness and care for living things, in line with the curriculum's appreciation and caring practices.","rubric":{"criteria":[{"description":"Gives one valid plant example and its use.","marks":1},{"description":"Gives one valid animal example and its use.","marks":1},{"description":"Explains responsible care or avoiding waste.","marks":1}]}},
-        {"id":"B2-P02-Q60","skill_tag":"represent_creation","type":"oral","difficulty":4,"stem":"Give a short presentation explaining the purpose of God's creation using one useful plant and one useful animal as examples.","hints":["Name each example, say how it is useful, and connect your answer to the curriculum."],"explanation":"Use the indicator's focus: discuss usefulness of plants and animals to humankind, with respectful appreciation.","rubric":{"criteria":[{"description":"Names a useful plant and explains its contribution.","marks":2},{"description":"Names a useful animal and explains its contribution.","marks":2},{"description":"Connects the examples to appreciation of creation.","marks":1}]}}
+      "curriculum_examples": [
+        "Discuss the usefulness of plants and animals to humankind",
+        "Identify uses of animals and plants",
+        "Draw and colour useful plants and animals"
       ],
-      "uncertain": ["The curriculum asks learners to explain the purpose of God's creation and specifically directs discussion of plants' and animals' usefulness to humankind; questions follow those stated exemplars without extending them into unsupported claims about a single exclusive purpose."]
+      "spec": {
+        "skills": [
+          {
+            "tag": "recognise",
+            "description": "Recognise the examples and vocabulary in the lesson.",
+            "minQuestions": 2
+          },
+          {
+            "tag": "interpret",
+            "description": "Explain meanings and connections in an example.",
+            "minQuestions": 2
+          },
+          {
+            "tag": "apply",
+            "description": "Apply the lesson to a situation and justify a choice.",
+            "minQuestions": 2
+          },
+          {
+            "tag": "demonstrate",
+            "description": "Communicate understanding through a performance, drawing or demonstration.",
+            "minQuestions": 2
+          }
+        ],
+        "difficulty_plan": {
+          "recall": 5,
+          "understanding": 7,
+          "application": 5,
+          "challenge": 3
+        },
+        "misconceptions": [
+          "Thinking plants and animals have no use to people",
+          "Believing every animal is safe to handle",
+          "Confusing usefulness with permission to harm or waste living things"
+        ],
+        "teacher_assessment_required": true,
+        "needsTeacherAssessment": true,
+        "difficultyPlan": "5 foundational, 7 simple-use, 5 application and 3 challenge questions."
+      },
+      "questions": [
+        {
+          "id": "B2-P02-Q41",
+          "skill_tag": "recognise",
+          "type": "mcq",
+          "difficulty": 1,
+          "stem": "Which plant is commonly used as food?",
+          "options": ["Maize", "A plastic chair", "A car tyre", "A glass bottle"],
+          "answer": 0,
+          "hints": ["It is a crop that people cook and eat."],
+          "explanation": "Maize is a plant crop used as food."
+        },
+        {
+          "id": "B2-P02-Q42",
+          "skill_tag": "recognise",
+          "type": "short_answer",
+          "difficulty": 1,
+          "stem": "Name one plant people use for food.",
+          "answer": ["maize", "cassava", "yam", "plantain", "rice", "cocoyam", "tomato"],
+          "hints": ["Think of a crop eaten in Ghana."],
+          "explanation": "Many plants provide food. Any suitable example is acceptable."
+        },
+        {
+          "id": "B2-P02-Q43",
+          "skill_tag": "recognise",
+          "type": "mcq",
+          "difficulty": 1,
+          "stem": "Which animal gives people eggs?",
+          "options": ["A hen", "A tree", "A stone", "A river"],
+          "answer": 0,
+          "hints": ["It is a bird kept on some farms."],
+          "explanation": "Hens can provide eggs, an example of an animal's usefulness to people."
+        },
+        {
+          "id": "B2-P02-Q44",
+          "skill_tag": "recognise",
+          "type": "short_answer",
+          "difficulty": 1,
+          "stem": "Name one useful thing people can get from a cow.",
+          "answer": ["milk", "meat", "leather", "manure"],
+          "hints": ["Think of food or another product from a farm animal."],
+          "explanation": "Cows can provide milk, meat, leather, or manure, when cared for and used responsibly."
+        },
+        {
+          "id": "B2-P02-Q45",
+          "skill_tag": "recognise",
+          "type": "oral",
+          "difficulty": 1,
+          "stem": "Name one useful plant and one useful animal, then say one use for each.",
+          "hints": ["For example, cassava for food and a hen for eggs."],
+          "explanation": "Give one plant and one animal and connect each with a sensible use.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Names a useful plant and gives a relevant use.",
+                "marks": 2
+              },
+              {
+                "description": "Names a useful animal and gives a relevant use.",
+                "marks": 2
+              }
+            ]
+          }
+        },
+        {
+          "id": "B2-P02-Q46",
+          "skill_tag": "apply",
+          "type": "mcq",
+          "difficulty": 2,
+          "stem": "How can trees be useful to people?",
+          "options": [
+            "They can provide fruit, shade, or materials",
+            "They make people stop needing air",
+            "They are only useful when cut down carelessly",
+            "They replace all water"
+          ],
+          "answer": 0,
+          "hints": ["Think about fruit trees and shade on a hot day."],
+          "explanation": "Trees can provide fruit, shade, and useful materials. They should be cared for responsibly."
+        },
+        {
+          "id": "B2-P02-Q47",
+          "skill_tag": "apply",
+          "type": "oral",
+          "difficulty": 2,
+          "stem": "Explain how a plant such as maize or cassava is useful to a family.",
+          "hints": ["Think about meals made from crops."],
+          "explanation": "Crops provide food and contribute to family nutrition.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Identifies the plant as a food crop or names a food made from it.",
+                "marks": 1
+              },
+              {
+                "description": "Explains its usefulness to the family.",
+                "marks": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "B2-P02-Q48",
+          "skill_tag": "recognise",
+          "type": "mcq",
+          "difficulty": 2,
+          "stem": "A farmer keeps bees. Which useful product can bees help provide?",
+          "options": ["Honey", "School desks", "Plastic bottles", "Shoes"],
+          "answer": 0,
+          "hints": ["It is a sweet food made by bees."],
+          "explanation": "Bees produce honey, a useful product. Bees also help pollinate many plants."
+        },
+        {
+          "id": "B2-P02-Q49",
+          "skill_tag": "interpret",
+          "type": "oral",
+          "difficulty": 2,
+          "stem": "Describe one way animals can help people with food or farm work.",
+          "hints": ["Think about eggs, milk, meat, or an animal helping on a farm."],
+          "explanation": "Animals can provide food or assist with work, depending on the animal and local practice.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Names a plausible animal use.",
+                "marks": 1
+              },
+              {
+                "description": "Explains how it helps people.",
+                "marks": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "B2-P02-Q50",
+          "skill_tag": "recognise",
+          "type": "short_answer",
+          "difficulty": 2,
+          "stem": "What do some plants provide that people need to breathe?",
+          "answer": ["oxygen", "air"],
+          "hints": ["Plants help keep the air suitable for life."],
+          "explanation": "Plants contribute oxygen to the air, which people and animals need for breathing."
+        },
+        {
+          "id": "B2-P02-Q51",
+          "skill_tag": "apply",
+          "type": "oral",
+          "difficulty": 2,
+          "stem": "How can plants and animals together help provide food for people? Give one example of each.",
+          "hints": ["A crop and a farm animal can both provide food."],
+          "explanation": "Plants such as maize provide crop foods; animals such as hens provide eggs or meat.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Gives a plant food example.",
+                "marks": 1
+              },
+              {
+                "description": "Gives an animal food example.",
+                "marks": 1
+              },
+              {
+                "description": "Explains that both contribute to people's food.",
+                "marks": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "B2-P02-Q52",
+          "skill_tag": "interpret",
+          "type": "mcq",
+          "difficulty": 2,
+          "stem": "Which statement best describes why the curriculum asks learners to study useful plants and animals?",
+          "options": [
+            "To understand how creation supports human life",
+            "To learn that plants and animals should be wasted",
+            "To prove that people do not need nature",
+            "To encourage children to harm animals"
+          ],
+          "answer": 0,
+          "hints": ["The indicator asks about usefulness to humankind."],
+          "explanation": "The curriculum directs learners to discuss the usefulness of plants and animals to people."
+        },
+        {
+          "id": "B2-P02-Q53",
+          "skill_tag": "interpret",
+          "type": "oral",
+          "difficulty": 3,
+          "stem": "Choose one useful plant and explain how you could show its usefulness in a drawing.",
+          "hints": ["You might draw a food crop beside a meal made from it."],
+          "explanation": "Connect the plant representation to a use such as food, shade, or material.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Names a plant and a relevant use.",
+                "marks": 1
+              },
+              {
+                "description": "Describes a drawing that makes the use clear.",
+                "marks": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "B2-P02-Q54",
+          "skill_tag": "demonstrate",
+          "type": "drawing",
+          "difficulty": 3,
+          "stem": "Draw one useful animal and show or label one way it helps people.",
+          "hints": ["A hen with eggs or a cow with milk are examples."],
+          "explanation": "Represent an animal and its usefulness. Artistic skill is not assessed.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Draws or clearly identifies a useful animal.",
+                "marks": 1
+              },
+              {
+                "description": "Shows or labels a valid use.",
+                "marks": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "B2-P02-Q55",
+          "skill_tag": "apply",
+          "type": "oral",
+          "difficulty": 3,
+          "stem": "A classmate says trees are useful only after they are cut down. Give two other useful roles of living trees.",
+          "hints": ["Think about fruit, shade, habitats, or helping the environment."],
+          "explanation": "Living trees can provide shade, fruit, habitats, and environmental benefits without being cut down.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Names one useful role of a living tree.",
+                "marks": 1
+              },
+              {
+                "description": "Names a second distinct role.",
+                "marks": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "B2-P02-Q56",
+          "skill_tag": "interpret",
+          "type": "oral",
+          "difficulty": 3,
+          "stem": "Why should people care for useful animals instead of being cruel to them?",
+          "hints": ["They are living things and can support people's needs."],
+          "explanation": "Animals are living things that may provide food or other benefits; responsible care avoids unnecessary suffering.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Recognises animals as living things deserving care.",
+                "marks": 1
+              },
+              {
+                "description": "Mentions a valid usefulness to people.",
+                "marks": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "B2-P02-Q57",
+          "skill_tag": "demonstrate",
+          "type": "drawing",
+          "difficulty": 3,
+          "stem": "Make a two-part picture: one useful plant and one useful animal. Label one benefit from each.",
+          "hints": ["Show a plant food and an animal product or service."],
+          "explanation": "Show and label a useful plant and a useful animal and connect each to a benefit.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Shows and labels a plant with a valid benefit.",
+                "marks": 2
+              },
+              {
+                "description": "Shows and labels an animal with a valid benefit.",
+                "marks": 2
+              }
+            ]
+          }
+        },
+        {
+          "id": "B2-P02-Q58",
+          "skill_tag": "interpret",
+          "type": "oral",
+          "difficulty": 4,
+          "stem": "Explain how a plant and an animal can each help meet people's needs, and give one example of caring for each responsibly.",
+          "hints": ["Match each example to a need and a safe care action."],
+          "explanation": "Connect one plant and one animal to human usefulness while describing responsible stewardship.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Explains a useful role of a plant.",
+                "marks": 1
+              },
+              {
+                "description": "Explains a useful role of an animal.",
+                "marks": 1
+              },
+              {
+                "description": "Gives a responsible care action for both or clearly for each.",
+                "marks": 2
+              }
+            ]
+          }
+        },
+        {
+          "id": "B2-P02-Q59",
+          "skill_tag": "interpret",
+          "type": "oral",
+          "difficulty": 4,
+          "stem": "Your group is making a class display about useful creation. Choose a plant and an animal and explain why neither should be wasted or treated carelessly.",
+          "hints": ["Consider their usefulness and their value as living things."],
+          "explanation": "Explain both usefulness and care for living things, in line with the curriculum's appreciation and caring practices.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Gives one valid plant example and its use.",
+                "marks": 1
+              },
+              {
+                "description": "Gives one valid animal example and its use.",
+                "marks": 1
+              },
+              {
+                "description": "Explains responsible care or avoiding waste.",
+                "marks": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "B2-P02-Q60",
+          "skill_tag": "interpret",
+          "type": "oral",
+          "difficulty": 4,
+          "stem": "Give a short presentation explaining the purpose of God's creation using one useful plant and one useful animal as examples.",
+          "hints": [
+            "Name each example, say how it is useful, and connect your answer to the curriculum."
+          ],
+          "explanation": "Use the indicator's focus: discuss usefulness of plants and animals to humankind, with respectful appreciation.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Names a useful plant and explains its contribution.",
+                "marks": 2
+              },
+              {
+                "description": "Names a useful animal and explains its contribution.",
+                "marks": 2
+              },
+              {
+                "description": "Connects the examples to appreciation of creation.",
+                "marks": 1
+              }
+            ]
+          }
+        }
+      ],
+      "uncertain": [
+        "The curriculum asks learners to explain the purpose of God's creation and specifically directs discussion of plants' and animals' usefulness to humankind; questions follow those stated exemplars without extending them into unsupported claims about a single exclusive purpose."
+      ],
+      "source_page": 8
     }
   ],
-  "progress":{"this_part_indicators":3,"this_part_questions":60,"cumulative_indicators_completed":13,"cumulative_questions_written":260,"previous_parts":["rme-basic2-part01.json"],"remaining_indicators_from_prior_inventory":65,"remaining_questions_at_20_per_indicator":1300,"next_indicator":"B2.2.1.1","complete":false}
+  "progress": {
+    "this_part_indicators": 3,
+    "this_part_questions": 60,
+    "cumulative_indicators_completed": 13,
+    "cumulative_questions_written": 260,
+    "previous_parts": ["rme-basic2-part01.json"],
+    "remaining_indicators_from_prior_inventory": 65,
+    "remaining_questions_at_20_per_indicator": 1300,
+    "next_indicator": "B2.2.1.1",
+    "complete": false
+  }
 }

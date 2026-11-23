@@ -4,6 +4,7 @@ import { canTeach } from '../backendAccess';
 import type { User } from '../data';
 import { computingIndicators, computingQuestions } from './computingBank';
 import { historyIndicators, historyQuestions } from './historyBank';
+import { rmeIndicators, rmeQuestions } from './primaryCurriculumBank';
 import { indicatorLessonId } from './indicatorLessonId';
 import { naccaHubLessons, naccaLevels, naccaSubjects } from './naccaBank';
 import { getLessonPracticeIndicator } from './practiceNavigation';
@@ -13,6 +14,14 @@ const serverLessons = new Set(grading.indicators.map((i) => indicatorLessonId(i.
 const auto = new Set(['mcq', 'short_answer', 'numeric']);
 
 describe.each([
+  {
+    subject: 'Religious and Moral Education',
+    firstGrade: 1,
+    counts: [9, 13, 14, 13, 15, 14],
+    indicators: rmeIndicators,
+    questions: rmeQuestions,
+    subjectId: 'sub_rme',
+  },
   {
     subject: 'Computing',
     firstGrade: 4,

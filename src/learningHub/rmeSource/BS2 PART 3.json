@@ -6,59 +6,896 @@
     {
       "code": "B2.2.1.1.1",
       "indicator": "Explain the importance of worship.",
-      "specification": {"skills": ["explain", "identify", "communicate"], "difficulty": "basic to intermediate", "context": "home, school, church, mosque, shrine", "formats": ["MCQ", "short_answer", "oral", "matching", "scenario", "performance"]},
+      "specification": {
+        "skills": ["explain", "identify", "communicate"],
+        "difficulty": "basic to intermediate",
+        "context": "home, school, church, mosque, shrine",
+        "formats": ["MCQ", "short_answer", "oral", "matching", "scenario", "performance"]
+      },
       "questions": [
-        {"id":"B2.2.1.1.1-Q01","type":"mcq","skill":"identify","difficulty":"easy","prompt":"Which activity is an example of worship?","options":["Praying to God","Littering the compound","Taking another person's food","Damaging a classroom book"],"answer":"Praying to God","hint":"Think of an activity through which people serve or honour God.","explanation":"Prayer is one way people worship and serve God.","misconception":"Believing any activity done in a religious building is automatically worship."},
-        {"id":"B2.2.1.1.1-Q02","type":"mcq","skill":"understand","difficulty":"easy","prompt":"According to the curriculum, why do people worship God?","options":["It is a command from God to serve Him","To avoid helping others","To make people quarrel","To spoil the environment"],"answer":"It is a command from God to serve Him","hint":"Recall the reason discussed in class.","explanation":"The curriculum gives serving God as a command as an importance of worship.","misconception":"Thinking worship is only a social activity and has no religious purpose."},
-        {"id":"B2.2.1.1.1-Q03","type":"mcq","skill":"apply","difficulty":"easy","prompt":"Ama's family prays together before starting the day. What are they doing?","options":["Worshipping","Polluting","Arguing","Trading"],"answer":"Worshipping","hint":"Prayer is a form of religious practice.","explanation":"The curriculum identifies worship at home as a religious activity.","misconception":"Thinking worship happens only in a church, mosque or shrine."},
-        {"id":"B2.2.1.1.1-Q04","type":"mcq","skill":"identify","difficulty":"easy","prompt":"Where may people worship, according to the learning indicator?","options":["At home or in a place of worship","Only at a market","Only on a football field","Only in a shop"],"answer":"At home or in a place of worship","hint":"Remember the examples: home, church, mosque and shrine.","explanation":"Worship may take place at home or at a religious place such as a church, mosque or shrine.","misconception":"Assuming that worship is restricted to one location."},
-        {"id":"B2.2.1.1.1-Q05","type":"mcq","skill":"interpret","difficulty":"medium","prompt":"A learner quietly watches people worship and listens respectfully. Which value is the learner showing?","options":["Respect","Carelessness","Greed","Dishonesty"],"answer":"Respect","hint":"Choose the attitude that honours other people's religious practice.","explanation":"Respect means treating other people's worship and beliefs with consideration.","misconception":"Confusing respect with agreeing with every belief."},
-        {"id":"B2.2.1.1.1-Q06","type":"short_answer","skill":"explain","difficulty":"easy","prompt":"Give one reason why people worship God.","answer":"It is a command from God to serve Him.","hint":"Use the reason stated in the curriculum.","explanation":"Worship is important because serving God is presented as a command from God.","misconception":"Giving an unrelated reason such as worship being a way to get material goods."},
-        {"id":"B2.2.1.1.1-Q07","type":"short_answer","skill":"recall","difficulty":"easy","prompt":"Name one place where a person or family may worship.","answer":"At home, church, mosque or shrine (any one).","hint":"Think of places mentioned in the indicator exemplars.","explanation":"The curriculum names worship at home and in religious places including church, mosque and shrine.","misconception":"Naming only a place of worship and excluding home."},
-        {"id":"B2.2.1.1.1-Q08","type":"short_answer","skill":"explain","difficulty":"medium","prompt":"In one sentence, explain why a family might worship together.","answer":"A family may worship together to serve God and obey God's command.","hint":"Connect worship with serving God.","explanation":"A clear response links family worship with serving God.","misconception":"Saying the only purpose is to show off to other people."},
-        {"id":"B2.2.1.1.1-Q09","type":"oral","skill":"communicate","difficulty":"easy","prompt":"Say one respectful sentence about why worship is important to you or to people in your community.","answer":"Accept a relevant, respectful explanation, such as: 'People worship to serve God.'","hint":"Speak clearly and give one reason.","explanation":"The learner expresses an appropriate reason for worship in their own words.","misconception":"Mocking or dismissing another person's worship."},
-        {"id":"B2.2.1.1.1-Q10","type":"matching","skill":"associate","difficulty":"easy","prompt":"Match the activity to the category: (A) praying to God; (B) throwing rubbish into a river. Categories: worship; harmful action.","answer":"A—worship; B—harmful action.","hint":"Which activity serves or honours God?","explanation":"Prayer is worship; polluting water is a harmful action, not worship.","misconception":"Classifying every action done by a religious person as worship."},
-        {"id":"B2.2.1.1.1-Q11","type":"scenario","skill":"apply","difficulty":"medium","prompt":"Kofi's friend invites him to observe a worship service. What should Kofi do to show respect while there? Give one action.","answer":"Listen quietly, follow appropriate guidance, or avoid disturbing worshippers.","hint":"Think about respectful behaviour when observing others.","explanation":"Respectful listening and not disturbing worshippers are appropriate ways to behave.","misconception":"Thinking respect requires taking part in a practice against one's own family's wishes."},
-        {"id":"B2.2.1.1.1-Q12","type":"mcq","skill":"reason","difficulty":"medium","prompt":"Which statement best explains the importance of worship?","options":["Worship is a way to serve God","Worship is a reason to insult others","Worship means refusing to care for people","Worship is the same as damaging property"],"answer":"Worship is a way to serve God","hint":"Choose the statement that reflects the curriculum's example.","explanation":"Serving God is the reason for worship given in the curriculum.","misconception":"Confusing worship with harmful or disrespectful behaviour."},
-        {"id":"B2.2.1.1.1-Q13","type":"short_answer","skill":"compare","difficulty":"medium","prompt":"State one difference between worshipping at home and worshipping in a church, mosque or shrine.","answer":"The location differs; both can be ways people worship God.","hint":"Compare where each activity happens.","explanation":"The key distinction is location; both settings can host worship.","misconception":"Claiming that worship at home cannot be genuine worship."},
-        {"id":"B2.2.1.1.1-Q14","type":"oral","skill":"listen_and_respond","difficulty":"medium","prompt":"Listen to your teacher name a place of worship. Then say one way learners should behave respectfully when visiting it.","answer":"Accept a relevant response such as listening, following instructions or not disturbing others.","hint":"Think of considerate behaviour in a religious place.","explanation":"The learner demonstrates understanding of respectful observation.","misconception":"Assuming visitors may behave noisily because they are only observing."},
-        {"id":"B2.2.1.1.1-Q15","type":"mcq","skill":"classify","difficulty":"medium","prompt":"Which choice shows worship taking place at home?","options":["A family prays together","A child tears a neighbour's book","A group throws rubbish on the road","A learner hides a classmate's bag"],"answer":"A family prays together","hint":"Identify the action related to serving God.","explanation":"Family prayer is an example of worship at home.","misconception":"Thinking worship must happen in a public building."},
-        {"id":"B2.2.1.1.1-Q16","type":"performance","skill":"role_play","difficulty":"medium","prompt":"With a partner, role-play a learner explaining respectfully why their family worships. Do not imitate or ridicule another religion.","answer":"Learner gives a relevant reason, speaks respectfully and listens to the partner.","hint":"Mention serving God and use kind words.","explanation":"The role-play assesses understanding, respectful communication and listening.","misconception":"Using humour that mocks a religious group.","rubric":{"understanding":2,"respectful_language":2,"clear_speaking_and_listening":1,"total":5}},
-        {"id":"B2.2.1.1.1-Q17","type":"performance","skill":"draw_and_explain","difficulty":"easy","prompt":"Draw a family worshipping at home and tell the class one reason for their worship.","answer":"A relevant drawing and an explanation such as 'They worship to serve God.'","hint":"Show a peaceful worship activity and add one reason.","explanation":"Assesses recognition of home worship and its purpose.","misconception":"Drawing only a religious building and saying home worship is impossible.","rubric":{"relevant_drawing":2,"valid_reason":2,"clear_presentation":1,"total":5}},
-        {"id":"B2.2.1.1.1-Q18","type":"scenario","skill":"evaluate","difficulty":"medium","prompt":"Two children disagree about where worship can happen. One says 'only in a religious building'; the other says 'at home too'. Which view matches the curriculum?","answer":"Worship may happen at home as well as in a church, mosque or shrine.","hint":"Recall the places listed in the curriculum.","explanation":"The curriculum explicitly refers to worship at home and in religious places.","misconception":"Treating one setting as the only possible place for worship."},
-        {"id":"B2.2.1.1.1-Q19","type":"short_answer","skill":"reflect","difficulty":"medium","prompt":"Name one value that can guide respectful participation or observation during worship.","answer":"Respect, humility, commitment, gratitude, faithfulness or obedience (any one relevant value).","hint":"Think of values associated with worship in the curriculum.","explanation":"These values are named alongside the worship indicator.","misconception":"Naming a disrespectful behaviour as a value."},
-        {"id":"B2.2.1.1.1-Q20","type":"oral","skill":"summarise","difficulty":"medium","prompt":"Complete the sentence aloud: 'Worship is important because…'","answer":"A relevant completion, especially '…it is a command from God to serve Him.'","hint":"Use the key reason from the lesson.","explanation":"A learner should give the curriculum's reason in a complete sentence.","misconception":"Giving an answer that does not connect worship with serving God."}
-      ]
+        {
+          "id": "B2.2.1.1.1-Q01",
+          "type": "mcq",
+          "skill": "identify",
+          "difficulty": 1,
+          "prompt": "Which activity is an example of worship?",
+          "options": [
+            "Praying to God",
+            "Littering the compound",
+            "Taking another person's food",
+            "Damaging a classroom book"
+          ],
+          "answer": "Praying to God",
+          "hint": "Think of an activity through which people serve or honour God.",
+          "explanation": "Prayer is one way people worship and serve God.",
+          "misconception": "Believing any activity done in a religious building is automatically worship.",
+          "skill_tag": "recognise"
+        },
+        {
+          "id": "B2.2.1.1.1-Q02",
+          "type": "mcq",
+          "skill": "understand",
+          "difficulty": 2,
+          "prompt": "According to the curriculum, why do people worship God?",
+          "options": [
+            "It is a command from God to serve Him",
+            "To avoid helping others",
+            "To make people quarrel",
+            "To spoil the environment"
+          ],
+          "answer": "It is a command from God to serve Him",
+          "hint": "Recall the reason discussed in class.",
+          "explanation": "The curriculum gives serving God as a command as an importance of worship.",
+          "misconception": "Thinking worship is only a social activity and has no religious purpose.",
+          "skill_tag": "interpret"
+        },
+        {
+          "id": "B2.2.1.1.1-Q03",
+          "type": "mcq",
+          "skill": "apply",
+          "difficulty": 1,
+          "prompt": "Ama's family prays together before starting the day. What are they doing?",
+          "options": ["Worshipping", "Polluting", "Arguing", "Trading"],
+          "answer": "Worshipping",
+          "hint": "Prayer is a form of religious practice.",
+          "explanation": "The curriculum identifies worship at home as a religious activity.",
+          "misconception": "Thinking worship happens only in a church, mosque or shrine.",
+          "skill_tag": "recognise"
+        },
+        {
+          "id": "B2.2.1.1.1-Q04",
+          "type": "mcq",
+          "skill": "identify",
+          "difficulty": 1,
+          "prompt": "Where may people worship, according to the learning indicator?",
+          "options": [
+            "At home or in a place of worship",
+            "Only at a market",
+            "Only on a football field",
+            "Only in a shop"
+          ],
+          "answer": "At home or in a place of worship",
+          "hint": "Remember the examples: home, church, mosque and shrine.",
+          "explanation": "Worship may take place at home or at a religious place such as a church, mosque or shrine.",
+          "misconception": "Assuming that worship is restricted to one location.",
+          "skill_tag": "recognise"
+        },
+        {
+          "id": "B2.2.1.1.1-Q05",
+          "type": "mcq",
+          "skill": "interpret",
+          "difficulty": 3,
+          "prompt": "A learner quietly watches people worship and listens respectfully. Which value is the learner showing?",
+          "options": ["Respect", "Carelessness", "Greed", "Dishonesty"],
+          "answer": "Respect",
+          "hint": "Choose the attitude that honours other people's religious practice.",
+          "explanation": "Respect means treating other people's worship and beliefs with consideration.",
+          "misconception": "Confusing respect with agreeing with every belief.",
+          "skill_tag": "apply"
+        },
+        {
+          "id": "B2.2.1.1.1-Q06",
+          "type": "written",
+          "skill": "explain",
+          "difficulty": 3,
+          "prompt": "Give one reason why people worship God.",
+          "hint": "Use the reason stated in the curriculum.",
+          "explanation": "Worship is important because serving God is presented as a command from God.",
+          "misconception": "Giving an unrelated reason such as worship being a way to get material goods.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "It is a command from God to serve Him.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "interpret"
+        },
+        {
+          "id": "B2.2.1.1.1-Q07",
+          "type": "short_answer",
+          "skill": "recall",
+          "difficulty": 1,
+          "prompt": "Name one place where a person or family may worship.",
+          "answer": [
+            "home",
+            "at home",
+            "church",
+            "mosque",
+            "shrine",
+            "a church",
+            "a mosque",
+            "a shrine"
+          ],
+          "hint": "Think of places mentioned in the indicator exemplars.",
+          "explanation": "The curriculum names worship at home and in religious places including church, mosque and shrine.",
+          "misconception": "Naming only a place of worship and excluding home.",
+          "skill_tag": "recognise"
+        },
+        {
+          "id": "B2.2.1.1.1-Q08",
+          "type": "written",
+          "skill": "explain",
+          "difficulty": 4,
+          "prompt": "In one sentence, explain why a family might worship together.",
+          "hint": "Connect worship with serving God.",
+          "explanation": "A clear response links family worship with serving God.",
+          "misconception": "Saying the only purpose is to show off to other people.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "A family may worship together to serve God and obey God's command.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "apply"
+        },
+        {
+          "id": "B2.2.1.1.1-Q09",
+          "type": "oral",
+          "skill": "communicate",
+          "difficulty": 3,
+          "prompt": "Say one respectful sentence about why worship is important to you or to people in your community.",
+          "hint": "Speak clearly and give one reason.",
+          "explanation": "The learner expresses an appropriate reason for worship in their own words.",
+          "misconception": "Mocking or dismissing another person's worship.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Accept a relevant, respectful explanation, such as: 'People worship to serve God.'",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "apply"
+        },
+        {
+          "id": "B2.2.1.1.1-Q10",
+          "type": "matching",
+          "skill": "associate",
+          "difficulty": 2,
+          "prompt": "Match the activity to the category: (A) praying to God; (B) throwing rubbish into a river. Categories: worship; harmful action.",
+          "hint": "Which activity serves or honours God?",
+          "explanation": "Prayer is worship; polluting water is a harmful action, not worship.",
+          "misconception": "Classifying every action done by a religious person as worship.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "A—worship; B—harmful action.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "interpret"
+        },
+        {
+          "id": "B2.2.1.1.1-Q11",
+          "type": "written",
+          "skill": "apply",
+          "difficulty": 2,
+          "prompt": "Kofi's friend invites him to observe a worship service. What should Kofi do to show respect while there? Give one action.",
+          "hint": "Think about respectful behaviour when observing others.",
+          "explanation": "Respectful listening and not disturbing worshippers are appropriate ways to behave.",
+          "misconception": "Thinking respect requires taking part in a practice against one's own family's wishes.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Listen quietly, follow appropriate guidance, or avoid disturbing worshippers.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "recognise"
+        },
+        {
+          "id": "B2.2.1.1.1-Q12",
+          "type": "mcq",
+          "skill": "reason",
+          "difficulty": 3,
+          "prompt": "Which statement best explains the importance of worship?",
+          "options": [
+            "Worship is a way to serve God",
+            "Worship is a reason to insult others",
+            "Worship means refusing to care for people",
+            "Worship is the same as damaging property"
+          ],
+          "answer": "Worship is a way to serve God",
+          "hint": "Choose the statement that reflects the curriculum's example.",
+          "explanation": "Serving God is the reason for worship given in the curriculum.",
+          "misconception": "Confusing worship with harmful or disrespectful behaviour.",
+          "skill_tag": "interpret"
+        },
+        {
+          "id": "B2.2.1.1.1-Q13",
+          "type": "written",
+          "skill": "compare",
+          "difficulty": 2,
+          "prompt": "State one difference between worshipping at home and worshipping in a church, mosque or shrine.",
+          "hint": "Compare where each activity happens.",
+          "explanation": "The key distinction is location; both settings can host worship.",
+          "misconception": "Claiming that worship at home cannot be genuine worship.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "The location differs; both can be ways people worship God.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "recognise"
+        },
+        {
+          "id": "B2.2.1.1.1-Q14",
+          "type": "oral",
+          "skill": "listen_and_respond",
+          "difficulty": 2,
+          "prompt": "Listen to your teacher name a place of worship. Then say one way learners should behave respectfully when visiting it.",
+          "hint": "Think of considerate behaviour in a religious place.",
+          "explanation": "The learner demonstrates understanding of respectful observation.",
+          "misconception": "Assuming visitors may behave noisily because they are only observing.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Accept a relevant response such as listening, following instructions or not disturbing others.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "recognise"
+        },
+        {
+          "id": "B2.2.1.1.1-Q15",
+          "type": "mcq",
+          "skill": "classify",
+          "difficulty": 1,
+          "prompt": "Which choice shows worship taking place at home?",
+          "options": [
+            "A family prays together",
+            "A child tears a neighbour's book",
+            "A group throws rubbish on the road",
+            "A learner hides a classmate's bag"
+          ],
+          "answer": "A family prays together",
+          "hint": "Identify the action related to serving God.",
+          "explanation": "Family prayer is an example of worship at home.",
+          "misconception": "Thinking worship must happen in a public building.",
+          "skill_tag": "recognise"
+        },
+        {
+          "id": "B2.2.1.1.1-Q16",
+          "type": "performance",
+          "skill": "role_play",
+          "difficulty": 4,
+          "prompt": "With a partner, role-play a learner explaining respectfully why their family worships. Do not imitate or ridicule another religion.",
+          "hint": "Mention serving God and use kind words.",
+          "explanation": "The role-play assesses understanding, respectful communication and listening.",
+          "misconception": "Using humour that mocks a religious group.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "understanding",
+                "marks": 2
+              },
+              {
+                "description": "respectful language",
+                "marks": 2
+              },
+              {
+                "description": "clear speaking and listening",
+                "marks": 1
+              },
+              {
+                "description": "total",
+                "marks": 5
+              }
+            ]
+          },
+          "skill_tag": "demonstrate"
+        },
+        {
+          "id": "B2.2.1.1.1-Q17",
+          "type": "performance",
+          "skill": "draw_and_explain",
+          "difficulty": 4,
+          "prompt": "Draw a family worshipping at home and tell the class one reason for their worship.",
+          "hint": "Show a peaceful worship activity and add one reason.",
+          "explanation": "Assesses recognition of home worship and its purpose.",
+          "misconception": "Drawing only a religious building and saying home worship is impossible.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "relevant drawing",
+                "marks": 2
+              },
+              {
+                "description": "valid reason",
+                "marks": 2
+              },
+              {
+                "description": "clear presentation",
+                "marks": 1
+              },
+              {
+                "description": "total",
+                "marks": 5
+              }
+            ]
+          },
+          "skill_tag": "demonstrate"
+        },
+        {
+          "id": "B2.2.1.1.1-Q18",
+          "type": "written",
+          "skill": "evaluate",
+          "difficulty": 3,
+          "prompt": "Two children disagree about where worship can happen. One says 'only in a religious building'; the other says 'at home too'. Which view matches the curriculum?",
+          "hint": "Recall the places listed in the curriculum.",
+          "explanation": "The curriculum explicitly refers to worship at home and in religious places.",
+          "misconception": "Treating one setting as the only possible place for worship.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Worship may happen at home as well as in a church, mosque or shrine.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "interpret"
+        },
+        {
+          "id": "B2.2.1.1.1-Q19",
+          "type": "written",
+          "skill": "reflect",
+          "difficulty": 2,
+          "prompt": "Name one value that can guide respectful participation or observation during worship.",
+          "hint": "Think of values associated with worship in the curriculum.",
+          "explanation": "These values are named alongside the worship indicator.",
+          "misconception": "Naming a disrespectful behaviour as a value.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Respect, humility, commitment, gratitude, faithfulness or obedience (any one relevant value).",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "recognise"
+        },
+        {
+          "id": "B2.2.1.1.1-Q20",
+          "type": "oral",
+          "skill": "summarise",
+          "difficulty": 2,
+          "prompt": "Complete the sentence aloud: 'Worship is important because…'",
+          "hint": "Use the key reason from the lesson.",
+          "explanation": "A learner should give the curriculum's reason in a complete sentence.",
+          "misconception": "Giving an answer that does not connect worship with serving God.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "A relevant completion, especially '…it is a command from God to serve Him.'",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "recognise"
+        }
+      ],
+      "source_page": 9,
+      "strand": "Religious Practices and their Moral Implications",
+      "sub_strand": "Religious Worship in the Three Major Religions in Ghana",
+      "content_standard": "Explain the importance of religious worship",
+      "spec": {
+        "skills": [
+          {
+            "tag": "recognise",
+            "description": "Recognise the examples and vocabulary in the lesson.",
+            "minQuestions": 2
+          },
+          {
+            "tag": "interpret",
+            "description": "Explain meanings and connections in an example.",
+            "minQuestions": 2
+          },
+          {
+            "tag": "apply",
+            "description": "Apply the lesson to a situation and justify a choice.",
+            "minQuestions": 2
+          },
+          {
+            "tag": "demonstrate",
+            "description": "Communicate understanding through a performance, drawing or demonstration.",
+            "minQuestions": 2
+          }
+        ],
+        "difficulty": "basic to intermediate",
+        "context": "home, school, church, mosque, shrine",
+        "formats": ["MCQ", "short_answer", "oral", "matching", "scenario", "performance"],
+        "needsTeacherAssessment": true,
+        "difficultyPlan": "5 foundational, 7 simple-use, 5 application and 3 challenge questions."
+      }
     },
     {
       "code": "B2.2.1.1.2",
       "printed_code": "B2 2.1.1.2",
       "indicator": "Sing and recite simple texts from the three main religions in Ghana.",
-      "specification": {"skills": ["recognise", "recite", "sing", "write", "communicate"], "difficulty": "basic to intermediate", "context": "Christianity, Islam and African Traditional Religion in Ghana", "formats": ["MCQ", "short_answer", "oral", "matching", "writing", "performance"]},
+      "specification": {
+        "skills": ["recognise", "recite", "sing", "write", "communicate"],
+        "difficulty": "basic to intermediate",
+        "context": "Christianity, Islam and African Traditional Religion in Ghana",
+        "formats": ["MCQ", "short_answer", "oral", "matching", "writing", "performance"]
+      },
       "questions": [
-        {"id":"B2.2.1.1.2-Q01","type":"mcq","skill":"recognise","difficulty":"easy","prompt":"Which text is identified in the curriculum as a Christian prayer?","options":["The Lord's Prayer","Al-Fatihah","A traditional prayer","A weather report"],"answer":"The Lord's Prayer","hint":"Look for the example linked to Christianity.","explanation":"The curriculum gives The Lord's Prayer as a Christian example.","misconception":"Mixing up examples from different religious traditions."},
-        {"id":"B2.2.1.1.2-Q02","type":"mcq","skill":"recognise","difficulty":"easy","prompt":"Which text is given as an Islamic example?","options":["Al-Fatihah","The Lord's Prayer","A school timetable","A traditional proverb unrelated to prayer"],"answer":"Al-Fatihah","hint":"Recall the example named for Islam.","explanation":"Al-Fatihah is the Islamic example listed in the curriculum.","misconception":"Assuming the examples are interchangeable across religions."},
-        {"id":"B2.2.1.1.2-Q03","type":"mcq","skill":"recognise","difficulty":"easy","prompt":"Which kind of text is mentioned as an African Traditional Religion example?","options":["Traditional prayer","The Lord's Prayer","Al-Fatihah","A shopping list"],"answer":"Traditional prayer","hint":"Choose the example associated with oral tradition.","explanation":"The curriculum refers to traditional prayer from oral tradition.","misconception":"Thinking African Traditional Religion has no prayers or oral texts."},
-        {"id":"B2.2.1.1.2-Q04","type":"mcq","skill":"understand","difficulty":"easy","prompt":"What does the learning indicator ask learners to do with simple religious texts?","options":["Sing and recite them","Use them to tease others","Hide them from everyone","Change them into jokes"],"answer":"Sing and recite them","hint":"The action words are in the indicator itself.","explanation":"Learners are expected to sing or recite simple texts from the three main religions.","misconception":"Thinking the lesson is only about naming religions."},
-        {"id":"B2.2.1.1.2-Q05","type":"mcq","skill":"apply","difficulty":"easy","prompt":"When a class learns a prayer from a religion, what is an appropriate attitude?","options":["Listen and participate respectfully as guided","Laugh at the words","Interrupt the speaker","Change the words to insult people"],"answer":"Listen and participate respectfully as guided","hint":"Choose the behaviour that shows respect.","explanation":"Religious songs and recitations should be approached respectfully.","misconception":"Believing respect means learners must personally adopt another person's faith."},
-        {"id":"B2.2.1.1.2-Q06","type":"short_answer","skill":"recall","difficulty":"easy","prompt":"Name the Christian prayer example given in the curriculum.","answer":"The Lord's Prayer.","hint":"It begins with the words 'Our Father' in many Christian traditions.","explanation":"The curriculum names The Lord's Prayer as the Christian example.","misconception":"Naming Al-Fatihah instead."},
-        {"id":"B2.2.1.1.2-Q07","type":"short_answer","skill":"recall","difficulty":"easy","prompt":"Name the Islamic text example given in the curriculum.","answer":"Al-Fatihah.","hint":"Recall the short text named for Islam.","explanation":"Al-Fatihah is the example listed for Islam.","misconception":"Naming the Lord's Prayer instead."},
-        {"id":"B2.2.1.1.2-Q08","type":"short_answer","skill":"recall","difficulty":"easy","prompt":"Give one example of a text associated with African Traditional Religion in the indicator exemplars.","answer":"A traditional prayer or a saying from oral tradition.","hint":"The curriculum mentions prayer and oral tradition.","explanation":"Traditional prayer and sayings from oral tradition are included as examples.","misconception":"Assuming only written texts count as religious texts."},
-        {"id":"B2.2.1.1.2-Q09","type":"matching","skill":"associate","difficulty":"easy","prompt":"Match each example to the religion: The Lord's Prayer; Al-Fatihah; traditional prayer. Choices: Christianity; Islam; African Traditional Religion.","answer":"The Lord's Prayer—Christianity; Al-Fatihah—Islam; traditional prayer—African Traditional Religion.","hint":"Use the three examples listed in the curriculum.","explanation":"These are the examples associated with each tradition in the curriculum.","misconception":"Treating all three examples as belonging to one religion."},
-        {"id":"B2.2.1.1.2-Q10","type":"oral","skill":"recite","difficulty":"easy","prompt":"With the teacher's guidance, recite a short, familiar religious text or prayer respectfully.","answer":"Learner makes a sincere, age-appropriate attempt at the selected short text; evaluate respectfully without requiring a particular faith commitment.","hint":"Speak clearly and follow the teacher's chosen text.","explanation":"The indicator expects learners to practise reciting simple texts.","misconception":"Mocking a text or pressuring a learner to disclose private beliefs."},
-        {"id":"B2.2.1.1.2-Q11","type":"performance","skill":"sing","difficulty":"easy","prompt":"In a group, sing a short, familiar religious song selected by the teacher and listen politely when another group presents.","answer":"Group participates in the selected song and shows respectful listening to others.","hint":"Focus on clear participation and considerate listening.","explanation":"The curriculum invites learners to mention and sing popular religious songs.","misconception":"Ranking or ridiculing religious songs and traditions." ,"rubric":{"participation":2,"respectful_listening":2,"clear_presentation":1,"total":5}},
-        {"id":"B2.2.1.1.2-Q12","type":"short_answer","skill":"explain","difficulty":"medium","prompt":"Why should learners listen respectfully when classmates sing or recite a text from a different religion?","answer":"To show respect for classmates and their religious tradition.","hint":"Think about respect and peaceful learning together.","explanation":"Respectful listening supports inclusion and understanding in class.","misconception":"Saying respect means agreeing with or practising every religion."},
-        {"id":"B2.2.1.1.2-Q13","type":"writing","skill":"write","difficulty":"medium","prompt":"Copy a short line from a teacher-provided religious song or recitation accurately. Do not invent or alter sacred wording.","answer":"The learner accurately copies the teacher-provided line.","hint":"Check the words carefully as you write.","explanation":"The exemplar asks learners to write simple texts from religious songs and recitations.","misconception":"Changing unfamiliar words or claiming an invented line is a sacred quotation.","rubric":{"accuracy":3,"careful_presentation":1,"respectful_handling":1,"total":5}},
-        {"id":"B2.2.1.1.2-Q14","type":"mcq","skill":"classify","difficulty":"medium","prompt":"A learner says a short saying passed down orally in a traditional community. What kind of example may this be?","options":["A saying from oral tradition","A weather forecast","A multiplication fact","A traffic sign"],"answer":"A saying from oral tradition","hint":"The curriculum mentions sayings from oral tradition.","explanation":"Oral sayings are included among the simple texts learners may study.","misconception":"Assuming every religious text must be printed in a book."},
-        {"id":"B2.2.1.1.2-Q15","type":"scenario","skill":"apply","difficulty":"medium","prompt":"During a class recitation, a learner forgets a line. What should classmates do?","answer":"Wait kindly, avoid laughing and allow the learner to continue or receive help.","hint":"Consider kindness and respect during a performance.","explanation":"Supportive behaviour protects the learner's dignity and keeps the activity respectful.","misconception":"Thinking mistakes are a reason to embarrass someone."},
-        {"id":"B2.2.1.1.2-Q16","type":"oral","skill":"communicate","difficulty":"medium","prompt":"Tell the class one way a religious song or recitation is presented, such as singing, reciting or writing it.","answer":"Any one: sing, recite or write a simple text.","hint":"Recall the actions practised in the lesson.","explanation":"The curriculum includes singing, reciting and writing simple religious texts.","misconception":"Saying the only way to learn a text is to memorise it silently."},
-        {"id":"B2.2.1.1.2-Q17","type":"performance","skill":"group_presentation","difficulty":"medium","prompt":"In a small group, present one short teacher-approved religious song or recitation. Introduce it respectfully and let classmates listen without interruption.","answer":"The group presents a suitable short text and demonstrates respectful introduction and listening norms.","hint":"Agree on a short selection and share speaking turns.","explanation":"Assesses oral presentation, collaboration and respectful engagement with religious texts.","misconception":"Presenting a text as a joke or claiming it represents every member of the religion.","rubric":{"appropriate_selection":1,"participation_and_collaboration":2,"clear_presentation":1,"respectful_attitude":1,"total":5}},
-        {"id":"B2.2.1.1.2-Q18","type":"mcq","skill":"reason","difficulty":"medium","prompt":"Which set contains all three examples named in the curriculum?","options":["The Lord's Prayer, Al-Fatihah, traditional prayer","A timetable, a map, a recipe","A song, a football score, a shopping list","A proverb, a road sign, a weather chart"],"answer":"The Lord's Prayer, Al-Fatihah, traditional prayer","hint":"Look for one example from each of the three traditions.","explanation":"Those are the three examples listed in the indicator exemplars.","misconception":"Confusing general classroom materials with religious texts."},
-        {"id":"B2.2.1.1.2-Q19","type":"short_answer","skill":"reflect","difficulty":"medium","prompt":"State one respectful rule for handling or presenting a religious text in class.","answer":"Examples: listen without interrupting; do not mock the text; use a teacher-approved text; do not alter its words.","hint":"Think of how to protect people's dignity and the text's wording.","explanation":"A respectful classroom approach values both classmates and the material being presented.","misconception":"Assuming a text may be changed freely and still quoted as exact."},
-        {"id":"B2.2.1.1.2-Q20","type":"performance","skill":"recall_and_explain","difficulty":"medium","prompt":"Name one example of a religious text from the lesson and identify the tradition with which the curriculum associates it.","answer":"The Lord's Prayer—Christianity; Al-Fatihah—Islam; traditional prayer/oral saying—African Traditional Religion.","hint":"Use one of the three curriculum examples.","explanation":"Combines recall of the example with its curriculum association.","misconception":"Attributing a named example to the wrong tradition.","rubric":{"correct_example":2,"correct_association":2,"clear_response":1,"total":5}}
-      ]
+        {
+          "id": "B2.2.1.1.2-Q01",
+          "type": "mcq",
+          "skill": "recognise",
+          "difficulty": 1,
+          "prompt": "Which text is identified in the curriculum as a Christian prayer?",
+          "options": [
+            "The Lord's Prayer",
+            "Al-Fatihah",
+            "A traditional prayer",
+            "A weather report"
+          ],
+          "answer": "The Lord's Prayer",
+          "hint": "Look for the example linked to Christianity.",
+          "explanation": "The curriculum gives The Lord's Prayer as a Christian example.",
+          "misconception": "Mixing up examples from different religious traditions.",
+          "skill_tag": "recognise"
+        },
+        {
+          "id": "B2.2.1.1.2-Q02",
+          "type": "mcq",
+          "skill": "recognise",
+          "difficulty": 1,
+          "prompt": "Which text is given as an Islamic example?",
+          "options": [
+            "Al-Fatihah",
+            "The Lord's Prayer",
+            "A school timetable",
+            "A traditional proverb unrelated to prayer"
+          ],
+          "answer": "Al-Fatihah",
+          "hint": "Recall the example named for Islam.",
+          "explanation": "Al-Fatihah is the Islamic example listed in the curriculum.",
+          "misconception": "Assuming the examples are interchangeable across religions.",
+          "skill_tag": "recognise"
+        },
+        {
+          "id": "B2.2.1.1.2-Q03",
+          "type": "mcq",
+          "skill": "recognise",
+          "difficulty": 1,
+          "prompt": "Which kind of text is mentioned as an African Traditional Religion example?",
+          "options": ["Traditional prayer", "The Lord's Prayer", "Al-Fatihah", "A shopping list"],
+          "answer": "Traditional prayer",
+          "hint": "Choose the example associated with oral tradition.",
+          "explanation": "The curriculum refers to traditional prayer from oral tradition.",
+          "misconception": "Thinking African Traditional Religion has no prayers or oral texts.",
+          "skill_tag": "recognise"
+        },
+        {
+          "id": "B2.2.1.1.2-Q04",
+          "type": "mcq",
+          "skill": "understand",
+          "difficulty": 1,
+          "prompt": "What does the learning indicator ask learners to do with simple religious texts?",
+          "options": [
+            "Sing and recite them",
+            "Use them to tease others",
+            "Hide them from everyone",
+            "Change them into jokes"
+          ],
+          "answer": "Sing and recite them",
+          "hint": "The action words are in the indicator itself.",
+          "explanation": "Learners are expected to sing or recite simple texts from the three main religions.",
+          "misconception": "Thinking the lesson is only about naming religions.",
+          "skill_tag": "recognise"
+        },
+        {
+          "id": "B2.2.1.1.2-Q05",
+          "type": "mcq",
+          "skill": "apply",
+          "difficulty": 1,
+          "prompt": "When a class learns a prayer from a religion, what is an appropriate attitude?",
+          "options": [
+            "Listen and participate respectfully as guided",
+            "Laugh at the words",
+            "Interrupt the speaker",
+            "Change the words to insult people"
+          ],
+          "answer": "Listen and participate respectfully as guided",
+          "hint": "Choose the behaviour that shows respect.",
+          "explanation": "Religious songs and recitations should be approached respectfully.",
+          "misconception": "Believing respect means learners must personally adopt another person's faith.",
+          "skill_tag": "recognise"
+        },
+        {
+          "id": "B2.2.1.1.2-Q06",
+          "type": "short_answer",
+          "skill": "recall",
+          "difficulty": 2,
+          "prompt": "Name the Christian prayer example given in the curriculum.",
+          "answer": ["the lord's prayer", "lord's prayer"],
+          "hint": "It begins with the words 'Our Father' in many Christian traditions.",
+          "explanation": "The curriculum names The Lord's Prayer as the Christian example.",
+          "misconception": "Naming Al-Fatihah instead.",
+          "skill_tag": "recognise"
+        },
+        {
+          "id": "B2.2.1.1.2-Q07",
+          "type": "short_answer",
+          "skill": "recall",
+          "difficulty": 2,
+          "prompt": "Name the Islamic text example given in the curriculum.",
+          "answer": ["al-fatihah", "al-fatiha", "al fatihah", "al fatiha"],
+          "hint": "Recall the short text named for Islam.",
+          "explanation": "Al-Fatihah is the example listed for Islam.",
+          "misconception": "Naming the Lord's Prayer instead.",
+          "skill_tag": "recognise"
+        },
+        {
+          "id": "B2.2.1.1.2-Q08",
+          "type": "written",
+          "skill": "recall",
+          "difficulty": 2,
+          "prompt": "Give one example of a text associated with African Traditional Religion in the indicator exemplars.",
+          "hint": "The curriculum mentions prayer and oral tradition.",
+          "explanation": "Traditional prayer and sayings from oral tradition are included as examples.",
+          "misconception": "Assuming only written texts count as religious texts.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "A traditional prayer or a saying from oral tradition.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "recognise"
+        },
+        {
+          "id": "B2.2.1.1.2-Q09",
+          "type": "matching",
+          "skill": "associate",
+          "difficulty": 3,
+          "prompt": "Match each example to the religion: The Lord's Prayer; Al-Fatihah; traditional prayer. Choices: Christianity; Islam; African Traditional Religion.",
+          "hint": "Use the three examples listed in the curriculum.",
+          "explanation": "These are the examples associated with each tradition in the curriculum.",
+          "misconception": "Treating all three examples as belonging to one religion.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "The Lord's Prayer—Christianity; Al-Fatihah—Islam; traditional prayer—African Traditional Religion.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "interpret"
+        },
+        {
+          "id": "B2.2.1.1.2-Q10",
+          "type": "oral",
+          "skill": "recite",
+          "difficulty": 2,
+          "prompt": "With the teacher's guidance, recite a short, familiar religious text or prayer respectfully.",
+          "hint": "Speak clearly and follow the teacher's chosen text.",
+          "explanation": "The indicator expects learners to practise reciting simple texts.",
+          "misconception": "Mocking a text or pressuring a learner to disclose private beliefs.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Learner makes a sincere, age-appropriate attempt at the selected short text; evaluate respectfully without requiring a particular faith commitment.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "recognise"
+        },
+        {
+          "id": "B2.2.1.1.2-Q11",
+          "type": "performance",
+          "skill": "sing",
+          "difficulty": 4,
+          "prompt": "In a group, sing a short, familiar religious song selected by the teacher and listen politely when another group presents.",
+          "hint": "Focus on clear participation and considerate listening.",
+          "explanation": "The curriculum invites learners to mention and sing popular religious songs.",
+          "misconception": "Ranking or ridiculing religious songs and traditions.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "participation",
+                "marks": 2
+              },
+              {
+                "description": "respectful listening",
+                "marks": 2
+              },
+              {
+                "description": "clear presentation",
+                "marks": 1
+              },
+              {
+                "description": "total",
+                "marks": 5
+              }
+            ]
+          },
+          "skill_tag": "demonstrate"
+        },
+        {
+          "id": "B2.2.1.1.2-Q12",
+          "type": "written",
+          "skill": "explain",
+          "difficulty": 3,
+          "prompt": "Why should learners listen respectfully when classmates sing or recite a text from a different religion?",
+          "hint": "Think about respect and peaceful learning together.",
+          "explanation": "Respectful listening supports inclusion and understanding in class.",
+          "misconception": "Saying respect means agreeing with or practising every religion.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "To show respect for classmates and their religious tradition.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "interpret"
+        },
+        {
+          "id": "B2.2.1.1.2-Q13",
+          "type": "writing",
+          "skill": "write",
+          "difficulty": 2,
+          "prompt": "Copy a short line from a teacher-provided religious song or recitation accurately. Do not invent or alter sacred wording.",
+          "hint": "Check the words carefully as you write.",
+          "explanation": "The exemplar asks learners to write simple texts from religious songs and recitations.",
+          "misconception": "Changing unfamiliar words or claiming an invented line is a sacred quotation.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "accuracy",
+                "marks": 3
+              },
+              {
+                "description": "careful presentation",
+                "marks": 1
+              },
+              {
+                "description": "respectful handling",
+                "marks": 1
+              },
+              {
+                "description": "total",
+                "marks": 5
+              }
+            ]
+          },
+          "skill_tag": "recognise"
+        },
+        {
+          "id": "B2.2.1.1.2-Q14",
+          "type": "mcq",
+          "skill": "classify",
+          "difficulty": 3,
+          "prompt": "A learner says a short saying passed down orally in a traditional community. What kind of example may this be?",
+          "options": [
+            "A saying from oral tradition",
+            "A weather forecast",
+            "A multiplication fact",
+            "A traffic sign"
+          ],
+          "answer": "A saying from oral tradition",
+          "hint": "The curriculum mentions sayings from oral tradition.",
+          "explanation": "Oral sayings are included among the simple texts learners may study.",
+          "misconception": "Assuming every religious text must be printed in a book.",
+          "skill_tag": "apply"
+        },
+        {
+          "id": "B2.2.1.1.2-Q15",
+          "type": "written",
+          "skill": "apply",
+          "difficulty": 3,
+          "prompt": "During a class recitation, a learner forgets a line. What should classmates do?",
+          "hint": "Consider kindness and respect during a performance.",
+          "explanation": "Supportive behaviour protects the learner's dignity and keeps the activity respectful.",
+          "misconception": "Thinking mistakes are a reason to embarrass someone.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Wait kindly, avoid laughing and allow the learner to continue or receive help.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "apply"
+        },
+        {
+          "id": "B2.2.1.1.2-Q16",
+          "type": "oral",
+          "skill": "communicate",
+          "difficulty": 2,
+          "prompt": "Tell the class one way a religious song or recitation is presented, such as singing, reciting or writing it.",
+          "hint": "Recall the actions practised in the lesson.",
+          "explanation": "The curriculum includes singing, reciting and writing simple religious texts.",
+          "misconception": "Saying the only way to learn a text is to memorise it silently.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Any one: sing, recite or write a simple text.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "recognise"
+        },
+        {
+          "id": "B2.2.1.1.2-Q17",
+          "type": "performance",
+          "skill": "group_presentation",
+          "difficulty": 4,
+          "prompt": "In a small group, present one short teacher-approved religious song or recitation. Introduce it respectfully and let classmates listen without interruption.",
+          "hint": "Agree on a short selection and share speaking turns.",
+          "explanation": "Assesses oral presentation, collaboration and respectful engagement with religious texts.",
+          "misconception": "Presenting a text as a joke or claiming it represents every member of the religion.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "appropriate selection",
+                "marks": 1
+              },
+              {
+                "description": "participation and collaboration",
+                "marks": 2
+              },
+              {
+                "description": "clear presentation",
+                "marks": 1
+              },
+              {
+                "description": "respectful attitude",
+                "marks": 1
+              },
+              {
+                "description": "total",
+                "marks": 5
+              }
+            ]
+          },
+          "skill_tag": "demonstrate"
+        },
+        {
+          "id": "B2.2.1.1.2-Q18",
+          "type": "mcq",
+          "skill": "reason",
+          "difficulty": 2,
+          "prompt": "Which set contains all three examples named in the curriculum?",
+          "options": [
+            "The Lord's Prayer, Al-Fatihah, traditional prayer",
+            "A timetable, a map, a recipe",
+            "A song, a football score, a shopping list",
+            "A proverb, a road sign, a weather chart"
+          ],
+          "answer": "The Lord's Prayer, Al-Fatihah, traditional prayer",
+          "hint": "Look for one example from each of the three traditions.",
+          "explanation": "Those are the three examples listed in the indicator exemplars.",
+          "misconception": "Confusing general classroom materials with religious texts.",
+          "skill_tag": "recognise"
+        },
+        {
+          "id": "B2.2.1.1.2-Q19",
+          "type": "written",
+          "skill": "reflect",
+          "difficulty": 3,
+          "prompt": "State one respectful rule for handling or presenting a religious text in class.",
+          "hint": "Think of how to protect people's dignity and the text's wording.",
+          "explanation": "A respectful classroom approach values both classmates and the material being presented.",
+          "misconception": "Assuming a text may be changed freely and still quoted as exact.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Examples: listen without interrupting; do not mock the text; use a teacher-approved text; do not alter its words.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "recognise"
+        },
+        {
+          "id": "B2.2.1.1.2-Q20",
+          "type": "performance",
+          "skill": "recall_and_explain",
+          "difficulty": 4,
+          "prompt": "Name one example of a religious text from the lesson and identify the tradition with which the curriculum associates it.",
+          "hint": "Use one of the three curriculum examples.",
+          "explanation": "Combines recall of the example with its curriculum association.",
+          "misconception": "Attributing a named example to the wrong tradition.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "correct example",
+                "marks": 2
+              },
+              {
+                "description": "correct association",
+                "marks": 2
+              },
+              {
+                "description": "clear response",
+                "marks": 1
+              },
+              {
+                "description": "total",
+                "marks": 5
+              }
+            ]
+          },
+          "skill_tag": "demonstrate"
+        }
+      ],
+      "source_page": 9,
+      "strand": "Religious Practices and their Moral Implications",
+      "sub_strand": "Religious Worship in the Three Major Religions in Ghana",
+      "content_standard": "Explain the importance of religious worship",
+      "spec": {
+        "skills": [
+          {
+            "tag": "recognise",
+            "description": "Recognise the examples and vocabulary in the lesson.",
+            "minQuestions": 2
+          },
+          {
+            "tag": "interpret",
+            "description": "Explain meanings and connections in an example.",
+            "minQuestions": 2
+          },
+          {
+            "tag": "apply",
+            "description": "Apply the lesson to a situation and justify a choice.",
+            "minQuestions": 2
+          },
+          {
+            "tag": "demonstrate",
+            "description": "Communicate understanding through a performance, drawing or demonstration.",
+            "minQuestions": 2
+          }
+        ],
+        "difficulty": "basic to intermediate",
+        "context": "Christianity, Islam and African Traditional Religion in Ghana",
+        "formats": ["MCQ", "short_answer", "oral", "matching", "writing", "performance"],
+        "needsTeacherAssessment": true,
+        "difficultyPlan": "5 foundational, 7 simple-use, 5 application and 3 challenge questions."
+      }
     }
   ],
-  "uncertain": ["Curriculum specifies simple religious texts and names examples, but does not provide exact lyrics or full recitation wording; questions therefore rely on teacher-provided, familiar, short texts and avoid inventing sacred wording."],
-  "quality_notes": ["Questions are age-appropriate and grounded in the cited Basic 2 curriculum indicator.", "Religious traditions are treated respectfully; learners are not required to profess personal belief.", "Each indicator contains 20 questions with hints, answers, explanations, misconception notes, and rubrics for performance tasks."]
+  "uncertain": [
+    "Curriculum specifies simple religious texts and names examples, but does not provide exact lyrics or full recitation wording; questions therefore rely on teacher-provided, familiar, short texts and avoid inventing sacred wording."
+  ],
+  "quality_notes": [
+    "Questions are age-appropriate and grounded in the cited Basic 2 curriculum indicator.",
+    "Religious traditions are treated respectfully; learners are not required to profess personal belief.",
+    "Each indicator contains 20 questions with hints, answers, explanations, misconception notes, and rubrics for performance tasks."
+  ]
 }

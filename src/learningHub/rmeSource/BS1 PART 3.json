@@ -15,11 +15,23 @@
       "sub_strand": "Religious Worship in the Three Major Religions in Ghana",
       "spec": {
         "skills": [
-          {"tag": "name_worship", "description": "Name Christian worship, Islamic worship, and Traditional worship as the three main types of worship in Ghana.", "minQuestions": 6},
-          {"tag": "distinguish_worship", "description": "Identify pictures, media, or descriptions showing each of the three main types of religious worship in Ghana.", "minQuestions": 7},
-          {"tag": "roleplay_worship", "description": "Demonstrate respect and role-play respectful acts associated with the three types of worship in Ghana.", "minQuestions": 7}
+          {
+            "tag": "recognise",
+            "description": "Recognise the examples and vocabulary in the lesson.",
+            "minQuestions": 2
+          },
+          {
+            "tag": "interpret",
+            "description": "Explain meanings and connections in an example.",
+            "minQuestions": 2
+          },
+          {
+            "tag": "demonstrate",
+            "description": "Communicate understanding through a performance, drawing or demonstration.",
+            "minQuestions": 2
+          }
         ],
-        "difficultyPlan": {"1": 5, "2": 7, "3": 5, "4": 3},
+        "difficultyPlan": "5 foundational, 7 simple-use, 5 application and 3 challenge questions.",
         "misconceptions": [
           "Confusing prayer postures between Christian, Islamic, and Traditional worship",
           "Believing only one religion exists in Ghana",
@@ -30,7 +42,7 @@
       "questions": [
         {
           "id": "B1-P03-Q01",
-          "skill_tag": "name_worship",
+          "skill_tag": "recognise",
           "type": "mcq",
           "difficulty": 1,
           "stem": "How many main types of religious worship are named in our lesson for Ghana?",
@@ -39,14 +51,14 @@
           "hints": ["Count Christian, Islamic, and Traditional worship."],
           "explanation": "The curriculum specifies three main types of worship in Ghana: Christian, Islamic, and Traditional.",
           "distractor_misconceptions": {
-            "0": "Thinking only one religion exists in Ghana",
-            "1": "Leaving out one of the three main religions",
-            "3": "Guessing a random large number"
+            "One": "Thinking only one religion exists in Ghana",
+            "Two": "Leaving out one of the three main religions",
+            "Ten": "Guessing a random large number"
           }
         },
         {
           "id": "B1-P03-Q02",
-          "skill_tag": "name_worship",
+          "skill_tag": "recognise",
           "type": "mcq",
           "difficulty": 1,
           "stem": "Which of these is one of the three main types of worship in Ghana?",
@@ -55,14 +67,14 @@
           "hints": ["Think about church and the Bible."],
           "explanation": "Christian worship is one of the three main types of religious worship in Ghana taught in the curriculum.",
           "distractor_misconceptions": {
-            "1": "Confusing buying food with religious worship",
-            "2": "Confusing everyday school activities with religious worship",
-            "3": "Confusing a sports game with religious worship"
+            "Market worship": "Confusing buying food with religious worship",
+            "School worship": "Confusing everyday school activities with religious worship",
+            "Football worship": "Confusing a sports game with religious worship"
           }
         },
         {
           "id": "B1-P03-Q03",
-          "skill_tag": "name_worship",
+          "skill_tag": "recognise",
           "type": "mcq",
           "difficulty": 1,
           "stem": "Which type of worship is practiced by Muslims in Ghana?",
@@ -71,25 +83,25 @@
           "hints": ["Muslims worship in Islam."],
           "explanation": "Muslims practice Islamic worship, which is one of the three main types of worship in Ghana.",
           "distractor_misconceptions": {
-            "1": "Confusing trading with worship",
-            "2": "Confusing agricultural work with worship",
-            "3": "Confusing domestic cooking with worship"
+            "Market worship": "Confusing trading with worship",
+            "Farm worship": "Confusing agricultural work with worship",
+            "Traditional cooking": "Confusing domestic cooking with worship"
           }
         },
         {
           "id": "B1-P03-Q04",
-          "skill_tag": "name_worship",
+          "skill_tag": "recognise",
           "type": "short_answer",
           "difficulty": 1,
           "stem": "Along with Christian worship and Islamic worship, name the third main type of worship in Ghana.",
-          "answer": ["Traditional worship", "African Traditional worship", "Traditional"],
+          "answer": ["traditional worship", "african traditional worship", "traditional"],
           "hints": ["It is the indigenous religion handed down by our ancestors."],
           "explanation": "The three main religions in Ghana are Christianity, Islam, and African Traditional Religion. Therefore, Traditional worship is the third.",
           "misconception": "Assuming traditional worship is not one of the three main types in Ghana"
         },
         {
           "id": "B1-P03-Q05",
-          "skill_tag": "name_worship",
+          "skill_tag": "recognise",
           "type": "mcq",
           "difficulty": 1,
           "stem": "Which group lists the three main types of worship in Ghana correctly?",
@@ -103,61 +115,77 @@
           "hints": ["Look for the three religions recognized in Ghana."],
           "explanation": "Christian worship, Islamic worship, and Traditional worship are the three main types in Ghana.",
           "distractor_misconceptions": {
-            "1": "Confusing school skills with religious worship",
-            "2": "Confusing physical play with religious worship",
-            "3": "Confusing times of day with types of religious worship"
+            "Reading, Writing, and Singing worship": "Confusing school skills with religious worship",
+            "Dancing, Running, and Jumping worship": "Confusing physical play with religious worship",
+            "Morning, Afternoon, and Evening worship": "Confusing times of day with types of religious worship"
           }
         },
         {
           "id": "B1-P03-Q06",
-          "skill_tag": "distinguish_worship",
+          "skill_tag": "recognise",
           "type": "mcq",
           "difficulty": 2,
           "stem": "Kwame sees people singing hymns and praying inside a church. Which type of worship is this?",
-          "options": ["Islamic worship", "Christian worship", "Traditional worship", "School assembly"],
+          "options": [
+            "Islamic worship",
+            "Christian worship",
+            "Traditional worship",
+            "School assembly"
+          ],
           "answer": 1,
           "hints": ["Singing hymns in church is Christian practice."],
           "explanation": "Worshipping in a church with hymns and Christian prayers is Christian worship.",
           "distractor_misconceptions": {
-            "0": "Confusing church worship with mosque worship",
-            "2": "Confusing church worship with shrine worship",
-            "3": "Confusing church with general school gathering"
+            "Islamic worship": "Confusing church worship with mosque worship",
+            "Traditional worship": "Confusing church worship with shrine worship",
+            "School assembly": "Confusing church with general school gathering"
           }
         },
         {
           "id": "B1-P03-Q07",
-          "skill_tag": "distinguish_worship",
+          "skill_tag": "recognise",
           "type": "mcq",
           "difficulty": 2,
           "stem": "Fatima sees worshippers bowing down and prostrating on prayer mats facing the Ka'bah. Which worship is this?",
-          "options": ["Traditional worship", "Christian worship", "Islamic worship", "Playground exercise"],
+          "options": [
+            "Traditional worship",
+            "Christian worship",
+            "Islamic worship",
+            "Playground exercise"
+          ],
           "answer": 2,
           "hints": ["Praying on mats with prostrations is practiced in Islam."],
           "explanation": "Bowing and prostrating on prayer mats (Salat) is an act of Islamic worship.",
           "distractor_misconceptions": {
-            "0": "Confusing Islamic prayer postures with traditional worship",
-            "1": "Confusing Islamic prayer postures with Christian prayer",
-            "3": "Mistaking prayer postures for physical exercise"
+            "Traditional worship": "Confusing Islamic prayer postures with traditional worship",
+            "Christian worship": "Confusing Islamic prayer postures with Christian prayer",
+            "Playground exercise": "Mistaking prayer postures for physical exercise"
           }
         },
         {
           "id": "B1-P03-Q08",
-          "skill_tag": "distinguish_worship",
+          "skill_tag": "recognise",
           "type": "oral",
           "difficulty": 2,
           "stem": "Your teacher shows a picture of elders pouring libation to pray to God and ancestors. Which type of worship does this represent?",
-          "hints":["Think of the indigenous worship practiced before foreign religions came."],
-          "explanation":"Pouring libation and invoking ancestors and the Supreme Being is part of Traditional worship.",
+          "hints": ["Think of the indigenous worship practiced before foreign religions came."],
+          "explanation": "Pouring libation and invoking ancestors and the Supreme Being is part of Traditional worship.",
           "rubric": {
             "criteria": [
-              {"description": "Identifies the act as Traditional worship.", "marks": 1},
-              {"description": "Mentions that libation is a traditional practice.", "marks": 1}
+              {
+                "description": "Identifies the act as Traditional worship.",
+                "marks": 1
+              },
+              {
+                "description": "Mentions that libation is a traditional practice.",
+                "marks": 1
+              }
             ]
           }
         },
         {
           "id": "B1-P03-Q09",
-          "skill_tag": "distinguish_worship",
+          "skill_tag": "recognise",
           "type": "oral",
           "difficulty": 2,
           "stem": "Tell your partner where Christians usually go to hold their worship services.",
@@ -165,13 +193,16 @@
           "explanation": "Christians typically worship in a church building or chapel.",
           "rubric": {
             "criteria": [
-              {"description": "Names church, chapel, or cathedral.", "marks": 1}
+              {
+                "description": "Names church, chapel, or cathedral.",
+                "marks": 1
+              }
             ]
           }
         },
         {
           "id": "B1-P03-Q10",
-          "skill_tag": "distinguish_worship",
+          "skill_tag": "recognise",
           "type": "oral",
           "difficulty": 2,
           "stem": "Tell your partner where Muslims gather for communal Friday prayers.",
@@ -179,29 +210,37 @@
           "explanation": "Muslims worship in a mosque (masjid).",
           "rubric": {
             "criteria": [
-              {"description": "Names a mosque or masjid.", "marks": 1}
+              {
+                "description": "Names a mosque or masjid.",
+                "marks": 1
+              }
             ]
           }
         },
         {
           "id": "B1-P03-Q11",
-          "skill_tag": "distinguish_worship",
+          "skill_tag": "recognise",
           "type": "mcq",
           "difficulty": 2,
           "stem": "Which worship setting is connected with shrines, sacred groves, or royal palaces in Ghana?",
-          "options": ["Islamic worship", "Christian worship", "Traditional worship", "Classroom lesson"],
+          "options": [
+            "Islamic worship",
+            "Christian worship",
+            "Traditional worship",
+            "Classroom lesson"
+          ],
           "answer": 2,
           "hints": ["Traditional priests and priestesses worship at shrines."],
           "explanation": "Shrines and sacred spaces are common places for Traditional worship in Ghana.",
           "distractor_misconceptions": {
-            "0": "Confusing shrines with mosques",
-            "1": "Confusing shrines with churches",
-            "3": "Confusing shrines with classrooms"
+            "Islamic worship": "Confusing shrines with mosques",
+            "Christian worship": "Confusing shrines with churches",
+            "Classroom lesson": "Confusing shrines with classrooms"
           }
         },
         {
           "id": "B1-P03-Q12",
-          "skill_tag": "distinguish_worship",
+          "skill_tag": "recognise",
           "type": "oral",
           "difficulty": 2,
           "stem": "Name two different places of worship you can see in Ghanaian communities.",
@@ -209,13 +248,16 @@
           "explanation": "Learners identify two distinct worship locations such as a church, mosque, or shrine.",
           "rubric": {
             "criteria": [
-              {"description": "Names two distinct places of worship (e.g., church and mosque).", "marks": 2}
+              {
+                "description": "Names two distinct places of worship (e.g., church and mosque).",
+                "marks": 2
+              }
             ]
           }
         },
         {
           "id": "B1-P03-Q13",
-          "skill_tag": "roleplay_worship",
+          "skill_tag": "demonstrate",
           "type": "role_play",
           "difficulty": 3,
           "stem": "In pairs, demonstrate how people respectfully enter a place of worship, such as taking off shoes before stepping on prayer mats or sitting quietly in church.",
@@ -223,14 +265,20 @@
           "explanation": "Role-playing respectful entry into a place of worship demonstrates cultural and religious reverence.",
           "rubric": {
             "criteria": [
-              {"description": "Demonstrates a respectful action (e.g. quiet behavior, removing footwear where required).", "marks": 1},
-              {"description": "Explains which religious setting the action represents.", "marks": 1}
+              {
+                "description": "Demonstrates a respectful action (e.g. quiet behavior, removing footwear where required).",
+                "marks": 1
+              },
+              {
+                "description": "Explains which religious setting the action represents.",
+                "marks": 1
+              }
             ]
           }
         },
         {
           "id": "B1-P03-Q14",
-          "skill_tag": "roleplay_worship",
+          "skill_tag": "interpret",
           "type": "oral",
           "difficulty": 3,
           "stem": "Why is it important to keep quiet and show respect when people are worshipping?",
@@ -238,14 +286,20 @@
           "explanation": "Worship is sacred communication with God, so showing quiet respect honours worshippers and their faith.",
           "rubric": {
             "criteria": [
-              {"description": "Explains that worship is a holy or sacred time.", "marks": 1},
-              {"description": "Mentions being peaceful and not disturbing others.", "marks": 1}
+              {
+                "description": "Explains that worship is a holy or sacred time.",
+                "marks": 1
+              },
+              {
+                "description": "Mentions being peaceful and not disturbing others.",
+                "marks": 1
+              }
             ]
           }
         },
         {
           "id": "B1-P03-Q15",
-          "skill_tag": "roleplay_worship",
+          "skill_tag": "demonstrate",
           "type": "role_play",
           "difficulty": 3,
           "stem": "Role-play with your group: Show a Christian prayer posture (e.g., closing eyes and folding hands) and an Islamic prayer posture (e.g., raising hands to ears in Takbir).",
@@ -253,14 +307,20 @@
           "explanation": "Learners demonstrate familiarity with the distinct, respectful prayer postures of both religions.",
           "rubric": {
             "criteria": [
-              {"description": "Demonstrates a Christian prayer posture correctly and respectfully.", "marks": 1},
-              {"description": "Demonstrates an Islamic prayer posture correctly and respectfully.", "marks": 1}
+              {
+                "description": "Demonstrates a Christian prayer posture correctly and respectfully.",
+                "marks": 1
+              },
+              {
+                "description": "Demonstrates an Islamic prayer posture correctly and respectfully.",
+                "marks": 1
+              }
             ]
           }
         },
         {
           "id": "B1-P03-Q16",
-          "skill_tag": "roleplay_worship",
+          "skill_tag": "interpret",
           "type": "oral",
           "difficulty": 3,
           "stem": "A child says, 'Only Christians pray to God; Muslims and Traditionalists do not worship God.' Explain how this statement is mistaken based on our RME lesson.",
@@ -268,14 +328,20 @@
           "explanation": "In Ghana, all three main religions—Christianity, Islam, and African Traditional Religion—engage in worship and prayer to the Supreme Being.",
           "rubric": {
             "criteria": [
-              {"description": "Clarifies that all three religions worship and pray.", "marks": 1},
-              {"description": "States that Ghana recognises Christian, Islamic, and Traditional worship.", "marks": 1}
+              {
+                "description": "Clarifies that all three religions worship and pray.",
+                "marks": 1
+              },
+              {
+                "description": "States that Ghana recognises Christian, Islamic, and Traditional worship.",
+                "marks": 1
+              }
             ]
           }
         },
         {
           "id": "B1-P03-Q17",
-          "skill_tag": "roleplay_worship",
+          "skill_tag": "demonstrate",
           "type": "drawing",
           "difficulty": 3,
           "stem": "Draw a picture of people going to worship on a holy day (such as Sunday or Friday). Tell your teacher which worship you drew.",
@@ -283,14 +349,20 @@
           "explanation": "Learners draw worshippers and explain the religion represented, demonstrating visual and conceptual understanding.",
           "rubric": {
             "criteria": [
-              {"description": "Draws worshippers visiting a place of worship.", "marks": 1},
-              {"description": "Correctly names whether it is Christian, Islamic, or Traditional worship.", "marks": 1}
+              {
+                "description": "Draws worshippers visiting a place of worship.",
+                "marks": 1
+              },
+              {
+                "description": "Correctly names whether it is Christian, Islamic, or Traditional worship.",
+                "marks": 1
+              }
             ]
           }
         },
         {
           "id": "B1-P03-Q18",
-          "skill_tag": "roleplay_worship",
+          "skill_tag": "interpret",
           "type": "oral",
           "difficulty": 4,
           "stem": "Your friend Kofi is a Christian, Amina is a Muslim, and Nana is from a Traditional home. How can all three live happily together in the same classroom?",
@@ -298,14 +370,20 @@
           "explanation": "Living together peacefully requires respecting each other's beliefs, loving one another, and focusing on shared values.",
           "rubric": {
             "criteria": [
-              {"description": "Mentions mutual respect for different worship practices.", "marks": 1},
-              {"description": "Suggests showing love, kindness, and friendship in school.", "marks": 1}
+              {
+                "description": "Mentions mutual respect for different worship practices.",
+                "marks": 1
+              },
+              {
+                "description": "Suggests showing love, kindness, and friendship in school.",
+                "marks": 1
+              }
             ]
           }
         },
         {
           "id": "B1-P03-Q19",
-          "skill_tag": "roleplay_worship",
+          "skill_tag": "interpret",
           "type": "oral",
           "difficulty": 4,
           "stem": "Create a short speech for your classmates explaining the three main types of worship in Ghana and why we should respect all of them.",
@@ -313,14 +391,20 @@
           "explanation": "The speech should name Christianity, Islam, and Traditional religion and advocate for peaceful coexistence.",
           "rubric": {
             "criteria": [
-              {"description": "Accurately names all three main types of worship.", "marks": 2},
-              {"description": "Gives a sound reason for respecting everyone (e.g. unity, peace, love).", "marks": 1}
+              {
+                "description": "Accurately names all three main types of worship.",
+                "marks": 2
+              },
+              {
+                "description": "Gives a sound reason for respecting everyone (e.g. unity, peace, love).",
+                "marks": 1
+              }
             ]
           }
         },
         {
           "id": "B1-P03-Q20",
-          "skill_tag": "roleplay_worship",
+          "skill_tag": "demonstrate",
           "type": "role_play",
           "difficulty": 4,
           "stem": "Act out a short scene where children from Christian, Islamic, and Traditional backgrounds greet each other politely on their way to worship.",
@@ -328,13 +412,22 @@
           "explanation": "This role-play demonstrates positive interpersonal relationships across Ghana's religious landscape.",
           "rubric": {
             "criteria": [
-              {"description": "Represents children heading to their respective worship settings.", "marks": 1},
-              {"description": "Demonstrates warm, respectful greetings and religious tolerance.", "marks": 2}
+              {
+                "description": "Represents children heading to their respective worship settings.",
+                "marks": 1
+              },
+              {
+                "description": "Demonstrates warm, respectful greetings and religious tolerance.",
+                "marks": 2
+              }
             ]
           }
         }
       ],
-      "uncertain": ["The indicator code is printed as BI 2.1.1.1 in the curriculum and is preserved verbatim."]
+      "uncertain": [
+        "The indicator code is printed as BI 2.1.1.1 in the curriculum and is preserved verbatim."
+      ],
+      "source_page": 3
     },
     {
       "code": "BI 2.1.1.2",
@@ -344,11 +437,23 @@
       "sub_strand": "Religious Worship in the Three Major Religions in Ghana",
       "spec": {
         "skills": [
-          {"tag": "identify_texts", "description": "Identify specific passages, songs, and recitations belonging to the three main religions (e.g., Lord's Prayer, Psalm 23, Al-Fatihah, traditional proverbs/myths).", "minQuestions": 6},
-          {"tag": "recite_texts", "description": "Recite or explain lines and meanings from sacred texts and songs of the three religions.", "minQuestions": 7},
-          {"tag": "value_texts", "description": "Explain moral lessons and comfort derived from singing religious songs and reciting sacred words.", "minQuestions": 7}
+          {
+            "tag": "recognise",
+            "description": "Recognise the examples and vocabulary in the lesson.",
+            "minQuestions": 2
+          },
+          {
+            "tag": "interpret",
+            "description": "Explain meanings and connections in an example.",
+            "minQuestions": 2
+          },
+          {
+            "tag": "demonstrate",
+            "description": "Communicate understanding through a performance, drawing or demonstration.",
+            "minQuestions": 2
+          }
         ],
-        "difficultyPlan": {"1": 5, "2": 7, "3": 5, "4": 3},
+        "difficultyPlan": "5 foundational, 7 simple-use, 5 application and 3 challenge questions.",
         "misconceptions": [
           "Thinking Al-Fatihah is a Christian prayer",
           "Thinking Psalm 23 or the Lord's Prayer is an Islamic recital",
@@ -359,23 +464,28 @@
       "questions": [
         {
           "id": "B1-P03-Q21",
-          "skill_tag": "identify_texts",
+          "skill_tag": "recognise",
           "type": "mcq",
           "difficulty": 1,
           "stem": "Which of these is a well-known Christian prayer taught in our lesson?",
-          "options": ["The Lord's Prayer", "Surah Al-Fatihah", "Traditional riddle", "National Anthem"],
+          "options": [
+            "The Lord's Prayer",
+            "Surah Al-Fatihah",
+            "Traditional riddle",
+            "National Anthem"
+          ],
           "answer": 0,
           "hints": ["It begins with 'Our Father who art in heaven'."],
           "explanation": "The Lord's Prayer is a foundational Christian prayer listed in the curriculum.",
           "distractor_misconceptions": {
-            "1": "Confusing an Islamic prayer with a Christian prayer",
-            "2": "Confusing a traditional recital with a Christian prayer",
-            "3": "Confusing a national song with a religious prayer"
+            "Surah Al-Fatihah": "Confusing an Islamic prayer with a Christian prayer",
+            "Traditional riddle": "Confusing a traditional recital with a Christian prayer",
+            "National Anthem": "Confusing a national song with a religious prayer"
           }
         },
         {
           "id": "B1-P03-Q22",
-          "skill_tag": "identify_texts",
+          "skill_tag": "recognise",
           "type": "mcq",
           "difficulty": 1,
           "stem": "Which passage from the Bible begins with 'The Lord is my shepherd'?",
@@ -384,14 +494,14 @@
           "hints": ["It is a famous Psalm of King David."],
           "explanation": "Psalm 23 is the Christian passage that starts with 'The Lord is my shepherd'.",
           "distractor_misconceptions": {
-            "1": "Confusing Quranic surahs with biblical psalms",
-            "2": "Confusing a playground rhyme with sacred scripture",
-            "3": "Confusing traditional proverbs with biblical psalms"
+            "Surah Al-Fatihah": "Confusing Quranic surahs with biblical psalms",
+            "A school rhyme": "Confusing a playground rhyme with sacred scripture",
+            "A traditional proverb": "Confusing traditional proverbs with biblical psalms"
           }
         },
         {
           "id": "B1-P03-Q23",
-          "skill_tag": "identify_texts",
+          "skill_tag": "recognise",
           "type": "mcq",
           "difficulty": 1,
           "stem": "Which of these is the opening chapter of the Holy Quran recited in Islamic worship?",
@@ -400,14 +510,14 @@
           "hints": ["It is recited in every unit of Islamic prayer (Salat)."],
           "explanation": "Al-Fatihah is the opening Surah of the Quran, recited by Muslims in worship.",
           "distractor_misconceptions": {
-            "1": "Confusing a Christian psalm with a Quranic recitation",
-            "2": "Confusing the Lord's Prayer with Islamic recitation",
-            "3": "Confusing folklore with sacred Quranic scripture"
+            "Psalm 23": "Confusing a Christian psalm with a Quranic recitation",
+            "The Lord's Prayer": "Confusing the Lord's Prayer with Islamic recitation",
+            "Story of Ananse": "Confusing folklore with sacred Quranic scripture"
           }
         },
         {
           "id": "B1-P03-Q24",
-          "skill_tag": "identify_texts",
+          "skill_tag": "recognise",
           "type": "short_answer",
           "difficulty": 1,
           "stem": "What type of religious recitations are handed down in African Traditional Religion through songs, riddles, myths, and ___?",
@@ -418,23 +528,28 @@
         },
         {
           "id": "B1-P03-Q25",
-          "skill_tag": "identify_texts",
+          "skill_tag": "recognise",
           "type": "mcq",
           "difficulty": 1,
           "stem": "When Christians recite 'Give us this day our daily bread', which prayer are they saying?",
-          "options": ["The Lord's Prayer", "Surah Al-Fatihah", "A traditional hunting song", "A marching song"],
+          "options": [
+            "The Lord's Prayer",
+            "Surah Al-Fatihah",
+            "A traditional hunting song",
+            "A marching song"
+          ],
           "answer": 0,
           "hints": ["It asks God to provide daily food."],
           "explanation": "'Give us this day our daily bread' is a line from the Lord's Prayer.",
           "distractor_misconceptions": {
-            "1": "Confusing the Lord's Prayer with Surah Al-Fatihah",
-            "2": "Confusing a sacred Christian prayer with a traditional song",
-            "3": "Confusing prayer with a marching band song"
+            "Surah Al-Fatihah": "Confusing the Lord's Prayer with Surah Al-Fatihah",
+            "A traditional hunting song": "Confusing a sacred Christian prayer with a traditional song",
+            "A marching song": "Confusing prayer with a marching band song"
           }
         },
         {
           "id": "B1-P03-Q26",
-          "skill_tag": "recite_texts",
+          "skill_tag": "recognise",
           "type": "oral",
           "difficulty": 2,
           "stem": "Recite the opening line of The Lord's Prayer for your teacher.",
@@ -442,13 +557,16 @@
           "explanation": "Learners recite 'Our Father who art in heaven' (or local language equivalent).",
           "rubric": {
             "criteria": [
-              {"description": "Recites 'Our Father who art in heaven' accurately.", "marks": 1}
+              {
+                "description": "Recites 'Our Father who art in heaven' accurately.",
+                "marks": 1
+              }
             ]
           }
         },
         {
           "id": "B1-P03-Q27",
-          "skill_tag": "recite_texts",
+          "skill_tag": "recognise",
           "type": "oral",
           "difficulty": 2,
           "stem": "Recite the first verse of Psalm 23.",
@@ -456,13 +574,16 @@
           "explanation": "Learners recite 'The Lord is my shepherd, I shall not want.'",
           "rubric": {
             "criteria": [
-              {"description": "Recites 'The Lord is my shepherd; I shall not want' (or equivalent translation).", "marks": 1}
+              {
+                "description": "Recites 'The Lord is my shepherd; I shall not want' (or equivalent translation).",
+                "marks": 1
+              }
             ]
           }
         },
         {
           "id": "B1-P03-Q28",
-          "skill_tag": "recite_texts",
+          "skill_tag": "recognise",
           "type": "oral",
           "difficulty": 2,
           "stem": "Recite the opening words of Surah Al-Fatihah (Bismillah...).",
@@ -470,13 +591,16 @@
           "explanation": "Learners recite the Bismillah or opening verse of Surah Al-Fatihah.",
           "rubric": {
             "criteria": [
-              {"description": "Recites 'Bismillahir Rahmanir Raheem' or the opening of Al-Fatihah clearly.", "marks": 1}
+              {
+                "description": "Recites 'Bismillahir Rahmanir Raheem' or the opening of Al-Fatihah clearly.",
+                "marks": 1
+              }
             ]
           }
         },
         {
           "id": "B1-P03-Q29",
-          "skill_tag": "recite_texts",
+          "skill_tag": "recognise",
           "type": "oral",
           "difficulty": 2,
           "stem": "Share one wise proverb or riddle from your home culture that teaches people to do good.",
@@ -484,14 +608,20 @@
           "explanation": "Learners share an oral traditional proverb, riddle, or moral saying from their community.",
           "rubric": {
             "criteria": [
-              {"description": "States a relevant traditional proverb, riddle, or wise saying.", "marks": 1},
-              {"description": "Briefly tells what good behavior it teaches.", "marks": 1}
+              {
+                "description": "States a relevant traditional proverb, riddle, or wise saying.",
+                "marks": 1
+              },
+              {
+                "description": "Briefly tells what good behavior it teaches.",
+                "marks": 1
+              }
             ]
           }
         },
         {
           "id": "B1-P03-Q30",
-          "skill_tag": "recite_texts",
+          "skill_tag": "recognise",
           "type": "mcq",
           "difficulty": 2,
           "stem": "In Psalm 23, what does the sheep say about the shepherd?",
@@ -505,14 +635,14 @@
           "hints": ["The shepherd provides everything the sheep needs."],
           "explanation": "Psalm 23 begins with trust: 'The Lord is my shepherd; I shall not want.'",
           "distractor_misconceptions": {
-            "1": "Misinterpreting the psalm as showing confusion",
-            "2": "Thinking of commercial sheep farming instead of spiritual care",
-            "3": "Contradicting the psalm's green pastures imagery"
+            "The shepherd has lost his way": "Misinterpreting the psalm as showing confusion",
+            "The shepherd sells the wool": "Thinking of commercial sheep farming instead of spiritual care",
+            "There is no grass in the valley": "Contradicting the psalm's green pastures imagery"
           }
         },
         {
           "id": "B1-P03-Q31",
-          "skill_tag": "recite_texts",
+          "skill_tag": "recognise",
           "type": "mcq",
           "difficulty": 2,
           "stem": "What does 'Al-Rahman' and 'Al-Raheem' in Al-Fatihah teach Muslims about God (Allah)?",
@@ -526,14 +656,14 @@
           "hints": ["Rahman and Raheem mean kindness and mercy."],
           "explanation": "In Al-Fatihah, Allah is praised as the Most Gracious, Most Merciful.",
           "distractor_misconceptions": {
-            "1": "Thinking God lacks care",
-            "2": "Suggesting religion encourages quarreling",
-            "3": "Believing God cannot hear prayer"
+            "That God is uncaring": "Thinking God lacks care",
+            "That God wants people to quarrel": "Suggesting religion encourages quarreling",
+            "That God cannot hear prayers": "Believing God cannot hear prayer"
           }
         },
         {
           "id": "B1-P03-Q32",
-          "skill_tag": "recite_texts",
+          "skill_tag": "demonstrate",
           "type": "performance",
           "difficulty": 2,
           "stem": "Sing a short religious song you know from church, mosque, or community that praises God.",
@@ -541,14 +671,20 @@
           "explanation": "Learners sing an age-appropriate religious hymn, nasheed, or sacred chorus.",
           "rubric": {
             "criteria": [
-              {"description": "Sings a respectful song praising God.", "marks": 1},
-              {"description": "Explains which religious tradition it belongs to.", "marks": 1}
+              {
+                "description": "Sings a respectful song praising God.",
+                "marks": 1
+              },
+              {
+                "description": "Explains which religious tradition it belongs to.",
+                "marks": 1
+              }
             ]
           }
         },
         {
           "id": "B1-P03-Q33",
-          "skill_tag": "value_texts",
+          "skill_tag": "recognise",
           "type": "oral",
           "difficulty": 3,
           "stem": "In The Lord's Prayer, we say 'Forgive us our trespasses, as we forgive those who trespass against us.' What does this teach us to do when someone wrongs us?",
@@ -556,14 +692,20 @@
           "explanation": "This line teaches us to forgive others when they hurt us or make mistakes.",
           "rubric": {
             "criteria": [
-              {"description": "Explains that it teaches forgiveness and letting go of anger.", "marks": 1},
-              {"description": "Connects it to being peaceful with classmates.", "marks": 1}
+              {
+                "description": "Explains that it teaches forgiveness and letting go of anger.",
+                "marks": 1
+              },
+              {
+                "description": "Connects it to being peaceful with classmates.",
+                "marks": 1
+              }
             ]
           }
         },
         {
           "id": "B1-P03-Q34",
-          "skill_tag": "value_texts",
+          "skill_tag": "interpret",
           "type": "oral",
           "difficulty": 3,
           "stem": "Why do believers feel comforted when they recite sacred words or sing songs during difficult times?",
@@ -571,14 +713,20 @@
           "explanation": "Sacred recitations remind believers of God's love, protection, and care, bringing calm and hope.",
           "rubric": {
             "criteria": [
-              {"description": "Mentions feeling God's presence or protection.", "marks": 1},
-              {"description": "Describes feeling calm, happy, or comforted.", "marks": 1}
+              {
+                "description": "Mentions feeling God's presence or protection.",
+                "marks": 1
+              },
+              {
+                "description": "Describes feeling calm, happy, or comforted.",
+                "marks": 1
+              }
             ]
           }
         },
         {
           "id": "B1-P03-Q35",
-          "skill_tag": "value_texts",
+          "skill_tag": "recognise",
           "type": "mcq",
           "difficulty": 3,
           "stem": "An Akan proverb says: 'Tikoro nko agyina' (One head does not go into council). What does this traditional saying teach us?",
@@ -592,14 +740,14 @@
           "hints": ["Two heads are better than one."],
           "explanation": "This traditional proverb teaches cooperation, collaboration, and listening to wise advice.",
           "distractor_misconceptions": {
-            "1": "Interpreting cooperation as working alone",
-            "2": "Assuming traditional sayings oppose parental guidance",
-            "3": "Claiming one individual has all knowledge"
+            "We should always work completely alone": "Interpreting cooperation as working alone",
+            "We should never listen to our parents": "Assuming traditional sayings oppose parental guidance",
+            "One person knows everything": "Claiming one individual has all knowledge"
           }
         },
         {
           "id": "B1-P03-Q36",
-          "skill_tag": "value_texts",
+          "skill_tag": "demonstrate",
           "type": "drawing",
           "difficulty": 3,
           "stem": "Draw a picture of a child praying peacefully. Write or state one word that describes how the child feels (e.g., peace, love, joy).",
@@ -607,14 +755,20 @@
           "explanation": "Learners represent prayer visually and express the emotional value of prayer.",
           "rubric": {
             "criteria": [
-              {"description": "Draws a child in a calm prayer posture.", "marks": 1},
-              {"description": "Names a positive feeling associated with prayer (peace, comfort, joy).", "marks": 1}
+              {
+                "description": "Draws a child in a calm prayer posture.",
+                "marks": 1
+              },
+              {
+                "description": "Names a positive feeling associated with prayer (peace, comfort, joy).",
+                "marks": 1
+              }
             ]
           }
         },
         {
           "id": "B1-P03-Q37",
-          "skill_tag": "value_texts",
+          "skill_tag": "recognise",
           "type": "oral",
           "difficulty": 3,
           "stem": "How does singing together in school or at home help children become good friends?",
@@ -622,14 +776,20 @@
           "explanation": "Singing together fosters unity, shared joy, and love among children.",
           "rubric": {
             "criteria": [
-              {"description": "Explains that singing together builds unity or happiness.", "marks": 1},
-              {"description": "Mentions that it helps children share and cooperate.", "marks": 1}
+              {
+                "description": "Explains that singing together builds unity or happiness.",
+                "marks": 1
+              },
+              {
+                "description": "Mentions that it helps children share and cooperate.",
+                "marks": 1
+              }
             ]
           }
         },
         {
           "id": "B1-P03-Q38",
-          "skill_tag": "value_texts",
+          "skill_tag": "demonstrate",
           "type": "performance",
           "difficulty": 4,
           "stem": "Lead your small group in reciting either The Lord's Prayer, Psalm 23, or Surah Al-Fatihah with reverence and clear voices.",
@@ -637,14 +797,20 @@
           "explanation": "Demonstrates leadership, respectful recitation, and teamwork.",
           "rubric": {
             "criteria": [
-              {"description": "Recites the chosen sacred passage accurately and reverently.", "marks": 2},
-              {"description": "Encourages peers to participate respectfully.", "marks": 1}
+              {
+                "description": "Recites the chosen sacred passage accurately and reverently.",
+                "marks": 2
+              },
+              {
+                "description": "Encourages peers to participate respectfully.",
+                "marks": 1
+              }
             ]
           }
         },
         {
           "id": "B1-P03-Q39",
-          "skill_tag": "value_texts",
+          "skill_tag": "interpret",
           "type": "oral",
           "difficulty": 4,
           "stem": "Your friend is sad because of a problem. Which line from Psalm 23 or another prayer would you share to comfort them, and why?",
@@ -652,14 +818,20 @@
           "explanation": "Learners connect a specific sacred line to comforting someone in distress.",
           "rubric": {
             "criteria": [
-              {"description": "Quotes or recalls a comforting sacred phrase or concept.", "marks": 1},
-              {"description": "Explains how it gives hope or encouragement.", "marks": 2}
+              {
+                "description": "Quotes or recalls a comforting sacred phrase or concept.",
+                "marks": 1
+              },
+              {
+                "description": "Explains how it gives hope or encouragement.",
+                "marks": 2
+              }
             ]
           }
         },
         {
           "id": "B1-P03-Q40",
-          "skill_tag": "value_texts",
+          "skill_tag": "interpret",
           "type": "oral",
           "difficulty": 4,
           "stem": "Explain two ways sacred recitations and songs teach children to be honest, kind, and peaceful citizens.",
@@ -667,13 +839,22 @@
           "explanation": "Learners explain that sacred texts instruct us to tell the truth, care for neighbours, and live in harmony.",
           "rubric": {
             "criteria": [
-              {"description": "Mentions moral lessons like honesty or forgiveness taught in prayers.", "marks": 2},
-              {"description": "Explains how putting those words into action makes school and home peaceful.", "marks": 1}
+              {
+                "description": "Mentions moral lessons like honesty or forgiveness taught in prayers.",
+                "marks": 2
+              },
+              {
+                "description": "Explains how putting those words into action makes school and home peaceful.",
+                "marks": 1
+              }
             ]
           }
         }
       ],
-      "uncertain": ["The indicator code is printed as BI 2.1.1.2 in the curriculum and is preserved verbatim."]
+      "uncertain": [
+        "The indicator code is printed as BI 2.1.1.2 in the curriculum and is preserved verbatim."
+      ],
+      "source_page": 3
     }
   ],
   "progress": {

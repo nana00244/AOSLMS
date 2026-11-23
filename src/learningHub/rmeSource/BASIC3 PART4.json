@@ -1,78 +1,1241 @@
 {
-  "class":"Basic 3",
-  "part":4,
-  "curriculum":"NaCCA Religious and Moral Education Curriculum for Primary Schools, September 2019",
-  "indicator_codes":["B3.3.1.1.2","B3.4.1.1.1","B3.4.1.1.2"],
-  "question_count":60,
-  "accessibility_note":"Teachers may read prompts aloud. Accept oral, written, drawn or role-play responses where suitable. Assess curriculum knowledge, not personal belief. Use teacher-provided accounts; no private disclosure or actual worship practice is required.",
-  "curriculum_note":"Use accounts and examples taught in class; do not invent details where the curriculum provides limited narrative information.",
-  "indicators":[
-    {"code":"B3.3.1.1.2","statement":"Identify moral lessons from the youthful lives of religious leaders.","questions":[
-      {"id":"B3.3.1.1.2-Q01","type":"multiple_choice","prompt":"What should learners use when identifying a moral lesson from a religious leader's youthful life?","options":["A reliable class account","A rumour","An invented story","A stereotype"],"answer":"A reliable class account","hint":"Use information studied with the teacher.","explanation":"Lessons should be drawn from reliable accounts.","misconception_note":"Do not treat unsupported details as facts."},
-      {"id":"B3.3.1.1.2-Q02","type":"short_answer","prompt":"What is a moral lesson?","answer":["A teaching about good conduct or how people should behave."],"hint":"Think of guidance about right actions.","explanation":"Moral lessons guide behaviour and choices.","misconception_note":"Accept age-appropriate wording."},
-      {"id":"B3.3.1.1.2-Q03","type":"multiple_choice","prompt":"A class account describes a young person working diligently. Which lesson might fit?","options":["Diligence","Laziness","Dishonesty","Cruelty"],"answer":"Diligence","hint":"Choose the positive quality shown by steady effort.","explanation":"Diligence means working carefully and persistently.","misconception_note":"Base the answer on the actual account taught."},
-      {"id":"B3.3.1.1.2-Q04","type":"scenario","prompt":"A learner hears an account but cannot find evidence for a proposed lesson. What should they do?","options":["Recheck the account and choose a supported lesson","Make up a detail","Blame another religion","Present a guess as fact"],"answer":"Recheck the account and choose a supported lesson","hint":"Connect the lesson to what happened in the account.","explanation":"Moral conclusions should be supported by the taught narrative.","misconception_note":"Do not require one interpretation where the account is unclear."},
-      {"id":"B3.3.1.1.2-Q05","type":"short_answer","prompt":"Name one positive quality that can be a moral lesson from a leader's life account.","answer":["Any relevant quality supported by the account, such as honesty, kindness, patience, diligence or respect."],"hint":"Choose a quality shown in the class story.","explanation":"Learners identify qualities illustrated by studied accounts.","misconception_note":"Require a connection to the account, not merely a list."},
-      {"id":"B3.3.1.1.2-Q06","type":"oral","prompt":"State one moral lesson from a teacher-provided account and explain what part of the account supports it.","answer":["A relevant lesson with a supporting event or action from the account."],"hint":"Say the lesson, then name the action that shows it.","explanation":"Evidence from the account helps justify the lesson.","misconception_note":"A learner may answer orally and need not disclose personal beliefs."},
-      {"id":"B3.3.1.1.2-Q07","type":"matching","prompt":"Match the action with a possible moral lesson: (1) tells the truth; (2) keeps trying at a task; (3) treats others kindly. Lessons: A. kindness; B. honesty; C. perseverance.","answer":{"1":"B","2":"C","3":"A"},"hint":"Match each action to the quality it shows.","explanation":"Actions can illustrate moral qualities.","misconception_note":"In a real account, use the details actually provided."},
-      {"id":"B3.3.1.1.2-Q08","type":"multiple_choice","prompt":"Why should a learner avoid inventing events when explaining a moral lesson?","options":["The lesson should be based on accurate information","Invented events are always more important","Accuracy does not matter","Stories should be used to mock people"],"answer":"The lesson should be based on accurate information","hint":"Think about what makes an explanation trustworthy.","explanation":"A moral lesson should be linked to a reliable account.","misconception_note":"Use teacher-supplied material when details are limited."},
-      {"id":"B3.3.1.1.2-Q09","type":"scenario","prompt":"A character in a class story shares fairly. Which lesson is best supported?","options":["Fairness and generosity","Greed","Dishonesty","Disrespect"],"answer":"Fairness and generosity","hint":"Choose the quality shown by sharing fairly.","explanation":"Fair sharing can illustrate generosity and fairness.","misconception_note":"Use this as a general example, not a claim about a specific leader."},
-      {"id":"B3.3.1.1.2-Q10","type":"drawing","prompt":"Draw a simple scene showing one moral lesson from a class account. Label the lesson.","answer":["A drawing connected to a taught account with an appropriate label or oral explanation."],"hint":"Show an action that demonstrates the lesson.","explanation":"Visual work can help learners communicate a moral lesson.","misconception_note":"Assess the idea, not artistic skill."},
-      {"id":"B3.3.1.1.2-Q11","type":"multiple_choice","prompt":"Which is the strongest explanation of a moral lesson?","options":["Name the lesson and connect it to an action in the account","Name a quality without any connection","Repeat an unrelated rumour","Compare religions as better or worse"],"answer":"Name the lesson and connect it to an action in the account","hint":"A good explanation gives a reason.","explanation":"The account provides evidence for the lesson identified.","misconception_note":"Do not turn the task into ranking religions."},
-      {"id":"B3.3.1.1.2-Q12","type":"short_answer","prompt":"How can patience help someone facing a difficulty?","answer":["It can help the person remain calm, keep trying and make thoughtful choices."],"hint":"Think about not giving up or acting in anger.","explanation":"Patience is a possible moral quality discussed through life accounts.","misconception_note":"Accept varied examples; no personal story is required."},
-      {"id":"B3.3.1.1.2-Q13","type":"scenario","prompt":"Two learners draw different lessons from the same account. What is a respectful next step?","options":["Discuss the evidence in the account and listen to each other","Insult one another","Declare one religion inferior","Invent new events"],"answer":"Discuss the evidence in the account and listen to each other","hint":"Use respectful discussion and evidence.","explanation":"Learners can explain interpretations using the taught account.","misconception_note":"Accept more than one reasonable lesson when supported."},
-      {"id":"B3.3.1.1.2-Q14","type":"multiple_choice","prompt":"Which action best demonstrates respect?","options":["Listening without mocking another person's account","Interrupting to ridicule","Forcing others to agree","Changing the story to insult someone"],"answer":"Listening without mocking another person's account","hint":"Choose considerate behaviour.","explanation":"Respectful listening supports learning about different traditions.","misconception_note":"Respect does not require personal agreement."},
-      {"id":"B3.3.1.1.2-Q15","type":"role_play","prompt":"Present a short fictional scene showing one moral quality from a class account; a narrator names the quality.","answer":["A respectful scene demonstrates a relevant quality and the narrator identifies it."],"hint":"Use an everyday classroom situation rather than imitating a sacred event.","explanation":"Role-play can demonstrate how a moral lesson applies.","misconception_note":"Do not portray religious figures disrespectfully or add historical claims.","rubric":{"quality_shown":"0–2: quality is clear","connection":"0–2: links to lesson","respect":"0–1: respectful presentation"}},
-      {"id":"B3.3.1.1.2-Q16","type":"matching","prompt":"Match the quality with its meaning: (1) honesty; (2) patience; (3) kindness. Meanings: A. caring about others; B. telling the truth; C. waiting calmly.","answer":{"1":"B","2":"C","3":"A"},"hint":"Match each word to its meaning.","explanation":"Understanding the words helps learners identify lessons.","misconception_note":"Accept simple equivalent definitions."},
-      {"id":"B3.3.1.1.2-Q17","type":"oral","prompt":"Explain one way a learner could practise a moral lesson at school.","answer":["A suitable example such as telling the truth, sharing fairly, helping, listening or persevering."],"hint":"Give an everyday example.","explanation":"Moral learning can guide behaviour in daily life.","misconception_note":"Do not assess personal religious commitment."},
-      {"id":"B3.3.1.1.2-Q18","type":"short_answer","prompt":"Why is it important to mention the action that supports a moral lesson?","answer":["It shows how the lesson comes from the account and makes the explanation clear."],"hint":"Think about evidence for an answer.","explanation":"A supporting action connects interpretation to the story.","misconception_note":"Accept concise answers."},
-      {"id":"B3.3.1.1.2-Q19","type":"performance","prompt":"Give an oral, written or drawn response identifying one moral lesson from a taught account and supporting it with one detail.","answer":["A relevant moral lesson supported by an accurate detail from the class account."],"hint":"Use only facts studied in class.","explanation":"This checks identification and explanation of a moral lesson.","misconception_note":"Do not penalise learners for omitting details absent from the provided account.","rubric":{"lesson":"0–2: identifies a relevant lesson","evidence":"0–2: cites a supporting detail","clarity":"0–1: communicates clearly"}},
-      {"id":"B3.3.1.1.2-Q20","type":"multiple_choice","prompt":"Which statement best describes learning moral lessons from religious leaders' lives?","options":["Identify values supported by the account and consider good conduct","Invent a biography","Decide which religion is superior","Memorise rumours"],"answer":"Identify values supported by the account and consider good conduct","hint":"Choose the answer based on accurate learning and behaviour.","explanation":"Learners identify moral lessons from studied life accounts.","misconception_note":"Keep the discussion respectful and evidence-based."}
-    ]},
-    {"code":"B3.4.1.1.1","statement":"Identify God's promises to humankind in the religious traditions studied.","questions":[
-      {"id":"B3.4.1.1.1-Q01","type":"multiple_choice","prompt":"When learning about a promise attributed to God, what should learners consult?","options":["The religious account or text studied in class","A rumour","An invented quotation","A guess"],"answer":"The religious account or text studied in class","hint":"Use reliable lesson material.","explanation":"Promises should be identified from the sources taught.","misconception_note":"Traditions may describe promises in different ways."},
-      {"id":"B3.4.1.1.1-Q02","type":"short_answer","prompt":"In general, what is a promise?","answer":["A statement that someone will do or provide something."],"hint":"Think of a commitment about the future.","explanation":"Understanding the word helps learners discuss promises in religious accounts.","misconception_note":"Accept simple wording."},
-      {"id":"B3.4.1.1.1-Q03","type":"multiple_choice","prompt":"Which is a careful way to describe a promise taught in one religious tradition?","options":["According to the account studied, God promises…","Every tradition says exactly the same thing","I will invent the promise","No source is needed"],"answer":"According to the account studied, God promises…","hint":"Name the source or tradition accurately.","explanation":"Careful wording avoids generalising across traditions.","misconception_note":"Use examples explicitly taught by the teacher."},
-      {"id":"B3.4.1.1.1-Q04","type":"scenario","prompt":"A learner cannot remember the exact wording of a promise from the lesson. What should they do?","options":["Check the class source or describe it carefully in their own words","Invent a quotation","Claim certainty without checking","Mock the account"],"answer":"Check the class source or describe it carefully in their own words","hint":"Accuracy matters more than pretending to remember.","explanation":"Learners should rely on the account studied.","misconception_note":"Do not penalise paraphrases that preserve the taught meaning."},
-      {"id":"B3.4.1.1.1-Q05","type":"short_answer","prompt":"Name one promise about God that your class studied, using the teacher's account.","answer":["A promise accurately stated or paraphrased from the lesson source."],"hint":"Refer to class notes, a text or the teacher's account.","explanation":"The response must reflect a promise actually taught.","misconception_note":"Use the relevant tradition's account; do not infer a universal promise."},
-      {"id":"B3.4.1.1.1-Q06","type":"oral","prompt":"Describe one promise from a religious account studied in class.","answer":["A correct oral description or paraphrase of the taught promise."],"hint":"Say what was promised and refer to the lesson account.","explanation":"This assesses recall and description.","misconception_note":"Allow oral response and reasonable paraphrase."},
-      {"id":"B3.4.1.1.1-Q07","type":"matching","prompt":"Match each term with its meaning: (1) promise; (2) source; (3) account. Meanings: A. a telling or record of events; B. where information comes from; C. a commitment to do or provide something.","answer":{"1":"C","2":"B","3":"A"},"hint":"Match each word to its definition.","explanation":"These terms support accurate discussion of religious teachings.","misconception_note":"Accept equivalent wording."},
-      {"id":"B3.4.1.1.1-Q08","type":"multiple_choice","prompt":"Why should learners avoid saying that all religions teach an identical promise unless the lesson supports it?","options":["Religious accounts can differ and should be represented accurately","Differences must be hidden","All traditions are identical","Sources never matter"],"answer":"Religious accounts can differ and should be represented accurately","hint":"Avoid making claims beyond the evidence.","explanation":"Accurate comparison respects the teachings studied.","misconception_note":"Do not turn difference into ranking."},
-      {"id":"B3.4.1.1.1-Q09","type":"scenario","prompt":"A pupil finds a promise in the class reading and wants to tell the class about it. What should the pupil include?","options":["The promise and where it was found or taught","An unrelated story","A claim that everyone believes identically","A made-up quotation"],"answer":"The promise and where it was found or taught","hint":"Share the teaching with its context.","explanation":"Context supports accurate learning.","misconception_note":"A simple source description is enough for this level."},
-      {"id":"B3.4.1.1.1-Q10","type":"drawing","prompt":"Draw a simple symbol or scene representing a promise studied in class and add a label explaining it.","answer":["A respectful visual linked to a taught promise with a clear label or explanation."],"hint":"Use a non-sacred symbol if you are unsure what is appropriate.","explanation":"A drawing can help learners communicate the meaning of a taught promise.","misconception_note":"Assess understanding, not artistic skill; avoid requiring sacred images."},
-      {"id":"B3.4.1.1.1-Q11","type":"multiple_choice","prompt":"Which answer shows a learner is distinguishing a promise from an opinion?","options":["The promise is stated in the account we studied","I think it must be true because I guessed","My friend invented it","A promise and an opinion are always the same"],"answer":"The promise is stated in the account we studied","hint":"Choose the answer grounded in a source.","explanation":"Religious promises in this lesson should be identified from taught material.","misconception_note":"Learners need not state personal belief."},
-      {"id":"B3.4.1.1.1-Q12","type":"short_answer","prompt":"Why should a promise be described in its religious context?","answer":["So its meaning is represented accurately and not wrongly applied to other traditions."],"hint":"Think about meaning and accuracy.","explanation":"Context helps prevent overgeneralisation.","misconception_note":"Accept concise explanations."},
-      {"id":"B3.4.1.1.1-Q13","type":"scenario","prompt":"A learner hears two different accounts of God's promise from two traditions. What is a respectful response?","options":["Describe each account accurately and listen respectfully","Say one group must be lying","Combine them into an invented story","Refuse to learn"],"answer":"Describe each account accurately and listen respectfully","hint":"Respectful comparison does not require ranking.","explanation":"Different traditions should be presented fairly.","misconception_note":"Assess knowledge, not agreement."},
-      {"id":"B3.4.1.1.1-Q14","type":"multiple_choice","prompt":"What should a learner do before quoting a promise?","options":["Check the wording in the class source","Add words from memory as if exact","Change the meaning","Attribute it to another tradition"],"answer":"Check the wording in the class source","hint":"Exact quotations need checking.","explanation":"Checking supports reliable quotation.","misconception_note":"Paraphrase if exact wording is unavailable."},
-      {"id":"B3.4.1.1.1-Q15","type":"oral","prompt":"Explain in your own words one promise from a class account, without claiming that every tradition teaches it.","answer":["A faithful paraphrase tied to the tradition or source studied."],"hint":"Name the class account and explain its meaning simply.","explanation":"Learners practise describing teachings accurately.","misconception_note":"Accept oral answers and paraphrases."},
-      {"id":"B3.4.1.1.1-Q16","type":"matching","prompt":"Match the classroom action to its purpose: (1) checking the text; (2) naming the tradition; (3) listening to another account. Purposes: A. respectful learning; B. accurate wording; C. context.","answer":{"1":"B","2":"C","3":"A"},"hint":"Match each action to why it is helpful.","explanation":"These practices support respectful, accurate study.","misconception_note":"Accept equivalent explanations."},
-      {"id":"B3.4.1.1.1-Q17","type":"short_answer","prompt":"What can a learner say if a promise's meaning is unclear?","answer":["Ask the teacher or consult the class source rather than guessing."],"hint":"Use a reliable way to clarify meaning.","explanation":"Questions and source-checking help prevent misunderstanding.","misconception_note":"Asking for clarification is appropriate."},
-      {"id":"B3.4.1.1.1-Q18","type":"role_play","prompt":"In pairs, practise explaining a promise from a teacher-provided account while the listener asks one respectful clarification question.","answer":["The speaker explains the taught promise accurately and the listener asks a respectful, relevant question."],"hint":"Use the supplied account and do not debate personal belief.","explanation":"The activity builds clear description and respectful listening.","misconception_note":"No learner must disclose their own faith.","rubric":{"accuracy":"0–2: reflects the supplied account","clarity":"0–2: explanation is understandable","respect":"0–1: listens and responds respectfully"}},
-      {"id":"B3.4.1.1.1-Q19","type":"performance","prompt":"Present one promise from a class source orally, in writing or with a labelled drawing; identify its context.","answer":["A correct promise or paraphrase connected to the relevant taught source or tradition."],"hint":"Use class notes and explain briefly.","explanation":"This checks identification and description of a promise.","misconception_note":"Do not mark personal belief or require exact quotation unless specified.","rubric":{"promise":"0–2: identifies accurately","context":"0–2: gives appropriate source context","communication":"0–1: response is clear"}},
-      {"id":"B3.4.1.1.1-Q20","type":"multiple_choice","prompt":"Which is the best rule for discussing God's promises in a diverse class?","options":["Use the accounts studied and respect differences","Require every learner to profess belief","Invent details to make accounts alike","Rank classmates by religion"],"answer":"Use the accounts studied and respect differences","hint":"Choose accuracy and inclusion.","explanation":"RME learning assesses understanding rather than private belief.","misconception_note":"Keep classroom discussion inclusive."}
-    ]},
-    {"code":"B3.4.1.1.2","statement":"Explain the benefits of responding to God's promises.","questions":[
-      {"id":"B3.4.1.1.2-Q01","type":"multiple_choice","prompt":"In this lesson, what does responding to a promise mean?","options":["Acting or living in a way connected to the promise as taught","Ignoring the lesson","Inventing a promise","Forcing others to agree"],"answer":"Acting or living in a way connected to the promise as taught","hint":"Think about a suitable response to a teaching.","explanation":"The indicator concerns benefits of responding to promises in the taught accounts.","misconception_note":"Do not require a personal religious profession."},
-      {"id":"B3.4.1.1.2-Q02","type":"short_answer","prompt":"Name one possible benefit of responding to a promise, using the class account.","answer":["A benefit consistent with the promise and explanation taught in class."],"hint":"Refer to the reason or outcome discussed in the lesson.","explanation":"Answers should reflect class learning.","misconception_note":"Avoid treating an outcome as guaranteed if the account does not say so."},
-      {"id":"B3.4.1.1.2-Q03","type":"multiple_choice","prompt":"Which is a thoughtful way to explain a benefit of responding to a religious promise?","options":["Connect the response to the outcome described in the account","Promise that every difficulty will disappear","Make an unsupported guarantee","Mock people who respond differently"],"answer":"Connect the response to the outcome described in the account","hint":"Use evidence from the lesson.","explanation":"Benefits should be explained using the teaching studied.","misconception_note":"Do not promise guaranteed rewards beyond the source."},
-      {"id":"B3.4.1.1.2-Q04","type":"scenario","prompt":"A learner says responding to a promise means forcing classmates to follow one religion. What is a better understanding?","options":["Explain the teaching and its benefits without coercing anyone","Make everyone perform a ritual","Punish questions","Hide the account"],"answer":"Explain the teaching and its benefits without coercing anyone","hint":"RME learning is respectful and non-coercive.","explanation":"Learners study teachings without being required to profess belief.","misconception_note":"Assess understanding, not conformity."},
-      {"id":"B3.4.1.1.2-Q05","type":"oral","prompt":"Describe one benefit of responding to a promise that was discussed in class.","answer":["A benefit accurately connected to the teacher-provided account."],"hint":"Use the explanation given in the lesson.","explanation":"This assesses learners' ability to explain benefits.","misconception_note":"Accept oral response and paraphrase."},
-      {"id":"B3.4.1.1.2-Q06","type":"matching","prompt":"Match the response with a possible classroom benefit: (1) following a teaching about kindness; (2) keeping a commitment; (3) listening to guidance. Benefits: A. trust; B. caring relationships; C. learning and wise choices.","answer":{"1":"B","2":"A","3":"C"},"hint":"Match each action to a reasonable benefit.","explanation":"These are general examples; use the specific benefits in the class account.","misconception_note":"Do not present the examples as a direct quotation from scripture."},
-      {"id":"B3.4.1.1.2-Q07","type":"multiple_choice","prompt":"Which benefit is most likely when people keep commitments to one another?","options":["Trust","Confusion","Bullying","Dishonesty"],"answer":"Trust","hint":"Think of what keeping a commitment can build.","explanation":"Keeping commitments can help build trust in relationships.","misconception_note":"This is a general moral example; relate it to the lesson source where appropriate."},
-      {"id":"B3.4.1.1.2-Q08","type":"short_answer","prompt":"How can responding to a teaching about kindness benefit a classroom?","answer":["It can help learners care for one another, include others and reduce hurtful behaviour."],"hint":"Think about how kind actions affect classmates.","explanation":"A teaching can guide positive conduct.","misconception_note":"Accept a suitable age-appropriate example."},
-      {"id":"B3.4.1.1.2-Q09","type":"scenario","prompt":"A class discusses a promise and one learner asks how people may benefit from responding to it. What should the group do?","options":["Refer to the account studied and explain its stated benefit","Guess and claim certainty","Make fun of the question","Demand personal testimony"],"answer":"Refer to the account studied and explain its stated benefit","hint":"Use the evidence and explanation from class.","explanation":"The benefit should be connected to the source.","misconception_note":"No learner should have to share private religious experience."},
-      {"id":"B3.4.1.1.2-Q10","type":"drawing","prompt":"Draw a simple scene showing a positive benefit discussed in class when people respond to a promise. Add a label.","answer":["A respectful scene that illustrates a benefit from the lesson, with a suitable label or explanation."],"hint":"Choose an everyday benefit such as trust, care or peace if it matches the lesson.","explanation":"A labelled drawing can show understanding of a benefit.","misconception_note":"Assess meaning rather than drawing ability."},
-      {"id":"B3.4.1.1.2-Q11","type":"multiple_choice","prompt":"Which statement avoids making an unsupported guarantee?","options":["The account teaches that responding may bring the stated benefit","Everyone who responds will never face difficulty","A promise guarantees success in every situation","No explanation is needed"],"answer":"The account teaches that responding may bring the stated benefit","hint":"Choose careful wording grounded in the account.","explanation":"Avoid claims beyond what the source says.","misconception_note":"Use the source's exact meaning and conditions."},
-      {"id":"B3.4.1.1.2-Q12","type":"short_answer","prompt":"Why should benefits be linked to the promise studied?","answer":["So the explanation is accurate and does not add claims absent from the account."],"hint":"Think about evidence and fairness.","explanation":"The account is the basis for explaining benefits.","misconception_note":"Accept concise answers."},
-      {"id":"B3.4.1.1.2-Q13","type":"oral","prompt":"Give one everyday example of a benefit that could follow from practising a moral teaching discussed in class.","answer":["A relevant example such as stronger trust, caring relationships, peace or wise choices, where consistent with the lesson."],"hint":"Connect an action with a reasonable outcome.","explanation":"Learners apply the idea to everyday life.","misconception_note":"This tests explanation, not personal belief."},
-      {"id":"B3.4.1.1.2-Q14","type":"scenario","prompt":"A learner says only people from one religion can benefit from honesty. Which response is fair?","options":["Honesty can benefit relationships broadly, while the class also studies its religious teaching","Only one group may be honest","Other traditions have no values","The lesson should be ignored"],"answer":"Honesty can benefit relationships broadly, while the class also studies its religious teaching","hint":"Separate a shared moral value from claims about one group.","explanation":"Moral benefits can be discussed inclusively without erasing the source tradition.","misconception_note":"Avoid stereotypes about religious groups."},
-      {"id":"B3.4.1.1.2-Q15","type":"matching","prompt":"Match the behaviour with its possible benefit: (1) speaking truthfully; (2) helping others; (3) keeping a promise. Benefits: A. trust; B. support and care; C. honest communication.","answer":{"1":"C","2":"B","3":"A"},"hint":"Match each behaviour with a reasonable outcome.","explanation":"These examples illustrate how moral responses may benefit relationships.","misconception_note":"Link responses back to the class teaching when relevant."},
-      {"id":"B3.4.1.1.2-Q16","type":"role_play","prompt":"Present a short fictional scene showing one benefit of responding to a promise or teaching discussed in class. A narrator explains the connection.","answer":["A respectful fictional scene shows a relevant benefit and the narrator explains how it connects to the lesson."],"hint":"Use an everyday situation and avoid acting out worship.","explanation":"Role-play supports explanation of practical benefits.","misconception_note":"Do not require learners to claim personal religious experience.","rubric":{"benefit":"0–2: benefit is relevant","connection":"0–2: narrator links it to the lesson","respect":"0–1: inclusive and respectful"}},
-      {"id":"B3.4.1.1.2-Q17","type":"short_answer","prompt":"Name one benefit of responding to a promise that does not require judging another person's faith.","answer":["A benefit from the class account, described without evaluating anyone's personal belief."],"hint":"Focus on the teaching and its outcome.","explanation":"The learning objective concerns the benefit, not a learner's faith.","misconception_note":"Accept source-grounded answers."},
-      {"id":"B3.4.1.1.2-Q18","type":"multiple_choice","prompt":"What is the best way to compare two accounts about responding to God's promises?","options":["Describe each account and benefit accurately and respectfully","Say one must be false without evidence","Mix the accounts together","Rank classmates by tradition"],"answer":"Describe each account and benefit accurately and respectfully","hint":"Compare fairly without ranking.","explanation":"Respectful comparison requires accurate representation.","misconception_note":"Do not ask learners to disclose their own religious identity."},
-      {"id":"B3.4.1.1.2-Q19","type":"performance","prompt":"Explain one benefit of responding to a promise from the class account, orally, in writing or with a labelled drawing.","answer":["A clear benefit consistent with the taught promise and account."],"hint":"State the promise or teaching, then explain the benefit described.","explanation":"This directly assesses the indicator.","misconception_note":"Do not reward unsupported guarantees or assess private belief.","rubric":{"benefit":"0–2: identifies a relevant benefit","connection":"0–2: connects it to the taught account","clarity":"0–1: communicates clearly"}},
-      {"id":"B3.4.1.1.2-Q20","type":"multiple_choice","prompt":"Which is the most accurate summary of this indicator?","options":["Explain benefits described in the class accounts when people respond to God's promises","Force all learners to make a religious commitment","Invent benefits without evidence","Compare religions to decide which is best"],"answer":"Explain benefits described in the class accounts when people respond to God's promises","hint":"Choose the option focused on understanding and explanation.","explanation":"The indicator assesses knowledge of benefits in the taught material.","misconception_note":"Assess learning rather than personal belief."}
-    ]}
+  "class": "Basic 3",
+  "part": 4,
+  "curriculum": "NaCCA Religious and Moral Education Curriculum for Primary Schools, September 2019",
+  "indicator_codes": ["B3.3.1.1.2", "B3.4.1.1.1", "B3.4.1.1.2"],
+  "question_count": 60,
+  "accessibility_note": "Teachers may read prompts aloud. Accept oral, written, drawn or role-play responses where suitable. Assess curriculum knowledge, not personal belief. Use teacher-provided accounts; no private disclosure or actual worship practice is required.",
+  "curriculum_note": "Use accounts and examples taught in class; do not invent details where the curriculum provides limited narrative information.",
+  "indicators": [
+    {
+      "code": "B3.3.1.1.2",
+      "statement": "Identify and explain the moral lessons of the youthful life of the religious leaders of the three major religions.",
+      "questions": [
+        {
+          "id": "B3.3.1.1.2-Q01",
+          "type": "mcq",
+          "prompt": "What should learners use when identifying a moral lesson from a religious leader's youthful life?",
+          "options": ["A reliable class account", "A rumour", "An invented story", "A stereotype"],
+          "answer": "A reliable class account",
+          "hint": "Use information studied with the teacher.",
+          "explanation": "Lessons should be drawn from reliable accounts.",
+          "misconception_note": "Do not treat unsupported details as facts.",
+          "skill_tag": "recognise",
+          "difficulty": 1
+        },
+        {
+          "id": "B3.3.1.1.2-Q02",
+          "type": "written",
+          "prompt": "When discussing a religious leader’s youth, what does a moral lesson tell us about conduct?",
+          "hint": "Think of guidance about right actions.",
+          "explanation": "Moral lessons guide behaviour and choices.",
+          "misconception_note": "Accept age-appropriate wording.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "A teaching about good conduct or how people should behave.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "interpret",
+          "difficulty": 2
+        },
+        {
+          "id": "B3.3.1.1.2-Q03",
+          "type": "mcq",
+          "prompt": "A class account describes a young person working diligently. Which lesson might fit?",
+          "options": ["Diligence", "Laziness", "Dishonesty", "Cruelty"],
+          "answer": "Diligence",
+          "hint": "Choose the positive quality shown by steady effort.",
+          "explanation": "Diligence means working carefully and persistently.",
+          "misconception_note": "Base the answer on the actual account taught.",
+          "skill_tag": "interpret",
+          "difficulty": 2
+        },
+        {
+          "id": "B3.3.1.1.2-Q04",
+          "type": "mcq",
+          "prompt": "A learner hears an account but cannot find evidence for a proposed lesson. What should they do?",
+          "options": [
+            "Recheck the account and choose a supported lesson",
+            "Make up a detail",
+            "Blame another religion",
+            "Present a guess as fact"
+          ],
+          "answer": "Recheck the account and choose a supported lesson",
+          "hint": "Connect the lesson to what happened in the account.",
+          "explanation": "Moral conclusions should be supported by the taught narrative.",
+          "misconception_note": "Do not require one interpretation where the account is unclear.",
+          "skill_tag": "apply",
+          "difficulty": 3
+        },
+        {
+          "id": "B3.3.1.1.2-Q05",
+          "type": "written",
+          "prompt": "Name one positive quality that can be a moral lesson from a leader's life account.",
+          "hint": "Choose a quality shown in the class story.",
+          "explanation": "Learners identify qualities illustrated by studied accounts.",
+          "misconception_note": "Require a connection to the account, not merely a list.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Any relevant quality supported by the account, such as honesty, kindness, patience, diligence or respect.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "recognise",
+          "difficulty": 2
+        },
+        {
+          "id": "B3.3.1.1.2-Q06",
+          "type": "oral",
+          "prompt": "State one moral lesson from a teacher-provided account and explain what part of the account supports it.",
+          "hint": "Say the lesson, then name the action that shows it.",
+          "explanation": "Evidence from the account helps justify the lesson.",
+          "misconception_note": "A learner may answer orally and need not disclose personal beliefs.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "A relevant lesson with a supporting event or action from the account.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "interpret",
+          "difficulty": 2
+        },
+        {
+          "id": "B3.3.1.1.2-Q07",
+          "type": "matching",
+          "prompt": "Match the action with a possible moral lesson: (1) tells the truth; (2) keeps trying at a task; (3) treats others kindly. Lessons: A. kindness; B. honesty; C. perseverance.",
+          "hint": "Match each action to the quality it shows.",
+          "explanation": "Actions can illustrate moral qualities.",
+          "misconception_note": "In a real account, use the details actually provided.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Matches 1 with B.",
+                "marks": 1
+              },
+              {
+                "description": "Matches 2 with C.",
+                "marks": 1
+              },
+              {
+                "description": "Matches 3 with A.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "interpret",
+          "difficulty": 2
+        },
+        {
+          "id": "B3.3.1.1.2-Q08",
+          "type": "mcq",
+          "prompt": "Why should a learner avoid inventing events when explaining a moral lesson?",
+          "options": [
+            "The lesson should be based on accurate information",
+            "Invented events are always more important",
+            "Accuracy does not matter",
+            "Stories should be used to mock people"
+          ],
+          "answer": "The lesson should be based on accurate information",
+          "hint": "Think about what makes an explanation trustworthy.",
+          "explanation": "A moral lesson should be linked to a reliable account.",
+          "misconception_note": "Use teacher-supplied material when details are limited.",
+          "skill_tag": "apply",
+          "difficulty": 3
+        },
+        {
+          "id": "B3.3.1.1.2-Q09",
+          "type": "mcq",
+          "prompt": "A character in a class story shares fairly. Which lesson is best supported?",
+          "options": ["Fairness and generosity", "Greed", "Dishonesty", "Disrespect"],
+          "answer": "Fairness and generosity",
+          "hint": "Choose the quality shown by sharing fairly.",
+          "explanation": "Fair sharing can illustrate generosity and fairness.",
+          "misconception_note": "Use this as a general example, not a claim about a specific leader.",
+          "skill_tag": "recognise",
+          "difficulty": 1
+        },
+        {
+          "id": "B3.3.1.1.2-Q10",
+          "type": "drawing",
+          "prompt": "Draw a simple scene showing one moral lesson from a class account. Label the lesson.",
+          "hint": "Show an action that demonstrates the lesson.",
+          "explanation": "Visual work can help learners communicate a moral lesson.",
+          "misconception_note": "Assess the idea, not artistic skill.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "A drawing connected to a taught account with an appropriate label or oral explanation.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "demonstrate",
+          "difficulty": 4
+        },
+        {
+          "id": "B3.3.1.1.2-Q11",
+          "type": "mcq",
+          "prompt": "Which is the strongest explanation of a moral lesson?",
+          "options": [
+            "Name the lesson and connect it to an action in the account",
+            "Name a quality without any connection",
+            "Repeat an unrelated rumour",
+            "Compare religions as better or worse"
+          ],
+          "answer": "Name the lesson and connect it to an action in the account",
+          "hint": "A good explanation gives a reason.",
+          "explanation": "The account provides evidence for the lesson identified.",
+          "misconception_note": "Do not turn the task into ranking religions.",
+          "skill_tag": "recognise",
+          "difficulty": 1
+        },
+        {
+          "id": "B3.3.1.1.2-Q12",
+          "type": "written",
+          "prompt": "How can patience help someone facing a difficulty?",
+          "hint": "Think about not giving up or acting in anger.",
+          "explanation": "Patience is a possible moral quality discussed through life accounts.",
+          "misconception_note": "Accept varied examples; no personal story is required.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "It can help the person remain calm, keep trying and make thoughtful choices.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "apply",
+          "difficulty": 3
+        },
+        {
+          "id": "B3.3.1.1.2-Q13",
+          "type": "mcq",
+          "prompt": "Two learners draw different lessons from the same account. What is a respectful next step?",
+          "options": [
+            "Discuss the evidence in the account and listen to each other",
+            "Insult one another",
+            "Declare one religion inferior",
+            "Invent new events"
+          ],
+          "answer": "Discuss the evidence in the account and listen to each other",
+          "hint": "Use respectful discussion and evidence.",
+          "explanation": "Learners can explain interpretations using the taught account.",
+          "misconception_note": "Accept more than one reasonable lesson when supported.",
+          "skill_tag": "recognise",
+          "difficulty": 1
+        },
+        {
+          "id": "B3.3.1.1.2-Q14",
+          "type": "mcq",
+          "prompt": "Which action best demonstrates respect?",
+          "options": [
+            "Listening without mocking another person's account",
+            "Interrupting to ridicule",
+            "Forcing others to agree",
+            "Changing the story to insult someone"
+          ],
+          "answer": "Listening without mocking another person's account",
+          "hint": "Choose considerate behaviour.",
+          "explanation": "Respectful listening supports learning about different traditions.",
+          "misconception_note": "Respect does not require personal agreement.",
+          "skill_tag": "recognise",
+          "difficulty": 1
+        },
+        {
+          "id": "B3.3.1.1.2-Q15",
+          "type": "role_play",
+          "prompt": "Present a short fictional scene showing one moral quality from a class account; a narrator names the quality.",
+          "hint": "Use an everyday classroom situation rather than imitating a sacred event.",
+          "explanation": "Role-play can demonstrate how a moral lesson applies.",
+          "misconception_note": "Do not portray religious figures disrespectfully or add historical claims.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "quality is clear",
+                "marks": 2
+              },
+              {
+                "description": "links to lesson",
+                "marks": 2
+              },
+              {
+                "description": "respectful presentation",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "demonstrate",
+          "difficulty": 4
+        },
+        {
+          "id": "B3.3.1.1.2-Q16",
+          "type": "matching",
+          "prompt": "Match the quality with its meaning: (1) honesty; (2) patience; (3) kindness. Meanings: A. caring about others; B. telling the truth; C. waiting calmly.",
+          "hint": "Match each word to its meaning.",
+          "explanation": "Understanding the words helps learners identify lessons.",
+          "misconception_note": "Accept simple equivalent definitions.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Matches 1 with B.",
+                "marks": 1
+              },
+              {
+                "description": "Matches 2 with C.",
+                "marks": 1
+              },
+              {
+                "description": "Matches 3 with A.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "interpret",
+          "difficulty": 2
+        },
+        {
+          "id": "B3.3.1.1.2-Q17",
+          "type": "oral",
+          "prompt": "Explain one way a learner could practise a moral lesson at school.",
+          "hint": "Give an everyday example.",
+          "explanation": "Moral learning can guide behaviour in daily life.",
+          "misconception_note": "Do not assess personal religious commitment.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "A suitable example such as telling the truth, sharing fairly, helping, listening or persevering.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "apply",
+          "difficulty": 3
+        },
+        {
+          "id": "B3.3.1.1.2-Q18",
+          "type": "written",
+          "prompt": "Why is it important to mention the action that supports a moral lesson?",
+          "hint": "Think about evidence for an answer.",
+          "explanation": "A supporting action connects interpretation to the story.",
+          "misconception_note": "Accept concise answers.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "It shows how the lesson comes from the account and makes the explanation clear.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "interpret",
+          "difficulty": 3
+        },
+        {
+          "id": "B3.3.1.1.2-Q19",
+          "type": "performance",
+          "prompt": "Give an oral, written or drawn response identifying one moral lesson from a taught account and supporting it with one detail.",
+          "hint": "Use only facts studied in class.",
+          "explanation": "This checks identification and explanation of a moral lesson.",
+          "misconception_note": "Do not penalise learners for omitting details absent from the provided account.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "identifies a relevant lesson",
+                "marks": 2
+              },
+              {
+                "description": "cites a supporting detail",
+                "marks": 2
+              },
+              {
+                "description": "communicates clearly",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "demonstrate",
+          "difficulty": 4
+        },
+        {
+          "id": "B3.3.1.1.2-Q20",
+          "type": "mcq",
+          "prompt": "Which statement best describes learning moral lessons from religious leaders' lives?",
+          "options": [
+            "Identify values supported by the account and consider good conduct",
+            "Invent a biography",
+            "Decide which religion is superior",
+            "Memorise rumours"
+          ],
+          "answer": "Identify values supported by the account and consider good conduct",
+          "hint": "Choose the answer based on accurate learning and behaviour.",
+          "explanation": "Learners identify moral lessons from studied life accounts.",
+          "misconception_note": "Keep the discussion respectful and evidence-based.",
+          "skill_tag": "interpret",
+          "difficulty": 2
+        }
+      ],
+      "source_page": 20,
+      "strand": "Religious Leaders",
+      "sub_strand": "Early Life of the Leaders of the Three Major Religions",
+      "content_standard": "Narrate the youthful life stories of the leaders of the major religions",
+      "spec": {
+        "skills": [
+          {
+            "tag": "recognise",
+            "description": "Recognise the examples and vocabulary in the lesson.",
+            "minQuestions": 2
+          },
+          {
+            "tag": "interpret",
+            "description": "Explain meanings and connections in an example.",
+            "minQuestions": 2
+          },
+          {
+            "tag": "apply",
+            "description": "Apply the lesson to a situation and justify a choice.",
+            "minQuestions": 2
+          },
+          {
+            "tag": "demonstrate",
+            "description": "Communicate understanding through a performance, drawing or demonstration.",
+            "minQuestions": 2
+          }
+        ],
+        "needsTeacherAssessment": true,
+        "difficultyPlan": "5 foundational, 7 simple-use, 5 application and 3 challenge questions."
+      }
+    },
+    {
+      "code": "B3.4.1.1.1",
+      "statement": "Discuss God’s promises to humankind.",
+      "questions": [
+        {
+          "id": "B3.4.1.1.1-Q01",
+          "type": "mcq",
+          "prompt": "When learning about a promise attributed to God, what should learners consult?",
+          "options": [
+            "The religious account or text studied in class",
+            "A rumour",
+            "An invented quotation",
+            "A guess"
+          ],
+          "answer": "The religious account or text studied in class",
+          "hint": "Use reliable lesson material.",
+          "explanation": "Promises should be identified from the sources taught.",
+          "misconception_note": "Traditions may describe promises in different ways.",
+          "skill_tag": "recognise",
+          "difficulty": 1
+        },
+        {
+          "id": "B3.4.1.1.1-Q02",
+          "type": "short_answer",
+          "prompt": "Which other name is used for Abraham in the account of God’s call?",
+          "answer": ["ibrahim"],
+          "hint": "Think of the name paired with Abraham in the lesson.",
+          "explanation": "The curriculum pairs Abraham with Ibrahim, and Moses with Musa.",
+          "misconception_note": "Accept simple wording.",
+          "skill_tag": "recognise",
+          "difficulty": 1
+        },
+        {
+          "id": "B3.4.1.1.1-Q03",
+          "type": "mcq",
+          "prompt": "Which is a careful way to describe a promise taught in one religious tradition?",
+          "options": [
+            "According to the account studied, God promises…",
+            "Every tradition says exactly the same thing",
+            "I will invent the promise",
+            "No source is needed"
+          ],
+          "answer": "According to the account studied, God promises…",
+          "hint": "Name the source or tradition accurately.",
+          "explanation": "Careful wording avoids generalising across traditions.",
+          "misconception_note": "Use examples explicitly taught by the teacher.",
+          "skill_tag": "interpret",
+          "difficulty": 2
+        },
+        {
+          "id": "B3.4.1.1.1-Q04",
+          "type": "mcq",
+          "prompt": "A learner cannot remember the exact wording of a promise from the lesson. What should they do?",
+          "options": [
+            "Check the class source or describe it carefully in their own words",
+            "Invent a quotation",
+            "Claim certainty without checking",
+            "Mock the account"
+          ],
+          "answer": "Check the class source or describe it carefully in their own words",
+          "hint": "Accuracy matters more than pretending to remember.",
+          "explanation": "Learners should rely on the account studied.",
+          "misconception_note": "Do not penalise paraphrases that preserve the taught meaning.",
+          "skill_tag": "apply",
+          "difficulty": 2
+        },
+        {
+          "id": "B3.4.1.1.1-Q05",
+          "type": "written",
+          "prompt": "What promise does the class account connect with the call of Abraham (Ibrahim)?",
+          "hint": "Recall the promise made to Abraham in the class account.",
+          "explanation": "The curriculum links the call of Abraham with a promise of eternal life.",
+          "misconception_note": "Use the relevant tradition's account; do not infer a universal promise.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "In the curriculum account, God promised Abraham eternal life.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "recognise",
+          "difficulty": 1
+        },
+        {
+          "id": "B3.4.1.1.1-Q06",
+          "type": "oral",
+          "prompt": "Retell one part of the call of Moses (Musa) from your class account. Say who was called and what happened.",
+          "hint": "Start with the person in the account, then describe the call.",
+          "explanation": "Moses is also called Musa. A retelling should connect an event to the account the class studied.",
+          "misconception_note": "Allow oral response and reasonable paraphrase.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Identifies Moses (Musa) and retells a detail accurately from the class account.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "recognise",
+          "difficulty": 1
+        },
+        {
+          "id": "B3.4.1.1.1-Q07",
+          "type": "matching",
+          "prompt": "Match each term with its meaning: (1) promise; (2) source; (3) account. Meanings: A. a telling or record of events; B. where information comes from; C. a commitment to do or provide something.",
+          "hint": "Match each word to its definition.",
+          "explanation": "These terms support accurate discussion of religious teachings.",
+          "misconception_note": "Accept equivalent wording.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Matches 1 with C.",
+                "marks": 1
+              },
+              {
+                "description": "Matches 2 with B.",
+                "marks": 1
+              },
+              {
+                "description": "Matches 3 with A.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "interpret",
+          "difficulty": 2
+        },
+        {
+          "id": "B3.4.1.1.1-Q08",
+          "type": "mcq",
+          "prompt": "Why should learners avoid saying that all religions teach an identical promise unless the lesson supports it?",
+          "options": [
+            "Religious accounts can differ and should be represented accurately",
+            "Differences must be hidden",
+            "All traditions are identical",
+            "Sources never matter"
+          ],
+          "answer": "Religious accounts can differ and should be represented accurately",
+          "hint": "Avoid making claims beyond the evidence.",
+          "explanation": "Accurate comparison respects the teachings studied.",
+          "misconception_note": "Do not turn difference into ranking.",
+          "skill_tag": "interpret",
+          "difficulty": 2
+        },
+        {
+          "id": "B3.4.1.1.1-Q09",
+          "type": "mcq",
+          "prompt": "A pupil finds a promise in the class reading and wants to tell the class about it. What should the pupil include?",
+          "options": [
+            "The promise and where it was found or taught",
+            "An unrelated story",
+            "A claim that everyone believes identically",
+            "A made-up quotation"
+          ],
+          "answer": "The promise and where it was found or taught",
+          "hint": "Share the teaching with its context.",
+          "explanation": "Context supports accurate learning.",
+          "misconception_note": "A simple source description is enough for this level.",
+          "skill_tag": "recognise",
+          "difficulty": 1
+        },
+        {
+          "id": "B3.4.1.1.1-Q10",
+          "type": "drawing",
+          "prompt": "Draw a simple symbol or scene representing a promise studied in class and add a label explaining it.",
+          "hint": "Use a non-sacred symbol if you are unsure what is appropriate.",
+          "explanation": "A drawing can help learners communicate the meaning of a taught promise.",
+          "misconception_note": "Assess understanding, not artistic skill; avoid requiring sacred images.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "A respectful visual linked to a taught promise with a clear label or explanation.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "demonstrate",
+          "difficulty": 4
+        },
+        {
+          "id": "B3.4.1.1.1-Q11",
+          "type": "mcq",
+          "prompt": "Which answer shows a learner is distinguishing a promise from an opinion?",
+          "options": [
+            "The promise is stated in the account we studied",
+            "I think it must be true because I guessed",
+            "My friend invented it",
+            "A promise and an opinion are always the same"
+          ],
+          "answer": "The promise is stated in the account we studied",
+          "hint": "Choose the answer grounded in a source.",
+          "explanation": "Religious promises in this lesson should be identified from taught material.",
+          "misconception_note": "Learners need not state personal belief.",
+          "skill_tag": "apply",
+          "difficulty": 3
+        },
+        {
+          "id": "B3.4.1.1.1-Q12",
+          "type": "written",
+          "prompt": "Why should a promise be described in its religious context?",
+          "hint": "Think about meaning and accuracy.",
+          "explanation": "Context helps prevent overgeneralisation.",
+          "misconception_note": "Accept concise explanations.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "So its meaning is represented accurately and not wrongly applied to other traditions.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "interpret",
+          "difficulty": 2
+        },
+        {
+          "id": "B3.4.1.1.1-Q13",
+          "type": "mcq",
+          "prompt": "A learner hears two different accounts of God's promise from two traditions. What is a respectful response?",
+          "options": [
+            "Describe each account accurately and listen respectfully",
+            "Say one group must be lying",
+            "Combine them into an invented story",
+            "Refuse to learn"
+          ],
+          "answer": "Describe each account accurately and listen respectfully",
+          "hint": "Respectful comparison does not require ranking.",
+          "explanation": "Different traditions should be presented fairly.",
+          "misconception_note": "Assess knowledge, not agreement.",
+          "skill_tag": "apply",
+          "difficulty": 3
+        },
+        {
+          "id": "B3.4.1.1.1-Q14",
+          "type": "mcq",
+          "prompt": "What should a learner do before quoting a promise?",
+          "options": [
+            "Check the wording in the class source",
+            "Add words from memory as if exact",
+            "Change the meaning",
+            "Attribute it to another tradition"
+          ],
+          "answer": "Check the wording in the class source",
+          "hint": "Exact quotations need checking.",
+          "explanation": "Checking supports reliable quotation.",
+          "misconception_note": "Paraphrase if exact wording is unavailable.",
+          "skill_tag": "apply",
+          "difficulty": 3
+        },
+        {
+          "id": "B3.4.1.1.1-Q15",
+          "type": "oral",
+          "prompt": "Explain in your own words one promise from a class account, without claiming that every tradition teaches it.",
+          "hint": "Name the class account and explain its meaning simply.",
+          "explanation": "Learners practise describing teachings accurately.",
+          "misconception_note": "Accept oral answers and paraphrases.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "A faithful paraphrase tied to the tradition or source studied.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "apply",
+          "difficulty": 3
+        },
+        {
+          "id": "B3.4.1.1.1-Q16",
+          "type": "matching",
+          "prompt": "Match the classroom action to its purpose: (1) checking the text; (2) naming the tradition; (3) listening to another account. Purposes: A. respectful learning; B. accurate wording; C. context.",
+          "hint": "Match each action to why it is helpful.",
+          "explanation": "These practices support respectful, accurate study.",
+          "misconception_note": "Accept equivalent explanations.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Matches 1 with B.",
+                "marks": 1
+              },
+              {
+                "description": "Matches 2 with C.",
+                "marks": 1
+              },
+              {
+                "description": "Matches 3 with A.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "interpret",
+          "difficulty": 2
+        },
+        {
+          "id": "B3.4.1.1.1-Q17",
+          "type": "written",
+          "prompt": "What can a learner say if a promise's meaning is unclear?",
+          "hint": "Use a reliable way to clarify meaning.",
+          "explanation": "Questions and source-checking help prevent misunderstanding.",
+          "misconception_note": "Asking for clarification is appropriate.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Ask the teacher or consult the class source rather than guessing.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "apply",
+          "difficulty": 3
+        },
+        {
+          "id": "B3.4.1.1.1-Q18",
+          "type": "role_play",
+          "prompt": "In pairs, practise explaining a promise from a teacher-provided account while the listener asks one respectful clarification question.",
+          "hint": "Use the supplied account and do not debate personal belief.",
+          "explanation": "The activity builds clear description and respectful listening.",
+          "misconception_note": "No learner must disclose their own faith.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "reflects the supplied account",
+                "marks": 2
+              },
+              {
+                "description": "explanation is understandable",
+                "marks": 2
+              },
+              {
+                "description": "listens and responds respectfully",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "demonstrate",
+          "difficulty": 4
+        },
+        {
+          "id": "B3.4.1.1.1-Q19",
+          "type": "performance",
+          "prompt": "Present one promise from a class source orally, in writing or with a labelled drawing; identify its context.",
+          "hint": "Use class notes and explain briefly.",
+          "explanation": "This checks identification and description of a promise.",
+          "misconception_note": "Do not mark personal belief or require exact quotation unless specified.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "identifies accurately",
+                "marks": 2
+              },
+              {
+                "description": "gives appropriate source context",
+                "marks": 2
+              },
+              {
+                "description": "response is clear",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "demonstrate",
+          "difficulty": 4
+        },
+        {
+          "id": "B3.4.1.1.1-Q20",
+          "type": "mcq",
+          "prompt": "Which is the best rule for discussing God's promises in a diverse class?",
+          "options": [
+            "Use the accounts studied and respect differences",
+            "Require every learner to profess belief",
+            "Invent details to make accounts alike",
+            "Rank classmates by religion"
+          ],
+          "answer": "Use the accounts studied and respect differences",
+          "hint": "Choose accuracy and inclusion.",
+          "explanation": "RME learning assesses understanding rather than private belief.",
+          "misconception_note": "Keep classroom discussion inclusive.",
+          "skill_tag": "interpret",
+          "difficulty": 2
+        }
+      ],
+      "source_page": 21,
+      "strand": "The Family and the Community",
+      "sub_strand": "Roles and Relationships",
+      "content_standard": "Appreciate the role of the family and the community in their relationship with God",
+      "spec": {
+        "skills": [
+          {
+            "tag": "recognise",
+            "description": "Recognise the examples and vocabulary in the lesson.",
+            "minQuestions": 2
+          },
+          {
+            "tag": "interpret",
+            "description": "Explain meanings and connections in an example.",
+            "minQuestions": 2
+          },
+          {
+            "tag": "apply",
+            "description": "Apply the lesson to a situation and justify a choice.",
+            "minQuestions": 2
+          },
+          {
+            "tag": "demonstrate",
+            "description": "Communicate understanding through a performance, drawing or demonstration.",
+            "minQuestions": 2
+          }
+        ],
+        "needsTeacherAssessment": true,
+        "difficultyPlan": "5 foundational, 7 simple-use, 5 application and 3 challenge questions."
+      }
+    },
+    {
+      "code": "B3.4.1.1.2",
+      "statement": "Identify the benefits of responding to God’s call.",
+      "questions": [
+        {
+          "id": "B3.4.1.1.2-Q01",
+          "type": "mcq",
+          "prompt": "Which action is an example of service to others in the lesson about responding to God's call?",
+          "hint": "Look for an action that meets another person's need.",
+          "explanation": "Service means doing something to help somebody. Carrying a light bag for a neighbour is one example.",
+          "difficulty": 1,
+          "options": [
+            "Helping a neighbour carry a light bag",
+            "Counting the chairs in an empty room",
+            "Looking at the time",
+            "Choosing a colour for a notebook"
+          ],
+          "answer": "Helping a neighbour carry a light bag",
+          "skill_tag": "recognise"
+        },
+        {
+          "id": "B3.4.1.1.2-Q02",
+          "type": "mcq",
+          "prompt": "Which word in the class lesson means helping people who are in need?",
+          "hint": "Think about the purpose of a gift to someone in need.",
+          "explanation": "Charity offers help to people who need it.",
+          "difficulty": 1,
+          "options": ["Competition", "Charity", "Decoration", "Travel"],
+          "answer": "Charity",
+          "skill_tag": "recognise"
+        },
+        {
+          "id": "B3.4.1.1.2-Q03",
+          "type": "mcq",
+          "prompt": "Which response in the lesson involves talking to God?",
+          "hint": "Look for the word that describes religious communication.",
+          "explanation": "Prayer is described as communication with God.",
+          "difficulty": 1,
+          "options": ["Planting", "Sharing a meal", "Prayer", "Sweeping a room"],
+          "answer": "Prayer",
+          "skill_tag": "recognise"
+        },
+        {
+          "id": "B3.4.1.1.2-Q04",
+          "type": "mcq",
+          "prompt": "Which benefit in the lesson describes a closer relationship with God?",
+          "hint": "Look for a change in a relationship.",
+          "explanation": "The lesson says believers may understand prayer and service as drawing them closer to God.",
+          "difficulty": 1,
+          "options": [
+            "Becoming taller",
+            "Learning a longer song",
+            "Getting a new exercise book",
+            "Drawing closer to God"
+          ],
+          "answer": "Drawing closer to God",
+          "skill_tag": "interpret"
+        },
+        {
+          "id": "B3.4.1.1.2-Q05",
+          "type": "short_answer",
+          "prompt": "Complete the phrase in the lesson: caring for the ___ includes looking after trees and streams.",
+          "hint": "Name the surroundings where living things grow.",
+          "explanation": "The environment includes the places, water and living things around us.",
+          "difficulty": 1,
+          "answer": ["environment"],
+          "skill_tag": "recognise"
+        },
+        {
+          "id": "B3.4.1.1.2-Q06",
+          "type": "written",
+          "prompt": "A group waters seedlings as an example of responding to God's call. How do the seedlings benefit?",
+          "hint": "Think about what a young plant needs.",
+          "explanation": "Giving the seedlings water helps them grow. Caring for living things is one response in the lesson.",
+          "difficulty": 2,
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Describes the water reaching the seedlings.",
+                "marks": 1
+              },
+              {
+                "description": "Explains that this care helps them grow.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "recognise"
+        },
+        {
+          "id": "B3.4.1.1.2-Q07",
+          "type": "oral",
+          "prompt": "A family gives food to a neighbour who needs it. Name the response and an immediate benefit.",
+          "hint": "What did the family give and who was helped?",
+          "explanation": "Sharing food is an example of charity. The neighbour receives practical help.",
+          "difficulty": 2,
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Identifies charity or service.",
+                "marks": 1
+              },
+              {
+                "description": "Explains that the neighbour receives needed food or support.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "apply"
+        },
+        {
+          "id": "B3.4.1.1.2-Q08",
+          "type": "mcq",
+          "prompt": "A class chart has two headings, Response and Benefit. Where should “praying” go?",
+          "hint": "Decide whether praying is an action or a result.",
+          "explanation": "Praying names what a person does. In this chart it is a response.",
+          "difficulty": 2,
+          "options": [
+            "Under Response",
+            "Under Benefit",
+            "Under both as a prize",
+            "Outside the chart as a place"
+          ],
+          "answer": "Under Response",
+          "skill_tag": "recognise"
+        },
+        {
+          "id": "B3.4.1.1.2-Q09",
+          "type": "mcq",
+          "prompt": "The class is sorting cards. Which is a benefit named in the lesson?",
+          "hint": "Find the result believers describe rather than an action they take.",
+          "explanation": "The lesson lists blessings as a benefit understood by believers. The other cards describe responses.",
+          "difficulty": 2,
+          "options": [
+            "Putting a seed in soil",
+            "Blessings from God",
+            "Giving someone a meal",
+            "Saying a prayer"
+          ],
+          "answer": "Blessings from God",
+          "skill_tag": "recognise"
+        },
+        {
+          "id": "B3.4.1.1.2-Q10",
+          "type": "drawing",
+          "prompt": "Draw one way to serve another person. Add a label showing how the person is helped.",
+          "hint": "Think of two people and a need one can help meet.",
+          "explanation": "A pupil might share a pencil with someone who needs to write. The other pupil can take part in the task.",
+          "difficulty": 2,
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Shows a specific act of service.",
+                "marks": 1
+              },
+              {
+                "description": "Names a benefit to the person receiving the help.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "demonstrate"
+        },
+        {
+          "id": "B3.4.1.1.2-Q11",
+          "type": "oral",
+          "prompt": "A child wants to care for the environment as part of the class activity. Suggest one safe action at school and say why it helps.",
+          "hint": "Look for something nearby that needs care.",
+          "explanation": "Putting light litter in a bin keeps the shared space cleaner. The action and its benefit can be described separately.",
+          "difficulty": 2,
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Suggests suitable supervised care such as watering a tree.",
+                "marks": 1
+              },
+              {
+                "description": "Links the action to its effect.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "apply"
+        },
+        {
+          "id": "B3.4.1.1.2-Q12",
+          "type": "written",
+          "prompt": "In the lesson a believer says, “Prayer helps me feel close to God.” Write the response and the benefit in separate boxes.",
+          "hint": "One part tells what the speaker does, the other what it means to the speaker.",
+          "explanation": "Prayer is the action. Feeling close to God is the benefit the speaker describes.",
+          "difficulty": 2,
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Puts prayer in the response box.",
+                "marks": 1
+              },
+              {
+                "description": "Puts closeness to God in the benefit box.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "recognise"
+        },
+        {
+          "id": "B3.4.1.1.2-Q13",
+          "type": "role_play",
+          "prompt": "Show someone offering useful help to a person in need. A narrator explains how this connects to the lesson.",
+          "hint": "Ask what help would actually be useful.",
+          "explanation": "A helper asks what is needed and offers support. The narrator connects the support to charity.",
+          "difficulty": 3,
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Demonstrates a respectful offer of suitable help.",
+                "marks": 1
+              },
+              {
+                "description": "Connects charity with the person's need or the teaching about service.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "demonstrate"
+        },
+        {
+          "id": "B3.4.1.1.2-Q14",
+          "type": "written",
+          "prompt": "Kweku says giving a gift is the only way to serve. Describe a way to help without buying anything and give its benefit.",
+          "hint": "Think about what you could do with your time.",
+          "explanation": "Helping a younger pupil find a classroom costs no money and helps the pupil arrive safely.",
+          "difficulty": 3,
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Names a service using time or effort.",
+                "marks": 1
+              },
+              {
+                "description": "Identifies a benefit for the person or community.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "interpret"
+        },
+        {
+          "id": "B3.4.1.1.2-Q15",
+          "type": "oral",
+          "prompt": "Explain how caring for people and caring for a garden can both be examples in the same lesson.",
+          "hint": "Think about who or what receives care in each case.",
+          "explanation": "Offering charity supports another person. Looking after a garden protects living things. Both are responses described in the lesson.",
+          "difficulty": 3,
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Identifies one act of care for people and one for the environment.",
+                "marks": 1
+              },
+              {
+                "description": "Explains their shared connection with responding through care.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "interpret"
+        },
+        {
+          "id": "B3.4.1.1.2-Q16",
+          "type": "drawing",
+          "prompt": "Make a picture sequence with a need, a helpful response and its result. Explain the link between the last two pictures.",
+          "hint": "Think about what changes after help is given.",
+          "explanation": "A dry plant, a child watering it and a healthier plant show a need, a response and a possible benefit.",
+          "difficulty": 3,
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Shows a need and an appropriate response.",
+                "marks": 1
+              },
+              {
+                "description": "Explains how that response produces the pictured result.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "demonstrate"
+        },
+        {
+          "id": "B3.4.1.1.2-Q17",
+          "type": "written",
+          "prompt": "A card labelled “service to humankind” has been filed under benefits. Explain the change you would make and add a suitable benefit.",
+          "hint": "Can a person do the thing on the card?",
+          "explanation": "Service is something people do. A person who is served may receive support, and believers may describe closeness to God.",
+          "difficulty": 3,
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Reclassifies service as a response.",
+                "marks": 1
+              },
+              {
+                "description": "Names an appropriate benefit connected to the service or belief.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "interpret"
+        },
+        {
+          "id": "B3.4.1.1.2-Q18",
+          "type": "oral",
+          "prompt": "One pupil speaks about blessings. Another speaks about the food a neighbour received. Explain how both are talking about benefits.",
+          "hint": "Think about what can be observed and what the lesson says believers understand.",
+          "explanation": "The food meets a practical need. Blessings describe a religious understanding of benefit.",
+          "difficulty": 4,
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Distinguishes a benefit expressed as religious belief.",
+                "marks": 1
+              },
+              {
+                "description": "Identifies the practical benefit of receiving food.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "interpret"
+        },
+        {
+          "id": "B3.4.1.1.2-Q19",
+          "type": "written",
+          "prompt": "A learner says anyone who helps one person must receive a prize the next day. How would you explain the lesson more carefully?",
+          "hint": "Look at the benefits named in the class account.",
+          "explanation": "The lesson discusses beliefs about blessings and closeness to God. It gives no rule promising a next-day prize.",
+          "difficulty": 4,
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Identifies an appropriate benefit of responding to the call.",
+                "marks": 1
+              },
+              {
+                "description": "Avoids treating a prize on a particular day as guaranteed.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "apply"
+        },
+        {
+          "id": "B3.4.1.1.2-Q20",
+          "type": "practical",
+          "prompt": "Make a class display about two responses to God's call. Give each response a different example and show the benefit of each.",
+          "hint": "Try combining a response about people with another about prayer or the environment.",
+          "explanation": "A display could show charity meeting a neighbour's need and prayer expressing a believer's closeness to God.",
+          "difficulty": 4,
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Matches two responses with fitting examples.",
+                "marks": 1
+              },
+              {
+                "description": "Explains a benefit of each in the context of the lesson.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "demonstrate"
+        }
+      ],
+      "source_page": 21,
+      "strand": "The Family and the Community",
+      "sub_strand": "Roles and Relationships",
+      "content_standard": "Appreciate the role of the family and the community in their relationship with God",
+      "spec": {
+        "skills": [
+          {
+            "tag": "recognise",
+            "description": "Recognise the examples and vocabulary in the lesson.",
+            "minQuestions": 2
+          },
+          {
+            "tag": "interpret",
+            "description": "Explain meanings and connections in an example.",
+            "minQuestions": 2
+          },
+          {
+            "tag": "apply",
+            "description": "Apply the lesson to a situation and justify a choice.",
+            "minQuestions": 2
+          },
+          {
+            "tag": "demonstrate",
+            "description": "Communicate understanding through a performance, drawing or demonstration.",
+            "minQuestions": 2
+          }
+        ],
+        "needsTeacherAssessment": true,
+        "difficultyPlan": "5 foundational, 7 simple-use, 5 application and 3 challenge questions."
+      }
+    }
   ],
-  "progress":{"basic3_indicators_completed":12,"basic3_indicators_total":14,"basic3_questions_completed":240,"overall_questions_completed":660,"overall_questions_target":1560,"next_indicator":"B3.4.1.1.3","note":"Indicator statements and examples should be checked against the printed curriculum where formatting or narrative detail is unclear."}
+  "progress": {
+    "basic3_indicators_completed": 12,
+    "basic3_indicators_total": 14,
+    "basic3_questions_completed": 240,
+    "overall_questions_completed": 660,
+    "overall_questions_target": 1560,
+    "next_indicator": "B3.4.1.1.3",
+    "note": "Indicator statements and examples should be checked against the printed curriculum where formatting or narrative detail is unclear."
+  }
 }

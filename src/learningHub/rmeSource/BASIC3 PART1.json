@@ -1,78 +1,1236 @@
 {
-  "class":"Basic 3",
-  "part":1,
-  "curriculum":"NaCCA Religious and Moral Education Curriculum for Primary Schools, September 2019",
-  "indicator_codes":["B3.1.2.1.1","B3.1.3.1.1","B3.1.3.1.2"],
-  "question_count":60,
-  "code_note":"Codes follow the curriculum's printed Basic 3 indicators; spacing and punctuation normalized.",
-  "accessibility_note":"Teachers may read prompts aloud. Accept oral, written, drawn or role-play responses where suitable. Assess curriculum understanding, not personal religious belief. Do not require hazardous clean-up, mining, or contact with waste; use safe classroom models or discussion.",
-  "indicators":[
-    {"code":"B3.1.2.1.1","statement":"Demonstrate ways to care for the environment.","questions":[
-      {"id":"B3.1.2.1.1-Q01","type":"multiple_choice","prompt":"Which action helps care for the environment?","options":["Planting trees","Throwing rubbish into a stream","Burning waste beside a home","Cutting down every tree"],"answer":"Planting trees","hint":"Choose an action that helps the natural surroundings.","explanation":"Tree planting is listed as a way to care for the environment.","misconception_note":"Care for nature can include several actions, not just planting."},
-      {"id":"B3.1.2.1.1-Q02","type":"multiple_choice","prompt":"Where should household waste be put to help keep the environment clean?","options":["In an appropriate waste bin or collection point","In a river","On a footpath","In a school garden"],"answer":"In an appropriate waste bin or collection point","hint":"Choose a safe, proper place for waste.","explanation":"Proper disposal of waste is named in the curriculum.","misconception_note":"Use locally available safe disposal guidance."},
-      {"id":"B3.1.2.1.1-Q03","type":"short_answer","prompt":"Name two ways people can care for the environment.","answer":["Any two: tree planting, proper waste disposal, legal mining, clean-up exercises, avoiding pollution, erosion control, or clearing blocked gutters safely."],"hint":"Think of actions listed in the lesson.","explanation":"The indicator exemplars include these practical forms of environmental care.","misconception_note":"Accept other safe, locally relevant actions."},
-      {"id":"B3.1.2.1.1-Q04","type":"multiple_choice","prompt":"Which choice is safer for the environment?","options":["Mining according to the law","Mining illegally and polluting streams","Dumping chemicals in a river","Removing trees from a forest without control"],"answer":"Mining according to the law","hint":"The curriculum contrasts legal mining with harmful environmental activities.","explanation":"Legal mining is named among ways to care for the environment.","misconception_note":"This asks learners to distinguish lawful practice; it is not an instruction to mine."},
-      {"id":"B3.1.2.1.1-Q05","type":"scenario","prompt":"A class notices litter in a play area. Which response is best?","options":["Tell a teacher and arrange a safe clean-up using suitable tools","Burn the litter","Push it into a drain","Leave it where younger children may trip"],"answer":"Tell a teacher and arrange a safe clean-up using suitable tools","hint":"Keep the clean-up supervised and safe.","explanation":"Clean-up exercises are an exemplar, but they must be carried out safely.","misconception_note":"Learners should not handle sharp, chemical, or unknown waste."},
-      {"id":"B3.1.2.1.1-Q06","type":"oral","prompt":"Explain one way to dispose of waste properly in your school or community.","answer":["Any locally appropriate method using a designated bin, collection point, or approved service."],"hint":"Name where waste should go and why.","explanation":"Proper disposal helps prevent pollution and keeps places clean.","misconception_note":"Local waste systems vary; accept safe locally valid methods."},
-      {"id":"B3.1.2.1.1-Q07","type":"matching","prompt":"Match each action to its result: (1) planting a tree; (2) putting rubbish in a proper bin. Results: A. helps manage waste; B. adds vegetation.","answer":{"1":"B","2":"A"},"hint":"Think about what each action directly does.","explanation":"Trees add vegetation; bins support proper waste management.","misconception_note":"These are examples, not the only benefits of each action."},
-      {"id":"B3.1.2.1.1-Q08","type":"multiple_choice","prompt":"Which action helps reduce environmental pollution?","options":["Avoiding littering and disposing of waste properly","Pouring rubbish into a gutter","Throwing plastic into a stream","Leaving waste on the road"],"answer":"Avoiding littering and disposing of waste properly","hint":"Choose the action that prevents waste from spreading.","explanation":"Proper waste disposal and avoiding pollution are stated ways to care for the environment.","misconception_note":"A clean environment is a shared responsibility."},
-      {"id":"B3.1.2.1.1-Q09","type":"short_answer","prompt":"Why should people avoid polluting the environment? Give one reason.","answer":["Pollution can harm people, animals, plants, water, or the surroundings; any reasonable reason accepted."],"hint":"Think about who or what may be affected.","explanation":"Avoiding pollution is a key environmental-care action.","misconception_note":"Accept clear age-appropriate explanations."},
-      {"id":"B3.1.2.1.1-Q10","type":"drawing","prompt":"Draw one safe way to care for the environment and label the action.","answer":["A drawing showing a suitable action such as planting a tree, using a bin, or a supervised clean-up, with a label or oral explanation."],"hint":"Choose one action from the lesson.","explanation":"Drawing is suggested as a way to demonstrate understanding of environmental care.","misconception_note":"Assess the idea, not drawing skill."},
-      {"id":"B3.1.2.1.1-Q11","type":"multiple_choice","prompt":"A gutter is blocked with rubbish. What is the safest first step for a learner?","options":["Tell a responsible adult so it can be cleared safely","Reach into it without protection","Set fire to the rubbish","Push it farther into the drain"],"answer":"Tell a responsible adult so it can be cleared safely","hint":"Some clean-up work needs adult supervision and proper equipment.","explanation":"Clearing choked gutters is an example in the curriculum, but safety comes first.","misconception_note":"Do not ask children to handle dangerous waste or enter drains."},
-      {"id":"B3.1.2.1.1-Q12","type":"scenario","prompt":"A group is planning a school environmental project. Which plan is suitable and safe?","options":["Plant a tree with permission and adult guidance","Clear a rubbish dump with bare hands","Enter a drain to remove waste","Handle unknown chemicals"],"answer":"Plant a tree with permission and adult guidance","hint":"Choose an activity that can be safely supervised.","explanation":"Tree planting is an exemplar project and should be organised safely.","misconception_note":"Projects involving dumps, drains, or unknown materials need trained adults and should not be assigned as child handling tasks."},
-      {"id":"B3.1.2.1.1-Q13","type":"short_answer","prompt":"What does it mean to care for the environment?","answer":["To protect, maintain and keep the natural and built surroundings safe and clean."],"hint":"Think about protecting places and living things around us.","explanation":"The indicator asks learners to explain and demonstrate ways of caring for the environment.","misconception_note":"Accept concise wording that captures protection or maintenance."},
-      {"id":"B3.1.2.1.1-Q14","type":"multiple_choice","prompt":"Which item should not be thrown into a stream?","options":["Any rubbish or waste","Clean water","A fish swimming naturally","A leaf that has fallen naturally"],"answer":"Any rubbish or waste","hint":"Choose the item that would pollute the water.","explanation":"Avoiding water and environmental pollution is part of environmental care.","misconception_note":"Keep examples age-appropriate and avoid suggesting that all natural materials are harmless in every context."},
-      {"id":"B3.1.2.1.1-Q15","type":"performance","prompt":"Sort these actions into 'helps care for the environment' and 'harms the environment': planting trees; proper waste disposal; illegal mining that pollutes water; littering.","answer":{"helps":["planting trees","proper waste disposal"],"harms":["illegal mining that pollutes water","littering"]},"hint":"Consider whether the action protects or damages surroundings.","explanation":"The curriculum names tree planting and proper waste disposal as care, and pollution and illegal mining as harmful.","misconception_note":"The classification is about the described action; avoid implying every activity under a broad label has identical effects.","rubric":{"classification":"0–4: one point for each correctly sorted item","reasoning":"0–1: gives a relevant reason"}},
-      {"id":"B3.1.2.1.1-Q16","type":"role_play","prompt":"In pairs, act out a short scene where learners remind one another to use a waste bin and keep the school area clean.","answer":["The role-play shows appropriate waste disposal and respectful communication."],"hint":"Show the action and a polite reminder.","explanation":"Practical activities and role-play help learners demonstrate environmental care.","misconception_note":"Do not require learners to handle real rubbish.","rubric":{"environmental_action":"0–2: shows a relevant action","communication":"0–2: reminder is respectful and clear","safety":"0–1: avoids unsafe handling"}},
-      {"id":"B3.1.2.1.1-Q17","type":"multiple_choice","prompt":"Which is a useful way to help prevent soil from washing away in some places?","options":["Planting vegetation and using suitable erosion-control measures","Removing all plants","Leaving bare soil exposed","Pouring waste onto slopes"],"answer":"Planting vegetation and using suitable erosion-control measures","hint":"Think of the curriculum's example of checking erosion.","explanation":"Checking erosion is included among possible environmental projects.","misconception_note":"Specific engineering solutions should be planned by qualified adults."},
-      {"id":"B3.1.2.1.1-Q18","type":"oral","prompt":"Name one safe environmental-care project a class could discuss or plan with adult guidance.","answer":["Examples: tree planting, litter prevention, a supervised school clean-up, or an awareness poster campaign."],"hint":"Choose a project that does not expose children to hazards.","explanation":"The curriculum suggests group projects and class presentations on caring for the environment.","misconception_note":"Accept discussion-only alternatives where hands-on work would be unsafe."},
-      {"id":"B3.1.2.1.1-Q19","type":"scenario","prompt":"A learner sees someone preparing to pour dirty waste into a stream. What is an appropriate response?","options":["Do not confront danger; tell a trusted adult or responsible authority","Join in","Jump into the stream","Hide the waste"],"answer":"Do not confront danger; tell a trusted adult or responsible authority","hint":"Protect yourself and seek responsible help.","explanation":"Avoiding pollution matters, and personal safety is important when responding.","misconception_note":"Learners should not intervene in a risky situation themselves."},
-      {"id":"B3.1.2.1.1-Q20","type":"short_answer","prompt":"State one reason a school might organise an environmental-care activity.","answer":["To keep the surroundings clean and safe, prevent pollution, protect plants and animals, or maintain the environment."],"hint":"Think of a benefit to people or other living things.","explanation":"Care, cleanliness, sustainability and responsibility are associated values for this indicator.","misconception_note":"Accept any relevant, clearly stated reason."}
-    ]},
-    {"code":"B3.1.3.1.1","statement":"Explain the purpose of God's creation of humankind.","questions":[
-      {"id":"B3.1.3.1.1-Q01","type":"multiple_choice","prompt":"According to the curriculum, which is one purpose of the creation of humankind?","options":["To take care of other creatures","To destroy every living thing","To waste natural resources","To prevent people from helping one another"],"answer":"To take care of other creatures","hint":"Think of the idea of stewardship.","explanation":"The curriculum says human beings were created to take care of other creatures.","misconception_note":"Present this as the curriculum's religious teaching; do not assess a learner's personal belief."},
-      {"id":"B3.1.3.1.1-Q02","type":"multiple_choice","prompt":"Which is another purpose of humankind named in the curriculum?","options":["To worship and serve God","To harm the environment","To avoid all responsibilities","To prevent peace"],"answer":"To worship and serve God","hint":"This purpose is named alongside caring for other creatures.","explanation":"The curriculum lists worship and service to God as a purpose.","misconception_note":"Accept this as recall of curriculum content, not a required personal declaration."},
-      {"id":"B3.1.3.1.1-Q03","type":"short_answer","prompt":"Name one purpose of humankind given in the curriculum.","answer":["To take care of other creatures, or to worship and serve God."],"hint":"There are two core purposes in the indicator exemplar.","explanation":"Both are explicitly stated in the curriculum.","misconception_note":"Either answer is sufficient."},
-      {"id":"B3.1.3.1.1-Q04","type":"oral","prompt":"Explain in your own words what it means to take care of other creatures.","answer":["A reasonable explanation such as protecting living things, treating animals carefully, or looking after plants and their habitats."],"hint":"Think about care and protection rather than harm.","explanation":"The curriculum connects humankind's purpose with caring for other creatures.","misconception_note":"Accept varied examples; do not require a religious statement."},
-      {"id":"B3.1.3.1.1-Q05","type":"scenario","prompt":"A learner sees a classmate damaging a young tree. Which action best fits the idea of caring for other creatures?","options":["Ask them to stop and tell a teacher if needed","Encourage more damage","Ignore it and laugh","Pull up another tree"],"answer":"Ask them to stop and tell a teacher if needed","hint":"Choose a safe action that protects living things.","explanation":"Protecting plants is a practical example of caring for creation.","misconception_note":"If the situation feels unsafe, seek adult help rather than confronting someone."},
-      {"id":"B3.1.3.1.1-Q06","type":"multiple_choice","prompt":"What does 'stewardship' mean in this lesson?","options":["Responsible care of things entrusted to people","Using resources carelessly","Damaging plants and animals","Ignoring the needs of others"],"answer":"Responsible care of things entrusted to people","hint":"It is about looking after, not owning carelessly.","explanation":"Stewardship expresses responsibility for caring for other creatures and creation.","misconception_note":"Use simple examples to explain this abstract word."},
-      {"id":"B3.1.3.1.1-Q07","type":"matching","prompt":"Match each purpose with an example: (1) care for other creatures; (2) worship and serve God. Examples: A. protect a plant or animal; B. take part in a religious practice, as described in a lesson account.","answer":{"1":"A","2":"B"},"hint":"Match the purpose to the example that illustrates it.","explanation":"The curriculum gives care for other creatures and worship/service to God as purposes.","misconception_note":"No learner is required to perform a religious practice for assessment."},
-      {"id":"B3.1.3.1.1-Q08","type":"short_answer","prompt":"How can people show care for animals? Give one safe example.","answer":["Examples: provide appropriate food and water with responsible adult guidance, avoid cruelty, or protect an animal's habitat."],"hint":"Choose an action that does not harm the animal.","explanation":"Caring for other creatures applies the stewardship purpose.","misconception_note":"Do not encourage children to approach wild or unfamiliar animals."},
-      {"id":"B3.1.3.1.1-Q09","type":"multiple_choice","prompt":"Which action is the best example of humans caring for creation?","options":["Protecting a garden from damage","Pouring rubbish on plants","Chasing and hurting animals","Cutting down trees without need"],"answer":"Protecting a garden from damage","hint":"Choose the action that protects living things.","explanation":"Protecting plants is a practical way to care for other creatures.","misconception_note":"Accept other defensible examples of care."},
-      {"id":"B3.1.3.1.1-Q10","type":"drawing","prompt":"Draw one example of people taking care of another living thing. Label or explain your picture.","answer":["A clear example such as caring for a plant or protecting an animal, with a label or oral explanation."],"hint":"Show a safe act of care.","explanation":"The drawing demonstrates the idea of caring for other creatures.","misconception_note":"Assess understanding rather than artistic skill."},
-      {"id":"B3.1.3.1.1-Q11","type":"scenario","prompt":"A group is discussing the purpose of humankind. Which statement matches the curriculum?","options":["People are to care for other creatures and worship and serve God","People should harm other creatures","People have no responsibilities","People should waste resources"],"answer":"People are to care for other creatures and worship and serve God","hint":"Recall both purposes from the lesson.","explanation":"The curriculum gives both purposes.","misconception_note":"This checks recall of the curriculum and is not a test of personal belief."},
-      {"id":"B3.1.3.1.1-Q12","type":"oral","prompt":"Give one way a learner can practise responsible care for creation at school.","answer":["Examples: avoid damaging plants, use bins properly, conserve water, or treat classroom animals appropriately under teacher direction."],"hint":"Choose an everyday, safe action.","explanation":"Stewardship can be applied through responsible actions in daily life.","misconception_note":"Accept practical examples appropriate to the school."},
-      {"id":"B3.1.3.1.1-Q13","type":"multiple_choice","prompt":"Which behaviour goes against caring for other creatures?","options":["Destroying an animal's habitat for fun","Keeping a garden tidy","Avoiding pollution","Protecting young plants"],"answer":"Destroying an animal's habitat for fun","hint":"Choose the action that causes harm.","explanation":"Care for other creatures is inconsistent with deliberate harm to their habitats.","misconception_note":"Discuss impacts without shaming learners who may not know the effects."},
-      {"id":"B3.1.3.1.1-Q14","type":"short_answer","prompt":"Why is caring for other creatures a responsibility in the lesson?","answer":["The curriculum teaches that one purpose of humankind is to take care of other creatures; a reasonable stewardship explanation is accepted."],"hint":"Refer to the purpose discussed in class.","explanation":"This response links the example to the stated purpose of creation.","misconception_note":"Frame as a curriculum teaching, not a required personal belief."},
-      {"id":"B3.1.3.1.1-Q15","type":"role_play","prompt":"In pairs, role-play a short scene showing someone protecting a plant or animal safely. Explain which purpose of humankind the scene illustrates.","answer":["The scene shows safe care for another creature and identifies this as stewardship or caring for creation."],"hint":"Use a simple, safe situation such as protecting a classroom plant.","explanation":"Role-play supports practical understanding of caring for other creatures.","misconception_note":"Use pretend actions; do not bring or handle animals.","rubric":{"care_action":"0–2: demonstrates an appropriate care action","purpose_named":"0–2: connects it to caring for creation","safety":"0–1: avoids unsafe handling"}},
-      {"id":"B3.1.3.1.1-Q16","type":"multiple_choice","prompt":"Which is a suitable example of serving God in the context of the curriculum?","options":["Helping another person as part of a lesson example of service","Damaging public property","Bullying a classmate","Polluting a water source"],"answer":"Helping another person as part of a lesson example of service","hint":"The curriculum also discusses service and caring actions.","explanation":"Worship and service to God are stated purposes; lessons may connect service with helpful conduct.","misconception_note":"Avoid claiming a single action proves anyone's religious commitment."},
-      {"id":"B3.1.3.1.1-Q17","type":"short_answer","prompt":"Complete the sentence: The curriculum teaches that humankind is to care for other creatures and to ___.","answer":["worship and serve God"],"hint":"Recall the second purpose listed.","explanation":"This completes the two purposes named in the indicator exemplar.","misconception_note":"Accept equivalent wording."},
-      {"id":"B3.1.3.1.1-Q18","type":"multiple_choice","prompt":"A learner says stewardship means people can use nature in any way they like. Is this the best meaning in this lesson?","options":["No; stewardship means responsible care","Yes; it means no responsibility","Yes; it means damaging creation","No; it means ignoring nature"],"answer":"No; stewardship means responsible care","hint":"Think about the word 'care' in the purpose.","explanation":"Stewardship is responsible care, not unrestricted damage or waste.","misconception_note":"The curriculum emphasises care and responsibility."},
-      {"id":"B3.1.3.1.1-Q19","type":"performance","prompt":"Give an oral or written explanation of one purpose of humankind and one everyday example that shows it.","answer":["Names care for other creatures or worship/service to God and gives a relevant example."],"hint":"State the purpose first, then connect it to an example.","explanation":"The indicator asks learners to explain purpose, so linking it to an example shows understanding.","misconception_note":"Assess explanation, not personal belief or practice.","rubric":{"purpose":"0–2: states a valid purpose","example":"0–2: gives a relevant example","clarity":"0–1: communicates clearly"}},
-      {"id":"B3.1.3.1.1-Q20","type":"scenario","prompt":"A learner claims that caring for plants and animals is unrelated to the purpose of humankind in this lesson. What is the best correction?","options":["The curriculum includes taking care of other creatures as a purpose","That is correct; care is never mentioned","Only buildings matter","People should harm creatures"],"answer":"The curriculum includes taking care of other creatures as a purpose","hint":"Recall the stewardship idea.","explanation":"Caring for other creatures is explicitly named in the curriculum.","misconception_note":"Correct the idea without criticising the learner."}
-    ]},
-    {"code":"B3.1.3.1.2","statement":"Give reasons for protecting God's creation.","questions":[
-      {"id":"B3.1.3.1.2-Q01","type":"multiple_choice","prompt":"Why should people protect creation for future generations?","options":["So future generations can also benefit from it","So no one can use resources responsibly","So plants and animals disappear","So pollution increases"],"answer":"So future generations can also benefit from it","hint":"Think about preserving creation over time.","explanation":"Preserving creation for generations is one reason listed in the curriculum.","misconception_note":"Encourage sustainable use and care, not fear of all resource use."},
-      {"id":"B3.1.3.1.2-Q02","type":"multiple_choice","prompt":"Which reason for protecting creation is stated in the curriculum?","options":["It is a command from God","It is a way to waste resources","It prevents people from caring","It encourages pollution"],"answer":"It is a command from God","hint":"One reason in the lesson is a religious instruction.","explanation":"The curriculum lists that protecting creation is a command from God.","misconception_note":"Assess knowledge of the curriculum statement, not personal belief."},
-      {"id":"B3.1.3.1.2-Q03","type":"short_answer","prompt":"Give one reason for protecting God's creation from the lesson.","answer":["To preserve it for generations; it is a command from God; our survival depends on creation; or it is service to God and humankind."],"hint":"There are several reasons in the curriculum list.","explanation":"Any one of the listed reasons is sufficient.","misconception_note":"Accept one clear reason."},
-      {"id":"B3.1.3.1.2-Q04","type":"multiple_choice","prompt":"Which group lists things the curriculum says people depend on for survival?","options":["Food, medicine, shelter and air","Pollution, litter and smoke","Noise, rubbish and plastic","Only toys and games"],"answer":"Food, medicine, shelter and air","hint":"Choose the necessities named in the lesson.","explanation":"The curriculum says survival depends on creation for food, medicine, shelter and air.","misconception_note":"Water is also a reasonable related example, though the listed phrase includes these items."},
-      {"id":"B3.1.3.1.2-Q05","type":"scenario","prompt":"A learner says protecting creation is important only for plants, not people. What is the best response based on the lesson?","options":["People also depend on creation for food, medicine, shelter and air","People do not need the environment","Only buildings need protection","Protection always prevents people from living"],"answer":"People also depend on creation for food, medicine, shelter and air","hint":"Recall the survival reason in the curriculum.","explanation":"The curriculum connects human survival to resources from creation.","misconception_note":"Accept other appropriate examples of dependence on the environment."},
-      {"id":"B3.1.3.1.2-Q06","type":"oral","prompt":"Explain how protecting creation can help people in the future.","answer":["A reasonable explanation that preserving natural resources and living things allows future generations to benefit from them."],"hint":"Think about what future children will need.","explanation":"Preserving creation for generations is a stated reason.","misconception_note":"Accept concise, age-appropriate responses."},
-      {"id":"B3.1.3.1.2-Q07","type":"matching","prompt":"Match each reason with an example: (1) survival depends on creation; (2) preserve creation for generations. Examples: A. protect resources so people in the future can use them; B. people need air, food and medicine.","answer":{"1":"B","2":"A"},"hint":"Match each reason to the idea it describes.","explanation":"The curriculum names both human dependence and preservation for future generations.","misconception_note":"Accept oral matching if writing is difficult."},
-      {"id":"B3.1.3.1.2-Q08","type":"short_answer","prompt":"Name two things people receive from creation that support survival.","answer":["Any two: food, medicine, shelter, air; water is also a reasonable related answer."],"hint":"Think about basic needs and useful natural resources.","explanation":"The curriculum lists food, medicine, shelter and air as examples.","misconception_note":"Accept water as a valid related resource."},
-      {"id":"B3.1.3.1.2-Q09","type":"multiple_choice","prompt":"How can protecting creation be described in the curriculum?","options":["As service to God and humankind","As an excuse to litter","As a reason to waste food","As something unrelated to people"],"answer":"As service to God and humankind","hint":"This is one of the reasons stated in the lesson.","explanation":"The curriculum says protecting creation is service to God and humankind.","misconception_note":"Treat as curriculum content, not as a personal-belief test."},
-      {"id":"B3.1.3.1.2-Q10","type":"drawing","prompt":"Draw a protected environment that people can benefit from now and in the future. Label one reason it should be protected.","answer":["A drawing of a cared-for environment with a relevant reason, such as clean air, food, shelter, or preserving it for future generations."],"hint":"Show a safe, cared-for place and add a short label.","explanation":"The task links environmental protection with the reasons named in the curriculum.","misconception_note":"Assess the idea, not artistic skill."},
-      {"id":"B3.1.3.1.2-Q11","type":"scenario","prompt":"A community wants to keep a local water source clean. Which reason from the lesson supports this action?","options":["People depend on creation for survival","Pollution is always helpful","Future generations do not matter","Clean water has no use"],"answer":"People depend on creation for survival","hint":"Connect clean surroundings with people's needs.","explanation":"Human survival depends on resources and a healthy environment.","misconception_note":"Accept water as an essential resource even where the curriculum's example list varies."},
-      {"id":"B3.1.3.1.2-Q12","type":"short_answer","prompt":"Explain one way protecting creation is service to humankind.","answer":["A reasonable explanation such as keeping air and water clean, protecting food sources, or preserving resources people need."],"hint":"Name a human need that depends on a healthy environment.","explanation":"The curriculum links protection with service to humankind and human survival.","misconception_note":"Accept clear, practical examples."},
-      {"id":"B3.1.3.1.2-Q13","type":"multiple_choice","prompt":"Which action best supports preserving creation for future generations?","options":["Use resources responsibly and prevent pollution","Waste usable water","Destroy young trees without reason","Dump rubbish in a stream"],"answer":"Use resources responsibly and prevent pollution","hint":"Choose a responsible action that avoids lasting damage.","explanation":"Responsible protection helps maintain creation for future generations.","misconception_note":"Avoid implying that protection means no one may use resources at all."},
-      {"id":"B3.1.3.1.2-Q14","type":"oral","prompt":"State one reason for protecting creation and give one example of something people depend on.","answer":["A listed reason plus a relevant example, such as survival depends on creation and people need food or air."],"hint":"Give a reason, then a resource.","explanation":"This checks the stated reasons and supporting examples.","misconception_note":"Accept related examples such as water and medicine."},
-      {"id":"B3.1.3.1.2-Q15","type":"multiple_choice","prompt":"Which statement is not a reason listed in the curriculum for protecting creation?","options":["To make pollution worse","To preserve creation for generations","Our survival depends on creation","It is service to God and humankind"],"answer":"To make pollution worse","hint":"Choose the statement that conflicts with protection.","explanation":"The curriculum's reasons support protection, not environmental harm.","misconception_note":"Keep the contrast clear and non-judgmental."},
-      {"id":"B3.1.3.1.2-Q16","type":"performance","prompt":"Give two reasons from the curriculum for protecting creation and one example of a resource people depend on.","answer":["Any two: preserve creation for generations; command from God; survival depends on creation; service to God and humankind. Resource: food, medicine, shelter, air, or water."],"hint":"You need two reasons and one resource example.","explanation":"The prompt draws directly on the listed reasons and examples.","misconception_note":"Do not require a personal religious affirmation.","rubric":{"reasons":"0–2: one point per valid reason","resource":"0–1: relevant resource named","clarity":"0–1: understandable response"}},
-      {"id":"B3.1.3.1.2-Q17","type":"matching","prompt":"Match each resource with a human need: (1) air; (2) food; (3) shelter. Needs: A. a place of protection; B. breathing; C. nourishment.","answer":{"1":"B","2":"C","3":"A"},"hint":"Pair each resource with its everyday use.","explanation":"These are examples of how creation supports human survival.","misconception_note":"Allow oral responses and local-language explanation if useful."},
-      {"id":"B3.1.3.1.2-Q18","type":"scenario","prompt":"A learner asks why a class should avoid wasting materials and damaging trees. Which answer best connects to the lesson?","options":["Creation should be preserved for future generations and people depend on it","Damage is the only way to help people","Future generations need nothing","Trees and materials have no value"],"answer":"Creation should be preserved for future generations and people depend on it","hint":"Combine the future-generation and survival reasons.","explanation":"The curriculum gives both preservation and human dependence as reasons for protection.","misconception_note":"Accept other accurate curriculum-based explanations."},
-      {"id":"B3.1.3.1.2-Q19","type":"role_play","prompt":"In pairs, present a short conversation explaining to a younger learner why people should protect a local natural resource. Include one reason from the lesson.","answer":["The explanation gives a relevant reason such as human survival, preserving creation for future generations, or service to God and humankind."],"hint":"Use a familiar resource such as clean air, water, trees or food.","explanation":"Discussion and presentation help learners explain reasons for protection.","misconception_note":"No field visit or handling of environmental hazards is required.","rubric":{"reason":"0–2: includes a valid reason","example":"0–2: names a relevant resource","communication":"0–1: message is clear and respectful"}},
-      {"id":"B3.1.3.1.2-Q20","type":"short_answer","prompt":"Complete the idea: We should protect creation because our survival depends on it for ___. Give two examples.","answer":["Any two: food, medicine, shelter, air; water accepted as a related example."],"hint":"List two things people need.","explanation":"The curriculum connects protecting creation to resources needed for survival.","misconception_note":"Accept any two reasonable resources, including water."}
-    ]}
+  "class": "Basic 3",
+  "part": 1,
+  "curriculum": "NaCCA Religious and Moral Education Curriculum for Primary Schools, September 2019",
+  "indicator_codes": ["B3.1.2.1.1", "B3.1.3.1.1", "B3.1.3.1.2"],
+  "question_count": 60,
+  "code_note": "Codes follow the curriculum's printed Basic 3 indicators; spacing and punctuation normalized.",
+  "accessibility_note": "Teachers may read prompts aloud. Accept oral, written, drawn or role-play responses where suitable. Assess curriculum understanding, not personal religious belief. Do not require hazardous clean-up, mining, or contact with waste; use safe classroom models or discussion.",
+  "indicators": [
+    {
+      "code": "B3.1.2.1.1",
+      "statement": "Demonstrate ways to care for the environment.",
+      "questions": [
+        {
+          "id": "B3.1.2.1.1-Q01",
+          "type": "mcq",
+          "prompt": "Which action helps care for the environment?",
+          "options": [
+            "Planting trees",
+            "Throwing rubbish into a stream",
+            "Burning waste beside a home",
+            "Cutting down every tree"
+          ],
+          "answer": "Planting trees",
+          "hint": "Choose an action that helps the natural surroundings.",
+          "explanation": "Tree planting is listed as a way to care for the environment.",
+          "misconception_note": "Care for nature can include several actions, not just planting.",
+          "skill_tag": "recognise",
+          "difficulty": 1
+        },
+        {
+          "id": "B3.1.2.1.1-Q02",
+          "type": "mcq",
+          "prompt": "Where should household waste be put to help keep the environment clean?",
+          "options": [
+            "In an appropriate waste bin or collection point",
+            "In a river",
+            "On a footpath",
+            "In a school garden"
+          ],
+          "answer": "In an appropriate waste bin or collection point",
+          "hint": "Choose a safe, proper place for waste.",
+          "explanation": "Proper disposal of waste is named in the curriculum.",
+          "misconception_note": "Use locally available safe disposal guidance.",
+          "skill_tag": "recognise",
+          "difficulty": 1
+        },
+        {
+          "id": "B3.1.2.1.1-Q03",
+          "type": "written",
+          "prompt": "Name two ways people can care for the environment.",
+          "hint": "Think of actions listed in the lesson.",
+          "explanation": "The indicator exemplars include these practical forms of environmental care.",
+          "misconception_note": "Accept other safe, locally relevant actions.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Any two: tree planting, proper waste disposal, legal mining, clean-up exercises, avoiding pollution, erosion control, or clearing blocked gutters safely.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "recognise",
+          "difficulty": 2
+        },
+        {
+          "id": "B3.1.2.1.1-Q04",
+          "type": "mcq",
+          "prompt": "Which choice is safer for the environment?",
+          "options": [
+            "Mining according to the law",
+            "Mining illegally and polluting streams",
+            "Dumping chemicals in a river",
+            "Removing trees from a forest without control"
+          ],
+          "answer": "Mining according to the law",
+          "hint": "The curriculum contrasts legal mining with harmful environmental activities.",
+          "explanation": "Legal mining is named among ways to care for the environment.",
+          "misconception_note": "This asks learners to distinguish lawful practice; it is not an instruction to mine.",
+          "skill_tag": "recognise",
+          "difficulty": 1
+        },
+        {
+          "id": "B3.1.2.1.1-Q05",
+          "type": "mcq",
+          "prompt": "A class notices litter in a play area. Which response is best?",
+          "options": [
+            "Tell a teacher and arrange a safe clean-up using suitable tools",
+            "Burn the litter",
+            "Push it into a drain",
+            "Leave it where younger children may trip"
+          ],
+          "answer": "Tell a teacher and arrange a safe clean-up using suitable tools",
+          "hint": "Keep the clean-up supervised and safe.",
+          "explanation": "Clean-up exercises are an exemplar, but they must be carried out safely.",
+          "misconception_note": "Learners should not handle sharp, chemical, or unknown waste.",
+          "skill_tag": "recognise",
+          "difficulty": 1
+        },
+        {
+          "id": "B3.1.2.1.1-Q06",
+          "type": "oral",
+          "prompt": "Explain one way to dispose of waste properly in your school or community.",
+          "hint": "Name where waste should go and why.",
+          "explanation": "Proper disposal helps prevent pollution and keeps places clean.",
+          "misconception_note": "Local waste systems vary; accept safe locally valid methods.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Any locally appropriate method using a designated bin, collection point, or approved service.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "apply",
+          "difficulty": 3
+        },
+        {
+          "id": "B3.1.2.1.1-Q07",
+          "type": "matching",
+          "prompt": "Match each action to its result: (1) planting a tree; (2) putting rubbish in a proper bin. Results: A. helps manage waste; B. adds vegetation.",
+          "hint": "Think about what each action directly does.",
+          "explanation": "Trees add vegetation; bins support proper waste management.",
+          "misconception_note": "These are examples, not the only benefits of each action.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Matches 1 with B.",
+                "marks": 1
+              },
+              {
+                "description": "Matches 2 with A.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "interpret",
+          "difficulty": 2
+        },
+        {
+          "id": "B3.1.2.1.1-Q08",
+          "type": "mcq",
+          "prompt": "Which action helps reduce environmental pollution?",
+          "options": [
+            "Avoiding littering and disposing of waste properly",
+            "Pouring rubbish into a gutter",
+            "Throwing plastic into a stream",
+            "Leaving waste on the road"
+          ],
+          "answer": "Avoiding littering and disposing of waste properly",
+          "hint": "Choose the action that prevents waste from spreading.",
+          "explanation": "Proper waste disposal and avoiding pollution are stated ways to care for the environment.",
+          "misconception_note": "A clean environment is a shared responsibility.",
+          "skill_tag": "recognise",
+          "difficulty": 1
+        },
+        {
+          "id": "B3.1.2.1.1-Q09",
+          "type": "written",
+          "prompt": "Why should people avoid polluting the environment? Give one reason.",
+          "hint": "Think about who or what may be affected.",
+          "explanation": "Avoiding pollution is a key environmental-care action.",
+          "misconception_note": "Accept clear age-appropriate explanations.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Pollution can harm people, animals, plants, water, or the surroundings; any reasonable reason accepted.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "interpret",
+          "difficulty": 2
+        },
+        {
+          "id": "B3.1.2.1.1-Q10",
+          "type": "drawing",
+          "prompt": "Draw one safe way to care for the environment and label the action.",
+          "hint": "Choose one action from the lesson.",
+          "explanation": "Drawing is suggested as a way to demonstrate understanding of environmental care.",
+          "misconception_note": "Assess the idea, not drawing skill.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "A drawing showing a suitable action such as planting a tree, using a bin, or a supervised clean-up, with a label or oral explanation.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "demonstrate",
+          "difficulty": 4
+        },
+        {
+          "id": "B3.1.2.1.1-Q11",
+          "type": "mcq",
+          "prompt": "A gutter is blocked with rubbish. What is the safest first step for a learner?",
+          "options": [
+            "Tell a responsible adult so it can be cleared safely",
+            "Reach into it without protection",
+            "Set fire to the rubbish",
+            "Push it farther into the drain"
+          ],
+          "answer": "Tell a responsible adult so it can be cleared safely",
+          "hint": "Some clean-up work needs adult supervision and proper equipment.",
+          "explanation": "Clearing choked gutters is an example in the curriculum, but safety comes first.",
+          "misconception_note": "Do not ask children to handle dangerous waste or enter drains.",
+          "skill_tag": "apply",
+          "difficulty": 3
+        },
+        {
+          "id": "B3.1.2.1.1-Q12",
+          "type": "mcq",
+          "prompt": "A group is planning a school environmental project. Which plan is suitable and safe?",
+          "options": [
+            "Plant a tree with permission and adult guidance",
+            "Clear a rubbish dump with bare hands",
+            "Enter a drain to remove waste",
+            "Handle unknown chemicals"
+          ],
+          "answer": "Plant a tree with permission and adult guidance",
+          "hint": "Choose an activity that can be safely supervised.",
+          "explanation": "Tree planting is an exemplar project and should be organised safely.",
+          "misconception_note": "Projects involving dumps, drains, or unknown materials need trained adults and should not be assigned as child handling tasks.",
+          "skill_tag": "recognise",
+          "difficulty": 2
+        },
+        {
+          "id": "B3.1.2.1.1-Q13",
+          "type": "written",
+          "prompt": "What does it mean to care for the environment?",
+          "hint": "Think about protecting places and living things around us.",
+          "explanation": "The indicator asks learners to explain and demonstrate ways of caring for the environment.",
+          "misconception_note": "Accept concise wording that captures protection or maintenance.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "To protect, maintain and keep the natural and built surroundings safe and clean.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "recognise",
+          "difficulty": 2
+        },
+        {
+          "id": "B3.1.2.1.1-Q14",
+          "type": "mcq",
+          "prompt": "Which item should not be thrown into a stream?",
+          "options": [
+            "Any rubbish or waste",
+            "Clean water",
+            "A fish swimming naturally",
+            "A leaf that has fallen naturally"
+          ],
+          "answer": "Any rubbish or waste",
+          "hint": "Choose the item that would pollute the water.",
+          "explanation": "Avoiding water and environmental pollution is part of environmental care.",
+          "misconception_note": "Keep examples age-appropriate and avoid suggesting that all natural materials are harmless in every context.",
+          "skill_tag": "recognise",
+          "difficulty": 2
+        },
+        {
+          "id": "B3.1.2.1.1-Q15",
+          "type": "performance",
+          "prompt": "Sort these actions into 'helps care for the environment' and 'harms the environment': planting trees; proper waste disposal; illegal mining that pollutes water; littering.",
+          "hint": "Consider whether the action protects or damages surroundings.",
+          "explanation": "The curriculum names tree planting and proper waste disposal as care, and pollution and illegal mining as harmful.",
+          "misconception_note": "The classification is about the described action; avoid implying every activity under a broad label has identical effects.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "one point for each correctly sorted item",
+                "marks": 4
+              },
+              {
+                "description": "gives a relevant reason",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "demonstrate",
+          "difficulty": 4
+        },
+        {
+          "id": "B3.1.2.1.1-Q16",
+          "type": "role_play",
+          "prompt": "In pairs, act out a short scene where learners remind one another to use a waste bin and keep the school area clean.",
+          "hint": "Show the action and a polite reminder.",
+          "explanation": "Practical activities and role-play help learners demonstrate environmental care.",
+          "misconception_note": "Do not require learners to handle real rubbish.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "shows a relevant action",
+                "marks": 2
+              },
+              {
+                "description": "reminder is respectful and clear",
+                "marks": 2
+              },
+              {
+                "description": "avoids unsafe handling",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "demonstrate",
+          "difficulty": 4
+        },
+        {
+          "id": "B3.1.2.1.1-Q17",
+          "type": "mcq",
+          "prompt": "Which is a useful way to help prevent soil from washing away in some places?",
+          "options": [
+            "Planting vegetation and using suitable erosion-control measures",
+            "Removing all plants",
+            "Leaving bare soil exposed",
+            "Pouring waste onto slopes"
+          ],
+          "answer": "Planting vegetation and using suitable erosion-control measures",
+          "hint": "Think of the curriculum's example of checking erosion.",
+          "explanation": "Checking erosion is included among possible environmental projects.",
+          "misconception_note": "Specific engineering solutions should be planned by qualified adults.",
+          "skill_tag": "recognise",
+          "difficulty": 2
+        },
+        {
+          "id": "B3.1.2.1.1-Q18",
+          "type": "oral",
+          "prompt": "Name one safe environmental-care project a class could discuss or plan with adult guidance.",
+          "hint": "Choose a project that does not expose children to hazards.",
+          "explanation": "The curriculum suggests group projects and class presentations on caring for the environment.",
+          "misconception_note": "Accept discussion-only alternatives where hands-on work would be unsafe.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Examples: tree planting, litter prevention, a supervised school clean-up, or an awareness poster campaign.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "interpret",
+          "difficulty": 3
+        },
+        {
+          "id": "B3.1.2.1.1-Q19",
+          "type": "mcq",
+          "prompt": "A learner sees someone preparing to pour dirty waste into a stream. What is an appropriate response?",
+          "options": [
+            "Do not confront danger; tell a trusted adult or responsible authority",
+            "Join in",
+            "Jump into the stream",
+            "Hide the waste"
+          ],
+          "answer": "Do not confront danger; tell a trusted adult or responsible authority",
+          "hint": "Protect yourself and seek responsible help.",
+          "explanation": "Avoiding pollution matters, and personal safety is important when responding.",
+          "misconception_note": "Learners should not intervene in a risky situation themselves.",
+          "skill_tag": "apply",
+          "difficulty": 3
+        },
+        {
+          "id": "B3.1.2.1.1-Q20",
+          "type": "written",
+          "prompt": "State one reason a school might organise an environmental-care activity.",
+          "hint": "Think of a benefit to people or other living things.",
+          "explanation": "Care, cleanliness, sustainability and responsibility are associated values for this indicator.",
+          "misconception_note": "Accept any relevant, clearly stated reason.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "To keep the surroundings clean and safe, prevent pollution, protect plants and animals, or maintain the environment.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "interpret",
+          "difficulty": 3
+        }
+      ],
+      "source_page": 15,
+      "strand": "God, His Creation and Attributes",
+      "sub_strand": "The Environment",
+      "content_standard": "Identify ways of ensuring environmental safety",
+      "spec": {
+        "skills": [
+          {
+            "tag": "recognise",
+            "description": "Recognise the examples and vocabulary in the lesson.",
+            "minQuestions": 2
+          },
+          {
+            "tag": "interpret",
+            "description": "Explain meanings and connections in an example.",
+            "minQuestions": 2
+          },
+          {
+            "tag": "apply",
+            "description": "Apply the lesson to a situation and justify a choice.",
+            "minQuestions": 2
+          },
+          {
+            "tag": "demonstrate",
+            "description": "Communicate understanding through a performance, drawing or demonstration.",
+            "minQuestions": 2
+          }
+        ],
+        "needsTeacherAssessment": true,
+        "difficultyPlan": "5 foundational, 7 simple-use, 5 application and 3 challenge questions."
+      }
+    },
+    {
+      "code": "B3.1.3.1.1",
+      "statement": "Explain the purpose of God's creation of humankind.",
+      "questions": [
+        {
+          "id": "B3.1.3.1.1-Q01",
+          "type": "mcq",
+          "prompt": "According to the curriculum, which is one purpose of the creation of humankind?",
+          "options": [
+            "To take care of other creatures",
+            "To destroy every living thing",
+            "To waste natural resources",
+            "To prevent people from helping one another"
+          ],
+          "answer": "To take care of other creatures",
+          "hint": "Think of the idea of stewardship.",
+          "explanation": "The curriculum says human beings were created to take care of other creatures.",
+          "misconception_note": "Present this as the curriculum's religious teaching; do not assess a learner's personal belief.",
+          "skill_tag": "recognise",
+          "difficulty": 1
+        },
+        {
+          "id": "B3.1.3.1.1-Q02",
+          "type": "mcq",
+          "prompt": "Which is another purpose of humankind named in the curriculum?",
+          "options": [
+            "To worship and serve God",
+            "To harm the environment",
+            "To avoid all responsibilities",
+            "To prevent peace"
+          ],
+          "answer": "To worship and serve God",
+          "hint": "This purpose is named alongside caring for other creatures.",
+          "explanation": "The curriculum lists worship and service to God as a purpose.",
+          "misconception_note": "Accept this as recall of curriculum content, not a required personal declaration.",
+          "skill_tag": "recognise",
+          "difficulty": 1
+        },
+        {
+          "id": "B3.1.3.1.1-Q03",
+          "type": "written",
+          "prompt": "Name one purpose of humankind given in the curriculum.",
+          "hint": "There are two core purposes in the indicator exemplar.",
+          "explanation": "Both are explicitly stated in the curriculum.",
+          "misconception_note": "Either answer is sufficient.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "To take care of other creatures, or to worship and serve God.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "recognise",
+          "difficulty": 2
+        },
+        {
+          "id": "B3.1.3.1.1-Q04",
+          "type": "oral",
+          "prompt": "Explain in your own words what it means to take care of other creatures.",
+          "hint": "Think about care and protection rather than harm.",
+          "explanation": "The curriculum connects humankind's purpose with caring for other creatures.",
+          "misconception_note": "Accept varied examples; do not require a religious statement.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "A reasonable explanation such as protecting living things, treating animals carefully, or looking after plants and their habitats.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "apply",
+          "difficulty": 3
+        },
+        {
+          "id": "B3.1.3.1.1-Q05",
+          "type": "mcq",
+          "prompt": "A learner sees a classmate damaging a young tree. Which action best fits the idea of caring for other creatures?",
+          "options": [
+            "Ask them to stop and tell a teacher if needed",
+            "Encourage more damage",
+            "Ignore it and laugh",
+            "Pull up another tree"
+          ],
+          "answer": "Ask them to stop and tell a teacher if needed",
+          "hint": "Choose a safe action that protects living things.",
+          "explanation": "Protecting plants is a practical example of caring for creation.",
+          "misconception_note": "If the situation feels unsafe, seek adult help rather than confronting someone.",
+          "skill_tag": "apply",
+          "difficulty": 2
+        },
+        {
+          "id": "B3.1.3.1.1-Q06",
+          "type": "mcq",
+          "prompt": "What does 'stewardship' mean in this lesson?",
+          "options": [
+            "Responsible care of things entrusted to people",
+            "Using resources carelessly",
+            "Damaging plants and animals",
+            "Ignoring the needs of others"
+          ],
+          "answer": "Responsible care of things entrusted to people",
+          "hint": "It is about looking after, not owning carelessly.",
+          "explanation": "Stewardship expresses responsibility for caring for other creatures and creation.",
+          "misconception_note": "Use simple examples to explain this abstract word.",
+          "skill_tag": "recognise",
+          "difficulty": 1
+        },
+        {
+          "id": "B3.1.3.1.1-Q07",
+          "type": "matching",
+          "prompt": "Match each purpose with an example: (1) care for other creatures; (2) worship and serve God. Examples: A. protect a plant or animal; B. take part in a religious practice, as described in a lesson account.",
+          "hint": "Match the purpose to the example that illustrates it.",
+          "explanation": "The curriculum gives care for other creatures and worship/service to God as purposes.",
+          "misconception_note": "No learner is required to perform a religious practice for assessment.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Matches 1 with A.",
+                "marks": 1
+              },
+              {
+                "description": "Matches 2 with B.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "interpret",
+          "difficulty": 2
+        },
+        {
+          "id": "B3.1.3.1.1-Q08",
+          "type": "written",
+          "prompt": "How can people show care for animals? Give one safe example.",
+          "hint": "Choose an action that does not harm the animal.",
+          "explanation": "Caring for other creatures applies the stewardship purpose.",
+          "misconception_note": "Do not encourage children to approach wild or unfamiliar animals.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Examples: provide appropriate food and water with responsible adult guidance, avoid cruelty, or protect an animal's habitat.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "apply",
+          "difficulty": 3
+        },
+        {
+          "id": "B3.1.3.1.1-Q09",
+          "type": "mcq",
+          "prompt": "Which action is the best example of humans caring for creation?",
+          "options": [
+            "Protecting a garden from damage",
+            "Pouring rubbish on plants",
+            "Chasing and hurting animals",
+            "Cutting down trees without need"
+          ],
+          "answer": "Protecting a garden from damage",
+          "hint": "Choose the action that protects living things.",
+          "explanation": "Protecting plants is a practical way to care for other creatures.",
+          "misconception_note": "Accept other defensible examples of care.",
+          "skill_tag": "recognise",
+          "difficulty": 1
+        },
+        {
+          "id": "B3.1.3.1.1-Q10",
+          "type": "drawing",
+          "prompt": "Draw one example of people taking care of another living thing. Label or explain your picture.",
+          "hint": "Show a safe act of care.",
+          "explanation": "The drawing demonstrates the idea of caring for other creatures.",
+          "misconception_note": "Assess understanding rather than artistic skill.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "A clear example such as caring for a plant or protecting an animal, with a label or oral explanation.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "demonstrate",
+          "difficulty": 4
+        },
+        {
+          "id": "B3.1.3.1.1-Q11",
+          "type": "mcq",
+          "prompt": "A group is discussing the purpose of humankind. Which statement matches the curriculum?",
+          "options": [
+            "People are to care for other creatures and worship and serve God",
+            "People should harm other creatures",
+            "People have no responsibilities",
+            "People should waste resources"
+          ],
+          "answer": "People are to care for other creatures and worship and serve God",
+          "hint": "Recall both purposes from the lesson.",
+          "explanation": "The curriculum gives both purposes.",
+          "misconception_note": "This checks recall of the curriculum and is not a test of personal belief.",
+          "skill_tag": "interpret",
+          "difficulty": 2
+        },
+        {
+          "id": "B3.1.3.1.1-Q12",
+          "type": "oral",
+          "prompt": "Give one way a learner can practise responsible care for creation at school.",
+          "hint": "Choose an everyday, safe action.",
+          "explanation": "Stewardship can be applied through responsible actions in daily life.",
+          "misconception_note": "Accept practical examples appropriate to the school.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Examples: avoid damaging plants, use bins properly, conserve water, or treat classroom animals appropriately under teacher direction.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "apply",
+          "difficulty": 3
+        },
+        {
+          "id": "B3.1.3.1.1-Q13",
+          "type": "mcq",
+          "prompt": "Which behaviour goes against caring for other creatures?",
+          "options": [
+            "Destroying an animal's habitat for fun",
+            "Keeping a garden tidy",
+            "Avoiding pollution",
+            "Protecting young plants"
+          ],
+          "answer": "Destroying an animal's habitat for fun",
+          "hint": "Choose the action that causes harm.",
+          "explanation": "Care for other creatures is inconsistent with deliberate harm to their habitats.",
+          "misconception_note": "Discuss impacts without shaming learners who may not know the effects.",
+          "skill_tag": "recognise",
+          "difficulty": 1
+        },
+        {
+          "id": "B3.1.3.1.1-Q14",
+          "type": "written",
+          "prompt": "Why is caring for other creatures a responsibility in the lesson?",
+          "hint": "Refer to the purpose discussed in class.",
+          "explanation": "This response links the example to the stated purpose of creation.",
+          "misconception_note": "Frame as a curriculum teaching, not a required personal belief.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "The curriculum teaches that one purpose of humankind is to take care of other creatures; a reasonable stewardship explanation is accepted.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "interpret",
+          "difficulty": 2
+        },
+        {
+          "id": "B3.1.3.1.1-Q15",
+          "type": "role_play",
+          "prompt": "In pairs, role-play a short scene showing someone protecting a plant or animal safely. Explain which purpose of humankind the scene illustrates.",
+          "hint": "Use a simple, safe situation such as protecting a classroom plant.",
+          "explanation": "Role-play supports practical understanding of caring for other creatures.",
+          "misconception_note": "Use pretend actions; do not bring or handle animals.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "demonstrates an appropriate care action",
+                "marks": 2
+              },
+              {
+                "description": "connects it to caring for creation",
+                "marks": 2
+              },
+              {
+                "description": "avoids unsafe handling",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "demonstrate",
+          "difficulty": 4
+        },
+        {
+          "id": "B3.1.3.1.1-Q16",
+          "type": "mcq",
+          "prompt": "Which is a suitable example of serving God in the context of the curriculum?",
+          "options": [
+            "Helping another person as part of a lesson example of service",
+            "Damaging public property",
+            "Bullying a classmate",
+            "Polluting a water source"
+          ],
+          "answer": "Helping another person as part of a lesson example of service",
+          "hint": "The curriculum also discusses service and caring actions.",
+          "explanation": "Worship and service to God are stated purposes; lessons may connect service with helpful conduct.",
+          "misconception_note": "Avoid claiming a single action proves anyone's religious commitment.",
+          "skill_tag": "recognise",
+          "difficulty": 2
+        },
+        {
+          "id": "B3.1.3.1.1-Q17",
+          "type": "short_answer",
+          "prompt": "Complete the sentence: The curriculum teaches that humankind is to care for other creatures and to ___.",
+          "answer": ["worship and serve god"],
+          "hint": "Recall the second purpose listed.",
+          "explanation": "This completes the two purposes named in the indicator exemplar.",
+          "misconception_note": "Accept equivalent wording.",
+          "skill_tag": "recognise",
+          "difficulty": 2
+        },
+        {
+          "id": "B3.1.3.1.1-Q18",
+          "type": "mcq",
+          "prompt": "A learner says stewardship means people can use nature in any way they like. Is this the best meaning in this lesson?",
+          "options": [
+            "No; stewardship means responsible care",
+            "Yes; it means no responsibility",
+            "Yes; it means damaging creation",
+            "No; it means ignoring nature"
+          ],
+          "answer": "No; stewardship means responsible care",
+          "hint": "Think about the word 'care' in the purpose.",
+          "explanation": "Stewardship is responsible care, not unrestricted damage or waste.",
+          "misconception_note": "The curriculum emphasises care and responsibility.",
+          "skill_tag": "apply",
+          "difficulty": 3
+        },
+        {
+          "id": "B3.1.3.1.1-Q19",
+          "type": "performance",
+          "prompt": "Give an oral or written explanation of one purpose of humankind and one everyday example that shows it.",
+          "hint": "State the purpose first, then connect it to an example.",
+          "explanation": "The indicator asks learners to explain purpose, so linking it to an example shows understanding.",
+          "misconception_note": "Assess explanation, not personal belief or practice.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "states a valid purpose",
+                "marks": 2
+              },
+              {
+                "description": "gives a relevant example",
+                "marks": 2
+              },
+              {
+                "description": "communicates clearly",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "demonstrate",
+          "difficulty": 4
+        },
+        {
+          "id": "B3.1.3.1.1-Q20",
+          "type": "mcq",
+          "prompt": "A learner claims that caring for plants and animals is unrelated to the purpose of humankind in this lesson. What is the best correction?",
+          "options": [
+            "The curriculum includes taking care of other creatures as a purpose",
+            "That is correct; care is never mentioned",
+            "Only buildings matter",
+            "People should harm creatures"
+          ],
+          "answer": "The curriculum includes taking care of other creatures as a purpose",
+          "hint": "Recall the stewardship idea.",
+          "explanation": "Caring for other creatures is explicitly named in the curriculum.",
+          "misconception_note": "Correct the idea without criticising the learner.",
+          "skill_tag": "apply",
+          "difficulty": 3
+        }
+      ],
+      "source_page": 16,
+      "strand": "God, His Creation and Attributes",
+      "sub_strand": "The Purpose of God's Creation",
+      "content_standard": "Explain the purpose of God's creation",
+      "spec": {
+        "skills": [
+          {
+            "tag": "recognise",
+            "description": "Recognise the examples and vocabulary in the lesson.",
+            "minQuestions": 2
+          },
+          {
+            "tag": "interpret",
+            "description": "Explain meanings and connections in an example.",
+            "minQuestions": 2
+          },
+          {
+            "tag": "apply",
+            "description": "Apply the lesson to a situation and justify a choice.",
+            "minQuestions": 2
+          },
+          {
+            "tag": "demonstrate",
+            "description": "Communicate understanding through a performance, drawing or demonstration.",
+            "minQuestions": 2
+          }
+        ],
+        "needsTeacherAssessment": true,
+        "difficultyPlan": "5 foundational, 7 simple-use, 5 application and 3 challenge questions."
+      }
+    },
+    {
+      "code": "B3.1.3.1.2",
+      "statement": "Give reasons for protecting God's creation.",
+      "questions": [
+        {
+          "id": "B3.1.3.1.2-Q01",
+          "type": "mcq",
+          "prompt": "Why should people protect creation for future generations?",
+          "options": [
+            "So future generations can also benefit from it",
+            "So no one can use resources responsibly",
+            "So plants and animals disappear",
+            "So pollution increases"
+          ],
+          "answer": "So future generations can also benefit from it",
+          "hint": "Think about preserving creation over time.",
+          "explanation": "Preserving creation for generations is one reason listed in the curriculum.",
+          "misconception_note": "Encourage sustainable use and care, not fear of all resource use.",
+          "skill_tag": "interpret",
+          "difficulty": 1
+        },
+        {
+          "id": "B3.1.3.1.2-Q02",
+          "type": "mcq",
+          "prompt": "Which reason for protecting creation is stated in the curriculum?",
+          "options": [
+            "It is a command from God",
+            "It is a way to waste resources",
+            "It prevents people from caring",
+            "It encourages pollution"
+          ],
+          "answer": "It is a command from God",
+          "hint": "One reason in the lesson is a religious instruction.",
+          "explanation": "The curriculum lists that protecting creation is a command from God.",
+          "misconception_note": "Assess knowledge of the curriculum statement, not personal belief.",
+          "skill_tag": "interpret",
+          "difficulty": 1
+        },
+        {
+          "id": "B3.1.3.1.2-Q03",
+          "type": "written",
+          "prompt": "Give one reason for protecting God's creation from the lesson.",
+          "hint": "There are several reasons in the curriculum list.",
+          "explanation": "Any one of the listed reasons is sufficient.",
+          "misconception_note": "Accept one clear reason.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "To preserve it for generations; it is a command from God; our survival depends on creation; or it is service to God and humankind.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "interpret",
+          "difficulty": 2
+        },
+        {
+          "id": "B3.1.3.1.2-Q04",
+          "type": "mcq",
+          "prompt": "Which group lists things the curriculum says people depend on for survival?",
+          "options": [
+            "Food, medicine, shelter and air",
+            "Pollution, litter and smoke",
+            "Noise, rubbish and plastic",
+            "Only toys and games"
+          ],
+          "answer": "Food, medicine, shelter and air",
+          "hint": "Choose the necessities named in the lesson.",
+          "explanation": "The curriculum says survival depends on creation for food, medicine, shelter and air.",
+          "misconception_note": "Water is also a reasonable related example, though the listed phrase includes these items.",
+          "skill_tag": "recognise",
+          "difficulty": 1
+        },
+        {
+          "id": "B3.1.3.1.2-Q05",
+          "type": "mcq",
+          "prompt": "A learner says protecting creation is important only for plants, not people. What is the best response based on the lesson?",
+          "options": [
+            "People also depend on creation for food, medicine, shelter and air",
+            "People do not need the environment",
+            "Only buildings need protection",
+            "Protection always prevents people from living"
+          ],
+          "answer": "People also depend on creation for food, medicine, shelter and air",
+          "hint": "Recall the survival reason in the curriculum.",
+          "explanation": "The curriculum connects human survival to resources from creation.",
+          "misconception_note": "Accept other appropriate examples of dependence on the environment.",
+          "skill_tag": "apply",
+          "difficulty": 3
+        },
+        {
+          "id": "B3.1.3.1.2-Q06",
+          "type": "oral",
+          "prompt": "Explain how protecting creation can help people in the future.",
+          "hint": "Think about what future children will need.",
+          "explanation": "Preserving creation for generations is a stated reason.",
+          "misconception_note": "Accept concise, age-appropriate responses.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "A reasonable explanation that preserving natural resources and living things allows future generations to benefit from them.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "interpret",
+          "difficulty": 2
+        },
+        {
+          "id": "B3.1.3.1.2-Q07",
+          "type": "matching",
+          "prompt": "Match each reason with an example: (1) survival depends on creation; (2) preserve creation for generations. Examples: A. protect resources so people in the future can use them; B. people need air, food and medicine.",
+          "hint": "Match each reason to the idea it describes.",
+          "explanation": "The curriculum names both human dependence and preservation for future generations.",
+          "misconception_note": "Accept oral matching if writing is difficult.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Matches 1 with B.",
+                "marks": 1
+              },
+              {
+                "description": "Matches 2 with A.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "interpret",
+          "difficulty": 2
+        },
+        {
+          "id": "B3.1.3.1.2-Q08",
+          "type": "written",
+          "prompt": "Name two things people receive from creation that support survival.",
+          "hint": "Think about basic needs and useful natural resources.",
+          "explanation": "The curriculum lists food, medicine, shelter and air as examples.",
+          "misconception_note": "Accept water as a valid related resource.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Any two: food, medicine, shelter, air; water is also a reasonable related answer.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "recognise",
+          "difficulty": 1
+        },
+        {
+          "id": "B3.1.3.1.2-Q09",
+          "type": "mcq",
+          "prompt": "How can protecting creation be described in the curriculum?",
+          "options": [
+            "As service to God and humankind",
+            "As an excuse to litter",
+            "As a reason to waste food",
+            "As something unrelated to people"
+          ],
+          "answer": "As service to God and humankind",
+          "hint": "This is one of the reasons stated in the lesson.",
+          "explanation": "The curriculum says protecting creation is service to God and humankind.",
+          "misconception_note": "Treat as curriculum content, not as a personal-belief test.",
+          "skill_tag": "apply",
+          "difficulty": 3
+        },
+        {
+          "id": "B3.1.3.1.2-Q10",
+          "type": "drawing",
+          "prompt": "Draw a protected environment that people can benefit from now and in the future. Label one reason it should be protected.",
+          "hint": "Show a safe, cared-for place and add a short label.",
+          "explanation": "The task links environmental protection with the reasons named in the curriculum.",
+          "misconception_note": "Assess the idea, not artistic skill.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "A drawing of a cared-for environment with a relevant reason, such as clean air, food, shelter, or preserving it for future generations.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "demonstrate",
+          "difficulty": 4
+        },
+        {
+          "id": "B3.1.3.1.2-Q11",
+          "type": "mcq",
+          "prompt": "A community wants to keep a local water source clean. Which reason from the lesson supports this action?",
+          "options": [
+            "People depend on creation for survival",
+            "Pollution is always helpful",
+            "Future generations do not matter",
+            "Clean water has no use"
+          ],
+          "answer": "People depend on creation for survival",
+          "hint": "Connect clean surroundings with people's needs.",
+          "explanation": "Human survival depends on resources and a healthy environment.",
+          "misconception_note": "Accept water as an essential resource even where the curriculum's example list varies.",
+          "skill_tag": "interpret",
+          "difficulty": 2
+        },
+        {
+          "id": "B3.1.3.1.2-Q12",
+          "type": "written",
+          "prompt": "Explain one way protecting creation is service to humankind.",
+          "hint": "Name a human need that depends on a healthy environment.",
+          "explanation": "The curriculum links protection with service to humankind and human survival.",
+          "misconception_note": "Accept clear, practical examples.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "A reasonable explanation such as keeping air and water clean, protecting food sources, or preserving resources people need.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "interpret",
+          "difficulty": 3
+        },
+        {
+          "id": "B3.1.3.1.2-Q13",
+          "type": "mcq",
+          "prompt": "Which action best supports preserving creation for future generations?",
+          "options": [
+            "Use resources responsibly and prevent pollution",
+            "Waste usable water",
+            "Destroy young trees without reason",
+            "Dump rubbish in a stream"
+          ],
+          "answer": "Use resources responsibly and prevent pollution",
+          "hint": "Choose a responsible action that avoids lasting damage.",
+          "explanation": "Responsible protection helps maintain creation for future generations.",
+          "misconception_note": "Avoid implying that protection means no one may use resources at all.",
+          "skill_tag": "recognise",
+          "difficulty": 1
+        },
+        {
+          "id": "B3.1.3.1.2-Q14",
+          "type": "oral",
+          "prompt": "State one reason for protecting creation and give one example of something people depend on.",
+          "hint": "Give a reason, then a resource.",
+          "explanation": "This checks the stated reasons and supporting examples.",
+          "misconception_note": "Accept related examples such as water and medicine.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "A listed reason plus a relevant example, such as survival depends on creation and people need food or air.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "interpret",
+          "difficulty": 3
+        },
+        {
+          "id": "B3.1.3.1.2-Q15",
+          "type": "mcq",
+          "prompt": "Which statement is not a reason listed in the curriculum for protecting creation?",
+          "options": [
+            "To make pollution worse",
+            "To preserve creation for generations",
+            "Our survival depends on creation",
+            "It is service to God and humankind"
+          ],
+          "answer": "To make pollution worse",
+          "hint": "Choose the statement that conflicts with protection.",
+          "explanation": "The curriculum's reasons support protection, not environmental harm.",
+          "misconception_note": "Keep the contrast clear and non-judgmental.",
+          "skill_tag": "interpret",
+          "difficulty": 2
+        },
+        {
+          "id": "B3.1.3.1.2-Q16",
+          "type": "performance",
+          "prompt": "Give two reasons from the curriculum for protecting creation and one example of a resource people depend on.",
+          "hint": "You need two reasons and one resource example.",
+          "explanation": "The prompt draws directly on the listed reasons and examples.",
+          "misconception_note": "Do not require a personal religious affirmation.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "one point per valid reason",
+                "marks": 2
+              },
+              {
+                "description": "relevant resource named",
+                "marks": 1
+              },
+              {
+                "description": "understandable response",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "demonstrate",
+          "difficulty": 4
+        },
+        {
+          "id": "B3.1.3.1.2-Q17",
+          "type": "matching",
+          "prompt": "Match each resource with a human need: (1) air; (2) food; (3) shelter. Needs: A. a place of protection; B. breathing; C. nourishment.",
+          "hint": "Pair each resource with its everyday use.",
+          "explanation": "These are examples of how creation supports human survival.",
+          "misconception_note": "Allow oral responses and local-language explanation if useful.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Matches 1 with B.",
+                "marks": 1
+              },
+              {
+                "description": "Matches 2 with C.",
+                "marks": 1
+              },
+              {
+                "description": "Matches 3 with A.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "interpret",
+          "difficulty": 2
+        },
+        {
+          "id": "B3.1.3.1.2-Q18",
+          "type": "mcq",
+          "prompt": "A learner asks why a class should avoid wasting materials and damaging trees. Which answer best connects to the lesson?",
+          "options": [
+            "Creation should be preserved for future generations and people depend on it",
+            "Damage is the only way to help people",
+            "Future generations need nothing",
+            "Trees and materials have no value"
+          ],
+          "answer": "Creation should be preserved for future generations and people depend on it",
+          "hint": "Combine the future-generation and survival reasons.",
+          "explanation": "The curriculum gives both preservation and human dependence as reasons for protection.",
+          "misconception_note": "Accept other accurate curriculum-based explanations.",
+          "skill_tag": "apply",
+          "difficulty": 3
+        },
+        {
+          "id": "B3.1.3.1.2-Q19",
+          "type": "role_play",
+          "prompt": "In pairs, present a short conversation explaining to a younger learner why people should protect a local natural resource. Include one reason from the lesson.",
+          "hint": "Use a familiar resource such as clean air, water, trees or food.",
+          "explanation": "Discussion and presentation help learners explain reasons for protection.",
+          "misconception_note": "No field visit or handling of environmental hazards is required.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "includes a valid reason",
+                "marks": 2
+              },
+              {
+                "description": "names a relevant resource",
+                "marks": 2
+              },
+              {
+                "description": "message is clear and respectful",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "demonstrate",
+          "difficulty": 4
+        },
+        {
+          "id": "B3.1.3.1.2-Q20",
+          "type": "written",
+          "prompt": "Complete the idea: We should protect creation because our survival depends on it for ___. Give two examples.",
+          "hint": "List two things people need.",
+          "explanation": "The curriculum connects protecting creation to resources needed for survival.",
+          "misconception_note": "Accept any two reasonable resources, including water.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Any two: food, medicine, shelter, air; water accepted as a related example.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "recognise",
+          "difficulty": 2
+        }
+      ],
+      "source_page": 17,
+      "strand": "God, His Creation and Attributes",
+      "sub_strand": "The Purpose of God's Creation",
+      "content_standard": "Explain the purpose of God's creation",
+      "spec": {
+        "skills": [
+          {
+            "tag": "recognise",
+            "description": "Recognise the examples and vocabulary in the lesson.",
+            "minQuestions": 2
+          },
+          {
+            "tag": "interpret",
+            "description": "Explain meanings and connections in an example.",
+            "minQuestions": 2
+          },
+          {
+            "tag": "apply",
+            "description": "Apply the lesson to a situation and justify a choice.",
+            "minQuestions": 2
+          },
+          {
+            "tag": "demonstrate",
+            "description": "Communicate understanding through a performance, drawing or demonstration.",
+            "minQuestions": 2
+          }
+        ],
+        "needsTeacherAssessment": true,
+        "difficultyPlan": "5 foundational, 7 simple-use, 5 application and 3 challenge questions."
+      }
+    }
   ],
-  "progress":{"basic3_indicators_completed":3,"basic3_indicators_total":18,"basic3_questions_completed":60,"overall_questions_completed":480,"overall_questions_target":1560,"next_indicator":"B3.1.3.1.3","note":"Basic 3 indicator inventory begins with B3.1.2.1.1 in the 2019 curriculum; confirm and preserve printed indicator codes where source formatting is inconsistent."}
+  "progress": {
+    "basic3_indicators_completed": 3,
+    "basic3_indicators_total": 18,
+    "basic3_questions_completed": 60,
+    "overall_questions_completed": 480,
+    "overall_questions_target": 1560,
+    "next_indicator": "B3.1.3.1.3",
+    "note": "Basic 3 indicator inventory begins with B3.1.2.1.1 in the 2019 curriculum; confirm and preserve printed indicator codes where source formatting is inconsistent."
+  }
 }

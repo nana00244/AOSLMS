@@ -11,79 +11,1229 @@
       "code": "B3.1.3.1.3",
       "statement": "Explain the need for good relationship among people of different ethnic groups.",
       "questions": [
-        {"id":"B3.1.3.1.3-Q01","type":"multiple_choice","prompt":"Which is one reason the curriculum gives for good relationships among people of different ethnic groups?","options":["To promote peace and unity","To create arguments","To prevent teamwork","To encourage unfair treatment"],"answer":"To promote peace and unity","hint":"Choose the positive outcome named in the lesson.","explanation":"Peace and unity are listed as reasons for good relationships.","misconception_note":"People can respect differences while living peacefully."},
-        {"id":"B3.1.3.1.3-Q02","type":"multiple_choice","prompt":"Good relationships among people from different ethnic groups can support ___.","options":["companionship","division","bullying","dishonesty"],"answer":"companionship","hint":"Think of people being friendly and supportive of one another.","explanation":"Companionship is named in the curriculum as a benefit of good relationships.","misconception_note":"Do not imply that everyone must have identical customs or opinions."},
-        {"id":"B3.1.3.1.3-Q03","type":"short_answer","prompt":"Give two reasons for good relationships among people of different ethnic groups.","answer":["Any two: peace, unity, companionship, teamwork, or caring for one another."],"hint":"The curriculum lists several social benefits.","explanation":"These are the reasons given in the indicator exemplars.","misconception_note":"Accept equivalent age-appropriate wording."},
-        {"id":"B3.1.3.1.3-Q04","type":"scenario","prompt":"A class project group includes learners from different ethnic groups. Which behaviour best helps them work well together?","options":["Listen respectfully and share tasks","Mock someone's language","Exclude one member","Refuse to cooperate"],"answer":"Listen respectfully and share tasks","hint":"Choose actions that show teamwork and respect.","explanation":"Teamwork and respectful relationships help people cooperate.","misconception_note":"Do not ask learners to imitate or stereotype any group."},
-        {"id":"B3.1.3.1.3-Q05","type":"multiple_choice","prompt":"Which action shows friendliness toward a person from another ethnic group?","options":["Greeting them kindly and including them","Making fun of their name","Refusing to speak to them","Spreading a rumour about them"],"answer":"Greeting them kindly and including them","hint":"Choose a welcoming action.","explanation":"Friendliness is one factor that promotes good relationships.","misconception_note":"Accept culturally appropriate forms of greeting and inclusion."},
-        {"id":"B3.1.3.1.3-Q06","type":"oral","prompt":"Explain how teamwork can help people from different ethnic groups.","answer":["A reasonable explanation that working together helps people complete shared tasks, cooperate, or build unity."],"hint":"Think about what people can accomplish when they cooperate.","explanation":"Teamwork is one of the reasons given for good relationships.","misconception_note":"Allow varied examples from school, home or community life."},
-        {"id":"B3.1.3.1.3-Q07","type":"matching","prompt":"Match each behaviour to the value it shows: (1) taking turns in a group; (2) helping a classmate; (3) speaking politely. Values: A. caring; B. respect; C. teamwork.","answer":{"1":"C","2":"A","3":"B"},"hint":"Match the behaviour to its main quality.","explanation":"Taking turns supports teamwork, helping shows care, and polite speech shows respect.","misconception_note":"Some actions can show more than one positive value; accept a justified alternative."},
-        {"id":"B3.1.3.1.3-Q08","type":"short_answer","prompt":"What does unity mean in the context of people living well together?","answer":["Being joined in cooperation, peace or a shared community while respecting differences."],"hint":"Unity does not mean everyone must be exactly alike.","explanation":"Good relationships promote unity among people.","misconception_note":"Make clear that unity can include diversity."},
-        {"id":"B3.1.3.1.3-Q09","type":"multiple_choice","prompt":"Which statement best explains why people of different ethnic groups should build good relationships?","options":["It can promote peace, unity and care","It makes one group superior","It prevents people from being friends","It encourages unfair treatment"],"answer":"It can promote peace, unity and care","hint":"Choose the answer with the lesson's positive reasons.","explanation":"The curriculum names peace, unity and caring for one another.","misconception_note":"Avoid ranking ethnic groups or presenting stereotypes."},
-        {"id":"B3.1.3.1.3-Q10","type":"drawing","prompt":"Draw a scene showing people cooperating across differences. Add a label such as 'teamwork', 'unity' or 'caring'.","answer":["A scene showing people cooperating or caring for one another, with a relevant label or oral explanation."],"hint":"You may show learners doing a shared classroom task.","explanation":"The drawing demonstrates one reason for good relationships among people.","misconception_note":"Do not ask learners to depict ethnic clothing or features as stereotypes; assess the relationship idea."},
-        {"id":"B3.1.3.1.3-Q11","type":"scenario","prompt":"Two friends disagree while planning a game. What can they do to maintain a good relationship?","options":["Listen, speak respectfully and find a fair way forward","Insult each other","Refuse to let one friend join","Spread the disagreement to cause trouble"],"answer":"Listen, speak respectfully and find a fair way forward","hint":"Respectful discussion can help people solve disagreements.","explanation":"Respect and good comportment support harmonious relationships.","misconception_note":"A good relationship does not require people to agree on everything."},
-        {"id":"B3.1.3.1.3-Q12","type":"short_answer","prompt":"Give one example of caring for a person who is different from you.","answer":["Any respectful example, such as offering help, including them in a group, listening, or sharing fairly."],"hint":"Think of an ordinary helpful action.","explanation":"Caring for one another is a stated reason for good relationships.","misconception_note":"Do not require disclosure about a learner's ethnicity or personal experiences."},
-        {"id":"B3.1.3.1.3-Q13","type":"multiple_choice","prompt":"Which action is most likely to harm relationships between ethnic groups?","options":["Mocking a person's background","Sharing fairly","Working as a team","Showing respect"],"answer":"Mocking a person's background","hint":"Choose the action that disrespects someone.","explanation":"Mockery undermines respect and peaceful relationships.","misconception_note":"Focus on harmful behaviour, not on blaming a whole group."},
-        {"id":"B3.1.3.1.3-Q14","type":"role_play","prompt":"In pairs, role-play a brief scene where classmates from different backgrounds cooperate on a shared task. Explain one benefit of their good relationship.","answer":["The scene shows respectful cooperation and identifies a benefit such as teamwork, unity, peace or companionship."],"hint":"Use a familiar activity such as preparing a class display.","explanation":"Role-play is suggested in the curriculum for showing behaviours that promote good relationships.","misconception_note":"Use fictional characters if learners prefer; avoid accents, caricatures or stereotypes.","rubric":{"cooperation":"0–2: characters cooperate","respect":"0–2: interaction is respectful","benefit":"0–1: names a relevant benefit"}},
-        {"id":"B3.1.3.1.3-Q15","type":"multiple_choice","prompt":"Why can companionship be valuable in a diverse community?","options":["People can support and enjoy one another's company","It makes people stop respecting differences","It prevents cooperation","It requires everyone to have the same customs"],"answer":"People can support and enjoy one another's company","hint":"Companionship involves friendly connection.","explanation":"Companionship is one benefit identified by the curriculum.","misconception_note":"Friendship does not require identical backgrounds or beliefs."},
-        {"id":"B3.1.3.1.3-Q16","type":"oral","prompt":"Say one thing you can do to help make your classroom peaceful and united.","answer":["Any relevant action such as listening, sharing, taking turns, including others, or resolving disagreements respectfully."],"hint":"Choose a practical action you can do in class.","explanation":"Learners apply the reasons for good relationships to daily life.","misconception_note":"Accept a general example without requiring personal disclosure."},
-        {"id":"B3.1.3.1.3-Q17","type":"matching","prompt":"Match each reason with its meaning: (1) peace; (2) companionship; (3) teamwork. Meanings: A. cooperating to do a shared task; B. friendly support and company; C. living without conflict and with calm relations.","answer":{"1":"C","2":"B","3":"A"},"hint":"Connect each word to its simple meaning.","explanation":"These are key benefits of good relationships in the curriculum.","misconception_note":"Accept clear equivalent wording."},
-        {"id":"B3.1.3.1.3-Q18","type":"scenario","prompt":"A learner hears another child being teased because of their ethnic background. What is a helpful response?","options":["Support the child respectfully and tell a trusted adult if needed","Join the teasing","Share the teasing online","Tell the child they deserve it"],"answer":"Support the child respectfully and tell a trusted adult if needed","hint":"Choose a safe response that protects dignity.","explanation":"Respect, care and peaceful relationships mean rejecting ethnic mockery.","misconception_note":"Learners should seek adult support if the situation is unsafe or continues."},
-        {"id":"B3.1.3.1.3-Q19","type":"performance","prompt":"Write, say or draw three benefits of good relationships among people from different ethnic groups. Explain one benefit.","answer":["Any three: peace, unity, companionship, teamwork and caring for one another; explanation of one is reasonable."],"hint":"Use the list discussed in class.","explanation":"This assesses whether learners can explain why good relationships matter.","misconception_note":"Assess understanding, not personal identity or experience.","rubric":{"benefits":"0–3: one point per valid benefit","explanation":"0–1: explains one benefit","clarity":"0–1: response is understandable"}},
-        {"id":"B3.1.3.1.3-Q20","type":"short_answer","prompt":"Complete the sentence: Good relationships among people of different ethnic groups help promote peace, unity, companionship, teamwork and ___.","answer":["caring for one another"],"hint":"Think of the final benefit listed in the lesson.","explanation":"Caring for one another completes the list of reasons in the curriculum.","misconception_note":"Accept equivalent wording such as mutual care."}
-      ]
+        {
+          "id": "B3.1.3.1.3-Q01",
+          "type": "mcq",
+          "prompt": "Which is one reason the curriculum gives for good relationships among people of different ethnic groups?",
+          "options": [
+            "To promote peace and unity",
+            "To create arguments",
+            "To prevent teamwork",
+            "To encourage unfair treatment"
+          ],
+          "answer": "To promote peace and unity",
+          "hint": "Choose the positive outcome named in the lesson.",
+          "explanation": "Peace and unity are listed as reasons for good relationships.",
+          "misconception_note": "People can respect differences while living peacefully.",
+          "skill_tag": "interpret",
+          "difficulty": 2
+        },
+        {
+          "id": "B3.1.3.1.3-Q02",
+          "type": "mcq",
+          "prompt": "Good relationships among people from different ethnic groups can support ___.",
+          "options": ["companionship", "division", "bullying", "dishonesty"],
+          "answer": "companionship",
+          "hint": "Think of people being friendly and supportive of one another.",
+          "explanation": "Companionship is named in the curriculum as a benefit of good relationships.",
+          "misconception_note": "Do not imply that everyone must have identical customs or opinions.",
+          "skill_tag": "recognise",
+          "difficulty": 1
+        },
+        {
+          "id": "B3.1.3.1.3-Q03",
+          "type": "written",
+          "prompt": "Give two reasons for good relationships among people of different ethnic groups.",
+          "hint": "The curriculum lists several social benefits.",
+          "explanation": "These are the reasons given in the indicator exemplars.",
+          "misconception_note": "Accept equivalent age-appropriate wording.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Any two: peace, unity, companionship, teamwork, or caring for one another.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "interpret",
+          "difficulty": 3
+        },
+        {
+          "id": "B3.1.3.1.3-Q04",
+          "type": "mcq",
+          "prompt": "A class project group includes learners from different ethnic groups. Which behaviour best helps them work well together?",
+          "options": [
+            "Listen respectfully and share tasks",
+            "Mock someone's language",
+            "Exclude one member",
+            "Refuse to cooperate"
+          ],
+          "answer": "Listen respectfully and share tasks",
+          "hint": "Choose actions that show teamwork and respect.",
+          "explanation": "Teamwork and respectful relationships help people cooperate.",
+          "misconception_note": "Do not ask learners to imitate or stereotype any group.",
+          "skill_tag": "recognise",
+          "difficulty": 1
+        },
+        {
+          "id": "B3.1.3.1.3-Q05",
+          "type": "mcq",
+          "prompt": "Which action shows friendliness toward a person from another ethnic group?",
+          "options": [
+            "Greeting them kindly and including them",
+            "Making fun of their name",
+            "Refusing to speak to them",
+            "Spreading a rumour about them"
+          ],
+          "answer": "Greeting them kindly and including them",
+          "hint": "Choose a welcoming action.",
+          "explanation": "Friendliness is one factor that promotes good relationships.",
+          "misconception_note": "Accept culturally appropriate forms of greeting and inclusion.",
+          "skill_tag": "recognise",
+          "difficulty": 1
+        },
+        {
+          "id": "B3.1.3.1.3-Q06",
+          "type": "oral",
+          "prompt": "Explain how teamwork can help people from different ethnic groups.",
+          "hint": "Think about what people can accomplish when they cooperate.",
+          "explanation": "Teamwork is one of the reasons given for good relationships.",
+          "misconception_note": "Allow varied examples from school, home or community life.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "A reasonable explanation that working together helps people complete shared tasks, cooperate, or build unity.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "interpret",
+          "difficulty": 3
+        },
+        {
+          "id": "B3.1.3.1.3-Q07",
+          "type": "matching",
+          "prompt": "Match each behaviour to the value it shows: (1) taking turns in a group; (2) helping a classmate; (3) speaking politely. Values: A. caring; B. respect; C. teamwork.",
+          "hint": "Match the behaviour to its main quality.",
+          "explanation": "Taking turns supports teamwork, helping shows care, and polite speech shows respect.",
+          "misconception_note": "Some actions can show more than one positive value; accept a justified alternative.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Matches 1 with C.",
+                "marks": 1
+              },
+              {
+                "description": "Matches 2 with A.",
+                "marks": 1
+              },
+              {
+                "description": "Matches 3 with B.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "apply",
+          "difficulty": 3
+        },
+        {
+          "id": "B3.1.3.1.3-Q08",
+          "type": "written",
+          "prompt": "What does unity mean in the context of people living well together?",
+          "hint": "Unity does not mean everyone must be exactly alike.",
+          "explanation": "Good relationships promote unity among people.",
+          "misconception_note": "Make clear that unity can include diversity.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Being joined in cooperation, peace or a shared community while respecting differences.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "recognise",
+          "difficulty": 2
+        },
+        {
+          "id": "B3.1.3.1.3-Q09",
+          "type": "mcq",
+          "prompt": "Which statement best explains why people of different ethnic groups should build good relationships?",
+          "options": [
+            "It can promote peace, unity and care",
+            "It makes one group superior",
+            "It prevents people from being friends",
+            "It encourages unfair treatment"
+          ],
+          "answer": "It can promote peace, unity and care",
+          "hint": "Choose the answer with the lesson's positive reasons.",
+          "explanation": "The curriculum names peace, unity and caring for one another.",
+          "misconception_note": "Avoid ranking ethnic groups or presenting stereotypes.",
+          "skill_tag": "interpret",
+          "difficulty": 2
+        },
+        {
+          "id": "B3.1.3.1.3-Q10",
+          "type": "drawing",
+          "prompt": "Draw a scene showing people cooperating across differences. Add a label such as 'teamwork', 'unity' or 'caring'.",
+          "hint": "You may show learners doing a shared classroom task.",
+          "explanation": "The drawing demonstrates one reason for good relationships among people.",
+          "misconception_note": "Do not ask learners to depict ethnic clothing or features as stereotypes; assess the relationship idea.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "A scene showing people cooperating or caring for one another, with a relevant label or oral explanation.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "demonstrate",
+          "difficulty": 4
+        },
+        {
+          "id": "B3.1.3.1.3-Q11",
+          "type": "mcq",
+          "prompt": "Two friends disagree while planning a game. What can they do to maintain a good relationship?",
+          "options": [
+            "Listen, speak respectfully and find a fair way forward",
+            "Insult each other",
+            "Refuse to let one friend join",
+            "Spread the disagreement to cause trouble"
+          ],
+          "answer": "Listen, speak respectfully and find a fair way forward",
+          "hint": "Respectful discussion can help people solve disagreements.",
+          "explanation": "Respect and good comportment support harmonious relationships.",
+          "misconception_note": "A good relationship does not require people to agree on everything.",
+          "skill_tag": "recognise",
+          "difficulty": 1
+        },
+        {
+          "id": "B3.1.3.1.3-Q12",
+          "type": "written",
+          "prompt": "Give one example of caring for a person who is different from you.",
+          "hint": "Think of an ordinary helpful action.",
+          "explanation": "Caring for one another is a stated reason for good relationships.",
+          "misconception_note": "Do not require disclosure about a learner's ethnicity or personal experiences.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Any respectful example, such as offering help, including them in a group, listening, or sharing fairly.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "recognise",
+          "difficulty": 2
+        },
+        {
+          "id": "B3.1.3.1.3-Q13",
+          "type": "mcq",
+          "prompt": "Which action is most likely to harm relationships between ethnic groups?",
+          "options": [
+            "Mocking a person's background",
+            "Sharing fairly",
+            "Working as a team",
+            "Showing respect"
+          ],
+          "answer": "Mocking a person's background",
+          "hint": "Choose the action that disrespects someone.",
+          "explanation": "Mockery undermines respect and peaceful relationships.",
+          "misconception_note": "Focus on harmful behaviour, not on blaming a whole group.",
+          "skill_tag": "recognise",
+          "difficulty": 1
+        },
+        {
+          "id": "B3.1.3.1.3-Q14",
+          "type": "role_play",
+          "prompt": "In pairs, role-play a brief scene where classmates from different backgrounds cooperate on a shared task. Explain one benefit of their good relationship.",
+          "hint": "Use a familiar activity such as preparing a class display.",
+          "explanation": "Role-play is suggested in the curriculum for showing behaviours that promote good relationships.",
+          "misconception_note": "Use fictional characters if learners prefer; avoid accents, caricatures or stereotypes.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "characters cooperate",
+                "marks": 2
+              },
+              {
+                "description": "interaction is respectful",
+                "marks": 2
+              },
+              {
+                "description": "names a relevant benefit",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "demonstrate",
+          "difficulty": 4
+        },
+        {
+          "id": "B3.1.3.1.3-Q15",
+          "type": "mcq",
+          "prompt": "Why can companionship be valuable in a diverse community?",
+          "options": [
+            "People can support and enjoy one another's company",
+            "It makes people stop respecting differences",
+            "It prevents cooperation",
+            "It requires everyone to have the same customs"
+          ],
+          "answer": "People can support and enjoy one another's company",
+          "hint": "Companionship involves friendly connection.",
+          "explanation": "Companionship is one benefit identified by the curriculum.",
+          "misconception_note": "Friendship does not require identical backgrounds or beliefs.",
+          "skill_tag": "interpret",
+          "difficulty": 2
+        },
+        {
+          "id": "B3.1.3.1.3-Q16",
+          "type": "oral",
+          "prompt": "Say one thing you can do to help make your classroom peaceful and united.",
+          "hint": "Choose a practical action you can do in class.",
+          "explanation": "Learners apply the reasons for good relationships to daily life.",
+          "misconception_note": "Accept a general example without requiring personal disclosure.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Any relevant action such as listening, sharing, taking turns, including others, or resolving disagreements respectfully.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "recognise",
+          "difficulty": 2
+        },
+        {
+          "id": "B3.1.3.1.3-Q17",
+          "type": "matching",
+          "prompt": "Match each reason with its meaning: (1) peace; (2) companionship; (3) teamwork. Meanings: A. cooperating to do a shared task; B. friendly support and company; C. living without conflict and with calm relations.",
+          "hint": "Connect each word to its simple meaning.",
+          "explanation": "These are key benefits of good relationships in the curriculum.",
+          "misconception_note": "Accept clear equivalent wording.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Matches 1 with C.",
+                "marks": 1
+              },
+              {
+                "description": "Matches 2 with B.",
+                "marks": 1
+              },
+              {
+                "description": "Matches 3 with A.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "interpret",
+          "difficulty": 3
+        },
+        {
+          "id": "B3.1.3.1.3-Q18",
+          "type": "mcq",
+          "prompt": "A learner hears another child being teased because of their ethnic background. What is a helpful response?",
+          "options": [
+            "Support the child respectfully and tell a trusted adult if needed",
+            "Join the teasing",
+            "Share the teasing online",
+            "Tell the child they deserve it"
+          ],
+          "answer": "Support the child respectfully and tell a trusted adult if needed",
+          "hint": "Choose a safe response that protects dignity.",
+          "explanation": "Respect, care and peaceful relationships mean rejecting ethnic mockery.",
+          "misconception_note": "Learners should seek adult support if the situation is unsafe or continues.",
+          "skill_tag": "apply",
+          "difficulty": 3
+        },
+        {
+          "id": "B3.1.3.1.3-Q19",
+          "type": "performance",
+          "prompt": "Write, say or draw three benefits of good relationships among people from different ethnic groups. Explain one benefit.",
+          "hint": "Use the list discussed in class.",
+          "explanation": "This assesses whether learners can explain why good relationships matter.",
+          "misconception_note": "Assess understanding, not personal identity or experience.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "one point per valid benefit",
+                "marks": 3
+              },
+              {
+                "description": "explains one benefit",
+                "marks": 1
+              },
+              {
+                "description": "response is understandable",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "demonstrate",
+          "difficulty": 4
+        },
+        {
+          "id": "B3.1.3.1.3-Q20",
+          "type": "short_answer",
+          "prompt": "Complete the sentence: Good relationships among people of different ethnic groups help promote peace, unity, companionship, teamwork and ___.",
+          "answer": ["caring for one another"],
+          "hint": "Think of the final benefit listed in the lesson.",
+          "explanation": "Caring for one another completes the list of reasons in the curriculum.",
+          "misconception_note": "Accept equivalent wording such as mutual care.",
+          "skill_tag": "recognise",
+          "difficulty": 2
+        }
+      ],
+      "source_page": 17,
+      "strand": "God, His Creation and Attributes",
+      "sub_strand": "The Purpose of God's Creation",
+      "content_standard": "Explain the purpose of God's creation",
+      "spec": {
+        "skills": [
+          {
+            "tag": "recognise",
+            "description": "Recognise the examples and vocabulary in the lesson.",
+            "minQuestions": 2
+          },
+          {
+            "tag": "interpret",
+            "description": "Explain meanings and connections in an example.",
+            "minQuestions": 2
+          },
+          {
+            "tag": "apply",
+            "description": "Apply the lesson to a situation and justify a choice.",
+            "minQuestions": 2
+          },
+          {
+            "tag": "demonstrate",
+            "description": "Communicate understanding through a performance, drawing or demonstration.",
+            "minQuestions": 2
+          }
+        ],
+        "needsTeacherAssessment": true,
+        "difficultyPlan": "5 foundational, 7 simple-use, 5 application and 3 challenge questions."
+      }
     },
     {
-      "code":"B3.2.1.1.1",
-      "statement":"Name the sacred scriptures of the three major religions.",
-      "questions":[
-        {"id":"B3.2.1.1.1-Q01","type":"multiple_choice","prompt":"Which sacred scripture is associated with Christianity in the curriculum?","options":["The Holy Bible","The school timetable","A shopping list","A sports score sheet"],"answer":"The Holy Bible","hint":"It is the Christian sacred scripture named in class.","explanation":"The curriculum identifies the Holy Bible with Christianity.","misconception_note":"This is a matching/recall question, not a ranking of scriptures."},
-        {"id":"B3.2.1.1.1-Q02","type":"multiple_choice","prompt":"Which sacred scripture is associated with Islam in the curriculum?","options":["The Holy Qur'an","A class register","A map","A storybook unrelated to religion"],"answer":"The Holy Qur'an","hint":"The curriculum names a sacred book used in Islam.","explanation":"The Holy Qur'an is identified as a sacred scripture of Islam.","misconception_note":"The curriculum also mentions Hadith; do not imply it is the same text as the Qur'an."},
-        {"id":"B3.2.1.1.1-Q03","type":"short_answer","prompt":"Name one sacred text or form of sacred teaching mentioned for Traditional Religion in the curriculum.","answer":["Sacred myths, parables or taboos; accept folktales as a recited traditional text in the exemplar."],"hint":"The curriculum lists oral and traditional forms as examples.","explanation":"Traditional Religion examples include sacred myths, parables and taboos.","misconception_note":"Traditional religious knowledge may be preserved and shared in oral forms; avoid treating it as less important."},
-        {"id":"B3.2.1.1.1-Q04","type":"matching","prompt":"Match the tradition to a scripture or sacred teaching named in the curriculum: (1) Christianity; (2) Islam; (3) Traditional Religion. Options: A. Holy Bible; B. Holy Qur'an; C. sacred myths and parables.","answer":{"1":"A","2":"B","3":"C"},"hint":"Pair each religion with its curriculum example.","explanation":"The curriculum associates these examples with the three traditions.","misconception_note":"The examples are not an exhaustive account of each religion's texts or traditions."},
-        {"id":"B3.2.1.1.1-Q05","type":"multiple_choice","prompt":"Which pair is listed in the curriculum for Islam?","options":["The Holy Qur'an and Hadith","The Bible and Psalm 23","A school reader and dictionary","A map and timetable"],"answer":"The Holy Qur'an and Hadith","hint":"Both names appear in the Islam examples.","explanation":"The curriculum mentions the Holy Qur'an and Hadith for Islam.","misconception_note":"This question asks for named examples from the curriculum."},
-        {"id":"B3.2.1.1.1-Q06","type":"oral","prompt":"Name one sacred scripture or teaching and say which religious tradition the curriculum connects it with.","answer":["A correct pair, such as Holy Bible—Christianity; Holy Qur'an or Hadith—Islam; sacred myths or parables—Traditional Religion."],"hint":"Choose one example and its matching tradition.","explanation":"Learners identify scriptures and the religions associated with them.","misconception_note":"Accept any correct example pair."},
-        {"id":"B3.2.1.1.1-Q07","type":"multiple_choice","prompt":"Which is an example of a Christian text the curriculum suggests learners may recite?","options":["Psalm 23","A weather report","A multiplication table","A road sign"],"answer":"Psalm 23","hint":"It is named alongside the Lord's Prayer.","explanation":"Psalm 23 is given as a Christian scripture example.","misconception_note":"Learners may identify the text without reciting it publicly."},
-        {"id":"B3.2.1.1.1-Q08","type":"multiple_choice","prompt":"Which text is named as an Islamic example for recitation?","options":["Al-Fātihah","Psalm 23","A class poem","A traffic notice"],"answer":"Al-Fātihah","hint":"The curriculum gives this example for Islam.","explanation":"Al-Fātihah is listed as an Islamic scripture text example.","misconception_note":"Do not require memorisation or performance for this recognition question."},
-        {"id":"B3.2.1.1.1-Q09","type":"short_answer","prompt":"Name one kind of text or oral teaching connected with Traditional Religion in the curriculum.","answer":["Sacred myth, folktale, parable, taboo, proverb or another relevant oral traditional teaching."],"hint":"Think of stories or teachings shared orally.","explanation":"The curriculum includes sacred myths, folktales, parables and related traditional forms.","misconception_note":"Accept locally taught examples where respectful and curriculum-aligned."},
-        {"id":"B3.2.1.1.1-Q10","type":"multiple_choice","prompt":"Which option correctly identifies a sacred scripture and its tradition?","options":["Holy Bible—Christianity","Holy Bible—school sports","Hadith—weather report","Psalm 23—road safety sign"],"answer":"Holy Bible—Christianity","hint":"Select the accurate association.","explanation":"The curriculum associates the Holy Bible with Christianity.","misconception_note":"Avoid suggesting scriptures are interchangeable."},
-        {"id":"B3.2.1.1.1-Q11","type":"matching","prompt":"Match the text example to the tradition: (1) Psalm 23; (2) Al-Fātihah; (3) sacred myths and folktales. Traditions: A. Christianity; B. Islam; C. Traditional Religion.","answer":{"1":"A","2":"B","3":"C"},"hint":"Use the examples practised in the lesson.","explanation":"These examples are matched to the traditions in the curriculum.","misconception_note":"Accept oral matching; performance of the texts is not required."},
-        {"id":"B3.2.1.1.1-Q12","type":"scenario","prompt":"A group is making a classroom chart of sacred texts. Which entry is accurate?","options":["Holy Qur'an—Islam","Psalm 23—Traditional Religion","Sacred parable—school rule","Hadith—Christianity"],"answer":"Holy Qur'an—Islam","hint":"Check the religion-text association.","explanation":"The curriculum names the Holy Qur'an for Islam.","misconception_note":"The chart should represent each tradition respectfully and accurately."},
-        {"id":"B3.2.1.1.1-Q13","type":"multiple_choice","prompt":"Why does the curriculum include oral traditions such as myths and parables when teaching sacred texts?","options":["They are examples of Traditional Religion's sacred teachings","They are not connected to religion","They are only classroom games","They replace every other scripture"],"answer":"They are examples of Traditional Religion's sacred teachings","hint":"Recall the curriculum's Traditional Religion examples.","explanation":"The curriculum includes sacred myths, folktales and parables as examples of Traditional Religion's teachings.","misconception_note":"Treat oral traditions as meaningful forms of religious teaching."},
-        {"id":"B3.2.1.1.1-Q14","type":"short_answer","prompt":"Name two traditions whose sacred texts or teachings are included in the Basic 3 lesson.","answer":["Any two: Christianity, Islam, Traditional Religion."],"hint":"There are three major religious traditions in the curriculum.","explanation":"The indicator covers sacred scriptures of the three major religions.","misconception_note":"All three should be represented fairly in teaching."},
-        {"id":"B3.2.1.1.1-Q15","type":"drawing","prompt":"Make a simple three-column chart by drawing or writing one curriculum example of sacred scripture or teaching for Christianity, Islam and Traditional Religion.","answer":["Christianity: Holy Bible or Psalm 23; Islam: Holy Qur'an, Hadith or Al-Fātihah; Traditional Religion: sacred myths, parables, folktales or taboos."],"hint":"Use one accurate example in each column.","explanation":"The chart checks learners' ability to identify and associate examples with traditions.","misconception_note":"Assess correct matching, not drawing quality or personal religious knowledge beyond the lesson."},
-        {"id":"B3.2.1.1.1-Q16","type":"oral","prompt":"Tell the class one respectful fact you learned about a sacred text or teaching from a tradition studied.","answer":["Any accurate, respectful fact from class material identifying a text, tradition or its use."],"hint":"You may choose a general curriculum example rather than a personal belief.","explanation":"The curriculum encourages discussion of sacred scriptures and their traditions.","misconception_note":"Do not require learners to disclose their own religion or recite a sacred passage."},
-        {"id":"B3.2.1.1.1-Q17","type":"multiple_choice","prompt":"Which answer lists only examples associated with Traditional Religion in the curriculum?","options":["Sacred myths and parables","Psalm 23 and Al-Fātihah","A timetable and map","The Lord's Prayer and Hadith"],"answer":"Sacred myths and parables","hint":"Look for oral traditional forms.","explanation":"Sacred myths and parables are listed among Traditional Religion examples.","misconception_note":"Some forms may overlap culturally; assess against examples explicitly taught."},
-        {"id":"B3.2.1.1.1-Q18","type":"scenario","prompt":"A classmate says only written books can be sacred teachings. Which curriculum example can help correct this?","options":["Traditional Religion includes oral forms such as sacred myths and parables","The curriculum excludes oral teachings","Only schoolbooks are sacred","Every religion uses the same book"],"answer":"Traditional Religion includes oral forms such as sacred myths and parables","hint":"Remember that the curriculum includes oral examples.","explanation":"Traditional Religion examples include orally shared sacred myths and parables.","misconception_note":"Present oral and written forms respectfully without ranking them."},
-        {"id":"B3.2.1.1.1-Q19","type":"performance","prompt":"Name the three religious traditions and give one sacred scripture or teaching example for each from the curriculum.","answer":["Christianity—Holy Bible or Psalm 23; Islam—Holy Qur'an, Hadith or Al-Fātihah; Traditional Religion—sacred myths, parables, folktales or taboos."],"hint":"One correct example per tradition is enough.","explanation":"This directly assesses the indicator to name the sacred scriptures of the three major religions.","misconception_note":"Accept the curriculum examples; do not require recitation.","rubric":{"traditions":"0–3: one point for each tradition identified","examples":"0–3: one point for each accurate example","respectful_presentation":"0–1: examples stated respectfully"}},
-        {"id":"B3.2.1.1.1-Q20","type":"short_answer","prompt":"Complete the match: Christianity—Holy Bible; Islam—Holy Qur'an; Traditional Religion—_____.","answer":["A suitable example such as sacred myths, parables, folktales or taboos."],"hint":"Use an oral or traditional teaching named in class.","explanation":"The curriculum lists these traditional forms as examples.","misconception_note":"Accept any valid curriculum-aligned response."}
-      ]
+      "code": "B3.2.1.1.1",
+      "statement": "Name the sacred scriptures of the three major religions.",
+      "questions": [
+        {
+          "id": "B3.2.1.1.1-Q01",
+          "type": "mcq",
+          "prompt": "Which sacred scripture is associated with Christianity in the curriculum?",
+          "options": [
+            "The Holy Bible",
+            "The school timetable",
+            "A shopping list",
+            "A sports score sheet"
+          ],
+          "answer": "The Holy Bible",
+          "hint": "It is the Christian sacred scripture named in class.",
+          "explanation": "The curriculum identifies the Holy Bible with Christianity.",
+          "misconception_note": "This is a matching/recall question, not a ranking of scriptures.",
+          "skill_tag": "recognise",
+          "difficulty": 1
+        },
+        {
+          "id": "B3.2.1.1.1-Q02",
+          "type": "mcq",
+          "prompt": "Which sacred scripture is associated with Islam in the curriculum?",
+          "options": [
+            "The Holy Qur'an",
+            "A class register",
+            "A map",
+            "A storybook unrelated to religion"
+          ],
+          "answer": "The Holy Qur'an",
+          "hint": "The curriculum names a sacred book used in Islam.",
+          "explanation": "The Holy Qur'an is identified as a sacred scripture of Islam.",
+          "misconception_note": "The curriculum also mentions Hadith; do not imply it is the same text as the Qur'an.",
+          "skill_tag": "recognise",
+          "difficulty": 1
+        },
+        {
+          "id": "B3.2.1.1.1-Q03",
+          "type": "written",
+          "prompt": "Name one sacred text or form of sacred teaching mentioned for Traditional Religion in the curriculum.",
+          "hint": "The curriculum lists oral and traditional forms as examples.",
+          "explanation": "Traditional Religion examples include sacred myths, parables and taboos.",
+          "misconception_note": "Traditional religious knowledge may be preserved and shared in oral forms; avoid treating it as less important.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Sacred myths, parables or taboos; accept folktales as a recited traditional text in the exemplar.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "recognise",
+          "difficulty": 2
+        },
+        {
+          "id": "B3.2.1.1.1-Q04",
+          "type": "matching",
+          "prompt": "Match the tradition to a scripture or sacred teaching named in the curriculum: (1) Christianity; (2) Islam; (3) Traditional Religion. Options: A. Holy Bible; B. Holy Qur'an; C. sacred myths and parables.",
+          "hint": "Pair each religion with its curriculum example.",
+          "explanation": "The curriculum associates these examples with the three traditions.",
+          "misconception_note": "The examples are not an exhaustive account of each religion's texts or traditions.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Matches 1 with A.",
+                "marks": 1
+              },
+              {
+                "description": "Matches 2 with B.",
+                "marks": 1
+              },
+              {
+                "description": "Matches 3 with C.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "interpret",
+          "difficulty": 3
+        },
+        {
+          "id": "B3.2.1.1.1-Q05",
+          "type": "mcq",
+          "prompt": "Which pair is listed in the curriculum for Islam?",
+          "options": [
+            "The Holy Qur'an and Hadith",
+            "The Bible and Psalm 23",
+            "A school reader and dictionary",
+            "A map and timetable"
+          ],
+          "answer": "The Holy Qur'an and Hadith",
+          "hint": "Both names appear in the Islam examples.",
+          "explanation": "The curriculum mentions the Holy Qur'an and Hadith for Islam.",
+          "misconception_note": "This question asks for named examples from the curriculum.",
+          "skill_tag": "recognise",
+          "difficulty": 1
+        },
+        {
+          "id": "B3.2.1.1.1-Q06",
+          "type": "oral",
+          "prompt": "Name one sacred scripture or teaching and say which religious tradition the curriculum connects it with.",
+          "hint": "Choose one example and its matching tradition.",
+          "explanation": "Learners identify scriptures and the religions associated with them.",
+          "misconception_note": "Accept any correct example pair.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "A correct pair, such as Holy Bible—Christianity; Holy Qur'an or Hadith—Islam; sacred myths or parables—Traditional Religion.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "recognise",
+          "difficulty": 2
+        },
+        {
+          "id": "B3.2.1.1.1-Q07",
+          "type": "mcq",
+          "prompt": "Which is an example of a Christian text the curriculum suggests learners may recite?",
+          "options": ["Psalm 23", "A weather report", "A multiplication table", "A road sign"],
+          "answer": "Psalm 23",
+          "hint": "It is named alongside the Lord's Prayer.",
+          "explanation": "Psalm 23 is given as a Christian scripture example.",
+          "misconception_note": "Learners may identify the text without reciting it publicly.",
+          "skill_tag": "apply",
+          "difficulty": 3
+        },
+        {
+          "id": "B3.2.1.1.1-Q08",
+          "type": "mcq",
+          "prompt": "Which text is named as an Islamic example for recitation?",
+          "options": ["Al-Fātihah", "Psalm 23", "A class poem", "A traffic notice"],
+          "answer": "Al-Fātihah",
+          "hint": "The curriculum gives this example for Islam.",
+          "explanation": "Al-Fātihah is listed as an Islamic scripture text example.",
+          "misconception_note": "Do not require memorisation or performance for this recognition question.",
+          "skill_tag": "recognise",
+          "difficulty": 1
+        },
+        {
+          "id": "B3.2.1.1.1-Q09",
+          "type": "written",
+          "prompt": "Name one kind of text or oral teaching connected with Traditional Religion in the curriculum.",
+          "hint": "Think of stories or teachings shared orally.",
+          "explanation": "The curriculum includes sacred myths, folktales, parables and related traditional forms.",
+          "misconception_note": "Accept locally taught examples where respectful and curriculum-aligned.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Sacred myth, folktale, parable, taboo, proverb or another relevant oral traditional teaching.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "recognise",
+          "difficulty": 2
+        },
+        {
+          "id": "B3.2.1.1.1-Q10",
+          "type": "mcq",
+          "prompt": "Which option correctly identifies a sacred scripture and its tradition?",
+          "options": [
+            "Holy Bible—Christianity",
+            "Holy Bible—school sports",
+            "Hadith—weather report",
+            "Psalm 23—road safety sign"
+          ],
+          "answer": "Holy Bible—Christianity",
+          "hint": "Select the accurate association.",
+          "explanation": "The curriculum associates the Holy Bible with Christianity.",
+          "misconception_note": "Avoid suggesting scriptures are interchangeable.",
+          "skill_tag": "recognise",
+          "difficulty": 1
+        },
+        {
+          "id": "B3.2.1.1.1-Q11",
+          "type": "matching",
+          "prompt": "Match the text example to the tradition: (1) Psalm 23; (2) Al-Fātihah; (3) sacred myths and folktales. Traditions: A. Christianity; B. Islam; C. Traditional Religion.",
+          "hint": "Use the examples practised in the lesson.",
+          "explanation": "These examples are matched to the traditions in the curriculum.",
+          "misconception_note": "Accept oral matching; performance of the texts is not required.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Matches 1 with A.",
+                "marks": 1
+              },
+              {
+                "description": "Matches 2 with B.",
+                "marks": 1
+              },
+              {
+                "description": "Matches 3 with C.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "interpret",
+          "difficulty": 3
+        },
+        {
+          "id": "B3.2.1.1.1-Q12",
+          "type": "mcq",
+          "prompt": "A group is making a classroom chart of sacred texts. Which entry is accurate?",
+          "options": [
+            "Holy Qur'an—Islam",
+            "Psalm 23—Traditional Religion",
+            "Sacred parable—school rule",
+            "Hadith—Christianity"
+          ],
+          "answer": "Holy Qur'an—Islam",
+          "hint": "Check the religion-text association.",
+          "explanation": "The curriculum names the Holy Qur'an for Islam.",
+          "misconception_note": "The chart should represent each tradition respectfully and accurately.",
+          "skill_tag": "recognise",
+          "difficulty": 2
+        },
+        {
+          "id": "B3.2.1.1.1-Q13",
+          "type": "mcq",
+          "prompt": "Why does the curriculum include oral traditions such as myths and parables when teaching sacred texts?",
+          "options": [
+            "They are examples of Traditional Religion's sacred teachings",
+            "They are not connected to religion",
+            "They are only classroom games",
+            "They replace every other scripture"
+          ],
+          "answer": "They are examples of Traditional Religion's sacred teachings",
+          "hint": "Recall the curriculum's Traditional Religion examples.",
+          "explanation": "The curriculum includes sacred myths, folktales and parables as examples of Traditional Religion's teachings.",
+          "misconception_note": "Treat oral traditions as meaningful forms of religious teaching.",
+          "skill_tag": "interpret",
+          "difficulty": 3
+        },
+        {
+          "id": "B3.2.1.1.1-Q14",
+          "type": "written",
+          "prompt": "Name two traditions whose sacred texts or teachings are included in the Basic 3 lesson.",
+          "hint": "There are three major religious traditions in the curriculum.",
+          "explanation": "The indicator covers sacred scriptures of the three major religions.",
+          "misconception_note": "All three should be represented fairly in teaching.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Any two: Christianity, Islam, Traditional Religion.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "recognise",
+          "difficulty": 2
+        },
+        {
+          "id": "B3.2.1.1.1-Q15",
+          "type": "drawing",
+          "prompt": "Make a simple three-column chart by drawing or writing one curriculum example of sacred scripture or teaching for Christianity, Islam and Traditional Religion.",
+          "hint": "Use one accurate example in each column.",
+          "explanation": "The chart checks learners' ability to identify and associate examples with traditions.",
+          "misconception_note": "Assess correct matching, not drawing quality or personal religious knowledge beyond the lesson.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Christianity: Holy Bible or Psalm 23; Islam: Holy Qur'an, Hadith or Al-Fātihah; Traditional Religion: sacred myths, parables, folktales or taboos.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "demonstrate",
+          "difficulty": 4
+        },
+        {
+          "id": "B3.2.1.1.1-Q16",
+          "type": "oral",
+          "prompt": "Tell the class one respectful fact you learned about a sacred text or teaching from a tradition studied.",
+          "hint": "You may choose a general curriculum example rather than a personal belief.",
+          "explanation": "The curriculum encourages discussion of sacred scriptures and their traditions.",
+          "misconception_note": "Do not require learners to disclose their own religion or recite a sacred passage.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Any accurate, respectful fact from class material identifying a text, tradition or its use.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "recognise",
+          "difficulty": 2
+        },
+        {
+          "id": "B3.2.1.1.1-Q17",
+          "type": "mcq",
+          "prompt": "Which answer lists only examples associated with Traditional Religion in the curriculum?",
+          "options": [
+            "Sacred myths and parables",
+            "Psalm 23 and Al-Fātihah",
+            "A timetable and map",
+            "The Lord's Prayer and Hadith"
+          ],
+          "answer": "Sacred myths and parables",
+          "hint": "Look for oral traditional forms.",
+          "explanation": "Sacred myths and parables are listed among Traditional Religion examples.",
+          "misconception_note": "Some forms may overlap culturally; assess against examples explicitly taught.",
+          "skill_tag": "recognise",
+          "difficulty": 2
+        },
+        {
+          "id": "B3.2.1.1.1-Q18",
+          "type": "mcq",
+          "prompt": "A classmate says only written books can be sacred teachings. Which curriculum example can help correct this?",
+          "options": [
+            "Traditional Religion includes oral forms such as sacred myths and parables",
+            "The curriculum excludes oral teachings",
+            "Only schoolbooks are sacred",
+            "Every religion uses the same book"
+          ],
+          "answer": "Traditional Religion includes oral forms such as sacred myths and parables",
+          "hint": "Remember that the curriculum includes oral examples.",
+          "explanation": "Traditional Religion examples include orally shared sacred myths and parables.",
+          "misconception_note": "Present oral and written forms respectfully without ranking them.",
+          "skill_tag": "apply",
+          "difficulty": 4
+        },
+        {
+          "id": "B3.2.1.1.1-Q19",
+          "type": "performance",
+          "prompt": "Name the three religious traditions and give one sacred scripture or teaching example for each from the curriculum.",
+          "hint": "One correct example per tradition is enough.",
+          "explanation": "This directly assesses the indicator to name the sacred scriptures of the three major religions.",
+          "misconception_note": "Accept the curriculum examples; do not require recitation.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "one point for each tradition identified",
+                "marks": 3
+              },
+              {
+                "description": "one point for each accurate example",
+                "marks": 3
+              },
+              {
+                "description": "examples stated respectfully",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "demonstrate",
+          "difficulty": 4
+        },
+        {
+          "id": "B3.2.1.1.1-Q20",
+          "type": "short_answer",
+          "prompt": "Complete the match: Christianity—Holy Bible; Islam—Holy Qur'an; Traditional Religion—_____.",
+          "answer": [
+            "sacred myths",
+            "parables",
+            "folktales",
+            "taboos",
+            "sacred myth",
+            "parable",
+            "folktale",
+            "taboo"
+          ],
+          "hint": "Use an oral or traditional teaching named in class.",
+          "explanation": "The curriculum lists these traditional forms as examples.",
+          "misconception_note": "Accept any valid curriculum-aligned response.",
+          "skill_tag": "interpret",
+          "difficulty": 3
+        }
+      ],
+      "source_page": 18,
+      "strand": "Religious Practices and their Moral Implications",
+      "sub_strand": "Religious Worship in the Three Major Religions in Ghana",
+      "content_standard": "Appreciate the importance of religious worship",
+      "spec": {
+        "skills": [
+          {
+            "tag": "recognise",
+            "description": "Recognise the examples and vocabulary in the lesson.",
+            "minQuestions": 2
+          },
+          {
+            "tag": "interpret",
+            "description": "Explain meanings and connections in an example.",
+            "minQuestions": 2
+          },
+          {
+            "tag": "apply",
+            "description": "Apply the lesson to a situation and justify a choice.",
+            "minQuestions": 2
+          },
+          {
+            "tag": "demonstrate",
+            "description": "Communicate understanding through a performance, drawing or demonstration.",
+            "minQuestions": 2
+          }
+        ],
+        "needsTeacherAssessment": true,
+        "difficultyPlan": "5 foundational, 7 simple-use, 5 application and 3 challenge questions."
+      }
     },
     {
-      "code":"B3.2.1.1.2",
-      "statement":"Give reasons for studying the sacred scriptures of the three major religions among their followers.",
-      "questions":[
-        {"id":"B3.2.1.1.2-Q01","type":"multiple_choice","prompt":"According to the curriculum, one reason followers study sacred scriptures is that they ___.","options":["help followers lead good moral lives","teach people to harm others","make respect unnecessary","are only for decoration"],"answer":"help followers lead good moral lives","hint":"Choose the moral benefit named in the lesson.","explanation":"The curriculum says sacred scriptures help followers lead good moral lives.","misconception_note":"Do not imply that reading alone guarantees a person's behaviour."},
-        {"id":"B3.2.1.1.2-Q02","type":"multiple_choice","prompt":"Which reason for studying sacred scriptures appears in the curriculum?","options":["They give messages from God","They encourage dishonesty","They prevent people from learning","They are unrelated to religion"],"answer":"They give messages from God","hint":"This is one of the reasons listed in class.","explanation":"The curriculum identifies messages from God as a reason followers study sacred scriptures.","misconception_note":"Present it as the curriculum's account of religious teaching."},
-        {"id":"B3.2.1.1.2-Q03","type":"short_answer","prompt":"Give one reason the curriculum gives for studying sacred scriptures.","answer":["They lead followers to God; help them know truth about God and the world; help them lead good moral lives; or give messages from God."],"hint":"Several reasons are listed in the lesson.","explanation":"Any one reason from the curriculum is sufficient.","misconception_note":"Accept concise wording that preserves the meaning."},
-        {"id":"B3.2.1.1.2-Q04","type":"multiple_choice","prompt":"What does the curriculum say sacred scriptures can help followers know?","options":["Truthfulness about God and the world","How to tease classmates","How to pollute water","How to avoid every responsibility"],"answer":"Truthfulness about God and the world","hint":"Choose the idea about truth named in the lesson.","explanation":"The curriculum says scriptures help followers know truth about God and the world.","misconception_note":"Do not frame different traditions as having identical teachings."},
-        {"id":"B3.2.1.1.2-Q05","type":"scenario","prompt":"A learner asks why followers read or study sacred scriptures. Which answer best reflects the curriculum?","options":["They can guide followers toward God and good moral lives","They are read only to win a competition","They teach people to disrespect others","They have no purpose"],"answer":"They can guide followers toward God and good moral lives","hint":"Recall two of the reasons discussed.","explanation":"The curriculum lists guidance toward God and moral living among the reasons.","misconception_note":"The answer reports curriculum content; it does not assess personal belief."},
-        {"id":"B3.2.1.1.2-Q06","type":"oral","prompt":"Explain one way a sacred scripture may guide a follower's conduct, according to the lesson.","answer":["A reasonable response linking its teachings or moral lessons to choices such as honesty, kindness, respect or helping others."],"hint":"Think of a moral lesson that can guide behaviour.","explanation":"The curriculum says studying scriptures helps followers lead good moral lives and learn moral lessons.","misconception_note":"Accept general examples without requiring a learner to identify with a religion."},
-        {"id":"B3.2.1.1.2-Q07","type":"matching","prompt":"Match each reason with its meaning: (1) lead followers to God; (2) help followers lead good moral lives; (3) give messages from God. Meanings: A. guide behaviour toward what is good; B. communicate religious teaching; C. support a relationship with God.","answer":{"1":"C","2":"A","3":"B"},"hint":"Pair each reason with the closest explanation.","explanation":"These paraphrase reasons given in the curriculum.","misconception_note":"Accept reasonable equivalent explanations."},
-        {"id":"B3.2.1.1.2-Q08","type":"short_answer","prompt":"Name one kind of moral lesson a follower might learn from studying a sacred text.","answer":["Any appropriate moral value, such as honesty, kindness, respect, patience, compassion or helping others."],"hint":"Choose a positive behaviour taught in moral lessons.","explanation":"The curriculum guides learners to discuss moral lessons from scriptures.","misconception_note":"Accept values found in classroom materials without claiming every text teaches the same thing."},
-        {"id":"B3.2.1.1.2-Q09","type":"multiple_choice","prompt":"Which is a respectful way to discuss why people study different sacred scriptures?","options":["Explain the reasons taught and listen respectfully","Say one tradition's scripture is worthless","Mock a classmate's beliefs","Insist everyone follows the same scripture"],"answer":"Explain the reasons taught and listen respectfully","hint":"The curriculum values respect and understanding of different faiths.","explanation":"The lesson considers scriptures across the three major religions and calls for respectful discussion.","misconception_note":"Do not rank or mock religious traditions."},
-        {"id":"B3.2.1.1.2-Q10","type":"scenario","prompt":"A classmate chooses not to share which religion their family follows. How should the class respond during a discussion of scriptures?","options":["Let them use a general example or pass","Force them to reveal private information","Guess their religion aloud","Make fun of them"],"answer":"Let them use a general example or pass","hint":"The lesson can be learned without private disclosure.","explanation":"The curriculum's learning outcomes can be assessed through general examples, not personal religious identity.","misconception_note":"Do not penalise learners for keeping beliefs or family practices private."},
-        {"id":"B3.2.1.1.2-Q11","type":"multiple_choice","prompt":"Which set contains reasons for studying sacred scriptures stated in the curriculum?","options":["They lead followers to God and help them lead good moral lives","They replace kindness and respect","They stop people from asking questions","They exist only for display"],"answer":"They lead followers to God and help them lead good moral lives","hint":"Look for two reasons in the lesson list.","explanation":"Both reasons are explicitly named in the curriculum.","misconception_note":"Accept other curriculum reasons as well."},
-        {"id":"B3.2.1.1.2-Q12","type":"short_answer","prompt":"How can studying sacred scriptures help followers understand their religion?","answer":["It can teach messages, beliefs or guidance associated with their religion; answers should be consistent with class material."],"hint":"Think of the information and guidance a sacred text can provide.","explanation":"The curriculum says scriptures give messages and help followers know truth about God and the world.","misconception_note":"Accept tradition-specific answers based on accounts provided in class."},
-        {"id":"B3.2.1.1.2-Q13","type":"oral","prompt":"State one curriculum reason for studying sacred scriptures, beginning with 'The lesson says…'.","answer":["Example: 'The lesson says they help followers lead good moral lives' or another listed reason."],"hint":"Use the opening phrase to show you are reporting lesson content.","explanation":"This phrasing separates curriculum knowledge from personal belief.","misconception_note":"Do not score whether the learner personally agrees."},
-        {"id":"B3.2.1.1.2-Q14","type":"multiple_choice","prompt":"A learner says scriptures are studied only to memorise words. Which curriculum point gives another reason?","options":["They can help followers lead good moral lives","They have no messages","They are unrelated to behaviour","They prevent people from learning values"],"answer":"They can help followers lead good moral lives","hint":"Choose the reason connected with moral lessons.","explanation":"The curriculum includes moral guidance as a reason for studying scriptures.","misconception_note":"Memorisation may be one learning activity, but it is not the only reason listed."},
-        {"id":"B3.2.1.1.2-Q15","type":"scenario","prompt":"After discussing a moral lesson from a scripture, a group suggests practising honesty at school. What are they doing?","options":["Applying a moral lesson","Changing the scripture","Disrespecting all religions","Avoiding the lesson"],"answer":"Applying a moral lesson","hint":"They are using a lesson to guide conduct.","explanation":"The curriculum asks learners to discuss moral lessons from scriptures and their relevance.","misconception_note":"Accept other suitable applications of moral teachings."},
-        {"id":"B3.2.1.1.2-Q16","type":"drawing","prompt":"Draw or write a simple example of a good action that a person might learn from a moral lesson in a sacred text. Label the action.","answer":["A relevant positive action such as honesty, helping, kindness, patience or respect, clearly labelled or explained."],"hint":"Show a moral value through an everyday action.","explanation":"The curriculum connects scripture study with leading good moral lives.","misconception_note":"The drawing need not include sacred imagery or identify a specific religion."},
-        {"id":"B3.2.1.1.2-Q17","type":"matching","prompt":"Match each scripture-study purpose to a classroom outcome: (1) learn moral lessons; (2) learn messages from God; (3) understand truth about God and the world. Outcomes: A. discuss a teaching found in a text; B. identify a moral value; C. explain a belief or teaching from the lesson.","answer":{"1":"B","2":"A","3":"C"},"hint":"Pair each purpose with the classroom task that best shows it.","explanation":"The tasks reflect the curriculum's stated reasons for studying scriptures.","misconception_note":"Other defensible matches may be accepted with explanation."},
-        {"id":"B3.2.1.1.2-Q18","type":"short_answer","prompt":"Give two reasons followers study sacred scriptures, using your own words.","answer":["Any two: guidance toward God, truth about God and the world, moral living, or messages from God."],"hint":"Paraphrase two points from the lesson.","explanation":"The curriculum lists these purposes for scripture study.","misconception_note":"Accept paraphrases that preserve the intended meaning."},
-        {"id":"B3.2.1.1.2-Q19","type":"performance","prompt":"Give a brief oral or written explanation of two reasons for studying sacred scriptures and one example of how a moral lesson could guide an everyday choice.","answer":["Two curriculum reasons plus a relevant everyday application of a moral lesson, such as choosing honesty or kindness."],"hint":"Include reasons first, then one practical example.","explanation":"This combines the indicator's reasons with the curriculum's discussion of moral lessons.","misconception_note":"Assess understanding rather than personal faith, religious identity or scripture recitation.","rubric":{"reasons":"0–2: one point per valid reason","application":"0–2: relevant everyday example","clarity":"0–1: response is understandable"}},
-        {"id":"B3.2.1.1.2-Q20","type":"role_play","prompt":"In pairs, role-play a respectful conversation where one learner asks why followers study sacred scriptures and the other gives one reason from the curriculum.","answer":["The response gives a curriculum reason and both learners communicate respectfully."],"hint":"Possible reasons include guidance toward God, moral living, truth, or messages from God.","explanation":"The curriculum uses discussion, questions and answers, and moral reflection to teach this indicator.","misconception_note":"Use general or fictional roles; no learner needs to speak for a religion they do not practise.","rubric":{"reason":"0–2: gives a valid curriculum reason","respect":"0–2: exchange is respectful","clarity":"0–1: response is understandable"}}
-      ]
+      "code": "B3.2.1.1.2",
+      "statement": "Give reasons for studying the sacred scriptures of the three major religions among their followers.",
+      "questions": [
+        {
+          "id": "B3.2.1.1.2-Q01",
+          "type": "mcq",
+          "prompt": "According to the curriculum, one reason followers study sacred scriptures is that they ___.",
+          "options": [
+            "help followers lead good moral lives",
+            "teach people to harm others",
+            "make respect unnecessary",
+            "are only for decoration"
+          ],
+          "answer": "help followers lead good moral lives",
+          "hint": "Choose the moral benefit named in the lesson.",
+          "explanation": "The curriculum says sacred scriptures help followers lead good moral lives.",
+          "misconception_note": "Do not imply that reading alone guarantees a person's behaviour.",
+          "skill_tag": "interpret",
+          "difficulty": 1
+        },
+        {
+          "id": "B3.2.1.1.2-Q02",
+          "type": "mcq",
+          "prompt": "Which reason for studying sacred scriptures appears in the curriculum?",
+          "options": [
+            "They give messages from God",
+            "They encourage dishonesty",
+            "They prevent people from learning",
+            "They are unrelated to religion"
+          ],
+          "answer": "They give messages from God",
+          "hint": "This is one of the reasons listed in class.",
+          "explanation": "The curriculum identifies messages from God as a reason followers study sacred scriptures.",
+          "misconception_note": "Present it as the curriculum's account of religious teaching.",
+          "skill_tag": "interpret",
+          "difficulty": 1
+        },
+        {
+          "id": "B3.2.1.1.2-Q03",
+          "type": "written",
+          "prompt": "Give one reason the curriculum gives for studying sacred scriptures.",
+          "hint": "Several reasons are listed in the lesson.",
+          "explanation": "Any one reason from the curriculum is sufficient.",
+          "misconception_note": "Accept concise wording that preserves the meaning.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "They lead followers to God; help them know truth about God and the world; help them lead good moral lives; or give messages from God.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "interpret",
+          "difficulty": 2
+        },
+        {
+          "id": "B3.2.1.1.2-Q04",
+          "type": "mcq",
+          "prompt": "What does the curriculum say sacred scriptures can help followers know?",
+          "options": [
+            "Truthfulness about God and the world",
+            "How to tease classmates",
+            "How to pollute water",
+            "How to avoid every responsibility"
+          ],
+          "answer": "Truthfulness about God and the world",
+          "hint": "Choose the idea about truth named in the lesson.",
+          "explanation": "The curriculum says scriptures help followers know truth about God and the world.",
+          "misconception_note": "Do not frame different traditions as having identical teachings.",
+          "skill_tag": "recognise",
+          "difficulty": 1
+        },
+        {
+          "id": "B3.2.1.1.2-Q05",
+          "type": "mcq",
+          "prompt": "A learner asks why followers read or study sacred scriptures. Which answer best reflects the curriculum?",
+          "options": [
+            "They can guide followers toward God and good moral lives",
+            "They are read only to win a competition",
+            "They teach people to disrespect others",
+            "They have no purpose"
+          ],
+          "answer": "They can guide followers toward God and good moral lives",
+          "hint": "Recall two of the reasons discussed.",
+          "explanation": "The curriculum lists guidance toward God and moral living among the reasons.",
+          "misconception_note": "The answer reports curriculum content; it does not assess personal belief.",
+          "skill_tag": "apply",
+          "difficulty": 2
+        },
+        {
+          "id": "B3.2.1.1.2-Q06",
+          "type": "oral",
+          "prompt": "Explain one way a sacred scripture may guide a follower's conduct, according to the lesson.",
+          "hint": "Think of a moral lesson that can guide behaviour.",
+          "explanation": "The curriculum says studying scriptures helps followers lead good moral lives and learn moral lessons.",
+          "misconception_note": "Accept general examples without requiring a learner to identify with a religion.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "A reasonable response linking its teachings or moral lessons to choices such as honesty, kindness, respect or helping others.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "interpret",
+          "difficulty": 2
+        },
+        {
+          "id": "B3.2.1.1.2-Q07",
+          "type": "matching",
+          "prompt": "Match each reason with its meaning: (1) lead followers to God; (2) help followers lead good moral lives; (3) give messages from God. Meanings: A. guide behaviour toward what is good; B. communicate religious teaching; C. support a relationship with God.",
+          "hint": "Pair each reason with the closest explanation.",
+          "explanation": "These paraphrase reasons given in the curriculum.",
+          "misconception_note": "Accept reasonable equivalent explanations.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Matches 1 with C.",
+                "marks": 1
+              },
+              {
+                "description": "Matches 2 with A.",
+                "marks": 1
+              },
+              {
+                "description": "Matches 3 with B.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "interpret",
+          "difficulty": 1
+        },
+        {
+          "id": "B3.2.1.1.2-Q08",
+          "type": "written",
+          "prompt": "Name one kind of moral lesson a follower might learn from studying a sacred text.",
+          "hint": "Choose a positive behaviour taught in moral lessons.",
+          "explanation": "The curriculum guides learners to discuss moral lessons from scriptures.",
+          "misconception_note": "Accept values found in classroom materials without claiming every text teaches the same thing.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Any appropriate moral value, such as honesty, kindness, respect, patience, compassion or helping others.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "recognise",
+          "difficulty": 1
+        },
+        {
+          "id": "B3.2.1.1.2-Q09",
+          "type": "mcq",
+          "prompt": "Which is a respectful way to discuss why people study different sacred scriptures?",
+          "options": [
+            "Explain the reasons taught and listen respectfully",
+            "Say one tradition's scripture is worthless",
+            "Mock a classmate's beliefs",
+            "Insist everyone follows the same scripture"
+          ],
+          "answer": "Explain the reasons taught and listen respectfully",
+          "hint": "The curriculum values respect and understanding of different faiths.",
+          "explanation": "The lesson considers scriptures across the three major religions and calls for respectful discussion.",
+          "misconception_note": "Do not rank or mock religious traditions.",
+          "skill_tag": "interpret",
+          "difficulty": 2
+        },
+        {
+          "id": "B3.2.1.1.2-Q10",
+          "type": "mcq",
+          "prompt": "A classmate chooses not to share which religion their family follows. How should the class respond during a discussion of scriptures?",
+          "options": [
+            "Let them use a general example or pass",
+            "Force them to reveal private information",
+            "Guess their religion aloud",
+            "Make fun of them"
+          ],
+          "answer": "Let them use a general example or pass",
+          "hint": "The lesson can be learned without private disclosure.",
+          "explanation": "The curriculum's learning outcomes can be assessed through general examples, not personal religious identity.",
+          "misconception_note": "Do not penalise learners for keeping beliefs or family practices private.",
+          "skill_tag": "apply",
+          "difficulty": 3
+        },
+        {
+          "id": "B3.2.1.1.2-Q11",
+          "type": "mcq",
+          "prompt": "Which set contains reasons for studying sacred scriptures stated in the curriculum?",
+          "options": [
+            "They lead followers to God and help them lead good moral lives",
+            "They replace kindness and respect",
+            "They stop people from asking questions",
+            "They exist only for display"
+          ],
+          "answer": "They lead followers to God and help them lead good moral lives",
+          "hint": "Look for two reasons in the lesson list.",
+          "explanation": "Both reasons are explicitly named in the curriculum.",
+          "misconception_note": "Accept other curriculum reasons as well.",
+          "skill_tag": "interpret",
+          "difficulty": 2
+        },
+        {
+          "id": "B3.2.1.1.2-Q12",
+          "type": "written",
+          "prompt": "How can studying sacred scriptures help followers understand their religion?",
+          "hint": "Think of the information and guidance a sacred text can provide.",
+          "explanation": "The curriculum says scriptures give messages and help followers know truth about God and the world.",
+          "misconception_note": "Accept tradition-specific answers based on accounts provided in class.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "It can teach messages, beliefs or guidance associated with their religion; answers should be consistent with class material.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "apply",
+          "difficulty": 3
+        },
+        {
+          "id": "B3.2.1.1.2-Q13",
+          "type": "oral",
+          "prompt": "State one curriculum reason for studying sacred scriptures, beginning with 'The lesson says…'.",
+          "hint": "Use the opening phrase to show you are reporting lesson content.",
+          "explanation": "This phrasing separates curriculum knowledge from personal belief.",
+          "misconception_note": "Do not score whether the learner personally agrees.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Example: 'The lesson says they help followers lead good moral lives' or another listed reason.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "interpret",
+          "difficulty": 2
+        },
+        {
+          "id": "B3.2.1.1.2-Q14",
+          "type": "mcq",
+          "prompt": "A learner says scriptures are studied only to memorise words. Which curriculum point gives another reason?",
+          "options": [
+            "They can help followers lead good moral lives",
+            "They have no messages",
+            "They are unrelated to behaviour",
+            "They prevent people from learning values"
+          ],
+          "answer": "They can help followers lead good moral lives",
+          "hint": "Choose the reason connected with moral lessons.",
+          "explanation": "The curriculum includes moral guidance as a reason for studying scriptures.",
+          "misconception_note": "Memorisation may be one learning activity, but it is not the only reason listed.",
+          "skill_tag": "apply",
+          "difficulty": 3
+        },
+        {
+          "id": "B3.2.1.1.2-Q15",
+          "type": "mcq",
+          "prompt": "After discussing a moral lesson from a scripture, a group suggests practising honesty at school. What are they doing?",
+          "options": [
+            "Applying a moral lesson",
+            "Changing the scripture",
+            "Disrespecting all religions",
+            "Avoiding the lesson"
+          ],
+          "answer": "Applying a moral lesson",
+          "hint": "They are using a lesson to guide conduct.",
+          "explanation": "The curriculum asks learners to discuss moral lessons from scriptures and their relevance.",
+          "misconception_note": "Accept other suitable applications of moral teachings.",
+          "skill_tag": "apply",
+          "difficulty": 3
+        },
+        {
+          "id": "B3.2.1.1.2-Q16",
+          "type": "drawing",
+          "prompt": "Draw or write a simple example of a good action that a person might learn from a moral lesson in a sacred text. Label the action.",
+          "hint": "Show a moral value through an everyday action.",
+          "explanation": "The curriculum connects scripture study with leading good moral lives.",
+          "misconception_note": "The drawing need not include sacred imagery or identify a specific religion.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "A relevant positive action such as honesty, helping, kindness, patience or respect, clearly labelled or explained.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "demonstrate",
+          "difficulty": 4
+        },
+        {
+          "id": "B3.2.1.1.2-Q17",
+          "type": "matching",
+          "prompt": "Match each scripture-study purpose to a classroom outcome: (1) learn moral lessons; (2) learn messages from God; (3) understand truth about God and the world. Outcomes: A. discuss a teaching found in a text; B. identify a moral value; C. explain a belief or teaching from the lesson.",
+          "hint": "Pair each purpose with the classroom task that best shows it.",
+          "explanation": "The tasks reflect the curriculum's stated reasons for studying scriptures.",
+          "misconception_note": "Other defensible matches may be accepted with explanation.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Matches 1 with B.",
+                "marks": 1
+              },
+              {
+                "description": "Matches 2 with A.",
+                "marks": 1
+              },
+              {
+                "description": "Matches 3 with C.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "interpret",
+          "difficulty": 2
+        },
+        {
+          "id": "B3.2.1.1.2-Q18",
+          "type": "written",
+          "prompt": "Give two reasons followers study sacred scriptures, using your own words.",
+          "hint": "Paraphrase two points from the lesson.",
+          "explanation": "The curriculum lists these purposes for scripture study.",
+          "misconception_note": "Accept paraphrases that preserve the intended meaning.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "Any two: guidance toward God, truth about God and the world, moral living, or messages from God.",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "interpret",
+          "difficulty": 3
+        },
+        {
+          "id": "B3.2.1.1.2-Q19",
+          "type": "performance",
+          "prompt": "Give a brief oral or written explanation of two reasons for studying sacred scriptures and one example of how a moral lesson could guide an everyday choice.",
+          "hint": "Include reasons first, then one practical example.",
+          "explanation": "This combines the indicator's reasons with the curriculum's discussion of moral lessons.",
+          "misconception_note": "Assess understanding rather than personal faith, religious identity or scripture recitation.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "one point per valid reason",
+                "marks": 2
+              },
+              {
+                "description": "relevant everyday example",
+                "marks": 2
+              },
+              {
+                "description": "response is understandable",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "demonstrate",
+          "difficulty": 4
+        },
+        {
+          "id": "B3.2.1.1.2-Q20",
+          "type": "role_play",
+          "prompt": "In pairs, role-play a respectful conversation where one learner asks why followers study sacred scriptures and the other gives one reason from the curriculum.",
+          "hint": "Possible reasons include guidance toward God, moral living, truth, or messages from God.",
+          "explanation": "The curriculum uses discussion, questions and answers, and moral reflection to teach this indicator.",
+          "misconception_note": "Use general or fictional roles; no learner needs to speak for a religion they do not practise.",
+          "rubric": {
+            "criteria": [
+              {
+                "description": "gives a valid curriculum reason",
+                "marks": 2
+              },
+              {
+                "description": "exchange is respectful",
+                "marks": 2
+              },
+              {
+                "description": "response is understandable",
+                "marks": 1
+              }
+            ]
+          },
+          "skill_tag": "demonstrate",
+          "difficulty": 4
+        }
+      ],
+      "source_page": 18,
+      "strand": "Religious Practices and their Moral Implications",
+      "sub_strand": "Religious Worship in the Three Major Religions in Ghana",
+      "content_standard": "Appreciate the importance of religious worship",
+      "spec": {
+        "skills": [
+          {
+            "tag": "recognise",
+            "description": "Recognise the examples and vocabulary in the lesson.",
+            "minQuestions": 2
+          },
+          {
+            "tag": "interpret",
+            "description": "Explain meanings and connections in an example.",
+            "minQuestions": 2
+          },
+          {
+            "tag": "apply",
+            "description": "Apply the lesson to a situation and justify a choice.",
+            "minQuestions": 2
+          },
+          {
+            "tag": "demonstrate",
+            "description": "Communicate understanding through a performance, drawing or demonstration.",
+            "minQuestions": 2
+          }
+        ],
+        "needsTeacherAssessment": true,
+        "difficultyPlan": "5 foundational, 7 simple-use, 5 application and 3 challenge questions."
+      }
     }
   ],
   "progress": {
