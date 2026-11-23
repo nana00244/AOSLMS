@@ -67,7 +67,9 @@ function cleanCode(value: unknown, level: string) {
     if (Number(pieces[0]) === levelNumber(level)) pieces.shift();
     return [levelPrefix, ...pieces].join('.');
   }
-  return text.replace(/\s*\.\s*/g, '.').replace(/\s+/g, '');
+  const annotation = text.indexOf(' (');
+  const printed = annotation < 0 ? text : text.slice(0, annotation);
+  return printed.replace(/\s+/g, '') + (annotation < 0 ? '' : text.slice(annotation));
 }
 
 const rmeStrands: Record<number, string> = {
@@ -310,6 +312,8 @@ const rme = expand(rmeFiles, 'Religious and Moral Education');
 export const rmeIndicators = rme.indicators;
 export const rmeQuestions = rme.questions;
 const arts = expand(artsFiles, 'Creative Arts');
+export const creativeArtsIndicators = arts.indicators;
+export const creativeArtsQuestions = arts.questions;
 export const primaryCurriculumIndicators = [...rme.indicators, ...arts.indicators];
 export const primaryCurriculumQuestions = [...rme.questions, ...arts.questions];
 export const primaryCurriculumSubjects = [

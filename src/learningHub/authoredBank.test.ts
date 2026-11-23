@@ -4,8 +4,8 @@ import { canTeach } from '../backendAccess';
 import type { User } from '../data';
 import { computingIndicators, computingQuestions } from './computingBank';
 import { historyIndicators, historyQuestions } from './historyBank';
-import { rmeIndicators, rmeQuestions } from './primaryCurriculumBank';
-import { indicatorLessonId } from './indicatorLessonId';
+import { creativeArtsIndicators, creativeArtsQuestions, rmeIndicators, rmeQuestions } from './primaryCurriculumBank';
+import { currentPracticeCode, indicatorLessonId } from './indicatorLessonId';
 import { naccaHubLessons, naccaLevels, naccaSubjects } from './naccaBank';
 import { getLessonPracticeIndicator } from './practiceNavigation';
 
@@ -14,6 +14,14 @@ const serverLessons = new Set(grading.indicators.map((i) => indicatorLessonId(i.
 const auto = new Set(['mcq', 'short_answer', 'numeric']);
 
 describe.each([
+  {
+    subject: 'Creative Arts',
+    firstGrade: 1,
+    counts: [42, 42, 40, 48, 48, 49],
+    indicators: creativeArtsIndicators,
+    questions: creativeArtsQuestions,
+    subjectId: 'sub_cad',
+  },
   {
     subject: 'Religious and Moral Education',
     firstGrade: 1,
@@ -64,6 +72,10 @@ describe.each([
       for (const i of indicators) {
         const qs = questions.filter((q) => q.indicator_code === i.code);
         expect(qs, i.code).toHaveLength(20);
+        if (subject === 'Creative Arts') {
+          expect(qs.filter((q) => q.type === 'mcq'), i.code).toHaveLength(19);
+          expect(i.source_page, i.code).toBeGreaterThan(0);
+        }
         expect(new Set(qs.map((q) => q.stem.trim().toLowerCase())).size, i.code).toBe(20);
         expect(
           [1, 2, 3, 4].map((d) => qs.filter((q) => q.difficulty === d).length),
@@ -118,6 +130,15 @@ describe.each([
 );
 
 it('keeps repeated printed codes distinct and honours curriculum section placement', () => {
+  for (const [current, previous] of [
+    ['B4.2.4.7.2 (Topical issues)', 'B4.2.4.7.3'],
+    ['B3.1.1.1.1', 'B3.VA.1*'],
+  ]) {
+    expect(creativeArtsIndicators.some((indicator) => indicator.code === current)).toBe(true);
+    expect(currentPracticeCode('Creative Arts', previous)).toBe(current);
+    expect(indicatorLessonId('Creative Arts', current)).toBe(indicatorLessonId('Creative Arts', previous));
+  }
+  expect(creativeArtsIndicators.filter((i) => i.code.startsWith('B6.2.3.4.2'))).toHaveLength(2);
   expect(computingIndicators.filter((i) => i.code.startsWith('B6.1.1.1.3'))).toHaveLength(2);
   expect(historyIndicators.filter((i) => i.code.startsWith('B2.2.1.1.1'))).toHaveLength(2);
   expect(historyIndicators.find((i) => i.code === 'B4.5.3.1.2')?.level).toBe('Basic 5');

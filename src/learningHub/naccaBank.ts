@@ -383,7 +383,7 @@ export const naccaHubLessons: HubLesson[] = naccaIndicators
     if (misconceptions) {
       body.push(`Common Learning Pitfalls to Avoid:\n${misconceptions}`);
     }
-    if (ind.subject === 'History' && ind.sourceNotes?.length) {
+    if ((ind.subject === 'History' || ind.subject === 'Creative Arts') && ind.sourceNotes?.length) {
       body.push(ind.sourceNotes.join('\n'));
     }
 

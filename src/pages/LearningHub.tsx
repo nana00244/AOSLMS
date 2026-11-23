@@ -1498,6 +1498,7 @@ function CreateLessonDialog({
                 'Social Studies',
                 'Religious and Moral Education',
                 'Career Technology',
+                'Creative Arts',
                 'Creative Arts and Design',
                 'Ghanaian Language',
                 'French',

@@ -6,15 +6,20 @@ import { getIndicatorAttempts, savePracticeAttempt } from './nacca/practiceHisto
 
 describe('indicator practice navigation', () => {
   it('resolves every imported lesson to its exact subject, level and indicator', () => {
+    const pools = new Map<string, typeof naccaQuestions>();
+    for (const q of naccaQuestions) {
+      const key = q.subject + ':' + q.level;
+      const pool = pools.get(key);
+      if (pool) pool.push(q);
+      else pools.set(key, [q]);
+    }
     for (const lesson of naccaHubLessons) {
       const indicator = getLessonPracticeIndicator(lesson);
       expect(indicator).toBeDefined();
       expect(lesson.title.startsWith(`${indicator!.code} ·`)).toBe(true);
       expect(indicator!.subject).toBe(lesson.subject);
       expect(indicator!.level).toBe(lesson.level);
-      const pool = naccaQuestions.filter(
-        (q) => q.subject === lesson.subject && q.level === lesson.level,
-      );
+      const pool = pools.get(lesson.subject + ':' + lesson.level) ?? [];
       const question = getNextAdaptiveQuestion(pool, createAdaptiveSession(indicator!.code));
       if (question) {
         expect(question.indicator_code).toBe(indicator!.code);
