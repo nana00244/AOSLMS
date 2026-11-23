@@ -1,0 +1,3743 @@
+[
+  {
+    "indicator": {
+      "subject": "History",
+      "level": "Basic 6",
+      "source_page": 40,
+      "code": "B6.3.4.1.1",
+      "strand": "Europeans in Ghana",
+      "sub_strand": "Impact Of European Presence",
+      "content_standard": "B6.3.4.1. Demonstrate knowledge of the impact of European presence on Ghana",
+      "objective": "Assess the changes that the European presence brought to Ghana."
+    },
+    "spec": {
+      "skills": [
+        {
+          "tag": "vocational_training",
+          "description": "Vocational training",
+          "minQuestions": 5
+        },
+        {
+          "tag": "health_facilities",
+          "description": "Health facilities",
+          "minQuestions": 5
+        },
+        {
+          "tag": "alphabet_development",
+          "description": "Alphabet development",
+          "minQuestions": 5
+        },
+        {
+          "tag": "bible_translation",
+          "description": "Bible translation",
+          "minQuestions": 5
+        }
+      ],
+      "difficultyPlan": "5 recognition, 7 simple use, 5 application and 3 challenge questions.",
+      "misconceptions": [
+        "Assuming the existence of one training centre proves equal access for everyone.",
+        "Counting a building as proof about the health of every resident.",
+        "Treating the development of a written alphabet as the creation of the spoken language.",
+        "Assuming a translation influenced every reader in the same way."
+      ],
+      "needsTeacherAssessment": true
+    },
+    "questions": [
+      {
+        "type": "mcq",
+        "difficulty": 1,
+        "skill_tag": "vocational_training",
+        "stem": "Which activity in the curriculum developed work-related skills?",
+        "options": [
+          "Vocational training",
+          "Health facilities",
+          "Alphabet development",
+          "Bible translation"
+        ],
+        "answer": 0,
+        "hints": ["Look for the kind of skill being developed."],
+        "explanation": "Vocational training centres are listed among the activities through which European presence affected life.",
+        "misconception": "Assuming the existence of one training centre proves equal access for everyone.",
+        "distractorMisconceptions": {
+          "Health facilities": "The curriculum points to health facilities and asks how European presence affected people's lives.",
+          "Alphabet development": "The source mentions the development of a local alphabet; this differs from translating one text.",
+          "Bible translation": "Translation of the Bible is an example named in the curriculum."
+        }
+      },
+      {
+        "type": "short_answer",
+        "difficulty": 1,
+        "skill_tag": "vocational_training",
+        "stem": "What word describes training that prepares a person for a particular type of work?",
+        "answer": ["vocational", "vocational training"],
+        "hints": ["Look for the kind of skill being developed."],
+        "explanation": "Vocational training develops skills for work. Training centres are one activity mentioned in the lesson.",
+        "misconception": "Assuming the existence of one training centre proves equal access for everyone."
+      },
+      {
+        "type": "written",
+        "difficulty": 2,
+        "skill_tag": "vocational_training",
+        "stem": "Write an enquiry that would help show how a training centre changed the opportunities of particular learners.",
+        "hints": ["Look for the kind of skill being developed."],
+        "explanation": "Ask what work skills the centre offered to learners. Seek evidence from enrolment, instruction or learners' experiences.",
+        "misconception": "Assuming the existence of one training centre proves equal access for everyone.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Ask what work skills the centre offered to learners.",
+              "marks": 1
+            },
+            {
+              "description": "Seek evidence from enrolment, instruction or learners' experiences.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "type": "written",
+        "difficulty": 3,
+        "skill_tag": "vocational_training",
+        "stem": "A training centre opened in a town. Explain why its opening and its effect on learners are two different findings.",
+        "hints": ["Look for the kind of skill being developed."],
+        "explanation": "Opening establishes that the centre existed. Learner accounts or attendance records can show who used it or what skills they gained.",
+        "misconception": "Assuming the existence of one training centre proves equal access for everyone.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Opening establishes that the centre existed.",
+              "marks": 1
+            },
+            {
+              "description": "Learner accounts or attendance records can show who used it or what skills they gained.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "type": "written",
+        "difficulty": 3,
+        "skill_tag": "vocational_training",
+        "stem": "Design a small enquiry into the effect of a training centre. Choose one kind of evidence for attendance and another for the value of the training.",
+        "hints": ["Look for the kind of skill being developed."],
+        "explanation": "Use enrolment or attendance records to identify participants. Seek accounts or examples of how they used their skills.",
+        "misconception": "Assuming the existence of one training centre proves equal access for everyone.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Use enrolment or attendance records to identify participants.",
+              "marks": 1
+            },
+            {
+              "description": "Seek accounts or examples of how they used their skills.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "type": "mcq",
+        "difficulty": 1,
+        "skill_tag": "health_facilities",
+        "stem": "Which topic should a class investigate to assess possible changes in access to treatment?",
+        "options": [
+          "Vocational training",
+          "Health facilities",
+          "Alphabet development",
+          "Bible translation"
+        ],
+        "answer": 1,
+        "hints": ["A facility and access to it are different claims."],
+        "explanation": "The curriculum points to health facilities and asks how European presence affected people's lives.",
+        "misconception": "Counting a building as proof about the health of every resident.",
+        "distractorMisconceptions": {
+          "Vocational training": "Vocational training centres are listed among the activities through which European presence affected life.",
+          "Alphabet development": "The source mentions the development of a local alphabet; this differs from translating one text.",
+          "Bible translation": "Translation of the Bible is an example named in the curriculum."
+        }
+      },
+      {
+        "type": "short_answer",
+        "difficulty": 2,
+        "skill_tag": "health_facilities",
+        "stem": "Which service is most directly concerned with treating illness: health care or trade?",
+        "answer": ["health care", "healthcare", "health services"],
+        "hints": ["A facility and access to it are different claims."],
+        "explanation": "Facilities for health care offered a place for treatment. Their effects should be studied with evidence about the people using them.",
+        "misconception": "Counting a building as proof about the health of every resident."
+      },
+      {
+        "type": "written",
+        "difficulty": 2,
+        "skill_tag": "health_facilities",
+        "stem": "Plan a comparison of the existence of a facility with evidence about the people able to use it.",
+        "hints": ["A facility and access to it are different claims."],
+        "explanation": "Identify evidence that the facility existed. Compare it with records or accounts showing who could actually reach or use it.",
+        "misconception": "Counting a building as proof about the health of every resident.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Identify evidence that the facility existed.",
+              "marks": 1
+            },
+            {
+              "description": "Compare it with records or accounts showing who could actually reach or use it.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "type": "written",
+        "difficulty": 3,
+        "skill_tag": "health_facilities",
+        "stem": "A picture shows a health facility with a sign outside. What extra evidence could help you assess changes in people's lives?",
+        "hints": ["A facility and access to it are different claims."],
+        "explanation": "The photograph identifies a facility or its appearance. A record of patients or testimony could help show how it was used.",
+        "misconception": "Counting a building as proof about the health of every resident.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "The photograph identifies a facility or its appearance.",
+              "marks": 1
+            },
+            {
+              "description": "A record of patients or testimony could help show how it was used.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "type": "written",
+        "difficulty": 4,
+        "skill_tag": "health_facilities",
+        "stem": "Two communities lie different distances from the same health facility. Explain what you would compare before claiming both benefited equally.",
+        "hints": ["A facility and access to it are different claims."],
+        "explanation": "Compare journeys, cost or ability to reach the facility. Compare evidence of use or residents' accounts from both places.",
+        "misconception": "Counting a building as proof about the health of every resident.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Compare journeys, cost or ability to reach the facility.",
+              "marks": 1
+            },
+            {
+              "description": "Compare evidence of use or residents' accounts from both places.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "type": "mcq",
+        "difficulty": 1,
+        "skill_tag": "alphabet_development",
+        "stem": "Which activity concerns devising or developing a written system for a local language?",
+        "options": [
+          "Vocational training",
+          "Health facilities",
+          "Alphabet development",
+          "Bible translation"
+        ],
+        "answer": 2,
+        "hints": ["Distinguish a system of writing from a particular publication."],
+        "explanation": "The source mentions the development of a local alphabet; this differs from translating one text.",
+        "misconception": "Treating the development of a written alphabet as the creation of the spoken language.",
+        "distractorMisconceptions": {
+          "Vocational training": "Vocational training centres are listed among the activities through which European presence affected life.",
+          "Health facilities": "The curriculum points to health facilities and asks how European presence affected people's lives.",
+          "Bible translation": "Translation of the Bible is an example named in the curriculum."
+        }
+      },
+      {
+        "type": "short_answer",
+        "difficulty": 2,
+        "skill_tag": "alphabet_development",
+        "stem": "Which word names a set of letters used to write a language?",
+        "answer": ["alphabet", "an alphabet"],
+        "hints": ["Distinguish a system of writing from a particular publication."],
+        "explanation": "An alphabet provides written symbols. A spoken language can exist before an alphabet is developed for it.",
+        "misconception": "Treating the development of a written alphabet as the creation of the spoken language."
+      },
+      {
+        "type": "written",
+        "difficulty": 2,
+        "skill_tag": "alphabet_development",
+        "stem": "Explain why an alphabet and a translated book deserve separate labels in an exhibition.",
+        "hints": ["Distinguish a system of writing from a particular publication."],
+        "explanation": "Explain that an alphabet is a writing system. Explain that a translation is a particular text expressed in another language.",
+        "misconception": "Treating the development of a written alphabet as the creation of the spoken language.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Explain that an alphabet is a writing system.",
+              "marks": 1
+            },
+            {
+              "description": "Explain that a translation is a particular text expressed in another language.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "type": "written",
+        "difficulty": 3,
+        "skill_tag": "alphabet_development",
+        "stem": "Explain how developing letters for a local language differs from creating that language.",
+        "hints": ["Distinguish a system of writing from a particular publication."],
+        "explanation": "The letters provide a way of writing speech. The people may already use the spoken language.",
+        "misconception": "Treating the development of a written alphabet as the creation of the spoken language.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "The letters provide a way of writing speech.",
+              "marks": 1
+            },
+            {
+              "description": "The people may already use the spoken language.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "type": "written",
+        "difficulty": 4,
+        "skill_tag": "alphabet_development",
+        "stem": "For a museum display, pair an alphabet chart with an example of writing in that alphabet. Explain what question each helps a visitor answer.",
+        "hints": ["Distinguish a system of writing from a particular publication."],
+        "explanation": "A chart shows the available letters. A text shows how the letters are used together to convey meaning.",
+        "misconception": "Treating the development of a written alphabet as the creation of the spoken language.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "A chart shows the available letters.",
+              "marks": 1
+            },
+            {
+              "description": "A text shows how the letters are used together to convey meaning.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "type": "mcq",
+        "difficulty": 1,
+        "skill_tag": "bible_translation",
+        "stem": "Which activity specifically involved presenting a religious text in another language?",
+        "options": [
+          "Vocational training",
+          "Health facilities",
+          "Alphabet development",
+          "Bible translation"
+        ],
+        "answer": 3,
+        "hints": ["Separate the fact that work was done from a claim about its impact."],
+        "explanation": "Translation of the Bible is an example named in the curriculum.",
+        "misconception": "Assuming a translation influenced every reader in the same way.",
+        "distractorMisconceptions": {
+          "Vocational training": "Vocational training centres are listed among the activities through which European presence affected life.",
+          "Health facilities": "The curriculum points to health facilities and asks how European presence affected people's lives.",
+          "Alphabet development": "The source mentions the development of a local alphabet; this differs from translating one text."
+        }
+      },
+      {
+        "type": "short_answer",
+        "difficulty": 2,
+        "skill_tag": "bible_translation",
+        "stem": "What word names the work of expressing a text in another language?",
+        "answer": ["translation", "translating"],
+        "hints": ["Separate the fact that work was done from a claim about its impact."],
+        "explanation": "Translation conveys meaning in a different language. The example in the lesson is the Bible.",
+        "misconception": "Assuming a translation influenced every reader in the same way."
+      },
+      {
+        "type": "written",
+        "difficulty": 2,
+        "skill_tag": "bible_translation",
+        "stem": "Prepare two questions about translation, one concerning its purpose and another the evidence for its effect.",
+        "hints": ["Separate the fact that work was done from a claim about its impact."],
+        "explanation": "Ask why the translation was undertaken. Ask what evidence shows who could use the translated text or how they used it.",
+        "misconception": "Assuming a translation influenced every reader in the same way.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Ask why the translation was undertaken.",
+              "marks": 1
+            },
+            {
+              "description": "Ask what evidence shows who could use the translated text or how they used it.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "type": "written",
+        "difficulty": 3,
+        "skill_tag": "bible_translation",
+        "stem": "Compare two possible sources for studying translation: copies of a text and a reader's account of using it.",
+        "hints": ["Separate the fact that work was done from a claim about its impact."],
+        "explanation": "The copies can show the languages in which it appeared. A reader can help explain experiences of using a particular version.",
+        "misconception": "Assuming a translation influenced every reader in the same way.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "The copies can show the languages in which it appeared.",
+              "marks": 1
+            },
+            {
+              "description": "A reader can help explain experiences of using a particular version.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "type": "written",
+        "difficulty": 4,
+        "skill_tag": "bible_translation",
+        "stem": "A debate claims translation affected everybody in the same way. Explain how a class could test that claim while including more than one viewpoint.",
+        "hints": ["Separate the fact that work was done from a claim about its impact."],
+        "explanation": "Ask readers and non-readers about access and use. Compare experiences before drawing a wider conclusion.",
+        "misconception": "Assuming a translation influenced every reader in the same way.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Ask readers and non-readers about access and use.",
+              "marks": 1
+            },
+            {
+              "description": "Compare experiences before drawing a wider conclusion.",
+              "marks": 1
+            }
+          ]
+        }
+      }
+    ],
+    "uncertain": []
+  },
+  {
+    "indicator": {
+      "subject": "History",
+      "level": "Basic 6",
+      "source_page": 41,
+      "code": "B6.4.4.1.1",
+      "strand": "Colonisation and Developments under Colonial Rule in Ghana",
+      "sub_strand": "Political Developments Under Colonial Rule",
+      "content_standard": "B6 3.4.1. Show understanding of Political developments under colonial rule, 1874-1957.",
+      "objective": "Describe the features of British colonial rule in Ghana including ‘direct’ and ‘indirect’ rule, 1874-1957."
+    },
+    "spec": {
+      "skills": [
+        {
+          "tag": "direct_rule",
+          "description": "Direct rule",
+          "minQuestions": 5
+        },
+        {
+          "tag": "indirect_rule",
+          "description": "Indirect rule",
+          "minQuestions": 5
+        },
+        {
+          "tag": "provinces",
+          "description": "Provinces",
+          "minQuestions": 5
+        },
+        {
+          "tag": "period_of_enquiry",
+          "description": "Period of enquiry",
+          "minQuestions": 5
+        }
+      ],
+      "difficultyPlan": "5 recognition, 7 simple use, 5 application and 3 challenge questions.",
+      "misconceptions": [
+        "Classifying rule by the number of officials rather than how authority operates.",
+        "Assuming indirect rule meant full independence.",
+        "Believing that naming a province automatically tells you its method of administration.",
+        "Using a date range as a substitute for describing the features of rule."
+      ],
+      "needsTeacherAssessment": true
+    },
+    "questions": [
+      {
+        "type": "mcq",
+        "difficulty": 1,
+        "skill_tag": "direct_rule",
+        "stem": "In a simplified classroom model, colonial officials administer a district themselves. Which concept fits?",
+        "options": ["Indirect rule", "Direct rule", "Provinces", "Period of enquiry"],
+        "answer": 1,
+        "hints": ["Follow who gives and carries out instructions."],
+        "explanation": "Direct rule places administration more directly in colonial officials' hands.",
+        "misconception": "Classifying rule by the number of officials rather than how authority operates.",
+        "distractorMisconceptions": {
+          "Indirect rule": "Indirect rule works through local authorities within colonial control.",
+          "Provinces": "The exemplar calls for discussion of the division of the colony into provinces.",
+          "Period of enquiry": "It gives the span under investigation; it does not count provinces or define direct rule."
+        }
+      },
+      {
+        "type": "short_answer",
+        "difficulty": 1,
+        "skill_tag": "direct_rule",
+        "stem": "What kind of rule puts administration directly in colonial officials' hands?",
+        "answer": ["direct rule", "direct"],
+        "hints": ["Follow who gives and carries out instructions."],
+        "explanation": "Direct rule describes a form of administration in which officials govern more directly.",
+        "misconception": "Classifying rule by the number of officials rather than how authority operates."
+      },
+      {
+        "type": "drawing",
+        "difficulty": 2,
+        "skill_tag": "direct_rule",
+        "stem": "Draw a labelled decision path for direct rule using the simplified case.",
+        "hints": ["Follow who gives and carries out instructions."],
+        "explanation": "Show a colonial official making or applying a decision. Draw a direct line to those governed in the simplified example.",
+        "misconception": "Classifying rule by the number of officials rather than how authority operates.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Show a colonial official making or applying a decision.",
+              "marks": 1
+            },
+            {
+              "description": "Draw a direct line to those governed in the simplified example.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "type": "written",
+        "difficulty": 3,
+        "skill_tag": "direct_rule",
+        "stem": "In a classroom model a colonial officer sends a decision straight to residents. Explain which feature of the model matters for identifying the system.",
+        "hints": ["Follow who gives and carries out instructions."],
+        "explanation": "Identify the direct connection between official and residents. The absence of an intermediary is more relevant than the officer's title.",
+        "misconception": "Classifying rule by the number of officials rather than how authority operates.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Identify the direct connection between official and residents.",
+              "marks": 1
+            },
+            {
+              "description": "The absence of an intermediary is more relevant than the officer's title.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "type": "written",
+        "difficulty": 3,
+        "skill_tag": "direct_rule",
+        "stem": "Compare how a grievance might travel in two model chains of authority, one with an intermediary and one without. State a question about how this worked in practice.",
+        "hints": ["Follow who gives and carries out instructions."],
+        "explanation": "Describe the different paths a message might take. Distinguish the model from evidence of an actual community's experience.",
+        "misconception": "Classifying rule by the number of officials rather than how authority operates.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Describe the different paths a message might take.",
+              "marks": 1
+            },
+            {
+              "description": "Distinguish the model from evidence of an actual community's experience.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "type": "mcq",
+        "difficulty": 1,
+        "skill_tag": "indirect_rule",
+        "stem": "In a different classroom model, colonial authority acts through existing local rulers. Which concept fits?",
+        "options": ["Direct rule", "Provinces", "Indirect rule", "Period of enquiry"],
+        "answer": 2,
+        "hints": ["Look for an intermediary in the relationship."],
+        "explanation": "Indirect rule works through local authorities within colonial control.",
+        "misconception": "Assuming indirect rule meant full independence.",
+        "distractorMisconceptions": {
+          "Direct rule": "Direct rule places administration more directly in colonial officials' hands.",
+          "Provinces": "The exemplar calls for discussion of the division of the colony into provinces.",
+          "Period of enquiry": "It gives the span under investigation; it does not count provinces or define direct rule."
+        }
+      },
+      {
+        "type": "short_answer",
+        "difficulty": 2,
+        "skill_tag": "indirect_rule",
+        "stem": "What kind of colonial rule works through local rulers?",
+        "answer": ["indirect rule", "indirect"],
+        "hints": ["Look for an intermediary in the relationship."],
+        "explanation": "Under indirect rule, local authorities act within the colonial system. Using an intermediary does not end colonial control.",
+        "misconception": "Assuming indirect rule meant full independence."
+      },
+      {
+        "type": "drawing",
+        "difficulty": 2,
+        "skill_tag": "indirect_rule",
+        "stem": "Sketch this chain of authority and explain who still holds colonial power.",
+        "hints": ["Look for an intermediary in the relationship."],
+        "explanation": "Show a local ruler or authority in the chain. Retain the colonial authority above the intermediary in the model.",
+        "misconception": "Assuming indirect rule meant full independence.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Show a local ruler or authority in the chain.",
+              "marks": 1
+            },
+            {
+              "description": "Retain the colonial authority above the intermediary in the model.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "type": "written",
+        "difficulty": 3,
+        "skill_tag": "indirect_rule",
+        "stem": "Explain why the presence of a local ruler on a diagram need not mean the community governed independently.",
+        "hints": ["Look for an intermediary in the relationship."],
+        "explanation": "A local ruler may carry out a role in indirect rule. Identify who has final colonial authority in the model.",
+        "misconception": "Assuming indirect rule meant full independence.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "A local ruler may carry out a role in indirect rule.",
+              "marks": 1
+            },
+            {
+              "description": "Identify who has final colonial authority in the model.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "type": "written",
+        "difficulty": 4,
+        "skill_tag": "indirect_rule",
+        "stem": "Prepare a role play with a colonial official, a local ruler and a resident. Show how a decision reaches the resident, then explain a limit of your model.",
+        "hints": ["Look for an intermediary in the relationship."],
+        "explanation": "Show the intermediary between the authority and the resident. Explain that a short performance simplifies actual relationships.",
+        "misconception": "Assuming indirect rule meant full independence.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Show the intermediary between the authority and the resident.",
+              "marks": 1
+            },
+            {
+              "description": "Explain that a short performance simplifies actual relationships.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "type": "mcq",
+        "difficulty": 1,
+        "skill_tag": "provinces",
+        "stem": "Which term concerns the territorial divisions of the colony rather than its method of exercising authority?",
+        "options": ["Direct rule", "Indirect rule", "Period of enquiry", "Provinces"],
+        "answer": 3,
+        "hints": ["A division of territory and a way of ruling answer different questions."],
+        "explanation": "The exemplar calls for discussion of the division of the colony into provinces.",
+        "misconception": "Believing that naming a province automatically tells you its method of administration.",
+        "distractorMisconceptions": {
+          "Direct rule": "Direct rule places administration more directly in colonial officials' hands.",
+          "Indirect rule": "Indirect rule works through local authorities within colonial control.",
+          "Period of enquiry": "It gives the span under investigation; it does not count provinces or define direct rule."
+        }
+      },
+      {
+        "type": "short_answer",
+        "difficulty": 2,
+        "skill_tag": "provinces",
+        "stem": "What is the singular of the term used for the colony's territorial divisions, “provinces”?",
+        "answer": ["province", "a province"],
+        "hints": ["A division of territory and a way of ruling answer different questions."],
+        "explanation": "A province is a territorial division. The term describes an area rather than a method of governing it.",
+        "misconception": "Believing that naming a province automatically tells you its method of administration."
+      },
+      {
+        "type": "written",
+        "difficulty": 2,
+        "skill_tag": "provinces",
+        "stem": "Distinguish a map of provinces from a diagram of authority in your own words.",
+        "hints": ["A division of territory and a way of ruling answer different questions."],
+        "explanation": "Explain that a province map shows territorial divisions. Explain that a diagram of authority shows who administers or acts through whom.",
+        "misconception": "Believing that naming a province automatically tells you its method of administration.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Explain that a province map shows territorial divisions.",
+              "marks": 1
+            },
+            {
+              "description": "Explain that a diagram of authority shows who administers or acts through whom.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "type": "written",
+        "difficulty": 3,
+        "skill_tag": "provinces",
+        "stem": "How would a map of provinces differ from a chart showing who directed local officials?",
+        "hints": ["A division of territory and a way of ruling answer different questions."],
+        "explanation": "The map locates boundaries or areas. The chart shows relationships of authority.",
+        "misconception": "Believing that naming a province automatically tells you its method of administration.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "The map locates boundaries or areas.",
+              "marks": 1
+            },
+            {
+              "description": "The chart shows relationships of authority.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "type": "written",
+        "difficulty": 4,
+        "skill_tag": "provinces",
+        "stem": "A textbook map has shaded regions but no key. Explain how you would check whether you can count them as provinces.",
+        "hints": ["A division of territory and a way of ruling answer different questions."],
+        "explanation": "Find the key or accompanying explanation of the shading. Verify the period and boundaries before giving a count.",
+        "misconception": "Believing that naming a province automatically tells you its method of administration.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Find the key or accompanying explanation of the shading.",
+              "marks": 1
+            },
+            {
+              "description": "Verify the period and boundaries before giving a count.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "type": "mcq",
+        "difficulty": 1,
+        "skill_tag": "period_of_enquiry",
+        "stem": "What does 1874–1957 specify in the indicator on British colonial rule?",
+        "options": ["Period of enquiry", "Direct rule", "Indirect rule", "Provinces"],
+        "answer": 0,
+        "hints": ["Identify the purpose of the two years."],
+        "explanation": "It gives the span under investigation; it does not count provinces or define direct rule.",
+        "misconception": "Using a date range as a substitute for describing the features of rule.",
+        "distractorMisconceptions": {
+          "Direct rule": "Direct rule places administration more directly in colonial officials' hands.",
+          "Indirect rule": "Indirect rule works through local authorities within colonial control.",
+          "Provinces": "The exemplar calls for discussion of the division of the colony into provinces."
+        }
+      },
+      {
+        "type": "short_answer",
+        "difficulty": 2,
+        "skill_tag": "period_of_enquiry",
+        "stem": "Which year marks the end of the period 1874–1957 studied in the British colonial rule indicator?",
+        "answer": ["1957"],
+        "hints": ["Identify the purpose of the two years."],
+        "explanation": "The second date is the end of the period under study. The dates set the frame for examining features of rule.",
+        "misconception": "Using a date range as a substitute for describing the features of rule."
+      },
+      {
+        "type": "written",
+        "difficulty": 2,
+        "skill_tag": "period_of_enquiry",
+        "stem": "Set boundaries for a class timeline using the printed dates and add a question the timeline alone cannot answer.",
+        "hints": ["Identify the purpose of the two years."],
+        "explanation": "Mark 1874 and 1957 as the boundaries of the enquiry. Ask a separate question about how direct or indirect rule worked.",
+        "misconception": "Using a date range as a substitute for describing the features of rule.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Mark 1874 and 1957 as the boundaries of the enquiry.",
+              "marks": 1
+            },
+            {
+              "description": "Ask a separate question about how direct or indirect rule worked.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "type": "written",
+        "difficulty": 3,
+        "skill_tag": "period_of_enquiry",
+        "stem": "A note describes an event in 1960. Explain why it needs a separate label on a display covering 1874–1957.",
+        "hints": ["Identify the purpose of the two years."],
+        "explanation": "1960 follows the stated end year. The note may provide later comparison but lies outside the period being described.",
+        "misconception": "Using a date range as a substitute for describing the features of rule.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "1960 follows the stated end year.",
+              "marks": 1
+            },
+            {
+              "description": "The note may provide later comparison but lies outside the period being described.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "type": "written",
+        "difficulty": 4,
+        "skill_tag": "period_of_enquiry",
+        "stem": "Design a display combining dates, a province map and a diagram of indirect rule. Say what each item helps a viewer understand.",
+        "hints": ["Identify the purpose of the two years."],
+        "explanation": "Dates and map place the enquiry in time and space. The diagram explains how authority operated.",
+        "misconception": "Using a date range as a substitute for describing the features of rule.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Dates and map place the enquiry in time and space.",
+              "marks": 1
+            },
+            {
+              "description": "The diagram explains how authority operated.",
+              "marks": 1
+            }
+          ]
+        }
+      }
+    ],
+    "uncertain": []
+  },
+  {
+    "indicator": {
+      "subject": "History",
+      "level": "Basic 6",
+      "source_page": 42,
+      "code": "B6.5.2.1.1",
+      "strand": "Journey to Independence",
+      "sub_strand": "Formation of Political Parties",
+      "content_standard": "B6.5.2.1. Appreciate the role played by the leadership of political parties in the struggle for independence from 1947 to 1957",
+      "objective": "Describe the role played by the leaders of the two major political parties (UGCC and CPP) in the independence struggle in the Gold Coast after the Second World War."
+    },
+    "spec": {
+      "skills": [
+        {
+          "tag": "ugcc",
+          "description": "UGCC",
+          "minQuestions": 5
+        },
+        {
+          "tag": "cpp",
+          "description": "CPP",
+          "minQuestions": 5
+        },
+        {
+          "tag": "the_big_six",
+          "description": "The Big Six",
+          "minQuestions": 5
+        },
+        {
+          "tag": "independence_declaration",
+          "description": "Independence declaration",
+          "minQuestions": 5
+        }
+      ],
+      "difficultyPlan": "5 recognition, 7 simple use, 5 application and 3 challenge questions.",
+      "misconceptions": [
+        "Giving the Convention People's Party the earlier party's year.",
+        "Treating the two parties as one organisation with two dates.",
+        "Treating the Big Six as a third political party.",
+        "Presenting a modern performance as an original recording."
+      ],
+      "needsTeacherAssessment": true
+    },
+    "questions": [
+      {
+        "type": "mcq",
+        "difficulty": 1,
+        "skill_tag": "ugcc",
+        "stem": "Which organisation is connected with its formation in 1947 in the curriculum?",
+        "options": ["CPP", "The Big Six", "UGCC", "Independence declaration"],
+        "answer": 2,
+        "hints": ["Keep the two formation dates in order."],
+        "explanation": "The United Gold Coast Convention is the organisation named for 1947.",
+        "misconception": "Giving the Convention People's Party the earlier party's year.",
+        "distractorMisconceptions": {
+          "CPP": "The CPP formation follows the 1947 formation of the UGCC.",
+          "The Big Six": "The exemplar groups those two with Kwame Nkrumah, J.B. Danquah, Obetsebi Lamptey and Edward Akuffo Addo.",
+          "Independence declaration": "The source names Nkrumah in connection with the declaration of independence."
+        }
+      },
+      {
+        "type": "short_answer",
+        "difficulty": 1,
+        "skill_tag": "ugcc",
+        "stem": "Which year is paired with the formation of the UGCC?",
+        "answer": ["1947"],
+        "hints": ["Keep the two formation dates in order."],
+        "explanation": "The United Gold Coast Convention formed in 1947. Its formation comes earlier than that of the CPP.",
+        "misconception": "Giving the Convention People's Party the earlier party's year."
+      },
+      {
+        "type": "written",
+        "difficulty": 2,
+        "skill_tag": "ugcc",
+        "stem": "Write a caption with the party's full name and its formation year.",
+        "hints": ["Keep the two formation dates in order."],
+        "explanation": "Identify the United Gold Coast Convention. Attach its formation to 1947.",
+        "misconception": "Giving the Convention People's Party the earlier party's year.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Identify the United Gold Coast Convention.",
+              "marks": 1
+            },
+            {
+              "description": "Attach its formation to 1947.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "type": "written",
+        "difficulty": 3,
+        "skill_tag": "ugcc",
+        "stem": "A pupil files a 1947 entry under the CPP because both parties use the word Convention. Correct the entry and explain the error.",
+        "hints": ["Keep the two formation dates in order."],
+        "explanation": "Connect 1947 to the UGCC. The shared word does not make the party names interchangeable.",
+        "misconception": "Giving the Convention People's Party the earlier party's year.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Connect 1947 to the UGCC.",
+              "marks": 1
+            },
+            {
+              "description": "The shared word does not make the party names interchangeable.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "type": "written",
+        "difficulty": 3,
+        "skill_tag": "ugcc",
+        "stem": "Design two questions for a visitor studying UGCC leaders, one to identify a person and one to investigate an action. Explain why both matter.",
+        "hints": ["Keep the two formation dates in order."],
+        "explanation": "Ask which person belonged to the group. Ask what evidence shows the person's contribution to the independence struggle.",
+        "misconception": "Giving the Convention People's Party the earlier party's year.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Ask which person belonged to the group.",
+              "marks": 1
+            },
+            {
+              "description": "Ask what evidence shows the person's contribution to the independence struggle.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "type": "mcq",
+        "difficulty": 1,
+        "skill_tag": "cpp",
+        "stem": "Which party formed in 1949 in the curriculum account?",
+        "options": ["UGCC", "The Big Six", "Independence declaration", "CPP"],
+        "answer": 3,
+        "hints": ["Find a difference beyond the shared word."],
+        "explanation": "The CPP formation follows the 1947 formation of the UGCC.",
+        "misconception": "Treating the two parties as one organisation with two dates.",
+        "distractorMisconceptions": {
+          "UGCC": "The United Gold Coast Convention is the organisation named for 1947.",
+          "The Big Six": "The exemplar groups those two with Kwame Nkrumah, J.B. Danquah, Obetsebi Lamptey and Edward Akuffo Addo.",
+          "Independence declaration": "The source names Nkrumah in connection with the declaration of independence."
+        }
+      },
+      {
+        "type": "short_answer",
+        "difficulty": 2,
+        "skill_tag": "cpp",
+        "stem": "Write the initials of the party formed in 1949 in the school's independence timeline.",
+        "answer": ["cpp", "c.p.p."],
+        "hints": ["Find a difference beyond the shared word."],
+        "explanation": "CPP is the abbreviation linked to the party formed in 1949.",
+        "misconception": "Treating the two parties as one organisation with two dates."
+      },
+      {
+        "type": "written",
+        "difficulty": 2,
+        "skill_tag": "cpp",
+        "stem": "Make a two-entry timeline that distinguishes the parties despite the word Convention appearing in both names.",
+        "hints": ["Find a difference beyond the shared word."],
+        "explanation": "Place the UGCC in 1947 and the CPP in 1949. Use the different labels to distinguish the two organisations.",
+        "misconception": "Treating the two parties as one organisation with two dates.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Place the UGCC in 1947 and the CPP in 1949.",
+              "marks": 1
+            },
+            {
+              "description": "Use the different labels to distinguish the two organisations.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "type": "written",
+        "difficulty": 3,
+        "skill_tag": "cpp",
+        "stem": "A timeline has 1949 before 1947 because the labels are in alphabetical order. Explain how to reorganise the party entries.",
+        "hints": ["Find a difference beyond the shared word."],
+        "explanation": "Use the years to determine chronology. Put the UGCC before the CPP.",
+        "misconception": "Treating the two parties as one organisation with two dates.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Use the years to determine chronology.",
+              "marks": 1
+            },
+            {
+              "description": "Put the UGCC before the CPP.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "type": "written",
+        "difficulty": 4,
+        "skill_tag": "cpp",
+        "stem": "An exhibition uses only the dates 1947 and 1949 to explain party leadership. Propose one addition that would help show what leaders did.",
+        "hints": ["Find a difference beyond the shared word."],
+        "explanation": "Identify a leader and the action to be investigated. Seek a record of that action instead of relying on formation dates alone.",
+        "misconception": "Treating the two parties as one organisation with two dates.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Identify a leader and the action to be investigated.",
+              "marks": 1
+            },
+            {
+              "description": "Seek a record of that action instead of relying on formation dates alone.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "type": "mcq",
+        "difficulty": 1,
+        "skill_tag": "the_big_six",
+        "stem": "Which collective name does the curriculum connect to the group including Ako Adjei and William Ofori Atta?",
+        "options": ["The Big Six", "UGCC", "CPP", "Independence declaration"],
+        "answer": 0,
+        "hints": ["Count the people named in the group."],
+        "explanation": "The exemplar groups those two with Kwame Nkrumah, J.B. Danquah, Obetsebi Lamptey and Edward Akuffo Addo.",
+        "misconception": "Treating the Big Six as a third political party.",
+        "distractorMisconceptions": {
+          "UGCC": "The United Gold Coast Convention is the organisation named for 1947.",
+          "CPP": "The CPP formation follows the 1947 formation of the UGCC.",
+          "Independence declaration": "The source names Nkrumah in connection with the declaration of independence."
+        }
+      },
+      {
+        "type": "short_answer",
+        "difficulty": 2,
+        "skill_tag": "the_big_six",
+        "stem": "Who completes this list of the Big Six: Kwame Nkrumah, J. B. Danquah, Obetsebi Lamptey, Ako Adjei, William Ofori Atta and Edward _____?",
+        "answer": ["akuffo addo", "akufo addo", "akuffo-addo", "akufo-addo"],
+        "hints": ["Count the people named in the group."],
+        "explanation": "Edward Akufo-Addo is included in the group named the Big Six in the curriculum.",
+        "misconception": "Treating the Big Six as a third political party."
+      },
+      {
+        "type": "written",
+        "difficulty": 2,
+        "skill_tag": "the_big_six",
+        "stem": "Prepare a display of the six names, keeping the group label distinct from either party name.",
+        "hints": ["Count the people named in the group."],
+        "explanation": "Include Kwame Nkrumah, J. B. Danquah, Obetsebi Lamptey, Ako Adjei, William Ofori Atta and Edward Akufo-Addo. Label them as the Big Six, distinguishing the people from party names.",
+        "misconception": "Treating the Big Six as a third political party.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Include Kwame Nkrumah, J. B. Danquah, Obetsebi Lamptey, Ako Adjei, William Ofori Atta and Edward Akufo-Addo.",
+              "marks": 1
+            },
+            {
+              "description": "Label them as the Big Six, distinguishing the people from party names.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "type": "written",
+        "difficulty": 3,
+        "skill_tag": "the_big_six",
+        "stem": "Students have two folders, “political parties” and “groups of people”. Explain the place of the label Big Six.",
+        "hints": ["Count the people named in the group."],
+        "explanation": "Place Big Six with groups of people. UGCC and CPP are names of parties.",
+        "misconception": "Treating the Big Six as a third political party.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Place Big Six with groups of people.",
+              "marks": 1
+            },
+            {
+              "description": "UGCC and CPP are names of parties.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "type": "written",
+        "difficulty": 4,
+        "skill_tag": "the_big_six",
+        "stem": "A display gives all six leaders exactly the same role because they shared a group name. Explain how to improve it.",
+        "hints": ["Count the people named in the group."],
+        "explanation": "Keep the shared identification of the Big Six. Look for evidence about individual roles before writing each caption.",
+        "misconception": "Treating the Big Six as a third political party.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Keep the shared identification of the Big Six.",
+              "marks": 1
+            },
+            {
+              "description": "Look for evidence about individual roles before writing each caption.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "type": "mcq",
+        "difficulty": 1,
+        "skill_tag": "independence_declaration",
+        "stem": "Which activity is linked specifically to Kwame Nkrumah in the class reenactment suggested by the curriculum?",
+        "options": ["UGCC", "Independence declaration", "CPP", "The Big Six"],
+        "answer": 1,
+        "hints": ["Distinguish the historical act from words pupils invent for a scene."],
+        "explanation": "The source names Nkrumah in connection with the declaration of independence.",
+        "misconception": "Presenting a modern performance as an original recording.",
+        "distractorMisconceptions": {
+          "UGCC": "The United Gold Coast Convention is the organisation named for 1947.",
+          "CPP": "The CPP formation follows the 1947 formation of the UGCC.",
+          "The Big Six": "The exemplar groups those two with Kwame Nkrumah, J.B. Danquah, Obetsebi Lamptey and Edward Akuffo Addo."
+        }
+      },
+      {
+        "type": "short_answer",
+        "difficulty": 2,
+        "skill_tag": "independence_declaration",
+        "stem": "Which leader is associated with declaring Ghana's independence in this lesson?",
+        "answer": ["kwame nkrumah", "nkrumah"],
+        "hints": ["Distinguish the historical act from words pupils invent for a scene."],
+        "explanation": "The curriculum connects the declaration with Kwame Nkrumah. It also asks pupils to investigate the roles of other leaders.",
+        "misconception": "Presenting a modern performance as an original recording."
+      },
+      {
+        "type": "written",
+        "difficulty": 2,
+        "skill_tag": "independence_declaration",
+        "stem": "Plan a short introduction to a reenactment; indicate which historical action is supported without inventing a verbatim speech.",
+        "hints": ["Distinguish the historical act from words pupils invent for a scene."],
+        "explanation": "Introduce Nkrumah's role in the declaration of independence. Label any newly composed speech as part of a reenactment.",
+        "misconception": "Presenting a modern performance as an original recording.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Introduce Nkrumah's role in the declaration of independence.",
+              "marks": 1
+            },
+            {
+              "description": "Label any newly composed speech as part of a reenactment.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "type": "written",
+        "difficulty": 3,
+        "skill_tag": "independence_declaration",
+        "stem": "How should a class introduce newly written lines in a performance about the declaration?",
+        "hints": ["Distinguish the historical act from words pupils invent for a scene."],
+        "explanation": "Identify the historical action and leader. Label the words as a class reconstruction unless a source documents them.",
+        "misconception": "Presenting a modern performance as an original recording.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Identify the historical action and leader.",
+              "marks": 1
+            },
+            {
+              "description": "Label the words as a class reconstruction unless a source documents them.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "type": "written",
+        "difficulty": 4,
+        "skill_tag": "independence_declaration",
+        "stem": "Create a brief outline that includes both Nkrumah's part in the declaration and wider work towards independence. Explain why the two belong together.",
+        "hints": ["Distinguish the historical act from words pupils invent for a scene."],
+        "explanation": "Identify the declaration and its link with Nkrumah. Connect it to earlier work by parties and their leaders.",
+        "misconception": "Presenting a modern performance as an original recording.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Identify the declaration and its link with Nkrumah.",
+              "marks": 1
+            },
+            {
+              "description": "Connect it to earlier work by parties and their leaders.",
+              "marks": 1
+            }
+          ]
+        }
+      }
+    ],
+    "uncertain": []
+  },
+  {
+    "indicator": {
+      "subject": "History",
+      "level": "Basic 6",
+      "source_page": 43,
+      "code": "B6.5.4.1.1",
+      "strand": "Journey to Independence",
+      "sub_strand": "Ghana Gains Independence",
+      "content_standard": "B6.5.4.1. Demonstrate an understanding of the course of events leading to independence from 1948 to 1957",
+      "objective": "Explain post World War II developments in the Gold Coast"
+    },
+    "spec": {
+      "skills": [
+        {
+          "tag": "watson_commission",
+          "description": "Watson Commission",
+          "minQuestions": 5
+        },
+        {
+          "tag": "recommendation",
+          "description": "Recommendation",
+          "minQuestions": 5
+        },
+        {
+          "tag": "coussey_committee",
+          "description": "Coussey Committee",
+          "minQuestions": 5
+        },
+        {
+          "tag": "constitutional_review",
+          "description": "Constitutional review",
+          "minQuestions": 5
+        }
+      ],
+      "difficultyPlan": "5 recognition, 7 simple use, 5 application and 3 challenge questions.",
+      "misconceptions": [
+        "Reversing the names of the two bodies.",
+        "Treating a recommendation as a constitution already in force.",
+        "Claiming the Coussey Committee established the Watson Commission.",
+        "Treating the assignment to review as proof that every proposed change was adopted."
+      ],
+      "needsTeacherAssessment": true
+    },
+    "questions": [
+      {
+        "type": "mcq",
+        "difficulty": 1,
+        "skill_tag": "watson_commission",
+        "stem": "Which body comes first in the curriculum's account of a report leading to a constitutional review?",
+        "options": [
+          "Recommendation",
+          "Coussey Committee",
+          "Constitutional review",
+          "Watson Commission"
+        ],
+        "answer": 3,
+        "hints": ["Identify which body made the earlier report."],
+        "explanation": "The Watson Commission's report is discussed before the recommendation to set up the Coussey Committee.",
+        "misconception": "Reversing the names of the two bodies.",
+        "distractorMisconceptions": {
+          "Recommendation": "A recommendation is proposed action; making it is distinct from carrying it out.",
+          "Coussey Committee": "The curriculum links the Coussey Committee with the proposed constitutional review.",
+          "Constitutional review": "Reviewing the constitution meant examining the framework of government; the source distinguishes this from holding a general election."
+        }
+      },
+      {
+        "type": "short_answer",
+        "difficulty": 1,
+        "skill_tag": "watson_commission",
+        "stem": "Which surname completes the name of the commission whose report recommended a further committee?",
+        "answer": ["watson"],
+        "hints": ["Identify which body made the earlier report."],
+        "explanation": "The Watson Commission produced the report associated with recommending a further constitutional review.",
+        "misconception": "Reversing the names of the two bodies."
+      },
+      {
+        "type": "written",
+        "difficulty": 2,
+        "skill_tag": "watson_commission",
+        "stem": "Write a report heading naming the earlier commission and the question a class could investigate about its work.",
+        "hints": ["Identify which body made the earlier report."],
+        "explanation": "Name the Watson Commission on the heading. Ask about its establishment, findings or recommendation.",
+        "misconception": "Reversing the names of the two bodies.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Name the Watson Commission on the heading.",
+              "marks": 1
+            },
+            {
+              "description": "Ask about its establishment, findings or recommendation.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "type": "written",
+        "difficulty": 3,
+        "skill_tag": "watson_commission",
+        "stem": "A classmate places the Watson report after the committee it recommended. Explain the difficulty with that order.",
+        "hints": ["Identify which body made the earlier report."],
+        "explanation": "A recommendation must precede the step taken in response to it. Place the Watson report before the work of the Coussey Committee.",
+        "misconception": "Reversing the names of the two bodies.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "A recommendation must precede the step taken in response to it.",
+              "marks": 1
+            },
+            {
+              "description": "Place the Watson report before the work of the Coussey Committee.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "type": "written",
+        "difficulty": 3,
+        "skill_tag": "watson_commission",
+        "stem": "Prepare a two-item display on the Watson Commission. Choose something to show what it was and something to show what followed its report.",
+        "hints": ["Identify which body made the earlier report."],
+        "explanation": "Identify an account of the Commission or its report. Link its recommendation to the proposed Coussey review.",
+        "misconception": "Reversing the names of the two bodies.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Identify an account of the Commission or its report.",
+              "marks": 1
+            },
+            {
+              "description": "Link its recommendation to the proposed Coussey review.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "type": "mcq",
+        "difficulty": 1,
+        "skill_tag": "recommendation",
+        "stem": "The earlier report proposed that another committee be set up. What kind of statement was that proposal?",
+        "options": [
+          "Recommendation",
+          "Watson Commission",
+          "Coussey Committee",
+          "Constitutional review"
+        ],
+        "answer": 0,
+        "hints": ["Look for the difference between advising and implementing."],
+        "explanation": "A recommendation is proposed action; making it is distinct from carrying it out.",
+        "misconception": "Treating a recommendation as a constitution already in force.",
+        "distractorMisconceptions": {
+          "Watson Commission": "The Watson Commission's report is discussed before the recommendation to set up the Coussey Committee.",
+          "Coussey Committee": "The curriculum links the Coussey Committee with the proposed constitutional review.",
+          "Constitutional review": "Reviewing the constitution meant examining the framework of government; the source distinguishes this from holding a general election."
+        }
+      },
+      {
+        "type": "short_answer",
+        "difficulty": 2,
+        "skill_tag": "recommendation",
+        "stem": "What word means a proposal for action made in a report?",
+        "answer": ["recommendation", "a recommendation"],
+        "hints": ["Look for the difference between advising and implementing."],
+        "explanation": "A recommendation states what a body thinks should be done. A later decision is needed to act on it.",
+        "misconception": "Treating a recommendation as a constitution already in force."
+      },
+      {
+        "type": "written",
+        "difficulty": 2,
+        "skill_tag": "recommendation",
+        "stem": "Use one arrow and a verb to show how a report could influence the next step.",
+        "hints": ["Look for the difference between advising and implementing."],
+        "explanation": "Begin with a report recommending a next step. Use a verb such as recommends to distinguish advice from carrying it out.",
+        "misconception": "Treating a recommendation as a constitution already in force.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Begin with a report recommending a next step.",
+              "marks": 1
+            },
+            {
+              "description": "Use a verb such as recommends to distinguish advice from carrying it out.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "type": "written",
+        "difficulty": 3,
+        "skill_tag": "recommendation",
+        "stem": "An imagined report says “We advise setting up a group.” Explain which part expresses a recommendation.",
+        "hints": ["Look for the difference between advising and implementing."],
+        "explanation": "The advice proposes a next step. The wording does not show that the group has already started work.",
+        "misconception": "Treating a recommendation as a constitution already in force.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "The advice proposes a next step.",
+              "marks": 1
+            },
+            {
+              "description": "The wording does not show that the group has already started work.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "type": "written",
+        "difficulty": 4,
+        "skill_tag": "recommendation",
+        "stem": "Draft two separate captions, one reporting advice to form a committee and the other recording that a committee met. Explain what evidence each would require.",
+        "hints": ["Look for the difference between advising and implementing."],
+        "explanation": "Use the report for the advice. Use a record of the committee's establishment or proceedings for its work.",
+        "misconception": "Treating a recommendation as a constitution already in force.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Use the report for the advice.",
+              "marks": 1
+            },
+            {
+              "description": "Use a record of the committee's establishment or proceedings for its work.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "type": "mcq",
+        "difficulty": 1,
+        "skill_tag": "coussey_committee",
+        "stem": "Which body was to review the constitution of the Gold Coast?",
+        "options": [
+          "Watson Commission",
+          "Coussey Committee",
+          "Recommendation",
+          "Constitutional review"
+        ],
+        "answer": 1,
+        "hints": ["Separate the source of the proposal from the body named to review."],
+        "explanation": "The curriculum links the Coussey Committee with the proposed constitutional review.",
+        "misconception": "Claiming the Coussey Committee established the Watson Commission.",
+        "distractorMisconceptions": {
+          "Watson Commission": "The Watson Commission's report is discussed before the recommendation to set up the Coussey Committee.",
+          "Recommendation": "A recommendation is proposed action; making it is distinct from carrying it out.",
+          "Constitutional review": "Reviewing the constitution meant examining the framework of government; the source distinguishes this from holding a general election."
+        }
+      },
+      {
+        "type": "short_answer",
+        "difficulty": 2,
+        "skill_tag": "coussey_committee",
+        "stem": "Which surname completes the name of the committee associated with reviewing the Gold Coast constitution?",
+        "answer": ["coussey"],
+        "hints": ["Separate the source of the proposal from the body named to review."],
+        "explanation": "The Coussey Committee is linked with examining the constitution after the Watson report.",
+        "misconception": "Claiming the Coussey Committee established the Watson Commission."
+      },
+      {
+        "type": "written",
+        "difficulty": 2,
+        "skill_tag": "coussey_committee",
+        "stem": "Explain why the name of this committee belongs after the Watson report on a flow diagram.",
+        "hints": ["Separate the source of the proposal from the body named to review."],
+        "explanation": "Put the Watson report earlier on the diagram. Identify the Coussey Committee as the body proposed to review the constitution.",
+        "misconception": "Claiming the Coussey Committee established the Watson Commission.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Put the Watson report earlier on the diagram.",
+              "marks": 1
+            },
+            {
+              "description": "Identify the Coussey Committee as the body proposed to review the constitution.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "type": "written",
+        "difficulty": 3,
+        "skill_tag": "coussey_committee",
+        "stem": "How could you use arrows to distinguish the two bodies in a class diagram?",
+        "hints": ["Separate the source of the proposal from the body named to review."],
+        "explanation": "Start with the Watson report. Point to the recommended Coussey Committee and label its review task.",
+        "misconception": "Claiming the Coussey Committee established the Watson Commission.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Start with the Watson report.",
+              "marks": 1
+            },
+            {
+              "description": "Point to the recommended Coussey Committee and label its review task.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "type": "written",
+        "difficulty": 4,
+        "skill_tag": "coussey_committee",
+        "stem": "A class paper quotes a conclusion but leaves out the committee name. Explain how you would check whether the statement belongs to the Watson or Coussey report.",
+        "hints": ["Separate the source of the proposal from the body named to review."],
+        "explanation": "Locate the statement in a report with its title or authors identified. Distinguish the recommendation for a review from the findings of that review.",
+        "misconception": "Claiming the Coussey Committee established the Watson Commission.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Locate the statement in a report with its title or authors identified.",
+              "marks": 1
+            },
+            {
+              "description": "Distinguish the recommendation for a review from the findings of that review.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "type": "mcq",
+        "difficulty": 1,
+        "skill_tag": "constitutional_review",
+        "stem": "What work was the proposed committee to undertake?",
+        "options": [
+          "Watson Commission",
+          "Recommendation",
+          "Constitutional review",
+          "Coussey Committee"
+        ],
+        "answer": 2,
+        "hints": ["Look for the task attached to the named body."],
+        "explanation": "Reviewing the constitution meant examining the framework of government; the source distinguishes this from holding a general election.",
+        "misconception": "Treating the assignment to review as proof that every proposed change was adopted.",
+        "distractorMisconceptions": {
+          "Watson Commission": "The Watson Commission's report is discussed before the recommendation to set up the Coussey Committee.",
+          "Recommendation": "A recommendation is proposed action; making it is distinct from carrying it out.",
+          "Coussey Committee": "The curriculum links the Coussey Committee with the proposed constitutional review."
+        }
+      },
+      {
+        "type": "short_answer",
+        "difficulty": 2,
+        "skill_tag": "constitutional_review",
+        "stem": "What term names the framework of rules for governing a country that the committee was to review?",
+        "answer": ["constitution", "a constitution"],
+        "hints": ["Look for the task attached to the named body."],
+        "explanation": "A constitution sets a governing framework. To review it is to examine its arrangements.",
+        "misconception": "Treating the assignment to review as proof that every proposed change was adopted."
+      },
+      {
+        "type": "written",
+        "difficulty": 2,
+        "skill_tag": "constitutional_review",
+        "stem": "Draft two enquiry questions about a review, separating the task assigned from any eventual outcome.",
+        "hints": ["Look for the task attached to the named body."],
+        "explanation": "Ask what work the committee was assigned. Ask separately what its report actually recommended.",
+        "misconception": "Treating the assignment to review as proof that every proposed change was adopted.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Ask what work the committee was assigned.",
+              "marks": 1
+            },
+            {
+              "description": "Ask separately what its report actually recommended.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "type": "written",
+        "difficulty": 3,
+        "skill_tag": "constitutional_review",
+        "stem": "Explain the difference between requesting a constitutional review and announcing its final result.",
+        "hints": ["Look for the task attached to the named body."],
+        "explanation": "A request identifies work to be undertaken. A final report gives conclusions after the work.",
+        "misconception": "Treating the assignment to review as proof that every proposed change was adopted.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "A request identifies work to be undertaken.",
+              "marks": 1
+            },
+            {
+              "description": "A final report gives conclusions after the work.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "type": "written",
+        "difficulty": 4,
+        "skill_tag": "constitutional_review",
+        "stem": "Propose a sequence of three labels for a class performance on post-war constitutional review. Identify the evidence needed to support the last label.",
+        "hints": ["Look for the task attached to the named body."],
+        "explanation": "Include the Watson report, its recommendation and the Coussey review. Check the Coussey report before attributing a specific final recommendation to it.",
+        "misconception": "Treating the assignment to review as proof that every proposed change was adopted.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Include the Watson report, its recommendation and the Coussey review.",
+              "marks": 1
+            },
+            {
+              "description": "Check the Coussey report before attributing a specific final recommendation to it.",
+              "marks": 1
+            }
+          ]
+        }
+      }
+    ],
+    "uncertain": []
+  },
+  {
+    "indicator": {
+      "subject": "History",
+      "level": "Basic 6",
+      "source_page": 43,
+      "code": "B6.5.4.1.2",
+      "strand": "Journey to Independence",
+      "sub_strand": "Ghana Gains Independence",
+      "content_standard": "B6.5.4.1. Demonstrate an understanding of the course of events leading to independence from 1948 to 1957",
+      "objective": "Explain how Ghana gained independence through constitutional means."
+    },
+    "spec": {
+      "skills": [
+        {
+          "tag": "1951_general_election",
+          "description": "1951 general election",
+          "minQuestions": 5
+        },
+        {
+          "tag": "1956_elections",
+          "description": "1956 elections",
+          "minQuestions": 5
+        },
+        {
+          "tag": "polling_station",
+          "description": "Polling station",
+          "minQuestions": 5
+        },
+        {
+          "tag": "constitutional_means",
+          "description": "Constitutional means",
+          "minQuestions": 5
+        }
+      ],
+      "difficultyPlan": "5 recognition, 7 simple use, 5 application and 3 challenge questions.",
+      "misconceptions": [
+        "Calling the 1951 election the declaration of independence.",
+        "Using an account of events before voting as proof of a particular result.",
+        "Reporting a classroom vote as the actual election outcome.",
+        "Assuming one polling event alone describes every step to independence."
+      ],
+      "needsTeacherAssessment": true
+    },
+    "questions": [
+      {
+        "type": "mcq",
+        "difficulty": 1,
+        "skill_tag": "1951_general_election",
+        "stem": "Which event is described as the first general elections in the curriculum's sequence?",
+        "options": [
+          "1951 general election",
+          "1956 elections",
+          "Polling station",
+          "Constitutional means"
+        ],
+        "answer": 0,
+        "hints": ["Compare an election date with the end of the 1948–1957 course of events."],
+        "explanation": "The source specifically identifies the first general elections held in 1951.",
+        "misconception": "Calling the 1951 election the declaration of independence.",
+        "distractorMisconceptions": {
+          "1956 elections": "The curriculum asks about the sequence leading to the 1956 elections and their outcome.",
+          "Polling station": "A model polling station helps pupils explore voting as part of a constitutional process.",
+          "Constitutional means": "The task concerns gaining independence through political and constitutional processes."
+        }
+      },
+      {
+        "type": "short_answer",
+        "difficulty": 1,
+        "skill_tag": "1951_general_election",
+        "stem": "Which year is identified with the first general elections in this course of events?",
+        "answer": ["1951"],
+        "hints": ["Compare an election date with the end of the 1948–1957 course of events."],
+        "explanation": "The curriculum identifies general elections in 1951 and later elections in 1956. They are separate stages in the account.",
+        "misconception": "Calling the 1951 election the declaration of independence."
+      },
+      {
+        "type": "written",
+        "difficulty": 2,
+        "skill_tag": "1951_general_election",
+        "stem": "Create a caption identifying what 1951 marks without confusing it with the year of independence.",
+        "hints": ["Compare an election date with the end of the 1948–1957 course of events."],
+        "explanation": "Name the general elections of 1951. Keep that event distinct from the achievement of independence.",
+        "misconception": "Calling the 1951 election the declaration of independence.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Name the general elections of 1951.",
+              "marks": 1
+            },
+            {
+              "description": "Keep that event distinct from the achievement of independence.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "type": "written",
+        "difficulty": 3,
+        "skill_tag": "1951_general_election",
+        "stem": "Which entry comes earlier in a display: general elections in 1951 or elections in 1956? Explain how both could appear in a route to independence.",
+        "hints": ["Compare an election date with the end of the 1948–1957 course of events."],
+        "explanation": "Place 1951 first. Both belong in the sequence of constitutional and electoral events studied.",
+        "misconception": "Calling the 1951 election the declaration of independence.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Place 1951 first.",
+              "marks": 1
+            },
+            {
+              "description": "Both belong in the sequence of constitutional and electoral events studied.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "type": "written",
+        "difficulty": 3,
+        "skill_tag": "1951_general_election",
+        "stem": "Make a two-question interview guide on the 1951 elections, separating who participated from the eventual result.",
+        "hints": ["Compare an election date with the end of the 1948–1957 course of events."],
+        "explanation": "Ask for evidence identifying those who contested the election. Ask for verified information about the outcome as a separate matter.",
+        "misconception": "Calling the 1951 election the declaration of independence.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Ask for evidence identifying those who contested the election.",
+              "marks": 1
+            },
+            {
+              "description": "Ask for verified information about the outcome as a separate matter.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "type": "mcq",
+        "difficulty": 1,
+        "skill_tag": "1956_elections",
+        "stem": "Which later elections does the enquiry ask learners to discuss with a resource person?",
+        "options": [
+          "1951 general election",
+          "1956 elections",
+          "Polling station",
+          "Constitutional means"
+        ],
+        "answer": 1,
+        "hints": ["Ask whether the question is about events before the vote or the result."],
+        "explanation": "The curriculum asks about the sequence leading to the 1956 elections and their outcome.",
+        "misconception": "Using an account of events before voting as proof of a particular result.",
+        "distractorMisconceptions": {
+          "1951 general election": "The source specifically identifies the first general elections held in 1951.",
+          "Polling station": "A model polling station helps pupils explore voting as part of a constitutional process.",
+          "Constitutional means": "The task concerns gaining independence through political and constitutional processes."
+        }
+      },
+      {
+        "type": "short_answer",
+        "difficulty": 2,
+        "skill_tag": "1956_elections",
+        "stem": "Which year comes immediately after 1955 and marks the later elections highlighted in this enquiry?",
+        "answer": ["1956"],
+        "hints": ["Ask whether the question is about events before the vote or the result."],
+        "explanation": "The later elections discussed in the indicator took place in 1956. The sequence leading to them is a separate question from their result.",
+        "misconception": "Using an account of events before voting as proof of a particular result."
+      },
+      {
+        "type": "written",
+        "difficulty": 2,
+        "skill_tag": "1956_elections",
+        "stem": "Write two questions for a resource person about the 1956 elections, separating sequence from outcome.",
+        "hints": ["Ask whether the question is about events before the vote or the result."],
+        "explanation": "Ask what events preceded the 1956 elections. Ask separately about the result or its significance.",
+        "misconception": "Using an account of events before voting as proof of a particular result.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Ask what events preceded the 1956 elections.",
+              "marks": 1
+            },
+            {
+              "description": "Ask separately about the result or its significance.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "type": "written",
+        "difficulty": 3,
+        "skill_tag": "1956_elections",
+        "stem": "Explain why a description of a campaign meeting before the 1956 vote cannot, by itself, give the result.",
+        "hints": ["Ask whether the question is about events before the vote or the result."],
+        "explanation": "The meeting records campaign activity before the decision. Election results need a record of the votes or outcome.",
+        "misconception": "Using an account of events before voting as proof of a particular result.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "The meeting records campaign activity before the decision.",
+              "marks": 1
+            },
+            {
+              "description": "Election results need a record of the votes or outcome.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "type": "written",
+        "difficulty": 4,
+        "skill_tag": "1956_elections",
+        "stem": "A resource person remembers an election but is unsure whether it was 1951 or 1956. Suggest two checks before using the account on a timeline.",
+        "hints": ["Ask whether the question is about events before the vote or the result."],
+        "explanation": "Ask about details that distinguish the events. Check those details against a dated record before labelling the account.",
+        "misconception": "Using an account of events before voting as proof of a particular result.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Ask about details that distinguish the events.",
+              "marks": 1
+            },
+            {
+              "description": "Check those details against a dated record before labelling the account.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "type": "mcq",
+        "difficulty": 1,
+        "skill_tag": "polling_station",
+        "stem": "Where is the classroom election scene in the exemplar set?",
+        "options": [
+          "1951 general election",
+          "1956 elections",
+          "Polling station",
+          "Constitutional means"
+        ],
+        "answer": 2,
+        "hints": ["A model helps explain a process without supplying historical totals."],
+        "explanation": "A model polling station helps pupils explore voting as part of a constitutional process.",
+        "misconception": "Reporting a classroom vote as the actual election outcome.",
+        "distractorMisconceptions": {
+          "1951 general election": "The source specifically identifies the first general elections held in 1951.",
+          "1956 elections": "The curriculum asks about the sequence leading to the 1956 elections and their outcome.",
+          "Constitutional means": "The task concerns gaining independence through political and constitutional processes."
+        }
+      },
+      {
+        "type": "short_answer",
+        "difficulty": 2,
+        "skill_tag": "polling_station",
+        "stem": "What is the place where voters cast ballots called?",
+        "answer": ["polling station", "a polling station"],
+        "hints": ["A model helps explain a process without supplying historical totals."],
+        "explanation": "A polling station provides a place to vote. The curriculum invites the class to model one.",
+        "misconception": "Reporting a classroom vote as the actual election outcome."
+      },
+      {
+        "type": "written",
+        "difficulty": 2,
+        "skill_tag": "polling_station",
+        "stem": "Design a mock voting scene using fictional candidates and label what the scene does and does not establish about Ghana's real elections.",
+        "hints": ["A model helps explain a process without supplying historical totals."],
+        "explanation": "Show people casting votes for fictional candidates in the classroom. Explain that the model shows a process without establishing an actual historical result.",
+        "misconception": "Reporting a classroom vote as the actual election outcome.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Show people casting votes for fictional candidates in the classroom.",
+              "marks": 1
+            },
+            {
+              "description": "Explain that the model shows a process without establishing an actual historical result.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "type": "written",
+        "difficulty": 3,
+        "skill_tag": "polling_station",
+        "stem": "Two pupils are acting as a voter and an observer. Explain what the observer could check in a classroom polling scene.",
+        "hints": ["A model helps explain a process without supplying historical totals."],
+        "explanation": "Check that the voter can make a selection. Describe the procedure seen without pretending it gives an actual historical result.",
+        "misconception": "Reporting a classroom vote as the actual election outcome.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Check that the voter can make a selection.",
+              "marks": 1
+            },
+            {
+              "description": "Describe the procedure seen without pretending it gives an actual historical result.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "type": "written",
+        "difficulty": 4,
+        "skill_tag": "polling_station",
+        "stem": "Plan a practice election and a short discussion linking the activity with independence. Identify one limit of the comparison.",
+        "hints": ["A model helps explain a process without supplying historical totals."],
+        "explanation": "Show an orderly choice and record of votes. Explain that the model illustrates a process but cannot reconstruct actual historical totals.",
+        "misconception": "Reporting a classroom vote as the actual election outcome.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Show an orderly choice and record of votes.",
+              "marks": 1
+            },
+            {
+              "description": "Explain that the model illustrates a process but cannot reconstruct actual historical totals.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "type": "mcq",
+        "difficulty": 1,
+        "skill_tag": "constitutional_means",
+        "stem": "Which idea connects elections and arrangements for self-government in this enquiry?",
+        "options": [
+          "1951 general election",
+          "1956 elections",
+          "Polling station",
+          "Constitutional means"
+        ],
+        "answer": 3,
+        "hints": ["Distinguish one step in a process from the outcome of the whole process."],
+        "explanation": "The task concerns gaining independence through political and constitutional processes.",
+        "misconception": "Assuming one polling event alone describes every step to independence.",
+        "distractorMisconceptions": {
+          "1951 general election": "The source specifically identifies the first general elections held in 1951.",
+          "1956 elections": "The curriculum asks about the sequence leading to the 1956 elections and their outcome.",
+          "Polling station": "A model polling station helps pupils explore voting as part of a constitutional process."
+        }
+      },
+      {
+        "type": "short_answer",
+        "difficulty": 2,
+        "skill_tag": "constitutional_means",
+        "stem": "What word describes a person's formal choice in an election?",
+        "answer": ["vote", "a vote", "ballot"],
+        "hints": ["Distinguish one step in a process from the outcome of the whole process."],
+        "explanation": "A vote expresses a choice. Many votes together can influence who receives authority under electoral rules.",
+        "misconception": "Assuming one polling event alone describes every step to independence."
+      },
+      {
+        "type": "written",
+        "difficulty": 2,
+        "skill_tag": "constitutional_means",
+        "stem": "Explain how voting can form part of a route to self-government without making the two terms identical.",
+        "hints": ["Distinguish one step in a process from the outcome of the whole process."],
+        "explanation": "Describe voters' choice of representatives as one part of government. Connect that step to constitutional change without claiming it is the whole route to independence.",
+        "misconception": "Assuming one polling event alone describes every step to independence.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Describe voters' choice of representatives as one part of government.",
+              "marks": 1
+            },
+            {
+              "description": "Connect that step to constitutional change without claiming it is the whole route to independence.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "type": "written",
+        "difficulty": 3,
+        "skill_tag": "constitutional_means",
+        "stem": "Explain why voting matters in an account of constitutional change even though voting alone does not describe the whole process.",
+        "hints": ["Distinguish one step in a process from the outcome of the whole process."],
+        "explanation": "Voting gives people a role in selecting representatives. Constitutional arrangements connect that choice with how a country is governed.",
+        "misconception": "Assuming one polling event alone describes every step to independence.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Voting gives people a role in selecting representatives.",
+              "marks": 1
+            },
+            {
+              "description": "Constitutional arrangements connect that choice with how a country is governed.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "type": "written",
+        "difficulty": 4,
+        "skill_tag": "constitutional_means",
+        "stem": "Using the elections of 1951 and 1956, explain why a display called “Steps towards independence” needs more than a single date.",
+        "hints": ["Distinguish one step in a process from the outcome of the whole process."],
+        "explanation": "Name the two separate electoral steps in their order. Explain how evidence about political decisions and outcomes connects those steps with independence.",
+        "misconception": "Assuming one polling event alone describes every step to independence.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Name the two separate electoral steps in their order.",
+              "marks": 1
+            },
+            {
+              "description": "Explain how evidence about political decisions and outcomes connects those steps with independence.",
+              "marks": 1
+            }
+          ]
+        }
+      }
+    ],
+    "uncertain": []
+  },
+  {
+    "indicator": {
+      "subject": "History",
+      "level": "Basic 6",
+      "source_page": 44,
+      "code": "B6.6.1.1.1",
+      "strand": "Independent Ghana",
+      "sub_strand": "The Republics",
+      "content_standard": "B6.6.1.1. Demonstrate understanding of the Fourth Republic (1992 to date).",
+      "objective": "Describe the events leading to the emergence of the Fourth Republic."
+    },
+    "spec": {
+      "skills": [
+        {
+          "tag": "new_constitution",
+          "description": "New constitution",
+          "minQuestions": 5
+        },
+        {
+          "tag": "referendum",
+          "description": "Referendum",
+          "minQuestions": 5
+        },
+        {
+          "tag": "lifting_the_party_ban",
+          "description": "Lifting the party ban",
+          "minQuestions": 5
+        },
+        {
+          "tag": "1992_general_elections",
+          "description": "1992 general elections",
+          "minQuestions": 5
+        }
+      ],
+      "difficultyPlan": "5 recognition, 7 simple use, 5 application and 3 challenge questions.",
+      "misconceptions": [
+        "Treating drafting the constitution as the same action as electing a president.",
+        "Calling every vote for candidates a referendum.",
+        "Assuming the lifting of a ban names a winning party.",
+        "Describing an inauguration ceremony as the ballot itself."
+      ],
+      "needsTeacherAssessment": true
+    },
+    "questions": [
+      {
+        "type": "mcq",
+        "difficulty": 1,
+        "skill_tag": "new_constitution",
+        "stem": "Which part of the process involved drawing up a new framework of government?",
+        "options": [
+          "Referendum",
+          "New constitution",
+          "Lifting the party ban",
+          "1992 general elections"
+        ],
+        "answer": 1,
+        "hints": ["Ask whether a document is being prepared or a decision made about it."],
+        "explanation": "The curriculum counts drafting a constitution among the events leading to the Fourth Republic.",
+        "misconception": "Treating drafting the constitution as the same action as electing a president.",
+        "distractorMisconceptions": {
+          "Referendum": "A referendum allows an issue to be put to a vote and is named separately from general elections.",
+          "Lifting the party ban": "The process included lifting the ban on political parties, which differs from an election result.",
+          "1992 general elections": "The 1992 general elections are one named part of the transition, distinct from an inauguration."
+        }
+      },
+      {
+        "type": "short_answer",
+        "difficulty": 1,
+        "skill_tag": "new_constitution",
+        "stem": "What document sets out the basic framework under which a republic is governed?",
+        "answer": ["constitution", "a constitution"],
+        "hints": ["Ask whether a document is being prepared or a decision made about it."],
+        "explanation": "Drawing up a constitution was one step in the transition to the Fourth Republic.",
+        "misconception": "Treating drafting the constitution as the same action as electing a president."
+      },
+      {
+        "type": "written",
+        "difficulty": 2,
+        "skill_tag": "new_constitution",
+        "stem": "Write a caption distinguishing drawing up a framework from voting on it.",
+        "hints": ["Ask whether a document is being prepared or a decision made about it."],
+        "explanation": "Distinguish preparing the proposed rules from deciding on them. Link the constitution to the separate step of a referendum.",
+        "misconception": "Treating drafting the constitution as the same action as electing a president.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Distinguish preparing the proposed rules from deciding on them.",
+              "marks": 1
+            },
+            {
+              "description": "Link the constitution to the separate step of a referendum.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "type": "written",
+        "difficulty": 3,
+        "skill_tag": "new_constitution",
+        "stem": "A class has a draft constitution and a result from a vote on it. Explain the different part each plays.",
+        "hints": ["Ask whether a document is being prepared or a decision made about it."],
+        "explanation": "The draft sets out proposed rules. The vote records a decision about the proposal.",
+        "misconception": "Treating drafting the constitution as the same action as electing a president.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "The draft sets out proposed rules.",
+              "marks": 1
+            },
+            {
+              "description": "The vote records a decision about the proposal.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "type": "written",
+        "difficulty": 3,
+        "skill_tag": "new_constitution",
+        "stem": "Design a three-part account of the transition to the Fourth Republic including a document, a public decision and a choice of leaders.",
+        "hints": ["Ask whether a document is being prepared or a decision made about it."],
+        "explanation": "Identify the constitution and the referendum. Distinguish the general elections from the vote on the constitution.",
+        "misconception": "Treating drafting the constitution as the same action as electing a president.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Identify the constitution and the referendum.",
+              "marks": 1
+            },
+            {
+              "description": "Distinguish the general elections from the vote on the constitution.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "type": "mcq",
+        "difficulty": 1,
+        "skill_tag": "referendum",
+        "stem": "Which process involves voters deciding on a question rather than choosing candidates for office?",
+        "options": [
+          "New constitution",
+          "Lifting the party ban",
+          "Referendum",
+          "1992 general elections"
+        ],
+        "answer": 2,
+        "hints": ["Look at what the voter is being asked to decide."],
+        "explanation": "A referendum allows an issue to be put to a vote and is named separately from general elections.",
+        "misconception": "Calling every vote for candidates a referendum.",
+        "distractorMisconceptions": {
+          "New constitution": "The curriculum counts drafting a constitution among the events leading to the Fourth Republic.",
+          "Lifting the party ban": "The process included lifting the ban on political parties, which differs from an election result.",
+          "1992 general elections": "The 1992 general elections are one named part of the transition, distinct from an inauguration."
+        }
+      },
+      {
+        "type": "short_answer",
+        "difficulty": 2,
+        "skill_tag": "referendum",
+        "stem": "What is a vote on a public question called?",
+        "answer": ["referendum", "a referendum"],
+        "hints": ["Look at what the voter is being asked to decide."],
+        "explanation": "In a referendum voters decide an issue. In a general election they choose candidates for positions.",
+        "misconception": "Calling every vote for candidates a referendum."
+      },
+      {
+        "type": "written",
+        "difficulty": 2,
+        "skill_tag": "referendum",
+        "stem": "Prepare two fictional ballot headings to contrast a referendum question and a vote for office.",
+        "hints": ["Look at what the voter is being asked to decide."],
+        "explanation": "Frame the referendum as a question about a proposal. Frame the other ballot as a choice among candidates for office.",
+        "misconception": "Calling every vote for candidates a referendum.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Frame the referendum as a question about a proposal.",
+              "marks": 1
+            },
+            {
+              "description": "Frame the other ballot as a choice among candidates for office.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "type": "written",
+        "difficulty": 3,
+        "skill_tag": "referendum",
+        "stem": "Which is closer to a referendum: choosing a class captain or deciding whether to adopt proposed class rules? Explain.",
+        "hints": ["Look at what the voter is being asked to decide."],
+        "explanation": "Choose the decision about proposed rules. Identify the difference between deciding an issue and selecting a person.",
+        "misconception": "Calling every vote for candidates a referendum.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Choose the decision about proposed rules.",
+              "marks": 1
+            },
+            {
+              "description": "Identify the difference between deciding an issue and selecting a person.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "type": "written",
+        "difficulty": 4,
+        "skill_tag": "referendum",
+        "stem": "A pupil says a referendum result names the next president. Use two different ballot headings to show the error.",
+        "hints": ["Look at what the voter is being asked to decide."],
+        "explanation": "One heading asks voters to decide a question. The other asks them to select a candidate for office.",
+        "misconception": "Calling every vote for candidates a referendum.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "One heading asks voters to decide a question.",
+              "marks": 1
+            },
+            {
+              "description": "The other asks them to select a candidate for office.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "type": "mcq",
+        "difficulty": 1,
+        "skill_tag": "lifting_the_party_ban",
+        "stem": "Which listed step changed the position of political parties before electoral competition?",
+        "options": [
+          "New constitution",
+          "Referendum",
+          "1992 general elections",
+          "Lifting the party ban"
+        ],
+        "answer": 3,
+        "hints": ["Separate permission to take part from success at the polls."],
+        "explanation": "The process included lifting the ban on political parties, which differs from an election result.",
+        "misconception": "Assuming the lifting of a ban names a winning party.",
+        "distractorMisconceptions": {
+          "New constitution": "The curriculum counts drafting a constitution among the events leading to the Fourth Republic.",
+          "Referendum": "A referendum allows an issue to be put to a vote and is named separately from general elections.",
+          "1992 general elections": "The 1992 general elections are one named part of the transition, distinct from an inauguration."
+        }
+      },
+      {
+        "type": "short_answer",
+        "difficulty": 2,
+        "skill_tag": "lifting_the_party_ban",
+        "stem": "Which word means removing a restriction in the phrase “_____ the ban on political parties”?",
+        "answer": ["lifting", "lift"],
+        "hints": ["Separate permission to take part from success at the polls."],
+        "explanation": "Lifting the ban changed whether parties could take part openly. It did not decide who would win.",
+        "misconception": "Assuming the lifting of a ban names a winning party."
+      },
+      {
+        "type": "written",
+        "difficulty": 2,
+        "skill_tag": "lifting_the_party_ban",
+        "stem": "Explain how permission for political parties can affect participation without telling voters whom to choose.",
+        "hints": ["Separate permission to take part from success at the polls."],
+        "explanation": "Explain that lifting the ban made political participation by parties possible. Distinguish permission to participate from voters' subsequent choices.",
+        "misconception": "Assuming the lifting of a ban names a winning party.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Explain that lifting the ban made political participation by parties possible.",
+              "marks": 1
+            },
+            {
+              "description": "Distinguish permission to participate from voters' subsequent choices.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "type": "written",
+        "difficulty": 3,
+        "skill_tag": "lifting_the_party_ban",
+        "stem": "Describe what could be learned from a notice lifting a party ban and what would need an election result to establish.",
+        "hints": ["Separate permission to take part from success at the polls."],
+        "explanation": "The notice establishes a change in permission to participate. Results establish who won a particular contest.",
+        "misconception": "Assuming the lifting of a ban names a winning party.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "The notice establishes a change in permission to participate.",
+              "marks": 1
+            },
+            {
+              "description": "Results establish who won a particular contest.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "type": "written",
+        "difficulty": 4,
+        "skill_tag": "lifting_the_party_ban",
+        "stem": "Prepare an exhibition caption on the lifting of the ban. Explain how it fits between rules about participation and an actual electoral choice.",
+        "hints": ["Separate permission to take part from success at the polls."],
+        "explanation": "Explain that parties could take part once permitted. Separate this opening from voters deciding on candidates.",
+        "misconception": "Assuming the lifting of a ban names a winning party.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Explain that parties could take part once permitted.",
+              "marks": 1
+            },
+            {
+              "description": "Separate this opening from voters deciding on candidates.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "type": "mcq",
+        "difficulty": 1,
+        "skill_tag": "1992_general_elections",
+        "stem": "Which entry in the curriculum describes choosing representatives in 1992?",
+        "options": [
+          "1992 general elections",
+          "New constitution",
+          "Referendum",
+          "Lifting the party ban"
+        ],
+        "answer": 0,
+        "hints": ["Decide whether the event selects an officeholder or marks entry into office."],
+        "explanation": "The 1992 general elections are one named part of the transition, distinct from an inauguration.",
+        "misconception": "Describing an inauguration ceremony as the ballot itself.",
+        "distractorMisconceptions": {
+          "New constitution": "The curriculum counts drafting a constitution among the events leading to the Fourth Republic.",
+          "Referendum": "A referendum allows an issue to be put to a vote and is named separately from general elections.",
+          "Lifting the party ban": "The process included lifting the ban on political parties, which differs from an election result."
+        }
+      },
+      {
+        "type": "short_answer",
+        "difficulty": 2,
+        "skill_tag": "1992_general_elections",
+        "stem": "Which year is named for the general elections linked with the emergence of the Fourth Republic?",
+        "answer": ["1992"],
+        "hints": ["Decide whether the event selects an officeholder or marks entry into office."],
+        "explanation": "The 1992 general elections are part of the course of events highlighted in the lesson.",
+        "misconception": "Describing an inauguration ceremony as the ballot itself."
+      },
+      {
+        "type": "drawing",
+        "difficulty": 2,
+        "skill_tag": "1992_general_elections",
+        "stem": "Draw a two-stage diagram distinguishing an election from the later act of taking office.",
+        "hints": ["Decide whether the event selects an officeholder or marks entry into office."],
+        "explanation": "Show voters selecting officeholders at the election. Show taking office as a distinct later stage.",
+        "misconception": "Describing an inauguration ceremony as the ballot itself.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Show voters selecting officeholders at the election.",
+              "marks": 1
+            },
+            {
+              "description": "Show taking office as a distinct later stage.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "type": "written",
+        "difficulty": 3,
+        "skill_tag": "1992_general_elections",
+        "stem": "Explain why a photograph of a swearing-in ceremony belongs under a different heading from a photograph of voting.",
+        "hints": ["Decide whether the event selects an officeholder or marks entry into office."],
+        "explanation": "Voting is the act of choosing candidates. A swearing-in ceremony marks taking office.",
+        "misconception": "Describing an inauguration ceremony as the ballot itself.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Voting is the act of choosing candidates.",
+              "marks": 1
+            },
+            {
+              "description": "A swearing-in ceremony marks taking office.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "type": "written",
+        "difficulty": 4,
+        "skill_tag": "1992_general_elections",
+        "stem": "Build a timeline of the transition using only dated entries you can support. Explain what you would do with an important event whose exact date you have not verified.",
+        "hints": ["Decide whether the event selects an officeholder or marks entry into office."],
+        "explanation": "Include the 1992 elections as a dated entry. List an event such as lifting the ban with the date marked for checking rather than guessing.",
+        "misconception": "Describing an inauguration ceremony as the ballot itself.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Include the 1992 elections as a dated entry.",
+              "marks": 1
+            },
+            {
+              "description": "List an event such as lifting the ban with the date marked for checking rather than guessing.",
+              "marks": 1
+            }
+          ]
+        }
+      }
+    ],
+    "uncertain": []
+  },
+  {
+    "indicator": {
+      "subject": "History",
+      "level": "Basic 6",
+      "source_page": 45,
+      "code": "B6.6.1.1.2",
+      "strand": "Independent Ghana",
+      "sub_strand": "The Republics",
+      "content_standard": "B6.6.1.1. Demonstrate understanding of the Fourth Republic (1992 to date).",
+      "objective": "Identify the political parties that have governed the country under the Fourth Republic"
+    },
+    "spec": {
+      "skills": [
+        {
+          "tag": "governing_party",
+          "description": "Governing party",
+          "minQuestions": 5
+        },
+        {
+          "tag": "tenure",
+          "description": "Tenure",
+          "minQuestions": 5
+        },
+        {
+          "tag": "peaceful_handover",
+          "description": "Peaceful handover",
+          "minQuestions": 5
+        },
+        {
+          "tag": "district_achievement",
+          "description": "District achievement",
+          "minQuestions": 5
+        }
+      ],
+      "difficultyPlan": "5 recognition, 7 simple use, 5 application and 3 challenge questions.",
+      "misconceptions": [
+        "Counting every party on a ballot as a governing party.",
+        "Using a single campaign date as a complete period in government.",
+        "Assuming a campaign leaflet proves how power was handed over.",
+        "Attributing a project to whoever appears in a recent photograph without checking its date."
+      ],
+      "needsTeacherAssessment": true
+    },
+    "questions": [
+      {
+        "type": "mcq",
+        "difficulty": 1,
+        "skill_tag": "governing_party",
+        "stem": "A historical table shows which organisation formed a government after an election. Which column answers the indicator most directly?",
+        "options": ["Tenure", "Peaceful handover", "Governing party", "District achievement"],
+        "answer": 2,
+        "hints": ["Check what happened after voting as well as who stood."],
+        "explanation": "A governing party is identified by evidence of forming a government; appearing on a ballot alone is insufficient.",
+        "misconception": "Counting every party on a ballot as a governing party.",
+        "distractorMisconceptions": {
+          "Tenure": "A period in office needs evidence for its dates, rather than just an election slogan.",
+          "Peaceful handover": "A transfer of office following an election illustrates a handover and is different from campaigning.",
+          "District achievement": "The exemplar asks pupils to investigate achievements in their respective districts and connect them to evidence."
+        }
+      },
+      {
+        "type": "short_answer",
+        "difficulty": 1,
+        "skill_tag": "governing_party",
+        "stem": "What verb describes running the country's administration after taking office: contesting or governing?",
+        "answer": ["governing", "govern"],
+        "hints": ["Check what happened after voting as well as who stood."],
+        "explanation": "Contesting means entering an election. Governing refers to holding and exercising authority afterwards.",
+        "misconception": "Counting every party on a ballot as a governing party."
+      },
+      {
+        "type": "written",
+        "difficulty": 2,
+        "skill_tag": "governing_party",
+        "stem": "Design a record sheet for verified party names, distinguishing a party that contested an election from one that governed.",
+        "hints": ["Check what happened after voting as well as who stood."],
+        "explanation": "Include a column for party and period in government. Distinguish information about contesting from evidence of forming a government.",
+        "misconception": "Counting every party on a ballot as a governing party.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Include a column for party and period in government.",
+              "marks": 1
+            },
+            {
+              "description": "Distinguish information about contesting from evidence of forming a government.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "type": "written",
+        "difficulty": 3,
+        "skill_tag": "governing_party",
+        "stem": "Use a class record of Fourth Republic administrations to name one governing party. Say which entry supports your identification.",
+        "hints": ["Check what happened after voting as well as who stood."],
+        "explanation": "Give a party name found in the administration record. Point to the entry showing a period in government.",
+        "misconception": "Counting every party on a ballot as a governing party.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Give a party name found in the administration record.",
+              "marks": 1
+            },
+            {
+              "description": "Point to the entry showing a period in government.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "type": "written",
+        "difficulty": 3,
+        "skill_tag": "governing_party",
+        "stem": "Using a dated history of the Fourth Republic provided in class, list the different parties it shows in government. Explain why your list has a date boundary.",
+        "hints": ["Check what happened after voting as well as who stood."],
+        "explanation": "Identify the distinct governing parties recorded in the source. State the coverage dates so later events or unlisted periods are not silently included.",
+        "misconception": "Counting every party on a ballot as a governing party.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Identify the distinct governing parties recorded in the source.",
+              "marks": 1
+            },
+            {
+              "description": "State the coverage dates so later events or unlisted periods are not silently included.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "type": "mcq",
+        "difficulty": 1,
+        "skill_tag": "tenure",
+        "stem": "A class has the party name but wants to show the time it held office. What information is needed?",
+        "options": ["Governing party", "Peaceful handover", "District achievement", "Tenure"],
+        "answer": 3,
+        "hints": ["A period has boundaries; a name alone has none."],
+        "explanation": "A period in office needs evidence for its dates, rather than just an election slogan.",
+        "misconception": "Using a single campaign date as a complete period in government.",
+        "distractorMisconceptions": {
+          "Governing party": "A governing party is identified by evidence of forming a government; appearing on a ballot alone is insufficient.",
+          "Peaceful handover": "A transfer of office following an election illustrates a handover and is different from campaigning.",
+          "District achievement": "The exemplar asks pupils to investigate achievements in their respective districts and connect them to evidence."
+        }
+      },
+      {
+        "type": "short_answer",
+        "difficulty": 2,
+        "skill_tag": "tenure",
+        "stem": "What word describes a government's period in office?",
+        "answer": ["tenure", "term", "term of office"],
+        "hints": ["A period has boundaries; a name alone has none."],
+        "explanation": "A tenure has a duration. Election day and the entire period in office are different pieces of information.",
+        "misconception": "Using a single campaign date as a complete period in government."
+      },
+      {
+        "type": "written",
+        "difficulty": 2,
+        "skill_tag": "tenure",
+        "stem": "Use a clearly marked fictional record to demonstrate how a start date and end date describe tenure.",
+        "hints": ["A period has boundaries; a name alone has none."],
+        "explanation": "Label the example as fictional. Use both start and end dates to show how long the party held office in the example.",
+        "misconception": "Using a single campaign date as a complete period in government.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Label the example as fictional.",
+              "marks": 1
+            },
+            {
+              "description": "Use both start and end dates to show how long the party held office in the example.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "type": "written",
+        "difficulty": 3,
+        "skill_tag": "tenure",
+        "stem": "A practice record says Party A contested a vote in Year 1 and took office in Year 2. Which year starts the tenure in this record and why?",
+        "hints": ["A period has boundaries; a name alone has none."],
+        "explanation": "Give Year 2 as the start of holding office. Year 1 records participation in the contest.",
+        "misconception": "Using a single campaign date as a complete period in government.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Give Year 2 as the start of holding office.",
+              "marks": 1
+            },
+            {
+              "description": "Year 1 records participation in the contest.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "type": "written",
+        "difficulty": 4,
+        "skill_tag": "tenure",
+        "stem": "Using a class record, create two timeline entries for Fourth Republic governments. Label party names and dates and show how you decided where each entry ends.",
+        "hints": ["A period has boundaries; a name alone has none."],
+        "explanation": "Match two verified party names to their periods in office. Use the source's dates and mark an open or uncertain end clearly.",
+        "misconception": "Using a single campaign date as a complete period in government.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Match two verified party names to their periods in office.",
+              "marks": 1
+            },
+            {
+              "description": "Use the source's dates and mark an open or uncertain end clearly.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "type": "mcq",
+        "difficulty": 1,
+        "skill_tag": "peaceful_handover",
+        "stem": "A source describes the outgoing administration transferring office after an election. Which topic does this evidence address?",
+        "options": ["Peaceful handover", "Governing party", "Tenure", "District achievement"],
+        "answer": 0,
+        "hints": ["Look for evidence of transfer rather than just election publicity."],
+        "explanation": "A transfer of office following an election illustrates a handover and is different from campaigning.",
+        "misconception": "Assuming a campaign leaflet proves how power was handed over.",
+        "distractorMisconceptions": {
+          "Governing party": "A governing party is identified by evidence of forming a government; appearing on a ballot alone is insufficient.",
+          "Tenure": "A period in office needs evidence for its dates, rather than just an election slogan.",
+          "District achievement": "The exemplar asks pupils to investigate achievements in their respective districts and connect them to evidence."
+        }
+      },
+      {
+        "type": "short_answer",
+        "difficulty": 2,
+        "skill_tag": "peaceful_handover",
+        "stem": "What word means a transfer of office from one government to another?",
+        "answer": ["handover", "hand-over", "transfer of power", "transfer"],
+        "hints": ["Look for evidence of transfer rather than just election publicity."],
+        "explanation": "A handover involves transferring office. An announcement during a campaign cannot alone establish that it happened.",
+        "misconception": "Assuming a campaign leaflet proves how power was handed over."
+      },
+      {
+        "type": "written",
+        "difficulty": 2,
+        "skill_tag": "peaceful_handover",
+        "stem": "Prepare questions to check whether evidence shows a peaceful handover, including how the change actually took place.",
+        "hints": ["Look for evidence of transfer rather than just election publicity."],
+        "explanation": "Ask who transferred office to whom and when. Ask what happened during the transfer to support the description peaceful.",
+        "misconception": "Assuming a campaign leaflet proves how power was handed over.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Ask who transferred office to whom and when.",
+              "marks": 1
+            },
+            {
+              "description": "Ask what happened during the transfer to support the description peaceful.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "type": "written",
+        "difficulty": 3,
+        "skill_tag": "peaceful_handover",
+        "stem": "Two source cards describe a campaign and an inauguration. Which is better suited to checking whether an office actually changed hands?",
+        "hints": ["Look for evidence of transfer rather than just election publicity."],
+        "explanation": "The inauguration can give evidence that a new officeholder took office. A campaign alone gives no assurance of an actual transfer.",
+        "misconception": "Assuming a campaign leaflet proves how power was handed over.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "The inauguration can give evidence that a new officeholder took office.",
+              "marks": 1
+            },
+            {
+              "description": "A campaign alone gives no assurance of an actual transfer.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "type": "written",
+        "difficulty": 4,
+        "skill_tag": "peaceful_handover",
+        "stem": "Use an account of a Fourth Republic handover to identify the outgoing and incoming parties. What further detail would support describing the handover as peaceful?",
+        "hints": ["Look for evidence of transfer rather than just election publicity."],
+        "explanation": "Identify the two parties using a dated account. Point to evidence about the manner of transfer beyond simply naming the winner.",
+        "misconception": "Assuming a campaign leaflet proves how power was handed over.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Identify the two parties using a dated account.",
+              "marks": 1
+            },
+            {
+              "description": "Point to evidence about the manner of transfer beyond simply naming the winner.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "type": "mcq",
+        "difficulty": 1,
+        "skill_tag": "district_achievement",
+        "stem": "The class examines what a government did in a particular district. Which part of the enquiry is this?",
+        "options": ["Governing party", "District achievement", "Tenure", "Peaceful handover"],
+        "answer": 1,
+        "hints": ["Make sure the project, place and period match."],
+        "explanation": "The exemplar asks pupils to investigate achievements in their respective districts and connect them to evidence.",
+        "misconception": "Attributing a project to whoever appears in a recent photograph without checking its date.",
+        "distractorMisconceptions": {
+          "Governing party": "A governing party is identified by evidence of forming a government; appearing on a ballot alone is insufficient.",
+          "Tenure": "A period in office needs evidence for its dates, rather than just an election slogan.",
+          "Peaceful handover": "A transfer of office following an election illustrates a handover and is different from campaigning."
+        }
+      },
+      {
+        "type": "short_answer",
+        "difficulty": 2,
+        "skill_tag": "district_achievement",
+        "stem": "Which local area is named in the task of examining a government's achievements: a district or a continent?",
+        "answer": ["district", "a district"],
+        "hints": ["Make sure the project, place and period match."],
+        "explanation": "A district is a local focus for checking what governments did and when they did it.",
+        "misconception": "Attributing a project to whoever appears in a recent photograph without checking its date."
+      },
+      {
+        "type": "written",
+        "difficulty": 2,
+        "skill_tag": "district_achievement",
+        "stem": "Outline how to check a district project record and the relevant government dates before attributing the work.",
+        "hints": ["Make sure the project, place and period match."],
+        "explanation": "Look for the project, its location and dated stages. Compare those details with a record of the government in office.",
+        "misconception": "Attributing a project to whoever appears in a recent photograph without checking its date.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Look for the project, its location and dated stages.",
+              "marks": 1
+            },
+            {
+              "description": "Compare those details with a record of the government in office.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "type": "written",
+        "difficulty": 3,
+        "skill_tag": "district_achievement",
+        "stem": "A school block began under one administration and opened under another. Explain why a photograph of the opening tells only part of its history.",
+        "hints": ["Make sure the project, place and period match."],
+        "explanation": "The opening records a particular stage of the project. Earlier planning or construction may belong to another period.",
+        "misconception": "Attributing a project to whoever appears in a recent photograph without checking its date.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "The opening records a particular stage of the project.",
+              "marks": 1
+            },
+            {
+              "description": "Earlier planning or construction may belong to another period.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "type": "written",
+        "difficulty": 4,
+        "skill_tag": "district_achievement",
+        "stem": "Plan a short report on a district project using an assembly record and a list of governments. Explain how to credit the work fairly.",
+        "hints": ["Make sure the project, place and period match."],
+        "explanation": "Match dated project stages to the periods of the relevant governments. Leave a contribution unassigned when the evidence does not identify it.",
+        "misconception": "Attributing a project to whoever appears in a recent photograph without checking its date.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Match dated project stages to the periods of the relevant governments.",
+              "marks": 1
+            },
+            {
+              "description": "Leave a contribution unassigned when the evidence does not identify it.",
+              "marks": 1
+            }
+          ]
+        }
+      }
+    ],
+    "uncertain": [
+      "The page asks learners to identify names from class sources. Named identifications are teacher-assessed against the record used."
+    ]
+  },
+  {
+    "indicator": {
+      "subject": "History",
+      "level": "Basic 6",
+      "source_page": 46,
+      "code": "B6.6.2.1.1",
+      "strand": "Independent Ghana",
+      "sub_strand": "Military Rule",
+      "content_standard": "1. Understand that military takeovers interrupted constitutional rule on four occasions since 1966, with some consequences.",
+      "objective": "Identify the leaders of the coup d’états and names of their regimes."
+    },
+    "spec": {
+      "skills": [
+        {
+          "tag": "military_leader",
+          "description": "Military leader",
+          "minQuestions": 5
+        },
+        {
+          "tag": "regime",
+          "description": "Regime",
+          "minQuestions": 5
+        },
+        {
+          "tag": "since_1966",
+          "description": "Since 1966",
+          "minQuestions": 5
+        },
+        {
+          "tag": "identification_evidence",
+          "description": "Identification evidence",
+          "minQuestions": 5
+        }
+      ],
+      "difficultyPlan": "5 recognition, 7 simple use, 5 application and 3 challenge questions.",
+      "misconceptions": [
+        "Recording a regime name as though it were a person's surname.",
+        "Assuming an individual name alone identifies the official name of the regime.",
+        "Interpreting four occasions as four successive years starting in 1966.",
+        "Choosing the label repeated most often without checking the records."
+      ],
+      "needsTeacherAssessment": true
+    },
+    "questions": [
+      {
+        "type": "mcq",
+        "difficulty": 1,
+        "skill_tag": "military_leader",
+        "stem": "A documentary caption identifies the person who led a takeover. What belongs in the person column of an enquiry chart?",
+        "options": ["Regime", "Since 1966", "Identification evidence", "Military leader"],
+        "answer": 3,
+        "hints": ["Ask whether the label names an individual or a body."],
+        "explanation": "The name of a leader belongs in the person column, while the regime name belongs in a separate column.",
+        "misconception": "Recording a regime name as though it were a person's surname.",
+        "distractorMisconceptions": {
+          "Regime": "The regime identifies the governing administration and is distinct from its individual leader.",
+          "Since 1966": "The standard says four occasions since 1966; it does not list all their dates on this page.",
+          "Identification evidence": "A relevant dated, identified source can help resolve conflicting labels more reliably than guessing."
+        }
+      },
+      {
+        "type": "short_answer",
+        "difficulty": 1,
+        "skill_tag": "military_leader",
+        "stem": "What word belongs in a table heading for the person heading a military regime: leader or territory?",
+        "answer": ["leader"],
+        "hints": ["Ask whether the label names an individual or a body."],
+        "explanation": "A leader is a person. A regime is the administration the person headed.",
+        "misconception": "Recording a regime name as though it were a person's surname."
+      },
+      {
+        "type": "written",
+        "difficulty": 2,
+        "skill_tag": "military_leader",
+        "stem": "Construct a two-column table for verified leaders and regimes without inventing the missing names.",
+        "hints": ["Ask whether the label names an individual or a body."],
+        "explanation": "Give separate headings for the name of the person and the name of the regime. Pair names only where the record supports the link.",
+        "misconception": "Recording a regime name as though it were a person's surname.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Give separate headings for the name of the person and the name of the regime.",
+              "marks": 1
+            },
+            {
+              "description": "Pair names only where the record supports the link.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "type": "written",
+        "difficulty": 3,
+        "skill_tag": "military_leader",
+        "stem": "Use a documentary or class historical record to identify one military leader in Ghana since 1966. Give the detail that connects the person to a takeover or regime.",
+        "hints": ["Ask whether the label names an individual or a body."],
+        "explanation": "Name a leader identified by the source. Connect that name with the relevant takeover or administration and identify the supporting detail.",
+        "misconception": "Recording a regime name as though it were a person's surname.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Name a leader identified by the source.",
+              "marks": 1
+            },
+            {
+              "description": "Connect that name with the relevant takeover or administration and identify the supporting detail.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "type": "written",
+        "difficulty": 3,
+        "skill_tag": "military_leader",
+        "stem": "A caption names someone who later headed a regime. How would you check whether the person also led the original takeover?",
+        "hints": ["Ask whether the label names an individual or a body."],
+        "explanation": "Compare the dates and roles in a record of the takeover and a record of the later leadership. Avoid treating succession as proof about leadership on the first day.",
+        "misconception": "Recording a regime name as though it were a person's surname.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Compare the dates and roles in a record of the takeover and a record of the later leadership.",
+              "marks": 1
+            },
+            {
+              "description": "Avoid treating succession as proof about leadership on the first day.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "type": "mcq",
+        "difficulty": 1,
+        "skill_tag": "regime",
+        "stem": "A historical source gives the name of the military administration that ruled after a takeover. Which label describes that administration?",
+        "options": ["Regime", "Military leader", "Since 1966", "Identification evidence"],
+        "answer": 0,
+        "hints": ["Distinguish the institution from the individual."],
+        "explanation": "The regime identifies the governing administration and is distinct from its individual leader.",
+        "misconception": "Assuming an individual name alone identifies the official name of the regime.",
+        "distractorMisconceptions": {
+          "Military leader": "The name of a leader belongs in the person column, while the regime name belongs in a separate column.",
+          "Since 1966": "The standard says four occasions since 1966; it does not list all their dates on this page.",
+          "Identification evidence": "A relevant dated, identified source can help resolve conflicting labels more reliably than guessing."
+        }
+      },
+      {
+        "type": "short_answer",
+        "difficulty": 2,
+        "skill_tag": "regime",
+        "stem": "What word is used for the military administration, as distinct from its individual leader?",
+        "answer": ["regime", "a regime", "military regime"],
+        "hints": ["Distinguish the institution from the individual."],
+        "explanation": "The regime is the governing administration. It can have a name distinct from the people who led it.",
+        "misconception": "Assuming an individual name alone identifies the official name of the regime."
+      },
+      {
+        "type": "written",
+        "difficulty": 2,
+        "skill_tag": "regime",
+        "stem": "Explain why a question asking for a regime is still unanswered by a leader's name alone.",
+        "hints": ["Distinguish the institution from the individual."],
+        "explanation": "Identify the leader as a person and the regime as an administration. Explain that naming one does not supply the name of the other.",
+        "misconception": "Assuming an individual name alone identifies the official name of the regime.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Identify the leader as a person and the regime as an administration.",
+              "marks": 1
+            },
+            {
+              "description": "Explain that naming one does not supply the name of the other.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "type": "written",
+        "difficulty": 3,
+        "skill_tag": "regime",
+        "stem": "Use a class record to give the name of a Ghanaian military regime and its leader at a stated point during its rule.",
+        "hints": ["Distinguish the institution from the individual."],
+        "explanation": "Identify the regime by a verifiable name. Pair it with a leader for the period named, using the source.",
+        "misconception": "Assuming an individual name alone identifies the official name of the regime.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Identify the regime by a verifiable name.",
+              "marks": 1
+            },
+            {
+              "description": "Pair it with a leader for the period named, using the source.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "type": "written",
+        "difficulty": 4,
+        "skill_tag": "regime",
+        "stem": "Create two entries in a leader-and-regime table using a class account of military rule. Explain how you checked the pairings.",
+        "hints": ["Distinguish the institution from the individual."],
+        "explanation": "Give two specific regime names and corresponding leaders drawn from the account. Use dates or other identifying details to verify each pairing.",
+        "misconception": "Assuming an individual name alone identifies the official name of the regime.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Give two specific regime names and corresponding leaders drawn from the account.",
+              "marks": 1
+            },
+            {
+              "description": "Use dates or other identifying details to verify each pairing.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "type": "mcq",
+        "difficulty": 1,
+        "skill_tag": "since_1966",
+        "stem": "What time boundary does the standard give for its enquiry into interruptions of constitutional rule?",
+        "options": ["Military leader", "Since 1966", "Regime", "Identification evidence"],
+        "answer": 1,
+        "hints": ["A starting boundary is different from a complete list of event dates."],
+        "explanation": "The standard says four occasions since 1966; it does not list all their dates on this page.",
+        "misconception": "Interpreting four occasions as four successive years starting in 1966.",
+        "distractorMisconceptions": {
+          "Military leader": "The name of a leader belongs in the person column, while the regime name belongs in a separate column.",
+          "Regime": "The regime identifies the governing administration and is distinct from its individual leader.",
+          "Identification evidence": "A relevant dated, identified source can help resolve conflicting labels more reliably than guessing."
+        }
+      },
+      {
+        "type": "short_answer",
+        "difficulty": 2,
+        "skill_tag": "since_1966",
+        "stem": "Which year sets the starting boundary for the military takeover enquiry in the curriculum?",
+        "answer": ["1966"],
+        "hints": ["A starting boundary is different from a complete list of event dates."],
+        "explanation": "The standard begins its discussion with 1966. A starting year does not tell us the dates or names of every later regime.",
+        "misconception": "Interpreting four occasions as four successive years starting in 1966."
+      },
+      {
+        "type": "written",
+        "difficulty": 2,
+        "skill_tag": "since_1966",
+        "stem": "Write a timeline heading that preserves that limit and leaves unverified entries open.",
+        "hints": ["A starting boundary is different from a complete list of event dates."],
+        "explanation": "State military regimes since 1966 as the scope. Leave dates or names that still need a source open for investigation.",
+        "misconception": "Interpreting four occasions as four successive years starting in 1966.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "State military regimes since 1966 as the scope.",
+              "marks": 1
+            },
+            {
+              "description": "Leave dates or names that still need a source open for investigation.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "type": "written",
+        "difficulty": 3,
+        "skill_tag": "since_1966",
+        "stem": "A learner writes 1966 beside every military leader on a worksheet. Explain the error using the idea of a starting point.",
+        "hints": ["A starting boundary is different from a complete list of event dates."],
+        "explanation": "1966 gives a boundary for the overall enquiry. Each later regime needs its own evidence for when it governed.",
+        "misconception": "Interpreting four occasions as four successive years starting in 1966.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "1966 gives a boundary for the overall enquiry.",
+              "marks": 1
+            },
+            {
+              "description": "Each later regime needs its own evidence for when it governed.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "type": "written",
+        "difficulty": 4,
+        "skill_tag": "since_1966",
+        "stem": "Plan a chronological display using verified names and dates from a class source on Ghanaian military regimes. What will you do if two leaders appear under one regime?",
+        "hints": ["A starting boundary is different from a complete list of event dates."],
+        "explanation": "Order the entries using the dated source. Distinguish changes of leader from the creation of a separate regime.",
+        "misconception": "Interpreting four occasions as four successive years starting in 1966.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Order the entries using the dated source.",
+              "marks": 1
+            },
+            {
+              "description": "Distinguish changes of leader from the creation of a separate regime.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "type": "mcq",
+        "difficulty": 1,
+        "skill_tag": "identification_evidence",
+        "stem": "Two classroom notes give different names for the same regime. What is needed before completing the table?",
+        "options": ["Military leader", "Regime", "Identification evidence", "Since 1966"],
+        "answer": 2,
+        "hints": ["Check the date and event attached to each name."],
+        "explanation": "A relevant dated, identified source can help resolve conflicting labels more reliably than guessing.",
+        "misconception": "Choosing the label repeated most often without checking the records.",
+        "distractorMisconceptions": {
+          "Military leader": "The name of a leader belongs in the person column, while the regime name belongs in a separate column.",
+          "Regime": "The regime identifies the governing administration and is distinct from its individual leader.",
+          "Since 1966": "The standard says four occasions since 1966; it does not list all their dates on this page."
+        }
+      },
+      {
+        "type": "short_answer",
+        "difficulty": 2,
+        "skill_tag": "identification_evidence",
+        "stem": "What kind of source is a film that uses historical evidence to examine a real military takeover?",
+        "answer": ["documentary", "a documentary", "documentary film"],
+        "hints": ["Check the date and event attached to each name."],
+        "explanation": "A documentary can help identify people and administrations when its captions, dates and sources are checked.",
+        "misconception": "Choosing the label repeated most often without checking the records."
+      },
+      {
+        "type": "written",
+        "difficulty": 2,
+        "skill_tag": "identification_evidence",
+        "stem": "Make a checklist for checking a documentary caption against another suitable historical record.",
+        "hints": ["Check the date and event attached to each name."],
+        "explanation": "Check the source and date of the caption. Compare its event, leader and regime with another identified historical record.",
+        "misconception": "Choosing the label repeated most often without checking the records.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Check the source and date of the caption.",
+              "marks": 1
+            },
+            {
+              "description": "Compare its event, leader and regime with another identified historical record.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "type": "written",
+        "difficulty": 3,
+        "skill_tag": "identification_evidence",
+        "stem": "Two class sources spell a leader's name differently. Explain which details can help check whether they refer to the same person.",
+        "hints": ["Check the date and event attached to each name."],
+        "explanation": "Compare the regime, role and date attached to each spelling. Check the name against an identified source before changing a label.",
+        "misconception": "Choosing the label repeated most often without checking the records.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Compare the regime, role and date attached to each spelling.",
+              "marks": 1
+            },
+            {
+              "description": "Check the name against an identified source before changing a label.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "type": "written",
+        "difficulty": 4,
+        "skill_tag": "identification_evidence",
+        "stem": "A historical film shows a person in uniform without a caption. Describe how you would decide whether to identify the person as a particular military leader.",
+        "hints": ["Check the date and event attached to each name."],
+        "explanation": "Look for a credited identification or another documented image. Match the event and date and leave the identity unconfirmed if the evidence stays unclear.",
+        "misconception": "Choosing the label repeated most often without checking the records.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Look for a credited identification or another documented image.",
+              "marks": 1
+            },
+            {
+              "description": "Match the event and date and leave the identity unconfirmed if the evidence stays unclear.",
+              "marks": 1
+            }
+          ]
+        }
+      }
+    ],
+    "uncertain": [
+      "The page asks learners to identify names from class sources. Named identifications are teacher-assessed against the record used."
+    ]
+  },
+  {
+    "indicator": {
+      "subject": "History",
+      "level": "Basic 6",
+      "source_page": 46,
+      "code": "B6.6.2.2.2",
+      "strand": "Independent Ghana",
+      "sub_strand": "Military Rule",
+      "content_standard": "1. Understand that military takeovers interrupted constitutional rule on four occasions since 1966, with some consequences.",
+      "objective": "Assess the consequences of military takeovers on Ghana’s development"
+    },
+    "spec": {
+      "skills": [
+        {
+          "tag": "interrupted_constitutional_rule",
+          "description": "Interrupted constitutional rule",
+          "minQuestions": 5
+        },
+        {
+          "tag": "human_rights_abuse",
+          "description": "Human rights abuse",
+          "minQuestions": 5
+        },
+        {
+          "tag": "harsh_rules",
+          "description": "Harsh rules",
+          "minQuestions": 5
+        },
+        {
+          "tag": "assessing_consequences",
+          "description": "Assessing consequences",
+          "minQuestions": 5
+        }
+      ],
+      "difficultyPlan": "5 recognition, 7 simple use, 5 application and 3 challenge questions.",
+      "misconceptions": [
+        "Treating a takeover as the normal completion of an electoral term.",
+        "Attributing a specific incident to a named person without any supporting evidence.",
+        "Presenting an invented classroom regulation as an actual decree.",
+        "Treating a list of effects as a reasoned assessment of their significance."
+      ],
+      "needsTeacherAssessment": true
+    },
+    "questions": [
+      {
+        "type": "mcq",
+        "difficulty": 1,
+        "skill_tag": "interrupted_constitutional_rule",
+        "stem": "Which consequence refers specifically to the break in a country's existing constitutional government?",
+        "options": [
+          "Interrupted constitutional rule",
+          "Human rights abuse",
+          "Harsh rules",
+          "Assessing consequences"
+        ],
+        "answer": 0,
+        "hints": ["Identify what happened to the governing framework."],
+        "explanation": "The standard states that military takeovers interrupted constitutional rule on four occasions since 1966.",
+        "misconception": "Treating a takeover as the normal completion of an electoral term.",
+        "distractorMisconceptions": {
+          "Human rights abuse": "The exemplar includes human rights abuse among effects to investigate.",
+          "Harsh rules": "The source identifies the imposition of harsh rules as an effect to examine.",
+          "Assessing consequences": "Assessment weighs a consequence against evidence and explains its significance for people or institutions."
+        }
+      },
+      {
+        "type": "short_answer",
+        "difficulty": 1,
+        "skill_tag": "interrupted_constitutional_rule",
+        "stem": "Which kind of rule does the standard say military takeovers interrupted: constitutional or hereditary?",
+        "answer": ["constitutional", "constitutional rule"],
+        "hints": ["Identify what happened to the governing framework."],
+        "explanation": "The curriculum asks how military takeovers interrupted constitutional rule, changing the path through which power was exercised.",
+        "misconception": "Treating a takeover as the normal completion of an electoral term."
+      },
+      {
+        "type": "written",
+        "difficulty": 2,
+        "skill_tag": "interrupted_constitutional_rule",
+        "stem": "Use a simple diagram to show an existing constitutional arrangement and an interruption, without inventing details of one regime.",
+        "hints": ["Identify what happened to the governing framework."],
+        "explanation": "First show rule conducted under a constitutional framework. Then mark a military interruption of that framework as a change in how power is held.",
+        "misconception": "Treating a takeover as the normal completion of an electoral term.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "First show rule conducted under a constitutional framework.",
+              "marks": 1
+            },
+            {
+              "description": "Then mark a military interruption of that framework as a change in how power is held.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "type": "written",
+        "difficulty": 3,
+        "skill_tag": "interrupted_constitutional_rule",
+        "stem": "Explain why an election and a takeover can both change those in government but have different effects on constitutional rule.",
+        "hints": ["Identify what happened to the governing framework."],
+        "explanation": "An election uses the existing rules for choosing leaders. A takeover can break or suspend that constitutional process.",
+        "misconception": "Treating a takeover as the normal completion of an electoral term.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "An election uses the existing rules for choosing leaders.",
+              "marks": 1
+            },
+            {
+              "description": "A takeover can break or suspend that constitutional process.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "type": "written",
+        "difficulty": 3,
+        "skill_tag": "interrupted_constitutional_rule",
+        "stem": "A class debate asks whether the effects of a takeover end on the day leaders change. Give a reasoned answer using the idea of constitutional interruption.",
+        "hints": ["Identify what happened to the governing framework."],
+        "explanation": "Identify a change to the rules by which people are governed. Explain how this may continue affecting institutions after the day of the takeover.",
+        "misconception": "Treating a takeover as the normal completion of an electoral term.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Identify a change to the rules by which people are governed.",
+              "marks": 1
+            },
+            {
+              "description": "Explain how this may continue affecting institutions after the day of the takeover.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "type": "mcq",
+        "difficulty": 1,
+        "skill_tag": "human_rights_abuse",
+        "stem": "Which concern in the curriculum directly addresses how people may be treated under military rule?",
+        "options": [
+          "Interrupted constitutional rule",
+          "Human rights abuse",
+          "Harsh rules",
+          "Assessing consequences"
+        ],
+        "answer": 1,
+        "hints": [
+          "Distinguish a general consequence named for study from evidence about a particular incident."
+        ],
+        "explanation": "The exemplar includes human rights abuse among effects to investigate.",
+        "misconception": "Attributing a specific incident to a named person without any supporting evidence.",
+        "distractorMisconceptions": {
+          "Interrupted constitutional rule": "The standard states that military takeovers interrupted constitutional rule on four occasions since 1966.",
+          "Harsh rules": "The source identifies the imposition of harsh rules as an effect to examine.",
+          "Assessing consequences": "Assessment weighs a consequence against evidence and explains its significance for people or institutions."
+        }
+      },
+      {
+        "type": "short_answer",
+        "difficulty": 2,
+        "skill_tag": "human_rights_abuse",
+        "stem": "What two-word expression names the freedoms and protections discussed in the lesson on abuses? Complete “human ____”.",
+        "answer": ["rights"],
+        "hints": [
+          "Distinguish a general consequence named for study from evidence about a particular incident."
+        ],
+        "explanation": "The expression is human rights. An abuse is a failure to respect or protect these rights.",
+        "misconception": "Attributing a specific incident to a named person without any supporting evidence."
+      },
+      {
+        "type": "written",
+        "difficulty": 2,
+        "skill_tag": "human_rights_abuse",
+        "stem": "Write a question about the evidence needed before making a claim about a rights abuse in one historical case.",
+        "hints": [
+          "Distinguish a general consequence named for study from evidence about a particular incident."
+        ],
+        "explanation": "Identify a right or an experience that requires investigation. Ask what dated account would connect the claim to a specific case.",
+        "misconception": "Attributing a specific incident to a named person without any supporting evidence.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Identify a right or an experience that requires investigation.",
+              "marks": 1
+            },
+            {
+              "description": "Ask what dated account would connect the claim to a specific case.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "type": "written",
+        "difficulty": 3,
+        "skill_tag": "human_rights_abuse",
+        "stem": "A fictional account says residents were prevented from expressing complaints. Explain which question about rights this raises.",
+        "hints": [
+          "Distinguish a general consequence named for study from evidence about a particular incident."
+        ],
+        "explanation": "Ask whether people were able to express concerns freely. Seek evidence of what happened and who was affected before making a historical claim.",
+        "misconception": "Attributing a specific incident to a named person without any supporting evidence.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Ask whether people were able to express concerns freely.",
+              "marks": 1
+            },
+            {
+              "description": "Seek evidence of what happened and who was affected before making a historical claim.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "type": "written",
+        "difficulty": 4,
+        "skill_tag": "human_rights_abuse",
+        "stem": "Plan an evidence-based paragraph about a rights concern under military rule. What information would you need before linking it to one named regime?",
+        "hints": [
+          "Distinguish a general consequence named for study from evidence about a particular incident."
+        ],
+        "explanation": "Identify the right and a documented example of what people experienced. Check the date and administration before attributing responsibility.",
+        "misconception": "Attributing a specific incident to a named person without any supporting evidence.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Identify the right and a documented example of what people experienced.",
+              "marks": 1
+            },
+            {
+              "description": "Check the date and administration before attributing responsibility.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "type": "mcq",
+        "difficulty": 1,
+        "skill_tag": "harsh_rules",
+        "stem": "Which example concerns restrictive rules imposed under military rule?",
+        "options": [
+          "Interrupted constitutional rule",
+          "Human rights abuse",
+          "Harsh rules",
+          "Assessing consequences"
+        ],
+        "answer": 2,
+        "hints": ["A practice illustration is different from a documented historical rule."],
+        "explanation": "The source identifies the imposition of harsh rules as an effect to examine.",
+        "misconception": "Presenting an invented classroom regulation as an actual decree.",
+        "distractorMisconceptions": {
+          "Interrupted constitutional rule": "The standard states that military takeovers interrupted constitutional rule on four occasions since 1966.",
+          "Human rights abuse": "The exemplar includes human rights abuse among effects to investigate.",
+          "Assessing consequences": "Assessment weighs a consequence against evidence and explains its significance for people or institutions."
+        }
+      },
+      {
+        "type": "short_answer",
+        "difficulty": 2,
+        "skill_tag": "harsh_rules",
+        "stem": "Which word describes a severe restriction in the curriculum phrase “_____ rules”?",
+        "answer": ["harsh"],
+        "hints": ["A practice illustration is different from a documented historical rule."],
+        "explanation": "The phrase refers to harsh rules. To assess an effect we need evidence about what a rule changed for people.",
+        "misconception": "Presenting an invented classroom regulation as an actual decree."
+      },
+      {
+        "type": "written",
+        "difficulty": 2,
+        "skill_tag": "harsh_rules",
+        "stem": "Create a clearly marked fictional rule and explain what evidence a historian would need before saying such a rule actually existed.",
+        "hints": ["A practice illustration is different from a documented historical rule."],
+        "explanation": "Label the proposed example of a harsh rule as fictional. Name a real decree or historical account as evidence needed to establish a historical rule.",
+        "misconception": "Presenting an invented classroom regulation as an actual decree.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Label the proposed example of a harsh rule as fictional.",
+              "marks": 1
+            },
+            {
+              "description": "Name a real decree or historical account as evidence needed to establish a historical rule.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "type": "written",
+        "difficulty": 3,
+        "skill_tag": "harsh_rules",
+        "stem": "Explain why reading the wording of a rule and examining how it affected people are different tasks.",
+        "hints": ["A practice illustration is different from a documented historical rule."],
+        "explanation": "The text records what was required or forbidden. Accounts of enforcement can show what people actually experienced.",
+        "misconception": "Presenting an invented classroom regulation as an actual decree.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "The text records what was required or forbidden.",
+              "marks": 1
+            },
+            {
+              "description": "Accounts of enforcement can show what people actually experienced.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "type": "written",
+        "difficulty": 4,
+        "skill_tag": "harsh_rules",
+        "stem": "Two people describe a harsh rule differently. How can you examine its consequences without assuming either story covers the whole country?",
+        "hints": ["A practice illustration is different from a documented historical rule."],
+        "explanation": "Identify each person's position, place and period. Compare accounts and other evidence before deciding how widespread an effect was.",
+        "misconception": "Presenting an invented classroom regulation as an actual decree.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Identify each person's position, place and period.",
+              "marks": 1
+            },
+            {
+              "description": "Compare accounts and other evidence before deciding how widespread an effect was.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "type": "mcq",
+        "difficulty": 1,
+        "skill_tag": "assessing_consequences",
+        "stem": "A debate asks pupils to judge how takeovers affected development. What skill goes beyond listing examples?",
+        "options": [
+          "Interrupted constitutional rule",
+          "Human rights abuse",
+          "Harsh rules",
+          "Assessing consequences"
+        ],
+        "answer": 3,
+        "hints": ["Ask what difference the stated consequence made and how you know."],
+        "explanation": "Assessment weighs a consequence against evidence and explains its significance for people or institutions.",
+        "misconception": "Treating a list of effects as a reasoned assessment of their significance.",
+        "distractorMisconceptions": {
+          "Interrupted constitutional rule": "The standard states that military takeovers interrupted constitutional rule on four occasions since 1966.",
+          "Human rights abuse": "The exemplar includes human rights abuse among effects to investigate.",
+          "Harsh rules": "The source identifies the imposition of harsh rules as an effect to examine."
+        }
+      },
+      {
+        "type": "short_answer",
+        "difficulty": 2,
+        "skill_tag": "assessing_consequences",
+        "stem": "What word means an effect that follows an event?",
+        "answer": ["consequence", "a consequence", "result", "an outcome", "outcome"],
+        "hints": ["Ask what difference the stated consequence made and how you know."],
+        "explanation": "A consequence is an effect. Assessing consequences means explaining why an effect mattered, using evidence.",
+        "misconception": "Treating a list of effects as a reasoned assessment of their significance."
+      },
+      {
+        "type": "written",
+        "difficulty": 2,
+        "skill_tag": "assessing_consequences",
+        "stem": "Present a brief assessment connecting a supported effect to development; mark any broader claim that needs more evidence.",
+        "hints": ["Ask what difference the stated consequence made and how you know."],
+        "explanation": "Identify a relevant and supported effect on people or institutions. Explain its significance for development and distinguish claims still needing evidence.",
+        "misconception": "Treating a list of effects as a reasoned assessment of their significance.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Identify a relevant and supported effect on people or institutions.",
+              "marks": 1
+            },
+            {
+              "description": "Explain its significance for development and distinguish claims still needing evidence.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "type": "written",
+        "difficulty": 3,
+        "skill_tag": "assessing_consequences",
+        "stem": "A pupil lists “harsh rules, abuses, interrupted government”. Add a sentence that turns one item into an explanation of a possible effect.",
+        "hints": ["Ask what difference the stated consequence made and how you know."],
+        "explanation": "Select a named consequence. Connect it to a change in people's rights, daily decisions or institutions.",
+        "misconception": "Treating a list of effects as a reasoned assessment of their significance.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Select a named consequence.",
+              "marks": 1
+            },
+            {
+              "description": "Connect it to a change in people's rights, daily decisions or institutions.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "type": "written",
+        "difficulty": 4,
+        "skill_tag": "assessing_consequences",
+        "stem": "Prepare a short history debate statement on how military takeovers affected Ghana's development. Support a judgement and acknowledge an evidence limit.",
+        "hints": ["Ask what difference the stated consequence made and how you know."],
+        "explanation": "Make a judgement tied to a documented consequence such as disrupted constitutional rule. Explain its significance and identify a limit on the claim's reach.",
+        "misconception": "Treating a list of effects as a reasoned assessment of their significance.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Make a judgement tied to a documented consequence such as disrupted constitutional rule.",
+              "marks": 1
+            },
+            {
+              "description": "Explain its significance and identify a limit on the claim's reach.",
+              "marks": 1
+            }
+          ]
+        }
+      }
+    ],
+    "uncertain": []
+  }
+]

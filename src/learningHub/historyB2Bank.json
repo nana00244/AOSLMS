@@ -1,0 +1,2146 @@
+[
+  {
+    "indicator": {
+      "code": "B2.2.1.1.1",
+      "subject": "History",
+      "level": "Basic 2",
+      "strand": "My Country Ghana",
+      "sub_strand": "The People of Ghana",
+      "content_standard": "B2.2.1.1. Demonstrate knowledge of the ethnic groups in Ghana",
+      "objective": "Identify the ethnic groups in each region in Ghana",
+      "source_page": 10
+    },
+    "spec": {
+      "skills": [
+        {
+          "tag": "regions_and_people",
+          "description": "Tell the name of a region from the name of a people.",
+          "minQuestions": 5
+        },
+        {
+          "tag": "region_examples",
+          "description": "Match named groups with regions using examples.",
+          "minQuestions": 5
+        },
+        {
+          "tag": "read_a_map",
+          "description": "Use a map key or caption to locate an ethnic group.",
+          "minQuestions": 5
+        },
+        {
+          "tag": "local_enquiry",
+          "description": "Use local accounts and records to identify groups fairly.",
+          "minQuestions": 5
+        }
+      ],
+      "difficultyPlan": "5 recall, 7 simple use, 5 application and 3 challenge questions.",
+      "misconceptions": [
+        "A town, a region and a people can have different names.",
+        "A group can have roots in a region and also live elsewhere.",
+        "A map symbol gets its meaning from the key.",
+        "Clothes, names or appearances alone do not establish a person's ethnic group."
+      ],
+      "needsTeacherAssessment": true
+    },
+    "questions": [
+      {
+        "skill_tag": "regions_and_people",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "Three map cards say “Kumasi city”, “Ashanti Region” and “Asante people”. Which name belongs on a list of regions?",
+        "hints": ["Read the kind of place or people named on each card."],
+        "explanation": "Ashanti is a region. Asante is the name of a people with deep roots there.",
+        "misconception": "A town, a region and a people can have different names.",
+        "options": ["Asante", "Kumasi", "Ashanti", "Ghana"],
+        "answer": 2,
+        "distractorMisconceptions": {
+          "Asante": "The Asante are a people.",
+          "Kumasi": "Kumasi is a city in Ashanti.",
+          "Ghana": "Ghana is the country that contains the regions."
+        }
+      },
+      {
+        "skill_tag": "regions_and_people",
+        "type": "short_answer",
+        "difficulty": 1,
+        "stem": "A class card reads “Ga people, Greater Accra Region”. Copy the name of the people.",
+        "hints": ["Find the word just before “people”."],
+        "explanation": "Ga names the people. Greater Accra names a region where many Ga people live.",
+        "misconception": "A town, a region and a people can have different names.",
+        "answer": ["ga", "ga people", "the ga", "the ga people"]
+      },
+      {
+        "skill_tag": "regions_and_people",
+        "type": "oral",
+        "difficulty": 2,
+        "stem": "Say which is the region and which is the group in “many Fante people live in Central Region”.",
+        "hints": ["Listen to the words that follow each name."],
+        "explanation": "Fante names a people. Central Region is one place where many Fante families live.",
+        "misconception": "A town, a region and a people can have different names.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Names Fante as the group.",
+              "marks": 1
+            },
+            {
+              "description": "Names Central as the region.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "regions_and_people",
+        "type": "drawing",
+        "difficulty": 3,
+        "stem": "Your class map shows an Anlo Ewe community in Volta Region. Make one label for the region and one for the community.",
+        "hints": ["One label describes the area and the other names people."],
+        "explanation": "The area label can read Volta. A second label can show an example such as Anlo Ewe.",
+        "misconception": "A town, a region and a people can have different names.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Labels the area Volta Region.",
+              "marks": 1
+            },
+            {
+              "description": "Adds an accurately identified group, such as Anlo Ewe.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "regions_and_people",
+        "type": "oral",
+        "difficulty": 4,
+        "stem": "A pupil says that every child in the Ashanti Region must be Asante. What could you say? Give an example.",
+        "hints": ["Think of families who move to a new town."],
+        "explanation": "Many Asante people live in Ashanti. A Ga family can also make its home there.",
+        "misconception": "A town, a region and a people can have different names.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Explains that several ethnic groups can live in a region.",
+              "marks": 1
+            },
+            {
+              "description": "Gives a possible example without guessing a classmate’s ethnicity.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "region_examples",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "A map note says that Dagomba communities live around Yendi in Northern Region. Which pair gives the people and their region?",
+        "hints": ["Use the words that come before “communities” and before “Region”."],
+        "explanation": "The Dagomba people of Dagbon have long lived in what is now the Northern Region.",
+        "misconception": "A group can have roots in a region and also live elsewhere.",
+        "options": ["Dagomba — Northern", "Dagbon — Yendi", "Yendi — Dagomba", "Northern — Yendi"],
+        "answer": 0,
+        "distractorMisconceptions": {
+          "Dagbon — Yendi": "Dagbon is a kingdom and Yendi is a town. The answer needs a people and a region.",
+          "Yendi — Dagomba": "Yendi names a town and Dagomba names a people.",
+          "Northern — Yendi": "This pairs a region with a town."
+        }
+      },
+      {
+        "skill_tag": "region_examples",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "A card shows “Sefwi — Western North” and “Nzema — Western”. Where should the Sefwi label go?",
+        "hints": ["Follow the full name on the Sefwi card."],
+        "explanation": "Western North is the region on the Sefwi card. Western is a separate region on this map.",
+        "misconception": "A group can have roots in a region and also live elsewhere.",
+        "options": [
+          "Western Region",
+          "Northern Region",
+          "North East Region",
+          "Western North Region"
+        ],
+        "answer": 3,
+        "distractorMisconceptions": {
+          "Western Region": "This is the region on the Nzema card.",
+          "Northern Region": "Northern is a different region from Western North.",
+          "North East Region": "Sharing the word North does not make the names alike."
+        }
+      },
+      {
+        "skill_tag": "region_examples",
+        "type": "oral",
+        "difficulty": 2,
+        "stem": "Match the first name to the second in each pair: “Kwahu — Eastern” and “Bono — Bono”. What does each pair tell us?",
+        "hints": ["Use a sentence that says who lives where."],
+        "explanation": "Many Kwahu people live in Eastern Region. Bono communities live in Bono Region, where the people and the region share a name.",
+        "misconception": "A group can have roots in a region and also live elsewhere.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "States the correct Eastern Region example.",
+              "marks": 1
+            },
+            {
+              "description": "States the correct Bono Region example.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "region_examples",
+        "type": "practical",
+        "difficulty": 3,
+        "stem": "Your class key shows Akan communities in Ahafo and Bono East, and Guan communities in Oti. Make a label for each of the three regions and read your labels to a partner.",
+        "hints": ["More than one place can share a group label."],
+        "explanation": "Akan communities live in both Ahafo and Bono East. Guan communities are among the people who live in Oti.",
+        "misconception": "A group can have roots in a region and also live elsewhere.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Places Akan community labels in both named regions.",
+              "marks": 1
+            },
+            {
+              "description": "Pairs Guan communities with Oti and reads the labels correctly.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "region_examples",
+        "type": "written",
+        "difficulty": 4,
+        "stem": "Kofi puts “Gonja” in a box called “a region”. His two cards say “Gonja people” and “Savannah Region”. Rewrite the labels and explain your change.",
+        "hints": ["What does each name tell a map reader?"],
+        "explanation": "One box can say “People: Gonja”. The other can say “Region: Savannah”. The pair names a people and a place where many live.",
+        "misconception": "A group can have roots in a region and also live elsewhere.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Places both names in their proper boxes.",
+              "marks": 1
+            },
+            {
+              "description": "Explains why the labels mean different things.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "read_a_map",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "Which part of a map tells what its coloured dots mean?",
+        "hints": ["Look for the part that explains symbols."],
+        "explanation": "The key lists the symbols and their meanings. It tells you which group each dot stands for.",
+        "misconception": "A map symbol gets its meaning from the key.",
+        "options": ["The date", "The key", "The title", "The border"],
+        "answer": 1,
+        "distractorMisconceptions": {
+          "The date": "The date says when the map was made.",
+          "The title": "The title names the topic of the whole map.",
+          "The border": "The border shows an edge."
+        }
+      },
+      {
+        "skill_tag": "read_a_map",
+        "type": "short_answer",
+        "difficulty": 2,
+        "stem": "Your map key says a triangle means Mamprusi people. You see a triangle in North East Region. Which people does it mark?",
+        "hints": ["Read the symbol before you read the place name."],
+        "explanation": "The triangle means Mamprusi. The triangle’s place on this map gives an example of a Mamprusi community in North East Region.",
+        "misconception": "A map symbol gets its meaning from the key.",
+        "answer": ["mamprusi", "mamprusi people", "the mamprusi", "mamprusi community"]
+      },
+      {
+        "skill_tag": "read_a_map",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "A star marks a Dagaaba community in Upper West. A circle marks a Frafra community in Upper East. Which label belongs beside the circle?",
+        "hints": ["Find the sentence that tells what the circle means."],
+        "explanation": "The circle is the Frafra example in Upper East. The star belongs to the other example.",
+        "misconception": "A map symbol gets its meaning from the key.",
+        "options": [
+          "Frafra in Upper East",
+          "Dagaaba in Upper East",
+          "Frafra in Upper West",
+          "Dagaaba in Upper West"
+        ],
+        "answer": 0,
+        "distractorMisconceptions": {
+          "Dagaaba in Upper East": "This keeps the circle’s region but takes the star’s group.",
+          "Frafra in Upper West": "This keeps the circle’s group but takes the star’s region.",
+          "Dagaaba in Upper West": "This is the label for the star."
+        }
+      },
+      {
+        "skill_tag": "read_a_map",
+        "type": "practical",
+        "difficulty": 3,
+        "stem": "Use paper circles for two Ewe communities, one in Volta and one in Greater Accra. Make a key so a friend can read your map.",
+        "hints": ["Use the same symbol for both communities."],
+        "explanation": "Two circles can mark two communities in different regions. One key can explain both circles.",
+        "misconception": "A map symbol gets its meaning from the key.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Places one circle under each correct region label.",
+              "marks": 1
+            },
+            {
+              "description": "Makes a key that identifies both circles as Ewe communities.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "read_a_map",
+        "type": "oral",
+        "difficulty": 3,
+        "stem": "A map has no key. A pupil says a blue dot in Oti must mean a Guan community. What would you check before agreeing?",
+        "hints": ["Find out who chose that colour and what it stands for."],
+        "explanation": "Guan communities live in Oti, but a blue dot could mean something else. The maker’s key or caption would tell you.",
+        "misconception": "A map symbol gets its meaning from the key.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Explains why the dot alone is not enough.",
+              "marks": 1
+            },
+            {
+              "description": "Names a suitable source for the meaning of the dot.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "local_enquiry",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "Which class question could help find out about groups in a town?",
+        "hints": ["Choose a question about people and their communities."],
+        "explanation": "Asking community members which groups have homes there can lead to names that the class can check.",
+        "misconception": "Clothes, names or appearances alone do not establish a person's ethnic group.",
+        "options": [
+          "Which road is longest?",
+          "Which roof is highest?",
+          "Which groups have homes here?",
+          "Which bus is fastest?"
+        ],
+        "answer": 2,
+        "distractorMisconceptions": {
+          "Which road is longest?": "Road length does not identify a group.",
+          "Which roof is highest?": "A building's height does not tell who lives in the town.",
+          "Which bus is fastest?": "Travel speed does not name any group."
+        }
+      },
+      {
+        "skill_tag": "local_enquiry",
+        "type": "short_answer",
+        "difficulty": 2,
+        "stem": "A town guide says, “Many Ga and Dangme families live in Greater Accra.” Which group name comes after Ga?",
+        "hints": ["Follow the two names joined by “and”."],
+        "explanation": "The guide names Ga and Dangme families. Dangme is the second group named.",
+        "misconception": "Clothes, names or appearances alone do not establish a person's ethnic group.",
+        "answer": ["dangme", "dangme families", "dangme people", "the dangme"]
+      },
+      {
+        "skill_tag": "local_enquiry",
+        "type": "oral",
+        "difficulty": 2,
+        "stem": "A neighbour tells you the name of a group that lives in your region. Ask a polite question to learn where to put it on a map.",
+        "hints": ["Try asking about the town or part of the region."],
+        "explanation": "Asking “Which town has a community you know about?” gives the class a place for its map label.",
+        "misconception": "Clothes, names or appearances alone do not establish a person's ethnic group.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Poses a respectful question.",
+              "marks": 1
+            },
+            {
+              "description": "Asks for a location connected to the group.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "local_enquiry",
+        "type": "drawing",
+        "difficulty": 3,
+        "stem": "A guide says that Ga and Ewe families live in one town. Draw the town as one box. Add labels that keep both groups on your map.",
+        "hints": ["There can be two labels inside one boundary."],
+        "explanation": "A single town box can contain both Ga and Ewe labels. A boundary does not divide people automatically.",
+        "misconception": "Clothes, names or appearances alone do not establish a person's ethnic group.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Represents one town.",
+              "marks": 1
+            },
+            {
+              "description": "Places both group names within it.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "local_enquiry",
+        "type": "written",
+        "difficulty": 4,
+        "stem": "Your class has heard from just one family about one region. What can you put on your display now, and how can you add other groups later?",
+        "hints": ["Separate the example you have from the ones you still need."],
+        "explanation": "Name the community the family described. Then ask other people or check a map with a key before adding more labels.",
+        "misconception": "Clothes, names or appearances alone do not establish a person's ethnic group.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Describes one supported entry for the display.",
+              "marks": 1
+            },
+            {
+              "description": "Identifies a reasonable way to check an additional group.",
+              "marks": 1
+            }
+          ]
+        }
+      }
+    ],
+    "questionCount": 20,
+    "teacherAssessedCount": 11,
+    "excludedMcqCount": 0,
+    "uncertain": [
+      "Printed page 10 gives the same indicator code to the region-matching and characteristics objectives.",
+      "The curriculum does not list regional matches or dates of creation. Map exercises give their own keys and do not score an unsupported sequence of regions."
+    ]
+  },
+  {
+    "indicator": {
+      "code": "B2.2.1.1.1",
+      "subject": "History",
+      "level": "Basic 2",
+      "strand": "My Country Ghana",
+      "sub_strand": "The People of Ghana",
+      "content_standard": "B2.2.1.1. Show understanding of the characteristics of some of the ethnic groups in Ghana",
+      "objective": "State the characteristics of the ethnic groups in Ghana",
+      "source_page": 10
+    },
+    "spec": {
+      "skills": [
+        {
+          "tag": "festivals_and_memory",
+          "description": "Connect festivals to communities and the events they remember.",
+          "minQuestions": 5
+        },
+        {
+          "tag": "food_and_cloth",
+          "description": "Identify examples of food and dress and the skills behind them.",
+          "minQuestions": 5
+        },
+        {
+          "tag": "language_and_community",
+          "description": "Recognise language and leadership as aspects of community life.",
+          "minQuestions": 5
+        },
+        {
+          "tag": "observe_and_compare",
+          "description": "Describe what a source shows and make fair comparisons.",
+          "minQuestions": 5
+        }
+      ],
+      "difficultyPlan": "5 recall, 7 simple use, 5 application and 3 challenge questions.",
+      "misconceptions": [
+        "A festival can tell a story about the past as well as bring people together.",
+        "Foods and cloth can be shared by people of several backgrounds.",
+        "One example of a language or leader does not describe every person.",
+        "A short film or photograph shows one example, not every family's habits."
+      ],
+      "needsTeacherAssessment": true
+    },
+    "questions": [
+      {
+        "skill_tag": "festivals_and_memory",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "A Ga festival poster reads “Homowo: remembering how our people overcame hunger”. Which word gives the festival’s name?",
+        "hints": ["Look for the name at the head of the poster."],
+        "explanation": "Homowo remembers hunger in the past and the good harvest that followed.",
+        "misconception": "A festival can tell a story about the past as well as bring people together.",
+        "options": ["Harvest", "Homowo", "Festival", "Hunger"],
+        "answer": 1,
+        "distractorMisconceptions": {
+          "Hunger": "Hunger is the hardship remembered.",
+          "Harvest": "A harvest is an event in the story.",
+          "Festival": "Festival names a kind of celebration."
+        }
+      },
+      {
+        "skill_tag": "festivals_and_memory",
+        "type": "short_answer",
+        "difficulty": 1,
+        "stem": "Anlo families celebrate Hogbetsotso. Copy the name of their festival.",
+        "hints": ["Find the word naming the celebration."],
+        "explanation": "Hogbetsotso is the festival. Anlo is the name of the community in this sentence.",
+        "misconception": "A festival can tell a story about the past as well as bring people together.",
+        "answer": ["hogbetsotso", "hogbetsotso za", "hogbetsotso festival"]
+      },
+      {
+        "skill_tag": "festivals_and_memory",
+        "type": "oral",
+        "difficulty": 2,
+        "stem": "A guide says Hogbetsotso remembers a journey by Anlo ancestors. Tell a friend whose story it is and what it remembers.",
+        "hints": ["Think of who travelled long ago."],
+        "explanation": "The story belongs to the Anlo community. The festival remembers their ancestors' journey away from Notsie.",
+        "misconception": "A festival can tell a story about the past as well as bring people together.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Names the Anlo or Anlo Ewe community.",
+              "marks": 1
+            },
+            {
+              "description": "Describes the memory of the ancestors' journey.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "festivals_and_memory",
+        "type": "drawing",
+        "difficulty": 3,
+        "stem": "A Ga speaker says, “At Homowo we remember hunger and the harvest that followed.” Make a poster about what the speaker remembers.",
+        "hints": ["You might use a picture of food or a harvest."],
+        "explanation": "A drawing of a good harvest can tell how Ga people remember overcoming hunger.",
+        "misconception": "A festival can tell a story about the past as well as bring people together.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Adds a feature linked to Homowo.",
+              "marks": 1
+            },
+            {
+              "description": "Explains its connection to the memory of overcoming hunger.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "festivals_and_memory",
+        "type": "written",
+        "difficulty": 4,
+        "stem": "A Ga speaker links Homowo to surviving hunger. An Anlo speaker links Hogbetsotso to a journey. A display calls both “a harvest story”. Fix the captions using what each speaker said.",
+        "hints": ["One story is about hunger and harvest. The other is about a journey."],
+        "explanation": "Homowo recalls the Ga people's experience of hunger and harvest. Hogbetsotso recalls the journey of Anlo ancestors.",
+        "misconception": "A festival can tell a story about the past as well as bring people together.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Correctly matches Homowo to the Ga memory.",
+              "marks": 1
+            },
+            {
+              "description": "Correctly matches Hogbetsotso to the Anlo memory.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "food_and_cloth",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "A weaver shows the class strips of kente and says she will join them to make something to wear. Which item will the strips become?",
+        "hints": ["Think about where a person might wear the finished work."],
+        "explanation": "A weaver joins woven strips into cloth. Kente can be worn at special occasions.",
+        "misconception": "Foods and cloth can be shared by people of several backgrounds.",
+        "options": ["A clay pot", "A bead necklace", "A wooden stool", "A cloth"],
+        "answer": 3,
+        "distractorMisconceptions": {
+          "A clay pot": "Clay pots are shaped from clay.",
+          "A bead necklace": "Beads are threaded together.",
+          "A wooden stool": "A wooden stool is carved or built from wood."
+        }
+      },
+      {
+        "skill_tag": "food_and_cloth",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "Kpokpoi is a maize dish served at Homowo. Which heading fits this example?",
+        "hints": ["Decide what can be eaten."],
+        "explanation": "A maize dish is food. A festival can include different kinds of cultural activity.",
+        "misconception": "Foods and cloth can be shared by people of several backgrounds.",
+        "options": ["Festival clothing", "Festival language", "Festival food", "Festival music"],
+        "answer": 2,
+        "distractorMisconceptions": {
+          "Festival music": "A dish is eaten rather than played.",
+          "Festival clothing": "Clothes are worn.",
+          "Festival language": "A dish's name is a word but the dish itself is food."
+        }
+      },
+      {
+        "skill_tag": "food_and_cloth",
+        "type": "practical",
+        "difficulty": 2,
+        "stem": "Sort these words into food and dress: kpokpoi, a woven kente wrap. Explain one choice.",
+        "hints": ["Ask what a person does with each item."],
+        "explanation": "Kpokpoi goes under food because it is eaten. A kente wrap goes under dress because it is worn.",
+        "misconception": "Foods and cloth can be shared by people of several backgrounds.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Places both items in suitable groups.",
+              "marks": 1
+            },
+            {
+              "description": "Gives a reason for one placement.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "food_and_cloth",
+        "type": "drawing",
+        "difficulty": 3,
+        "stem": "Draw threads, a woven strip and a finished cloth. Point to the part made by weaving and describe it.",
+        "hints": ["Follow the work a weaver does at a loom."],
+        "explanation": "The weaver crosses threads to form a strip. Strips can then be joined to make the cloth.",
+        "misconception": "Foods and cloth can be shared by people of several backgrounds.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Shows woven strips as part of the cloth.",
+              "marks": 1
+            },
+            {
+              "description": "Explains what the weaver does.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "food_and_cloth",
+        "type": "oral",
+        "difficulty": 4,
+        "stem": "An Asante weaver and an Ewe weaver both make kente. A friend thinks one has the wrong job. Explain what both examples show.",
+        "hints": ["Can a craft belong to more than one tradition?"],
+        "explanation": "Both communities have traditions of weaving kente. Seeing the cloth alone cannot tell us a person's ethnic group.",
+        "misconception": "Foods and cloth can be shared by people of several backgrounds.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Recognises both traditions as valid.",
+              "marks": 1
+            },
+            {
+              "description": "Explains that sharing a craft does not make the groups identical.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "language_and_community",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "A visitor teaches the class a greeting in Ewe. What part of community life is the class learning about?",
+        "hints": ["Think about the words people use to speak."],
+        "explanation": "A greeting uses words from a language. In this example the language is Ewe.",
+        "misconception": "One example of a language or leader does not describe every person.",
+        "options": ["Language", "Weaving", "Building", "Cooking"],
+        "answer": 0,
+        "distractorMisconceptions": {
+          "Cooking": "No meal is being prepared.",
+          "Weaving": "No cloth is being made.",
+          "Building": "No structure is being built."
+        }
+      },
+      {
+        "skill_tag": "language_and_community",
+        "type": "short_answer",
+        "difficulty": 2,
+        "stem": "“The Dagomba speak Dagbani” is on a class card. Which word names the language?",
+        "hints": ["Look for what the people speak."],
+        "explanation": "Dagbani names a language spoken by Dagomba people. Dagomba names the people.",
+        "misconception": "One example of a language or leader does not describe every person.",
+        "answer": ["dagbani"]
+      },
+      {
+        "skill_tag": "language_and_community",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "A film shows a chief and elders hearing a village matter. Which heading fits that scene best?",
+        "hints": ["Think about the job they are doing in this scene."],
+        "explanation": "The chief and elders are helping guide the community. The scene shows traditional leadership.",
+        "misconception": "One example of a language or leader does not describe every person.",
+        "options": [
+          "Traditional dress",
+          "Traditional food",
+          "Traditional games",
+          "Traditional leadership"
+        ],
+        "answer": 3,
+        "distractorMisconceptions": {
+          "Traditional dress": "The question asks about their work, even if their dress is visible.",
+          "Traditional food": "There is no meal in the scene.",
+          "Traditional games": "This is a community matter rather than a game."
+        }
+      },
+      {
+        "skill_tag": "language_and_community",
+        "type": "oral",
+        "difficulty": 3,
+        "stem": "Abena speaks Twi with her aunt and Ga with a friend. What two things can her example teach us about language?",
+        "hints": ["Count the languages she uses and notice whom she talks to."],
+        "explanation": "Abena uses two languages. A person can use different languages with different people.",
+        "misconception": "One example of a language or leader does not describe every person.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Names the two languages in the example.",
+              "marks": 1
+            },
+            {
+              "description": "Explains that one person can use more than one language.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "language_and_community",
+        "type": "practical",
+        "difficulty": 3,
+        "stem": "Make a card for the heading “community life”. On it, name a language or a leader you know about and tell how the example fits.",
+        "hints": ["Choose a name you have heard in a lesson or from a community member."],
+        "explanation": "A card might name Dagbani and say that people use it to talk to one another. A card about a leader might explain a duty.",
+        "misconception": "One example of a language or leader does not describe every person.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Gives a specific and accurate example of language or leadership.",
+              "marks": 1
+            },
+            {
+              "description": "Tells how the example is part of a community's life.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "observe_and_compare",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "Which note says what a pupil can actually see in a festival picture?",
+        "hints": ["Choose a detail that a camera can show."],
+        "explanation": "The picture can show two people playing drums. It cannot show what every family does each day.",
+        "misconception": "A short film or photograph shows one example, not every family's habits.",
+        "options": [
+          "The music lasts all week.",
+          "Two people are playing drums.",
+          "All families sing daily.",
+          "Every visitor owns a drum."
+        ],
+        "answer": 1,
+        "distractorMisconceptions": {
+          "Every visitor owns a drum.": "A picture of players cannot show everyone’s belongings.",
+          "The music lasts all week.": "One picture cannot show its length.",
+          "All families sing daily.": "The picture gives no evidence about every family."
+        }
+      },
+      {
+        "skill_tag": "observe_and_compare",
+        "type": "short_answer",
+        "difficulty": 2,
+        "stem": "A film note says “we hear Ewe songs and see a dance”. Which word in the note names a language?",
+        "hints": ["Read the word that tells which songs the class hears."],
+        "explanation": "The note identifies Ewe as the language of the songs. It also names a dance but gives no name for the dance.",
+        "misconception": "A short film or photograph shows one example, not every family's habits.",
+        "answer": ["ewe"]
+      },
+      {
+        "skill_tag": "observe_and_compare",
+        "type": "oral",
+        "difficulty": 2,
+        "stem": "At a festival, a visitor sees a special cloth for the first time. Ask its wearer a polite question about it.",
+        "hints": ["Ask about something you would like to understand."],
+        "explanation": "“Would you tell me when you wear this cloth?” lets the wearer explain its use in their own words.",
+        "misconception": "A short film or photograph shows one example, not every family's habits.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Asks respectfully about the cloth.",
+              "marks": 1
+            },
+            {
+              "description": "Leaves room for the wearer to describe their own experience.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "observe_and_compare",
+        "type": "drawing",
+        "difficulty": 3,
+        "stem": "One class picture shows a family sharing food. Another shows a family singing. Draw a label for each and tell one difference.",
+        "hints": ["Look closely at the actions."],
+        "explanation": "The first label can show a dish. The other can show a song. These actions show different parts of a celebration.",
+        "misconception": "A short film or photograph shows one example, not every family's habits.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Distinguishes sharing food from singing.",
+              "marks": 1
+            },
+            {
+              "description": "Connects both labels to the scenes in the question.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "observe_and_compare",
+        "type": "written",
+        "difficulty": 4,
+        "stem": "A visitor watches one family prepare a festival meal and writes “everyone eats this every day”. Give a better sentence and a question to ask.",
+        "hints": ["What did the visitor see on that one day?"],
+        "explanation": "“This family made this meal for the festival” fits what was seen. Asking when else they eat it would help the visitor learn more.",
+        "misconception": "A short film or photograph shows one example, not every family's habits.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Replaces the claim with a statement limited to the observed family and occasion.",
+              "marks": 1
+            },
+            {
+              "description": "Asks a relevant question about the practice.",
+              "marks": 1
+            }
+          ]
+        }
+      }
+    ],
+    "questionCount": 20,
+    "teacherAssessedCount": 11,
+    "excludedMcqCount": 0,
+    "uncertain": [
+      "Printed page 10 repeats the preceding indicator code for this separate objective.",
+      "Printed page 10 gives categories of cultural characteristics but no named festival accounts. Tasks provide descriptions or invite a teacher-checked local example."
+    ]
+  },
+  {
+    "indicator": {
+      "code": "B2.2.4.1.1",
+      "subject": "History",
+      "level": "Basic 2",
+      "strand": "My Country Ghana",
+      "sub_strand": "Major Historical Locations",
+      "content_standard": "B2.2.4.1. Exhibit knowledge of the history of the major historical locations in Ghana",
+      "objective": "Discuss the history of Ghana’s major historical locations. Examples include Kumasi military museum, Komfo Anokye Sword, Assin Manso slave site, Gbewa Palace.",
+      "source_page": 11
+    },
+    "spec": {
+      "skills": [
+        {
+          "tag": "place_and_name",
+          "description": "Identify historical places by name and location.",
+          "minQuestions": 5
+        },
+        {
+          "tag": "people_and_places",
+          "description": "Connect each site with the people and past it helps us remember.",
+          "minQuestions": 5
+        },
+        {
+          "tag": "evidence_at_sites",
+          "description": "Use objects, signs and accounts to learn a site's story.",
+          "minQuestions": 5
+        },
+        {
+          "tag": "retell_and_compare",
+          "description": "Retell and compare the histories of sites using clear details.",
+          "minQuestions": 5
+        }
+      ],
+      "difficultyPlan": "5 recall, 7 simple use, 5 application and 3 challenge questions.",
+      "misconceptions": [
+        "A town may contain more than one historical site.",
+        "A site’s story can matter even when the place has a new use.",
+        "An object without a label or source cannot tell its full history.",
+        "Naming a site or describing its appearance alone does not retell its history."
+      ],
+      "needsTeacherAssessment": true
+    },
+    "questions": [
+      {
+        "skill_tag": "place_and_name",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "A class map marks the Komfo Anokye Sword Site in Kumasi. Which town should appear on the class trip card?",
+        "hints": ["Use the place named on the map."],
+        "explanation": "The sword site is in Kumasi. Visitors go there to learn about an Asante tradition.",
+        "misconception": "A town may contain more than one historical site.",
+        "options": ["Kumasi", "Elmina", "Yendi", "Assin Manso"],
+        "answer": 0,
+        "distractorMisconceptions": {
+          "Yendi": "Yendi is associated with Gbewaa Palace.",
+          "Assin Manso": "Assin Manso has a different historical site by a river.",
+          "Elmina": "Elmina's well-known castle is on the coast."
+        }
+      },
+      {
+        "skill_tag": "place_and_name",
+        "type": "short_answer",
+        "difficulty": 1,
+        "stem": "A sign reads “Gbewaa Palace, Yendi”. What town does the sign name?",
+        "hints": ["Find the place named after the comma."],
+        "explanation": "Gbewaa Palace is the site. Yendi is the town.",
+        "misconception": "A town may contain more than one historical site.",
+        "answer": ["yendi"]
+      },
+      {
+        "skill_tag": "place_and_name",
+        "type": "oral",
+        "difficulty": 2,
+        "stem": "A guide names two Kumasi stops: the Military Museum and the Komfo Anokye Sword Site. Tell what each stop is called and which one is about the sword.",
+        "hints": ["Think of a museum and a separate site."],
+        "explanation": "The military museum and the Komfo Anokye Sword Site are both in Kumasi. The sword site is the place linked to the sword tradition.",
+        "misconception": "A town may contain more than one historical site.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Names the military museum and sword site.",
+              "marks": 1
+            },
+            {
+              "description": "Identifies the sword site as the place linked to Komfo Anokye.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "place_and_name",
+        "type": "drawing",
+        "difficulty": 3,
+        "stem": "A guide's card says “Gbewaa Palace in Yendi is linked to the Yaa Naa of Dagbon”. Draw a direction card using the site and town.",
+        "hints": ["Think of the palace associated with the Yaa Naa."],
+        "explanation": "The card can name Gbewaa Palace and Yendi. These two names tell a visitor what place to ask for and where.",
+        "misconception": "A town may contain more than one historical site.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Identifies Gbewaa or Gbewa Palace.",
+              "marks": 1
+            },
+            {
+              "description": "Identifies Yendi as the town.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "place_and_name",
+        "type": "oral",
+        "difficulty": 4,
+        "stem": "A trip card says “Kumasi” and nothing else. Your friend needs to find the military museum there. How would you improve the card, and why?",
+        "hints": ["Think of two sites in that city."],
+        "explanation": "Add “Kumasi Fort and Military Museum”. A town name alone could send a visitor to another site, such as the sword site.",
+        "misconception": "A town may contain more than one historical site.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Adds a name that identifies the military museum.",
+              "marks": 1
+            },
+            {
+              "description": "Explains why the town alone leaves a choice of sites.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "people_and_places",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "What can the Kumasi Military Museum help a class learn about?",
+        "hints": ["Think about the word military in its name."],
+        "explanation": "The museum keeps objects and records about soldiers and military history.",
+        "misconception": "A site’s story can matter even when the place has a new use.",
+        "options": [
+          "The work of weavers",
+          "The growth of fishing",
+          "The work of soldiers",
+          "The growth of cocoa"
+        ],
+        "answer": 2,
+        "distractorMisconceptions": {
+          "The growth of cocoa": "Farming is not the subject named here.",
+          "The work of weavers": "Cloth making is a different subject.",
+          "The growth of fishing": "Fishing is not the subject named here."
+        }
+      },
+      {
+        "skill_tag": "people_and_places",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "Which site helps us remember people taken from their homes and sold during the slave trade?",
+        "hints": ["Think of the river site studied in class."],
+        "explanation": "At Assin Manso people were held and sold against their will. Remembering them is part of the history of the site.",
+        "misconception": "A site’s story can matter even when the place has a new use.",
+        "options": [
+          "Kumasi Military Museum",
+          "Assin Manso Slave River Site",
+          "Gbewaa Palace",
+          "Komfo Anokye Sword Site"
+        ],
+        "answer": 1,
+        "distractorMisconceptions": {
+          "Gbewaa Palace": "The palace is associated with the rulers of Dagbon.",
+          "Komfo Anokye Sword Site": "The sword site is linked to an Asante tradition.",
+          "Kumasi Military Museum": "The named museum focuses on military history."
+        }
+      },
+      {
+        "skill_tag": "people_and_places",
+        "type": "oral",
+        "difficulty": 2,
+        "stem": "A guide says, “This was a fort before it became the Kumasi Military Museum.” Retell the change in your own words.",
+        "hints": ["What was the older building used as, and what can visitors do there now?"],
+        "explanation": "The building was once a fort. Later it became a museum where people can learn about the past.",
+        "misconception": "A site’s story can matter even when the place has a new use.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Puts the fort before the museum.",
+              "marks": 1
+            },
+            {
+              "description": "Describes the museum's later role.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "people_and_places",
+        "type": "written",
+        "difficulty": 3,
+        "stem": "A guide says, “Gbewaa Palace is linked with the Yaa Naa, king of Dagbon.” Make a picture caption that identifies the kingdom and the ruler.",
+        "hints": ["Think of the royal title in Dagbon."],
+        "explanation": "The palace is connected to the rulers of Dagbon. The Yaa Naa is the king of Dagbon.",
+        "misconception": "A site’s story can matter even when the place has a new use.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Connects the palace with Dagbon.",
+              "marks": 1
+            },
+            {
+              "description": "Connects it to the Yaa Naa or the kings of Dagbon.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "people_and_places",
+        "type": "oral",
+        "difficulty": 4,
+        "stem": "Someone says the site at Assin Manso is only a river. Tell one thing about its past and why visitors remember the people there.",
+        "hints": [
+          "Think of the difference between a river and the story of the people taken there."
+        ],
+        "explanation": "Enslaved people were brought to the site by force. People visit today to remember their lives and what happened to them.",
+        "misconception": "A site’s story can matter even when the place has a new use.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Mentions forced captivity or sale in the history of the site.",
+              "marks": 1
+            },
+            {
+              "description": "Gives a respectful reason to remember the people.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "evidence_at_sites",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "Which item would best help a visitor learn what an old uniform in a museum was used for?",
+        "hints": ["Look for words that belong to that display."],
+        "explanation": "The label beside the uniform may name who wore it and what it was used for.",
+        "misconception": "An object without a label or source cannot tell its full history.",
+        "options": [
+          "The shop's opening time",
+          "A bus route number",
+          "A visitor's ticket price",
+          "Its museum label"
+        ],
+        "answer": 3,
+        "distractorMisconceptions": {
+          "A visitor's ticket price": "The price helps people enter the museum.",
+          "The shop's opening time": "Opening time tells when a shop opens.",
+          "A bus route number": "A bus route helps a visitor travel."
+        }
+      },
+      {
+        "skill_tag": "evidence_at_sites",
+        "type": "short_answer",
+        "difficulty": 2,
+        "stem": "At a site, Esi reads this label: “This drum was used to call people to meetings.” What object does the label describe?",
+        "hints": ["Look for the thing that made the sound."],
+        "explanation": "The label names a drum and explains its use. The object and its label give two connected clues.",
+        "misconception": "An object without a label or source cannot tell its full history.",
+        "answer": ["drum", "a drum", "the drum"]
+      },
+      {
+        "skill_tag": "evidence_at_sites",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "A guide begins, “One story told by elders about the sword is …”. How should you begin when you retell it?",
+        "hints": ["Keep the guide's clue about where the account comes from."],
+        "explanation": "Saying that elders tell the story keeps the source with the account. Hearing a story does not make the listener an eyewitness.",
+        "misconception": "An object without a label or source cannot tell its full history.",
+        "options": [
+          "“The ticket price proves that …”",
+          "“The gate colour proves that …”",
+          "“The elders tell a story that …”",
+          "“I saw it happen long ago …”"
+        ],
+        "answer": 2,
+        "distractorMisconceptions": {
+          "“I saw it happen long ago …”": "Hearing the guide is different from seeing the original event.",
+          "“The ticket price proves that …”": "A price gives no evidence about the tradition.",
+          "“The gate colour proves that …”": "A gate's colour cannot establish the story."
+        }
+      },
+      {
+        "skill_tag": "evidence_at_sites",
+        "type": "practical",
+        "difficulty": 3,
+        "stem": "Pretend a partner is a guide at a historical site. Ask about one object, then tell the class what your partner reported.",
+        "hints": ["Start with a question about how people used it."],
+        "explanation": "A pupil might ask how a drum was used and report the guide's reply that it called people to meetings.",
+        "misconception": "An object without a label or source cannot tell its full history.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Asks a relevant question about an object.",
+              "marks": 1
+            },
+            {
+              "description": "Reports the answer accurately and identifies the guide as the source.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "evidence_at_sites",
+        "type": "oral",
+        "difficulty": 3,
+        "stem": "A photo shows the outside of a palace. Give one detail the photo could show and one question you would still ask about its past.",
+        "hints": ["Look at what a camera can catch from outside."],
+        "explanation": "A photo can show a gate. A guide or local account could explain who used that gate and why.",
+        "misconception": "An object without a label or source cannot tell its full history.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Names a visible feature the photo could show.",
+              "marks": 1
+            },
+            {
+              "description": "Asks a historical question that needs further evidence.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "retell_and_compare",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "Which question asks about the history of a place?",
+        "hints": ["Look for a question about what happened there."],
+        "explanation": "Asking who gathered there long ago can reveal past activity at the site.",
+        "misconception": "Naming a site or describing its appearance alone does not retell its history.",
+        "options": [
+          "Who met here long ago?",
+          "Which seat is free today?",
+          "How bright is the sun today?",
+          "Where can we put our lunch?"
+        ],
+        "answer": 0,
+        "distractorMisconceptions": {
+          "How bright is the sun today?": "Today's light is not about the site's past.",
+          "Where can we put our lunch?": "That question is about the present visit.",
+          "Which seat is free today?": "The seat question is about today's arrangements."
+        }
+      },
+      {
+        "skill_tag": "retell_and_compare",
+        "type": "short_answer",
+        "difficulty": 2,
+        "stem": "A class display says “Assin Manso remembers people who were enslaved.” Copy the name of the place on this display.",
+        "hints": ["Find the name before “remembers”."],
+        "explanation": "Assin Manso is the place named. The rest of the caption tells whose history it helps visitors remember.",
+        "misconception": "Naming a site or describing its appearance alone does not retell its history.",
+        "answer": ["assin manso"]
+      },
+      {
+        "skill_tag": "retell_and_compare",
+        "type": "oral",
+        "difficulty": 2,
+        "stem": "Tell a short story about a historical site in your community or one from class. Begin with its name and say what happened there.",
+        "hints": ["Pick one place you can link to people in the past."],
+        "explanation": "For example, Kumasi Fort was used as a fort before people turned it into a military museum.",
+        "misconception": "Naming a site or describing its appearance alone does not retell its history.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Identifies a real site.",
+              "marks": 1
+            },
+            {
+              "description": "Accurately connects the site with a past event, use or tradition.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "retell_and_compare",
+        "type": "drawing",
+        "difficulty": 3,
+        "stem": "A visitor saw soldiers' uniforms at the Kumasi Military Museum and heard about the rulers of Dagbon at Gbewaa Palace. Draw a sign for each place and explain your symbols.",
+        "hints": ["Choose a different symbol to show the story told at each site."],
+        "explanation": "A uniform could stand for the military museum. A palace entrance could lead into the story of Dagbon's rulers.",
+        "misconception": "Naming a site or describing its appearance alone does not retell its history.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Uses distinct symbols or captions for the sites.",
+              "marks": 1
+            },
+            {
+              "description": "Explains a relevant historical connection for each.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "retell_and_compare",
+        "type": "written",
+        "difficulty": 4,
+        "stem": "A postcard says only “We saw a river and a museum.” Add the two site names and one fact about each so another class can learn from it.",
+        "hints": ["Use the river site at Assin Manso and the military museum in Kumasi."],
+        "explanation": "The river site at Assin Manso remembers people who were enslaved. The museum in Kumasi keeps objects that tell of soldiers' lives.",
+        "misconception": "Naming a site or describing its appearance alone does not retell its history.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Correctly links the named river site to its history.",
+              "marks": 1
+            },
+            {
+              "description": "Correctly links the named museum to its history.",
+              "marks": 1
+            }
+          ]
+        }
+      }
+    ],
+    "questionCount": 20,
+    "teacherAssessedCount": 11,
+    "excludedMcqCount": 0,
+    "uncertain": [
+      "The class section names sites but does not give dates or a sequence by age. Activities use brief guide accounts and ask children to identify what those accounts show."
+    ]
+  },
+  {
+    "indicator": {
+      "code": "B2.2.5.1.1.",
+      "subject": "History",
+      "level": "Basic 2",
+      "strand": "My Country Ghana",
+      "sub_strand": "Some Selected Individuals",
+      "content_standard": "B2.2.5.1.1 Exhibit understanding of Ghanaian women who have contributed significantly to Ghana’s development",
+      "objective": "Identify Ghanaian women who have made significant contributions to national development",
+      "source_page": 12
+    },
+    "spec": {
+      "skills": [
+        {
+          "tag": "women_and_work",
+          "description": "Match Ghanaian women with their achievements.",
+          "minQuestions": 5
+        },
+        {
+          "tag": "public_leadership",
+          "description": "Tell how women led the work of Ghana's courts and Parliament.",
+          "minQuestions": 5
+        },
+        {
+          "tag": "achievements_and_impact",
+          "description": "Explain how a woman's work helped people or opened opportunities.",
+          "minQuestions": 5
+        },
+        {
+          "tag": "community_role_models",
+          "description": "Use details about real women to explain admiration and contribution.",
+          "minQuestions": 5
+        }
+      ],
+      "difficultyPlan": "5 recall, 7 simple use, 5 application and 3 challenge questions.",
+      "misconceptions": [
+        "Similar titles and public roles can belong to different people.",
+        "The Speaker of Parliament and the Chief Justice have different duties.",
+        "A person's name or job title alone does not explain their contribution.",
+        "Fame or appearance alone does not explain how a person has helped a community."
+      ],
+      "needsTeacherAssessment": true
+    },
+    "questions": [
+      {
+        "skill_tag": "women_and_work",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "Which Ghanaian woman became a pilot?",
+        "hints": ["Think about someone whose work involved flying aircraft."],
+        "explanation": "Melody Danquah trained as a pilot. Her flying helped open a path for other women in aviation.",
+        "misconception": "Similar titles and public roles can belong to different people.",
+        "options": ["Joyce Bamford-Addo", "Elizabeth Ohene", "Georgina Wood", "Melody Danquah"],
+        "answer": 3,
+        "distractorMisconceptions": {
+          "Elizabeth Ohene": "Ohene was a newspaper editor.",
+          "Georgina Wood": "Wood served as Chief Justice.",
+          "Joyce Bamford-Addo": "Bamford-Addo served as Speaker of Parliament."
+        }
+      },
+      {
+        "skill_tag": "women_and_work",
+        "type": "short_answer",
+        "difficulty": 1,
+        "stem": "Read this name card: “Elizabeth Ohene, editor of the Daily Graphic”. Copy the name of the editor.",
+        "hints": ["Find the person's name before the job."],
+        "explanation": "Elizabeth Ohene edited the Daily Graphic. An editor helps decide how news is prepared for readers.",
+        "misconception": "Similar titles and public roles can belong to different people.",
+        "answer": ["elizabeth ohene", "ohene"]
+      },
+      {
+        "skill_tag": "women_and_work",
+        "type": "oral",
+        "difficulty": 2,
+        "stem": "Tell a partner who Georgina Wood was and name the place where a judge hears cases.",
+        "hints": ["Look for the job connected with courts."],
+        "explanation": "Georgina Wood became Ghana's first woman Chief Justice. Judges hear cases in courts.",
+        "misconception": "Similar titles and public roles can belong to different people.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Identifies Wood as Chief Justice.",
+              "marks": 1
+            },
+            {
+              "description": "Names courts as the setting for a judge's work.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "women_and_work",
+        "type": "drawing",
+        "difficulty": 3,
+        "stem": "Make a picture card to help a younger pupil remember Melody Danquah. Explain the picture you chose.",
+        "hints": ["Think of an object she learned to operate."],
+        "explanation": "An aircraft beside her name can remind the pupil that Melody Danquah flew as a pilot.",
+        "misconception": "Similar titles and public roles can belong to different people.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Links the card to Melody Danquah.",
+              "marks": 1
+            },
+            {
+              "description": "Makes and explains a picture connected with flying.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "women_and_work",
+        "type": "written",
+        "difficulty": 4,
+        "stem": "A display has swapped the labels “pilot” and “editor” under Elizabeth Ohene and Melody Danquah. Correct both labels and add a clue for one.",
+        "hints": ["Think about who worked with news and who worked with aircraft."],
+        "explanation": "Ohene belongs with editor and Danquah with pilot. A newspaper or an aircraft provides a useful clue.",
+        "misconception": "Similar titles and public roles can belong to different people.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Correctly restores both labels.",
+              "marks": 1
+            },
+            {
+              "description": "Adds an accurate clue for either woman's work.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "public_leadership",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "Who became Ghana's first woman Speaker of Parliament?",
+        "hints": ["Think of the woman who guided meetings of Parliament."],
+        "explanation": "Joyce Bamford-Addo served as Speaker. The Speaker guides Parliament's meetings.",
+        "misconception": "The Speaker of Parliament and the Chief Justice have different duties.",
+        "options": ["Elizabeth Ohene", "Joyce Bamford-Addo", "Georgina Wood", "Melody Danquah"],
+        "answer": 1,
+        "distractorMisconceptions": {
+          "Georgina Wood": "Wood was the first woman Chief Justice.",
+          "Melody Danquah": "Danquah was a pilot.",
+          "Elizabeth Ohene": "Ohene is known for editing a newspaper."
+        }
+      },
+      {
+        "skill_tag": "public_leadership",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "Which caption belongs under a picture of Georgina Wood at the courts?",
+        "hints": ["Think of the office she held."],
+        "explanation": "Georgina Wood led Ghana's judiciary as Chief Justice. The other captions describe different jobs.",
+        "misconception": "The Speaker of Parliament and the Chief Justice have different duties.",
+        "options": [
+          "Ghana's first woman Chief Justice",
+          "Editor of the Daily Graphic",
+          "Ghana's first woman Speaker",
+          "A pilot in Ghana's Air Force"
+        ],
+        "answer": 0,
+        "distractorMisconceptions": {
+          "Editor of the Daily Graphic": "This caption belongs to Elizabeth Ohene.",
+          "Ghana's first woman Speaker": "This caption belongs to Joyce Bamford-Addo.",
+          "A pilot in Ghana's Air Force": "This caption fits Melody Danquah."
+        }
+      },
+      {
+        "skill_tag": "public_leadership",
+        "type": "practical",
+        "difficulty": 2,
+        "stem": "Make two name slips, “Wood” and “Bamford-Addo”. Give the first to the learner playing Chief Justice and the second to the learner playing Speaker. Say each full name.",
+        "hints": ["Think of one woman at the courts and the other leading Parliament’s meetings."],
+        "explanation": "Georgina Wood held the office of Chief Justice. Joyce Bamford-Addo held the office of Speaker.",
+        "misconception": "The Speaker of Parliament and the Chief Justice have different duties.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Places the two slips with the correct roles.",
+              "marks": 1
+            },
+            {
+              "description": "Gives each woman's full name.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "public_leadership",
+        "type": "oral",
+        "difficulty": 3,
+        "stem": "A pupil thinks being Speaker means giving every speech in Parliament. Use Joyce Bamford-Addo’s role to explain what the title means.",
+        "hints": ["What does someone who guides a meeting do?"],
+        "explanation": "As Speaker, Bamford-Addo guided the meetings of Parliament. Other members could speak in those meetings.",
+        "misconception": "The Speaker of Parliament and the Chief Justice have different duties.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Names Joyce Bamford-Addo and her office.",
+              "marks": 1
+            },
+            {
+              "description": "Explains that the Speaker guides meetings where other members also speak.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "public_leadership",
+        "type": "written",
+        "difficulty": 4,
+        "stem": "Your class wants one sentence on how both a Chief Justice and a Speaker can serve Ghana. Include an example of each.",
+        "hints": ["Name the women first. Then give one duty for each."],
+        "explanation": "Georgina Wood led the courts as Chief Justice. Joyce Bamford-Addo chaired meetings of Parliament as Speaker.",
+        "misconception": "The Speaker of Parliament and the Chief Justice have different duties.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Identifies Wood and gives an accurate duty.",
+              "marks": 1
+            },
+            {
+              "description": "Identifies Bamford-Addo and gives an accurate duty.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "achievements_and_impact",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "Which example describes work done by newspaper editor Elizabeth Ohene?",
+        "hints": ["Think about the work that reaches newspaper readers."],
+        "explanation": "An editor helps prepare news for publication. Ohene did this work at the Daily Graphic.",
+        "misconception": "A person's name or job title alone does not explain their contribution.",
+        "options": [
+          "Leading Ghana's courts",
+          "Flying an aircraft to its destination",
+          "Helping prepare news for readers",
+          "Leading a meeting of Parliament"
+        ],
+        "answer": 2,
+        "distractorMisconceptions": {
+          "Flying an aircraft to its destination": "That is a pilot's work.",
+          "Leading a meeting of Parliament": "That is the Speaker's duty.",
+          "Leading Ghana's courts": "That is the Chief Justice's role."
+        }
+      },
+      {
+        "skill_tag": "achievements_and_impact",
+        "type": "short_answer",
+        "difficulty": 2,
+        "stem": "Complete the job title in “As a ___, Melody Danquah learned to fly an aircraft.”",
+        "hints": ["Use the word for a person at the controls of a plane."],
+        "explanation": "A pilot operates an aircraft. Danquah is remembered in Ghana for this work.",
+        "misconception": "A person's name or job title alone does not explain their contribution.",
+        "answer": ["pilot", "military pilot", "air force pilot"]
+      },
+      {
+        "skill_tag": "achievements_and_impact",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "Which sentence explains why Georgina Wood's achievement mattered to a girl who wanted to be a judge?",
+        "hints": ["Look for a reason linked to what Wood did."],
+        "explanation": "Holding the office showed the girl an example of a Ghanaian woman leading the country's courts.",
+        "misconception": "A person's name or job title alone does not explain their contribution.",
+        "options": [
+          "She showed how to chair Parliament.",
+          "She showed a woman could lead Ghana's courts.",
+          "She showed where to train as a pilot.",
+          "She showed how to edit a newspaper."
+        ],
+        "answer": 1,
+        "distractorMisconceptions": {
+          "She showed where to train as a pilot.": "Flying was Danquah’s field.",
+          "She showed how to edit a newspaper.": "Editing was Ohene’s work.",
+          "She showed how to chair Parliament.": "The Speaker chairs Parliament."
+        }
+      },
+      {
+        "skill_tag": "achievements_and_impact",
+        "type": "written",
+        "difficulty": 3,
+        "stem": "Tell how editing a newspaper can help a community. Name the Ghanaian editor you learned about.",
+        "hints": ["Think of how readers get news."],
+        "explanation": "Elizabeth Ohene helped prepare news for readers. News can help readers learn what is happening in their communities.",
+        "misconception": "A person's name or job title alone does not explain their contribution.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Identifies Elizabeth Ohene.",
+              "marks": 1
+            },
+            {
+              "description": "Explains one way newspaper work can help people.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "achievements_and_impact",
+        "type": "oral",
+        "difficulty": 3,
+        "stem": "Choose one Ghanaian woman from the lesson. Introduce her to a visitor using her name, her work and one reason pupils remember her.",
+        "hints": ["Give one detail beyond the name of her job."],
+        "explanation": "A pupil might introduce Melody Danquah as an early woman pilot who showed other girls that women could fly aircraft.",
+        "misconception": "A person's name or job title alone does not explain their contribution.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Names a woman and correctly identifies her work.",
+              "marks": 1
+            },
+            {
+              "description": "Explains a contribution or reason to remember her.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "community_role_models",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "Which question would help you find out how a woman helped your community?",
+        "hints": ["Think about her actions and the people affected."],
+        "explanation": "Asking about a change she helped make invites an example of her contribution.",
+        "misconception": "Fame or appearance alone does not explain how a person has helped a community.",
+        "options": [
+          "What did her bag look like?",
+          "Which colour does she like?",
+          "Which shoes did she wear?",
+          "What did she help people do?"
+        ],
+        "answer": 3,
+        "distractorMisconceptions": {
+          "Which colour does she like?": "A favourite colour gives a preference rather than a contribution.",
+          "Which shoes did she wear?": "Shoes alone do not tell how she helped.",
+          "What did her bag look like?": "A bag's appearance does not show her work."
+        }
+      },
+      {
+        "skill_tag": "community_role_models",
+        "type": "short_answer",
+        "difficulty": 2,
+        "stem": "A pupil wants to read Elizabeth Ohene's work. On a card marked “Daily Graphic newspaper”, which two words are the name of the paper?",
+        "hints": ["Look for the title before the word newspaper."],
+        "explanation": "Daily Graphic is the name of the newspaper that Ohene edited.",
+        "misconception": "Fame or appearance alone does not explain how a person has helped a community.",
+        "answer": ["daily graphic", "the daily graphic"]
+      },
+      {
+        "skill_tag": "community_role_models",
+        "type": "oral",
+        "difficulty": 2,
+        "stem": "Name a woman from your community or this lesson whose work you admire. Say what she did.",
+        "hints": ["Choose a concrete action that someone could describe."],
+        "explanation": "A learner could name a nurse who helps children at a clinic or Georgina Wood, who led Ghana’s courts.",
+        "misconception": "Fame or appearance alone does not explain how a person has helped a community.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Identifies a woman by name or a clear local description.",
+              "marks": 1
+            },
+            {
+              "description": "Describes her work accurately.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "community_role_models",
+        "type": "drawing",
+        "difficulty": 3,
+        "stem": "Draw two panels to show a Ghanaian woman doing her work and someone helped by it. Explain how the pictures connect.",
+        "hints": ["Choose a woman you learned about or know in your community."],
+        "explanation": "One panel might show a local teacher helping a learner read. The other could show the learner reading a story.",
+        "misconception": "Fame or appearance alone does not explain how a person has helped a community.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Shows or describes the work of an identifiable woman.",
+              "marks": 1
+            },
+            {
+              "description": "Connects that work to a credible benefit.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "community_role_models",
+        "type": "oral",
+        "difficulty": 4,
+        "stem": "One pupil says, “I admire her.” Another asks, “Why?” Answer using something a Ghanaian woman did and a way you could learn from her.",
+        "hints": ["Link her action with a small action you could try."],
+        "explanation": "A pupil who admires editor Elizabeth Ohene might practise checking a class news report before sharing it.",
+        "misconception": "Fame or appearance alone does not explain how a person has helped a community.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Supports admiration with an accurate example of the woman's work.",
+              "marks": 1
+            },
+            {
+              "description": "Links the example to a realistic action the learner could take.",
+              "marks": 1
+            }
+          ]
+        }
+      }
+    ],
+    "questionCount": 20,
+    "teacherAssessedCount": 11,
+    "excludedMcqCount": 0,
+    "uncertain": [
+      "Printed page 12 uses B2.2.5.1.1 in its content-standard column and places a full stop after the same code in the indicator column."
+    ]
+  },
+  {
+    "indicator": {
+      "code": "B2.3.2.1.1",
+      "subject": "History",
+      "level": "Basic 2",
+      "strand": "Europeans in Ghana",
+      "sub_strand": "International Trade Including Slave Trade",
+      "content_standard": "B2.3.2.1. Understand that trade was the major reason why the Europeans settled in Ghana",
+      "objective": "Describe how early trade was carried out between Ghanaians and Europeans",
+      "source_page": 13
+    },
+    "spec": {
+      "skills": [
+        {
+          "tag": "barter_and_exchange",
+          "description": "Explain a direct exchange of goods.",
+          "minQuestions": 5
+        },
+        {
+          "tag": "goods_and_uses",
+          "description": "Recognise goods in the curriculum and describe their movement.",
+          "minQuestions": 5
+        },
+        {
+          "tag": "coastal_trade",
+          "description": "Connect coastal meeting places with trade by sea.",
+          "minQuestions": 5
+        },
+        {
+          "tag": "describe_a_trade",
+          "description": "Use a story, objects or a role-play to explain how early trade worked.",
+          "minQuestions": 5
+        }
+      ],
+      "difficultyPlan": "5 recall, 7 simple use, 5 application and 3 challenge questions.",
+      "misconceptions": [
+        "Giving a gift or borrowing an item differs from swapping goods.",
+        "Seeing an item on a trade list alone does not tell who gave it in a particular exchange.",
+        "Trade can help a town grow even when people already live there.",
+        "A clear account includes both parties and what each exchanged."
+      ],
+      "needsTeacherAssessment": true
+    },
+    "questions": [
+      {
+        "skill_tag": "barter_and_exchange",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "What is barter?",
+        "hints": ["Think of the items that change hands."],
+        "explanation": "In barter each trader gives goods and receives other goods in return.",
+        "misconception": "Giving a gift or borrowing an item differs from swapping goods.",
+        "options": [
+          "Giving a friend a gift",
+          "Keeping goods for later",
+          "Swapping goods for other goods",
+          "Borrowing goods for a day"
+        ],
+        "answer": 2,
+        "distractorMisconceptions": {
+          "Giving a friend a gift": "A gift does not require goods in return.",
+          "Keeping goods for later": "Keeping goods does not exchange them.",
+          "Borrowing goods for a day": "Borrowed goods are meant to be returned."
+        }
+      },
+      {
+        "skill_tag": "barter_and_exchange",
+        "type": "short_answer",
+        "difficulty": 1,
+        "stem": "Kojo and Efua swap a cloth card for a gold card, with no money. What kind of trade are they acting out?",
+        "hints": ["Use the name for swapping one good for another."],
+        "explanation": "Each gives one good to receive the other. Their card game represents barter.",
+        "misconception": "Giving a gift or borrowing an item differs from swapping goods.",
+        "answer": ["barter", "barter trade", "bartering", "a barter", "barter trading"]
+      },
+      {
+        "skill_tag": "barter_and_exchange",
+        "type": "oral",
+        "difficulty": 2,
+        "stem": "One child gives cloth and receives an iron bar. Describe the swap from the other child's side.",
+        "hints": ["Exchange the words gives and receives as you change sides."],
+        "explanation": "The other child gives the iron bar and receives cloth. Both children can describe the same trade.",
+        "misconception": "Giving a gift or borrowing an item differs from swapping goods.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Names what the second child gives.",
+              "marks": 1
+            },
+            {
+              "description": "Names what the second child receives.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "barter_and_exchange",
+        "type": "practical",
+        "difficulty": 3,
+        "stem": "Take turns as traders. Use paper pictures of two goods to show a barter. Tell the class when the exchange is complete.",
+        "hints": ["Watch what each trader holds before and after."],
+        "explanation": "Once the partners agree, each gives their picture to receive the other one. Both goods have changed hands.",
+        "misconception": "Giving a gift or borrowing an item differs from swapping goods.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Shows an agreed two-way exchange with pictures.",
+              "marks": 1
+            },
+            {
+              "description": "Explains how each trader's goods changed.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "barter_and_exchange",
+        "type": "written",
+        "difficulty": 4,
+        "stem": "A child says handing over an iron card is already barter. What more must you know? Give an example that is barter.",
+        "hints": ["Think about what the child gets back."],
+        "explanation": "Ask whether the child received another good in return. Trading the iron card for a cloth card would be barter.",
+        "misconception": "Giving a gift or borrowing an item differs from swapping goods.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Identifies the missing information about goods in return.",
+              "marks": 1
+            },
+            {
+              "description": "Gives an example of a two-way exchange of goods.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "goods_and_uses",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "Which pair names goods on our early-trade list?",
+        "hints": ["Look for things a trader could carry or exchange from the lesson."],
+        "explanation": "Textiles and iron bars both appear in the examples of goods. The other pairs belong to a modern classroom or shop.",
+        "misconception": "Seeing an item on a trade list alone does not tell who gave it in a particular exchange.",
+        "options": [
+          "Textiles and iron bars",
+          "Chargers and earphones",
+          "Tablets and keyboards",
+          "Notebooks and markers"
+        ],
+        "answer": 0,
+        "distractorMisconceptions": {
+          "Chargers and earphones": "These are modern electronic accessories.",
+          "Tablets and keyboards": "These are modern electronic goods.",
+          "Notebooks and markers": "These classroom supplies are not the pair on the lesson list."
+        }
+      },
+      {
+        "skill_tag": "goods_and_uses",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "A trader's basket contains folded textiles. What are the textiles?",
+        "hints": ["Think of something a tailor might cut and sew."],
+        "explanation": "Textiles are cloth or fabric. They are among the goods named in the trade lesson.",
+        "misconception": "Seeing an item on a trade list alone does not tell who gave it in a particular exchange.",
+        "options": ["Pieces of iron", "Pieces of gold", "Pieces of ivory", "Pieces of cloth"],
+        "answer": 3,
+        "distractorMisconceptions": {
+          "Pieces of iron": "Iron bars are metal goods.",
+          "Pieces of gold": "Gold is a separate trade item.",
+          "Pieces of ivory": "Ivory is a different material."
+        }
+      },
+      {
+        "skill_tag": "goods_and_uses",
+        "type": "drawing",
+        "difficulty": 2,
+        "stem": "Make a picture key for two goods from the early-trade lesson. Show how a reader can tell your symbols apart.",
+        "hints": ["Choose goods with different shapes or textures."],
+        "explanation": "One drawing might show a folded cloth, the other a long iron bar. Writing or saying their names makes the symbols clear.",
+        "misconception": "Seeing an item on a trade list alone does not tell who gave it in a particular exchange.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Represents two goods named in the curriculum.",
+              "marks": 1
+            },
+            {
+              "description": "Labels or describes the two symbols clearly.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "goods_and_uses",
+        "type": "practical",
+        "difficulty": 3,
+        "stem": "A trade story says the visiting trader gives textiles and receives gold. Put a paper label on each end of an arrow that shows where the textiles go.",
+        "hints": ["Follow the cloth, not the gold."],
+        "explanation": "The textiles move from the visiting trader to the local trader. Gold moves back the other way in this example.",
+        "misconception": "Seeing an item on a trade list alone does not tell who gave it in a particular exchange.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Places both traders at the correct ends of the textiles arrow.",
+              "marks": 1
+            },
+            {
+              "description": "Explains what went in the other direction.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "goods_and_uses",
+        "type": "oral",
+        "difficulty": 4,
+        "stem": "A list names iron bars and gold but gives no names of traders. Can you tell who gave the gold in that particular swap? What would help?",
+        "hints": ["A list of things is different from a story about who did what."],
+        "explanation": "Either name could appear in a list without telling who gave it. A caption saying who handed the gold to whom would answer the question.",
+        "misconception": "Seeing an item on a trade list alone does not tell who gave it in a particular exchange.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Explains why the list cannot settle the direction of this swap.",
+              "marks": 1
+            },
+            {
+              "description": "Identifies a missing detail that would settle it.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "coastal_trade",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "Where does a ship meet traders who bring goods down to the sea?",
+        "hints": ["Think about the part of the land that touches the sea."],
+        "explanation": "Ships can reach a landing place on the coast. Traders can meet there with goods.",
+        "misconception": "Trade can help a town grow even when people already live there.",
+        "options": [
+          "At a hilltop",
+          "At the coast",
+          "At an inland field",
+          "At a forest clearing inland"
+        ],
+        "answer": 1,
+        "distractorMisconceptions": {
+          "At a hilltop": "A ship at sea cannot reach the top of a hill.",
+          "At an inland field": "An inland field does not meet the sea.",
+          "At a forest clearing inland": "An inland clearing does not meet the sea."
+        }
+      },
+      {
+        "skill_tag": "coastal_trade",
+        "type": "short_answer",
+        "difficulty": 2,
+        "stem": "Complete the class caption with one word from “coast” and “field”: traders welcomed a ship at the ___.",
+        "hints": ["Use the word for land beside the sea."],
+        "explanation": "The coast is where land meets the sea. A ship can bring goods to a landing place there.",
+        "misconception": "Trade can help a town grow even when people already live there.",
+        "answer": ["coast", "seacoast", "sea coast"]
+      },
+      {
+        "skill_tag": "coastal_trade",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "On a trade map, cloth travels by ship, then is carried to a market. What does the ship do in this story?",
+        "hints": ["Track the first part of the trip."],
+        "explanation": "The ship moves cloth across the water to a coastal meeting place. People can then carry it onwards.",
+        "misconception": "Trade can help a town grow even when people already live there.",
+        "options": [
+          "Brings goods across the sea",
+          "Weaves the cloth at the market",
+          "Makes the iron at the market",
+          "Chooses what all buyers want"
+        ],
+        "answer": 0,
+        "distractorMisconceptions": {
+          "Weaves the cloth at the market": "Weavers make cloth, and this trip starts after the cloth is made.",
+          "Makes the iron at the market": "There is no iron-making step in this story.",
+          "Chooses what all buyers want": "A ship carries goods and cannot make that choice."
+        }
+      },
+      {
+        "skill_tag": "coastal_trade",
+        "type": "drawing",
+        "difficulty": 3,
+        "stem": "Draw a ship, a shore and a market in a town. Use arrows to show how a piece of cloth could reach a buyer there.",
+        "hints": ["Begin where the cloth is carried across water."],
+        "explanation": "An arrow can lead from ship to shore and another from shore to market. Together they show the cloth's route.",
+        "misconception": "Trade can help a town grow even when people already live there.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Places the ship, shore and market in a sensible order.",
+              "marks": 1
+            },
+            {
+              "description": "Uses arrows or a spoken explanation to trace the cloth to a buyer.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "coastal_trade",
+        "type": "oral",
+        "difficulty": 3,
+        "stem": "Long ago a small coastal town had a landing place. More traders started coming there. Explain one way the trade could change the town.",
+        "hints": ["What might the visitors need a place for?"],
+        "explanation": "People might sell more goods or make room to keep them near the landing place. The town could grow around that trade.",
+        "misconception": "Trade can help a town grow even when people already live there.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Identifies a plausible change connected with more trade.",
+              "marks": 1
+            },
+            {
+              "description": "Explains how the traders' needs could lead to the change.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "describe_a_trade",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "Which question would help you complete the story “a trader offered cloth”?",
+        "hints": ["Find out about the other side of the trade."],
+        "explanation": "Asking what the trader received tells whether and how an exchange happened.",
+        "misconception": "A clear account includes both parties and what each exchanged.",
+        "options": [
+          "What colour was the sky?",
+          "How tall was the trader?",
+          "What did the trader receive?",
+          "How large was the cloud?"
+        ],
+        "answer": 2,
+        "distractorMisconceptions": {
+          "What colour was the sky?": "Sky colour does not tell what was exchanged.",
+          "How tall was the trader?": "Height does not describe the exchange.",
+          "How large was the cloud?": "Cloud size does not identify the goods received."
+        }
+      },
+      {
+        "skill_tag": "describe_a_trade",
+        "type": "short_answer",
+        "difficulty": 2,
+        "stem": "A play has a card reading “the visiting trader receives an iron bar”. What item should that trader hold at the end?",
+        "hints": ["Read the words after receives."],
+        "explanation": "At the end of this example, the visiting trader has the iron bar. The card says who received it.",
+        "misconception": "A clear account includes both parties and what each exchanged.",
+        "answer": ["iron bar", "an iron bar", "the iron bar"]
+      },
+      {
+        "skill_tag": "describe_a_trade",
+        "type": "oral",
+        "difficulty": 2,
+        "stem": "Pretend you watched a local trader and a European trader swapping picture cards. Tell what they each had at the start.",
+        "hints": ["Choose one good for each person from the lesson."],
+        "explanation": "You might say the local trader had a gold card and the visitor had a cloth card. This prepares a listener to follow the exchange.",
+        "misconception": "A clear account includes both parties and what each exchanged.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Identifies both traders in the example.",
+              "marks": 1
+            },
+            {
+              "description": "Assigns one appropriate good to each at the start.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "describe_a_trade",
+        "type": "practical",
+        "difficulty": 3,
+        "stem": "Show a partner two scenes with cards. In the first, trade cloth for an iron bar. In the second, buy the cloth with money. Explain the change.",
+        "hints": ["Watch what is given in return for the cloth."],
+        "explanation": "The first scene uses goods on both sides. In the second scene the buyer gives money for the cloth.",
+        "misconception": "A clear account includes both parties and what each exchanged.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Demonstrates barter in the first scene and a purchase in the second.",
+              "marks": 1
+            },
+            {
+              "description": "Identifies the change in what was given for the cloth.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "describe_a_trade",
+        "type": "written",
+        "difficulty": 4,
+        "stem": "Write or dictate a tiny play about an early trade at the coast. Give both traders a line and tell how the goods change hands.",
+        "hints": ["Let each trader say what they offer or want."],
+        "explanation": "One trader might offer gold for cloth. The other can agree and hand over cloth in return for gold. Both lines help the audience follow the swap.",
+        "misconception": "A clear account includes both parties and what each exchanged.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Gives a suitable part to each trader in a coastal setting.",
+              "marks": 1
+            },
+            {
+              "description": "Describes which goods each trader gives or receives.",
+              "marks": 1
+            }
+          ]
+        }
+      }
+    ],
+    "questionCount": 20,
+    "teacherAssessedCount": 11,
+    "excludedMcqCount": 0,
+    "uncertain": [
+      "Printed page 13 lists trade goods together without consistently identifying their direction. The questions specify who gives each item in illustrative exchanges."
+    ]
+  }
+]

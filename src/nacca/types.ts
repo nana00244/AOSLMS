@@ -30,6 +30,7 @@ export interface NaccaIndicator {
   content_standard?: string;
   objective?: string;
   source_page?: number;
+  sourceNotes?: string[];
   spec?: {
     skills?: { tag: string; description: string; minQuestions?: number }[];
     difficultyPlan?: string;

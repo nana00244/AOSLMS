@@ -1,0 +1,3638 @@
+[
+  {
+    "indicator": {
+      "code": "B1.1.1.1.1",
+      "subject": "History",
+      "level": "Basic 1",
+      "strand": "History as a Subject",
+      "sub_strand": "Why and How We Study History",
+      "content_standard": "B1.1.1.1. Demonstrate understanding of what history is about and how it is part of everyday life.",
+      "objective": "Explain that history deals with past human activities",
+      "source_page": 2
+    },
+    "spec": {
+      "skills": [
+        {
+          "tag": "past_actions",
+          "description": "Distinguish a completed human action from a plan.",
+          "minQuestions": 4
+        },
+        {
+          "tag": "people_in_an_event",
+          "description": "Identify who acted and what the person did.",
+          "minQuestions": 4
+        },
+        {
+          "tag": "earlier_and_later",
+          "description": "Place two events in time order.",
+          "minQuestions": 4
+        },
+        {
+          "tag": "recounting_an_event",
+          "description": "Recount something that happened using a detail from the event.",
+          "minQuestions": 4
+        }
+      ],
+      "difficultyPlan": "5 recall, 7 simple use, 5 application and 3 challenge questions.",
+      "misconceptions": [
+        "A plan describes what may happen tomorrow.",
+        "The gate tells where the welcome happened.",
+        "Eating came after washing in Ama's story.",
+        "A hope tells what we want to happen."
+      ],
+      "needsTeacherAssessment": true
+    },
+    "questions": [
+      {
+        "skill_tag": "past_actions",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "Which tells about something a person already did?",
+        "options": [
+          "We will sing tomorrow.",
+          "We sang yesterday.",
+          "Please sing later.",
+          "Can we sing next week?"
+        ],
+        "answer": 1,
+        "hints": ["Look for something that has happened."],
+        "explanation": "Yesterday comes before today. The singers have already done the activity.",
+        "misconception": "A plan describes what may happen tomorrow.",
+        "distractorMisconceptions": {
+          "We will sing tomorrow.": "A plan describes what may happen tomorrow.",
+          "Please sing later.": "A request asks for an action later.",
+          "Can we sing next week?": "A question about next week does not report a past event."
+        }
+      },
+      {
+        "skill_tag": "past_actions",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "Which word helps show that a race is over?",
+        "options": ["Tomorrow", "Soon", "Next week", "Yesterday"],
+        "answer": 3,
+        "hints": ["When did the runners finish?"],
+        "explanation": "Yesterday points back to an earlier day. An event on that day is in the past.",
+        "misconception": "Tomorrow comes after today.",
+        "distractorMisconceptions": {
+          "Tomorrow": "Tomorrow comes after today.",
+          "Soon": "Soon refers to something still to happen.",
+          "Next week": "Next week is still ahead."
+        }
+      },
+      {
+        "skill_tag": "past_actions",
+        "type": "oral",
+        "difficulty": 2,
+        "stem": "Tell a partner one thing you did before school today.",
+        "hints": ["Think about getting ready to come to class."],
+        "explanation": "A child might say that they packed their bag. Packing came before the lesson.",
+        "misconception": "A response may overlook this detail: Makes clear that the action is over.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Names a real completed action.",
+              "marks": 1
+            },
+            {
+              "description": "Makes clear that the action is over.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "past_actions",
+        "type": "drawing",
+        "difficulty": 3,
+        "stem": "Draw a picture of someone doing an activity you saw yesterday. Tell what happened.",
+        "hints": ["Think who was there and what they did."],
+        "explanation": "A picture of a friend sweeping can help you tell how the friend cleaned the room yesterday.",
+        "misconception": "A response may overlook this detail: Describes the action as something seen earlier.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Shows a person carrying out an action.",
+              "marks": 1
+            },
+            {
+              "description": "Describes the action as something seen earlier.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "past_actions",
+        "type": "written",
+        "difficulty": 3,
+        "stem": "A pupil says all history happened long before anyone in our class was born. Give a different example.",
+        "hints": ["Remember an earlier day at school."],
+        "explanation": "A past class visit is part of the class’s history even if the visit was recent.",
+        "misconception": "A response may overlook this detail: Explains that it already happened.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Uses an event from the learner’s lifetime.",
+              "marks": 1
+            },
+            {
+              "description": "Explains that it already happened.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "people_in_an_event",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "In the story “Our teacher welcomed us at the gate”, who did the welcoming?",
+        "options": ["The gate", "The school bag", "The teacher", "The bell"],
+        "answer": 2,
+        "hints": ["Find the person who did the action."],
+        "explanation": "The teacher is the person named. Welcoming the pupils was the teacher’s activity.",
+        "misconception": "The gate tells where the welcome happened.",
+        "distractorMisconceptions": {
+          "The gate": "The gate tells where the welcome happened.",
+          "The school bag": "A bag is something a pupil carries.",
+          "The bell": "A bell is an object, not the person who welcomed us."
+        }
+      },
+      {
+        "skill_tag": "people_in_an_event",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "Which note tells both who acted and what they did?",
+        "options": [
+          "Abena rang the bell.",
+          "The big bell.",
+          "Beside the gate.",
+          "Before the lesson."
+        ],
+        "answer": 0,
+        "hints": ["Look for a person and an action together."],
+        "explanation": "Abena is the person. Ringing the bell tells what she did.",
+        "misconception": "This names the object but leaves out who used it.",
+        "distractorMisconceptions": {
+          "The big bell.": "This names the object but leaves out who used it.",
+          "Beside the gate.": "This tells where, but leaves out the person and action.",
+          "Before the lesson.": "This tells when, but leaves out the person and action."
+        }
+      },
+      {
+        "skill_tag": "people_in_an_event",
+        "type": "oral",
+        "difficulty": 2,
+        "stem": "Pretend you saw two pupils carrying books on your first school day. Tell who did what.",
+        "hints": ["Begin with the people you saw."],
+        "explanation": "A witness could report that two pupils carried books. The report names the actors and their activity.",
+        "misconception": "A response may overlook this detail: Describes carrying books as their action.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Identifies the two pupils.",
+              "marks": 1
+            },
+            {
+              "description": "Describes carrying books as their action.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "people_in_an_event",
+        "type": "practical",
+        "difficulty": 3,
+        "stem": "Act out an activity you remember from class. Let a partner describe the people and action.",
+        "hints": ["Choose an action your partner can see."],
+        "explanation": "Acting out handing out books gives a partner evidence about who handed the books to whom.",
+        "misconception": "A response may overlook this detail: Checks the partner’s description against what happened.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Acts out a recognisable past class activity.",
+              "marks": 1
+            },
+            {
+              "description": "Checks the partner’s description against what happened.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "people_in_an_event",
+        "type": "oral",
+        "difficulty": 4,
+        "stem": "A friend says “The hall” when asked what happened at assembly. Ask two questions to improve the story.",
+        "hints": ["A place alone does not describe an event."],
+        "explanation": "“Who was in the hall?” and “What did they do there?” turn a place name into a report about people.",
+        "misconception": "A response may overlook this detail: Asks what the people did.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Asks who was involved.",
+              "marks": 1
+            },
+            {
+              "description": "Asks what the people did.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "earlier_and_later",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "Ama first washed her hands and then ate. Which action happened earlier?",
+        "options": [
+          "Eating the meal",
+          "Finishing the meal",
+          "Clearing the plate",
+          "Washing her hands"
+        ],
+        "answer": 3,
+        "hints": ["Listen for the word first."],
+        "explanation": "The story puts washing before eating. Washing was earlier.",
+        "misconception": "Eating came after washing in Ama's story.",
+        "distractorMisconceptions": {
+          "Eating the meal": "Eating came after washing in Ama's story.",
+          "Finishing the meal": "She finished eating after she washed.",
+          "Clearing the plate": "Clearing a plate comes after the meal."
+        }
+      },
+      {
+        "skill_tag": "earlier_and_later",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "Which pair puts an event before a memory of it?",
+        "options": [
+          "We told its story; the match began.",
+          "The match ended; we told its story.",
+          "We recalled the goal; it had never happened.",
+          "We remembered a race that had not started."
+        ],
+        "answer": 1,
+        "hints": ["An event must happen before it can be remembered."],
+        "explanation": "After the match ends, its players can tell what happened. A memory looks back.",
+        "misconception": "The story of this match cannot come before the match itself.",
+        "distractorMisconceptions": {
+          "We told its story; the match began.": "The story of this match cannot come before the match itself.",
+          "We recalled the goal; it had never happened.": "A goal that never happened cannot be remembered as an event.",
+          "We remembered a race that had not started.": "The race must take place before people can recall it."
+        }
+      },
+      {
+        "skill_tag": "earlier_and_later",
+        "type": "practical",
+        "difficulty": 2,
+        "stem": "Place two picture cards in order: children entering a room, then the same children starting their lesson.",
+        "hints": ["Think about how the children reached their seats."],
+        "explanation": "The children enter before they can sit down and start that lesson.",
+        "misconception": "A response may overlook this detail: Gives a reason based on the pictured actions.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Places entering first.",
+              "marks": 1
+            },
+            {
+              "description": "Gives a reason based on the pictured actions.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "earlier_and_later",
+        "type": "drawing",
+        "difficulty": 3,
+        "stem": "Make two panels about an activity you completed today. Tell which part came first.",
+        "hints": ["Choose something with a clear beginning."],
+        "explanation": "A learner might show opening a book, then reading it. The two pictures put the actions in order.",
+        "misconception": "A response may overlook this detail: Uses first and then in the correct order.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Shows two connected actions.",
+              "marks": 1
+            },
+            {
+              "description": "Uses first and then in the correct order.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "earlier_and_later",
+        "type": "oral",
+        "difficulty": 4,
+        "stem": "Two recollections say “we planted a seed” and “we showed the growing plant”. Put them in order and explain.",
+        "hints": ["What needed to happen for there to be a plant to show?"],
+        "explanation": "The seed had to be planted before the pupils could show the growing plant. This orders two past human activities.",
+        "misconception": "A response may overlook this detail: Explains the relationship between the actions.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Places planting before showing the growing plant.",
+              "marks": 1
+            },
+            {
+              "description": "Explains the relationship between the actions.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "recounting_an_event",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "Which is a message about a past class event?",
+        "options": [
+          "Our class visited the garden.",
+          "We hope to visit a garden.",
+          "Shall we visit a garden?",
+          "Please visit a garden tomorrow."
+        ],
+        "answer": 0,
+        "hints": ["Look for a visit already made."],
+        "explanation": "Visited tells us that the class already took the trip. A plan or request does not say it happened.",
+        "misconception": "A hope tells what we want to happen.",
+        "distractorMisconceptions": {
+          "We hope to visit a garden.": "A hope tells what we want to happen.",
+          "Shall we visit a garden?": "An invitation suggests a possible trip.",
+          "Please visit a garden tomorrow.": "A request for tomorrow refers to a future trip."
+        }
+      },
+      {
+        "skill_tag": "recounting_an_event",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "Which question asks someone to remember history?",
+        "options": [
+          "What colour do you want next year?",
+          "What will you pack tomorrow?",
+          "What did you do on your first school day?",
+          "What game shall we play later?"
+        ],
+        "answer": 2,
+        "hints": ["Look for a question about an earlier experience."],
+        "explanation": "A first school day has already happened for a pupil in class. The question invites a memory of that day.",
+        "misconception": "Choosing for next year is planning.",
+        "distractorMisconceptions": {
+          "What colour do you want next year?": "Choosing for next year is planning.",
+          "What will you pack tomorrow?": "Packing tomorrow has not happened yet.",
+          "What game shall we play later?": "Choosing a later game is a plan."
+        }
+      },
+      {
+        "skill_tag": "recounting_an_event",
+        "type": "oral",
+        "difficulty": 2,
+        "stem": "Tell one thing your class used to do but no longer does. Say how you know about it.",
+        "hints": ["Think of a routine that changed."],
+        "explanation": "A pupil might remember meeting in another room. Remembering that former routine tells something about the class’s past.",
+        "misconception": "A response may overlook this detail: Identifies a memory or person who recalls it.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Names a past class activity.",
+              "marks": 1
+            },
+            {
+              "description": "Identifies a memory or person who recalls it.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "recounting_an_event",
+        "type": "oral",
+        "difficulty": 3,
+        "stem": "Interview a partner about yesterday’s playtime and retell the answer in one sentence.",
+        "hints": ["Listen for the person and the action."],
+        "explanation": "If the partner says they played a game, report that game. The retelling should follow what the partner said.",
+        "misconception": "A response may overlook this detail: Retells the answer without adding an invented action.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Asks about a completed activity.",
+              "marks": 1
+            },
+            {
+              "description": "Retells the answer without adding an invented action.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "recounting_an_event",
+        "type": "oral",
+        "difficulty": 4,
+        "stem": "Tell a short first-day story with two people, one activity and one clue that it happened in the past.",
+        "hints": ["Start with when and who."],
+        "explanation": "“On my first school day, my sister and I carried my books” names people, an activity and its time in the past.",
+        "misconception": "A response may overlook this detail: Uses a clear past-time clue tied to the story.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Identifies the participants and their activity.",
+              "marks": 1
+            },
+            {
+              "description": "Uses a clear past-time clue tied to the story.",
+              "marks": 1
+            }
+          ]
+        }
+      }
+    ],
+    "questionCount": 20,
+    "teacherAssessedCount": 12,
+    "excludedMcqCount": 0,
+    "uncertain": []
+  },
+  {
+    "indicator": {
+      "code": "B1.1.1.1.2",
+      "subject": "History",
+      "level": "Basic 1",
+      "strand": "History as a Subject",
+      "sub_strand": "Why and How We Study History",
+      "content_standard": "B1.1.1.1. Demonstrate understanding of what history is about and how it is part of everyday life.",
+      "objective": "Describe how sources of historical evidence help us find out about past human activities",
+      "source_page": 2
+    },
+    "spec": {
+      "skills": [
+        {
+          "tag": "picture_evidence",
+          "description": "Describe a detail visible in a picture of a past event.",
+          "minQuestions": 4
+        },
+        {
+          "tag": "spoken_accounts",
+          "description": "Choose an eyewitness and ask about an experience.",
+          "minQuestions": 4
+        },
+        {
+          "tag": "written_records",
+          "description": "Read a name or date from a written record.",
+          "minQuestions": 4
+        },
+        {
+          "tag": "comparing_evidence",
+          "description": "Select and compare sources for a particular question.",
+          "minQuestions": 4
+        }
+      ],
+      "difficultyPlan": "5 recall, 7 simple use, 5 application and 3 challenge questions.",
+      "misconceptions": [
+        "An empty album contains no pictures to examine.",
+        "Planning to attend is different from being there.",
+        "A classroom door does not record the pupil's date of birth.",
+        "Blank pages give no account to compare."
+      ],
+      "needsTeacherAssessment": true
+    },
+    "questions": [
+      {
+        "skill_tag": "picture_evidence",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "What can show how people looked at a wedding?",
+        "options": [
+          "An empty album",
+          "A bag bought today",
+          "A photograph of the wedding",
+          "A wish for a wedding"
+        ],
+        "answer": 2,
+        "hints": ["Look for a record made at the event."],
+        "explanation": "The photograph shows people present when it was taken. An empty album shows nobody.",
+        "misconception": "An empty album contains no pictures to examine.",
+        "distractorMisconceptions": {
+          "An empty album": "An empty album contains no pictures to examine.",
+          "A bag bought today": "This bag has no stated link to the wedding.",
+          "A wish for a wedding": "A wish does not record what anyone saw."
+        }
+      },
+      {
+        "skill_tag": "picture_evidence",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "A party photo shows children holding cups. Which detail can you see in it?",
+        "options": [
+          "They held cups.",
+          "They sang loudly.",
+          "They liked the drink.",
+          "They arrived at noon."
+        ],
+        "answer": 0,
+        "hints": ["Use something your eyes could check."],
+        "explanation": "The cups are visible. Sound, feelings and arrival time need other evidence.",
+        "misconception": "A still photo cannot tell how loud a sound was.",
+        "distractorMisconceptions": {
+          "They sang loudly.": "A still photo cannot tell how loud a sound was.",
+          "They liked the drink.": "Holding a drink does not show whether someone liked it.",
+          "They arrived at noon.": "The cups do not tell the time of arrival."
+        }
+      },
+      {
+        "skill_tag": "picture_evidence",
+        "type": "drawing",
+        "difficulty": 2,
+        "stem": "Sketch a birthday scene you remember. Mark one detail you remember seeing.",
+        "hints": ["Think of something people did."],
+        "explanation": "Showing a person cutting a cake records a remembered action that another person could ask about.",
+        "misconception": "A response may overlook this detail: Marks a visible detail from the memory.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Shows a celebration activity.",
+              "marks": 1
+            },
+            {
+              "description": "Marks a visible detail from the memory.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "picture_evidence",
+        "type": "practical",
+        "difficulty": 3,
+        "stem": "Choose two pictures from a class album. Put an earlier picture first using their labels.",
+        "hints": ["Check whether the pictures have dates."],
+        "explanation": "An earlier date belongs before a later one. Picture size does not tell age.",
+        "misconception": "A response may overlook this detail: Explains which clue supports the order.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Uses the labels to identify the order.",
+              "marks": 1
+            },
+            {
+              "description": "Explains which clue supports the order.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "picture_evidence",
+        "type": "oral",
+        "difficulty": 3,
+        "stem": "A photograph shows a crowd. A friend says everyone was happy. Explain what the photograph shows and what you would ask.",
+        "hints": ["Separate seeing people from knowing how they felt."],
+        "explanation": "A photograph can show a group standing together. Asking someone who was there can add what they remember feeling.",
+        "misconception": "A response may overlook this detail: Asks for evidence about feelings.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Names a visible feature.",
+              "marks": 1
+            },
+            {
+              "description": "Asks for evidence about feelings.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "spoken_accounts",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "Who could tell what they saw at last week’s class festival?",
+        "options": [
+          "A pupil who only plans to go",
+          "A visitor arriving next week",
+          "A person who has never heard of it",
+          "A pupil who went"
+        ],
+        "answer": 3,
+        "hints": ["Who was there?"],
+        "explanation": "A pupil present at the festival can describe a personal memory.",
+        "misconception": "Planning to attend is different from being there.",
+        "distractorMisconceptions": {
+          "A pupil who only plans to go": "Planning to attend is different from being there.",
+          "A visitor arriving next week": "Someone arriving next week missed last week's festival.",
+          "A person who has never heard of it": "Someone who never heard of it cannot recount what happened there."
+        }
+      },
+      {
+        "skill_tag": "spoken_accounts",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "Which question asks an elder for evidence about an old celebration?",
+        "options": [
+          "What might happen tomorrow?",
+          "What did you see there?",
+          "What colour shall I use?",
+          "Will you come next week?"
+        ],
+        "answer": 1,
+        "hints": ["Ask about an experience already lived."],
+        "explanation": "Asking what the elder saw invites an account of the earlier event.",
+        "misconception": "A prediction asks for a guess about the future.",
+        "distractorMisconceptions": {
+          "What might happen tomorrow?": "A prediction asks for a guess about the future.",
+          "What colour shall I use?": "Choosing a colour does not ask what the elder saw.",
+          "Will you come next week?": "A future invitation asks for a plan."
+        }
+      },
+      {
+        "skill_tag": "spoken_accounts",
+        "type": "oral",
+        "difficulty": 2,
+        "stem": "Ask a partner about a celebration they remember. Repeat one detail they gave.",
+        "hints": ["Listen before you retell."],
+        "explanation": "The partner’s memory is a spoken source. Retelling should preserve the detail they gave.",
+        "misconception": "A response may overlook this detail: Repeats the partner’s detail accurately.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Asks about a past celebration.",
+              "marks": 1
+            },
+            {
+              "description": "Repeats the partner’s detail accurately.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "spoken_accounts",
+        "type": "oral",
+        "difficulty": 3,
+        "stem": "A rhyme mentions people singing at a festival. Tell one question you would ask an older singer.",
+        "hints": ["Ask how the singer knows about it."],
+        "explanation": "Asking when people sang the rhyme helps connect the sung words with events in the past.",
+        "misconception": "A response may overlook this detail: Connects the question to the rhyme.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Asks about the earlier festival.",
+              "marks": 1
+            },
+            {
+              "description": "Connects the question to the rhyme.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "spoken_accounts",
+        "type": "oral",
+        "difficulty": 4,
+        "stem": "One child remembers dancing and another remembers drumming at the same party. Explain why you would listen to both.",
+        "hints": ["Think about what different people might notice."],
+        "explanation": "One account may describe the dancers and another the drummers. Both can add to the story.",
+        "misconception": "A response may overlook this detail: Allows that both could have happened.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Identifies the two different activities.",
+              "marks": 1
+            },
+            {
+              "description": "Allows that both could have happened.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "written_records",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "Which source helps you find the month of a classmate’s birthday?",
+        "options": [
+          "A dated birthday register",
+          "A picture of the classroom door",
+          "A list of favourite colours",
+          "An empty calendar"
+        ],
+        "answer": 0,
+        "hints": ["Look for names connected to dates."],
+        "explanation": "A birthday register links a person with a recorded date.",
+        "misconception": "A classroom door does not record the pupil's date of birth.",
+        "distractorMisconceptions": {
+          "A picture of the classroom door": "A classroom door does not record the pupil's date of birth.",
+          "A list of favourite colours": "A list of colours has no birthday dates.",
+          "An empty calendar": "An empty calendar does not link a date to a person."
+        }
+      },
+      {
+        "skill_tag": "written_records",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "A practice register says “Esi — 5 May”. Which detail can you get from the entry?",
+        "options": [
+          "Esi’s favourite song",
+          "The cake’s colour",
+          "Esi’s birthday date",
+          "The party guests"
+        ],
+        "answer": 2,
+        "hints": ["Read only what the entry gives."],
+        "explanation": "The entry pairs Esi with 5 May. It gives no details about a party.",
+        "misconception": "A name and date do not identify a song.",
+        "distractorMisconceptions": {
+          "Esi’s favourite song": "A name and date do not identify a song.",
+          "The cake’s colour": "A birthday date cannot tell us the cake's colour.",
+          "The party guests": "A register entry for one pupil does not list the guests."
+        }
+      },
+      {
+        "skill_tag": "written_records",
+        "type": "practical",
+        "difficulty": 2,
+        "stem": "Make a practice birthday entry for a made-up pupil. Use a name and date.",
+        "hints": ["Two pieces of information belong together."],
+        "explanation": "A register can show a name beside a day and month so another person can read the date.",
+        "misconception": "A response may overlook this detail: Pairs it with a clear date.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Writes a made-up name.",
+              "marks": 1
+            },
+            {
+              "description": "Pairs it with a clear date.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "written_records",
+        "type": "written",
+        "difficulty": 3,
+        "stem": "A birthday card says “Kojo — 8 June”. A copy says “Kojo — 8 July”. Correct the copy using the card.",
+        "hints": ["Compare the months carefully."],
+        "explanation": "The original card gives 8 June. The changed month is the copying error.",
+        "misconception": "A response may overlook this detail: Keeps the child and day unchanged.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Identifies June on the original.",
+              "marks": 1
+            },
+            {
+              "description": "Keeps the child and day unchanged.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "written_records",
+        "type": "practical",
+        "difficulty": 4,
+        "stem": "Order three practice cards dated 2 May, 4 May and 9 May. Explain how someone could use this record.",
+        "hints": ["Compare days within the same month."],
+        "explanation": "The dates run from 2 to 4 to 9 May. A class could use them to see whose birthday comes next.",
+        "misconception": "A response may overlook this detail: Explains a use for the ordered record.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Orders the dates correctly.",
+              "marks": 1
+            },
+            {
+              "description": "Explains a use for the ordered record.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "comparing_evidence",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "Which pair gives two different clues about the same festival?",
+        "options": [
+          "Two empty pages",
+          "Its photograph and a guest’s memory",
+          "A future plan and a blank envelope",
+          "Two guesses about next year"
+        ],
+        "answer": 1,
+        "hints": ["Choose records connected to the event."],
+        "explanation": "A photograph shows visible details. A guest can recall sounds or actions that the photograph may miss.",
+        "misconception": "Blank pages give no account to compare.",
+        "distractorMisconceptions": {
+          "Two empty pages": "Blank pages give no account to compare.",
+          "A future plan and a blank envelope": "A plan and an empty envelope do not record the festival.",
+          "Two guesses about next year": "Guesses about next year do not describe an earlier event."
+        }
+      },
+      {
+        "skill_tag": "comparing_evidence",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "A child wants to hear a song from a past celebration. Which record could help most?",
+        "options": [
+          "A still picture of a drum",
+          "A list of chairs",
+          "A blank notebook",
+          "A sound recording made there"
+        ],
+        "answer": 3,
+        "hints": ["Which record keeps sound?"],
+        "explanation": "A recording can preserve the sung words or tune. The other records cannot replay it.",
+        "misconception": "A picture shows the drum but cannot play the song.",
+        "distractorMisconceptions": {
+          "A still picture of a drum": "A picture shows the drum but cannot play the song.",
+          "A list of chairs": "A list of chairs has no record of the music.",
+          "A blank notebook": "A blank notebook contains no record of the song."
+        }
+      },
+      {
+        "skill_tag": "comparing_evidence",
+        "type": "oral",
+        "difficulty": 2,
+        "stem": "Name something an event photograph can show and something a witness can tell.",
+        "hints": ["Think of sight and sound."],
+        "explanation": "The photograph might show a drum. A witness might recall the sound of the drumming.",
+        "misconception": "A response may overlook this detail: Names a detail a witness could add.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Names a visible detail.",
+              "marks": 1
+            },
+            {
+              "description": "Names a detail a witness could add.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "comparing_evidence",
+        "type": "practical",
+        "difficulty": 3,
+        "stem": "Build a little evidence display for a pretend class celebration using a picture and a dated note.",
+        "hints": ["One source can show; another can name or date."],
+        "explanation": "The picture can show an action and the note can date it. Together they help someone tell the story.",
+        "misconception": "A response may overlook this detail: Labels the different clue each offers.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Includes two related sources.",
+              "marks": 1
+            },
+            {
+              "description": "Labels the different clue each offers.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "comparing_evidence",
+        "type": "oral",
+        "difficulty": 4,
+        "stem": "Your group has a birthday photo without a date and a dated guest note. Explain how to check whether they belong to the same party.",
+        "hints": ["Look for a shared person or event description."],
+        "explanation": "A guest might recognise who is in the picture and what they were doing. Matching details make the connection stronger.",
+        "misconception": "A response may overlook this detail: Explains why the date alone does not prove a match.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Identifies a matching detail to check.",
+              "marks": 1
+            },
+            {
+              "description": "Explains why the date alone does not prove a match.",
+              "marks": 1
+            }
+          ]
+        }
+      }
+    ],
+    "questionCount": 20,
+    "teacherAssessedCount": 12,
+    "excludedMcqCount": 0,
+    "uncertain": []
+  },
+  {
+    "indicator": {
+      "code": "B1.1.4.2.1",
+      "subject": "History",
+      "level": "Basic 1",
+      "strand": "History as a Subject",
+      "sub_strand": "Community History",
+      "content_standard": "B1.1.4.2. Recount history about their communities.",
+      "objective": "State the similarities and differences between the communities where learners live.",
+      "source_page": 3
+    },
+    "spec": {
+      "skills": [
+        {
+          "tag": "naming_features",
+          "description": "Name a feature of a community that can be studied.",
+          "minQuestions": 4
+        },
+        {
+          "tag": "finding_similarities",
+          "description": "State a feature shared by two places.",
+          "minQuestions": 4
+        },
+        {
+          "tag": "finding_differences",
+          "description": "Describe how two communities differ.",
+          "minQuestions": 4
+        },
+        {
+          "tag": "supporting_a_comparison",
+          "description": "Support a comparison with evidence from both places.",
+          "minQuestions": 4
+        }
+      ],
+      "difficultyPlan": "5 recall, 7 simple use, 5 application and 3 challenge questions.",
+      "misconceptions": [
+        "A game pupils plan to invent is a future activity.",
+        "Both maps mark a building.",
+        "The sketches show sites, not a count of visitors.",
+        "One guess gives no evidence from the other site."
+      ],
+      "needsTeacherAssessment": true
+    },
+    "questions": [
+      {
+        "skill_tag": "naming_features",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "What is a community feature pupils might visit to learn about the past?",
+        "options": [
+          "A game they plan to invent",
+          "Next week’s homework",
+          "A wish for a trip",
+          "An old post office"
+        ],
+        "answer": 3,
+        "hints": ["Look for an actual place."],
+        "explanation": "An old post office is a place in a community. Its building and stories may provide evidence.",
+        "misconception": "A game pupils plan to invent is a future activity.",
+        "distractorMisconceptions": {
+          "A game they plan to invent": "A game pupils plan to invent is a future activity.",
+          "Next week’s homework": "A homework task is not a site to visit.",
+          "A wish for a trip": "Wishing for a trip does not identify a place to study."
+        }
+      },
+      {
+        "skill_tag": "naming_features",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "A visitor says “I saw the chief’s palace.” Which detail did the visitor identify?",
+        "options": ["A festival date", "A community site", "A person’s birthday", "A song title"],
+        "answer": 1,
+        "hints": ["What kind of thing is a palace?"],
+        "explanation": "A palace is a place. Naming it identifies a feature that another community can be compared with.",
+        "misconception": "A palace names a place, while a date tells when.",
+        "distractorMisconceptions": {
+          "A festival date": "A palace names a place, while a date tells when.",
+          "A person’s birthday": "A birthday tells when a person was born.",
+          "A song title": "A song title names music, while a palace is a place."
+        }
+      },
+      {
+        "skill_tag": "naming_features",
+        "type": "drawing",
+        "difficulty": 2,
+        "stem": "Draw one site in your community and add its name or a spoken label.",
+        "hints": ["Think of somewhere you have seen."],
+        "explanation": "A labelled drawing lets someone know which local feature the drawing represents.",
+        "misconception": "A response may overlook this detail: Names the site correctly using local knowledge.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Depicts an identifiable site.",
+              "marks": 1
+            },
+            {
+              "description": "Names the site correctly using local knowledge.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "naming_features",
+        "type": "oral",
+        "difficulty": 3,
+        "stem": "Tell a classmate how to find one local place a visitor could ask about.",
+        "hints": ["What would help your partner recognise it?"],
+        "explanation": "A local name and a visible feature can help a visitor identify the right place.",
+        "misconception": "A response may overlook this detail: Gives a useful distinguishing clue.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Names a site.",
+              "marks": 1
+            },
+            {
+              "description": "Gives a useful distinguishing clue.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "naming_features",
+        "type": "practical",
+        "difficulty": 3,
+        "stem": "Choose two local site cards and arrange them from older to newer using the dates on the cards.",
+        "hints": ["Compare the dates, not the picture sizes."],
+        "explanation": "The site with the earlier recorded date goes first. Age needs a date or other evidence.",
+        "misconception": "A response may overlook this detail: Places the earlier site first.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Reads the supplied dates.",
+              "marks": 1
+            },
+            {
+              "description": "Places the earlier site first.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "finding_similarities",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "Two practice maps both show a post office. How are the places alike?",
+        "options": [
+          "Both have a post office.",
+          "Only one has buildings.",
+          "Both have the same people.",
+          "Neither has a post office."
+        ],
+        "answer": 0,
+        "hints": ["Look for what appears on both maps."],
+        "explanation": "A post office is shown twice, once in each community. That is a similarity.",
+        "misconception": "Both maps mark a building.",
+        "distractorMisconceptions": {
+          "Only one has buildings.": "Both maps mark a building.",
+          "Both have the same people.": "A shared post office does not show who lives in each place.",
+          "Neither has a post office.": "A post office is marked on each map."
+        }
+      },
+      {
+        "skill_tag": "finding_similarities",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "Which word helps tell a similarity?",
+        "options": ["Only", "Instead", "Both", "Except"],
+        "answer": 2,
+        "hints": ["Think about a feature shared by two places."],
+        "explanation": "Both introduces something true of each place being compared.",
+        "misconception": "Only singles out one case.",
+        "distractorMisconceptions": {
+          "Only": "Only singles out one case.",
+          "Instead": "Instead signals a replacement.",
+          "Except": "Except signals something left out."
+        }
+      },
+      {
+        "skill_tag": "finding_similarities",
+        "type": "oral",
+        "difficulty": 2,
+        "stem": "Two practice sketches each show trees beside a path. Say one way the scenes are alike.",
+        "hints": ["Look at the two scenes together."],
+        "explanation": "Both show trees beside a path. A shared feature is a similarity.",
+        "misconception": "A response may overlook this detail: Applies the feature to both scenes.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Names the shared trees or path.",
+              "marks": 1
+            },
+            {
+              "description": "Applies the feature to both scenes.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "finding_similarities",
+        "type": "drawing",
+        "difficulty": 3,
+        "stem": "Draw one feature that your community shares with another community discussed in class. Label the two communities.",
+        "hints": ["Recall two labelled examples."],
+        "explanation": "A drawing can show the same kind of site in two places even if the buildings look different.",
+        "misconception": "A response may overlook this detail: Names or identifies the communities being compared.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Shows a feature present in both.",
+              "marks": 1
+            },
+            {
+              "description": "Names or identifies the communities being compared.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "finding_similarities",
+        "type": "oral",
+        "difficulty": 4,
+        "stem": "Two communities both have a meeting place. What further question could you ask to compare how people use it?",
+        "hints": ["Ask the same question in each place."],
+        "explanation": "Asking who meets there, or when, allows the answers to be compared fairly.",
+        "misconception": "A response may overlook this detail: Seeks information from both communities.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Asks about an activity at the site.",
+              "marks": 1
+            },
+            {
+              "description": "Seeks information from both communities.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "finding_differences",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "One sample sketch shows a wetland; the other shows a forest. What is different?",
+        "options": [
+          "The number of visitors today",
+          "The kind of natural place",
+          "The age of every tree",
+          "The names of all families"
+        ],
+        "answer": 1,
+        "hints": ["Use what the sketches actually show."],
+        "explanation": "The sketches identify two different kinds of place. They give no visitor or family list.",
+        "misconception": "The sketches show sites, not a count of visitors.",
+        "distractorMisconceptions": {
+          "The number of visitors today": "The sketches show sites, not a count of visitors.",
+          "The age of every tree": "The sketches do not tell the ages of trees.",
+          "The names of all families": "The sketches identify landscapes rather than families."
+        }
+      },
+      {
+        "skill_tag": "finding_differences",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "Which sentence gives a difference?",
+        "options": [
+          "Both maps show a path.",
+          "Each drawing has a label.",
+          "The two pictures are on our desk.",
+          "One map shows a chapel; the other shows a palace."
+        ],
+        "answer": 3,
+        "hints": ["Look for a feature that changes from one picture to the other."],
+        "explanation": "The first sentence compares a chapel with a palace. The other sentences identify shared or unrelated facts.",
+        "misconception": "A shared path gives a similarity.",
+        "distractorMisconceptions": {
+          "Both maps show a path.": "A shared path gives a similarity.",
+          "Each drawing has a label.": "Labels on both drawings give a similarity.",
+          "The two pictures are on our desk.": "Being on one desk does not compare the sites shown."
+        }
+      },
+      {
+        "skill_tag": "finding_differences",
+        "type": "oral",
+        "difficulty": 2,
+        "stem": "Compare a drawing of a wide river with one of a narrow stream. Use one difference you can see.",
+        "hints": ["Describe the water in both pictures."],
+        "explanation": "One waterway looks wider and the other narrower. The description compares the same feature.",
+        "misconception": "A response may overlook this detail: Says which drawing shows each feature.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Names a visible difference.",
+              "marks": 1
+            },
+            {
+              "description": "Says which drawing shows each feature.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "finding_differences",
+        "type": "written",
+        "difficulty": 3,
+        "stem": "Complete this comparison from practice notes: “A has an old chapel. B has a palace.”",
+        "hints": ["Use one fact from each note."],
+        "explanation": "The notes identify different historical sites in the two communities.",
+        "misconception": "A response may overlook this detail: Reports the palace in B.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Reports the chapel in A.",
+              "marks": 1
+            },
+            {
+              "description": "Reports the palace in B.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "finding_differences",
+        "type": "oral",
+        "difficulty": 4,
+        "stem": "A child says two communities are completely different because one drawing contains a forest. What else would you check?",
+        "hints": ["Look for both shared and different features."],
+        "explanation": "You could check for a forest in the other place and for meeting places in both. One picture is only part of the evidence.",
+        "misconception": "A response may overlook this detail: Recognises that one difference does not settle every comparison.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Asks about features in the other community.",
+              "marks": 1
+            },
+            {
+              "description": "Recognises that one difference does not settle every comparison.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "supporting_a_comparison",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "What helps someone check a comparison of two visited sites?",
+        "options": [
+          "A guess about one site",
+          "A blank paper",
+          "Labelled sketches from both visits",
+          "A plan for a future game"
+        ],
+        "answer": 2,
+        "hints": ["Choose records from the places being compared."],
+        "explanation": "Two labelled sketches let a reader connect the observations with the correct sites.",
+        "misconception": "One guess gives no evidence from the other site.",
+        "distractorMisconceptions": {
+          "A guess about one site": "One guess gives no evidence from the other site.",
+          "A blank paper": "A blank sheet records nothing from either visit.",
+          "A plan for a future game": "An unrelated future plan does not record the sites."
+        }
+      },
+      {
+        "skill_tag": "supporting_a_comparison",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "One picture shows only a chapel door. What can we safely say?",
+        "options": [
+          "The picture shows a door.",
+          "That community has no other site.",
+          "Every house is a chapel.",
+          "The chapel is the oldest in Ghana."
+        ],
+        "answer": 0,
+        "hints": ["Say only what you can see."],
+        "explanation": "The small view shows a door. It cannot show everything in the community or prove its age.",
+        "misconception": "One view cannot show all the sites in a community.",
+        "distractorMisconceptions": {
+          "That community has no other site.": "One view cannot show all the sites in a community.",
+          "Every house is a chapel.": "A chapel door tells us nothing about every house.",
+          "The chapel is the oldest in Ghana.": "A picture of a door cannot establish a national age record."
+        }
+      },
+      {
+        "skill_tag": "supporting_a_comparison",
+        "type": "practical",
+        "difficulty": 2,
+        "stem": "Match two site descriptions from your teacher to their labelled pictures. Point to your clues.",
+        "hints": ["Check details such as a doorway, tree or sign."],
+        "explanation": "A detail repeated in the description and picture helps identify the site.",
+        "misconception": "A response may overlook this detail: Identifies a visible clue for each match.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Matches both descriptions.",
+              "marks": 1
+            },
+            {
+              "description": "Identifies a visible clue for each match.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "supporting_a_comparison",
+        "type": "drawing",
+        "difficulty": 3,
+        "stem": "Make a two-part display of communities studied in class. Show one shared and one different feature.",
+        "hints": ["Use the class pictures to check your labels."],
+        "explanation": "A useful comparison shows what the places have in common as well as one difference supported by the pictures.",
+        "misconception": "A response may overlook this detail: Labels a feature that differs.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Depicts a genuine shared feature.",
+              "marks": 1
+            },
+            {
+              "description": "Labels a feature that differs.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "supporting_a_comparison",
+        "type": "oral",
+        "difficulty": 4,
+        "stem": "A visitor asks whether two sites are the same age. You have sketches but no dates. Give a careful answer and name a source you could ask for.",
+        "hints": ["Think about what a drawing cannot tell by itself."],
+        "explanation": "Appearance can suggest a question. Dates or a reliable local account are needed before you give an age order.",
+        "misconception": "A response may overlook this detail: Suggests a dated record or knowledgeable person.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Explains that the sketches alone do not settle age.",
+              "marks": 1
+            },
+            {
+              "description": "Suggests a dated record or knowledgeable person.",
+              "marks": 1
+            }
+          ]
+        }
+      }
+    ],
+    "questionCount": 20,
+    "teacherAssessedCount": 12,
+    "excludedMcqCount": 0,
+    "uncertain": []
+  },
+  {
+    "indicator": {
+      "code": "B1.2.3.1.1",
+      "subject": "History",
+      "level": "Basic 1",
+      "strand": "My Country Ghana",
+      "sub_strand": "How Ghana Got Its Name",
+      "content_standard": "B1.2.3.1. Demonstrate understanding of why Ghana used to be called the ‘Gold Coast’.",
+      "objective": "Explain why, in the past, Ghana was known as the Gold Coast.",
+      "source_page": 4
+    },
+    "spec": {
+      "skills": [
+        {
+          "tag": "the_old_name",
+          "description": "Identify Gold Coast as a former name of Ghana.",
+          "minQuestions": 4
+        },
+        {
+          "tag": "a_name_linked_to_gold",
+          "description": "Connect the words in the name with gold and the coast.",
+          "minQuestions": 4
+        },
+        {
+          "tag": "name_evidence",
+          "description": "Use a trade clue to explain the historical name.",
+          "minQuestions": 4
+        },
+        {
+          "tag": "explaining_two_names",
+          "description": "Distinguish the earlier and later names for the country.",
+          "minQuestions": 4
+        }
+      ],
+      "difficultyPlan": "5 recall, 7 simple use, 5 application and 3 challenge questions.",
+      "misconceptions": [
+        "Cape Coast names a town, rather than the country's former name.",
+        "Iron is a different metal from the one in the name.",
+        "The important clue concerns gold as a good, not the colour of water.",
+        "A colour preference does not explain a place name."
+      ],
+      "needsTeacherAssessment": true
+    },
+    "questions": [
+      {
+        "skill_tag": "the_old_name",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "Which name did the country now called Ghana use in the past?",
+        "options": ["Gold Coast", "Cape Coast", "West Coast", "Forest Coast"],
+        "answer": 0,
+        "hints": ["Think of the metal named in the old label."],
+        "explanation": "The old name was Gold Coast. Cape Coast is a different name.",
+        "misconception": "Cape Coast names a town, rather than the country's former name.",
+        "distractorMisconceptions": {
+          "Cape Coast": "Cape Coast names a town, rather than the country's former name.",
+          "West Coast": "West describes a direction, not the historical name.",
+          "Forest Coast": "A forest is a land feature, not the former country's name."
+        }
+      },
+      {
+        "skill_tag": "the_old_name",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "A practice label says “older name of Ghana”. Which card belongs beside it?",
+        "options": ["National flag", "Gold ring", "Gold Coast", "Ghanaian song"],
+        "answer": 2,
+        "hints": ["Look for a country name."],
+        "explanation": "Gold Coast was an earlier country name. Objects made of gold are not country names.",
+        "misconception": "A flag is a symbol, not the name on the old map.",
+        "distractorMisconceptions": {
+          "National flag": "A flag is a symbol, not the name on the old map.",
+          "Gold ring": "A ring is an object made of gold.",
+          "Ghanaian song": "A song is not the former country name."
+        }
+      },
+      {
+        "skill_tag": "the_old_name",
+        "type": "oral",
+        "difficulty": 2,
+        "stem": "Tell a friend the earlier name and the name used now.",
+        "hints": ["Use the words before and now."],
+        "explanation": "Before the change the country was known as the Gold Coast. Its later name is Ghana.",
+        "misconception": "A response may overlook this detail: Says Ghana for the later name.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Says Gold Coast for the earlier name.",
+              "marks": 1
+            },
+            {
+              "description": "Says Ghana for the later name.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "the_old_name",
+        "type": "drawing",
+        "difficulty": 3,
+        "stem": "Make two name cards for a class history wall. Put the older one on the left.",
+        "hints": ["Which name belongs to the past label?"],
+        "explanation": "Gold Coast comes first on the wall. Ghana follows as the later name.",
+        "misconception": "A response may overlook this detail: Orders the earlier name before the later name.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Includes Gold Coast and Ghana.",
+              "marks": 1
+            },
+            {
+              "description": "Orders the earlier name before the later name.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "the_old_name",
+        "type": "oral",
+        "difficulty": 3,
+        "stem": "A friend says Cape Coast and Gold Coast are the same words. Read the two labels and correct the country card.",
+        "hints": ["Look carefully at the first word on each card."],
+        "explanation": "The words Cape and Gold differ. The old country label in this lesson reads Gold Coast.",
+        "misconception": "A response may overlook this detail: Chooses Gold Coast for the older country name.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Distinguishes Cape from Gold.",
+              "marks": 1
+            },
+            {
+              "description": "Chooses Gold Coast for the older country name.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "a_name_linked_to_gold",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "Which metal is named in “Gold Coast”?",
+        "options": ["Iron", "Gold", "Silver", "Copper"],
+        "answer": 1,
+        "hints": ["Read the first word of the name."],
+        "explanation": "The old label points to gold. The metal is part of the reason the coast was known by this name.",
+        "misconception": "Iron is a different metal from the one in the name.",
+        "distractorMisconceptions": {
+          "Iron": "Iron is a different metal from the one in the name.",
+          "Silver": "Silver is a different metal from the one in the name.",
+          "Copper": "Copper is a different metal from the one in the name."
+        }
+      },
+      {
+        "skill_tag": "a_name_linked_to_gold",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "Which picture would best help explain the old name to a visitor?",
+        "options": [
+          "A school bell in a room",
+          "A football on a pitch",
+          "A book on a desk",
+          "Gold beside a coast"
+        ],
+        "answer": 3,
+        "hints": ["Look for the two clues in the name."],
+        "explanation": "The old name joins gold with the coast. The picture should make that connection clear.",
+        "misconception": "A school bell does not connect the metal and the coast.",
+        "distractorMisconceptions": {
+          "A school bell in a room": "A school bell does not connect the metal and the coast.",
+          "A football on a pitch": "A football scene gives no clue about the old place name.",
+          "A book on a desk": "A book on a desk by itself gives no clue about the metal or the coast."
+        }
+      },
+      {
+        "skill_tag": "a_name_linked_to_gold",
+        "type": "oral",
+        "difficulty": 2,
+        "stem": "Use the word gold to explain why the earlier name fits the coast.",
+        "hints": ["Ask what made the coast known to visitors."],
+        "explanation": "Gold was associated with the coast. That association is reflected in the name Gold Coast.",
+        "misconception": "A response may overlook this detail: Identifies the name as Gold Coast.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Links the old name with gold.",
+              "marks": 1
+            },
+            {
+              "description": "Identifies the name as Gold Coast.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "a_name_linked_to_gold",
+        "type": "practical",
+        "difficulty": 3,
+        "stem": "Choose word cards from GOLD, SNOW and COAST to make the old name. Explain your choice.",
+        "hints": ["Read the two parts of the name together."],
+        "explanation": "GOLD and COAST form the name. SNOW does not express its historical connection with gold.",
+        "misconception": "A response may overlook this detail: Explains the gold connection.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Selects GOLD and COAST in order.",
+              "marks": 1
+            },
+            {
+              "description": "Explains the gold connection.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "a_name_linked_to_gold",
+        "type": "drawing",
+        "difficulty": 4,
+        "stem": "Draw a class label for an old-name display. Include an image that explains the name and say what it stands for.",
+        "hints": ["Choose a detail that helps a younger child remember."],
+        "explanation": "A drawing of gold beside a coast supports the meaning of the old name. A label tells the viewer what it represents.",
+        "misconception": "A response may overlook this detail: Links a pictured clue to the meaning of the name.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Gives the name Gold Coast.",
+              "marks": 1
+            },
+            {
+              "description": "Links a pictured clue to the meaning of the name.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "name_evidence",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "Which clue helps explain the old name on a trader’s map?",
+        "options": [
+          "The sea looked yellow.",
+          "Everyone painted their house yellow.",
+          "Gold was important in trade on the coast.",
+          "Every town had the same name."
+        ],
+        "answer": 2,
+        "hints": ["Think about what traders valued along the coast."],
+        "explanation": "Gold was traded on the coast. Its importance helps explain the name Gold Coast.",
+        "misconception": "The important clue concerns gold as a good, not the colour of water.",
+        "distractorMisconceptions": {
+          "The sea looked yellow.": "The important clue concerns gold as a good, not the colour of water.",
+          "Everyone painted their house yellow.": "The note gives no evidence about house colours.",
+          "Every town had the same name.": "The clue concerns a country name, not the names of its towns."
+        }
+      },
+      {
+        "skill_tag": "name_evidence",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "A practice note says people came to the coast to trade for gold. What does the note support?",
+        "options": [
+          "Gold mattered to people trading along the coast.",
+          "The sea was made of gold.",
+          "Every beach was yellow.",
+          "Gold was the only thing anyone traded."
+        ],
+        "answer": 0,
+        "hints": ["Look for what the note says, without adding a claim about every place."],
+        "explanation": "The note connects the coast with trade in gold. It does not say what colour the beaches were or rule out other goods.",
+        "misconception": "Gold being traded does not mean the sea was gold.",
+        "distractorMisconceptions": {
+          "The sea was made of gold.": "Gold being traded does not mean the sea was gold.",
+          "Every beach was yellow.": "The trade note says nothing about beach colours.",
+          "Gold was the only thing anyone traded.": "Evidence for one trade good does not rule out other goods."
+        }
+      },
+      {
+        "skill_tag": "name_evidence",
+        "type": "written",
+        "difficulty": 2,
+        "stem": "Write a label joining a picture of gold being traded with the old country name.",
+        "hints": ["Explain why the two belong together."],
+        "explanation": "The picture illustrates gold as a trade good on the coast. The label connects it to the English name Gold Coast.",
+        "misconception": "Assuming the old country name describes the colour of the land or sea.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Names the Gold Coast.",
+              "marks": 1
+            },
+            {
+              "description": "Explains the connection to trade in gold.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "name_evidence",
+        "type": "oral",
+        "difficulty": 3,
+        "stem": "A friend paints the sea yellow and says this explains the old name. Offer a better explanation.",
+        "hints": ["Think about the activity that took place near the sea."],
+        "explanation": "The important clue is trade in gold along the coast. The sea did not need to be yellow.",
+        "misconception": "Assuming the old country name describes the colour of the land or sea.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Identifies gold rather than a colour as the clue.",
+              "marks": 1
+            },
+            {
+              "description": "Connects gold with activity along the coast.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "name_evidence",
+        "type": "practical",
+        "difficulty": 4,
+        "stem": "Lay out three cards showing gold, traders at the coast and an old country label. Tell the story they help us remember.",
+        "hints": ["Explain how the goods and the place connect to the name."],
+        "explanation": "People traded gold along this coast. The name Gold Coast reflects the importance of gold associated with the place.",
+        "misconception": "Assuming the old country name describes the colour of the land or sea.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Connects the traders and gold with the coast.",
+              "marks": 1
+            },
+            {
+              "description": "Identifies Gold Coast as an earlier country name.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "explaining_two_names",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "Which question asks for the reason behind the older name?",
+        "options": [
+          "What is your favourite colour?",
+          "How many chairs are here?",
+          "Who brought the chalk?",
+          "Why was it called Gold Coast?"
+        ],
+        "answer": 3,
+        "hints": ["Find the question about a name and its meaning."],
+        "explanation": "Why asks for a reason. The reason should connect gold with the coast.",
+        "misconception": "A colour preference does not explain a place name.",
+        "distractorMisconceptions": {
+          "What is your favourite colour?": "A colour preference does not explain a place name.",
+          "How many chairs are here?": "Counting chairs gives no reason for a historical name.",
+          "Who brought the chalk?": "Finding the owner of chalk does not explain how the country got its name."
+        }
+      },
+      {
+        "skill_tag": "explaining_two_names",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "A sign reads “Gold Coast → Ghana”. What does the arrow show?",
+        "options": [
+          "A route to a gold shop",
+          "An earlier name followed by a later name",
+          "The colour of a flag",
+          "Two kinds of gold"
+        ],
+        "answer": 1,
+        "hints": ["Read from the older label towards the newer one."],
+        "explanation": "The arrow shows a name change through time. It is not a road sign.",
+        "misconception": "The two labels are names for the country, not directions to a shop.",
+        "distractorMisconceptions": {
+          "A route to a gold shop": "The two labels are names for the country, not directions to a shop.",
+          "The colour of a flag": "An arrow between names does not identify a flag colour.",
+          "Two kinds of gold": "The labels name a place at different times, not two metals."
+        }
+      },
+      {
+        "skill_tag": "explaining_two_names",
+        "type": "oral",
+        "difficulty": 2,
+        "stem": "A pupil says the country is called Gold Coast today. Correct the sentence and explain the old name.",
+        "hints": ["Answer both when and why."],
+        "explanation": "Gold Coast names the earlier period and refers to gold associated with the coast. The later country name is Ghana.",
+        "misconception": "A response may overlook this detail: Explains the older name through the gold connection.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Uses Ghana for the later name.",
+              "marks": 1
+            },
+            {
+              "description": "Explains the older name through the gold connection.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "explaining_two_names",
+        "type": "oral",
+        "difficulty": 3,
+        "stem": "Play a museum guide. A visitor asks what Gold Coast means on your practice display. Point to two clues and answer.",
+        "hints": ["Use the name card and your picture."],
+        "explanation": "A guide can point to gold and the coast, then explain why the country once carried that name.",
+        "misconception": "A response may overlook this detail: Explains the gold connection in simple speech.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Identifies both parts of the old name.",
+              "marks": 1
+            },
+            {
+              "description": "Explains the gold connection in simple speech.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "explaining_two_names",
+        "type": "written",
+        "difficulty": 4,
+        "stem": "Complete a two-line history caption: one line explains the old name, and one gives the later name.",
+        "hints": ["Give one idea in each line."],
+        "explanation": "The first line can tell why the coast was linked with gold. The second can say the country later took the name Ghana.",
+        "misconception": "A response may overlook this detail: Gives Ghana as the later name.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Explains the old label using gold and the coast.",
+              "marks": 1
+            },
+            {
+              "description": "Gives Ghana as the later name.",
+              "marks": 1
+            }
+          ]
+        }
+      }
+    ],
+    "questionCount": 20,
+    "teacherAssessedCount": 12,
+    "excludedMcqCount": 0,
+    "uncertain": [
+      "The Portuguese phrase on printed p. 4 is discussed with the English historical name. Its literal translation is not assessed."
+    ]
+  },
+  {
+    "indicator": {
+      "code": "B1.2.3.1.2",
+      "subject": "History",
+      "level": "Basic 1",
+      "strand": "My Country Ghana",
+      "sub_strand": "How Ghana Got Its Name",
+      "content_standard": "B1.2.3.1. Demonstrate understanding of why Ghana used to be called the ‘Gold Coast’.",
+      "objective": "Recall when the name Ghana came into formal use.",
+      "source_page": 5
+    },
+    "spec": {
+      "skills": [
+        {
+          "tag": "formal_use",
+          "description": "Distinguish an official country name from an informal name.",
+          "minQuestions": 4
+        },
+        {
+          "tag": "before_and_after",
+          "description": "Sequence the earlier and later country names.",
+          "minQuestions": 4
+        },
+        {
+          "tag": "independence",
+          "description": "Place the name change at independence.",
+          "minQuestions": 4
+        },
+        {
+          "tag": "recounting_a_change",
+          "description": "Recount the formal change using words, a picture or a short scene.",
+          "minQuestions": 4
+        }
+      ],
+      "difficultyPlan": "5 recall, 7 simple use, 5 application and 3 challenge questions.",
+      "misconceptions": [
+        "Starting school is a personal event, not a countrywide name change.",
+        "Accra is a city, not the country's previous name.",
+        "1960 marks the start of the republic, after independence.",
+        "Choosing a nickname does not model an official national decision."
+      ],
+      "needsTeacherAssessment": true
+    },
+    "questions": [
+      {
+        "skill_tag": "formal_use",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "When did Ghana become the country’s formal name?",
+        "options": [
+          "When each pupil started school",
+          "At independence",
+          "At the next class party",
+          "At every new year"
+        ],
+        "answer": 1,
+        "hints": ["Think of a change for the whole country."],
+        "explanation": "The official change from Gold Coast to Ghana is linked to independence.",
+        "misconception": "Starting school is a personal event, not a countrywide name change.",
+        "distractorMisconceptions": {
+          "When each pupil started school": "Starting school is a personal event, not a countrywide name change.",
+          "At the next class party": "A future class party does not mark a past national change.",
+          "At every new year": "Changing the calendar year does not give a country a new name every year."
+        }
+      },
+      {
+        "skill_tag": "formal_use",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "What does an official country name mean?",
+        "options": [
+          "A pet name one friend likes",
+          "A title for one song",
+          "A name invented for a game",
+          "The name used for the country in official business"
+        ],
+        "answer": 3,
+        "hints": ["Think about use by the whole country."],
+        "explanation": "Formal use means that Ghana became the official name. It was more than a private nickname.",
+        "misconception": "A nickname used by one friend has no official standing.",
+        "distractorMisconceptions": {
+          "A pet name one friend likes": "A nickname used by one friend has no official standing.",
+          "A title for one song": "A song title identifies music rather than a country.",
+          "A name invented for a game": "An invented game name does not become a country's official name."
+        }
+      },
+      {
+        "skill_tag": "formal_use",
+        "type": "oral",
+        "difficulty": 2,
+        "stem": "Say what changed about the country’s name at independence.",
+        "hints": ["Say the names in order."],
+        "explanation": "At independence the country called Gold Coast took the formal name Ghana.",
+        "misconception": "A response may overlook this detail: Names Ghana as the formal later name.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Names Gold Coast as the earlier name.",
+              "marks": 1
+            },
+            {
+              "description": "Names Ghana as the formal later name.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "formal_use",
+        "type": "written",
+        "difficulty": 3,
+        "stem": "Write the country name for the later card in an independence display.",
+        "hints": ["Read the display from earlier to later."],
+        "explanation": "A card after independence should carry the name Ghana.",
+        "misconception": "A response may overlook this detail: Places it after the Gold Coast card.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Gives Ghana.",
+              "marks": 1
+            },
+            {
+              "description": "Places it after the Gold Coast card.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "formal_use",
+        "type": "oral",
+        "difficulty": 3,
+        "stem": "Act out a class announcement of the new country name. Tell when it starts to be used.",
+        "hints": ["Imagine telling people about a national change."],
+        "explanation": "An announcement can say that at independence the country takes the name Ghana. This is a classroom re-enactment.",
+        "misconception": "A response may overlook this detail: Links its formal use to independence.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Announces the name Ghana.",
+              "marks": 1
+            },
+            {
+              "description": "Links its formal use to independence.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "before_and_after",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "Which name belongs before Ghana on a name-change timeline?",
+        "options": ["Accra", "Parliament", "Gold Coast", "National flag"],
+        "answer": 2,
+        "hints": ["Look for the older name of the country."],
+        "explanation": "Gold Coast comes earlier. Ghana is the formal name used at independence.",
+        "misconception": "Accra is a city, not the country's previous name.",
+        "distractorMisconceptions": {
+          "Accra": "Accra is a city, not the country's previous name.",
+          "Parliament": "Parliament is an institution, not the old name.",
+          "National flag": "The national flag is a symbol, not the old name."
+        }
+      },
+      {
+        "skill_tag": "before_and_after",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "A practice chart reads “Gold Coast, independence, ___”. Which label completes it?",
+        "options": ["Ghana", "Akan forest", "Gold ring", "School hall"],
+        "answer": 0,
+        "hints": ["Read the chart in time order."],
+        "explanation": "The blank is for the later country name. The formal name Ghana goes there.",
+        "misconception": "A forest region is not the new name on the chart.",
+        "distractorMisconceptions": {
+          "Akan forest": "A forest region is not the new name on the chart.",
+          "Gold ring": "A ring is an object rather than a country name.",
+          "School hall": "A school hall is a building rather than a country name."
+        }
+      },
+      {
+        "skill_tag": "before_and_after",
+        "type": "practical",
+        "difficulty": 2,
+        "stem": "Sort cards labelled before the change and after the change with the names Gold Coast and Ghana.",
+        "hints": ["Use the change as the middle point."],
+        "explanation": "Gold Coast goes before the change and Ghana after it.",
+        "misconception": "A response may overlook this detail: Explains which match comes first.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Matches each name with its period.",
+              "marks": 1
+            },
+            {
+              "description": "Explains which match comes first.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "before_and_after",
+        "type": "drawing",
+        "difficulty": 3,
+        "stem": "Draw two signs for an imaginary history display: one for before independence and one for after.",
+        "hints": ["Use words people visiting the display can read."],
+        "explanation": "The signs show a sequence of country names on either side of independence.",
+        "misconception": "A response may overlook this detail: Labels the second Ghana.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Labels the first Gold Coast.",
+              "marks": 1
+            },
+            {
+              "description": "Labels the second Ghana.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "before_and_after",
+        "type": "oral",
+        "difficulty": 4,
+        "stem": "Ama puts Ghana first because the word is shorter. Explain a better rule for ordering the cards.",
+        "hints": ["Ask which name was used earlier."],
+        "explanation": "Timeline order depends on when a name was used. Gold Coast therefore comes first.",
+        "misconception": "A response may overlook this detail: Orders the names by their use in history.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Rejects word length as a time clue.",
+              "marks": 1
+            },
+            {
+              "description": "Orders the names by their use in history.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "independence",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "A timeline says “1957, independence” and “1960, republic”. Which year belongs beside the change from Gold Coast to Ghana at independence?",
+        "options": ["1960", "2016", "2019", "1957"],
+        "answer": 3,
+        "hints": ["Think of the end of the journey to independence in the curriculum."],
+        "explanation": "The independence year was 1957. That is when Ghana came into formal use.",
+        "misconception": "1960 marks the start of the republic, after independence.",
+        "distractorMisconceptions": {
+          "1960": "1960 marks the start of the republic, after independence.",
+          "2016": "2016 comes many years after the change.",
+          "2019": "The curriculum's publication year is not the independence year."
+        }
+      },
+      {
+        "skill_tag": "independence",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "Your class is labelling a picture of independence in 1957. Which pair belongs below it?",
+        "options": [
+          "1957 — a new birthday month",
+          "1957 — Ghana",
+          "1960 — the first use of Gold Coast",
+          "2019 — the first use of Ghana"
+        ],
+        "answer": 1,
+        "hints": ["Match the country change with its year."],
+        "explanation": "1957 is the independence year and Ghana is the formal country name adopted then.",
+        "misconception": "The year is right, but the event concerns a national name rather than a birthday.",
+        "distractorMisconceptions": {
+          "1957 — a new birthday month": "The year is right, but the event concerns a national name rather than a birthday.",
+          "1960 — the first use of Gold Coast": "This reverses the change and gives the wrong year.",
+          "2019 — the first use of Ghana": "2019 is much later than the change at independence."
+        }
+      },
+      {
+        "skill_tag": "independence",
+        "type": "written",
+        "difficulty": 2,
+        "stem": "Use the independence date on your class timeline to finish the caption. “At independence in ___, the formal name became ___.”",
+        "hints": ["Supply a year and a country name."],
+        "explanation": "The year is 1957. The name used formally at independence is Ghana.",
+        "misconception": "A response may overlook this detail: Enters Ghana.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Enters 1957.",
+              "marks": 1
+            },
+            {
+              "description": "Enters Ghana.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "independence",
+        "type": "oral",
+        "difficulty": 3,
+        "stem": "A classmate chooses 1960 simply because a presidents lesson starts there. Which event helps you choose the year for the name change?",
+        "hints": ["A presidents timeline and an independence timeline ask different questions."],
+        "explanation": "The question asks when the name Ghana came into formal use. The relevant event is independence in 1957.",
+        "misconception": "A response may overlook this detail: Identifies 1957 as its year.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Identifies independence as the event.",
+              "marks": 1
+            },
+            {
+              "description": "Identifies 1957 as its year.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "independence",
+        "type": "practical",
+        "difficulty": 4,
+        "stem": "Put a marker on 1957 on your class timeline. Add a short label explaining the country-name change.",
+        "hints": ["Write what changed, as well as when."],
+        "explanation": "The marker connects a year with an event: the country took the formal name Ghana at independence.",
+        "misconception": "A response may overlook this detail: Labels the transition from Gold Coast to Ghana.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Places the marker at 1957.",
+              "marks": 1
+            },
+            {
+              "description": "Labels the transition from Gold Coast to Ghana.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "recounting_a_change",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "Which activity would help the class tell the story of the official change?",
+        "options": [
+          "Act out a discussion in parliament",
+          "Choose a pupil’s nickname",
+          "Count the doors in school",
+          "Draw tomorrow’s lunch"
+        ],
+        "answer": 0,
+        "hints": ["Look for the national decision in the lesson."],
+        "explanation": "The curriculum suggests dramatising parliament’s part in the change. It concerns the country’s official name.",
+        "misconception": "Choosing a nickname does not model an official national decision.",
+        "distractorMisconceptions": {
+          "Choose a pupil’s nickname": "Choosing a nickname does not model an official national decision.",
+          "Count the doors in school": "Counting doors does not tell the story of a name change.",
+          "Draw tomorrow’s lunch": "A drawing of lunch does not show the national decision."
+        }
+      },
+      {
+        "skill_tag": "recounting_a_change",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "Which sentence tells both the change and when it happened?",
+        "options": [
+          "Ghana is a short name.",
+          "A pupil made a new sign.",
+          "Gold Coast became Ghana at independence.",
+          "Gold is a colour on a card."
+        ],
+        "answer": 2,
+        "hints": ["Look for an earlier name, a later name and a time clue."],
+        "explanation": "The sentence names both country names and links their change to independence.",
+        "misconception": "Name length describes a word but gives no event or date.",
+        "distractorMisconceptions": {
+          "Ghana is a short name.": "Name length describes a word but gives no event or date.",
+          "A pupil made a new sign.": "A pupil's sign does not establish when the country changed its name.",
+          "Gold is a colour on a card.": "A colour on a card does not identify a national change."
+        }
+      },
+      {
+        "skill_tag": "recounting_a_change",
+        "type": "oral",
+        "difficulty": 2,
+        "stem": "Retell the name change in two sentences for a younger child.",
+        "hints": ["Begin with Before independence."],
+        "explanation": "Before independence the country was known as Gold Coast. In 1957 it took the formal name Ghana.",
+        "misconception": "A response may overlook this detail: Connects the formal later name with independence.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Mentions the earlier name.",
+              "marks": 1
+            },
+            {
+              "description": "Connects the formal later name with independence.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "recounting_a_change",
+        "type": "oral",
+        "difficulty": 3,
+        "stem": "Your partner plays a visitor who asks “Did the name change when our class made the sign?” Answer as a class guide.",
+        "hints": ["Distinguish making a display from the history it shows."],
+        "explanation": "The class sign was made now. The event it describes was the change at independence in 1957.",
+        "misconception": "A response may overlook this detail: Names independence in 1957 as the time of formal use.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Explains that the sign represents an earlier event.",
+              "marks": 1
+            },
+            {
+              "description": "Names independence in 1957 as the time of formal use.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "recounting_a_change",
+        "type": "written",
+        "difficulty": 4,
+        "stem": "A practice label reads “Gold Coast is the new name from 1957.” Rewrite it so that a visitor understands both names.",
+        "hints": ["Check the order of the names."],
+        "explanation": "Gold Coast was the earlier name. At independence in 1957, Ghana became the formal name.",
+        "misconception": "A response may overlook this detail: Keeps the change attached to 1957 and independence.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Corrects which name is new.",
+              "marks": 1
+            },
+            {
+              "description": "Keeps the change attached to 1957 and independence.",
+              "marks": 1
+            }
+          ]
+        }
+      }
+    ],
+    "questionCount": 20,
+    "teacherAssessedCount": 12,
+    "excludedMcqCount": 0,
+    "uncertain": [
+      "Printed page 5 asks for the year of the name change without giving its date. Date-reading exercises supply an independence label or refer to the class timeline."
+    ]
+  },
+  {
+    "indicator": {
+      "code": "B1.2.5.1.1",
+      "subject": "History",
+      "level": "Basic 1",
+      "strand": "My Country Ghana",
+      "sub_strand": "Some Selected Individuals",
+      "content_standard": "B1.2.5.1. Show understanding of significant roles played by Ghanaians from different walks of life",
+      "objective": "Identify Ghanaians of diverse fields who have contributed significantly to national development including Theodosia Okoh – National flag. Amon Kotei – Coat of Arms. Baba Yara – Football for Ghana. Ephraim Amu – Music, Kofi Antubam – Art and craft, Kow Ansah – Film etc.",
+      "source_page": 6
+    },
+    "spec": {
+      "skills": [
+        {
+          "tag": "national_symbols",
+          "description": "Match the national flag and the Coat of Arms to their designers.",
+          "minQuestions": 4
+        },
+        {
+          "tag": "sports_and_music",
+          "description": "Connect named Ghanaians with football and music.",
+          "minQuestions": 4
+        },
+        {
+          "tag": "art_and_film",
+          "description": "Identify Ghanaian contributors to art, craft and film.",
+          "minQuestions": 4
+        },
+        {
+          "tag": "recognising_contributions",
+          "description": "Distinguish contributions by different people in a shared display.",
+          "minQuestions": 4
+        }
+      ],
+      "difficultyPlan": "5 recall, 7 simple use, 5 application and 3 challenge questions.",
+      "misconceptions": [
+        "Amon Kotei is linked to the Coat of Arms.",
+        "Ephraim Amu contributed through music.",
+        "Baba Yara's field was football.",
+        "This switches the two people's fields."
+      ],
+      "needsTeacherAssessment": true
+    },
+    "questions": [
+      {
+        "skill_tag": "national_symbols",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "Who is linked with Ghana’s national flag?",
+        "options": ["Amon Kotei", "Baba Yara", "Theodosia Okoh", "Kow Ansah"],
+        "answer": 2,
+        "hints": ["Think of the person in the flag part of the lesson."],
+        "explanation": "Theodosia Okoh is named for the national flag. Amon Kotei is linked to a different national symbol.",
+        "misconception": "Amon Kotei is linked to the Coat of Arms.",
+        "distractorMisconceptions": {
+          "Amon Kotei": "Amon Kotei is linked to the Coat of Arms.",
+          "Baba Yara": "Baba Yara is linked to football.",
+          "Kow Ansah": "Kow Ansah is linked to film."
+        }
+      },
+      {
+        "skill_tag": "national_symbols",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "Which symbol belongs with Amon Kotei?",
+        "options": ["The Coat of Arms", "The national flag", "A football", "A film camera"],
+        "answer": 0,
+        "hints": ["Look for the other national symbol in the lesson."],
+        "explanation": "Amon Kotei is linked to the Coat of Arms. The flag is linked to Theodosia Okoh.",
+        "misconception": "The flag is linked to Theodosia Okoh.",
+        "distractorMisconceptions": {
+          "The national flag": "The flag is linked to Theodosia Okoh.",
+          "A football": "A football points to sport and Baba Yara.",
+          "A film camera": "A film camera points to Kow Ansah's field."
+        }
+      },
+      {
+        "skill_tag": "national_symbols",
+        "type": "practical",
+        "difficulty": 2,
+        "stem": "Put the names Amon Kotei and Theodosia Okoh under pictures of the Coat of Arms and the flag.",
+        "hints": ["Read the picture labels before moving the cards."],
+        "explanation": "One contribution is the Coat of Arms and the other is the national flag. Keep each person with the correct symbol.",
+        "misconception": "A response may overlook this detail: Matches Theodosia Okoh to the flag.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Matches Amon Kotei to the Coat of Arms.",
+              "marks": 1
+            },
+            {
+              "description": "Matches Theodosia Okoh to the flag.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "national_symbols",
+        "type": "drawing",
+        "difficulty": 3,
+        "stem": "Make a small flag exhibit label naming the person honoured and the contribution.",
+        "hints": ["Name both a person and a symbol."],
+        "explanation": "The label should connect Theodosia Okoh with the national flag so visitors know why she is included.",
+        "misconception": "A response may overlook this detail: Identifies the national flag as the contribution.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Names Theodosia Okoh.",
+              "marks": 1
+            },
+            {
+              "description": "Identifies the national flag as the contribution.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "national_symbols",
+        "type": "oral",
+        "difficulty": 3,
+        "stem": "A friend swaps the two national-symbol labels. Explain where each label belongs.",
+        "hints": ["Compare the two symbols by name."],
+        "explanation": "Theodosia Okoh belongs with the flag. Amon Kotei belongs with the Coat of Arms.",
+        "misconception": "A response may overlook this detail: Correctly identifies the Coat of Arms contributor.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Correctly identifies the flag contributor.",
+              "marks": 1
+            },
+            {
+              "description": "Correctly identifies the Coat of Arms contributor.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "sports_and_music",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "Which person in the lesson contributed through football for Ghana?",
+        "options": ["Ephraim Amu", "Kofi Antubam", "Amon Kotei", "Baba Yara"],
+        "answer": 3,
+        "hints": ["Look for the sports contribution."],
+        "explanation": "Baba Yara is identified with football. His field was different from music and art.",
+        "misconception": "Ephraim Amu contributed through music.",
+        "distractorMisconceptions": {
+          "Ephraim Amu": "Ephraim Amu contributed through music.",
+          "Kofi Antubam": "Kofi Antubam is linked with art and craft.",
+          "Amon Kotei": "Amon Kotei is linked with the Coat of Arms."
+        }
+      },
+      {
+        "skill_tag": "sports_and_music",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "Which field belongs on Ephraim Amu’s card?",
+        "options": ["Football", "Music", "Film", "Coat of Arms"],
+        "answer": 1,
+        "hints": ["Think about a contribution people can hear."],
+        "explanation": "The curriculum identifies Ephraim Amu with music.",
+        "misconception": "Football belongs with Baba Yara's contribution.",
+        "distractorMisconceptions": {
+          "Football": "Football belongs with Baba Yara's contribution.",
+          "Film": "Film belongs with Kow Ansah's contribution.",
+          "Coat of Arms": "The Coat of Arms belongs with Amon Kotei's contribution."
+        }
+      },
+      {
+        "skill_tag": "sports_and_music",
+        "type": "oral",
+        "difficulty": 2,
+        "stem": "Play a sports presenter introducing Baba Yara in one sentence.",
+        "hints": ["Include his field, not a made-up match result."],
+        "explanation": "A presenter can introduce Baba Yara as a Ghanaian known for football. The lesson does not give a score to report.",
+        "misconception": "A response may overlook this detail: Connects him to football for Ghana.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Names Baba Yara.",
+              "marks": 1
+            },
+            {
+              "description": "Connects him to football for Ghana.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "sports_and_music",
+        "type": "oral",
+        "difficulty": 3,
+        "stem": "Tell a visitor how Baba Yara and Ephraim Amu contributed in different fields.",
+        "hints": ["One worked in sport and the other in a performing art."],
+        "explanation": "Baba Yara represents football in the class display. Ephraim Amu represents music.",
+        "misconception": "A response may overlook this detail: Gives Ephraim Amu’s music connection.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Gives Baba Yara’s football connection.",
+              "marks": 1
+            },
+            {
+              "description": "Gives Ephraim Amu’s music connection.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "sports_and_music",
+        "type": "written",
+        "difficulty": 4,
+        "stem": "A display places a football beside Ephraim Amu and a music card beside Baba Yara. Rewrite both captions.",
+        "hints": ["Check both the person and the field."],
+        "explanation": "Ephraim Amu belongs with music. Baba Yara belongs with football.",
+        "misconception": "A response may overlook this detail: Corrects the football caption.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Corrects the music caption.",
+              "marks": 1
+            },
+            {
+              "description": "Corrects the football caption.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "art_and_film",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "Who belongs in the art and craft part of the display?",
+        "options": ["Kofi Antubam", "Baba Yara", "Kow Ansah", "Ephraim Amu"],
+        "answer": 0,
+        "hints": ["Look for the person linked to art and craft."],
+        "explanation": "Kofi Antubam is named for art and craft. Film is linked to Kow Ansah.",
+        "misconception": "Baba Yara's field was football.",
+        "distractorMisconceptions": {
+          "Baba Yara": "Baba Yara's field was football.",
+          "Kow Ansah": "Kow Ansah belongs in the film display.",
+          "Ephraim Amu": "Ephraim Amu belongs in the music display."
+        }
+      },
+      {
+        "skill_tag": "art_and_film",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "Which field belongs with Kow Ansah?",
+        "options": ["Football", "Music", "Film", "National flag"],
+        "answer": 2,
+        "hints": ["Think of moving pictures telling a story."],
+        "explanation": "Kow Ansah is identified through film.",
+        "misconception": "Football is Baba Yara's field.",
+        "distractorMisconceptions": {
+          "Football": "Football is Baba Yara's field.",
+          "Music": "Music is Ephraim Amu's field.",
+          "National flag": "The national flag is Theodosia Okoh's contribution."
+        }
+      },
+      {
+        "skill_tag": "art_and_film",
+        "type": "practical",
+        "difficulty": 2,
+        "stem": "Match a film card and an art-and-craft card to Kow Ansah and Kofi Antubam.",
+        "hints": ["Say the field aloud beside each name."],
+        "explanation": "Kow Ansah is linked with film. Kofi Antubam is linked with art and craft.",
+        "misconception": "A response may overlook this detail: Correctly matches the art-and-craft card.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Correctly matches the film card.",
+              "marks": 1
+            },
+            {
+              "description": "Correctly matches the art-and-craft card.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "art_and_film",
+        "type": "drawing",
+        "difficulty": 3,
+        "stem": "Create two simple picture clues for these two contributors and label them.",
+        "hints": ["A clue should remind a visitor of the person’s field."],
+        "explanation": "A film reel can stand for Kow Ansah’s field. A craft object can stand for Kofi Antubam’s field.",
+        "misconception": "A response may overlook this detail: Shows a suitable art-and-craft clue and labels both people correctly.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Shows a suitable clue for film or filmmaking.",
+              "marks": 1
+            },
+            {
+              "description": "Shows a suitable art-and-craft clue and labels both people correctly.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "art_and_film",
+        "type": "oral",
+        "difficulty": 4,
+        "stem": "Why would a display on creative work include both an art-and-craft contributor and a film contributor? Use their names.",
+        "hints": ["Name what each made or worked with."],
+        "explanation": "Creative work can take different forms. The lesson links Kofi Antubam with art and craft and Kow Ansah with film.",
+        "misconception": "A response may overlook this detail: Explains how their creative fields differ.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Names Kofi Antubam and Kow Ansah correctly.",
+              "marks": 1
+            },
+            {
+              "description": "Explains how their creative fields differ.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "recognising_contributions",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "Which pair matches two people with their different fields?",
+        "options": [
+          "Baba Yara—film; Kow Ansah—football",
+          "Baba Yara—football; Kow Ansah—film",
+          "Baba Yara—music; Kow Ansah—flag",
+          "Baba Yara—flag; Kow Ansah—craft"
+        ],
+        "answer": 1,
+        "hints": ["Check each half of the pair."],
+        "explanation": "Baba Yara is linked to football and Kow Ansah to film. Both halves must fit.",
+        "misconception": "This switches the two people's fields.",
+        "distractorMisconceptions": {
+          "Baba Yara—film; Kow Ansah—football": "This switches the two people's fields.",
+          "Baba Yara—music; Kow Ansah—flag": "Neither of these fields matches the people named.",
+          "Baba Yara—flag; Kow Ansah—craft": "Flag design and craft are different contributions from football and film."
+        }
+      },
+      {
+        "skill_tag": "recognising_contributions",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "A display already has a musician and wants a person linked with the Coat of Arms. Who belongs next?",
+        "options": ["Ephraim Amu", "Baba Yara", "Kow Ansah", "Amon Kotei"],
+        "answer": 3,
+        "hints": ["Choose the national-symbol contributor."],
+        "explanation": "Amon Kotei adds the Coat of Arms contribution to the display.",
+        "misconception": "Ephraim Amu would add another musician.",
+        "distractorMisconceptions": {
+          "Ephraim Amu": "Ephraim Amu would add another musician.",
+          "Baba Yara": "Baba Yara would add a footballer.",
+          "Kow Ansah": "Kow Ansah would add a filmmaker."
+        }
+      },
+      {
+        "skill_tag": "recognising_contributions",
+        "type": "written",
+        "difficulty": 2,
+        "stem": "Prepare a name-and-field card for a Ghanaian in this lesson whose work you admire.",
+        "hints": ["Use a specific contribution rather than only saying famous."],
+        "explanation": "A complete card might say Theodosia Okoh — national flag. The field explains the reason for inclusion.",
+        "misconception": "A response may overlook this detail: Gives the correct field or national symbol.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Names a contributor from the lesson.",
+              "marks": 1
+            },
+            {
+              "description": "Gives the correct field or national symbol.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "recognising_contributions",
+        "type": "practical",
+        "difficulty": 3,
+        "stem": "Sort four name cards from this lesson under four different contribution labels. Explain one match to the teacher.",
+        "hints": ["Read each heading before placing its person."],
+        "explanation": "Matching people with their actual fields shows how different kinds of work contribute to national life.",
+        "misconception": "A response may overlook this detail: Justifies one match by naming the contribution.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Correctly sorts four supplied pairs.",
+              "marks": 1
+            },
+            {
+              "description": "Justifies one match by naming the contribution.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "recognising_contributions",
+        "type": "oral",
+        "difficulty": 4,
+        "stem": "Introduce a class gallery featuring one national symbol, one sport and one creative field. Name a contributor for each.",
+        "hints": ["Choose a symbol first; then choose sport and creative work."],
+        "explanation": "For example, Okoh represents the flag, Baba Yara football and Amu music. Each label gives a different kind of contribution.",
+        "misconception": "A response may overlook this detail: Connects each to the requested kind of contribution.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Identifies three appropriate people.",
+              "marks": 1
+            },
+            {
+              "description": "Connects each to the requested kind of contribution.",
+              "marks": 1
+            }
+          ]
+        }
+      }
+    ],
+    "questionCount": 20,
+    "teacherAssessedCount": 12,
+    "excludedMcqCount": 0,
+    "uncertain": []
+  },
+  {
+    "indicator": {
+      "code": "B1.3.1.1.1",
+      "subject": "History",
+      "level": "Basic 1",
+      "strand": "Europeans in Ghana",
+      "sub_strand": "Arrival of Europeans",
+      "content_standard": "B1.3.1.1 Show understanding of Europeans who came to Ghana",
+      "objective": "Explore which Europeans came to Ghana",
+      "source_page": 7
+    },
+    "spec": {
+      "skills": [
+        {
+          "tag": "countries_of_origin",
+          "description": "Identify European countries named in the curriculum.",
+          "minQuestions": 4
+        },
+        {
+          "tag": "people_and_places",
+          "description": "Match country names with the names for people from those places.",
+          "minQuestions": 4
+        },
+        {
+          "tag": "using_a_map",
+          "description": "Use map labels to trace the start and end of a route.",
+          "minQuestions": 4
+        },
+        {
+          "tag": "investigating_arrival",
+          "description": "Choose evidence to investigate an arrival or settlement.",
+          "minQuestions": 4
+        }
+      ],
+      "difficultyPlan": "5 recall, 7 simple use, 5 application and 3 challenge questions.",
+      "misconceptions": [
+        "Denmark belongs with the word Danish.",
+        "Swedish points to Sweden.",
+        "A birthday list records dates, not country locations.",
+        "Spelling length gives no time information."
+      ],
+      "needsTeacherAssessment": true
+    },
+    "questions": [
+      {
+        "skill_tag": "countries_of_origin",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "Which country named in the lesson is linked with Portuguese visitors?",
+        "options": ["Denmark", "France", "Sweden", "Portugal"],
+        "answer": 3,
+        "hints": ["Look at the country name that goes with Portuguese."],
+        "explanation": "Portuguese people come from Portugal. Portugal is among the countries named in the lesson.",
+        "misconception": "Denmark belongs with the word Danish.",
+        "distractorMisconceptions": {
+          "Denmark": "Denmark belongs with the word Danish.",
+          "France": "France belongs with the word French.",
+          "Sweden": "Sweden belongs with the word Swedish."
+        }
+      },
+      {
+        "skill_tag": "countries_of_origin",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "Which country in the lesson is linked with Danish visitors?",
+        "options": ["Germany", "Denmark", "Norway", "Netherlands"],
+        "answer": 1,
+        "hints": ["Say the people name and think of its country."],
+        "explanation": "Danish is the people name linked with Denmark.",
+        "misconception": "Germany belongs with the word German.",
+        "distractorMisconceptions": {
+          "Germany": "Germany belongs with the word German.",
+          "Norway": "Norway belongs with the word Norwegian.",
+          "Netherlands": "The Netherlands belongs with the word Dutch."
+        }
+      },
+      {
+        "skill_tag": "countries_of_origin",
+        "type": "oral",
+        "difficulty": 2,
+        "stem": "Name two European countries listed in the class lesson about arrivals.",
+        "hints": ["Use the list your teacher read."],
+        "explanation": "Portugal and Sweden are two examples. Britain, France, Germany, Denmark, Norway and the Netherlands also appear.",
+        "misconception": "A response may overlook this detail: Names a different listed country.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Names one listed country.",
+              "marks": 1
+            },
+            {
+              "description": "Names a different listed country.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "countries_of_origin",
+        "type": "practical",
+        "difficulty": 3,
+        "stem": "From cards marked France, Sweden, Ghana and school, choose two European country names in the lesson.",
+        "hints": ["Find two places named among the European countries of origin."],
+        "explanation": "France and Sweden both appear in the list. Ghana names the place being studied as the destination.",
+        "misconception": "A response may overlook this detail: Selects Sweden.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Selects France.",
+              "marks": 1
+            },
+            {
+              "description": "Selects Sweden.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "countries_of_origin",
+        "type": "written",
+        "difficulty": 3,
+        "stem": "A child labels all European visitors “from Portugal”. Use two examples to improve the label.",
+        "hints": ["Check how many country names the lesson gives."],
+        "explanation": "Portugal was one country of origin. Visitors from other named countries, such as Denmark, also came.",
+        "misconception": "A response may overlook this detail: Explains that visitors came from more than one country.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Names Portugal and a different listed country.",
+              "marks": 1
+            },
+            {
+              "description": "Explains that visitors came from more than one country.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "people_and_places",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "Which label means people from France?",
+        "options": ["French", "Swedish", "German", "Norwegian"],
+        "answer": 0,
+        "hints": ["Match the words for people with their home country."],
+        "explanation": "French identifies people from France.",
+        "misconception": "Swedish points to Sweden.",
+        "distractorMisconceptions": {
+          "Swedish": "Swedish points to Sweden.",
+          "German": "German points to Germany.",
+          "Norwegian": "Norwegian points to Norway."
+        }
+      },
+      {
+        "skill_tag": "people_and_places",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "A practice card says “from Norway”. Which people does the card describe?",
+        "options": ["Danes", "Dutch people", "Norwegians", "British people"],
+        "answer": 2,
+        "hints": ["Focus on the country of origin."],
+        "explanation": "Norwegians are people from Norway. Norway appears in the lesson’s list.",
+        "misconception": "Danes come from Denmark.",
+        "distractorMisconceptions": {
+          "Danes": "Danes come from Denmark.",
+          "Dutch people": "Dutch people come from the Netherlands.",
+          "British people": "British people come from Britain."
+        }
+      },
+      {
+        "skill_tag": "people_and_places",
+        "type": "practical",
+        "difficulty": 2,
+        "stem": "Pair Sweden and Germany with the words Swedish and German.",
+        "hints": ["Read each country name aloud."],
+        "explanation": "Swedish links to Sweden and German to Germany. The first word in each pair names a country.",
+        "misconception": "A response may overlook this detail: Matches Germany and German.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Matches Sweden and Swedish.",
+              "marks": 1
+            },
+            {
+              "description": "Matches Germany and German.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "people_and_places",
+        "type": "oral",
+        "difficulty": 3,
+        "stem": "A visitor card says “Dutch”. Tell your partner the related country name and how the two labels differ.",
+        "hints": ["Check the country list for the Netherlands."],
+        "explanation": "Dutch is a word for people from the Netherlands. The Netherlands is the country name.",
+        "misconception": "A response may overlook this detail: Distinguishes a people label from a country label.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Names the Netherlands.",
+              "marks": 1
+            },
+            {
+              "description": "Distinguishes a people label from a country label.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "people_and_places",
+        "type": "drawing",
+        "difficulty": 4,
+        "stem": "Make two picture-free name labels for a class map: one for people from Britain and one for people from Portugal.",
+        "hints": ["Connect each group label with its place of origin."],
+        "explanation": "The labels British—Britain and Portuguese—Portugal can accompany their places on a map.",
+        "misconception": "A response may overlook this detail: Correctly links Portuguese with Portugal.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Correctly links British with Britain.",
+              "marks": 1
+            },
+            {
+              "description": "Correctly links Portuguese with Portugal.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "using_a_map",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "What would best help a pupil locate the countries of origin?",
+        "options": ["A birthday list", "A labelled world map", "A shopping bag", "A class bell"],
+        "answer": 1,
+        "hints": ["Look for a source that shows places."],
+        "explanation": "A labelled world map shows where countries are. A list of birthdays cannot locate them.",
+        "misconception": "A birthday list records dates, not country locations.",
+        "distractorMisconceptions": {
+          "A birthday list": "A birthday list records dates, not country locations.",
+          "A shopping bag": "A shopping bag is not a guide to a country's location.",
+          "A class bell": "A bell cannot show where a journey began."
+        }
+      },
+      {
+        "skill_tag": "using_a_map",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "On a practice map, an arrow starts in Europe and ends at Ghana. What does its starting end show?",
+        "options": [
+          "A date of arrival",
+          "The name of every ship",
+          "How long the visit lasted",
+          "A place of origin"
+        ],
+        "answer": 3,
+        "hints": ["Follow the arrow from the starting place."],
+        "explanation": "The starting end represents where the journey began. A map arrow alone does not give a date.",
+        "misconception": "The tail of an arrow marks where a route begins, not when it ends.",
+        "distractorMisconceptions": {
+          "A date of arrival": "The tail of an arrow marks where a route begins, not when it ends.",
+          "The name of every ship": "An arrow on a map cannot name all the ships.",
+          "How long the visit lasted": "A map arrow alone does not measure time spent visiting."
+        }
+      },
+      {
+        "skill_tag": "using_a_map",
+        "type": "practical",
+        "difficulty": 2,
+        "stem": "Find Ghana and one European country named in the lesson on a labelled world map.",
+        "hints": ["Read the labels before you point."],
+        "explanation": "Pointing to the two places separates the destination from a country of origin.",
+        "misconception": "A response may overlook this detail: Identifies the selected European country.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Identifies Ghana.",
+              "marks": 1
+            },
+            {
+              "description": "Identifies the selected European country.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "using_a_map",
+        "type": "drawing",
+        "difficulty": 3,
+        "stem": "Sketch a simple journey diagram from one listed European country to Ghana. Add labels.",
+        "hints": ["A journey diagram needs a start and an end."],
+        "explanation": "An arrow from France to Ghana, for example, labels origin and destination without pretending to trace an exact route.",
+        "misconception": "A response may overlook this detail: Shows the direction towards Ghana.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Labels the chosen country and Ghana.",
+              "marks": 1
+            },
+            {
+              "description": "Shows the direction towards Ghana.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "using_a_map",
+        "type": "oral",
+        "difficulty": 4,
+        "stem": "A partner says the country closest to Ghana on a map must have arrived first. Explain what else the class needs.",
+        "hints": ["Think about what a map shows and what a timeline shows."],
+        "explanation": "Distance tells where places are, while a date or reliable arrival account can help establish who came earlier.",
+        "misconception": "A response may overlook this detail: Suggests dated information or an account about arrival.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Distinguishes distance from arrival order.",
+              "marks": 1
+            },
+            {
+              "description": "Suggests dated information or an account about arrival.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "investigating_arrival",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "Which clue is most useful for ordering two arrivals?",
+        "options": [
+          "The number of letters in each name",
+          "The colour of the map",
+          "Their dates of arrival",
+          "The height of the display"
+        ],
+        "answer": 2,
+        "hints": ["Look for information about time."],
+        "explanation": "Comparing arrival dates lets the class place the earlier event first.",
+        "misconception": "Spelling length gives no time information.",
+        "distractorMisconceptions": {
+          "The number of letters in each name": "Spelling length gives no time information.",
+          "The colour of the map": "Map colour does not put visits in order.",
+          "The height of the display": "Display height does not date a visit."
+        }
+      },
+      {
+        "skill_tag": "investigating_arrival",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "Where could the class ask about an early settlement?",
+        "options": [
+          "A museum with records about the site",
+          "An empty birthday card",
+          "A list of tomorrow’s games",
+          "An unlabelled pencil"
+        ],
+        "answer": 0,
+        "hints": ["Choose a source about that place’s past."],
+        "explanation": "A museum may hold accounts or objects connected to the site. The source still needs to be checked.",
+        "misconception": "A blank card contains no evidence about the settlement.",
+        "distractorMisconceptions": {
+          "An empty birthday card": "A blank card contains no evidence about the settlement.",
+          "A list of tomorrow’s games": "A list of future games does not record old places.",
+          "An unlabelled pencil": "A pencil without a label cannot identify the early settlement."
+        }
+      },
+      {
+        "skill_tag": "investigating_arrival",
+        "type": "oral",
+        "difficulty": 2,
+        "stem": "Ask a question that could help you learn where one named European group first settled.",
+        "hints": ["Include who and where."],
+        "explanation": "“Where did the Danish visitors first settle?” is a question for a knowledgeable guide or historical record.",
+        "misconception": "A response may overlook this detail: Asks about a place of early settlement.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Names a group from the curriculum.",
+              "marks": 1
+            },
+            {
+              "description": "Asks about a place of early settlement.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "investigating_arrival",
+        "type": "practical",
+        "difficulty": 3,
+        "stem": "Use two dated arrival cards supplied by your teacher. Put the earlier arrival first and point to the evidence.",
+        "hints": ["Work from the years on the cards."],
+        "explanation": "The smaller earlier year goes first. The order of the names in a printed list alone is not enough.",
+        "misconception": "A response may overlook this detail: Uses their dates to justify the order.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Orders the supplied cards correctly.",
+              "marks": 1
+            },
+            {
+              "description": "Uses their dates to justify the order.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "investigating_arrival",
+        "type": "oral",
+        "difficulty": 4,
+        "stem": "Two class sources give different arrival orders. Explain how your group could check the claim before making a gallery label.",
+        "hints": ["Ask what dates or accounts each source actually gives."],
+        "explanation": "Checking the dates against an appropriate historical account is stronger than guessing from a country’s place on a map.",
+        "misconception": "A response may overlook this detail: Proposes consulting a relevant source before labelling.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Identifies which group or date needs checking.",
+              "marks": 1
+            },
+            {
+              "description": "Proposes consulting a relevant source before labelling.",
+              "marks": 1
+            }
+          ]
+        }
+      }
+    ],
+    "questionCount": 20,
+    "teacherAssessedCount": 12,
+    "excludedMcqCount": 0,
+    "uncertain": []
+  },
+  {
+    "indicator": {
+      "code": "B1.6.1.1.1",
+      "subject": "History",
+      "level": "Basic 1",
+      "strand": "Independent Ghana",
+      "sub_strand": "The Republics",
+      "content_standard": "B1.6.1.1. Demonstrate understanding of the presidents that have ruled Ghana since 1960",
+      "objective": "Identify the Presidents Ghana has had since 1960",
+      "source_page": 8
+    },
+    "spec": {
+      "skills": [
+        {
+          "tag": "identify",
+          "description": "Identify the person shown using the name on a reliable portrait label.",
+          "minQuestions": 4
+        },
+        {
+          "tag": "tenure",
+          "description": "Read the years that belong to one president’s time in office.",
+          "minQuestions": 4
+        },
+        {
+          "tag": "order",
+          "description": "Use a dated class album to place presidents in order.",
+          "minQuestions": 4
+        },
+        {
+          "tag": "gallery",
+          "description": "Make and check a gallery entry that helps another pupil identify a president.",
+          "minQuestions": 4
+        }
+      ],
+      "difficultyPlan": "5 recognition, 7 simple use, 5 application and 3 challenge questions.",
+      "misconceptions": [
+        "Reading a portrait's position as its date.",
+        "Mixing up birth years and terms of office.",
+        "Joining a name and portrait without checking their captions."
+      ],
+      "needsTeacherAssessment": true
+    },
+    "questions": [
+      {
+        "skill_tag": "identify",
+        "difficulty": 1,
+        "type": "mcq",
+        "stem": "Which part of a labelled portrait tells you who the president is?",
+        "options": [
+          "The person's name",
+          "The frame colour",
+          "The paper size",
+          "The gallery number"
+        ],
+        "answer": 0,
+        "hints": ["Look for words that tell who is shown."],
+        "explanation": "Read the name beside the portrait. Frame colour, size and number do not name the person.",
+        "misconception": "Treating a display feature as a person's name.",
+        "distractorMisconceptions": {
+          "The frame colour": "Treating a display feature as a person's name.",
+          "The paper size": "Treating a display feature as a person's name.",
+          "The gallery number": "Treating a display feature as a person's name."
+        }
+      },
+      {
+        "skill_tag": "identify",
+        "difficulty": 1,
+        "type": "oral",
+        "stem": "With your teacher, open a labelled album of Ghana’s presidents. Point to the first president and say his name.",
+        "hints": ["Look for the label for the start of the republic in 1960."],
+        "explanation": "Use the first-president label to find the portrait. Say the name that belongs to it.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Finds the portrait for the first president.",
+              "marks": 1
+            },
+            {
+              "description": "Names the person on its label.",
+              "marks": 1
+            }
+          ]
+        },
+        "misconception": "Naming the first picture on any page without checking its label."
+      },
+      {
+        "skill_tag": "tenure",
+        "difficulty": 1,
+        "type": "mcq",
+        "stem": "A class card has a name, a start year and an end year. Which two details show the person's time as president?",
+        "options": [
+          "Name and card number",
+          "Start and end years",
+          "Card number and date of birth",
+          "Name and date of birth"
+        ],
+        "answer": 1,
+        "hints": ["Look for when the work began and finished."],
+        "explanation": "The start year marks taking office. The end year marks leaving office.",
+        "misconception": "Using a birth date as the start of a presidency.",
+        "distractorMisconceptions": {
+          "Name and card number": "Using a birth date as the start of a presidency.",
+          "Card number and date of birth": "Using a birth date as the start of a presidency.",
+          "Name and date of birth": "Using a birth date as the start of a presidency."
+        }
+      },
+      {
+        "skill_tag": "order",
+        "difficulty": 1,
+        "type": "short_answer",
+        "stem": "Our class is making the presidents’ album for the years 1960 to 2016. Which year goes at the beginning?",
+        "answer": ["1960"],
+        "hints": ["Read the years from earlier to later."],
+        "explanation": "The album starts in 1960. The other date marks the end of this class enquiry.",
+        "misconception": "Reversing the first and last years of the enquiry."
+      },
+      {
+        "skill_tag": "gallery",
+        "difficulty": 1,
+        "type": "mcq",
+        "stem": "You have a checked picture card for the gallery. Where will a visitor look for the president’s name?",
+        "options": [
+          "On the back of the shelf",
+          "On the classroom clock",
+          "On the label by the picture",
+          "On the list of visitors"
+        ],
+        "answer": 2,
+        "hints": ["Think of what the visitor can read beside the portrait."],
+        "explanation": "Place the name beside the matching picture. A visitor can then identify the person it shows.",
+        "misconception": "Confusing a list of visitors with names on the portraits.",
+        "distractorMisconceptions": {
+          "On the back of the shelf": "Confusing a list of visitors with names on the portraits.",
+          "On the classroom clock": "Confusing a list of visitors with names on the portraits.",
+          "On the list of visitors": "Confusing a list of visitors with names on the portraits."
+        }
+      },
+      {
+        "skill_tag": "identify",
+        "difficulty": 2,
+        "type": "practical",
+        "stem": "Ask a partner to read a president’s name from your class album. Find the portrait and show how you checked it.",
+        "hints": ["Match the spoken name to the words beside a picture."],
+        "explanation": "A spoken name gives you a clue. The full name on the portrait card confirms the match.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Selects the matching portrait.",
+              "marks": 1
+            },
+            {
+              "description": "Checks the full name with the album.",
+              "marks": 1
+            }
+          ]
+        },
+        "misconception": "Matching only the first part of a name."
+      },
+      {
+        "skill_tag": "identify",
+        "difficulty": 2,
+        "type": "mcq",
+        "stem": "Two portraits have been taken off a display. What would help you put their name cards back correctly?",
+        "options": [
+          "The height of the table",
+          "The colour of the wall",
+          "The price of the frames",
+          "An album with checked captions"
+        ],
+        "answer": 3,
+        "hints": ["Which item links a face with its name?"],
+        "explanation": "A captioned album shows each portrait with a name. Use that link to replace each card.",
+        "misconception": "Using the frame to identify the person.",
+        "distractorMisconceptions": {
+          "The height of the table": "Using the frame to identify the person.",
+          "The colour of the wall": "Using the frame to identify the person.",
+          "The price of the frames": "Using the frame to identify the person."
+        }
+      },
+      {
+        "skill_tag": "tenure",
+        "difficulty": 2,
+        "type": "oral",
+        "stem": "Pick a president from your class album. Say the name and read the year that person began serving.",
+        "hints": ["Find the date marked as the start."],
+        "explanation": "Read the name first. Then follow the same row to its start year.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Reads a president’s name.",
+              "marks": 1
+            },
+            {
+              "description": "Gives the matching start year from that entry.",
+              "marks": 1
+            }
+          ]
+        },
+        "misconception": "Reading a year from the next person's row."
+      },
+      {
+        "skill_tag": "tenure",
+        "difficulty": 2,
+        "type": "mcq",
+        "stem": "A label has spaces called Born, Took office and Left office. Where would you put the year a president stopped serving?",
+        "options": ["Left office", "Took office", "Born", "On the picture frame"],
+        "answer": 0,
+        "hints": ["Listen for the word that means finished the job."],
+        "explanation": "The end of the time in office goes in the space called Left office. A birth year tells a different part of the person's life.",
+        "misconception": "Confusing the end of service with its beginning.",
+        "distractorMisconceptions": {
+          "Took office": "Confusing the end of service with its beginning.",
+          "Born": "A birth year tells when someone was born.",
+          "On the picture frame": "The frame holds the picture. The labelled end date records when service finished."
+        }
+      },
+      {
+        "skill_tag": "order",
+        "difficulty": 2,
+        "type": "practical",
+        "stem": "Choose two different presidents in the class album. Put the one who first took office earlier on the left.",
+        "hints": ["Check when each first took office."],
+        "explanation": "Compare the two start years. Order the portraits by those years and read the names in that order.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Orders two distinct presidents by first start years.",
+              "marks": 1
+            },
+            {
+              "description": "Names both in that order.",
+              "marks": 1
+            }
+          ]
+        },
+        "misconception": "Ordering portraits by their size."
+      },
+      {
+        "skill_tag": "order",
+        "difficulty": 2,
+        "type": "mcq",
+        "stem": "A gallery needs the person who served first. Which way should the class sort the name cards?",
+        "options": [
+          "By length of name",
+          "By year first in office",
+          "By colour of paper",
+          "By size of picture"
+        ],
+        "answer": 1,
+        "hints": ["What would show that one person began earlier?"],
+        "explanation": "The starting years place the presidents in time. A shorter name or a larger picture does not tell who served first.",
+        "misconception": "Assuming alphabetical order gives the order of service.",
+        "distractorMisconceptions": {
+          "By length of name": "Assuming alphabetical order gives the order of service.",
+          "By colour of paper": "Assuming alphabetical order gives the order of service.",
+          "By size of picture": "Assuming alphabetical order gives the order of service."
+        }
+      },
+      {
+        "skill_tag": "gallery",
+        "difficulty": 2,
+        "type": "drawing",
+        "stem": "Draw a small display card for one person in the presidents’ album. Add the name below the drawing.",
+        "hints": ["Keep the album open beside your paper."],
+        "explanation": "Choose one labelled portrait. Copy the name from that entry onto the card so another pupil can identify it.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Represents one selected president.",
+              "marks": 1
+            },
+            {
+              "description": "Adds the correct matching name, by writing or dictating.",
+              "marks": 1
+            }
+          ]
+        },
+        "misconception": "Using the artist’s name as the caption."
+      },
+      {
+        "skill_tag": "identify",
+        "difficulty": 3,
+        "type": "oral",
+        "stem": "Cover the name on one album picture. Name the president, then uncover the caption and say what you found.",
+        "hints": ["Remember a portrait you have already studied."],
+        "explanation": "Make a first identification. Read the checked caption to confirm or correct the name.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Identifies or corrects the president’s name.",
+              "marks": 1
+            },
+            {
+              "description": "Uses the caption to check.",
+              "marks": 1
+            }
+          ]
+        },
+        "misconception": "Sticking with a first guess after a label shows a different name."
+      },
+      {
+        "skill_tag": "tenure",
+        "difficulty": 3,
+        "type": "written",
+        "stem": "Use the class album to make a name card for one former president with the years that person began and ended a term.",
+        "hints": ["Read both dates on the same entry."],
+        "explanation": "Match one name to one term. Put the starting year first and the ending year second.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Matches the two dates to the chosen name and term.",
+              "marks": 1
+            },
+            {
+              "description": "Puts the dates in the correct order.",
+              "marks": 1
+            }
+          ]
+        },
+        "misconception": "Combining the start of one person's term with another person's end year."
+      },
+      {
+        "skill_tag": "order",
+        "difficulty": 3,
+        "type": "practical",
+        "stem": "Find three named presidents in a class timeline. Hide the timeline, arrange their cards, then use it to check your order.",
+        "hints": ["Use the dates when they first took office."],
+        "explanation": "The earliest start belongs first. Compare the next two and check the finished row against the timeline.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Places three names in order of first taking office.",
+              "marks": 1
+            },
+            {
+              "description": "Checks and, if needed, corrects the row.",
+              "marks": 1
+            }
+          ]
+        },
+        "misconception": "Treating the last card picked as the last person to serve."
+      },
+      {
+        "skill_tag": "gallery",
+        "difficulty": 3,
+        "type": "oral",
+        "stem": "A visitor points to one president in your class gallery. Introduce that person by name and say when they served.",
+        "hints": ["Read the picture label and its dates together."],
+        "explanation": "Use the caption to identify the person. Read the matching period of service from the same display.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Names the person shown.",
+              "marks": 1
+            },
+            {
+              "description": "Gives the matching time in office.",
+              "marks": 1
+            }
+          ]
+        },
+        "misconception": "Giving dates from a neighbouring display."
+      },
+      {
+        "skill_tag": "gallery",
+        "difficulty": 3,
+        "type": "mcq",
+        "stem": "A card says only “President”. A friend needs to find this same person in another album. What would help most?",
+        "options": [
+          "Use a bigger card",
+          "Add the writer’s name",
+          "Add the person’s full name",
+          "Use the same ink colour"
+        ],
+        "answer": 2,
+        "hints": ["What could the friend look for in both albums?"],
+        "explanation": "Several people have held this office. A full personal name gives the friend a way to match the person across both albums.",
+        "misconception": "Assuming a title identifies just one person across time.",
+        "distractorMisconceptions": {
+          "Use a bigger card": "Assuming a title identifies just one person across time.",
+          "Add the writer’s name": "Assuming a title identifies just one person across time.",
+          "Use the same ink colour": "Assuming a title identifies just one person across time."
+        }
+      },
+      {
+        "skill_tag": "tenure",
+        "difficulty": 4,
+        "type": "practical",
+        "stem": "A partner covers the name on a gallery card but leaves the years of service. Find the name in a dated class album and check the picture too.",
+        "hints": ["Look for a matching pair of years before checking the portrait."],
+        "explanation": "Match the period of service to an album entry. Check that its portrait matches and read the name aloud.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Uses both years to locate the matching entry.",
+              "marks": 1
+            },
+            {
+              "description": "Checks the portrait and gives the name.",
+              "marks": 1
+            }
+          ]
+        },
+        "misconception": "Deciding from a single date without checking the other clue."
+      },
+      {
+        "skill_tag": "order",
+        "difficulty": 4,
+        "type": "oral",
+        "stem": "The first portrait on a wall may be the last one the class put up. How can you find who served first? Show the name in your class album.",
+        "hints": ["Think about the difference between hanging up a picture and taking office."],
+        "explanation": "Look at the start years in the album. Identify the earliest president in the set and say the name; the wall order alone cannot tell you.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Identifies the earliest president in the chosen set by name.",
+              "marks": 1
+            },
+            {
+              "description": "Explains the choice using a date or a dated timeline.",
+              "marks": 1
+            }
+          ]
+        },
+        "misconception": "Treating the order of hanging pictures as historical order."
+      },
+      {
+        "skill_tag": "gallery",
+        "difficulty": 4,
+        "type": "practical",
+        "stem": "A partner swaps two name labels on your presidents’ gallery. Repair the display using a checked album and explain one change.",
+        "hints": ["Compare each picture with its entry before moving the labels."],
+        "explanation": "Find both portraits in the album. Move each name beneath its own portrait and point to the match that guided you.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Restores both matching labels.",
+              "marks": 1
+            },
+            {
+              "description": "Shows the album evidence for one correction.",
+              "marks": 1
+            }
+          ]
+        },
+        "misconception": "Correcting one label and leaving the other attached to the wrong portrait."
+      }
+    ],
+    "uncertain": [
+      "Printed page 8 sets a 1960–2016 enquiry and calls for a labelled class gallery. It does not supply the portraits or list the officeholders and tenures. Name and tenure performances use a teacher-provided album."
+    ]
+  }
+]

@@ -35,9 +35,17 @@ describe('Learning Hub curriculum integrity', () => {
       new Set(['Mathematics', 'Science']),
     );
     const summary = summarizeQuestionBank(naccaQuestions, naccaIndicators);
-    expect(summary.questionCount).toBe(19062);
-    expect(summary.indicatorCount).toBe(1051);
-    expect(summary.subjects).toEqual(['English Language', 'Mathematics', 'Science', 'Computing']);
+    expect(summary.questionCount).toBe(24702);
+    expect(summary.indicatorCount).toBe(1333);
+    expect(summary.subjects).toEqual([
+      'English Language',
+      'Mathematics',
+      'Science',
+      'Computing',
+      'Creative Arts',
+      'History',
+      'Religious and Moral Education',
+    ]);
     expect(summary.levels).toEqual([
       'Basic 1',
       'Basic 2',

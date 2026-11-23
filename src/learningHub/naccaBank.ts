@@ -1,5 +1,6 @@
 import { indicatorLessonId } from './indicatorLessonId';
 import { computingIndicators, computingQuestions } from './computingBank';
+import { historyIndicators, historyQuestions } from './historyBank';
 import {
   primaryCurriculumIndicators,
   primaryCurriculumQuestions,
@@ -22,6 +23,7 @@ const jhsLessons = hubLessons.filter((lesson) => /^B[789]$/.test(lesson.level));
 
 const rawIndicators = [
   ...computingIndicators,
+  ...historyIndicators,
   ...primaryCurriculumIndicators,
   ...(bankData.indicators || []),
   ...(basic1EnglishData.indicators || []),
@@ -94,6 +96,7 @@ export const naccaIndicators: NaccaIndicator[] = sortIndicators(rawIndicators);
 
 const rawQuestions = [
   ...computingQuestions,
+  ...historyQuestions,
   ...primaryCurriculumQuestions,
   ...(bankData.questions || []),
   ...(basic1EnglishData.questions || []),
@@ -256,6 +259,7 @@ export const naccaSubjects: NaccaSubject[] = [
   ...((basic1EnglishData.subjects || []) as unknown as NaccaSubject[]),
   ...(basic2EnglishData.length ? [{ id: 'english-language', name: 'English Language' }] : []),
   { id: 'computing', name: 'Computing' },
+  { id: 'history', name: 'History' },
   ...primaryCurriculumSubjects,
 ];
 const availableLevels: NaccaLevel[] = [
@@ -349,11 +353,15 @@ export const naccaHubLessons: HubLesson[] = naccaIndicators
   )
   .map((ind) => {
     const primaryCurriculum =
-      ind.subject === 'Religious and Moral Education'
-        ? 'Religious and Moral Education B1–B6'
-        : ind.subject === 'Creative Arts'
-          ? 'Creative Arts B1–B6'
-          : undefined;
+      ind.subject === 'History'
+        ? 'History B1–B6'
+        : ind.subject === 'Computing'
+          ? 'Computing B4–B6'
+          : ind.subject === 'Religious and Moral Education'
+            ? 'Religious and Moral Education B1–B6'
+            : ind.subject === 'Creative Arts'
+              ? 'Creative Arts B1–B6'
+              : undefined;
     const questions = questionsByIndicator.get(questionIndicatorKey(ind.subject, ind.code)) ?? [];
     const sourceUrl =
       ind.subject === 'Mathematics'
@@ -375,6 +383,9 @@ export const naccaHubLessons: HubLesson[] = naccaIndicators
     if (misconceptions) {
       body.push(`Common Learning Pitfalls to Avoid:\n${misconceptions}`);
     }
+    if (ind.subject === 'History' && ind.sourceNotes?.length) {
+      body.push(ind.sourceNotes.join('\n'));
+    }
 
     body.push(
       `This topic contains ${questions.length} curriculum-aligned practice questions ranging from Difficulty 1 (Foundational) to Difficulty 4 (Advanced Reasoning).`,
@@ -393,17 +404,11 @@ export const naccaHubLessons: HubLesson[] = naccaIndicators
       sourceUrl,
       sourceTitle: primaryCurriculum
         ? `NaCCA ${primaryCurriculum} (2019) · printed page ${ind.source_page}`
-        : ind.subject === 'Computing'
-          ? `NaCCA Computing B4–B6 (2019) · printed page ${ind.source_page}`
-          : ind.subject === 'Mathematics'
-            ? `NaCCA Ghana ${ind.subject} Curriculum (${ind.level}) · Source Page ${ind.source_page || '30'}`
-            : `NaCCA Ghana ${ind.subject} Curriculum (${ind.level}) · Source Page ${ind.source_page || 'not specified'}`,
+        : ind.subject === 'Mathematics'
+          ? `NaCCA Ghana ${ind.subject} Curriculum (${ind.level}) · Source Page ${ind.source_page || '30'}`
+          : `NaCCA Ghana ${ind.subject} Curriculum (${ind.level}) · Source Page ${ind.source_page || 'not specified'}`,
       questions: toHubQuestions(
-        primaryCurriculum
-          ? questions.filter((q) => q.type === 'mcq')
-          : ind.subject === 'Computing'
-            ? questions.filter((q) => q.type === 'mcq')
-            : questions,
+        primaryCurriculum ? questions.filter((q) => q.type === 'mcq') : questions,
       ),
     };
   });

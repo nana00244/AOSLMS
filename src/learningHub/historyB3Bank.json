@@ -1,0 +1,2888 @@
+[
+  {
+    "indicator": {
+      "code": "B3.2.1.1.1",
+      "subject": "History",
+      "level": "Basic 3",
+      "strand": "My Country Ghana",
+      "sub_strand": "The People of Ghana",
+      "content_standard": "B3.2.1.1. Exhibit knowledge of the unique history of the major ethnic groups in Ghana",
+      "objective": "Discuss the origins of the major ethnic groups in Ghana",
+      "source_page": 15
+    },
+    "spec": {
+      "skills": [
+        {
+          "tag": "identify_peoples",
+          "description": "Identify peoples",
+          "minQuestions": 5
+        },
+        {
+          "tag": "trace_a_migration_route",
+          "description": "Trace a migration route",
+          "minQuestions": 5
+        },
+        {
+          "tag": "distinguish_origin_from_present_home",
+          "description": "Distinguish origin from present home",
+          "minQuestions": 5
+        },
+        {
+          "tag": "sequence_arrivals",
+          "description": "Sequence arrivals",
+          "minQuestions": 5
+        }
+      ],
+      "difficultyPlan": "Five recall, seven simple-use, five application and three challenge questions.",
+      "misconceptions": [
+        "Guan is the name of a migratory route rather than a people.",
+        "The arrowhead always marks the place from which people started.",
+        "A group's current home must always also be its earliest home.",
+        "The largest symbol on a map always means the earliest arrival."
+      ],
+      "needsTeacherAssessment": true
+    },
+    "questions": [
+      {
+        "skill_tag": "identify_peoples",
+        "hints": ["Separate the name of a people from the names of places."],
+        "misconception": "Guan is the name of a migratory route rather than a people.",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "Which name is an example of a major ethnic group listed in the lesson, alongside Akan and Ewe?",
+        "explanation": "Guan is one of the ethnic-group names in the list.",
+        "options": ["Route", "Coast", "Timeline", "Guan"],
+        "answer": 3,
+        "distractorMisconceptions": {
+          "Route": "Choosing “Route” overlooks the distinction in the question. Guan is one of the ethnic-group names in the list.",
+          "Coast": "Choosing “Coast” overlooks the distinction in the question. Guan is one of the ethnic-group names in the list.",
+          "Timeline": "A timeline orders events by time; a map answers where questions. Here the clue points to Guan."
+        }
+      },
+      {
+        "skill_tag": "identify_peoples",
+        "hints": ["Separate the name of a people from the names of places."],
+        "misconception": "Guan is the name of a migratory route rather than a people.",
+        "type": "short_answer",
+        "difficulty": 1,
+        "stem": "Name one more ethnic group from the lesson besides Guan and Akan.",
+        "explanation": "Ewe is one example; Ga/Adangme is another.",
+        "answer": [
+          "ewe",
+          "ga",
+          "adangme",
+          "ga/adangme",
+          "ga-adangme",
+          "mole-dagbani",
+          "gonja",
+          "mole-dagbani/gonja"
+        ]
+      },
+      {
+        "skill_tag": "trace_a_migration_route",
+        "hints": ["Look at both ends of the journey."],
+        "misconception": "The arrowhead always marks the place from which people started.",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "In a practice map, an arrow goes from an old settlement to a new one. What is the arrow showing?",
+        "explanation": "A route shows a path of movement from a starting point towards a destination.",
+        "options": ["Migration route", "Guan", "Origin", "Timeline"],
+        "answer": 0,
+        "distractorMisconceptions": {
+          "Guan": "Guan is one of the ethnic-group names in the list. Here the clue points to Migration route.",
+          "Origin": "Origin concerns where a group's story of movement begins. Here the clue points to Migration route.",
+          "Timeline": "A timeline orders events by time; a map answers where questions. Here the clue points to Migration route."
+        }
+      },
+      {
+        "skill_tag": "distinguish_origin_from_present_home",
+        "hints": ["Listen for where the account begins."],
+        "misconception": "A group's current home must always also be its earliest home.",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "When a pupil asks where a group came from before reaching its present location, what is she asking about?",
+        "explanation": "Origin concerns where a group's story of movement begins.",
+        "options": ["Guan", "Origin", "Migration route", "Timeline"],
+        "answer": 1,
+        "distractorMisconceptions": {
+          "Guan": "Guan is one of the ethnic-group names in the list. Here the clue points to Origin.",
+          "Migration route": "A route shows a path of movement from a starting point towards a destination. Here the clue points to Origin.",
+          "Timeline": "A timeline orders events by time; a map answers where questions. Here the clue points to Origin."
+        }
+      },
+      {
+        "skill_tag": "sequence_arrivals",
+        "hints": ["Decide whether the question asks when or where."],
+        "misconception": "The largest symbol on a map always means the earliest arrival.",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "Which display arranges reported arrivals from earlier to later?",
+        "explanation": "A timeline orders events by time; a map answers where questions.",
+        "options": ["Guan", "Migration route", "Timeline", "Origin"],
+        "answer": 2,
+        "distractorMisconceptions": {
+          "Guan": "Guan is one of the ethnic-group names in the list. Here the clue points to Timeline.",
+          "Migration route": "A route shows a path of movement from a starting point towards a destination. Here the clue points to Timeline.",
+          "Origin": "Origin concerns where a group's story of movement begins. Here the clue points to Timeline."
+        }
+      },
+      {
+        "skill_tag": "identify_peoples",
+        "hints": ["Read both words in each pair. Do both name people?"],
+        "misconception": "Guan is the name of a migratory route rather than a people.",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "Which pair could go under the heading “Peoples of Ghana”?",
+        "explanation": "Both Guan and Ewe name people. A river or a hill is a place feature.",
+        "options": ["Guan and coast", "Guan and Ewe", "Akan and river", "Hill and Akan"],
+        "answer": 1,
+        "distractorMisconceptions": {
+          "Guan and coast": "Mixes a people with a landscape. Both Guan and Ewe name people. A river or a hill is a place feature.",
+          "Akan and river": "Treats a river as a people’s name. Both Guan and Ewe name people. A river or a hill is a place feature.",
+          "Hill and Akan": "Treats a hill as an ethnic group. Both Guan and Ewe name people. A river or a hill is a place feature."
+        }
+      },
+      {
+        "skill_tag": "identify_peoples",
+        "hints": ["Separate the name of a people from the names of places."],
+        "misconception": "Guan is the name of a migratory route rather than a people.",
+        "type": "written",
+        "difficulty": 2,
+        "stem": "Label a class display with three ethnic-group names, including Guan. Explain what all three labels name.",
+        "explanation": "Guan, Akan and Ewe would fit on the display. Each names a group of people.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Guan, Akan and Ewe would fit on the display.",
+              "marks": 1
+            },
+            {
+              "description": "Each names a group of people.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "trace_a_migration_route",
+        "hints": ["Follow the journey one step at a time."],
+        "misconception": "The arrowhead always marks the place from which people started.",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "A family left A, rested at B and finally reached C. What mark belongs at B on your sketch?",
+        "explanation": "B comes between leaving A and reaching C. A stop can be part of a route.",
+        "options": [
+          "The family's starting place",
+          "The final destination",
+          "A stop on the way",
+          "An unrelated place"
+        ],
+        "answer": 2,
+        "distractorMisconceptions": {
+          "The family's starting place": "Confuses an intermediate stop with departure. B comes between leaving A and reaching C. A stop can be part of a route.",
+          "The final destination": "Confuses a stop with the final destination. B comes between leaving A and reaching C. A stop can be part of a route.",
+          "An unrelated place": "Leaves a known stop off the route. B comes between leaving A and reaching C. A stop can be part of a route."
+        }
+      },
+      {
+        "skill_tag": "trace_a_migration_route",
+        "hints": ["Look at both ends of the journey."],
+        "misconception": "The arrowhead always marks the place from which people started.",
+        "type": "short_answer",
+        "difficulty": 2,
+        "stem": "A practice account says a family travelled from Hill to River. Which of those words belongs at the end of the route arrow?",
+        "explanation": "River is the stated destination.",
+        "answer": ["river"]
+      },
+      {
+        "skill_tag": "distinguish_origin_from_present_home",
+        "hints": ["Look for a question about a place before a move."],
+        "misconception": "A group's current home must always also be its earliest home.",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "Which question asks about an earlier home?",
+        "explanation": "An earlier home tells about origin. Roads, visitors and future plans give other details.",
+        "options": [
+          "Which road did they take on the journey?",
+          "Who met them when they arrived?",
+          "When will they visit another town?",
+          "Where did the family live before this move?"
+        ],
+        "answer": 3,
+        "distractorMisconceptions": {
+          "Which road did they take on the journey?": "Asks about the route instead of the origin. An earlier home tells about origin. Roads, visitors and future plans give other details.",
+          "Who met them when they arrived?": "Confuses people met on arrival with an earlier home. An earlier home tells about origin. Roads, visitors and future plans give other details.",
+          "When will they visit another town?": "Asks about a future visit rather than the earlier home. An earlier home tells about origin. Roads, visitors and future plans give other details."
+        }
+      },
+      {
+        "skill_tag": "distinguish_origin_from_present_home",
+        "hints": ["Listen for where the account begins."],
+        "misconception": "A group's current home must always also be its earliest home.",
+        "type": "written",
+        "difficulty": 2,
+        "stem": "A fictional route card gives the starting and finishing places but no reason for leaving. Ask a question that would supply the missing detail.",
+        "explanation": "A question about why the people moved asks for the cause rather than another place name.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "A question about why the people moved asks for the cause rather than another place name.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "sequence_arrivals",
+        "hints": ["Use only the time information in the story."],
+        "misconception": "The largest symbol on a map always means the earliest arrival.",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "You know one family arrived before another, but no years are recorded. Which display can you make?",
+        "explanation": "“Before” gives an order. It gives no exact year and says nothing about the age of either family.",
+        "options": [
+          "Two cards in the order of arrival",
+          "Two cards with exact dates of arrival",
+          "One card showing both arrived together",
+          "One card saying which family is older"
+        ],
+        "answer": 0,
+        "distractorMisconceptions": {
+          "Two cards with exact dates of arrival": "Treats relative order as exact dates. “Before” gives an order. It gives no exact year and says nothing about the age of either family.",
+          "One card showing both arrived together": "Mistakes an earlier arrival for a simultaneous arrival. “Before” gives an order. It gives no exact year and says nothing about the age of either family.",
+          "One card saying which family is older": "Confuses time of arrival with a family’s age. “Before” gives an order. It gives no exact year and says nothing about the age of either family."
+        }
+      },
+      {
+        "skill_tag": "identify_peoples",
+        "hints": ["Separate the name of a people from the names of places."],
+        "misconception": "Guan is the name of a migratory route rather than a people.",
+        "type": "written",
+        "difficulty": 3,
+        "stem": "A visitor thinks a list of ethnic groups also tells where they began. Give one fact the list supplies and one question it leaves open.",
+        "explanation": "The list tells us that Guan is a group. It leaves open where its people lived earlier.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "The list tells us that Guan is a group. It leaves open where its people lived earlier.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "trace_a_migration_route",
+        "hints": ["Look at both ends of the journey."],
+        "misconception": "The arrowhead always marks the place from which people started.",
+        "type": "drawing",
+        "difficulty": 3,
+        "stem": "Draw a route from the practice village A to village B. Label the start and show which way people travelled.",
+        "explanation": "Put the tail of the arrow at A. Point it towards B to show where the people arrived.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Put the tail of the arrow at A.",
+              "marks": 1
+            },
+            {
+              "description": "Point it towards B to show where the people arrived.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "distinguish_origin_from_present_home",
+        "hints": ["Listen for where the account begins."],
+        "misconception": "A group's current home must always also be its earliest home.",
+        "type": "written",
+        "difficulty": 3,
+        "stem": "Explain the difference between a present home and a place of origin using an imaginary family move.",
+        "explanation": "Imagine a family that moved from Hill to Lake. Hill was its earlier home and Lake is its home now.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Imagine a family that moved from Hill to Lake.",
+              "marks": 1
+            },
+            {
+              "description": "Hill was its earlier home and Lake is its home now.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "sequence_arrivals",
+        "hints": ["Decide whether the question asks when or where."],
+        "misconception": "The largest symbol on a map always means the earliest arrival.",
+        "type": "written",
+        "difficulty": 3,
+        "stem": "Two practice cards have locations but no dates or order. Explain why the class cannot yet place them confidently on an arrival timeline.",
+        "explanation": "Locations alone do not give chronological order.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Locations alone do not give chronological order.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "sequence_arrivals",
+        "hints": ["Decide whether the question asks when or where."],
+        "misconception": "The largest symbol on a map always means the earliest arrival.",
+        "type": "practical",
+        "difficulty": 3,
+        "stem": "Put three practice cards marked first, next and last in order and give your display a title.",
+        "explanation": "Put first, next and last in a line. A heading such as “Order of arrivals” explains what the line shows.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Put first, next and last in a line. A heading such as “Order of arrivals” explains what the line shows.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "trace_a_migration_route",
+        "hints": ["Look at both ends of the journey."],
+        "misconception": "The arrowhead always marks the place from which people started.",
+        "type": "written",
+        "difficulty": 4,
+        "stem": "Two pupils draw arrows in opposite directions between A and B. The practice account says the families left A. Choose and defend the correct map.",
+        "explanation": "Choose the arrow that starts at A and points to B. Leaving A makes A the start.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Choose the arrow that starts at A and points to B.",
+              "marks": 1
+            },
+            {
+              "description": "Leaving A makes A the start.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "distinguish_origin_from_present_home",
+        "hints": ["Listen for where the account begins."],
+        "misconception": "A group's current home must always also be its earliest home.",
+        "type": "written",
+        "difficulty": 4,
+        "stem": "A practice speaker says, ‘We live at B; my elders tell of moving here from A.’ Retell the two parts without claiming that the story applies to every Ghanaian group.",
+        "explanation": "The speaker lives at B today. Their elders say the family came from A, so the account tells us about that family.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "The speaker lives at B today.",
+              "marks": 1
+            },
+            {
+              "description": "Their elders say the family came from A, so the account tells us about that family.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "sequence_arrivals",
+        "hints": ["Decide whether the question asks when or where."],
+        "misconception": "The largest symbol on a map always means the earliest arrival.",
+        "type": "oral",
+        "difficulty": 4,
+        "stem": "Compose two lines for a class song naming Akan and Ewe. Then explain what additional evidence you would need before adding lines about either group's arrival date.",
+        "explanation": "A song might say “Akan is one name we learn. Ewe is another we sing.” Add an arrival date only if an account connects a time with the group.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "A song might say “Akan is one name we learn.",
+              "marks": 1
+            },
+            {
+              "description": "Ewe is another we sing.” Add an arrival date only if an account connects a time with the group.",
+              "marks": 1
+            }
+          ]
+        }
+      }
+    ],
+    "uncertain": [
+      "The exemplar names ethnic groups and asks pupils to trace migration routes, but supplies no named places of origin, migration dates or routes. Illustrative maps and travel accounts in the questions are fictional."
+    ]
+  },
+  {
+    "indicator": {
+      "code": "B3 2.2.1.1",
+      "subject": "History",
+      "level": "Basic 3",
+      "strand": "My Country Ghana",
+      "sub_strand": "Inter-Group Relations",
+      "content_standard": "B3 2.2.1. Demonstrate knowledge of how intergroup alliances, conflicts and other exchanges",
+      "objective": "Discuss the nature of exchanges among the ethnic groups.",
+      "source_page": 16
+    },
+    "spec": {
+      "skills": [
+        {
+          "tag": "recognise_trade",
+          "description": "Recognise trade",
+          "minQuestions": 5
+        },
+        {
+          "tag": "describe_family_ties",
+          "description": "Describe family ties",
+          "minQuestions": 5
+        },
+        {
+          "tag": "explain_cooperation",
+          "description": "Explain cooperation",
+          "minQuestions": 5
+        },
+        {
+          "tag": "identify_a_conflict",
+          "description": "Identify a conflict",
+          "minQuestions": 5
+        }
+      ],
+      "difficultyPlan": "Five recall, seven simple-use, five application and three challenge questions.",
+      "misconceptions": [
+        "All contact between different groups was fighting.",
+        "A family tie is the same as a sale of goods.",
+        "Groups that make an alliance must become one ethnic group.",
+        "All intergroup relationships benefited everyone equally."
+      ],
+      "needsTeacherAssessment": true
+    },
+    "questions": [
+      {
+        "skill_tag": "recognise_trade",
+        "hints": ["Look at what passes between the two sides."],
+        "misconception": "All contact between different groups was fighting.",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "Two practice communities exchange fish and cloth. Which relationship is this?",
+        "explanation": "Each side gives goods and receives goods it needs.",
+        "options": ["Trade", "Intermarriage", "Alliance", "Conflict"],
+        "answer": 0,
+        "distractorMisconceptions": {
+          "Intermarriage": "Intermarriage creates family ties between people from different groups. Here the clue points to Trade.",
+          "Alliance": "An alliance joins groups for an agreed purpose. Here the clue points to Trade.",
+          "Conflict": "Conflict involves disagreement or opposition between groups. Here the clue points to Trade."
+        }
+      },
+      {
+        "skill_tag": "recognise_trade",
+        "hints": ["Look at what passes between the two sides."],
+        "misconception": "All contact between different groups was fighting.",
+        "type": "short_answer",
+        "difficulty": 1,
+        "stem": "Name the form of exchange involving buying, selling or swapping goods.",
+        "explanation": "Trade involves exchange of goods.",
+        "answer": ["trade", "trading"]
+      },
+      {
+        "skill_tag": "describe_family_ties",
+        "hints": ["Think about which people become relatives."],
+        "misconception": "A family tie is the same as a sale of goods.",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "In a fictional account, two people from different communities marry. Which relationship links their families?",
+        "explanation": "Intermarriage creates family ties between people from different groups.",
+        "options": ["Trade", "Intermarriage", "Alliance", "Conflict"],
+        "answer": 1,
+        "distractorMisconceptions": {
+          "Trade": "Each side gives goods and receives goods it needs. Here the clue points to Intermarriage.",
+          "Alliance": "An alliance joins groups for an agreed purpose. Here the clue points to Intermarriage.",
+          "Conflict": "Conflict involves disagreement or opposition between groups. Here the clue points to Intermarriage."
+        }
+      },
+      {
+        "skill_tag": "explain_cooperation",
+        "hints": ["Ask what the groups agreed to do."],
+        "misconception": "Groups that make an alliance must become one ethnic group.",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "Two groups agree to work together to face a shared problem. What is their agreement called?",
+        "explanation": "An alliance joins groups for an agreed purpose.",
+        "options": ["Trade", "Intermarriage", "Alliance", "Conflict"],
+        "answer": 2,
+        "distractorMisconceptions": {
+          "Trade": "Each side gives goods and receives goods it needs. Here the clue points to Alliance.",
+          "Intermarriage": "Intermarriage creates family ties between people from different groups. Here the clue points to Alliance.",
+          "Conflict": "Conflict involves disagreement or opposition between groups. Here the clue points to Alliance."
+        }
+      },
+      {
+        "skill_tag": "identify_a_conflict",
+        "hints": ["Look for disagreement or cooperation in the account."],
+        "misconception": "All intergroup relationships benefited everyone equally.",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "A practice account describes a serious dispute between groups rather than agreement or exchange of goods. Which relationship does it show?",
+        "explanation": "Conflict involves disagreement or opposition between groups.",
+        "options": ["Trade", "Intermarriage", "Alliance", "Conflict"],
+        "answer": 3,
+        "distractorMisconceptions": {
+          "Trade": "Each side gives goods and receives goods it needs. Here the clue points to Conflict.",
+          "Intermarriage": "Intermarriage creates family ties between people from different groups. Here the clue points to Conflict.",
+          "Alliance": "An alliance joins groups for an agreed purpose. Here the clue points to Conflict."
+        }
+      },
+      {
+        "skill_tag": "recognise_trade",
+        "hints": ["Follow the item moving towards the potter."],
+        "misconception": "All contact between different groups was fighting.",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "At a market, Abena gives her salt to a potter for a bowl. What does the potter gain?",
+        "explanation": "Follow the goods towards the person receiving them. The potter hands over a bowl and receives the salt.",
+        "options": ["A bowl", "Both goods", "Salt", "Neither good"],
+        "answer": 2,
+        "distractorMisconceptions": {
+          "A bowl": "Confuses what the potter gives with what the potter receives. Follow the goods towards the person receiving them. The potter hands over a bowl and receives the salt.",
+          "Both goods": "Assumes one trader keeps both goods. Follow the goods towards the person receiving them. The potter hands over a bowl and receives the salt.",
+          "Neither good": "Overlooks the goods each trader receives. Follow the goods towards the person receiving them. The potter hands over a bowl and receives the salt."
+        }
+      },
+      {
+        "skill_tag": "recognise_trade",
+        "hints": ["Look at what passes between the two sides."],
+        "misconception": "All contact between different groups was fighting.",
+        "type": "practical",
+        "difficulty": 2,
+        "stem": "Act out a peaceful exchange of salt and a pot. Name the item each trader receives.",
+        "explanation": "One trader hands over salt and receives a pot. The other hands over the pot and receives salt.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "One trader hands over salt and receives a pot.",
+              "marks": 1
+            },
+            {
+              "description": "The other hands over the pot and receives salt.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "describe_family_ties",
+        "hints": ["Find the action that makes a family tie."],
+        "misconception": "A family tie is the same as a sale of goods.",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "Two villages already exchange cloth. Which new event would also make some families relatives?",
+        "explanation": "Swapping or bargaining concerns trade. A marriage can join the two families.",
+        "options": [
+          "Two traders swap pieces of cloth",
+          "Two friends bargain over a price",
+          "Two traders start another stall",
+          "Two people from the villages marry"
+        ],
+        "answer": 3,
+        "distractorMisconceptions": {
+          "Two traders swap pieces of cloth": "Confuses trade with a family link. Swapping or bargaining concerns trade. A marriage can join the two families.",
+          "Two friends bargain over a price": "Confuses bargaining with a family link. Swapping or bargaining concerns trade. A marriage can join the two families.",
+          "Two traders start another stall": "Confuses sharing a stall with becoming relatives. Swapping or bargaining concerns trade. A marriage can join the two families."
+        }
+      },
+      {
+        "skill_tag": "describe_family_ties",
+        "hints": ["Think about which people become relatives."],
+        "misconception": "A family tie is the same as a sale of goods.",
+        "type": "short_answer",
+        "difficulty": 2,
+        "stem": "A practice family tree joins families of different groups. Name the relationship that made this link.",
+        "explanation": "A marriage between people of the different groups is an intermarriage.",
+        "answer": ["intermarriage", "inter-marriage", "marriage", "intergroup marriage"]
+      },
+      {
+        "skill_tag": "explain_cooperation",
+        "hints": ["Ask what the groups agreed to do."],
+        "misconception": "Groups that make an alliance must become one ethnic group.",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "Two villages agree to repair a shared path together. What suggests an alliance?",
+        "explanation": "The promise shows a shared purpose and agreement. Simply using the same path does not show an agreement.",
+        "options": [
+          "They made a plan and promised to cooperate",
+          "Both villages happen to use the path",
+          "One person walked the path yesterday",
+          "The path is the same length for both"
+        ],
+        "answer": 0,
+        "distractorMisconceptions": {
+          "Both villages happen to use the path": "Confuses using the same path with making an agreement. The promise shows a shared purpose and agreement. Simply using the same path does not show an agreement.",
+          "One person walked the path yesterday": "Confuses one person’s action with an agreement between groups. The promise shows a shared purpose and agreement. Simply using the same path does not show an agreement.",
+          "The path is the same length for both": "Mistakes a shared distance for a shared promise. The promise shows a shared purpose and agreement. Simply using the same path does not show an agreement."
+        }
+      },
+      {
+        "skill_tag": "explain_cooperation",
+        "hints": ["Ask what the groups agreed to do."],
+        "misconception": "Groups that make an alliance must become one ethnic group.",
+        "type": "oral",
+        "difficulty": 2,
+        "stem": "Give one possible benefit to imaginary groups that agree to build a shared meeting place.",
+        "explanation": "An agreement could let them share work or resources for their joint goal.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "An agreement could let them share work or resources for their joint goal.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "identify_a_conflict",
+        "hints": ["Look for disagreement or cooperation in the account."],
+        "misconception": "All intergroup relationships benefited everyone equally.",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "Two groups quarrel over a stall and traders pack up early. Which result does the story show?",
+        "explanation": "Look at what follows the quarrel. People leave before trading is finished.",
+        "options": [
+          "The quarrel created a marriage",
+          "The quarrel interrupted trade",
+          "The quarrel settled every price",
+          "The quarrel formed an alliance"
+        ],
+        "answer": 1,
+        "distractorMisconceptions": {
+          "The quarrel created a marriage": "Assumes contact at a market creates a family link. Look at what follows the quarrel. People leave before trading is finished.",
+          "The quarrel settled every price": "Assumes a dispute automatically settles prices. Look at what follows the quarrel. People leave before trading is finished.",
+          "The quarrel formed an alliance": "Confuses a quarrel with an agreement to act together. Look at what follows the quarrel. People leave before trading is finished."
+        }
+      },
+      {
+        "skill_tag": "recognise_trade",
+        "hints": ["Look at what passes between the two sides."],
+        "misconception": "All contact between different groups was fighting.",
+        "type": "written",
+        "difficulty": 3,
+        "stem": "Explain how trade could help both communities even though neither received the same item it gave.",
+        "explanation": "A community with fish can obtain cloth it needs. Its partner gives cloth and receives fish.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "A community with fish can obtain cloth it needs.",
+              "marks": 1
+            },
+            {
+              "description": "Its partner gives cloth and receives fish.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "describe_family_ties",
+        "hints": ["Think about which people become relatives."],
+        "misconception": "A family tie is the same as a sale of goods.",
+        "type": "drawing",
+        "difficulty": 3,
+        "stem": "Draw two fictional families joined by a marriage and label the new link.",
+        "explanation": "Draw one person in each of two families and join the people who marry. Label that link “marriage”.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Draw one person in each of two families and join the people who marry.",
+              "marks": 1
+            },
+            {
+              "description": "Label that link “marriage”.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "explain_cooperation",
+        "hints": ["Ask what the groups agreed to do."],
+        "misconception": "Groups that make an alliance must become one ethnic group.",
+        "type": "written",
+        "difficulty": 3,
+        "stem": "Make a pair of speech bubbles showing two imaginary groups agreeing on a shared purpose.",
+        "explanation": "One bubble could say “Will you help repair our shared path?” The reply could agree and say what each group will do.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "One bubble could say “Will you help repair our shared path?” The reply could agree and say what each group will do.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "identify_a_conflict",
+        "hints": ["Look for disagreement or cooperation in the account."],
+        "misconception": "All intergroup relationships benefited everyone equally.",
+        "type": "written",
+        "difficulty": 3,
+        "stem": "A practice report says two groups argued over an exchange. Identify the relationship shown by arguing, separately from the exchange itself.",
+        "explanation": "The disagreement shows conflict while the goods exchange shows trade.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "The disagreement shows conflict while the goods exchange shows trade.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "identify_a_conflict",
+        "hints": ["Look for disagreement or cooperation in the account."],
+        "misconception": "All intergroup relationships benefited everyone equally.",
+        "type": "practical",
+        "difficulty": 3,
+        "stem": "Sort a practice disagreement and a practice trading day into two relationship categories and explain your choices.",
+        "explanation": "Put a dispute over a boundary under conflict. Put an agreed exchange of goods under trade.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Put a dispute over a boundary under conflict.",
+              "marks": 1
+            },
+            {
+              "description": "Put an agreed exchange of goods under trade.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "describe_family_ties",
+        "hints": ["Think about which people become relatives."],
+        "misconception": "A family tie is the same as a sale of goods.",
+        "type": "written",
+        "difficulty": 4,
+        "stem": "Compare your family-link diagram with a trade stall. Explain one way each might bring people together without saying the two relationships are identical.",
+        "explanation": "The family diagram links people through marriage. A stall instead connects buyers and sellers through an exchange of goods.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "The family diagram links people through marriage. A stall instead connects buyers and sellers through an exchange of goods.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "explain_cooperation",
+        "hints": ["Ask what the groups agreed to do."],
+        "misconception": "Groups that make an alliance must become one ethnic group.",
+        "type": "written",
+        "difficulty": 4,
+        "stem": "An invented village account says two groups helped each other once. What else would you ask before describing a lasting alliance?",
+        "explanation": "Ask whether the groups agreed to keep helping one another. One act of help alone leaves the length and terms of any agreement unknown.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Ask whether the groups agreed to keep helping one another.",
+              "marks": 1
+            },
+            {
+              "description": "One act of help alone leaves the length and terms of any agreement unknown.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "identify_a_conflict",
+        "hints": ["Look for disagreement or cooperation in the account."],
+        "misconception": "All intergroup relationships benefited everyone equally.",
+        "type": "oral",
+        "difficulty": 4,
+        "stem": "Tell a short invented story in which a dispute interrupts exchange. Identify the conflict and one possible effect without claiming it happened to a named ethnic group.",
+        "explanation": "In an invented market, two groups argue over stall space. Some traders leave, so fewer goods change hands that day.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "In an invented market, two groups argue over stall space.",
+              "marks": 1
+            },
+            {
+              "description": "Some traders leave, so fewer goods change hands that day.",
+              "marks": 1
+            }
+          ]
+        }
+      }
+    ],
+    "uncertain": [
+      "The printed code has a space after B3. The standard ends with “exchanges” in the table."
+    ]
+  },
+  {
+    "indicator": {
+      "code": "B3.2.2.1.2",
+      "subject": "History",
+      "level": "Basic 3",
+      "strand": "My Country Ghana",
+      "sub_strand": "Inter-Group Relations",
+      "content_standard": "B3 2.2.1. Demonstrate knowledge of how intergroup alliances, conflicts and other exchanges",
+      "objective": "Name some of the items exchanged among the various groups.",
+      "source_page": 16
+    },
+    "spec": {
+      "skills": [
+        {
+          "tag": "model_direct_swaps",
+          "description": "Model direct swaps",
+          "minQuestions": 5
+        },
+        {
+          "tag": "explain_a_medium_of_exchange",
+          "description": "Explain a medium of exchange",
+          "minQuestions": 5
+        },
+        {
+          "tag": "link_products_to_sources",
+          "description": "Link products to sources",
+          "minQuestions": 5
+        },
+        {
+          "tag": "classify_trade_goods",
+          "description": "Classify trade goods",
+          "minQuestions": 5
+        }
+      ],
+      "difficultyPlan": "Five recall, seven simple-use, five application and three challenge questions.",
+      "misconceptions": [
+        "Only goods exchanged for shells count as trade.",
+        "Cowrie shells and every product bought with them played exactly the same role.",
+        "Every item sold in one area must have been produced there.",
+        "Only food could be exchanged between groups."
+      ],
+      "needsTeacherAssessment": true
+    },
+    "questions": [
+      {
+        "skill_tag": "model_direct_swaps",
+        "hints": ["Ask whether the traders use a separate means of payment."],
+        "misconception": "Only goods exchanged for shells count as trade.",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "A trader gives a pot directly for fish. Which way of exchanging goods is shown?",
+        "explanation": "Barter exchanges goods directly for other goods.",
+        "options": ["Cowrie shells", "Barter", "Shea butter", "Iron utensils"],
+        "answer": 1,
+        "distractorMisconceptions": {
+          "Cowrie shells": "Cowrie shells could be accepted in exchange for goods instead of making a direct swap. Here the clue points to Barter.",
+          "Shea butter": "The source gives shea butter as an example from the savannah belt. Here the clue points to Barter.",
+          "Iron utensils": "Iron utensils appear in the trade list alongside pottery, cloth, salt, fish, kola and gold. Here the clue points to Barter."
+        }
+      },
+      {
+        "skill_tag": "model_direct_swaps",
+        "hints": ["Ask whether the traders use a separate means of payment."],
+        "misconception": "Only goods exchanged for shells count as trade.",
+        "type": "short_answer",
+        "difficulty": 1,
+        "stem": "Name one listed food item that could be given in a direct swap.",
+        "explanation": "Salt, fish or kola are examples of listed trade goods.",
+        "answer": ["salt", "fish", "kola", "kola nuts", "shea butter", "kola nut"]
+      },
+      {
+        "skill_tag": "explain_a_medium_of_exchange",
+        "hints": ["Trace what can be passed on to another trader."],
+        "misconception": "Cowrie shells and every product bought with them played exactly the same role.",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "In the lesson, what became a common medium used to obtain goods?",
+        "explanation": "Cowrie shells could be accepted in exchange for goods instead of making a direct swap.",
+        "options": ["Pieces of pottery", "Strips of cloth", "Cowrie shells", "Iron utensils"],
+        "answer": 2,
+        "distractorMisconceptions": {
+          "Pieces of pottery": "Choosing “Pieces of pottery” overlooks the distinction in the question. Cowrie shells could be accepted in exchange for goods instead of making a direct swap.",
+          "Strips of cloth": "Choosing “Strips of cloth” overlooks the distinction in the question. Cowrie shells could be accepted in exchange for goods instead of making a direct swap.",
+          "Iron utensils": "Iron utensils appear in the trade list alongside pottery, cloth, salt, fish, kola and gold. Here the clue points to Cowrie shells."
+        }
+      },
+      {
+        "skill_tag": "link_products_to_sources",
+        "hints": ["Distinguish where goods come from and where they are exchanged."],
+        "misconception": "Every item sold in one area must have been produced there.",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "Which listed trade item does the lesson connect with the savannah belt?",
+        "explanation": "The source gives shea butter as an example from the savannah belt.",
+        "options": ["Salt", "Fish", "Gold", "Shea butter"],
+        "answer": 3,
+        "distractorMisconceptions": {
+          "Salt": "Choosing “Salt” overlooks the distinction in the question. The source gives shea butter as an example from the savannah belt.",
+          "Fish": "Choosing “Fish” overlooks the distinction in the question. The source gives shea butter as an example from the savannah belt.",
+          "Gold": "Choosing “Gold” overlooks the distinction in the question. The source gives shea butter as an example from the savannah belt."
+        }
+      },
+      {
+        "skill_tag": "classify_trade_goods",
+        "hints": ["Think about the material and use of each item."],
+        "misconception": "Only food could be exchanged between groups.",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "Which traded goods are described by the material iron and the use of a tool or household implement?",
+        "explanation": "Iron utensils appear in the trade list alongside pottery, cloth, salt, fish, kola and gold.",
+        "options": ["Iron utensils", "Barter", "Cowrie shells", "Shea butter"],
+        "answer": 0,
+        "distractorMisconceptions": {
+          "Barter": "Barter exchanges goods directly for other goods. Here the clue points to Iron utensils.",
+          "Cowrie shells": "Cowrie shells could be accepted in exchange for goods instead of making a direct swap. Here the clue points to Iron utensils.",
+          "Shea butter": "The source gives shea butter as an example from the savannah belt. Here the clue points to Iron utensils."
+        }
+      },
+      {
+        "skill_tag": "model_direct_swaps",
+        "hints": ["What does each trader give directly to the other?"],
+        "misconception": "Only goods exchanged for shells count as trade.",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "At which stall is a direct swap taking place?",
+        "explanation": "A basket and cloth are the two goods exchanged directly. No separate payment is used.",
+        "options": [
+          "A basket is sold for shells",
+          "A price in shells is written down",
+          "Shells are saved for another day",
+          "A basket is given for cloth"
+        ],
+        "answer": 3,
+        "distractorMisconceptions": {
+          "A basket is sold for shells": "Confuses payment in shells with a direct swap of goods. A basket and cloth are the two goods exchanged directly. No separate payment is used.",
+          "A price in shells is written down": "Mistakes stating a price for exchanging goods. A basket and cloth are the two goods exchanged directly. No separate payment is used.",
+          "Shells are saved for another day": "Mistakes saving payment for swapping goods. A basket and cloth are the two goods exchanged directly. No separate payment is used."
+        }
+      },
+      {
+        "skill_tag": "model_direct_swaps",
+        "hints": ["Ask whether the traders use a separate means of payment."],
+        "misconception": "Only goods exchanged for shells count as trade.",
+        "type": "practical",
+        "difficulty": 2,
+        "stem": "Use picture cards of cloth and salt to show one barter exchange.",
+        "explanation": "Move the cloth card towards one trader and the salt card towards the other. Each receives goods in return.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Move the cloth card towards one trader and the salt card towards the other.",
+              "marks": 1
+            },
+            {
+              "description": "Each receives goods in return.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "explain_a_medium_of_exchange",
+        "hints": ["Think about what the trader will be able to do at the next stall."],
+        "misconception": "Cowrie shells and every product bought with them played exactly the same role.",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "Why can a trader accept shells even if she wants cloth later?",
+        "explanation": "A medium of exchange can be spent again. The shells can connect two separate trades.",
+        "options": [
+          "Another seller may take them for cloth",
+          "Every shell is a piece of cloth",
+          "Cloth can only be exchanged for fish",
+          "The shells show where cloth was woven"
+        ],
+        "answer": 0,
+        "distractorMisconceptions": {
+          "Every shell is a piece of cloth": "Confuses payment for cloth with cloth itself. A medium of exchange can be spent again. The shells can connect two separate trades.",
+          "Cloth can only be exchanged for fish": "Assumes traders can obtain cloth only by exchanging fish. A medium of exchange can be spent again. The shells can connect two separate trades.",
+          "The shells show where cloth was woven": "Confuses a means of payment with a clue to the cloth’s origin. A medium of exchange can be spent again. The shells can connect two separate trades."
+        }
+      },
+      {
+        "skill_tag": "explain_a_medium_of_exchange",
+        "hints": ["Trace what can be passed on to another trader."],
+        "misconception": "Cowrie shells and every product bought with them played exactly the same role.",
+        "type": "written",
+        "difficulty": 2,
+        "stem": "Complete this practice report: ‘The trader accepted shells and used them at the next stall.’ Explain what made the shells useful there.",
+        "explanation": "The next trader could accept the shells as a medium of exchange.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "The next trader could accept the shells as a medium of exchange.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "link_products_to_sources",
+        "hints": ["Distinguish where goods come from and where they are exchanged."],
+        "misconception": "Every item sold in one area must have been produced there.",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "A class chart has columns “product” and “source area”. Which row belongs in it?",
+        "explanation": "Shea butter is the product. The savannah belt names its source area in this example.",
+        "options": [
+          "Savannah belt — shea butter",
+          "Shea butter — savannah belt",
+          "Shea butter — iron utensil",
+          "Savannah belt — pottery"
+        ],
+        "answer": 1,
+        "distractorMisconceptions": {
+          "Savannah belt — shea butter": "Reverses source area and product. Shea butter is the product. The savannah belt names its source area in this example.",
+          "Shea butter — iron utensil": "Puts another product in the space for an area. Shea butter is the product. The savannah belt names its source area in this example.",
+          "Savannah belt — pottery": "Reverses the columns and mismatches product and source. Shea butter is the product. The savannah belt names its source area in this example."
+        }
+      },
+      {
+        "skill_tag": "link_products_to_sources",
+        "hints": ["Distinguish where goods come from and where they are exchanged."],
+        "misconception": "Every item sold in one area must have been produced there.",
+        "type": "short_answer",
+        "difficulty": 2,
+        "stem": "A product card says savannah belt but its picture is lost. Name the product explicitly paired with that belt in the lesson.",
+        "explanation": "Shea butter is the source's example.",
+        "answer": ["shea butter"]
+      },
+      {
+        "skill_tag": "classify_trade_goods",
+        "hints": ["Think about the material and use of each item."],
+        "misconception": "Only food could be exchanged between groups.",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "Which pair contains two made items from the trade list?",
+        "explanation": "Pottery is shaped and iron utensils are made for use. The other pairs contain food items.",
+        "options": ["Fish and kola", "Salt and fish", "Pottery and iron utensils", "Kola and salt"],
+        "answer": 2,
+        "distractorMisconceptions": {
+          "Fish and kola": "Treats two foods as the two examples of made utensils. Pottery is shaped and iron utensils are made for use. The other pairs contain food items.",
+          "Salt and fish": "Mistakes foods for objects made to use as tools or vessels. Pottery is shaped and iron utensils are made for use. The other pairs contain food items.",
+          "Kola and salt": "Confuses exchangeable food items with made objects. Pottery is shaped and iron utensils are made for use. The other pairs contain food items."
+        }
+      },
+      {
+        "skill_tag": "model_direct_swaps",
+        "hints": ["Ask whether the traders use a separate means of payment."],
+        "misconception": "Only goods exchanged for shells count as trade.",
+        "type": "written",
+        "difficulty": 3,
+        "stem": "In a practice market a pot maker needs fish, but the fish seller does not want a pot. Explain the difficulty they face in a direct swap.",
+        "explanation": "The pot maker wants fish, but the fish seller wants something else. They need an item both are willing to accept for this swap.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "The pot maker wants fish, but the fish seller wants something else.",
+              "marks": 1
+            },
+            {
+              "description": "They need an item both are willing to accept for this swap.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "explain_a_medium_of_exchange",
+        "hints": ["Trace what can be passed on to another trader."],
+        "misconception": "Cowrie shells and every product bought with them played exactly the same role.",
+        "type": "drawing",
+        "difficulty": 3,
+        "stem": "Draw one exchange using shells. Put a label on the payment and a separate label on the goods.",
+        "explanation": "Draw shells moving towards the seller and cloth towards the buyer. Mark shells as payment and cloth as goods.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Draw shells moving towards the seller and cloth towards the buyer.",
+              "marks": 1
+            },
+            {
+              "description": "Mark shells as payment and cloth as goods.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "link_products_to_sources",
+        "hints": ["Distinguish where goods come from and where they are exchanged."],
+        "misconception": "Every item sold in one area must have been produced there.",
+        "type": "written",
+        "difficulty": 3,
+        "stem": "Make a trade card with savannah belt on the source side and the matching product on the other.",
+        "explanation": "Write “savannah belt” for the area. Write “shea butter” for its product.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Write “savannah belt” for the area.",
+              "marks": 1
+            },
+            {
+              "description": "Write “shea butter” for its product.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "classify_trade_goods",
+        "hints": ["Think about the material and use of each item."],
+        "misconception": "Only food could be exchanged between groups.",
+        "type": "written",
+        "difficulty": 3,
+        "stem": "A practice trader exchanges a pot for an iron spoon. Name two categories from the source trade list that fit these objects.",
+        "explanation": "Pottery and iron utensils fit the two objects.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Pottery and iron utensils fit the two objects.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "classify_trade_goods",
+        "hints": ["Think about the material and use of each item."],
+        "misconception": "Only food could be exchanged between groups.",
+        "type": "written",
+        "difficulty": 3,
+        "stem": "Group salt, fish, pottery and iron utensils using a clearly explained rule.",
+        "explanation": "A food group might contain salt and fish. A made-goods group might contain pottery and iron utensils.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "A food group might contain salt and fish. A made-goods group might contain pottery and iron utensils.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "explain_a_medium_of_exchange",
+        "hints": ["Trace what can be passed on to another trader."],
+        "misconception": "Cowrie shells and every product bought with them played exactly the same role.",
+        "type": "written",
+        "difficulty": 4,
+        "stem": "A trader receives shells for cloth and later uses the shells for fish. Explain both stages and compare them with exchanging cloth directly for fish.",
+        "explanation": "The first exchange turns cloth into shells. In the second the shells buy fish, so the fish seller need not want cloth.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "The first exchange turns cloth into shells. In the second the shells buy fish, so the fish seller need not want cloth.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "link_products_to_sources",
+        "hints": ["Distinguish where goods come from and where they are exchanged."],
+        "misconception": "Every item sold in one area must have been produced there.",
+        "type": "written",
+        "difficulty": 4,
+        "stem": "A pupil sees shea butter in a practice coastal market. Explain why the place where an item is sold may differ from its source.",
+        "explanation": "Traders can carry shea butter from its source to a different market. A sale on the coast does not show that the butter was made there.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Traders can carry shea butter from its source to a different market. A sale on the coast does not show that the butter was made there.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "classify_trade_goods",
+        "hints": ["Think about the material and use of each item."],
+        "misconception": "Only food could be exchanged between groups.",
+        "type": "written",
+        "difficulty": 4,
+        "stem": "Create a small trading display with a food item, a made item and a medium of exchange. Justify each label and explain why an item of exchange need not be money.",
+        "explanation": "Label fish as food, pottery as a made good and cowries as a medium of exchange. Fish can be swapped for pottery even when no money changes hands.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Label fish as food, pottery as a made good and cowries as a medium of exchange.",
+              "marks": 1
+            },
+            {
+              "description": "Fish can be swapped for pottery even when no money changes hands.",
+              "marks": 1
+            }
+          ]
+        }
+      }
+    ],
+    "uncertain": [
+      "The standard appears incomplete. The enquiry asks about the origin of cedi but gives no full derivation."
+    ]
+  },
+  {
+    "indicator": {
+      "code": "B3.2.2.1.3",
+      "subject": "History",
+      "level": "Basic 3",
+      "strand": "My Country Ghana",
+      "sub_strand": "Inter-Group Relations",
+      "content_standard": "B3 2.2.1. Demonstrate knowledge of how intergroup alliances, conflicts and other exchanges",
+      "objective": "Describe the conflicts and alliances that existed among the ethnic groups in Ghana",
+      "source_page": 16
+    },
+    "spec": {
+      "skills": [
+        {
+          "tag": "identify_allied_groups",
+          "description": "Identify allied groups",
+          "minQuestions": 5
+        },
+        {
+          "tag": "date_the_krepi_war",
+          "description": "Date the Krepi war",
+          "minQuestions": 5
+        },
+        {
+          "tag": "place_the_ada_war_in_time",
+          "description": "Place the Ada War in time",
+          "minQuestions": 5
+        },
+        {
+          "tag": "distinguish_named_battles",
+          "description": "Distinguish named battles",
+          "minQuestions": 5
+        }
+      ],
+      "difficultyPlan": "Five recall, seven simple-use, five application and three challenge questions.",
+      "misconceptions": [
+        "The Asante army is named as the victorious alliance in the Akatamanso example.",
+        "The date 1833 identifies all the conflicts in the lesson.",
+        "A later date proves that two named wars were the same event.",
+        "Every named battle in a list has the date printed beside the next battle."
+      ],
+      "needsTeacherAssessment": true
+    },
+    "questions": [
+      {
+        "skill_tag": "identify_allied_groups",
+        "hints": ["Read which side acted together."],
+        "misconception": "The Asante army is named as the victorious alliance in the Akatamanso example.",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "Which named battle does the lesson use as an example of an alliance defeating the Asante army?",
+        "explanation": "At Akatamanso an alliance defeated the Asante army.",
+        "options": ["Krepi war", "Ada War", "Battle of Akatamanso", "Battle of Feyiase"],
+        "answer": 2,
+        "distractorMisconceptions": {
+          "Krepi war": "The curriculum pairs the Krepi war with 1833. Here the clue points to Battle of Akatamanso.",
+          "Ada War": "The Ada War is dated 1869 in the account. Here the clue points to Battle of Akatamanso.",
+          "Battle of Feyiase": "Feyiase appears as a separate battle in the list. Here the clue points to Battle of Akatamanso."
+        }
+      },
+      {
+        "skill_tag": "identify_allied_groups",
+        "hints": ["Read which side acted together."],
+        "misconception": "The Asante army is named as the victorious alliance in the Akatamanso example.",
+        "type": "short_answer",
+        "difficulty": 1,
+        "stem": "The allies at Akatamanso included the Ga. Give one other member named in the lesson.",
+        "explanation": "The Fante and Ga were among those fighting on the allied side. Other clearly named members include Akyem, Akwamu, Krepi and the British.",
+        "answer": [
+          "fante",
+          "the fante",
+          "akyem",
+          "the akyem",
+          "akwamu",
+          "the akwamu",
+          "krepi",
+          "the krepi",
+          "british",
+          "the british"
+        ]
+      },
+      {
+        "skill_tag": "date_the_krepi_war",
+        "hints": ["Compare the years attached to the two event names."],
+        "misconception": "The date 1833 identifies all the conflicts in the lesson.",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "Which named war does the lesson associate with 1833?",
+        "explanation": "The curriculum pairs the Krepi war with 1833.",
+        "options": ["Battle of Akatamanso", "Ada War", "Battle of Feyiase", "Krepi war"],
+        "answer": 3,
+        "distractorMisconceptions": {
+          "Battle of Akatamanso": "At Akatamanso an alliance defeated the Asante army. Here the clue points to Krepi war.",
+          "Ada War": "The Ada War is dated 1869 in the account. Here the clue points to Krepi war.",
+          "Battle of Feyiase": "Feyiase appears as a separate battle in the list. Here the clue points to Krepi war."
+        }
+      },
+      {
+        "skill_tag": "place_the_ada_war_in_time",
+        "hints": ["A date identifies time, not every cause."],
+        "misconception": "A later date proves that two named wars were the same event.",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "Which event in the lesson has the date 1869?",
+        "explanation": "The Ada War is dated 1869 in the account.",
+        "options": ["Ada War", "Battle of Akatamanso", "Krepi war", "Battle of Feyiase"],
+        "answer": 0,
+        "distractorMisconceptions": {
+          "Battle of Akatamanso": "At Akatamanso an alliance defeated the Asante army. Here the clue points to Ada War.",
+          "Krepi war": "The curriculum pairs the Krepi war with 1833. Here the clue points to Ada War.",
+          "Battle of Feyiase": "Feyiase appears as a separate battle in the list. Here the clue points to Ada War."
+        }
+      },
+      {
+        "skill_tag": "distinguish_named_battles",
+        "hints": ["Check which words a printed year belongs to."],
+        "misconception": "Every named battle in a list has the date printed beside the next battle.",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "Which named intergroup battle is listed alongside the Krepi war, without a date in that example?",
+        "explanation": "Feyiase appears as a separate battle in the list.",
+        "options": ["Battle of Akatamanso", "Battle of Feyiase", "Krepi war", "Ada War"],
+        "answer": 1,
+        "distractorMisconceptions": {
+          "Battle of Akatamanso": "At Akatamanso an alliance defeated the Asante army. Here the clue points to Battle of Feyiase.",
+          "Krepi war": "The curriculum pairs the Krepi war with 1833. Here the clue points to Battle of Feyiase.",
+          "Ada War": "The Ada War is dated 1869 in the account. Here the clue points to Battle of Feyiase."
+        }
+      },
+      {
+        "skill_tag": "identify_allied_groups",
+        "hints": ["Read which side acted together."],
+        "misconception": "The Asante army is named as the victorious alliance in the Akatamanso example.",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "At Akatamanso, Ga and Fante labels are on the allied side. Which label belongs opposite them?",
+        "explanation": "The Ga and Fante were among the allies. The Asante army was their opponent in this battle.",
+        "options": ["Asante army", "Akyem", "Akwamu", "Krepi"],
+        "answer": 0,
+        "distractorMisconceptions": {
+          "Akyem": "Moves an allied group to the opposing side. The Ga and Fante were among the allies. The Asante army was their opponent in this battle.",
+          "Akwamu": "Swaps an alliance member with the alliance's opponent. The Ga and Fante were among the allies. The Asante army was their opponent in this battle.",
+          "Krepi": "Confuses Krepi’s place in the alliance with the side it faced. The Ga and Fante were among the allies. The Asante army was their opponent in this battle."
+        }
+      },
+      {
+        "skill_tag": "identify_allied_groups",
+        "hints": ["Read which side acted together."],
+        "misconception": "The Asante army is named as the victorious alliance in the Akatamanso example.",
+        "type": "oral",
+        "difficulty": 2,
+        "stem": "Name two participants listed on the allied side at Akatamanso and distinguish them from the opponent.",
+        "explanation": "For example, the Ga and Fante were on the allied side. The Asante army was on the opposing side.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "For example, the Ga and Fante were on the allied side.",
+              "marks": 1
+            },
+            {
+              "description": "The Asante army was on the opposing side.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "date_the_krepi_war",
+        "hints": ["Compare the years attached to the two event names."],
+        "misconception": "The date 1833 identifies all the conflicts in the lesson.",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "A timeline starts at 1800 and ends at 1850. Which event with a known year belongs on this part?",
+        "explanation": "1833 falls between the two end years. The lesson links that year to the Krepi war.",
+        "options": ["Ada War, 1869", "Krepi war, 1833", "Krepi war, 1869", "Ada War, 1833"],
+        "answer": 1,
+        "distractorMisconceptions": {
+          "Ada War, 1869": "Overlooks the 1850 end of the timeline. 1833 falls between the two end years. The lesson links that year to the Krepi war.",
+          "Krepi war, 1869": "Gives the Krepi war the later Ada War date. 1833 falls between the two end years. The lesson links that year to the Krepi war.",
+          "Ada War, 1833": "Transfers the Krepi date to the Ada War. 1833 falls between the two end years. The lesson links that year to the Krepi war."
+        }
+      },
+      {
+        "skill_tag": "date_the_krepi_war",
+        "hints": ["Compare the years attached to the two event names."],
+        "misconception": "The date 1833 identifies all the conflicts in the lesson.",
+        "type": "short_answer",
+        "difficulty": 2,
+        "stem": "On a card for the Krepi war, write the year the source pairs with its name.",
+        "explanation": "The card should read 1833.",
+        "answer": ["1833"]
+      },
+      {
+        "skill_tag": "place_the_ada_war_in_time",
+        "hints": ["A date identifies time, not every cause."],
+        "misconception": "A later date proves that two named wars were the same event.",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "A pupil knows that the Ada War is dated 1869. Which question can this detail answer?",
+        "explanation": "1869 locates the event in time. Causes, leaders and results require other information.",
+        "options": [
+          "What started the disagreement?",
+          "Who led each group?",
+          "In which year did it take place?",
+          "What changed after the war?"
+        ],
+        "answer": 2,
+        "distractorMisconceptions": {
+          "What started the disagreement?": "Confuses the date of a war with its cause. 1869 locates the event in time. Causes, leaders and results require other information.",
+          "Who led each group?": "Treats a year as evidence of the leaders’ identities. 1869 locates the event in time. Causes, leaders and results require other information.",
+          "What changed after the war?": "Confuses the date of an event with its later results. 1869 locates the event in time. Causes, leaders and results require other information."
+        }
+      },
+      {
+        "skill_tag": "place_the_ada_war_in_time",
+        "hints": ["A date identifies time, not every cause."],
+        "misconception": "A later date proves that two named wars were the same event.",
+        "type": "short_answer",
+        "difficulty": 2,
+        "stem": "A timeline has two spaces: 1833 and 1869. Which named war belongs in the second space?",
+        "explanation": "The Ada War goes in 1869.",
+        "answer": ["ada war", "the ada war"]
+      },
+      {
+        "skill_tag": "distinguish_named_battles",
+        "hints": ["Check which words a printed year belongs to."],
+        "misconception": "Every named battle in a list has the date printed beside the next battle.",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "An exhibit reads “Battle of Feyiase; Krepi war of 1833”. Which detail can you safely copy?",
+        "explanation": "The year is attached to the Krepi war. The exhibit supplies no date for Feyiase.",
+        "options": [
+          "1833 beside both battles",
+          "1869 beside Feyiase",
+          "Feyiase as a second name for Krepi",
+          "1833 beside the Krepi war"
+        ],
+        "answer": 3,
+        "distractorMisconceptions": {
+          "1833 beside both battles": "Copies the date across two distinct battles. The year is attached to the Krepi war. The exhibit supplies no date for Feyiase.",
+          "1869 beside Feyiase": "Adds a date the exhibit does not give for Feyiase. The year is attached to the Krepi war. The exhibit supplies no date for Feyiase.",
+          "Feyiase as a second name for Krepi": "Treats two separate events as two names for one battle. The year is attached to the Krepi war. The exhibit supplies no date for Feyiase."
+        }
+      },
+      {
+        "skill_tag": "identify_allied_groups",
+        "hints": ["Read which side acted together."],
+        "misconception": "The Asante army is named as the victorious alliance in the Akatamanso example.",
+        "type": "written",
+        "difficulty": 3,
+        "stem": "Make a diagram of the sides at Akatamanso using Ga and Fante as two members of the alliance. Explain why your two examples do not name every member.",
+        "explanation": "Draw a box with Ga and Fante on the allied side and place the Asante army opposite. Leave space for other members, such as the Akyem.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Draw a box with Ga and Fante on the allied side and place the Asante army opposite.",
+              "marks": 1
+            },
+            {
+              "description": "Leave space for other members, such as the Akyem.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "date_the_krepi_war",
+        "hints": ["Compare the years attached to the two event names."],
+        "misconception": "The date 1833 identifies all the conflicts in the lesson.",
+        "type": "written",
+        "difficulty": 3,
+        "stem": "Place the Krepi war on a timeline labelled with its given year.",
+        "explanation": "Write “Krepi war” and “1833” on the same card. Place it beside 1833 on the timeline.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Write “Krepi war” and “1833” on the same card.",
+              "marks": 1
+            },
+            {
+              "description": "Place it beside 1833 on the timeline.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "place_the_ada_war_in_time",
+        "hints": ["A date identifies time, not every cause."],
+        "misconception": "A later date proves that two named wars were the same event.",
+        "type": "written",
+        "difficulty": 3,
+        "stem": "Label an event card naming the war associated with 1869.",
+        "explanation": "Write “Ada War” on the card for 1869. This pairs an event with its date.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Write “Ada War” on the card for 1869.",
+              "marks": 1
+            },
+            {
+              "description": "This pairs an event with its date.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "distinguish_named_battles",
+        "hints": ["Check which words a printed year belongs to."],
+        "misconception": "Every named battle in a list has the date printed beside the next battle.",
+        "type": "written",
+        "difficulty": 3,
+        "stem": "A practice report calls every fight an alliance. Give a short correction explaining the difference.",
+        "explanation": "A fight is a conflict, while an alliance is an agreement to act together; an alliance can take part in a conflict.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "A fight is a conflict, while an alliance is an agreement to act together; an alliance can take part in a conflict.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "distinguish_named_battles",
+        "hints": ["Check which words a printed year belongs to."],
+        "misconception": "Every named battle in a list has the date printed beside the next battle.",
+        "type": "written",
+        "difficulty": 3,
+        "stem": "Prepare a Feyiase event card and mark its year as requiring evidence from another source.",
+        "explanation": "Write “Battle of Feyiase”. Add “Year to check” until a source gives its date.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Write “Battle of Feyiase”.",
+              "marks": 1
+            },
+            {
+              "description": "Add “Year to check” until a source gives its date.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "date_the_krepi_war",
+        "hints": ["Compare the years attached to the two event names."],
+        "misconception": "The date 1833 identifies all the conflicts in the lesson.",
+        "type": "written",
+        "difficulty": 4,
+        "stem": "A display puts the Krepi war after the Ada War of 1869. Correct the sequence and show which two pieces of evidence you used.",
+        "explanation": "Move the Krepi war before the Ada War. Its date, 1833, comes before 1869.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Move the Krepi war before the Ada War.",
+              "marks": 1
+            },
+            {
+              "description": "Its date, 1833, comes before 1869.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "place_the_ada_war_in_time",
+        "hints": ["A date identifies time, not every cause."],
+        "misconception": "A later date proves that two named wars were the same event.",
+        "type": "written",
+        "difficulty": 4,
+        "stem": "A pupil writes that the 1833 and 1869 events must have had identical causes. Explain what the years establish and what they cannot establish.",
+        "explanation": "The years establish that the Krepi war came earlier than the Ada War. They cannot tell us whether the wars had the same causes.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "The years establish that the Krepi war came earlier than the Ada War.",
+              "marks": 1
+            },
+            {
+              "description": "They cannot tell us whether the wars had the same causes.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "distinguish_named_battles",
+        "hints": ["Check which words a printed year belongs to."],
+        "misconception": "Every named battle in a list has the date printed beside the next battle.",
+        "type": "written",
+        "difficulty": 4,
+        "stem": "Write a caption comparing Feyiase with the dated Krepi example. Separate information actually provided from a question you still want to investigate.",
+        "explanation": "A caption can name Feyiase as a battle and give 1833 for the Krepi war. Ask when Feyiase happened before adding a date.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "A caption can name Feyiase as a battle and give 1833 for the Krepi war.",
+              "marks": 1
+            },
+            {
+              "description": "Ask when Feyiase happened before adding a date.",
+              "marks": 1
+            }
+          ]
+        }
+      }
+    ],
+    "uncertain": [
+      "The end of the Akatamanso and Ada War exemplar runs together. Only clearly attached dates and parties are assessed."
+    ]
+  },
+  {
+    "indicator": {
+      "code": "B3.2.4.1.1",
+      "subject": "History",
+      "level": "Basic 3",
+      "strand": "My Country Ghana",
+      "sub_strand": "Major Historical Locations",
+      "content_standard": "B3.2.4.1. Demonstrate knowledge of the forts and castle built in Ghana.",
+      "objective": "Identify the forts and castles built along the coast of Ghana",
+      "source_page": 17
+    },
+    "spec": {
+      "skills": [
+        {
+          "tag": "locate_sites_on_a_coast",
+          "description": "Locate sites on a coast",
+          "minQuestions": 5
+        },
+        {
+          "tag": "identify_trading_use",
+          "description": "Identify trading use",
+          "minQuestions": 5
+        },
+        {
+          "tag": "recognise_government_use",
+          "description": "Recognise government use",
+          "minQuestions": 5
+        },
+        {
+          "tag": "trace_changes_in_use",
+          "description": "Trace changes in use",
+          "minQuestions": 5
+        }
+      ],
+      "difficultyPlan": "Five recall, seven simple-use, five application and three challenge questions.",
+      "misconceptions": [
+        "Any building on a national map must be a coastal fort.",
+        "Every listed use must have happened at every site at the same time.",
+        "A seat of government is just a piece of furniture kept in a building.",
+        "Present-day use by learners proves that the building was originally built as a school."
+      ],
+      "needsTeacherAssessment": true
+    },
+    "questions": [
+      {
+        "skill_tag": "locate_sites_on_a_coast",
+        "hints": ["Look for the line where land meets the sea."],
+        "misconception": "Any building on a national map must be a coastal fort.",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "Where on a map of Ghana should you look for the forts and castles in this lesson?",
+        "explanation": "The indicator asks about buildings along Ghana's coast.",
+        "options": [
+          "Deep in the interior",
+          "Along inland footpaths",
+          "At inland crossroads",
+          "Along the coast"
+        ],
+        "answer": 3,
+        "distractorMisconceptions": {
+          "Deep in the interior": "Choosing “Deep in the interior” overlooks the distinction in the question. The indicator asks about buildings along Ghana's coast.",
+          "Along inland footpaths": "Choosing “Along inland footpaths” overlooks the distinction in the question. The indicator asks about buildings along Ghana's coast.",
+          "At inland crossroads": "Choosing “At inland crossroads” overlooks the distinction in the question. The indicator asks about buildings along Ghana's coast."
+        }
+      },
+      {
+        "skill_tag": "locate_sites_on_a_coast",
+        "hints": ["Look for the line where land meets the sea."],
+        "misconception": "Any building on a national map must be a coastal fort.",
+        "type": "short_answer",
+        "difficulty": 1,
+        "stem": "Name the part of Ghana that the indicator asks pupils to explore for forts and castles.",
+        "explanation": "The indicator directs attention to Ghana's coast.",
+        "answer": [
+          "coast",
+          "the coast",
+          "coastal ghana",
+          "ghana’s coast",
+          "ghana's coast",
+          "the coast of ghana",
+          "coast of ghana"
+        ]
+      },
+      {
+        "skill_tag": "identify_trading_use",
+        "hints": ["Match the activity to the purpose it shows."],
+        "misconception": "Every listed use must have happened at every site at the same time.",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "A practice exhibit describes people exchanging goods at a coastal building. Which use does this illustrate?",
+        "explanation": "Trading is one of the uses the curriculum lists for these sites.",
+        "options": ["Trading use", "Coastal location", "Seat of government", "Education"],
+        "answer": 0,
+        "distractorMisconceptions": {
+          "Coastal location": "The indicator asks about buildings along Ghana's coast. Here the clue points to Trading use.",
+          "Seat of government": "The curriculum includes seat of government among examples of uses of forts and castles. Here the clue points to Trading use.",
+          "Education": "Education is another use listed for forts and castles. Here the clue points to Trading use."
+        }
+      },
+      {
+        "skill_tag": "recognise_government_use",
+        "hints": ["Think about work done there rather than the word seat on its own."],
+        "misconception": "A seat of government is just a piece of furniture kept in a building.",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "Which listed use refers to a place from which officials carry out government work?",
+        "explanation": "The curriculum includes seat of government among examples of uses of forts and castles.",
+        "options": ["Coastal location", "Seat of government", "Trading use", "Education"],
+        "answer": 1,
+        "distractorMisconceptions": {
+          "Coastal location": "The indicator asks about buildings along Ghana's coast. Here the clue points to Seat of government.",
+          "Trading use": "Trading is one of the uses the curriculum lists for these sites. Here the clue points to Seat of government.",
+          "Education": "Education is another use listed for forts and castles. Here the clue points to Seat of government."
+        }
+      },
+      {
+        "skill_tag": "trace_changes_in_use",
+        "hints": ["Separate what happens during a visit from why the structure was built."],
+        "misconception": "Present-day use by learners proves that the building was originally built as a school.",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "A practice scene shows pupils learning in a former coastal building. Which use is illustrated?",
+        "explanation": "Education is another use listed for forts and castles.",
+        "options": ["Coastal location", "Trading use", "Education", "Seat of government"],
+        "answer": 2,
+        "distractorMisconceptions": {
+          "Coastal location": "The indicator asks about buildings along Ghana's coast. Here the clue points to Education.",
+          "Trading use": "Trading is one of the uses the curriculum lists for these sites. Here the clue points to Education.",
+          "Seat of government": "The curriculum includes seat of government among examples of uses of forts and castles. Here the clue points to Education."
+        }
+      },
+      {
+        "skill_tag": "locate_sites_on_a_coast",
+        "hints": ["Look for the line where land meets the sea."],
+        "misconception": "Any building on a national map must be a coastal fort.",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "On a practice map, a shaded strip follows the edge of the sea. What should the key say?",
+        "explanation": "The sea meets land along the coast. The shaded strip marks the area to search for coastal sites.",
+        "options": [
+          "Inland route",
+          "Coast",
+          "Country border far from water",
+          "River crossing in the interior"
+        ],
+        "answer": 1,
+        "distractorMisconceptions": {
+          "Inland route": "Mistakes the sea edge for an inland route. The sea meets land along the coast. The shaded strip marks the area to search for coastal sites.",
+          "Country border far from water": "Confuses a coastal strip with an inland line. The sea meets land along the coast. The shaded strip marks the area to search for coastal sites.",
+          "River crossing in the interior": "Mistakes a coastline for an inland crossing. The sea meets land along the coast. The shaded strip marks the area to search for coastal sites."
+        }
+      },
+      {
+        "skill_tag": "locate_sites_on_a_coast",
+        "hints": ["Look for the line where land meets the sea."],
+        "misconception": "Any building on a national map must be a coastal fort.",
+        "type": "written",
+        "difficulty": 2,
+        "stem": "On a sketch outline mark a coastal strip for the class investigation and add a key.",
+        "explanation": "Shade a narrow strip beside the sea on the sketch. In the key label the shading “coast”.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Shade a narrow strip beside the sea on the sketch. In the key label the shading “coast”.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "identify_trading_use",
+        "hints": ["What are the people in this practice scene doing?"],
+        "misconception": "Every listed use must have happened at every site at the same time.",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "A card about an imaginary fort says, “Sellers brought cloth here and buyers offered salt.” What should its heading be?",
+        "explanation": "Sellers and buyers are exchanging goods. Their activity is evidence for trading use.",
+        "options": [
+          "Lessons held here",
+          "Officials governed here",
+          "Goods exchanged here",
+          "Builders planned here"
+        ],
+        "answer": 2,
+        "distractorMisconceptions": {
+          "Lessons held here": "Confuses exchanging goods with holding lessons. Sellers and buyers are exchanging goods. Their activity is evidence for trading use.",
+          "Officials governed here": "Confuses market activity with government work. Sellers and buyers are exchanging goods. Their activity is evidence for trading use.",
+          "Builders planned here": "Treats an exchange as evidence of a building plan. Sellers and buyers are exchanging goods. Their activity is evidence for trading use."
+        }
+      },
+      {
+        "skill_tag": "identify_trading_use",
+        "hints": ["Match the activity to the purpose it shows."],
+        "misconception": "Every listed use must have happened at every site at the same time.",
+        "type": "written",
+        "difficulty": 2,
+        "stem": "Suggest one careful question to ask before writing that a particular building was used for trade.",
+        "explanation": "Ask which dated or identified source connects that building with trading.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Ask which dated or identified source connects that building with trading.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "recognise_government_use",
+        "hints": ["Think about work done there rather than the word seat on its own."],
+        "misconception": "A seat of government is just a piece of furniture kept in a building.",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "Which sign on a practice plan is the best clue to government work?",
+        "explanation": "Officials meeting to carry out public work suggests government use. Other rooms point to education or trade.",
+        "options": [
+          "Room where pupils read",
+          "Stall where traders met",
+          "Store where cloth was sold",
+          "Office where officials met"
+        ],
+        "answer": 3,
+        "distractorMisconceptions": {
+          "Room where pupils read": "Confuses education with government administration. Officials meeting to carry out public work suggests government use. Other rooms point to education or trade.",
+          "Stall where traders met": "Confuses meeting to trade with meeting to govern. Officials meeting to carry out public work suggests government use. Other rooms point to education or trade.",
+          "Store where cloth was sold": "Mistakes selling cloth for official government work. Officials meeting to carry out public work suggests government use. Other rooms point to education or trade."
+        }
+      },
+      {
+        "skill_tag": "recognise_government_use",
+        "hints": ["Think about work done there rather than the word seat on its own."],
+        "misconception": "A seat of government is just a piece of furniture kept in a building.",
+        "type": "written",
+        "difficulty": 2,
+        "stem": "A practice label says officials worked in this building. Which of the uses in the lesson does this suggest?",
+        "explanation": "It suggests a possible seat of government, subject to checking the source for the particular site.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "It suggests a possible seat of government, subject to checking the source for the particular site.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "trace_changes_in_use",
+        "hints": ["Separate what happens during a visit from why the structure was built."],
+        "misconception": "Present-day use by learners proves that the building was originally built as a school.",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "Children learn at a former fort today. Which question looks further into its past?",
+        "explanation": "Learning today tells us a present use. Asking about an earlier use can reveal change.",
+        "options": [
+          "What was this building used for earlier?",
+          "Which pupil arrived first today?",
+          "What colour is today's notebook?",
+          "Which lesson ends at noon today?"
+        ],
+        "answer": 0,
+        "distractorMisconceptions": {
+          "Which pupil arrived first today?": "Asks about the visit today rather than past use. Learning today tells us a present use. Asking about an earlier use can reveal change.",
+          "What colour is today's notebook?": "Confuses a learner’s possession with the building’s history. Learning today tells us a present use. Asking about an earlier use can reveal change.",
+          "Which lesson ends at noon today?": "Asks about the lesson schedule rather than earlier use. Learning today tells us a present use. Asking about an earlier use can reveal change."
+        }
+      },
+      {
+        "skill_tag": "locate_sites_on_a_coast",
+        "hints": ["Look for the line where land meets the sea."],
+        "misconception": "Any building on a national map must be a coastal fort.",
+        "type": "written",
+        "difficulty": 3,
+        "stem": "A practice map puts an unnamed building inland. Explain why its symbol alone cannot identify it as one of the coastal sites under study.",
+        "explanation": "The symbol marks a building away from the sea. Its position and an unlabelled symbol do not identify a particular coastal site.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "The symbol marks a building away from the sea.",
+              "marks": 1
+            },
+            {
+              "description": "Its position and an unlabelled symbol do not identify a particular coastal site.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "identify_trading_use",
+        "hints": ["Match the activity to the purpose it shows."],
+        "misconception": "Every listed use must have happened at every site at the same time.",
+        "type": "written",
+        "difficulty": 3,
+        "stem": "Make a short exhibit caption for an explicitly fictional scene of goods being exchanged at a coastal site.",
+        "explanation": "A possible caption is “In our imagined scene traders exchange cloth for salt.” The action shows trade at the site.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "A possible caption is “In our imagined scene traders exchange cloth for salt.” The action shows trade at the site.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "recognise_government_use",
+        "hints": ["Think about work done there rather than the word seat on its own."],
+        "misconception": "A seat of government is just a piece of furniture kept in a building.",
+        "type": "drawing",
+        "difficulty": 3,
+        "stem": "Draw a symbol for government work and add it to a practice site-use key.",
+        "explanation": "Draw an office table to stand for government work. Explain the symbol in the key.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Draw an office table to stand for government work.",
+              "marks": 1
+            },
+            {
+              "description": "Explain the symbol in the key.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "trace_changes_in_use",
+        "hints": ["Separate what happens during a visit from why the structure was built."],
+        "misconception": "Present-day use by learners proves that the building was originally built as a school.",
+        "type": "written",
+        "difficulty": 3,
+        "stem": "Why would a model of a coastal site need a caption as well as walls and a roof?",
+        "explanation": "The caption can identify what site the model represents and the source of its identification.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "The caption can identify what site the model represents and the source of its identification.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "trace_changes_in_use",
+        "hints": ["Separate what happens during a visit from why the structure was built."],
+        "misconception": "Present-day use by learners proves that the building was originally built as a school.",
+        "type": "drawing",
+        "difficulty": 3,
+        "stem": "Sketch a classroom visit to a historical building and write one question about its former use.",
+        "explanation": "Show pupils visiting or studying at the site. Add a question such as “Who used this room before it was used for lessons?”",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Show pupils visiting or studying at the site.",
+              "marks": 1
+            },
+            {
+              "description": "Add a question such as “Who used this room before it was used for lessons?”",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "identify_trading_use",
+        "hints": ["Match the activity to the purpose it shows."],
+        "misconception": "Every listed use must have happened at every site at the same time.",
+        "type": "written",
+        "difficulty": 4,
+        "stem": "One exhibit shows trading at a fort. Another shows a lesson at a castle. How could you check whether both uses happened at the same site?",
+        "explanation": "The exhibits show two activities at two places. Check the names and dates before claiming that both activities happened at one castle.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "The exhibits show two activities at two places.",
+              "marks": 1
+            },
+            {
+              "description": "Check the names and dates before claiming that both activities happened at one castle.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "recognise_government_use",
+        "hints": ["Think about work done there rather than the word seat on its own."],
+        "misconception": "A seat of government is just a piece of furniture kept in a building.",
+        "type": "written",
+        "difficulty": 4,
+        "stem": "A museum wants to show why a building was built and how officials used it later. What would you look for to fill in each label?",
+        "explanation": "Put evidence about why the site was built beside “Original use”. Put a dated record of officials working there beside “Later government use”.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Put evidence about why the site was built beside “Original use”.",
+              "marks": 1
+            },
+            {
+              "description": "Put a dated record of officials working there beside “Later government use”.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "trace_changes_in_use",
+        "hints": ["Separate what happens during a visit from why the structure was built."],
+        "misconception": "Present-day use by learners proves that the building was originally built as a school.",
+        "type": "written",
+        "difficulty": 4,
+        "stem": "Plan how to compare a labelled old picture and a later account of a coastal site. Identify one change the pair might show and one fact a picture alone cannot prove.",
+        "explanation": "Check that the picture and account identify the same site and have dates. They might show a change of use, but a picture alone may not tell why the change took place.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Check that the picture and account identify the same site and have dates.",
+              "marks": 1
+            },
+            {
+              "description": "They might show a change of use, but a picture alone may not tell why the change took place.",
+              "marks": 1
+            }
+          ]
+        }
+      }
+    ],
+    "uncertain": [
+      "This page lists uses and investigation activities without supplying named sites, builders, towns or construction dates. No site-specific matches are asserted."
+    ]
+  },
+  {
+    "indicator": {
+      "code": "B3.2.5.1.1",
+      "subject": "History",
+      "level": "Basic 3",
+      "strand": "My Country Ghana",
+      "sub_strand": "Some Selected Individuals",
+      "content_standard": "B3.2.5.1. Describe the contributions of some outstanding Ghanaian entrepreneurs.",
+      "objective": "Describe Ghanaian entrepreneurs who have made significant contributions including George Grant – Businessman, Winifred Tete-Ansa, Esther Ocloo – Nkulenu Industries, B.A. Mensah – Pioneer Tobacco Ltd. Kwabena Pepra – Paramount Distilleries, J.K. Siaw – Tata Brewery, Alhaji Adam Iddrisu - Global Haulage",
+      "source_page": 18
+    },
+    "spec": {
+      "skills": [
+        {
+          "tag": "link_ocloo_to_her_enterprise",
+          "description": "Link Ocloo to her enterprise",
+          "minQuestions": 5
+        },
+        {
+          "tag": "identify_mensahs_business",
+          "description": "Identify Mensah’s business",
+          "minQuestions": 5
+        },
+        {
+          "tag": "distinguish_named_enterprises",
+          "description": "Distinguish named enterprises",
+          "minQuestions": 5
+        },
+        {
+          "tag": "investigate_an_entrepreneur",
+          "description": "Investigate an entrepreneur",
+          "minQuestions": 5
+        }
+      ],
+      "difficultyPlan": "Five recall, seven simple-use, five application and three challenge questions.",
+      "misconceptions": [
+        "A company name and its entrepreneur's name can be swapped on a portrait label.",
+        "Two entrepreneurs listed next to each other must have led the same enterprise.",
+        "Tata Brewery is the name of the entrepreneur rather than the enterprise.",
+        "The same company name belongs beside every Ghanaian entrepreneur."
+      ],
+      "needsTeacherAssessment": true
+    },
+    "questions": [
+      {
+        "skill_tag": "link_ocloo_to_her_enterprise",
+        "hints": ["Check which name denotes the person and which the enterprise."],
+        "misconception": "A company name and its entrepreneur's name can be swapped on a portrait label.",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "Who does the lesson associate with Nkulenu Industries?",
+        "explanation": "Esther Ocloo is named with Nkulenu Industries.",
+        "options": ["Esther Ocloo", "B.A. Mensah", "J.K. Siaw", "Alhaji Adam Iddrisu"],
+        "answer": 0,
+        "distractorMisconceptions": {
+          "B.A. Mensah": "B.A. Mensah is paired with Pioneer Tobacco Ltd. in the list. Here the clue points to Esther Ocloo.",
+          "J.K. Siaw": "The source associates J.K. Siaw with Tata Brewery. Here the clue points to Esther Ocloo.",
+          "Alhaji Adam Iddrisu": "Alhaji Adam Iddrisu is linked to Global Haulage. Here the clue points to Esther Ocloo."
+        }
+      },
+      {
+        "skill_tag": "link_ocloo_to_her_enterprise",
+        "hints": ["Check which name denotes the person and which the enterprise."],
+        "misconception": "A company name and its entrepreneur's name can be swapped on a portrait label.",
+        "type": "short_answer",
+        "difficulty": 1,
+        "stem": "Name the enterprise paired with Esther Ocloo.",
+        "explanation": "Nkulenu Industries is the enterprise given.",
+        "answer": ["nkulenu industries", "nkulenu"]
+      },
+      {
+        "skill_tag": "identify_mensahs_business",
+        "hints": ["Look at each person-enterprise pair separately."],
+        "misconception": "Two entrepreneurs listed next to each other must have led the same enterprise.",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "Which entrepreneur is linked in the curriculum to Pioneer Tobacco Ltd.?",
+        "explanation": "B.A. Mensah is paired with Pioneer Tobacco Ltd. in the list.",
+        "options": ["Esther Ocloo", "B.A. Mensah", "J.K. Siaw", "Alhaji Adam Iddrisu"],
+        "answer": 1,
+        "distractorMisconceptions": {
+          "Esther Ocloo": "Esther Ocloo is named with Nkulenu Industries. Here the clue points to B.A. Mensah.",
+          "J.K. Siaw": "The source associates J.K. Siaw with Tata Brewery. Here the clue points to B.A. Mensah.",
+          "Alhaji Adam Iddrisu": "Alhaji Adam Iddrisu is linked to Global Haulage. Here the clue points to B.A. Mensah."
+        }
+      },
+      {
+        "skill_tag": "distinguish_named_enterprises",
+        "hints": ["Read the names and workplaces in pairs."],
+        "misconception": "Tata Brewery is the name of the entrepreneur rather than the enterprise.",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "Who is linked to Tata Brewery in the curriculum?",
+        "explanation": "The source associates J.K. Siaw with Tata Brewery.",
+        "options": ["Esther Ocloo", "B.A. Mensah", "J.K. Siaw", "Alhaji Adam Iddrisu"],
+        "answer": 2,
+        "distractorMisconceptions": {
+          "Esther Ocloo": "Esther Ocloo is named with Nkulenu Industries. Here the clue points to J.K. Siaw.",
+          "B.A. Mensah": "B.A. Mensah is paired with Pioneer Tobacco Ltd. in the list. Here the clue points to J.K. Siaw.",
+          "Alhaji Adam Iddrisu": "Alhaji Adam Iddrisu is linked to Global Haulage. Here the clue points to J.K. Siaw."
+        }
+      },
+      {
+        "skill_tag": "investigate_an_entrepreneur",
+        "hints": ["Look for the business explicitly linked to the person."],
+        "misconception": "The same company name belongs beside every Ghanaian entrepreneur.",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "Which entrepreneur is listed with Global Haulage?",
+        "explanation": "Alhaji Adam Iddrisu is linked to Global Haulage.",
+        "options": ["George Grant", "J.K. Siaw", "Esther Ocloo", "Alhaji Adam Iddrisu"],
+        "answer": 3,
+        "distractorMisconceptions": {
+          "George Grant": "Choosing “George Grant” overlooks the distinction in the question. Alhaji Adam Iddrisu is linked to Global Haulage.",
+          "J.K. Siaw": "The source associates J.K. Siaw with Tata Brewery. Here the clue points to Alhaji Adam Iddrisu.",
+          "Esther Ocloo": "Esther Ocloo is named with Nkulenu Industries. Here the clue points to Alhaji Adam Iddrisu."
+        }
+      },
+      {
+        "skill_tag": "link_ocloo_to_her_enterprise",
+        "hints": ["Check which name denotes the person and which the enterprise."],
+        "misconception": "A company name and its entrepreneur's name can be swapped on a portrait label.",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "A display has a photograph labelled Esther Ocloo. Which card completes her person-and-enterprise pair?",
+        "explanation": "Find the company linked to Ocloo. The other names are linked to different entrepreneurs.",
+        "options": [
+          "Tata Brewery",
+          "Global Haulage",
+          "Nkulenu Industries",
+          "Paramount Distilleries"
+        ],
+        "answer": 2,
+        "distractorMisconceptions": {
+          "Tata Brewery": "Transfers J.K. Siaw’s enterprise to Ocloo. Find the company linked to Ocloo. The other names are linked to different entrepreneurs.",
+          "Global Haulage": "Transfers Iddrisu’s enterprise to Ocloo. Find the company linked to Ocloo. The other names are linked to different entrepreneurs.",
+          "Paramount Distilleries": "Transfers Kwabena Pepra’s enterprise to Ocloo. Find the company linked to Ocloo. The other names are linked to different entrepreneurs."
+        }
+      },
+      {
+        "skill_tag": "link_ocloo_to_her_enterprise",
+        "hints": ["Check which name denotes the person and which the enterprise."],
+        "misconception": "A company name and its entrepreneur's name can be swapped on a portrait label.",
+        "type": "written",
+        "difficulty": 2,
+        "stem": "Prepare a two-line exhibit card for Esther Ocloo using the named enterprise.",
+        "explanation": "Write “Esther Ocloo” on the first line. Place “Nkulenu Industries” on the second to name the enterprise.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Write “Esther Ocloo” on the first line.",
+              "marks": 1
+            },
+            {
+              "description": "Place “Nkulenu Industries” on the second to name the enterprise.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "identify_mensahs_business",
+        "hints": ["Look at each person-enterprise pair separately."],
+        "misconception": "Two entrepreneurs listed next to each other must have led the same enterprise.",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "A caption puts Mensah beside Nkulenu Industries. Which change repairs the link while keeping his name?",
+        "explanation": "The person on the card is B.A. Mensah. Pioneer Tobacco Ltd. is his matching enterprise.",
+        "options": [
+          "Change the enterprise to Tata Brewery",
+          "Change the enterprise to Global Haulage",
+          "Change the enterprise to Paramount Distilleries",
+          "Change the enterprise to Pioneer Tobacco Ltd."
+        ],
+        "answer": 3,
+        "distractorMisconceptions": {
+          "Change the enterprise to Tata Brewery": "Assigns Siaw’s enterprise to Mensah. The person on the card is B.A. Mensah. Pioneer Tobacco Ltd. is his matching enterprise.",
+          "Change the enterprise to Global Haulage": "Assigns Iddrisu’s enterprise to Mensah. The person on the card is B.A. Mensah. Pioneer Tobacco Ltd. is his matching enterprise.",
+          "Change the enterprise to Paramount Distilleries": "Assigns Pepra’s enterprise to Mensah. The person on the card is B.A. Mensah. Pioneer Tobacco Ltd. is his matching enterprise."
+        }
+      },
+      {
+        "skill_tag": "identify_mensahs_business",
+        "hints": ["Look at each person-enterprise pair separately."],
+        "misconception": "Two entrepreneurs listed next to each other must have led the same enterprise.",
+        "type": "short_answer",
+        "difficulty": 2,
+        "stem": "A class card says Pioneer Tobacco Ltd. Write the name of the entrepreneur on its matching card.",
+        "explanation": "B.A. Mensah is the corresponding name.",
+        "answer": ["b.a. mensah", "b. a. mensah", "ba mensah", "b a mensah"]
+      },
+      {
+        "skill_tag": "distinguish_named_enterprises",
+        "hints": ["Read the names and workplaces in pairs."],
+        "misconception": "Tata Brewery is the name of the entrepreneur rather than the enterprise.",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "Which entry puts the person first and the correct company second?",
+        "explanation": "Start with the person's name. The enterprise linked with J.K. Siaw is Tata Brewery.",
+        "options": [
+          "J.K. Siaw — Tata Brewery",
+          "Tata Brewery — J.K. Siaw",
+          "J.K. Siaw — Global Haulage",
+          "J.K. Siaw — Nkulenu Industries"
+        ],
+        "answer": 0,
+        "distractorMisconceptions": {
+          "Tata Brewery — J.K. Siaw": "Reverses the person and the enterprise. Start with the person's name. The enterprise linked with J.K. Siaw is Tata Brewery.",
+          "J.K. Siaw — Global Haulage": "Transfers Iddrisu’s business to Siaw. Start with the person's name. The enterprise linked with J.K. Siaw is Tata Brewery.",
+          "J.K. Siaw — Nkulenu Industries": "Transfers Ocloo’s business to Siaw. Start with the person's name. The enterprise linked with J.K. Siaw is Tata Brewery."
+        }
+      },
+      {
+        "skill_tag": "distinguish_named_enterprises",
+        "hints": ["Read the names and workplaces in pairs."],
+        "misconception": "Tata Brewery is the name of the entrepreneur rather than the enterprise.",
+        "type": "short_answer",
+        "difficulty": 2,
+        "stem": "A museum has cards for Tata Brewery and Paramount Distilleries. Which is linked to Kwabena Pepra?",
+        "explanation": "Paramount Distilleries is paired with Kwabena Pepra.",
+        "answer": ["paramount distilleries"]
+      },
+      {
+        "skill_tag": "investigate_an_entrepreneur",
+        "hints": ["Look for the business explicitly linked to the person."],
+        "misconception": "The same company name belongs beside every Ghanaian entrepreneur.",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "Which question asks about a contribution beyond knowing Iddrisu's company name?",
+        "explanation": "A contribution concerns what someone's work did for people. Ask about the effect of the work.",
+        "options": [
+          "Which letters start his first name?",
+          "How did his work at Global Haulage help others?",
+          "How many words are in Global Haulage?",
+          "How long is the display's title?"
+        ],
+        "answer": 1,
+        "distractorMisconceptions": {
+          "Which letters start his first name?": "Confuses initials with an explanation of a contribution. A contribution concerns what someone's work did for people. Ask about the effect of the work.",
+          "How many words are in Global Haulage?": "Counts words instead of investigating a business’s effect. A contribution concerns what someone's work did for people. Ask about the effect of the work.",
+          "How long is the display's title?": "Measures a label instead of asking about the entrepreneur’s work. A contribution concerns what someone's work did for people. Ask about the effect of the work."
+        }
+      },
+      {
+        "skill_tag": "link_ocloo_to_her_enterprise",
+        "hints": ["Check which name denotes the person and which the enterprise."],
+        "misconception": "A company name and its entrepreneur's name can be swapped on a portrait label.",
+        "type": "written",
+        "difficulty": 3,
+        "stem": "A pupil explains Ocloo's significance by inventing a childhood story. Replace this with a supported point and one question for a documentary.",
+        "explanation": "Use her link with Nkulenu Industries as a supported point. Ask a documentary what work she did there before adding a story about her life.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Use her link with Nkulenu Industries as a supported point.",
+              "marks": 1
+            },
+            {
+              "description": "Ask a documentary what work she did there before adding a story about her life.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "identify_mensahs_business",
+        "hints": ["Look at each person-enterprise pair separately."],
+        "misconception": "Two entrepreneurs listed next to each other must have led the same enterprise.",
+        "type": "practical",
+        "difficulty": 3,
+        "stem": "Match B.A. Mensah to the enterprise in the lesson and read the pair aloud.",
+        "explanation": "Read “B.A. Mensah, Pioneer Tobacco Ltd.” aloud. One part names the person and the other the enterprise.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Read “B.A.",
+              "marks": 1
+            },
+            {
+              "description": "Mensah, Pioneer Tobacco Ltd.” aloud. One part names the person and the other the enterprise.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "distinguish_named_enterprises",
+        "hints": ["Read the names and workplaces in pairs."],
+        "misconception": "Tata Brewery is the name of the entrepreneur rather than the enterprise.",
+        "type": "written",
+        "difficulty": 3,
+        "stem": "Create a museum caption naming J.K. Siaw and the enterprise linked to him.",
+        "explanation": "Write “J.K. Siaw was linked with Tata Brewery.” This tells the visitor whom the display shows and the business connection.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Write “J.K.",
+              "marks": 1
+            },
+            {
+              "description": "Siaw was linked with Tata Brewery.” This tells the visitor whom the display shows and the business connection.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "investigate_an_entrepreneur",
+        "hints": ["Look for the business explicitly linked to the person."],
+        "misconception": "The same company name belongs beside every Ghanaian entrepreneur.",
+        "type": "short_answer",
+        "difficulty": 3,
+        "stem": "What work description is explicitly attached to George Grant in the entrepreneur list?",
+        "explanation": "The printed entry describes George Grant as a businessman.",
+        "answer": ["businessman", "a businessman", "business man"]
+      },
+      {
+        "skill_tag": "investigate_an_entrepreneur",
+        "hints": ["Look for the business explicitly linked to the person."],
+        "misconception": "The same company name belongs beside every Ghanaian entrepreneur.",
+        "type": "written",
+        "difficulty": 3,
+        "stem": "Choose Global Haulage from a display of enterprise names and explain which person's card goes beside it.",
+        "explanation": "Place Alhaji Adam Iddrisu beside Global Haulage. The name on the first card identifies the entrepreneur.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Place Alhaji Adam Iddrisu beside Global Haulage.",
+              "marks": 1
+            },
+            {
+              "description": "The name on the first card identifies the entrepreneur.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "identify_mensahs_business",
+        "hints": ["Look at each person-enterprise pair separately."],
+        "misconception": "Two entrepreneurs listed next to each other must have led the same enterprise.",
+        "type": "written",
+        "difficulty": 4,
+        "stem": "Design a class matching game that distinguishes Mensah's enterprise from Ocloo's. Give a way to check the reverse sides of both cards.",
+        "explanation": "Use one pair for Mensah and Pioneer Tobacco Ltd. and another for Ocloo and Nkulenu Industries. Print the matching person's name on each company card's back for checking.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Use one pair for Mensah and Pioneer Tobacco Ltd. and another for Ocloo and Nkulenu Industries.",
+              "marks": 1
+            },
+            {
+              "description": "Print the matching person's name on each company card's back for checking.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "distinguish_named_enterprises",
+        "hints": ["Read the names and workplaces in pairs."],
+        "misconception": "Tata Brewery is the name of the entrepreneur rather than the enterprise.",
+        "type": "written",
+        "difficulty": 4,
+        "stem": "Compare the entries for J.K. Siaw and Kwabena Pepra, linked to Paramount Distilleries. Write two correct captions that avoid unprovided dates.",
+        "explanation": "Label one entry J.K. Siaw, Tata Brewery. Label the other Kwabena Pepra, Paramount Distilleries, and leave out dates unless supported.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Label one entry J.K.",
+              "marks": 1
+            },
+            {
+              "description": "Siaw, Tata Brewery. Label the other Kwabena Pepra, Paramount Distilleries, and leave out dates unless supported.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "investigate_an_entrepreneur",
+        "hints": ["Look for the business explicitly linked to the person."],
+        "misconception": "The same company name belongs beside every Ghanaian entrepreneur.",
+        "type": "written",
+        "difficulty": 4,
+        "stem": "Choose one entrepreneur from the lesson for a short talk. Name their enterprise, say why you chose them, and ask one question about their work.",
+        "explanation": "For example, Iddrisu is linked to Global Haulage. A speaker interested in transport could ask how that firm's work helped communities.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "For example, Iddrisu is linked to Global Haulage. A speaker interested in transport could ask how that firm's work helped communities.",
+              "marks": 1
+            }
+          ]
+        }
+      }
+    ],
+    "uncertain": [
+      "The exemplar supplies names and enterprise associations, but no full biographical accounts."
+    ]
+  },
+  {
+    "indicator": {
+      "code": "B3.3.1.1.1",
+      "subject": "History",
+      "level": "Basic 3",
+      "strand": "Europeans in Ghana",
+      "sub_strand": "Arrival of Europeans",
+      "content_standard": "B3.3.1.1. Show understanding of the interactions between the local people and early settlers",
+      "objective": "Describe how the Europeans settled on the Gold Coast, including forming alliances with the local chiefs",
+      "source_page": 19
+    },
+    "spec": {
+      "skills": [
+        {
+          "tag": "identify_the_european_participants",
+          "description": "Identify the European participants",
+          "minQuestions": 5
+        },
+        {
+          "tag": "identify_the_local_participant",
+          "description": "Identify the local participant",
+          "minQuestions": 5
+        },
+        {
+          "tag": "describe_agreements_with_chiefs",
+          "description": "Describe agreements with chiefs",
+          "minQuestions": 5
+        },
+        {
+          "tag": "explain_family_links",
+          "description": "Explain family links",
+          "minQuestions": 5
+        }
+      ],
+      "difficultyPlan": "Five recall, seven simple-use, five application and three challenge questions.",
+      "misconceptions": [
+        "A meeting between local people and Europeans involved Europeans alone.",
+        "Kwamina Ansah is the name of a European trading company.",
+        "The arrival of later settlers meant local chiefs played no part in settlement.",
+        "A marriage and a political alliance always mean the same thing."
+      ],
+      "needsTeacherAssessment": true
+    },
+    "questions": [
+      {
+        "skill_tag": "identify_the_european_participants",
+        "hints": ["Identify both parties named in the exemplar."],
+        "misconception": "A meeting between local people and Europeans involved Europeans alone.",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "Which European group appears in the classroom account of meeting Kwamina Ansah?",
+        "explanation": "The exemplar pairs the Portuguese with Kwamina Ansah in a meeting.",
+        "options": ["Local chiefs", "Portuguese", "Settlers’ families", "Local traders"],
+        "answer": 1,
+        "distractorMisconceptions": {
+          "Local chiefs": "Choosing “Local chiefs” overlooks the distinction in the question. The exemplar pairs the Portuguese with Kwamina Ansah in a meeting.",
+          "Settlers’ families": "Choosing “Settlers’ families” overlooks the distinction in the question. The exemplar pairs the Portuguese with Kwamina Ansah in a meeting.",
+          "Local traders": "Choosing “Local traders” overlooks the distinction in the question. The exemplar pairs the Portuguese with Kwamina Ansah in a meeting."
+        }
+      },
+      {
+        "skill_tag": "identify_the_european_participants",
+        "hints": ["Identify both parties named in the exemplar."],
+        "misconception": "A meeting between local people and Europeans involved Europeans alone.",
+        "type": "short_answer",
+        "difficulty": 1,
+        "stem": "Name the European participants in the meeting selected for dramatisation.",
+        "explanation": "The Portuguese are named.",
+        "answer": ["portuguese", "the portuguese"]
+      },
+      {
+        "skill_tag": "identify_the_local_participant",
+        "hints": ["Distinguish a named participant from an invented quotation."],
+        "misconception": "Kwamina Ansah is the name of a European trading company.",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "Whom does the lesson name as meeting the Portuguese?",
+        "explanation": "Kwamina Ansah is the local person named in the meeting example.",
+        "options": ["George Grant", "B.A. Mensah", "Kwamina Ansah", "J.K. Siaw"],
+        "answer": 2,
+        "distractorMisconceptions": {
+          "George Grant": "Choosing “George Grant” overlooks the distinction in the question. Kwamina Ansah is the local person named in the meeting example.",
+          "B.A. Mensah": "Choosing “B.A. Mensah” overlooks the distinction in the question. Kwamina Ansah is the local person named in the meeting example.",
+          "J.K. Siaw": "Choosing “J.K. Siaw” overlooks the distinction in the question. Kwamina Ansah is the local person named in the meeting example."
+        }
+      },
+      {
+        "skill_tag": "describe_agreements_with_chiefs",
+        "hints": ["Consider what each party could agree to do."],
+        "misconception": "The arrival of later settlers meant local chiefs played no part in settlement.",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "Which relationship involved European settlers and local leaders reaching an agreement?",
+        "explanation": "The lesson includes alliances with local chiefs among forms of interaction.",
+        "options": [
+          "Portuguese",
+          "Kwamina Ansah",
+          "Marriage with local people",
+          "Alliance with local chiefs"
+        ],
+        "answer": 3,
+        "distractorMisconceptions": {
+          "Portuguese": "The exemplar pairs the Portuguese with Kwamina Ansah in a meeting. Here the clue points to Alliance with local chiefs.",
+          "Kwamina Ansah": "Kwamina Ansah is the local person named in the meeting example. Here the clue points to Alliance with local chiefs.",
+          "Marriage with local people": "Marriage between settlers and local people could create family ties. Here the clue points to Alliance with local chiefs."
+        }
+      },
+      {
+        "skill_tag": "explain_family_links",
+        "hints": ["Look for a link between families rather than a formal agreement."],
+        "misconception": "A marriage and a political alliance always mean the same thing.",
+        "type": "mcq",
+        "difficulty": 1,
+        "stem": "What family relationship does the lesson identify among interactions between settlers and the local population?",
+        "explanation": "Marriage between settlers and local people could create family ties.",
+        "options": [
+          "Marriage with local people",
+          "Portuguese",
+          "Kwamina Ansah",
+          "Alliance with local chiefs"
+        ],
+        "answer": 0,
+        "distractorMisconceptions": {
+          "Portuguese": "The exemplar pairs the Portuguese with Kwamina Ansah in a meeting. Here the clue points to Marriage with local people.",
+          "Kwamina Ansah": "Kwamina Ansah is the local person named in the meeting example. Here the clue points to Marriage with local people.",
+          "Alliance with local chiefs": "The lesson includes alliances with local chiefs among forms of interaction. Here the clue points to Marriage with local people."
+        }
+      },
+      {
+        "skill_tag": "identify_the_european_participants",
+        "hints": ["Identify both parties named in the exemplar."],
+        "misconception": "A meeting between local people and Europeans involved Europeans alone.",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "Which pair of role cards belongs in the meeting scene from the lesson?",
+        "explanation": "First find the European group in the meeting. Pair the Portuguese with the named local participant, Kwamina Ansah.",
+        "options": [
+          "Portuguese visitors and George Grant",
+          "Local chiefs and Esther Ocloo",
+          "Local traders and B.A. Mensah",
+          "Portuguese visitors and Kwamina Ansah"
+        ],
+        "answer": 3,
+        "distractorMisconceptions": {
+          "Portuguese visitors and George Grant": "Substitutes a named entrepreneur for the local participant. First find the European group in the meeting. Pair the Portuguese with the named local participant, Kwamina Ansah.",
+          "Local chiefs and Esther Ocloo": "Combines the local side with a person from another lesson. First find the European group in the meeting. Pair the Portuguese with the named local participant, Kwamina Ansah.",
+          "Local traders and B.A. Mensah": "Replaces the meeting participants with names from trade and enterprise. First find the European group in the meeting. Pair the Portuguese with the named local participant, Kwamina Ansah."
+        }
+      },
+      {
+        "skill_tag": "identify_the_european_participants",
+        "hints": ["Identify both parties named in the exemplar."],
+        "misconception": "A meeting between local people and Europeans involved Europeans alone.",
+        "type": "written",
+        "difficulty": 2,
+        "stem": "Prepare one label for the European participants and one for their local counterpart in the meeting.",
+        "explanation": "Label one side “Portuguese visitors”. Label the local participant “Kwamina Ansah”.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Label one side “Portuguese visitors”.",
+              "marks": 1
+            },
+            {
+              "description": "Label the local participant “Kwamina Ansah”.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "identify_the_local_participant",
+        "hints": ["Distinguish a named participant from an invented quotation."],
+        "misconception": "Kwamina Ansah is the name of a European trading company.",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "A pupil puts “European company” under Kwamina Ansah's name. Which label fits the meeting?",
+        "explanation": "The account names whom the Portuguese met. Kwamina Ansah is the local person in that meeting.",
+        "options": [
+          "Local participant",
+          "European company",
+          "Portuguese ship",
+          "Place on the coast"
+        ],
+        "answer": 0,
+        "distractorMisconceptions": {
+          "European company": "Treats a person as a business. The account names whom the Portuguese met. Kwamina Ansah is the local person in that meeting.",
+          "Portuguese ship": "Confuses the participant’s name with a ship. The account names whom the Portuguese met. Kwamina Ansah is the local person in that meeting.",
+          "Place on the coast": "Treats a person’s name as a place. The account names whom the Portuguese met. Kwamina Ansah is the local person in that meeting."
+        }
+      },
+      {
+        "skill_tag": "identify_the_local_participant",
+        "hints": ["Distinguish a named participant from an invented quotation."],
+        "misconception": "Kwamina Ansah is the name of a European trading company.",
+        "type": "short_answer",
+        "difficulty": 2,
+        "stem": "A dramatisation has an empty role card beside the Portuguese meeting party. Who is the named local participant?",
+        "explanation": "Kwamina Ansah is the person in the exemplar.",
+        "answer": ["kwamina ansah"]
+      },
+      {
+        "skill_tag": "describe_agreements_with_chiefs",
+        "hints": ["Consider what each party could agree to do."],
+        "misconception": "The arrival of later settlers meant local chiefs played no part in settlement.",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "A visitor and a chief agree on how their groups will work together. Which detail shows the agreement?",
+        "explanation": "Being in one place shows contact. Accepting a plan together shows agreement.",
+        "options": [
+          "They stand on the same shore",
+          "Both accept a shared plan",
+          "They see the same boat",
+          "Both visit on the same date"
+        ],
+        "answer": 1,
+        "distractorMisconceptions": {
+          "They stand on the same shore": "Confuses being in one place with accepting an agreement. Being in one place shows contact. Accepting a plan together shows agreement.",
+          "They see the same boat": "Treats seeing a boat as evidence of a shared plan. Being in one place shows contact. Accepting a plan together shows agreement.",
+          "Both visit on the same date": "Mistakes a shared date for agreement. Being in one place shows contact. Accepting a plan together shows agreement."
+        }
+      },
+      {
+        "skill_tag": "describe_agreements_with_chiefs",
+        "hints": ["Consider what each party could agree to do."],
+        "misconception": "The arrival of later settlers meant local chiefs played no part in settlement.",
+        "type": "short_answer",
+        "difficulty": 2,
+        "stem": "What local leaders are mentioned in the indicator as partners in alliances?",
+        "explanation": "It specifies the local chiefs.",
+        "answer": ["local chiefs", "chiefs", "the local chiefs"]
+      },
+      {
+        "skill_tag": "explain_family_links",
+        "hints": ["Look for a link between families rather than a formal agreement."],
+        "misconception": "A marriage and a political alliance always mean the same thing.",
+        "type": "mcq",
+        "difficulty": 2,
+        "stem": "In a classroom story a settler marries a local person. Which direct result belongs in the family diagram?",
+        "explanation": "Marriage joins the families in the story. Signing, trading and landing describe different events.",
+        "options": [
+          "Two chiefs sign an agreement",
+          "Goods are exchanged in a market",
+          "The two families are linked",
+          "A ship makes its first landing"
+        ],
+        "answer": 2,
+        "distractorMisconceptions": {
+          "Two chiefs sign an agreement": "Confuses family ties with a political agreement. Marriage joins the families in the story. Signing, trading and landing describe different events.",
+          "Goods are exchanged in a market": "Confuses marriage with buying and selling. Marriage joins the families in the story. Signing, trading and landing describe different events.",
+          "A ship makes its first landing": "Confuses settlement and family life with first arrival. Marriage joins the families in the story. Signing, trading and landing describe different events."
+        }
+      },
+      {
+        "skill_tag": "identify_the_european_participants",
+        "hints": ["Identify both parties named in the exemplar."],
+        "misconception": "A meeting between local people and Europeans involved Europeans alone.",
+        "type": "practical",
+        "difficulty": 3,
+        "stem": "Create a short dramatisation of the meeting. Tell the audience which names come from the lesson and which spoken words you invented.",
+        "explanation": "Introduce the Portuguese and Kwamina Ansah as the named parties. Tell the audience that your group's lines are an imagined conversation.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Introduce the Portuguese and Kwamina Ansah as the named parties.",
+              "marks": 1
+            },
+            {
+              "description": "Tell the audience that your group's lines are an imagined conversation.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "identify_the_local_participant",
+        "hints": ["Distinguish a named participant from an invented quotation."],
+        "misconception": "Kwamina Ansah is the name of a European trading company.",
+        "type": "oral",
+        "difficulty": 3,
+        "stem": "Introduce Kwamina Ansah for a classroom dramatisation using only information given in the example.",
+        "explanation": "Introduce Kwamina Ansah as the person who met the Portuguese. Leave out details of his speech unless a source supplies them.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Introduce Kwamina Ansah as the person who met the Portuguese.",
+              "marks": 1
+            },
+            {
+              "description": "Leave out details of his speech unless a source supplies them.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "describe_agreements_with_chiefs",
+        "hints": ["Consider what each party could agree to do."],
+        "misconception": "The arrival of later settlers meant local chiefs played no part in settlement.",
+        "type": "written",
+        "difficulty": 3,
+        "stem": "Write a practice dialogue showing what it means to seek an agreement with a local chief.",
+        "explanation": "A visitor might ask to work together and a chief might discuss terms. Label this an imagined dialogue about seeking agreement.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "A visitor might ask to work together and a chief might discuss terms.",
+              "marks": 1
+            },
+            {
+              "description": "Label this an imagined dialogue about seeking agreement.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "explain_family_links",
+        "hints": ["Look for a link between families rather than a formal agreement."],
+        "misconception": "A marriage and a political alliance always mean the same thing.",
+        "type": "written",
+        "difficulty": 3,
+        "stem": "A learner uses a marriage scene as the only evidence for all settlement. Name another type of interaction the lesson asks pupils to investigate.",
+        "explanation": "Alliances with local chiefs are a second type named in the lesson.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Alliances with local chiefs are a second type named in the lesson.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "explain_family_links",
+        "hints": ["Look for a link between families rather than a formal agreement."],
+        "misconception": "A marriage and a political alliance always mean the same thing.",
+        "type": "drawing",
+        "difficulty": 3,
+        "stem": "Draw a family link as one way settlers and local people could become connected.",
+        "explanation": "Draw one partner from each family and join them with a line. Add a key showing the line means marriage.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Draw one partner from each family and join them with a line.",
+              "marks": 1
+            },
+            {
+              "description": "Add a key showing the line means marriage.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "identify_the_local_participant",
+        "hints": ["Distinguish a named participant from an invented quotation."],
+        "misconception": "Kwamina Ansah is the name of a European trading company.",
+        "type": "written",
+        "difficulty": 4,
+        "stem": "A pupil presents an invented speech by Kwamina Ansah as his exact words. Explain how to label the speech while keeping the meeting itself in the story.",
+        "explanation": "Keep Kwamina Ansah in the scene and mark his words “imagined for our play”. The lesson gives his name without giving a transcript.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Keep Kwamina Ansah in the scene and mark his words “imagined for our play”.",
+              "marks": 1
+            },
+            {
+              "description": "The lesson gives his name without giving a transcript.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "describe_agreements_with_chiefs",
+        "hints": ["Consider what each party could agree to do."],
+        "misconception": "The arrival of later settlers meant local chiefs played no part in settlement.",
+        "type": "written",
+        "difficulty": 4,
+        "stem": "How is coming ashore different from settling? Say how an agreement with a local chief could help settlers after they arrived.",
+        "explanation": "Arrival means coming to a place. An alliance could shape how settlers and local people lived together afterwards, but one example cannot describe every settlement.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "Arrival means coming to a place. An alliance could shape how settlers and local people lived together afterwards, but one example cannot describe every settlement.",
+              "marks": 1
+            }
+          ]
+        }
+      },
+      {
+        "skill_tag": "explain_family_links",
+        "hints": ["Look for a link between families rather than a formal agreement."],
+        "misconception": "A marriage and a political alliance always mean the same thing.",
+        "type": "written",
+        "difficulty": 4,
+        "stem": "Use two labelled scenes to distinguish a settler's family relationship from an agreement with a chief. Explain what each scene contributes to an account of settlement.",
+        "explanation": "One scene can show marriage creating family ties. Another can show a chief and settlers agreeing to cooperate, which is a different kind of link.",
+        "rubric": {
+          "criteria": [
+            {
+              "description": "One scene can show marriage creating family ties.",
+              "marks": 1
+            },
+            {
+              "description": "Another can show a chief and settlers agreeing to cooperate, which is a different kind of link.",
+              "marks": 1
+            }
+          ]
+        }
+      }
+    ],
+    "uncertain": [
+      "The meeting is named without a transcript. Classroom dialogues are expressly fictional."
+    ]
+  }
+]

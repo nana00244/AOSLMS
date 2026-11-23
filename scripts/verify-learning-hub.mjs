@@ -5,6 +5,7 @@ import { readFileSync } from 'node:fs';
 import { randomBytes, randomUUID } from 'node:crypto';
 import { createClient } from '@supabase/supabase-js';
 import { computingQuestions } from '../src/learningHub/computingBank.ts';
+import { historyQuestions } from '../src/learningHub/historyBank.ts';
 import { indicatorLessonId } from '../src/learningHub/indicatorLessonId.ts';
 const project = JSON.parse(readFileSync('src/supabase-project.json', 'utf8'));
 const options = { auth: { persistSession: false, autoRefreshToken: false } };
@@ -216,16 +217,36 @@ try {
     answers: [1, 0],
   });
   assert.equal(second.attempt.score, 100);
-  for (const level of ['Basic 4', 'Basic 5', 'Basic 6']) {
-    const question = computingQuestions.find(q => q.level === level && q.type === 'mcq');
-    assert(question, `Missing scored Computing question for ${level}`);
+  const scoredQuestion = (pool, grade, code) => {
+    const question = pool.find(
+      (q) =>
+        q.level === 'Basic ' + grade && q.type === 'mcq' && (!code || q.indicator_code === code),
+    );
+    assert(question, `Missing scored question for ${pool[0].subject} Basic ${grade} ${code || ''}`);
+    return question;
+  };
+  const checks = [
+    ...[4, 5, 6].map((grade) => scoredQuestion(computingQuestions, grade)),
+    ...[1, 3, 4, 6].map((grade) => scoredQuestion(historyQuestions, grade)),
+    scoredQuestion(historyQuestions, 2, 'B2.2.1.1.1'),
+    scoredQuestion(historyQuestions, 2, 'B2.2.1.1.1 (Characteristics)'),
+    scoredQuestion(historyQuestions, 5, 'B4.5.3.1.2'),
+  ];
+  for (const question of checks) {
     const lessonId = indicatorLessonId(question.subject, question.indicator_code);
     const assigned = await hub(teacher.client, {
-      action: 'assign', lessonId, classId: cls, studentIds: [studentIds[0]], dueDate,
+      action: 'assign',
+      lessonId,
+      classId: cls,
+      studentIds: [studentIds[0]],
+      dueDate,
     });
     assignmentIds.push(assigned.id);
     const practice = {
-      action: 'submit-adaptive', lessonId, assignmentId: assigned.id, attemptId: randomUUID(),
+      action: 'submit-adaptive',
+      lessonId,
+      assignmentId: assigned.id,
+      attemptId: randomUUID(),
       completedAt: new Date().toISOString(),
       responses: [{ questionId: question.id, selectedOption: question.answer }],
     };

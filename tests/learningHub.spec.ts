@@ -342,6 +342,7 @@ test('Learning Hub recommends practice from latest results and targets the selec
 // Regression: lesson standards are not indicator IDs, and codes repeat across subjects.
 import { readFileSync } from 'node:fs';
 import { sortIndicators, sortQuestions } from '../src/nacca/sortOrder';
+import { historyQuestions } from '../src/learningHub/historyBank';
 const bank = JSON.parse(
   readFileSync(new URL('../src/nacca/importedBank.json', import.meta.url), 'utf8'),
 );
@@ -393,33 +394,53 @@ test('question bank practice preserves Science when Mathematics shares the code'
   await expect(page).toHaveURL(/subject=Science/);
 });
 
-test('a teacher can build a Computing quiz from a Basic 5 question', async ({ page }) => {
-  await setup(page, 'Teacher');
-  await page.getByRole('button', { name: 'NaCCA Question Bank', exact: true }).click();
-  await page.getByLabel('Filter by subject').selectOption('Computing');
-  await page.getByLabel('Filter by class or level').selectOption('Basic 5');
-  const card = page.locator('.nacca-question-card').first();
-  const code = await card.locator('.nacca-badge-code').innerText();
-  await card.getByTitle('Create Quiz or Unit Test for indicator ' + code).click();
-  await expect(page.getByLabel('Quiz subject')).toHaveValue('Computing');
-  await expect(page.getByLabel('Quiz level')).toHaveValue('Basic 5');
-  await expect(page.getByRole('checkbox', { name: new RegExp(code.replaceAll('.', '\\.')) }).first()).toBeChecked();
+for (const subject of ['Computing', 'History']) {
+  test(`a teacher can build a ${subject} quiz from a Basic 5 question`, async ({ page }) => {
+    await setup(page, 'Teacher');
+    await expect(page.getByRole('button', { name: 'Browse Question Bank' })).toBeVisible();
+    await page.getByRole('button', { name: 'NaCCA Question Bank', exact: true }).click();
+    await page.getByLabel('Filter by subject').selectOption(subject);
+    await page.getByLabel('Filter by class or level').selectOption('Basic 5');
+    if (subject === 'History') {
+      await page.getByPlaceholder('Search stem, skill, indicator or concept…').fill('B4.5.3.1.2');
+    }
+    const card = page.locator('.nacca-question-card').first();
+    const code = await card.locator('.nacca-badge-code').innerText();
+    await card.getByTitle('Create Quiz or Unit Test for indicator ' + code).click();
+    await expect(page.getByLabel('Quiz subject')).toHaveValue(subject);
+    await expect(page.getByLabel('Quiz level')).toHaveValue('Basic 5');
+    await expect(
+      page.getByRole('checkbox', { name: new RegExp(code.replaceAll('.', '\\.')) }).first(),
+    ).toBeChecked();
+  });
+}
+
+test('a pupil reaches the distinct Basic 2 History characteristics objective', async ({ page }) => {
+  await setup(page, 'Student');
+  const code = 'B2.2.1.1.1 (Characteristics)';
+  await page.goto('/#/learning-hub?tab=Courses&lesson=nacca-history-b2-2-1-1-1--characteristics-');
+  await page.getByRole('button', { name: 'Start practice' }).click();
+  const stem = await page.locator('.practice-arena-stem-text').innerText();
+  expect(historyQuestions.some((q) => q.indicator_code === code && q.stem === stem)).toBe(true);
+  expect(new URLSearchParams(new URL(page.url()).hash.split('?')[1]).get('practice')).toBe(code);
 });
 
-test('Computing rubric tasks preserve the pupil response without recording an automatic grade', async ({ page }) => {
+for (const [subject, indicator] of [['Computing', 'B4.1.3.2.3'], ['History', 'B1.6.1.1.1']]) {
+test(`${subject} rubric tasks preserve the pupil response without recording an automatic grade`, async ({ page }) => {
   const { requests } = await setup(page, 'Student');
-  await page.goto('/#/learning-hub?tab=Courses&practice=B4.1.3.2.3&subject=Computing');
+  await page.goto('/#/learning-hub?tab=Courses&practice=' + indicator + '&subject=' + subject);
   await page.getByTitle('Teacher-assessed tasks').click();
   await expect(page.locator('.practice-arena-rubric-table')).toBeVisible();
   await page.locator('.practice-arena-teacher-task-box textarea').fill('I drew a key and marked the school gate.');
   await page.getByRole('button', { name: 'Save response' }).click();
   const records = await page.evaluate(() => JSON.parse(localStorage.getItem('nacca_student_practice_history_hub-student-0') || '[]'));
   expect(records).toEqual(expect.arrayContaining([expect.objectContaining({
-    subject: 'Computing', reviewStatus: 'pending', category: 'teacher',
+    subject, reviewStatus: 'pending', category: 'teacher',
     questions: [expect.objectContaining({ response: { teacherInput: 'I drew a key and marked the school gate.' } })],
   })]));
   expect(requests.some(r => r.action === 'submit-adaptive')).toBe(false);
 });
+}
 
 test('a pupil can open a numeric Computing lesson from its course page', async ({ page }) => {
   await setup(page, 'Student');
