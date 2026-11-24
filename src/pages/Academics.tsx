@@ -1463,7 +1463,7 @@ function OfficialStamp({
 }
 
 export function Reports() {
-  const { data, role, ownId, allowedClasses, update, notify, pendingCount } = useStore();
+  const { data, role, ownId, allowedClasses, update, notify, pendingCount, connected } = useStore();
   const [params] = useSearchParams();
   const [cls, setCls] = useState(
     () => data.students.find((s) => s.id === params.get('student'))?.classId || '',
@@ -1494,8 +1494,16 @@ export function Reports() {
     try {
       await preparePhotoUrls((all ? roster : student ? [student] : []).map((s) => s.photo));
     } catch {
-      window.alert('Photos could not be loaded. Check your connection and try printing again.');
-      return;
+      if (connected) {
+        window.alert('Photos could not be loaded. Check your connection and try printing again.');
+        return;
+      }
+      if (
+        !window.confirm(
+          'Some student photos are unavailable offline. Print a local draft without those photos?',
+        )
+      )
+        return;
     }
     flushSync(() => setBatch(all));
     await document.fonts.ready;
@@ -1530,18 +1538,12 @@ export function Reports() {
                 Edit report card
               </Button>
             )}
-            <Button
-              disabled={!student || pendingCount > 0}
-              onClick={() => void printReports(false)}
-            >
+            <Button disabled={!student} onClick={() => void printReports(false)}>
               <Printer size={16} />
               Print / Save PDF
             </Button>
             {editable && (
-              <Button
-                disabled={!cls || !roster.length || pendingCount > 0}
-                onClick={() => void printReports(true)}
-              >
+              <Button disabled={!cls || !roster.length} onClick={() => void printReports(true)}>
                 <Printer size={16} />
                 Print selected class ({cls ? roster.length : 0})
               </Button>
@@ -1603,7 +1605,6 @@ export function Reports() {
         {editable && student && (
           <Button
             variant="secondary"
-            disabled={pendingCount > 0}
             onClick={async () => {
               if (
                 await update(
@@ -1635,7 +1636,12 @@ export function Reports() {
       ) : (
         <div className="report-print-stack print-area">
           {(batch ? roster : [student]).map((pupil) => (
-            <ReportSheet key={pupil.id} data={viewData} student={pupil} />
+            <ReportSheet
+              key={pupil.id}
+              data={viewData}
+              student={pupil}
+              localDraft={!connected || pendingCount > 0}
+            />
           ))}
         </div>
       )}
@@ -1654,7 +1660,15 @@ export function Reports() {
   );
 }
 
-function ReportSheet({ data, student }: { data: State; student: Student }) {
+function ReportSheet({
+  data,
+  student,
+  localDraft = false,
+}: {
+  data: State;
+  student: Student;
+  localDraft?: boolean;
+}) {
   const grades = studentGrades(data, student);
   const hasGrades = grades.some((g) => g.recorded);
   const peers = data.students.filter((s) => s.classId === student.classId);
@@ -1703,6 +1717,11 @@ function ReportSheet({ data, student }: { data: State; student: Student }) {
 
   return (
     <article className="assessment-card-sheet">
+      {localDraft && (
+        <div className="report-local-draft">
+          LOCAL DRAFT — this device’s records; reconnect and sync before issuing a final report.
+        </div>
+      )}
       {/* Header Section */}
       <header className="assessment-header">
         <img

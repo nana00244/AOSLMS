@@ -100,9 +100,17 @@ async function setup(page: Page, role: Role) {
       return route.fulfill({ json: reading });
     }
     if (body.action === 'submit-adaptive') {
-      const attempt = { id: body.attemptId, studentId: owner.studentId!, lessonId: body.lessonId,
-        assignmentId: null, createdAt: body.completedAt, correct: 0, total: body.responses.length, score: 0 };
-      if (!hub.attempts.some(a => a.id === attempt.id)) hub.attempts.push(attempt);
+      const attempt = {
+        id: body.attemptId,
+        studentId: owner.studentId!,
+        lessonId: body.lessonId,
+        assignmentId: null,
+        createdAt: body.completedAt,
+        correct: 0,
+        total: body.responses.length,
+        score: 0,
+      };
+      if (!hub.attempts.some((a) => a.id === attempt.id)) hub.attempts.push(attempt);
       return route.fulfill({ json: attempt });
     }
     if (body.action === 'submit-practice') {
@@ -142,6 +150,57 @@ async function setup(page: Page, role: Role) {
   await page.goto('/#/learning-hub');
   return { state, hub, requests };
 }
+
+test('downloaded assignments and pending readings survive offline reload and sync on reconnect', async ({
+  page,
+}) => {
+  const { state, hub } = await setup(page, 'Student');
+  await expect(page.getByRole('heading', { name: 'Learning Hub', exact: true })).toBeVisible({
+    timeout: 30000,
+  });
+  await page.getByRole('button', { name: 'My assignments', exact: true }).click();
+  await page.getByRole('button', { name: 'Continue', exact: true }).click();
+  await expect(page.getByText(lesson.body[0], { exact: true })).toBeVisible();
+  // Leave Vite available for dev-module reloads; the production suite separately
+  // verifies the service-worker shell with the whole browser connection disabled.
+  await page.addInitScript(() => {
+    Object.defineProperty(navigator, 'onLine', {
+      configurable: true,
+      get: () => localStorage.getItem('test-offline') !== 'yes',
+    });
+  });
+  await page.evaluate(() => {
+    localStorage.setItem('test-offline', 'yes');
+    Object.defineProperty(navigator, 'onLine', {
+      configurable: true,
+      get: () => localStorage.getItem('test-offline') !== 'yes',
+    });
+    window.dispatchEvent(new Event('offline'));
+  });
+  await page.getByRole('button', { name: 'Mark as read', exact: true }).click();
+  await expect(page.getByText(/reading update\(s\) saved on this device/)).toBeVisible();
+  expect(hub.readings).toHaveLength(0);
+  await page.reload();
+  await expect(page.getByText(lesson.body[0], { exact: true })).toBeVisible();
+  await expect(page.getByRole('button', { name: 'Reading saved', exact: true })).toBeVisible();
+  await expect(page.getByText(/Offline learning:/)).toBeVisible();
+  const cache = await page.evaluate(async (owner) => {
+    const path = '/src/learningHub/offlineHub.ts';
+    const { readCachedHub, readPendingReadings } = await import(path);
+    return {
+      ownAssignments: (await readCachedHub(owner)).assignments.length,
+      other: await readCachedHub('unrelated-account'),
+      pending: (await readPendingReadings(owner)).length,
+    };
+  }, state.users[0].id);
+  expect(cache).toEqual({ ownAssignments: 1, other: undefined, pending: 1 });
+  await page.evaluate(() => {
+    localStorage.removeItem('test-offline');
+    window.dispatchEvent(new Event('online'));
+  });
+  await expect.poll(() => hub.readings.length).toBe(1);
+  await expect(page.getByText(/reading update\(s\) saved on this device/)).toBeHidden();
+});
 
 test('Learning Hub learner completes assigned reading and scored practice across reloads', async ({
   page,
@@ -348,7 +407,15 @@ const bank = JSON.parse(
 );
 const naccaIndicators = sortIndicators(bank.indicators);
 const naccaQuestions = sortQuestions(bank.questions, naccaIndicators);
-import { createAdaptiveSession, getNextAdaptiveQuestion } from '../src/nacca/adaptiveEngine';
+async function expectIndicatorQuestion(page: Page, subject: string, code: string) {
+  const stem = page.locator('.practice-arena-stem-text');
+  await expect(stem).toBeVisible();
+  expect(
+    naccaQuestions
+      .filter((q) => q.subject === subject && q.indicator_code === code)
+      .map((q) => q.stem),
+  ).toContain(await stem.innerText());
+}
 
 for (const subject of ['Mathematics', 'Science']) {
   for (const level of ['Basic 1', 'Basic 4', 'Basic 6']) {
@@ -358,21 +425,19 @@ for (const subject of ['Mathematics', 'Science']) {
       const target = {
         id: `nacca-${subject.toLowerCase()}-${indicator.code.toLowerCase().replace(/[^a-z0-9]/g, '-')}`,
       };
-      const question = getNextAdaptiveQuestion(
-        naccaQuestions.filter((q) => q.subject === subject && q.level === level),
-        createAdaptiveSession(indicator.code),
-      )!;
       await page.goto(`/#/learning-hub?tab=Courses&lesson=${encodeURIComponent(target.id)}`);
       await page.getByRole('button', { name: 'Start practice', exact: true }).click();
-      await expect(page.locator('.practice-arena-question-view')).toContainText(question.stem);
-      await expect(page.locator('.practice-arena-app-container')).toContainText(`${level} ${subject}`);
+      await expectIndicatorQuestion(page, subject, indicator.code);
+      await expect(page.locator('.practice-arena-app-container')).toContainText(
+        `${level} ${subject}`,
+      );
       await expect(page).toHaveURL(new RegExp(`practice=${indicator.code.replaceAll('.', '\\.')}`));
       await page.reload();
-      await expect(page.locator('.practice-arena-question-view')).toContainText(question.stem);
+      await expectIndicatorQuestion(page, subject, indicator.code);
       await page.goBack();
       await expect(page.getByRole('button', { name: 'Start practice', exact: true })).toBeVisible();
       await page.getByRole('button', { name: 'Practice', exact: true }).click();
-      await expect(page.locator('.practice-arena-question-view')).toContainText(question.stem);
+      await expectIndicatorQuestion(page, subject, indicator.code);
     });
   }
 }
@@ -385,19 +450,17 @@ test('question bank practice preserves Science when Mathematics shares the code'
   await page.getByLabel('Filter by subject', { exact: true }).selectOption('Science');
   const card = page.locator('.nacca-question-card').first();
   const code = await card.locator('.nacca-badge-code').innerText();
-  const q = getNextAdaptiveQuestion(
-    naccaQuestions.filter((q) => q.subject === 'Science'),
-    createAdaptiveSession(code),
-  )!;
   await card.getByRole('button', { name: /Practise Indicator/ }).click();
-  await expect(page.locator('.practice-arena-question-view')).toContainText(q.stem);
+  await expectIndicatorQuestion(page, 'Science', code);
   await expect(page).toHaveURL(/subject=Science/);
 });
 
 for (const subject of ['Computing', 'History', 'Religious and Moral Education', 'Creative Arts']) {
   test(`a teacher can build a ${subject} quiz from a Basic 5 question`, async ({ page }) => {
     await setup(page, 'Teacher');
-    await expect(page.getByRole('button', { name: 'Browse Question Bank' })).toBeVisible({ timeout: 20000 });
+    await expect(page.getByRole('button', { name: 'Browse Question Bank' })).toBeVisible({
+      timeout: 20000,
+    });
     await page.getByRole('button', { name: 'NaCCA Question Bank', exact: true }).click();
     await page.getByLabel('Filter by subject').selectOption(subject);
     await page.getByLabel('Filter by class or level').selectOption('Basic 5');
@@ -431,21 +494,40 @@ test('a pupil reaches the distinct Basic 2 History characteristics objective', a
   expect(new URLSearchParams(new URL(page.url()).hash.split('?')[1]).get('practice')).toBe(code);
 });
 
-for (const [subject, indicator] of [['Computing', 'B4.1.3.2.3'], ['History', 'B1.6.1.1.1']]) {
-test(`${subject} rubric tasks preserve the pupil response without recording an automatic grade`, async ({ page }) => {
-  const { requests } = await setup(page, 'Student');
-  await page.goto('/#/learning-hub?tab=Courses&practice=' + indicator + '&subject=' + subject);
-  await page.getByTitle('Teacher-assessed tasks').click();
-  await expect(page.locator('.practice-arena-rubric-table')).toBeVisible();
-  await page.locator('.practice-arena-teacher-task-box textarea').fill('I drew a key and marked the school gate.');
-  await page.getByRole('button', { name: 'Save response' }).click();
-  const records = await page.evaluate(() => JSON.parse(localStorage.getItem('nacca_student_practice_history_hub-student-0') || '[]'));
-  expect(records).toEqual(expect.arrayContaining([expect.objectContaining({
-    subject, reviewStatus: 'pending', category: 'teacher',
-    questions: [expect.objectContaining({ response: { teacherInput: 'I drew a key and marked the school gate.' } })],
-  })]));
-  expect(requests.some(r => r.action === 'submit-adaptive')).toBe(false);
-});
+for (const [subject, indicator] of [
+  ['Computing', 'B4.1.3.2.3'],
+  ['History', 'B1.6.1.1.1'],
+]) {
+  test(`${subject} rubric tasks preserve the pupil response without recording an automatic grade`, async ({
+    page,
+  }) => {
+    const { requests } = await setup(page, 'Student');
+    await page.goto('/#/learning-hub?tab=Courses&practice=' + indicator + '&subject=' + subject);
+    await page.getByTitle('Teacher-assessed tasks').click();
+    await expect(page.locator('.practice-arena-rubric-table')).toBeVisible();
+    await page
+      .locator('.practice-arena-teacher-task-box textarea')
+      .fill('I drew a key and marked the school gate.');
+    await page.getByRole('button', { name: 'Save response' }).click();
+    const records = await page.evaluate(() =>
+      JSON.parse(localStorage.getItem('nacca_student_practice_history_hub-student-0') || '[]'),
+    );
+    expect(records).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({
+          subject,
+          reviewStatus: 'pending',
+          category: 'teacher',
+          questions: [
+            expect.objectContaining({
+              response: { teacherInput: 'I drew a key and marked the school gate.' },
+            }),
+          ],
+        }),
+      ]),
+    );
+    expect(requests.some((r) => r.action === 'submit-adaptive')).toBe(false);
+  });
 }
 
 test('a pupil can open a numeric Computing lesson from its course page', async ({ page }) => {
@@ -457,9 +539,13 @@ test('a pupil can open a numeric Computing lesson from its course page', async (
   await expect(page.locator('.practice-arena-question-view input')).toBeVisible();
 });
 
-test('Basic 6 Science retake changes the opening question even with identical random draws', async ({ page }) => {
+test('Basic 6 Science retake changes the opening question even with identical random draws', async ({
+  page,
+}) => {
   await setup(page, 'Student');
-  await page.evaluate(() => { Math.random = () => 0.999; });
+  await page.evaluate(() => {
+    Math.random = () => 0.999;
+  });
   await page.goto('/#/learning-hub?tab=NaCCA+Question+Bank&practice=B6.5.4.1.1&subject=Science');
   const stem = page.locator('.practice-arena-stem-text');
   const first = await stem.innerText();
@@ -490,6 +576,18 @@ for (const role of ['Student', 'Teacher'] as const) {
   });
 }
 
+async function clipDuration(page: Page, name: string) {
+  return page.evaluate(async (name) => {
+    const audio = new AudioContext();
+    try {
+      return (await audio.decodeAudioData(await (await fetch(`/assets/${name}.mp3`)).arrayBuffer()))
+        .duration;
+    } finally {
+      await audio.close();
+    }
+  }, name);
+}
+
 test('student practice plays the selected wrong and correct answer clips', async ({ page }) => {
   await setup(page, 'Student');
   await page.goto('/#/learning-hub?tab=Courses&practice=B6.5.4.1.1&subject=Science');
@@ -502,22 +600,29 @@ test('student practice plays the selected wrong and correct answer clips', async
   });
   for (const correct of [false, true]) {
     const stem = await page.locator('.practice-arena-stem-text').innerText();
-    const question = naccaQuestions.find((q) => q.stem === stem && q.indicator_code === 'B6.5.4.1.1' && q.subject === 'Science')!;
+    const question = naccaQuestions.find(
+      (q) => q.stem === stem && q.indicator_code === 'B6.5.4.1.1' && q.subject === 'Science',
+    )!;
     const key = Number(question.answer);
     const option = question.options![correct ? key : (key + 1) % question.options!.length];
     await page.getByText(option, { exact: true }).click();
-    const filename = correct ? 'cute-wow-yeye.mp3' : 'wrong-answer-gameshow.mp3';
-    const fetched = page.waitForResponse((r) => r.url().endsWith('/assets/' + filename) && r.ok());
-    await page.evaluate(() => { delete document.documentElement.dataset.feedbackClip; });
+    // Sounds are preloaded; playing a cached clip need not make a new request.
+    const duration = await clipDuration(page, correct ? 'cute-wow-yeye' : 'wrong-answer-gameshow');
+    await page.evaluate(() => {
+      delete document.documentElement.dataset.feedbackClip;
+    });
     await page.getByRole('button', { name: 'Check', exact: true }).click();
-    await fetched;
-    await expect.poll(async () => Number(await page.locator('html').getAttribute('data-feedback-clip'))).toBeGreaterThan(0);
+    await expect
+      .poll(async () => Number(await page.locator('html').getAttribute('data-feedback-clip')))
+      .toBeCloseTo(duration, 3);
     if (!correct) {
       await expect(page.locator('.practice-arena-next-btn')).toBeVisible();
       await page.locator('.practice-arena-next-btn').click();
     }
   }
-  await expect.poll(async () => Number(await page.locator('html').getAttribute('data-feedback-clip'))).toBeGreaterThan(0);
+  await expect
+    .poll(async () => Number(await page.locator('html').getAttribute('data-feedback-clip')))
+    .toBeGreaterThan(0);
 });
 
 test('starting student practice and skipping play their own clips', async ({ page }) => {
@@ -530,22 +635,45 @@ test('starting student practice and skipping play their own clips', async ({ pag
       return start.apply(this, args);
     };
   });
-  for (const [button, clip] of [['Start practice', 'practice-start-preview'], ['Skip', 'run-vine']]) {
-    const response = page.waitForResponse((r) => r.url().endsWith('/assets/' + clip + '.mp3') && r.ok());
-    await page.evaluate(() => { delete document.documentElement.dataset.cueLength; });
+  for (const [button, clip] of [
+    ['Start practice', 'practice-start-preview'],
+    ['Skip', 'run-vine'],
+  ]) {
+    const duration = await clipDuration(page, clip);
+    await page.evaluate(() => {
+      delete document.documentElement.dataset.cueLength;
+    });
     await page.getByRole('button', { name: button, exact: true }).click();
-    await response;
-    await expect.poll(async () => Number(await page.locator('html').getAttribute('data-cue-length'))).toBeGreaterThan(0);
+    await expect
+      .poll(async () => Number(await page.locator('html').getAttribute('data-cue-length')))
+      .toBeCloseTo(button === 'Start practice' ? Math.min(3, duration) : duration, 3);
   }
 });
 
-test('completed adaptive practice and earlier device history appear in student Progress', async ({ page }) => {
+test('completed adaptive practice and earlier device history appear in student Progress', async ({
+  page,
+}) => {
   const { hub } = await setup(page, 'Student');
-  await page.evaluate(() => localStorage.setItem('nacca_student_practice_history_hub-student-0', JSON.stringify([{
-    id: 'attempt-earlier', studentId: 'hub-student-0', indicatorCode: 'B6.5.4.1.1', subject: 'Science',
-    level: 'Basic 6', category: 'auto', score: 75, correctCount: 3, totalCount: 4,
-    completedAt: '2026-10-20T08:00:00.000Z', questions: [],
-  }])));
+  await page.evaluate(() =>
+    localStorage.setItem(
+      'nacca_student_practice_history_hub-student-0',
+      JSON.stringify([
+        {
+          id: 'attempt-earlier',
+          studentId: 'hub-student-0',
+          indicatorCode: 'B6.5.4.1.1',
+          subject: 'Science',
+          level: 'Basic 6',
+          category: 'auto',
+          score: 75,
+          correctCount: 3,
+          totalCount: 4,
+          completedAt: '2026-10-20T08:00:00.000Z',
+          questions: [],
+        },
+      ]),
+    ),
+  );
   await page.goto('/#/learning-hub?tab=Courses&practice=B6.5.4.1.1&subject=Science');
   for (let i = 0; i < 4; i++) await page.getByRole('button', { name: 'Skip', exact: true }).click();
   await expect.poll(() => hub.attempts.length).toBe(1);

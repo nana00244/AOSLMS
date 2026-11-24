@@ -3,7 +3,8 @@ import { mergeSaveResult } from './saveAcknowledgement';
 import { createContext, useContext, useEffect, useRef, useState, type ReactNode } from 'react';
 import { type State, type Role, type User } from './data';
 import { assignedClassIdsForTeacher } from './services/teacherService';
-import { supabase } from './supabase';
+import { supabase, retainedAccountId, offlineAccessDisabledKey } from './supabase';
+import { forgetCachedHub } from './learningHub/offlineHub';
 import { loginIdentifier } from './accountRules';
 import { emptyState } from './emptyState';
 import {
@@ -11,6 +12,8 @@ import {
   commitPendingSave,
   commitPendingSaves,
   invokeBackend,
+  isAccessDenied,
+  BackendError,
   type Snapshot,
   type SaveResult,
 } from './backend';
@@ -25,9 +28,9 @@ import {
   readPendingSaves,
   retainSave,
   retainRecoveredSaves,
-  removeSave,
-  cacheWorkspaceSnapshot,
   readWorkspaceSnapshot,
+  checkpointWorkspace,
+  forgetWorkspaceSnapshot,
   type PendingSave,
 } from './pendingSaves';
 export function validateState(value: unknown): value is State {
@@ -98,6 +101,9 @@ interface Store {
   signOut: () => Promise<void>;
   refresh: () => Promise<void>;
   pendingCount: number;
+  connected: boolean;
+  workspaceCached: boolean;
+  cacheError: string;
   retrySaves: () => Promise<void>;
   recoverPendingEntries: (
     saves: PendingSave[],
@@ -132,6 +138,11 @@ export function StoreProvider({ children }: { children: ReactNode }) {
   const [authProfile, setAuthProfile] = useState<User | undefined>();
   const [toast, setToast] = useState('');
   const [storageError, setStorageError] = useState('');
+  const [connected, setConnected] = useState(navigator.onLine);
+  const [workspaceCached, setWorkspaceCached] = useState(false);
+  const [cacheError, setCacheError] = useState('');
+  const signingOut = useRef(false);
+  const signingIn = useRef(false);
   const [theme, setThemeState] = useState<Theme>(() => {
     const stored = localStorage.getItem('aos-theme');
     return stored === 'light' || stored === 'dark'
@@ -155,13 +166,6 @@ export function StoreProvider({ children }: { children: ReactNode }) {
   }
   function show(result: Snapshot, pending: PendingSave[]) {
     snapshot.current = result;
-    if (owner.current)
-      void cacheWorkspaceSnapshot({
-        owner: owner.current,
-        state: result.state,
-        revision: result.revision,
-        savedAt: new Date().toISOString(),
-      }).catch(() => {});
     pendingRef.current = pending;
     setPendingCount(pending.length);
     if (pending[0]?.conflict) setStorageError(pending[0].conflict);
@@ -175,6 +179,38 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     const profile = result.state.users.find((u) => u.id === owner.current);
     setAuthProfile(profile);
     setRoleState(profile?.role || null);
+  }
+  async function remember(result: Snapshot, userId: string, ids: string[] = []) {
+    await checkpointWorkspace({ ...result, owner: userId, savedAt: new Date().toISOString() }, ids);
+    if (owner.current === userId) {
+      setWorkspaceCached(true);
+      setCacheError('');
+    }
+  }
+  function clearWorkspace() {
+    generation.current++;
+    refreshing.current = null;
+    refreshAgain.current = false;
+    owner.current = '';
+    snapshot.current = null;
+    dataRef.current = emptyState();
+    setData(dataRef.current);
+    pendingRef.current = [];
+    setPendingCount(0);
+    setPendingExpanded(false);
+    setPendingHidden(false);
+    setSyncingNow(false);
+    setAuthProfile(undefined);
+    setRoleState(null);
+    setWorkspaceCached(false);
+    setCacheError('');
+    setAuthLoading(false);
+  }
+  async function denyAccess(userId: string, expectedGeneration: number) {
+    if (owner.current !== userId || generation.current !== expectedGeneration) return;
+    clearWorkspace();
+    setStorageError('Sign in online to verify access. Pending entries remain on this device.');
+    await Promise.all([forgetWorkspaceSnapshot(userId), forgetCachedHub(userId)]);
   }
   async function refresh(minimumRevision?: number) {
     if (!supabase || !owner.current) return;
@@ -209,22 +245,39 @@ export function StoreProvider({ children }: { children: ReactNode }) {
           }
         } else result = await loadWorkspace(snapshot.current?.revision);
       } catch (error) {
+        if (isAccessDenied(error)) {
+          await denyAccess(userId, current);
+          throw error;
+        }
+        if (error instanceof BackendError && error.status < 500) throw error;
         if (snapshot.current) throw error;
         const cached = await readWorkspaceSnapshot(userId);
         if (!cached) throw error;
         result = { state: cached.state, revision: cached.revision };
         offlineFallback = true;
       }
-      const pending = await readPendingSaves(userId);
+      let pending = await readPendingSaves(userId);
       if (
         current !== generation.current ||
         busy.current ||
         (snapshot.current && result.revision < snapshot.current.revision)
       )
         return;
+      if (!offlineFallback && !('unchanged' in result)) {
+        try {
+          await remember(result, userId);
+        } catch {
+          setCacheError(
+            'Offline copy could not be saved. Free device storage before going offline.',
+          );
+        }
+        if (current !== generation.current || busy.current) return;
+        pending = await readPendingSaves(userId);
+        if (current !== generation.current || busy.current) return;
+      } else if (offlineFallback) setWorkspaceCached(true);
       if (!('unchanged' in result)) show(result, pending);
       else if (snapshot.current) show(snapshot.current, pending);
-      lastRefresh.current = Date.now();
+      if (!offlineFallback) lastRefresh.current = Date.now();
       if (offlineFallback)
         setStorageError(
           'Offline mode: showing this account’s last saved workspace. Changes will sync when connection returns.',
@@ -250,7 +303,6 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     if (syncing.current) return syncing.current;
     const userId = owner.current,
       current = generation.current;
-    let needsRefresh = false;
     const execute = async () => {
       if (busy.current || current !== generation.current) return;
       busy.current = true;
@@ -300,21 +352,37 @@ export function StoreProvider({ children }: { children: ReactNode }) {
             }
           }
           if (!result || current !== generation.current) return;
-          const merged =
+          let merged =
             'state' in result
               ? result
               : snapshot.current
                 ? mergeSaveResult(snapshot.current, result)
                 : undefined;
           if (!merged) throw Error('Reload the workspace to finish confirming this save');
-          if (merged.revision < result.revision) needsRefresh = true;
-          for (const committed of batch) await removeSave(committed.id);
+          if (merged.revision < result.revision) {
+            // An acknowledgement cannot fill revisions this tab never saw. Do
+            // not retire its operation until a complete confirmed copy is durable.
+            const complete = await loadWorkspace();
+            if (complete.revision < result.revision)
+              throw Error(
+                'Waiting for the complete confirmed workspace. Your entry remains retained.',
+              );
+            merged = complete;
+            if (current !== generation.current || userId !== owner.current) return;
+          }
+          await remember(
+            merged,
+            userId,
+            batch.map((committed) => committed.id),
+          );
           pending = await readPendingSaves(userId);
+          if (current !== generation.current || userId !== owner.current) return;
           show(merged, pending);
           lastRefresh.current = Date.now();
         }
         if (current === generation.current) setStorageError('');
       } catch (error) {
+        if (isAccessDenied(error)) await denyAccess(userId, current);
         if (current === generation.current)
           setStorageError(
             `Not synced: ${error instanceof Error ? error.message : 'Connection failed'}. Your pending entries are retained on this device.`,
@@ -334,12 +402,14 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     } finally {
       if (syncing.current === task) syncing.current = null;
     }
-    if (needsRefresh && current === generation.current) await refresh();
   }
   async function retrySaves() {
+    if (!navigator.onLine) return;
     if (pendingRef.current[0]?.conflict) await refresh();
-    else if (pendingRef.current.length) await syncQueue();
-    else await refresh();
+    else if (pendingRef.current.length) {
+      await syncQueue();
+      await refresh();
+    } else await refresh();
   }
   async function recoverPendingEntries(input: PendingSave[]) {
     const userId = owner.current,
@@ -393,7 +463,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
       const first = (await readPendingSaves(owner.current))[0];
       if (!first || current !== generation.current || userId !== owner.current) return;
       if (!keepLocal) {
-        await removeSave(first.id);
+        await remember(result, userId, [first.id]);
       } else {
         const changes = first.changes.map((change) => {
           const before = recordValue(result.state, change);
@@ -409,10 +479,18 @@ export function StoreProvider({ children }: { children: ReactNode }) {
             ),
           };
         });
-        await retainSave({ ...first, changes, conflict: undefined });
+        await retainSave(
+          { ...first, changes, conflict: undefined },
+          {
+            ...result,
+            owner: userId,
+            savedAt: new Date().toISOString(),
+          },
+        );
       }
+      const pending = await readPendingSaves(userId);
       if (current !== generation.current) return;
-      show(result, await readPendingSaves(userId));
+      show(result, pending);
       setStorageError('');
       await retrySaves();
     } finally {
@@ -426,7 +504,57 @@ export function StoreProvider({ children }: { children: ReactNode }) {
       return;
     }
     let active = true;
+    // Auth token refresh can wait for the network. An existing local session may
+    // reopen only its own previously authorized snapshot, including after expiry.
+    const restoreOffline = async () => {
+      const userId = retainedAccountId();
+      const current = generation.current;
+      if (!userId || signingOut.current) {
+        setAuthLoading(false);
+        return;
+      }
+      try {
+        const cached = await readWorkspaceSnapshot(userId);
+        const pending = await readPendingSaves(userId);
+        if (
+          !active ||
+          current !== generation.current ||
+          signingOut.current ||
+          retainedAccountId() !== userId
+        )
+          return;
+        if (
+          !cached ||
+          !validateState(cached.state) ||
+          !cached.state.users.some((u) => u.id === userId && u.active)
+        ) {
+          setStorageError('Connect and sign in once to prepare this account for offline use.');
+          setAuthLoading(false);
+          return;
+        }
+        owner.current = userId;
+        show(cached, pending);
+        setWorkspaceCached(true);
+        setAuthLoading(false);
+      } catch {
+        if (active && current === generation.current) {
+          setStorageError(
+            'The offline workspace could not be read. Keep this browser’s data and reconnect to retry.',
+          );
+          setAuthLoading(false);
+        }
+      }
+    };
+    if (!navigator.onLine) void restoreOffline();
     const { data: listener } = supabase.auth.onAuthStateChange((event, session) => {
+      if (signingOut.current && session) return;
+      if (session && localStorage.getItem(offlineAccessDisabledKey)) {
+        if (!signingIn.current) {
+          clearWorkspace();
+          return;
+        }
+        localStorage.removeItem(offlineAccessDisabledKey);
+      }
       if (session) {
         const changedUser = owner.current !== session.user.id;
         if (changedUser) {
@@ -446,6 +574,8 @@ export function StoreProvider({ children }: { children: ReactNode }) {
           setPendingCount(0);
           setAuthProfile(undefined);
           setRoleState(null);
+          setWorkspaceCached(false);
+          setCacheError('');
         }
         if (changedUser || (!snapshot.current && event !== 'TOKEN_REFRESHED'))
           window.setTimeout(async () => {
@@ -467,31 +597,43 @@ export function StoreProvider({ children }: { children: ReactNode }) {
             }
           }, 0);
       } else {
-        generation.current++;
-        refreshing.current = null;
-        refreshAgain.current = false;
-        owner.current = '';
+        // INITIAL_SESSION can be null solely because refreshing an expired token
+        // failed. Auth retains the session on retryable transport failures.
+        if (event === 'INITIAL_SESSION' && retainedAccountId() && !signingOut.current) {
+          void restoreOffline();
+          return;
+        }
+        const previousOwner = owner.current;
+        clearWorkspace();
         setStorageError('');
-        setPendingExpanded(false);
-        setPendingHidden(false);
-        setSyncingNow(false);
-        snapshot.current = null;
-        dataRef.current = emptyState();
-        setData(dataRef.current);
-        pendingRef.current = [];
-        setPendingCount(0);
-        setAuthProfile(undefined);
-        setRoleState(null);
-        setAuthLoading(false);
+        if (previousOwner)
+          void Promise.all([
+            forgetWorkspaceSnapshot(previousOwner),
+            forgetCachedHub(previousOwner),
+          ]).catch(() => {});
       }
     });
+    const connectivity = () => {
+      setConnected(navigator.onLine);
+      if (navigator.onLine) {
+        lastRefresh.current = 0;
+        reload();
+      } else if (!snapshot.current) void restoreOffline();
+    };
     const reload = () => {
       if (
+        navigator.onLine &&
         owner.current &&
         document.visibilityState !== 'hidden' &&
         (pendingRef.current.length || Date.now() - lastRefresh.current > 30000)
-      )
+      ) {
         void retrySaves().catch(() => {});
+        const profile = dataRef.current.users.find((u) => u.id === owner.current);
+        if (profile?.studentId)
+          void import('./learningHub/api')
+            .then(({ syncHubOffline }) => syncHubOffline(profile.id, profile.studentId))
+            .catch(() => {});
+      }
     };
     const beforeUnload = (event: BeforeUnloadEvent) => {
       if (pendingRef.current.length || writing.current) {
@@ -499,15 +641,21 @@ export function StoreProvider({ children }: { children: ReactNode }) {
         event.returnValue = '';
       }
     };
-    window.addEventListener('online', reload);
+    window.addEventListener('online', connectivity);
+    window.addEventListener('offline', connectivity);
     window.addEventListener('focus', reload);
+    document.addEventListener('visibilitychange', reload);
+    const syncTimer = window.setInterval(reload, 30000);
     window.addEventListener('beforeunload', beforeUnload);
     return () => {
       active = false;
       generation.current++;
       listener.subscription.unsubscribe();
-      window.removeEventListener('online', reload);
+      window.removeEventListener('online', connectivity);
+      window.removeEventListener('offline', connectivity);
       window.removeEventListener('focus', reload);
+      document.removeEventListener('visibilitychange', reload);
+      window.clearInterval(syncTimer);
       window.removeEventListener('beforeunload', beforeUnload);
     };
   }, []);
@@ -558,11 +706,22 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     role === 'Student' ? data.students.find((s) => s.id === user?.studentId) : undefined;
   async function signIn(identifier: string, password: string) {
     if (!supabase) throw new Error('Supabase is not configured');
-    const result = await supabase.auth.signInWithPassword({
-      email: loginIdentifier(identifier),
-      password,
-    });
-    if (result.error) throw result.error;
+    if (!navigator.onLine)
+      throw new Error(
+        'Connect to the internet to sign in. Offline access requires a session already open on this device.',
+      );
+    signingOut.current = false;
+    signingIn.current = true;
+    try {
+      const result = await supabase.auth.signInWithPassword({
+        email: loginIdentifier(identifier),
+        password,
+      });
+      if (result.error) throw result.error;
+      localStorage.removeItem(offlineAccessDisabledKey);
+    } finally {
+      signingIn.current = false;
+    }
   }
   async function signOut() {
     if (pendingRef.current.length || writing.current) {
@@ -576,6 +735,15 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     if (!supabase) return;
     // Wait only for local persistence, never for a cloud sync or a conflict.
     await serial.current.catch(() => {});
+    const userId = owner.current;
+    signingOut.current = true;
+    clearWorkspace();
+    setStorageError('');
+    // Block offline reopening immediately while Auth still retains the token
+    // long enough to revoke the online session through its normal sign-out path.
+    localStorage.setItem(offlineAccessDisabledKey, 'true');
+    if (userId)
+      await Promise.all([forgetWorkspaceSnapshot(userId), forgetCachedHub(userId)]).catch(() => {});
     const result = await supabase.auth.signOut({ scope: 'local' });
     if (result.error) notify(result.error.message);
   }
@@ -587,10 +755,17 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     writing.current++;
     setSaving(true);
     const currentOwner = owner.current;
+    const currentGeneration = generation.current;
     const task = serial.current
       .catch(() => {})
       .then(async () => {
-        if (!supabase || !snapshot.current || !currentOwner || currentOwner !== owner.current) {
+        if (
+          !supabase ||
+          !snapshot.current ||
+          !currentOwner ||
+          currentOwner !== owner.current ||
+          currentGeneration !== generation.current
+        ) {
           notify('Sign in and load school records before saving.');
           return false;
         }
@@ -607,10 +782,17 @@ export function StoreProvider({ children }: { children: ReactNode }) {
               event: action,
               scoreRequest,
             };
-            await retainSave(save); // Durable before sending; do not announce success yet.
+            await retainSave(save, {
+              ...snapshot.current,
+              owner: currentOwner,
+              savedAt: new Date().toISOString(),
+            });
+            setWorkspaceCached(true);
+            setCacheError('');
             id = save.id;
             const pending = await readPendingSaves(currentOwner);
-            if (currentOwner !== owner.current) return false;
+            if (currentOwner !== owner.current || currentGeneration !== generation.current)
+              return false;
             show(snapshot.current!, pending);
           }
           return id;
@@ -622,21 +804,18 @@ export function StoreProvider({ children }: { children: ReactNode }) {
         }
       });
     serial.current = task;
-    const completion = task.then(async (id) => {
-      if (id === false || currentOwner !== owner.current) return false;
-      try {
-        await syncQueue();
-        const remaining = await readPendingSaves(currentOwner);
-        if (currentOwner !== owner.current) return false;
-        const saved = !remaining.some((p) => !id || p.id === id);
-        if (saved) notify('Changes saved to the school database.');
-        return saved;
-      } catch (error) {
-        const message = error instanceof Error ? error.message : 'Could not retain this save';
-        setStorageError(`Not saved: ${message}`);
-        notify(`Not saved: ${message}`);
+    const completion = task.then((id) => {
+      if (
+        id === false ||
+        currentOwner !== owner.current ||
+        currentGeneration !== generation.current
+      )
         return false;
-      }
+      // Form success means durable local acceptance. The persistent pending
+      // banner separately reports cloud confirmation, including failed retries.
+      notify('Saved on this device; waiting to sync.');
+      void syncQueue().catch(() => {});
+      return true;
     });
     return completion.finally(() => {
       writing.current--;
@@ -650,7 +829,12 @@ export function StoreProvider({ children }: { children: ReactNode }) {
       `Assessment upload: ${request.classId}, ${request.subject}, ${request.sheet.category}, term ${request.sheet.term}`,
       request,
     );
-    if (saved) notify('Score sheet saved. Subject cards and report cards are updated.');
+    if (saved)
+      notify(
+        pendingRef.current.length
+          ? 'Score sheet saved on this device; waiting to sync.'
+          : 'Score sheet saved. Subject cards and report cards are updated.',
+      );
     return saved;
   }
   return (
@@ -680,6 +864,9 @@ export function StoreProvider({ children }: { children: ReactNode }) {
         signOut,
         refresh,
         pendingCount,
+        connected,
+        workspaceCached,
+        cacheError,
         retrySaves,
         recoverPendingEntries,
         theme,
@@ -761,7 +948,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
       )}
       {saving && user && (
         <div className="cloud-save-overlay" role="status" aria-live="polite">
-          Saving to your school database…
+          {connected ? 'Saving changes…' : 'Saving on this device…'}
         </div>
       )}
     </Context.Provider>

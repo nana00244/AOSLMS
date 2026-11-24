@@ -1,0 +1,11 @@
+{
+  "id": "./",
+  "name": "Ayisatu Owen School",
+  "short_name": "AOS School",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#192f40",
+  "theme_color": "#192f40",
+  "icons": [{ "src": "./crest.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }]
+}

@@ -4,16 +4,41 @@ import { changesBetween } from './backendAccess';
 import type { ScoreImportRequest } from './scoreImport';
 import type { PendingSave } from './pendingSaves';
 
-export async function invokeBackend(name: string, body: unknown) {
+export class BackendError extends Error {
+  constructor(
+    message: string,
+    public status: number,
+  ) {
+    super(message);
+  }
+}
+export const isAccessDenied = (error: unknown) =>
+  error instanceof BackendError && (error.status === 401 || error.status === 403);
+
+export async function invokeBackend(name: string, body: unknown, expectedOwner?: string) {
   if (!supabase) throw new Error('Supabase is not configured');
+  if (typeof navigator !== 'undefined' && navigator.onLine === false)
+    throw new Error('Offline: this action needs an internet connection.');
+  let headers: Record<string, string> | undefined;
+  if (expectedOwner) {
+    const { data, error } = await supabase.auth.getSession();
+    if (error) throw error;
+    if (!data.session || data.session.user.id !== expectedOwner)
+      throw new BackendError('Sign in with the account that created these pending entries.', 401);
+    headers = { Authorization: `Bearer ${data.session.access_token}` };
+  }
   const { data, error } = await supabase.functions.invoke(name, {
     body: body as Record<string, unknown>,
+    headers,
     signal: AbortSignal.timeout(60000),
   });
   if (error) {
     if (error.context instanceof Response) {
       const detail = await error.context.json().catch(() => null);
-      if (detail?.error) throw new Error(detail.error);
+      throw new BackendError(
+        detail?.error || `Request failed (${error.context.status})`,
+        error.context.status,
+      );
     }
     throw error;
   }
@@ -41,24 +66,32 @@ export function loadWorkspace(
   return invokeBackend('workspace', { action: 'load', knownRevision });
 }
 export const commitPendingSave = (save: PendingSave): Promise<SaveResult> =>
-  invokeBackend('workspace', {
-    action: 'save-pending',
-    response: 'ack',
-    operationId: save.id,
-    changes: save.changes,
-    event: save.event,
-    scoreRequest: save.scoreRequest,
-  });
-export const commitPendingSaves = (saves: PendingSave[]): Promise<SaveResult> =>
-  invokeBackend('workspace', {
-    action: 'save-batch',
-    response: 'ack',
-    saves: saves.map((save) => ({
+  invokeBackend(
+    'workspace',
+    {
+      action: 'save-pending',
+      response: 'ack',
       operationId: save.id,
       changes: save.changes,
       event: save.event,
-    })),
-  });
+      scoreRequest: save.scoreRequest,
+    },
+    save.owner,
+  );
+export const commitPendingSaves = (saves: PendingSave[]): Promise<SaveResult> =>
+  invokeBackend(
+    'workspace',
+    {
+      action: 'save-batch',
+      response: 'ack',
+      saves: saves.map((save) => ({
+        operationId: save.id,
+        changes: save.changes,
+        event: save.event,
+      })),
+    },
+    saves[0]?.owner,
+  );
 export const importScoreSheet = (
   snapshot: Snapshot,
   request: ScoreImportRequest,

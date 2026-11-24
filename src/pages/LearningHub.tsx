@@ -25,6 +25,7 @@ import {
 import { useStore, csv } from '../store';
 import { Button, Field, Modal } from '../components/ui';
 import { canTeach } from '../backendAccess';
+import { isAccessDenied } from '../backend';
 import type { HubLesson } from '../learningHub/catalog';
 import { curriculumSources } from '../learningHub/sources';
 import {
@@ -35,6 +36,7 @@ import {
   submitHubPractice,
   submitAdaptive,
   localHubAttempt,
+  type OfflineHubSnapshot,
 } from '../learningHub/api';
 import type { HubSnapshot, LearningLesson, HubPracticeResult } from '../learningHub/types';
 import { learningStatus, recommendation } from '../learningHub/progress';
@@ -69,7 +71,11 @@ export function LearningHub() {
   const { data, user, role, notify } = useStore();
   const [params, setParams] = useSearchParams();
   const tab = params.get('tab') || 'Courses';
-  const [snapshot, setSnapshot] = useState<HubSnapshot>(blank);
+  const [snapshot, setSnapshot] = useState<OfflineHubSnapshot>({
+    ...blank,
+    offline: false,
+    pendingReadings: 0,
+  });
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
   const [search, setSearch] = useState('');
@@ -88,27 +94,32 @@ export function LearningHub() {
       const request = ++revision.current;
       setError('');
       try {
-        const next = await loadHub(progressStudent, background);
+        const next = await loadHub(progressStudent, background, user?.id);
         if (request === revision.current) setSnapshot(next);
       } catch (e) {
-        if (!background && request === revision.current)
+        if (request === revision.current && isAccessDenied(e))
+          setSnapshot({ ...blank, offline: false, pendingReadings: 0 });
+        if ((!background || isAccessDenied(e)) && request === revision.current)
           setError(e instanceof Error ? e.message : 'Learning Hub could not load.');
       } finally {
         setLoading(false);
       }
     },
-    [progressStudent],
+    [progressStudent, user?.id],
   );
   useEffect(() => {
+    setSnapshot({ ...blank, offline: false, pendingReadings: 0 });
+    setLoading(true);
     void reload();
-  }, [reload, user?.id]);
-  useEffect(() => {
-    if (tab !== 'Progress') return;
-    const refresh = () => {
-      if (!document.hidden) void reload(true);
+    return () => {
+      revision.current++;
     };
-    refresh();
-    const timer = window.setInterval(refresh, 15000);
+  }, [reload]);
+  useEffect(() => {
+    const refresh = () => {
+      if (!document.hidden && navigator.onLine) void reload(true);
+    };
+    const timer = window.setInterval(refresh, tab === 'Progress' ? 15000 : 60000);
     window.addEventListener('focus', refresh);
     window.addEventListener('online', refresh);
     window.addEventListener('storage', refresh);
@@ -231,12 +242,12 @@ export function LearningHub() {
             ...s,
             attempts: [...s.attempts.filter((a) => a.id !== local.id), local],
           }));
-          void submitAdaptive(attempt)
+          void submitAdaptive(attempt, user?.id)
             .then(() => {
               notify(`Practice recorded: ${attempt.score}% on ${attempt.indicatorCode}`);
             })
             .catch(() =>
-              notify('Practice saved on this device. Open Progress while online to sync.'),
+              notify('Practice saved on this device. It will retry syncing when you reconnect.'),
             );
         }}
       />
@@ -284,6 +295,18 @@ export function LearningHub() {
           <RefreshCw size={17} />
         </button>
       </nav>
+      {(snapshot.offline || snapshot.pendingReadings > 0 || snapshot.syncError) && (
+        <p className="lh-loading" role="status">
+          {snapshot.offline ? 'Offline learning: showing downloaded lessons and progress. ' : ''}
+          {snapshot.pendingReadings > 0
+            ? `${snapshot.pendingReadings} reading update(s) saved on this device, waiting to sync. `
+            : ''}
+          {snapshot.syncError ? `Learning sync needs attention: ${snapshot.syncError}` : ''}
+          {snapshot.offline
+            ? 'Creating or assigning lessons and server-graded quizzes need a connection.'
+            : ''}
+        </p>
+      )}
       {error && (
         <div role="alert" className="lh-error">
           {error}
@@ -705,6 +728,7 @@ function LessonView({
   onSaved: () => Promise<void>;
   onOpenPractice?: (code: string, subject?: string) => void;
 }) {
+  const { user, notify } = useStore();
   const [practice, setPractice] = useState(false),
     [busy, setBusy] = useState(false),
     [error, setError] = useState('');
@@ -732,7 +756,8 @@ function LessonView({
     setBusy(true);
     setError('');
     try {
-      await completeHubReading(lesson.id, assignmentId);
+      const reading = await completeHubReading(lesson.id, assignmentId, user?.id, studentId);
+      if (reading.pending) notify('Reading progress saved on this device; waiting to sync.');
       await onSaved();
     } catch (e) {
       setError(e instanceof Error ? e.message : 'Could not save reading progress.');

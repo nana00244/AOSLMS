@@ -1,5 +1,6 @@
 import { existsSync } from 'node:fs';
 import { defineConfig } from '@playwright/test';
+const port = Number(process.env.AOS_E2E_TEST_PORT || 5173);
 export default defineConfig({
   testDir: './tests',
   testMatch: process.env.AOS_CLOUD_TESTS
@@ -15,7 +16,7 @@ export default defineConfig({
   fullyParallel: true,
   workers: process.env.AOS_CLOUD_TESTS ? 1 : 2,
   use: {
-    baseURL: 'http://127.0.0.1:5173',
+    baseURL: `http://127.0.0.1:${port}`,
     headless: true,
     launchOptions: {
       executablePath:
@@ -27,9 +28,9 @@ export default defineConfig({
     trace: process.env.AOS_CLOUD_TESTS ? 'off' : 'retain-on-failure',
   },
   webServer: {
-    command: 'npm run dev -- --port 5173',
+    command: `node node_modules/vite/bin/vite.js --host 127.0.0.1 --port ${port} --strictPort`,
     env: process.env.AOS_CLOUD_TESTS ? { VITE_DEMO_MODE: 'false' } : { VITE_DEMO_MODE: 'true' },
-    url: 'http://127.0.0.1:5173',
+    url: `http://127.0.0.1:${port}`,
     reuseExistingServer: !process.env.CI,
   },
   reporter: 'list',

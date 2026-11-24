@@ -473,48 +473,54 @@ export function PracticeArenaPlayer({
     }
 
     // Complete session
-    setSessionCompleted(true);
     const correctCount = questionStates.filter((s) => s.isCorrect).length;
     const totalCount = questionStates.length;
     const score = Math.round((correctCount / (totalCount || 1)) * 100);
 
     // Save attempt to history (allowing retakes and keeping auto & teacher scores separate)
-    const record = savePracticeAttempt({
-      id: crypto.randomUUID(),
-      assignmentId:
-        assignmentLessonId === indicatorLessonId(currentIndicator.subject, currentIndicatorCode)
-          ? assignmentId
-          : undefined,
-      studentId,
-      indicatorCode: currentIndicatorCode,
-      subject: currentIndicator.subject,
-      level: currentIndicator.level,
-      strand: currentIndicator.strand,
-      subStrand: currentIndicator.sub_strand,
-      category: 'auto',
-      score,
-      correctCount,
-      totalCount,
-      questions: questionStates.map((qs) => ({
-        questionId: qs.question.id,
-        optionOrder: qs.optionOrder,
-        response: qs.isAnswered
-          ? {
-              selectedOption: qs.selectedOption,
-              numericInput: qs.numericInput,
-              shortAnswerInput: qs.shortAnswerInput,
-            }
-          : {},
-        type: qs.question.type,
-        difficulty: qs.question.difficulty,
-        isCorrect: qs.isCorrect,
-        timestamp: new Date().toISOString(),
-      })),
-    });
+    try {
+      const record = savePracticeAttempt({
+        id: crypto.randomUUID(),
+        assignmentId:
+          assignmentLessonId === indicatorLessonId(currentIndicator.subject, currentIndicatorCode)
+            ? assignmentId
+            : undefined,
+        studentId,
+        indicatorCode: currentIndicatorCode,
+        subject: currentIndicator.subject,
+        level: currentIndicator.level,
+        strand: currentIndicator.strand,
+        subStrand: currentIndicator.sub_strand,
+        category: 'auto',
+        score,
+        correctCount,
+        totalCount,
+        questions: questionStates.map((qs) => ({
+          questionId: qs.question.id,
+          optionOrder: qs.optionOrder,
+          response: qs.isAnswered
+            ? {
+                selectedOption: qs.selectedOption,
+                numericInput: qs.numericInput,
+                shortAnswerInput: qs.shortAnswerInput,
+              }
+            : {},
+          type: qs.question.type,
+          difficulty: qs.question.difficulty,
+          isCorrect: qs.isCorrect,
+          timestamp: new Date().toISOString(),
+        })),
+      });
 
-    setHistoryKey((k) => k + 1);
+      setHistoryKey((k) => k + 1);
 
-    onRecordAttempt?.(record);
+      onRecordAttempt?.(record);
+      setSessionCompleted(true);
+    } catch {
+      setValidationError(
+        'Your practice could not be saved on this device. Keep this page open and try Finish again.',
+      );
+    }
   };
 
   const handleSkip = () => {

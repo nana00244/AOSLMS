@@ -7,15 +7,10 @@ import '@fontsource/manrope/latin-700.css';
 import '@fontsource/manrope/latin-800.css';
 import { createRoot } from 'react-dom/client';
 import App from './App';
+import { registerOfflineApp } from './offlineApp';
 import './styles.css';
 import './readability.css';
 import './score-grid.css';
 import './pages/practice-arena.css';
-
-if (import.meta.env.PROD && 'serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    void navigator.serviceWorker.register('/service-worker.js').catch(() => {});
-  });
-}
-
+registerOfflineApp();
 createRoot(document.getElementById('root')!).render(<App />);

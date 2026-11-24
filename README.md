@@ -58,6 +58,12 @@ The original starter relational academic tables are retained by the migration hi
 
 Workspace saves are retained on the device before transmission and confirmed only after Supabase commits them. Transactional operation receipts prevent duplicate retries. Unrelated concurrent fields merge; conflicting fields remain pending for review. Pending entries survive reload and retry when connectivity returns, but remain local until confirmed. See [report cards and saving](docs/report-cards-and-saving.md) for class batch printing and recovery behavior, and [assessment uploads](docs/assessment-uploads.md) for teacher score-sheet imports.
 
+### Offline use
+
+Open the published HTTPS app and sign in online on each device first. Wait for **Ready for offline use** above the workspace, then reopen the same link in the same browser while disconnected. The status details include **Protect offline storage** and **Download workspace backup**. Workspace edits finish after being saved on the device; the pending-save banner separately shows whether the database has confirmed them. Keep the app open after reconnecting until pending saves clear. An expired token can reopen the prepared local workspace; server access is rechecked before syncing.
+
+The installed app shell includes local fonts, lessons, sounds, and lazy-loaded code. Student adaptive practice and reading acknowledgements are retained for retry; open Learning Hub online beforehand to cache remote lessons and assignments. New sign-ins, account administration, AI, file uploads/downloads, external media, and server-graded fixed lesson quizzes still need internet. Browser data deletion, storage limits, and device loss cannot be eliminated by offline software. See [offline behavior and recovery](docs/offline-use.md) for preparation, limits, architecture, and verification. Run `npm run test:offline` for isolated production-browser tests.
+
 ## CLI deployment
 
 Supabase CLI 2.120.0 is pinned as a development dependency. This repository is already initialized; do not overwrite `supabase/config.toml` with `init --force`.

@@ -99,18 +99,13 @@ export function savePracticeAttempt(
     completedAt: record.completedAt || new Date().toISOString(),
   };
 
-  try {
-    const existing = loadPracticeHistory(fullRecord.studentId);
-    const updated = [fullRecord, ...existing];
-    setStorageItem(
-      `${STORAGE_KEY}_${fullRecord.studentId}`,
-      JSON.stringify(updated),
-      fullRecord.category === 'teacher' && fullRecord.reviewStatus === 'pending',
-    );
-  } catch (err) {
-    if (fullRecord.category === 'teacher' && fullRecord.reviewStatus === 'pending') throw err;
-    console.error('Failed to save practice history:', err);
-  }
+  const key = `${STORAGE_KEY}_${fullRecord.studentId}`;
+  // A failed read must not turn an existing history into an empty replacement.
+  const raw = typeof localStorage !== 'undefined' ? localStorage.getItem(key) : getStorageItem(key);
+  const existing: PracticeSessionRecord[] = raw ? JSON.parse(raw) : [];
+  if (!Array.isArray(existing)) throw Error('The saved practice history is unreadable.');
+  const updated = [fullRecord, ...existing.filter((attempt) => attempt.id !== fullRecord.id)];
+  setStorageItem(`${STORAGE_KEY}_${fullRecord.studentId}`, JSON.stringify(updated), true);
 
   return fullRecord;
 }

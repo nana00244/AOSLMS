@@ -60,6 +60,7 @@ import {
   StudentSchedule,
 } from './pages/StudentPortal';
 import { PublicSchool } from './pages/PublicSchool';
+import { OfflineStatus } from './components/OfflineStatus';
 const LearningHub = lazy(() =>
   import('./pages/LearningHub').then(({ LearningHub }) => ({ default: LearningHub })),
 );
@@ -598,6 +599,7 @@ function Shell() {
           </div>
         </div>
         <main id="main-content" tabIndex={-1}>
+          <OfflineStatus />
           {storageError && !pendingCount && (
             <div className="notice warning" role="alert">
               {storageError}
